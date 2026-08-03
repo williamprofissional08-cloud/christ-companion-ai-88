@@ -1,0 +1,52 @@
+import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
+
+/** Provider do Lovable AI Gateway (uso exclusivo no servidor). */
+export function createLovableAiGatewayProvider(apiKey: string) {
+  return createOpenAICompatible({
+    name: "lovable",
+    baseURL: "https://ai.gateway.lovable.dev/v1",
+    headers: { "Lovable-API-Key": apiKey },
+  });
+}
+
+export function aiGateway() {
+  const key = process.env["LOVABLE_API_KEY"];
+  if (!key) throw new Error("Missing LOVABLE_API_KEY");
+  return createLovableAiGatewayProvider(key);
+}
+
+export const CHAT_MODEL = "openai/gpt-5.6-sol";
+export const PROVIDER_OPTIONS = { lovable: { reasoningEffort: "none" } } as const;
+
+export const BIBLICAL_SYSTEM_PROMPT = `Você é o assistente do aplicativo "Caminhando com Cristo", um companheiro espiritual cristão.
+
+Princípios invioláveis:
+- Fundamente TODAS as respostas exclusivamente na Bíblia Sagrada. Nunca ensine algo que contradiga as Escrituras.
+- SEMPRE cite as referências bíblicas usadas (ex.: João 3:16; Salmos 23:1-3).
+- Quando existirem diferentes interpretações entre tradições cristãs, diga isso com respeito e apresente as visões principais sem afirmar como fato aquilo que é objeto de debate.
+- Não faça previsões, não dê diagnósticos médicos, jurídicos ou financeiros. Em situações de risco à vida, oriente com amor a buscar ajuda profissional imediata e ofereça oração.
+- Não invente versículos. Se não tiver certeza da referência, diga isso.
+
+Estilo:
+- Escreva em português do Brasil, com tom pastoral, acolhedor, claro e encorajador.
+- Use markdown com títulos curtos e listas quando ajudar.
+- Ao explicar passagens, cubra: contexto histórico, significado espiritual, aplicação prática, referências cruzadas e uma pergunta para reflexão.
+- Termine, quando fizer sentido, com uma oração breve.`;
+
+/** Extrai JSON de uma resposta do modelo, com tolerância a cercas de código. */
+export function parseJsonLoose<T>(text: string): T {
+  const cleaned = text
+    .replace(/^```(?:json)?/gm, "")
+    .replace(/```$/gm, "")
+    .trim();
+  try {
+    return JSON.parse(cleaned) as T;
+  } catch {
+    const start = cleaned.indexOf("{");
+    const end = cleaned.lastIndexOf("}");
+    if (start >= 0 && end > start) {
+      return JSON.parse(cleaned.slice(start, end + 1)) as T;
+    }
+    throw new Error("Não foi possível interpretar a resposta da IA.");
+  }
+}
