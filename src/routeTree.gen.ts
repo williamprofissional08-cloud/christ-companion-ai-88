@@ -25,6 +25,7 @@ import { Route as AuthenticatedPlanosRouteImport } from './routes/_authenticated
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedAssistenteIndexRouteImport } from './routes/_authenticated/assistente.index'
 import { Route as AuthenticatedAssistenteThreadIdRouteImport } from './routes/_authenticated/assistente.$threadId'
+import { Route as AuthenticatedEstudosIndexRouteImport } from './routes/_authenticated/estudos.index'
 import { Route as AuthenticatedPlanosIndexRouteImport } from './routes/_authenticated/planos.index'
 import { Route as AuthenticatedPlanosSlugRouteImport } from './routes/_authenticated/planos.$slug'
 
@@ -109,6 +110,12 @@ const AuthenticatedAssistenteThreadIdRoute =
     path: '/$threadId',
     getParentRoute: () => AuthenticatedAssistenteRoute,
   } as any)
+const AuthenticatedEstudosIndexRoute =
+  AuthenticatedEstudosIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedEstudosRoute,
+  } as any)
 const AuthenticatedPlanosIndexRoute =
   AuthenticatedPlanosIndexRouteImport.update({
     id: '/',
@@ -128,7 +135,7 @@ export interface FileRoutesByFullPath {
   '/biblia': typeof AuthenticatedBibliaRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
-  '/estudos': typeof AuthenticatedEstudosRoute
+  '/estudos': typeof AuthenticatedEstudosRouteWithChildren
   '/favoritos': typeof AuthenticatedFavoritosRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
@@ -138,6 +145,7 @@ export interface FileRoutesByFullPath {
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/assistente/': typeof AuthenticatedAssistenteIndexRoute
+  '/estudos/': typeof AuthenticatedEstudosIndexRoute
   '/planos/': typeof AuthenticatedPlanosIndexRoute
 }
 export interface FileRoutesByTo {
@@ -146,7 +154,6 @@ export interface FileRoutesByTo {
   '/biblia': typeof AuthenticatedBibliaRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
-  '/estudos': typeof AuthenticatedEstudosRoute
   '/favoritos': typeof AuthenticatedFavoritosRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
@@ -155,6 +162,7 @@ export interface FileRoutesByTo {
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/assistente': typeof AuthenticatedAssistenteIndexRoute
+  '/estudos': typeof AuthenticatedEstudosIndexRoute
   '/planos': typeof AuthenticatedPlanosIndexRoute
 }
 export interface FileRoutesById {
@@ -166,7 +174,7 @@ export interface FileRoutesById {
   '/_authenticated/biblia': typeof AuthenticatedBibliaRoute
   '/_authenticated/devocional': typeof AuthenticatedDevocionalRoute
   '/_authenticated/diario': typeof AuthenticatedDiarioRoute
-  '/_authenticated/estudos': typeof AuthenticatedEstudosRoute
+  '/_authenticated/estudos': typeof AuthenticatedEstudosRouteWithChildren
   '/_authenticated/favoritos': typeof AuthenticatedFavoritosRoute
   '/_authenticated/inicio': typeof AuthenticatedInicioRoute
   '/_authenticated/metas': typeof AuthenticatedMetasRoute
@@ -176,6 +184,7 @@ export interface FileRoutesById {
   '/_authenticated/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/_authenticated/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/_authenticated/assistente/': typeof AuthenticatedAssistenteIndexRoute
+  '/_authenticated/estudos/': typeof AuthenticatedEstudosIndexRoute
   '/_authenticated/planos/': typeof AuthenticatedPlanosIndexRoute
 }
 export interface FileRouteTypes {
@@ -197,6 +206,7 @@ export interface FileRouteTypes {
     | '/assistente/$threadId'
     | '/planos/$slug'
     | '/assistente/'
+    | '/estudos/'
     | '/planos/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -205,7 +215,6 @@ export interface FileRouteTypes {
     | '/biblia'
     | '/devocional'
     | '/diario'
-    | '/estudos'
     | '/favoritos'
     | '/inicio'
     | '/metas'
@@ -214,6 +223,7 @@ export interface FileRouteTypes {
     | '/assistente/$threadId'
     | '/planos/$slug'
     | '/assistente'
+    | '/estudos'
     | '/planos'
   id:
     | '__root__'
@@ -234,6 +244,7 @@ export interface FileRouteTypes {
     | '/_authenticated/assistente/$threadId'
     | '/_authenticated/planos/$slug'
     | '/_authenticated/assistente/'
+    | '/_authenticated/estudos/'
     | '/_authenticated/planos/'
   fileRoutesById: FileRoutesById
 }
@@ -358,6 +369,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAssistenteThreadIdRouteImport
       parentRoute: typeof AuthenticatedAssistenteRoute
     }
+    '/_authenticated/estudos/': {
+      id: '/_authenticated/estudos/'
+      path: '/'
+      fullPath: '/estudos/'
+      preLoaderRoute: typeof AuthenticatedEstudosIndexRouteImport
+      parentRoute: typeof AuthenticatedEstudosRoute
+    }
     '/_authenticated/planos/': {
       id: '/_authenticated/planos/'
       path: '/'
@@ -391,6 +409,17 @@ const AuthenticatedAssistenteRouteWithChildren =
     AuthenticatedAssistenteRouteChildren,
   )
 
+interface AuthenticatedEstudosRouteChildren {
+  AuthenticatedEstudosIndexRoute: typeof AuthenticatedEstudosIndexRoute
+}
+
+const AuthenticatedEstudosRouteChildren: AuthenticatedEstudosRouteChildren = {
+  AuthenticatedEstudosIndexRoute: AuthenticatedEstudosIndexRoute,
+}
+
+const AuthenticatedEstudosRouteWithChildren =
+  AuthenticatedEstudosRoute._addFileChildren(AuthenticatedEstudosRouteChildren)
+
 interface AuthenticatedPlanosRouteChildren {
   AuthenticatedPlanosSlugRoute: typeof AuthenticatedPlanosSlugRoute
   AuthenticatedPlanosIndexRoute: typeof AuthenticatedPlanosIndexRoute
@@ -409,7 +438,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedBibliaRoute: typeof AuthenticatedBibliaRoute
   AuthenticatedDevocionalRoute: typeof AuthenticatedDevocionalRoute
   AuthenticatedDiarioRoute: typeof AuthenticatedDiarioRoute
-  AuthenticatedEstudosRoute: typeof AuthenticatedEstudosRoute
+  AuthenticatedEstudosRoute: typeof AuthenticatedEstudosRouteWithChildren
   AuthenticatedFavoritosRoute: typeof AuthenticatedFavoritosRoute
   AuthenticatedInicioRoute: typeof AuthenticatedInicioRoute
   AuthenticatedMetasRoute: typeof AuthenticatedMetasRoute
@@ -422,7 +451,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedBibliaRoute: AuthenticatedBibliaRoute,
   AuthenticatedDevocionalRoute: AuthenticatedDevocionalRoute,
   AuthenticatedDiarioRoute: AuthenticatedDiarioRoute,
-  AuthenticatedEstudosRoute: AuthenticatedEstudosRoute,
+  AuthenticatedEstudosRoute: AuthenticatedEstudosRouteWithChildren,
   AuthenticatedFavoritosRoute: AuthenticatedFavoritosRoute,
   AuthenticatedInicioRoute: AuthenticatedInicioRoute,
   AuthenticatedMetasRoute: AuthenticatedMetasRoute,
