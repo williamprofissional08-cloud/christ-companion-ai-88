@@ -26,6 +26,7 @@ import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedAssistenteIndexRouteImport } from './routes/_authenticated/assistente.index'
 import { Route as AuthenticatedAssistenteThreadIdRouteImport } from './routes/_authenticated/assistente.$threadId'
 import { Route as AuthenticatedEstudosIndexRouteImport } from './routes/_authenticated/estudos.index'
+import { Route as AuthenticatedEstudosSlugRouteImport } from './routes/_authenticated/estudos.$slug'
 import { Route as AuthenticatedPlanosIndexRouteImport } from './routes/_authenticated/planos.index'
 import { Route as AuthenticatedPlanosSlugRouteImport } from './routes/_authenticated/planos.$slug'
 
@@ -116,6 +117,12 @@ const AuthenticatedEstudosIndexRoute =
     path: '/',
     getParentRoute: () => AuthenticatedEstudosRoute,
   } as any)
+const AuthenticatedEstudosSlugRoute =
+  AuthenticatedEstudosSlugRouteImport.update({
+    id: '/$slug',
+    path: '/$slug',
+    getParentRoute: () => AuthenticatedEstudosRoute,
+  } as any)
 const AuthenticatedPlanosIndexRoute =
   AuthenticatedPlanosIndexRouteImport.update({
     id: '/',
@@ -143,6 +150,7 @@ export interface FileRoutesByFullPath {
   '/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/api/chat': typeof ApiChatRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
+  '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/assistente/': typeof AuthenticatedAssistenteIndexRoute
   '/estudos/': typeof AuthenticatedEstudosIndexRoute
@@ -160,6 +168,7 @@ export interface FileRoutesByTo {
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/api/chat': typeof ApiChatRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
+  '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/assistente': typeof AuthenticatedAssistenteIndexRoute
   '/estudos': typeof AuthenticatedEstudosIndexRoute
@@ -182,6 +191,7 @@ export interface FileRoutesById {
   '/_authenticated/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/api/chat': typeof ApiChatRoute
   '/_authenticated/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
+  '/_authenticated/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/_authenticated/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/_authenticated/assistente/': typeof AuthenticatedAssistenteIndexRoute
   '/_authenticated/estudos/': typeof AuthenticatedEstudosIndexRoute
@@ -204,6 +214,7 @@ export interface FileRouteTypes {
     | '/planos'
     | '/api/chat'
     | '/assistente/$threadId'
+    | '/estudos/$slug'
     | '/planos/$slug'
     | '/assistente/'
     | '/estudos/'
@@ -221,6 +232,7 @@ export interface FileRouteTypes {
     | '/pesquisa'
     | '/api/chat'
     | '/assistente/$threadId'
+    | '/estudos/$slug'
     | '/planos/$slug'
     | '/assistente'
     | '/estudos'
@@ -242,6 +254,7 @@ export interface FileRouteTypes {
     | '/_authenticated/planos'
     | '/api/chat'
     | '/_authenticated/assistente/$threadId'
+    | '/_authenticated/estudos/$slug'
     | '/_authenticated/planos/$slug'
     | '/_authenticated/assistente/'
     | '/_authenticated/estudos/'
@@ -376,6 +389,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedEstudosIndexRouteImport
       parentRoute: typeof AuthenticatedEstudosRoute
     }
+    '/_authenticated/estudos/$slug': {
+      id: '/_authenticated/estudos/$slug'
+      path: '/$slug'
+      fullPath: '/estudos/$slug'
+      preLoaderRoute: typeof AuthenticatedEstudosSlugRouteImport
+      parentRoute: typeof AuthenticatedEstudosRoute
+    }
     '/_authenticated/planos/': {
       id: '/_authenticated/planos/'
       path: '/'
@@ -410,10 +430,12 @@ const AuthenticatedAssistenteRouteWithChildren =
   )
 
 interface AuthenticatedEstudosRouteChildren {
+  AuthenticatedEstudosSlugRoute: typeof AuthenticatedEstudosSlugRoute
   AuthenticatedEstudosIndexRoute: typeof AuthenticatedEstudosIndexRoute
 }
 
 const AuthenticatedEstudosRouteChildren: AuthenticatedEstudosRouteChildren = {
+  AuthenticatedEstudosSlugRoute: AuthenticatedEstudosSlugRoute,
   AuthenticatedEstudosIndexRoute: AuthenticatedEstudosIndexRoute,
 }
 
