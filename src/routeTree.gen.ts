@@ -23,6 +23,7 @@ import { Route as AuthenticatedMetasRouteImport } from './routes/_authenticated/
 import { Route as AuthenticatedPesquisaRouteImport } from './routes/_authenticated/pesquisa'
 import { Route as AuthenticatedPlanosRouteImport } from './routes/_authenticated/planos'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as AuthenticatedAssistenteIndexRouteImport } from './routes/_authenticated/assistente.index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -93,11 +94,17 @@ const ApiChatRoute = ApiChatRouteImport.update({
   path: '/api/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedAssistenteIndexRoute =
+  AuthenticatedAssistenteIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedAssistenteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
-  '/assistente': typeof AuthenticatedAssistenteRoute
+  '/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/biblia': typeof AuthenticatedBibliaRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
@@ -108,11 +115,11 @@ export interface FileRoutesByFullPath {
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/planos': typeof AuthenticatedPlanosRoute
   '/api/chat': typeof ApiChatRoute
+  '/assistente/': typeof AuthenticatedAssistenteIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
-  '/assistente': typeof AuthenticatedAssistenteRoute
   '/biblia': typeof AuthenticatedBibliaRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
@@ -123,13 +130,14 @@ export interface FileRoutesByTo {
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/planos': typeof AuthenticatedPlanosRoute
   '/api/chat': typeof ApiChatRoute
+  '/assistente': typeof AuthenticatedAssistenteIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
-  '/_authenticated/assistente': typeof AuthenticatedAssistenteRoute
+  '/_authenticated/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/_authenticated/biblia': typeof AuthenticatedBibliaRoute
   '/_authenticated/devocional': typeof AuthenticatedDevocionalRoute
   '/_authenticated/diario': typeof AuthenticatedDiarioRoute
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/_authenticated/pesquisa': typeof AuthenticatedPesquisaRoute
   '/_authenticated/planos': typeof AuthenticatedPlanosRoute
   '/api/chat': typeof ApiChatRoute
+  '/_authenticated/assistente/': typeof AuthenticatedAssistenteIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -157,11 +166,11 @@ export interface FileRouteTypes {
     | '/pesquisa'
     | '/planos'
     | '/api/chat'
+    | '/assistente/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/auth'
-    | '/assistente'
     | '/biblia'
     | '/devocional'
     | '/diario'
@@ -172,6 +181,7 @@ export interface FileRouteTypes {
     | '/pesquisa'
     | '/planos'
     | '/api/chat'
+    | '/assistente'
   id:
     | '__root__'
     | '/'
@@ -188,6 +198,7 @@ export interface FileRouteTypes {
     | '/_authenticated/pesquisa'
     | '/_authenticated/planos'
     | '/api/chat'
+    | '/_authenticated/assistente/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -297,11 +308,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/assistente/': {
+      id: '/_authenticated/assistente/'
+      path: '/'
+      fullPath: '/assistente/'
+      preLoaderRoute: typeof AuthenticatedAssistenteIndexRouteImport
+      parentRoute: typeof AuthenticatedAssistenteRoute
+    }
   }
 }
 
+interface AuthenticatedAssistenteRouteChildren {
+  AuthenticatedAssistenteIndexRoute: typeof AuthenticatedAssistenteIndexRoute
+}
+
+const AuthenticatedAssistenteRouteChildren: AuthenticatedAssistenteRouteChildren =
+  {
+    AuthenticatedAssistenteIndexRoute: AuthenticatedAssistenteIndexRoute,
+  }
+
+const AuthenticatedAssistenteRouteWithChildren =
+  AuthenticatedAssistenteRoute._addFileChildren(
+    AuthenticatedAssistenteRouteChildren,
+  )
+
 interface AuthenticatedRouteRouteChildren {
-  AuthenticatedAssistenteRoute: typeof AuthenticatedAssistenteRoute
+  AuthenticatedAssistenteRoute: typeof AuthenticatedAssistenteRouteWithChildren
   AuthenticatedBibliaRoute: typeof AuthenticatedBibliaRoute
   AuthenticatedDevocionalRoute: typeof AuthenticatedDevocionalRoute
   AuthenticatedDiarioRoute: typeof AuthenticatedDiarioRoute
@@ -314,7 +346,7 @@ interface AuthenticatedRouteRouteChildren {
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
-  AuthenticatedAssistenteRoute: AuthenticatedAssistenteRoute,
+  AuthenticatedAssistenteRoute: AuthenticatedAssistenteRouteWithChildren,
   AuthenticatedBibliaRoute: AuthenticatedBibliaRoute,
   AuthenticatedDevocionalRoute: AuthenticatedDevocionalRoute,
   AuthenticatedDiarioRoute: AuthenticatedDiarioRoute,
