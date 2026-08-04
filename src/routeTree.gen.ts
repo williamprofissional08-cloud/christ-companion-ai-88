@@ -25,6 +25,7 @@ import { Route as AuthenticatedPlanosRouteImport } from './routes/_authenticated
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedAssistenteIndexRouteImport } from './routes/_authenticated/assistente.index'
 import { Route as AuthenticatedAssistenteThreadIdRouteImport } from './routes/_authenticated/assistente.$threadId'
+import { Route as AuthenticatedPlanosIndexRouteImport } from './routes/_authenticated/planos.index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -107,6 +108,12 @@ const AuthenticatedAssistenteThreadIdRoute =
     path: '/$threadId',
     getParentRoute: () => AuthenticatedAssistenteRoute,
   } as any)
+const AuthenticatedPlanosIndexRoute =
+  AuthenticatedPlanosIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedPlanosRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -120,10 +127,11 @@ export interface FileRoutesByFullPath {
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
-  '/planos': typeof AuthenticatedPlanosRoute
+  '/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/api/chat': typeof ApiChatRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/assistente/': typeof AuthenticatedAssistenteIndexRoute
+  '/planos/': typeof AuthenticatedPlanosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -136,10 +144,10 @@ export interface FileRoutesByTo {
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
-  '/planos': typeof AuthenticatedPlanosRoute
   '/api/chat': typeof ApiChatRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/assistente': typeof AuthenticatedAssistenteIndexRoute
+  '/planos': typeof AuthenticatedPlanosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -155,10 +163,11 @@ export interface FileRoutesById {
   '/_authenticated/inicio': typeof AuthenticatedInicioRoute
   '/_authenticated/metas': typeof AuthenticatedMetasRoute
   '/_authenticated/pesquisa': typeof AuthenticatedPesquisaRoute
-  '/_authenticated/planos': typeof AuthenticatedPlanosRoute
+  '/_authenticated/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/api/chat': typeof ApiChatRoute
   '/_authenticated/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/_authenticated/assistente/': typeof AuthenticatedAssistenteIndexRoute
+  '/_authenticated/planos/': typeof AuthenticatedPlanosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/api/chat'
     | '/assistente/$threadId'
     | '/assistente/'
+    | '/planos/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -190,10 +200,10 @@ export interface FileRouteTypes {
     | '/inicio'
     | '/metas'
     | '/pesquisa'
-    | '/planos'
     | '/api/chat'
     | '/assistente/$threadId'
     | '/assistente'
+    | '/planos'
   id:
     | '__root__'
     | '/'
@@ -212,6 +222,7 @@ export interface FileRouteTypes {
     | '/api/chat'
     | '/_authenticated/assistente/$threadId'
     | '/_authenticated/assistente/'
+    | '/_authenticated/planos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -335,6 +346,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAssistenteThreadIdRouteImport
       parentRoute: typeof AuthenticatedAssistenteRoute
     }
+    '/_authenticated/planos/': {
+      id: '/_authenticated/planos/'
+      path: '/'
+      fullPath: '/planos/'
+      preLoaderRoute: typeof AuthenticatedPlanosIndexRouteImport
+      parentRoute: typeof AuthenticatedPlanosRoute
+    }
   }
 }
 
@@ -354,6 +372,17 @@ const AuthenticatedAssistenteRouteWithChildren =
     AuthenticatedAssistenteRouteChildren,
   )
 
+interface AuthenticatedPlanosRouteChildren {
+  AuthenticatedPlanosIndexRoute: typeof AuthenticatedPlanosIndexRoute
+}
+
+const AuthenticatedPlanosRouteChildren: AuthenticatedPlanosRouteChildren = {
+  AuthenticatedPlanosIndexRoute: AuthenticatedPlanosIndexRoute,
+}
+
+const AuthenticatedPlanosRouteWithChildren =
+  AuthenticatedPlanosRoute._addFileChildren(AuthenticatedPlanosRouteChildren)
+
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAssistenteRoute: typeof AuthenticatedAssistenteRouteWithChildren
   AuthenticatedBibliaRoute: typeof AuthenticatedBibliaRoute
@@ -364,7 +393,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedInicioRoute: typeof AuthenticatedInicioRoute
   AuthenticatedMetasRoute: typeof AuthenticatedMetasRoute
   AuthenticatedPesquisaRoute: typeof AuthenticatedPesquisaRoute
-  AuthenticatedPlanosRoute: typeof AuthenticatedPlanosRoute
+  AuthenticatedPlanosRoute: typeof AuthenticatedPlanosRouteWithChildren
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
@@ -377,7 +406,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedInicioRoute: AuthenticatedInicioRoute,
   AuthenticatedMetasRoute: AuthenticatedMetasRoute,
   AuthenticatedPesquisaRoute: AuthenticatedPesquisaRoute,
-  AuthenticatedPlanosRoute: AuthenticatedPlanosRoute,
+  AuthenticatedPlanosRoute: AuthenticatedPlanosRouteWithChildren,
 }
 
 const AuthenticatedRouteRouteWithChildren =
