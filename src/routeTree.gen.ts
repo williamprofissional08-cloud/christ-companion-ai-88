@@ -23,6 +23,12 @@ import { Route as AuthenticatedMetasRouteImport } from './routes/_authenticated/
 import { Route as AuthenticatedPesquisaRouteImport } from './routes/_authenticated/pesquisa'
 import { Route as AuthenticatedPlanosRouteImport } from './routes/_authenticated/planos'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as AuthenticatedAssistenteIndexRouteImport } from './routes/_authenticated/assistente.index'
+import { Route as AuthenticatedAssistenteThreadIdRouteImport } from './routes/_authenticated/assistente.$threadId'
+import { Route as AuthenticatedEstudosIndexRouteImport } from './routes/_authenticated/estudos.index'
+import { Route as AuthenticatedEstudosSlugRouteImport } from './routes/_authenticated/estudos.$slug'
+import { Route as AuthenticatedPlanosIndexRouteImport } from './routes/_authenticated/planos.index'
+import { Route as AuthenticatedPlanosSlugRouteImport } from './routes/_authenticated/planos.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -93,53 +99,103 @@ const ApiChatRoute = ApiChatRouteImport.update({
   path: '/api/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedAssistenteIndexRoute =
+  AuthenticatedAssistenteIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedAssistenteRoute,
+  } as any)
+const AuthenticatedAssistenteThreadIdRoute =
+  AuthenticatedAssistenteThreadIdRouteImport.update({
+    id: '/$threadId',
+    path: '/$threadId',
+    getParentRoute: () => AuthenticatedAssistenteRoute,
+  } as any)
+const AuthenticatedEstudosIndexRoute =
+  AuthenticatedEstudosIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedEstudosRoute,
+  } as any)
+const AuthenticatedEstudosSlugRoute =
+  AuthenticatedEstudosSlugRouteImport.update({
+    id: '/$slug',
+    path: '/$slug',
+    getParentRoute: () => AuthenticatedEstudosRoute,
+  } as any)
+const AuthenticatedPlanosIndexRoute =
+  AuthenticatedPlanosIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedPlanosRoute,
+  } as any)
+const AuthenticatedPlanosSlugRoute = AuthenticatedPlanosSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => AuthenticatedPlanosRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
-  '/assistente': typeof AuthenticatedAssistenteRoute
+  '/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/biblia': typeof AuthenticatedBibliaRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
-  '/estudos': typeof AuthenticatedEstudosRoute
+  '/estudos': typeof AuthenticatedEstudosRouteWithChildren
   '/favoritos': typeof AuthenticatedFavoritosRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
-  '/planos': typeof AuthenticatedPlanosRoute
+  '/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/api/chat': typeof ApiChatRoute
+  '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
+  '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
+  '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
+  '/assistente/': typeof AuthenticatedAssistenteIndexRoute
+  '/estudos/': typeof AuthenticatedEstudosIndexRoute
+  '/planos/': typeof AuthenticatedPlanosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
-  '/assistente': typeof AuthenticatedAssistenteRoute
   '/biblia': typeof AuthenticatedBibliaRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
-  '/estudos': typeof AuthenticatedEstudosRoute
   '/favoritos': typeof AuthenticatedFavoritosRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
-  '/planos': typeof AuthenticatedPlanosRoute
   '/api/chat': typeof ApiChatRoute
+  '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
+  '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
+  '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
+  '/assistente': typeof AuthenticatedAssistenteIndexRoute
+  '/estudos': typeof AuthenticatedEstudosIndexRoute
+  '/planos': typeof AuthenticatedPlanosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
-  '/_authenticated/assistente': typeof AuthenticatedAssistenteRoute
+  '/_authenticated/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/_authenticated/biblia': typeof AuthenticatedBibliaRoute
   '/_authenticated/devocional': typeof AuthenticatedDevocionalRoute
   '/_authenticated/diario': typeof AuthenticatedDiarioRoute
-  '/_authenticated/estudos': typeof AuthenticatedEstudosRoute
+  '/_authenticated/estudos': typeof AuthenticatedEstudosRouteWithChildren
   '/_authenticated/favoritos': typeof AuthenticatedFavoritosRoute
   '/_authenticated/inicio': typeof AuthenticatedInicioRoute
   '/_authenticated/metas': typeof AuthenticatedMetasRoute
   '/_authenticated/pesquisa': typeof AuthenticatedPesquisaRoute
-  '/_authenticated/planos': typeof AuthenticatedPlanosRoute
+  '/_authenticated/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/api/chat': typeof ApiChatRoute
+  '/_authenticated/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
+  '/_authenticated/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
+  '/_authenticated/planos/$slug': typeof AuthenticatedPlanosSlugRoute
+  '/_authenticated/assistente/': typeof AuthenticatedAssistenteIndexRoute
+  '/_authenticated/estudos/': typeof AuthenticatedEstudosIndexRoute
+  '/_authenticated/planos/': typeof AuthenticatedPlanosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -157,21 +213,30 @@ export interface FileRouteTypes {
     | '/pesquisa'
     | '/planos'
     | '/api/chat'
+    | '/assistente/$threadId'
+    | '/estudos/$slug'
+    | '/planos/$slug'
+    | '/assistente/'
+    | '/estudos/'
+    | '/planos/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/auth'
-    | '/assistente'
     | '/biblia'
     | '/devocional'
     | '/diario'
-    | '/estudos'
     | '/favoritos'
     | '/inicio'
     | '/metas'
     | '/pesquisa'
-    | '/planos'
     | '/api/chat'
+    | '/assistente/$threadId'
+    | '/estudos/$slug'
+    | '/planos/$slug'
+    | '/assistente'
+    | '/estudos'
+    | '/planos'
   id:
     | '__root__'
     | '/'
@@ -188,6 +253,12 @@ export interface FileRouteTypes {
     | '/_authenticated/pesquisa'
     | '/_authenticated/planos'
     | '/api/chat'
+    | '/_authenticated/assistente/$threadId'
+    | '/_authenticated/estudos/$slug'
+    | '/_authenticated/planos/$slug'
+    | '/_authenticated/assistente/'
+    | '/_authenticated/estudos/'
+    | '/_authenticated/planos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -297,33 +368,117 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/assistente/': {
+      id: '/_authenticated/assistente/'
+      path: '/'
+      fullPath: '/assistente/'
+      preLoaderRoute: typeof AuthenticatedAssistenteIndexRouteImport
+      parentRoute: typeof AuthenticatedAssistenteRoute
+    }
+    '/_authenticated/assistente/$threadId': {
+      id: '/_authenticated/assistente/$threadId'
+      path: '/$threadId'
+      fullPath: '/assistente/$threadId'
+      preLoaderRoute: typeof AuthenticatedAssistenteThreadIdRouteImport
+      parentRoute: typeof AuthenticatedAssistenteRoute
+    }
+    '/_authenticated/estudos/': {
+      id: '/_authenticated/estudos/'
+      path: '/'
+      fullPath: '/estudos/'
+      preLoaderRoute: typeof AuthenticatedEstudosIndexRouteImport
+      parentRoute: typeof AuthenticatedEstudosRoute
+    }
+    '/_authenticated/estudos/$slug': {
+      id: '/_authenticated/estudos/$slug'
+      path: '/$slug'
+      fullPath: '/estudos/$slug'
+      preLoaderRoute: typeof AuthenticatedEstudosSlugRouteImport
+      parentRoute: typeof AuthenticatedEstudosRoute
+    }
+    '/_authenticated/planos/': {
+      id: '/_authenticated/planos/'
+      path: '/'
+      fullPath: '/planos/'
+      preLoaderRoute: typeof AuthenticatedPlanosIndexRouteImport
+      parentRoute: typeof AuthenticatedPlanosRoute
+    }
+    '/_authenticated/planos/$slug': {
+      id: '/_authenticated/planos/$slug'
+      path: '/$slug'
+      fullPath: '/planos/$slug'
+      preLoaderRoute: typeof AuthenticatedPlanosSlugRouteImport
+      parentRoute: typeof AuthenticatedPlanosRoute
+    }
   }
 }
 
+interface AuthenticatedAssistenteRouteChildren {
+  AuthenticatedAssistenteThreadIdRoute: typeof AuthenticatedAssistenteThreadIdRoute
+  AuthenticatedAssistenteIndexRoute: typeof AuthenticatedAssistenteIndexRoute
+}
+
+const AuthenticatedAssistenteRouteChildren: AuthenticatedAssistenteRouteChildren =
+  {
+    AuthenticatedAssistenteThreadIdRoute: AuthenticatedAssistenteThreadIdRoute,
+    AuthenticatedAssistenteIndexRoute: AuthenticatedAssistenteIndexRoute,
+  }
+
+const AuthenticatedAssistenteRouteWithChildren =
+  AuthenticatedAssistenteRoute._addFileChildren(
+    AuthenticatedAssistenteRouteChildren,
+  )
+
+interface AuthenticatedEstudosRouteChildren {
+  AuthenticatedEstudosSlugRoute: typeof AuthenticatedEstudosSlugRoute
+  AuthenticatedEstudosIndexRoute: typeof AuthenticatedEstudosIndexRoute
+}
+
+const AuthenticatedEstudosRouteChildren: AuthenticatedEstudosRouteChildren = {
+  AuthenticatedEstudosSlugRoute: AuthenticatedEstudosSlugRoute,
+  AuthenticatedEstudosIndexRoute: AuthenticatedEstudosIndexRoute,
+}
+
+const AuthenticatedEstudosRouteWithChildren =
+  AuthenticatedEstudosRoute._addFileChildren(AuthenticatedEstudosRouteChildren)
+
+interface AuthenticatedPlanosRouteChildren {
+  AuthenticatedPlanosSlugRoute: typeof AuthenticatedPlanosSlugRoute
+  AuthenticatedPlanosIndexRoute: typeof AuthenticatedPlanosIndexRoute
+}
+
+const AuthenticatedPlanosRouteChildren: AuthenticatedPlanosRouteChildren = {
+  AuthenticatedPlanosSlugRoute: AuthenticatedPlanosSlugRoute,
+  AuthenticatedPlanosIndexRoute: AuthenticatedPlanosIndexRoute,
+}
+
+const AuthenticatedPlanosRouteWithChildren =
+  AuthenticatedPlanosRoute._addFileChildren(AuthenticatedPlanosRouteChildren)
+
 interface AuthenticatedRouteRouteChildren {
-  AuthenticatedAssistenteRoute: typeof AuthenticatedAssistenteRoute
+  AuthenticatedAssistenteRoute: typeof AuthenticatedAssistenteRouteWithChildren
   AuthenticatedBibliaRoute: typeof AuthenticatedBibliaRoute
   AuthenticatedDevocionalRoute: typeof AuthenticatedDevocionalRoute
   AuthenticatedDiarioRoute: typeof AuthenticatedDiarioRoute
-  AuthenticatedEstudosRoute: typeof AuthenticatedEstudosRoute
+  AuthenticatedEstudosRoute: typeof AuthenticatedEstudosRouteWithChildren
   AuthenticatedFavoritosRoute: typeof AuthenticatedFavoritosRoute
   AuthenticatedInicioRoute: typeof AuthenticatedInicioRoute
   AuthenticatedMetasRoute: typeof AuthenticatedMetasRoute
   AuthenticatedPesquisaRoute: typeof AuthenticatedPesquisaRoute
-  AuthenticatedPlanosRoute: typeof AuthenticatedPlanosRoute
+  AuthenticatedPlanosRoute: typeof AuthenticatedPlanosRouteWithChildren
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
-  AuthenticatedAssistenteRoute: AuthenticatedAssistenteRoute,
+  AuthenticatedAssistenteRoute: AuthenticatedAssistenteRouteWithChildren,
   AuthenticatedBibliaRoute: AuthenticatedBibliaRoute,
   AuthenticatedDevocionalRoute: AuthenticatedDevocionalRoute,
   AuthenticatedDiarioRoute: AuthenticatedDiarioRoute,
-  AuthenticatedEstudosRoute: AuthenticatedEstudosRoute,
+  AuthenticatedEstudosRoute: AuthenticatedEstudosRouteWithChildren,
   AuthenticatedFavoritosRoute: AuthenticatedFavoritosRoute,
   AuthenticatedInicioRoute: AuthenticatedInicioRoute,
   AuthenticatedMetasRoute: AuthenticatedMetasRoute,
   AuthenticatedPesquisaRoute: AuthenticatedPesquisaRoute,
-  AuthenticatedPlanosRoute: AuthenticatedPlanosRoute,
+  AuthenticatedPlanosRoute: AuthenticatedPlanosRouteWithChildren,
 }
 
 const AuthenticatedRouteRouteWithChildren =
