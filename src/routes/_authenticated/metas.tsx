@@ -56,6 +56,7 @@ function MetasPage() {
   const add = useMutation({
     mutationFn: (vars: { title: string; target: number; unit?: string }) =>
       create({ data: vars }),
+
     onSuccess: () => {
       setTitle("");
       toast.success("Meta criada.");
