@@ -112,9 +112,10 @@ function MetasPage() {
               add.mutate({
                 title: title.trim(),
                 target: Math.max(1, Number(target) || 1),
-                unit: unit.trim() || undefined,
+                ...(unit.trim() ? { unit: unit.trim() } : {}),
               })
             }
+
           >
             <Plus className="size-4" /> Criar
           </Button>
