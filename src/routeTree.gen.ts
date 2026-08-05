@@ -14,6 +14,7 @@ import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedAssistenteRouteImport } from './routes/_authenticated/assistente'
 import { Route as AuthenticatedBibliaRouteImport } from './routes/_authenticated/biblia'
+import { Route as AuthenticatedConfiguracoesRouteImport } from './routes/_authenticated/configuracoes'
 import { Route as AuthenticatedDevocionalRouteImport } from './routes/_authenticated/devocional'
 import { Route as AuthenticatedDiarioRouteImport } from './routes/_authenticated/diario'
 import { Route as AuthenticatedEstudosRouteImport } from './routes/_authenticated/estudos'
@@ -55,6 +56,12 @@ const AuthenticatedBibliaRoute = AuthenticatedBibliaRouteImport.update({
   path: '/biblia',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedConfiguracoesRoute =
+  AuthenticatedConfiguracoesRouteImport.update({
+    id: '/configuracoes',
+    path: '/configuracoes',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedDevocionalRoute = AuthenticatedDevocionalRouteImport.update({
   id: '/devocional',
   path: '/devocional',
@@ -146,6 +153,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/biblia': typeof AuthenticatedBibliaRoute
+  '/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
   '/estudos': typeof AuthenticatedEstudosRouteWithChildren
@@ -167,6 +175,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/biblia': typeof AuthenticatedBibliaRoute
+  '/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
   '/favoritos': typeof AuthenticatedFavoritosRoute
@@ -189,6 +198,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/_authenticated/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/_authenticated/biblia': typeof AuthenticatedBibliaRoute
+  '/_authenticated/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/_authenticated/devocional': typeof AuthenticatedDevocionalRoute
   '/_authenticated/diario': typeof AuthenticatedDiarioRoute
   '/_authenticated/estudos': typeof AuthenticatedEstudosRouteWithChildren
@@ -213,6 +223,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/assistente'
     | '/biblia'
+    | '/configuracoes'
     | '/devocional'
     | '/diario'
     | '/estudos'
@@ -234,6 +245,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/biblia'
+    | '/configuracoes'
     | '/devocional'
     | '/diario'
     | '/favoritos'
@@ -255,6 +267,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/_authenticated/assistente'
     | '/_authenticated/biblia'
+    | '/_authenticated/configuracoes'
     | '/_authenticated/devocional'
     | '/_authenticated/diario'
     | '/_authenticated/estudos'
@@ -315,6 +328,13 @@ declare module '@tanstack/react-router' {
       path: '/biblia'
       fullPath: '/biblia'
       preLoaderRoute: typeof AuthenticatedBibliaRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/configuracoes': {
+      id: '/_authenticated/configuracoes'
+      path: '/configuracoes'
+      fullPath: '/configuracoes'
+      preLoaderRoute: typeof AuthenticatedConfiguracoesRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/devocional': {
@@ -477,6 +497,7 @@ const AuthenticatedPlanosRouteWithChildren =
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAssistenteRoute: typeof AuthenticatedAssistenteRouteWithChildren
   AuthenticatedBibliaRoute: typeof AuthenticatedBibliaRoute
+  AuthenticatedConfiguracoesRoute: typeof AuthenticatedConfiguracoesRoute
   AuthenticatedDevocionalRoute: typeof AuthenticatedDevocionalRoute
   AuthenticatedDiarioRoute: typeof AuthenticatedDiarioRoute
   AuthenticatedEstudosRoute: typeof AuthenticatedEstudosRouteWithChildren
@@ -491,6 +512,7 @@ interface AuthenticatedRouteRouteChildren {
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAssistenteRoute: AuthenticatedAssistenteRouteWithChildren,
   AuthenticatedBibliaRoute: AuthenticatedBibliaRoute,
+  AuthenticatedConfiguracoesRoute: AuthenticatedConfiguracoesRoute,
   AuthenticatedDevocionalRoute: AuthenticatedDevocionalRoute,
   AuthenticatedDiarioRoute: AuthenticatedDiarioRoute,
   AuthenticatedEstudosRoute: AuthenticatedEstudosRouteWithChildren,
