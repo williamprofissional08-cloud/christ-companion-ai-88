@@ -33,6 +33,7 @@ export const getDevotional = createServerFn({ method: "POST" })
           }
         : undefined,
     );
+    const { error } = await context.supabase
       .from("devotionals")
       .upsert(
         { user_id: context.userId, day: data.day, content: content as never },
