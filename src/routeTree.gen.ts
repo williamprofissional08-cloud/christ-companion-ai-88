@@ -20,6 +20,7 @@ import { Route as AuthenticatedEstudosRouteImport } from './routes/_authenticate
 import { Route as AuthenticatedFavoritosRouteImport } from './routes/_authenticated/favoritos'
 import { Route as AuthenticatedInicioRouteImport } from './routes/_authenticated/inicio'
 import { Route as AuthenticatedMetasRouteImport } from './routes/_authenticated/metas'
+import { Route as AuthenticatedOnboardingRouteImport } from './routes/_authenticated/onboarding'
 import { Route as AuthenticatedPesquisaRouteImport } from './routes/_authenticated/pesquisa'
 import { Route as AuthenticatedPlanosRouteImport } from './routes/_authenticated/planos'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
@@ -84,6 +85,11 @@ const AuthenticatedMetasRoute = AuthenticatedMetasRouteImport.update({
   path: '/metas',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedOnboardingRoute = AuthenticatedOnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedPesquisaRoute = AuthenticatedPesquisaRouteImport.update({
   id: '/pesquisa',
   path: '/pesquisa',
@@ -146,6 +152,7 @@ export interface FileRoutesByFullPath {
   '/favoritos': typeof AuthenticatedFavoritosRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
+  '/onboarding': typeof AuthenticatedOnboardingRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/api/chat': typeof ApiChatRoute
@@ -165,6 +172,7 @@ export interface FileRoutesByTo {
   '/favoritos': typeof AuthenticatedFavoritosRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
+  '/onboarding': typeof AuthenticatedOnboardingRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/api/chat': typeof ApiChatRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
@@ -187,6 +195,7 @@ export interface FileRoutesById {
   '/_authenticated/favoritos': typeof AuthenticatedFavoritosRoute
   '/_authenticated/inicio': typeof AuthenticatedInicioRoute
   '/_authenticated/metas': typeof AuthenticatedMetasRoute
+  '/_authenticated/onboarding': typeof AuthenticatedOnboardingRoute
   '/_authenticated/pesquisa': typeof AuthenticatedPesquisaRoute
   '/_authenticated/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/api/chat': typeof ApiChatRoute
@@ -210,6 +219,7 @@ export interface FileRouteTypes {
     | '/favoritos'
     | '/inicio'
     | '/metas'
+    | '/onboarding'
     | '/pesquisa'
     | '/planos'
     | '/api/chat'
@@ -229,6 +239,7 @@ export interface FileRouteTypes {
     | '/favoritos'
     | '/inicio'
     | '/metas'
+    | '/onboarding'
     | '/pesquisa'
     | '/api/chat'
     | '/assistente/$threadId'
@@ -250,6 +261,7 @@ export interface FileRouteTypes {
     | '/_authenticated/favoritos'
     | '/_authenticated/inicio'
     | '/_authenticated/metas'
+    | '/_authenticated/onboarding'
     | '/_authenticated/pesquisa'
     | '/_authenticated/planos'
     | '/api/chat'
@@ -345,6 +357,13 @@ declare module '@tanstack/react-router' {
       path: '/metas'
       fullPath: '/metas'
       preLoaderRoute: typeof AuthenticatedMetasRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/onboarding': {
+      id: '/_authenticated/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof AuthenticatedOnboardingRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/pesquisa': {
@@ -464,6 +483,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedFavoritosRoute: typeof AuthenticatedFavoritosRoute
   AuthenticatedInicioRoute: typeof AuthenticatedInicioRoute
   AuthenticatedMetasRoute: typeof AuthenticatedMetasRoute
+  AuthenticatedOnboardingRoute: typeof AuthenticatedOnboardingRoute
   AuthenticatedPesquisaRoute: typeof AuthenticatedPesquisaRoute
   AuthenticatedPlanosRoute: typeof AuthenticatedPlanosRouteWithChildren
 }
@@ -477,6 +497,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedFavoritosRoute: AuthenticatedFavoritosRoute,
   AuthenticatedInicioRoute: AuthenticatedInicioRoute,
   AuthenticatedMetasRoute: AuthenticatedMetasRoute,
+  AuthenticatedOnboardingRoute: AuthenticatedOnboardingRoute,
   AuthenticatedPesquisaRoute: AuthenticatedPesquisaRoute,
   AuthenticatedPlanosRoute: AuthenticatedPlanosRouteWithChildren,
 }
@@ -493,13 +514,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
