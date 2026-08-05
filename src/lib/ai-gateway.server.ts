@@ -50,3 +50,10 @@ export function parseJsonLoose<T>(text: string): T {
     throw new Error("Não foi possível interpretar a resposta da IA.");
   }
 }
+
+/** Regra reforçada de citação bíblica aplicada a TODAS as chamadas de IA. */
+export const REFERENCE_RULE = `REGRA OBRIGATÓRIA DE REFERÊNCIAS:
+- Toda resposta, reflexão, explicação, desafio e ORAÇÃO deve citar ao menos uma referência bíblica completa no formato "Livro capítulo:versículo" (ex.: Filipenses 4:6-7).
+- Nunca escreva apenas o nome do livro: sempre inclua capítulo e versículo(s).
+- Nas orações, entrelace as referências no próprio texto (ex.: "... como está em Salmos 23:1").
+- Se não tiver certeza da referência exata, diga isso explicitamente em vez de inventar.`;

@@ -15,8 +15,24 @@ export const getDevotional = createServerFn({ method: "POST" })
       .maybeSingle();
     if (existing.data?.content) return existing.data.content as unknown as DevotionalContent;
 
+    const settings = await context.supabase
+      .from("user_settings")
+      .select("reading_minutes, challenge_type, interests, daily_goal")
+      .eq("user_id", context.userId)
+      .maybeSingle();
+
     const { generateDevotional } = await import("./ai-content.server");
-    const content = await generateDevotional(data.day);
+    const content = await generateDevotional(
+      data.day,
+      settings.data
+        ? {
+            readingMinutes: settings.data.reading_minutes,
+            challengeType: settings.data.challenge_type,
+            interests: settings.data.interests,
+            dailyGoal: settings.data.daily_goal,
+          }
+        : undefined,
+    );
     const { error } = await context.supabase
       .from("devotionals")
       .upsert(
@@ -103,5 +119,5 @@ export const explainReference = createServerFn({ method: "POST" })
   )
   .handler(async ({ data }) => {
     const { explainPassage } = await import("./ai-content.server");
-    return { markdown: await explainPassage(data.reference, data.text) };
+    return explainPassage(data.reference, data.text);
   });

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
 import { AppShell } from "@/components/AppShell";
+import { ExportCard } from "@/components/ExportCard";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getDevotional } from "@/lib/ai.functions";
@@ -64,6 +65,7 @@ function DevocionalPage() {
 
   return (
     <AppShell title="Devocional de hoje" subtitle={data.theme}>
+      <ExportCard filename={`devocional-${day}`} title={`Devocional — ${data.theme}`}>
       <Card className="animate-rise border-border/50 p-6 shadow-soft">
         <p className="text-xs font-semibold tracking-wide text-primary uppercase">Versículo</p>
         <blockquote className="mt-3 font-display text-xl leading-relaxed">
@@ -82,6 +84,7 @@ function DevocionalPage() {
           </Card>
         ))}
       </div>
+      </ExportCard>
     </AppShell>
   );
 }

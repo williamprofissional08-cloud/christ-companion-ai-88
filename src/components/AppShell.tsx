@@ -10,14 +10,19 @@ import {
   MessageCircleHeart,
   Moon,
   NotebookPen,
+  Route as RouteIcon,
   Search,
+  Settings,
   Star,
   Sun,
   Target,
 } from "lucide-react";
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { useQueryClient } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
+import { getSettings } from "@/lib/settings.functions";
+import { useReminders } from "@/hooks/use-reminders";
 import { useTheme } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -27,6 +32,7 @@ const NAV = [
   { to: "/inicio", label: "Início", icon: Home },
   { to: "/devocional", label: "Devocional", icon: Flame },
   { to: "/assistente", label: "Assistente", icon: MessageCircleHeart },
+  { to: "/trilhas", label: "Trilhas guiadas", icon: RouteIcon },
   { to: "/planos", label: "Planos de oração", icon: HeartHandshake },
   { to: "/estudos", label: "Estudos", icon: Compass },
   { to: "/biblia", label: "Bíblia", icon: BookOpen },
@@ -34,6 +40,7 @@ const NAV = [
   { to: "/diario", label: "Diário", icon: NotebookPen },
   { to: "/metas", label: "Metas", icon: Target },
   { to: "/favoritos", label: "Favoritos", icon: Star },
+  { to: "/configuracoes", label: "Configurações", icon: Settings },
 ] as const;
 
 function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
@@ -71,6 +78,15 @@ export function AppShell({
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const [open, setOpen] = useState(false);
+  const fetchSettings = useServerFn(getSettings);
+  const { data: settings } = useQuery({ queryKey: ["settings"], queryFn: () => fetchSettings() });
+  useReminders(settings);
+
+  useEffect(() => {
+    if (settings && !settings.onboarding_completed) {
+      navigate({ to: "/onboarding", replace: true });
+    }
+  }, [settings, navigate]);
 
   async function signOut() {
     await queryClient.cancelQueries();
