@@ -103,5 +103,5 @@ export const explainReference = createServerFn({ method: "POST" })
   )
   .handler(async ({ data }) => {
     const { explainPassage } = await import("./ai-content.server");
-    return { markdown: await explainPassage(data.reference, data.text) };
+    return explainPassage(data.reference, data.text);
   });

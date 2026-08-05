@@ -283,6 +283,78 @@ export type Database = {
         }
         Relationships: []
       }
+      track_progress: {
+        Row: {
+          checkpoints: Json
+          completed_steps: number[]
+          id: string
+          reviews: Json
+          started_at: string
+          track_slug: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          checkpoints?: Json
+          completed_steps?: number[]
+          id?: string
+          reviews?: Json
+          started_at?: string
+          track_slug: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          checkpoints?: Json
+          completed_steps?: number[]
+          id?: string
+          reviews?: Json
+          started_at?: string
+          track_slug?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_settings: {
+        Row: {
+          challenge_type: string
+          created_at: string
+          daily_goal: string | null
+          interests: string[]
+          onboarding_completed: boolean
+          reading_minutes: number
+          reminder_time: string
+          reminders_enabled: boolean
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          challenge_type?: string
+          created_at?: string
+          daily_goal?: string | null
+          interests?: string[]
+          onboarding_completed?: boolean
+          reading_minutes?: number
+          reminder_time?: string
+          reminders_enabled?: boolean
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          challenge_type?: string
+          created_at?: string
+          daily_goal?: string | null
+          interests?: string[]
+          onboarding_completed?: boolean
+          reading_minutes?: number
+          reminder_time?: string
+          reminders_enabled?: boolean
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
