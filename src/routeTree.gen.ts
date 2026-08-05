@@ -33,6 +33,7 @@ import { Route as AuthenticatedEstudosSlugRouteImport } from './routes/_authenti
 import { Route as AuthenticatedPlanosIndexRouteImport } from './routes/_authenticated/planos.index'
 import { Route as AuthenticatedPlanosSlugRouteImport } from './routes/_authenticated/planos.$slug'
 import { Route as AuthenticatedTrilhasIndexRouteImport } from './routes/_authenticated/trilhas.index'
+import { Route as AuthenticatedTrilhasSlugRouteImport } from './routes/_authenticated/trilhas.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -160,6 +161,12 @@ const AuthenticatedTrilhasIndexRoute =
     path: '/',
     getParentRoute: () => AuthenticatedTrilhasRoute,
   } as any)
+const AuthenticatedTrilhasSlugRoute =
+  AuthenticatedTrilhasSlugRouteImport.update({
+    id: '/$slug',
+    path: '/$slug',
+    getParentRoute: () => AuthenticatedTrilhasRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -181,6 +188,7 @@ export interface FileRoutesByFullPath {
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
+  '/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
   '/assistente/': typeof AuthenticatedAssistenteIndexRoute
   '/estudos/': typeof AuthenticatedEstudosIndexRoute
   '/planos/': typeof AuthenticatedPlanosIndexRoute
@@ -202,6 +210,7 @@ export interface FileRoutesByTo {
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
+  '/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
   '/assistente': typeof AuthenticatedAssistenteIndexRoute
   '/estudos': typeof AuthenticatedEstudosIndexRoute
   '/planos': typeof AuthenticatedPlanosIndexRoute
@@ -229,6 +238,7 @@ export interface FileRoutesById {
   '/_authenticated/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/_authenticated/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/_authenticated/planos/$slug': typeof AuthenticatedPlanosSlugRoute
+  '/_authenticated/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
   '/_authenticated/assistente/': typeof AuthenticatedAssistenteIndexRoute
   '/_authenticated/estudos/': typeof AuthenticatedEstudosIndexRoute
   '/_authenticated/planos/': typeof AuthenticatedPlanosIndexRoute
@@ -256,6 +266,7 @@ export interface FileRouteTypes {
     | '/assistente/$threadId'
     | '/estudos/$slug'
     | '/planos/$slug'
+    | '/trilhas/$slug'
     | '/assistente/'
     | '/estudos/'
     | '/planos/'
@@ -277,6 +288,7 @@ export interface FileRouteTypes {
     | '/assistente/$threadId'
     | '/estudos/$slug'
     | '/planos/$slug'
+    | '/trilhas/$slug'
     | '/assistente'
     | '/estudos'
     | '/planos'
@@ -303,6 +315,7 @@ export interface FileRouteTypes {
     | '/_authenticated/assistente/$threadId'
     | '/_authenticated/estudos/$slug'
     | '/_authenticated/planos/$slug'
+    | '/_authenticated/trilhas/$slug'
     | '/_authenticated/assistente/'
     | '/_authenticated/estudos/'
     | '/_authenticated/planos/'
@@ -486,6 +499,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedTrilhasIndexRouteImport
       parentRoute: typeof AuthenticatedTrilhasRoute
     }
+    '/_authenticated/trilhas/$slug': {
+      id: '/_authenticated/trilhas/$slug'
+      path: '/$slug'
+      fullPath: '/trilhas/$slug'
+      preLoaderRoute: typeof AuthenticatedTrilhasSlugRouteImport
+      parentRoute: typeof AuthenticatedTrilhasRoute
+    }
   }
 }
 
@@ -532,10 +552,12 @@ const AuthenticatedPlanosRouteWithChildren =
   AuthenticatedPlanosRoute._addFileChildren(AuthenticatedPlanosRouteChildren)
 
 interface AuthenticatedTrilhasRouteChildren {
+  AuthenticatedTrilhasSlugRoute: typeof AuthenticatedTrilhasSlugRoute
   AuthenticatedTrilhasIndexRoute: typeof AuthenticatedTrilhasIndexRoute
 }
 
 const AuthenticatedTrilhasRouteChildren: AuthenticatedTrilhasRouteChildren = {
+  AuthenticatedTrilhasSlugRoute: AuthenticatedTrilhasSlugRoute,
   AuthenticatedTrilhasIndexRoute: AuthenticatedTrilhasIndexRoute,
 }
 
