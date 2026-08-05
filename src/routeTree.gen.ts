@@ -32,6 +32,7 @@ import { Route as AuthenticatedEstudosIndexRouteImport } from './routes/_authent
 import { Route as AuthenticatedEstudosSlugRouteImport } from './routes/_authenticated/estudos.$slug'
 import { Route as AuthenticatedPlanosIndexRouteImport } from './routes/_authenticated/planos.index'
 import { Route as AuthenticatedPlanosSlugRouteImport } from './routes/_authenticated/planos.$slug'
+import { Route as AuthenticatedTrilhasIndexRouteImport } from './routes/_authenticated/trilhas.index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -153,6 +154,12 @@ const AuthenticatedPlanosSlugRoute = AuthenticatedPlanosSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => AuthenticatedPlanosRoute,
 } as any)
+const AuthenticatedTrilhasIndexRoute =
+  AuthenticatedTrilhasIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedTrilhasRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -169,7 +176,7 @@ export interface FileRoutesByFullPath {
   '/onboarding': typeof AuthenticatedOnboardingRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/planos': typeof AuthenticatedPlanosRouteWithChildren
-  '/trilhas': typeof AuthenticatedTrilhasRoute
+  '/trilhas': typeof AuthenticatedTrilhasRouteWithChildren
   '/api/chat': typeof ApiChatRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
@@ -177,6 +184,7 @@ export interface FileRoutesByFullPath {
   '/assistente/': typeof AuthenticatedAssistenteIndexRoute
   '/estudos/': typeof AuthenticatedEstudosIndexRoute
   '/planos/': typeof AuthenticatedPlanosIndexRoute
+  '/trilhas/': typeof AuthenticatedTrilhasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -190,7 +198,6 @@ export interface FileRoutesByTo {
   '/metas': typeof AuthenticatedMetasRoute
   '/onboarding': typeof AuthenticatedOnboardingRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
-  '/trilhas': typeof AuthenticatedTrilhasRoute
   '/api/chat': typeof ApiChatRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
@@ -198,6 +205,7 @@ export interface FileRoutesByTo {
   '/assistente': typeof AuthenticatedAssistenteIndexRoute
   '/estudos': typeof AuthenticatedEstudosIndexRoute
   '/planos': typeof AuthenticatedPlanosIndexRoute
+  '/trilhas': typeof AuthenticatedTrilhasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -216,7 +224,7 @@ export interface FileRoutesById {
   '/_authenticated/onboarding': typeof AuthenticatedOnboardingRoute
   '/_authenticated/pesquisa': typeof AuthenticatedPesquisaRoute
   '/_authenticated/planos': typeof AuthenticatedPlanosRouteWithChildren
-  '/_authenticated/trilhas': typeof AuthenticatedTrilhasRoute
+  '/_authenticated/trilhas': typeof AuthenticatedTrilhasRouteWithChildren
   '/api/chat': typeof ApiChatRoute
   '/_authenticated/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/_authenticated/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
@@ -224,6 +232,7 @@ export interface FileRoutesById {
   '/_authenticated/assistente/': typeof AuthenticatedAssistenteIndexRoute
   '/_authenticated/estudos/': typeof AuthenticatedEstudosIndexRoute
   '/_authenticated/planos/': typeof AuthenticatedPlanosIndexRoute
+  '/_authenticated/trilhas/': typeof AuthenticatedTrilhasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -250,6 +259,7 @@ export interface FileRouteTypes {
     | '/assistente/'
     | '/estudos/'
     | '/planos/'
+    | '/trilhas/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -263,7 +273,6 @@ export interface FileRouteTypes {
     | '/metas'
     | '/onboarding'
     | '/pesquisa'
-    | '/trilhas'
     | '/api/chat'
     | '/assistente/$threadId'
     | '/estudos/$slug'
@@ -271,6 +280,7 @@ export interface FileRouteTypes {
     | '/assistente'
     | '/estudos'
     | '/planos'
+    | '/trilhas'
   id:
     | '__root__'
     | '/'
@@ -296,6 +306,7 @@ export interface FileRouteTypes {
     | '/_authenticated/assistente/'
     | '/_authenticated/estudos/'
     | '/_authenticated/planos/'
+    | '/_authenticated/trilhas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -468,6 +479,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedPlanosSlugRouteImport
       parentRoute: typeof AuthenticatedPlanosRoute
     }
+    '/_authenticated/trilhas/': {
+      id: '/_authenticated/trilhas/'
+      path: '/'
+      fullPath: '/trilhas/'
+      preLoaderRoute: typeof AuthenticatedTrilhasIndexRouteImport
+      parentRoute: typeof AuthenticatedTrilhasRoute
+    }
   }
 }
 
@@ -513,6 +531,17 @@ const AuthenticatedPlanosRouteChildren: AuthenticatedPlanosRouteChildren = {
 const AuthenticatedPlanosRouteWithChildren =
   AuthenticatedPlanosRoute._addFileChildren(AuthenticatedPlanosRouteChildren)
 
+interface AuthenticatedTrilhasRouteChildren {
+  AuthenticatedTrilhasIndexRoute: typeof AuthenticatedTrilhasIndexRoute
+}
+
+const AuthenticatedTrilhasRouteChildren: AuthenticatedTrilhasRouteChildren = {
+  AuthenticatedTrilhasIndexRoute: AuthenticatedTrilhasIndexRoute,
+}
+
+const AuthenticatedTrilhasRouteWithChildren =
+  AuthenticatedTrilhasRoute._addFileChildren(AuthenticatedTrilhasRouteChildren)
+
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAssistenteRoute: typeof AuthenticatedAssistenteRouteWithChildren
   AuthenticatedBibliaRoute: typeof AuthenticatedBibliaRoute
@@ -526,7 +555,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedOnboardingRoute: typeof AuthenticatedOnboardingRoute
   AuthenticatedPesquisaRoute: typeof AuthenticatedPesquisaRoute
   AuthenticatedPlanosRoute: typeof AuthenticatedPlanosRouteWithChildren
-  AuthenticatedTrilhasRoute: typeof AuthenticatedTrilhasRoute
+  AuthenticatedTrilhasRoute: typeof AuthenticatedTrilhasRouteWithChildren
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
@@ -542,7 +571,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedOnboardingRoute: AuthenticatedOnboardingRoute,
   AuthenticatedPesquisaRoute: AuthenticatedPesquisaRoute,
   AuthenticatedPlanosRoute: AuthenticatedPlanosRouteWithChildren,
-  AuthenticatedTrilhasRoute: AuthenticatedTrilhasRoute,
+  AuthenticatedTrilhasRoute: AuthenticatedTrilhasRouteWithChildren,
 }
 
 const AuthenticatedRouteRouteWithChildren =
