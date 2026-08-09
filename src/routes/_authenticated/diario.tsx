@@ -51,6 +51,14 @@ function DiarioPage() {
   const entries = useQuery({ queryKey: ["journal"], queryFn: () => list({}) });
   const invalidate = () => queryClient.invalidateQueries({ queryKey: ["journal"] });
 
+  const day = todayISO();
+  const summaryFn = useServerFn(getWeeklySummary);
+  const summary = useQuery({
+    queryKey: ["weekly-summary", day],
+    queryFn: () => summaryFn({ data: { day } }),
+  });
+
+
   const add = useMutation({
     mutationFn: () => create({ data: { kind, title, content } }),
     onSuccess: () => {
