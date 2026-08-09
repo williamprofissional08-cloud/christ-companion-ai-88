@@ -144,21 +144,95 @@ function ConfiguracoesPage() {
               <Switch checked={reminders} onCheckedChange={setReminders} />
             </div>
           </div>
-          <Button
-            variant="secondary"
-            size="sm"
-            className="mt-4"
-            onClick={async () => {
-              const granted = await requestNotificationPermission();
-              toast[granted ? "success" : "error"](
-                granted
-                  ? "Notificações liberadas neste dispositivo."
-                  : "Permissão de notificação não concedida.",
-              );
-            }}
-          >
-            <BellRing className="size-4" /> Ativar notificações do navegador
-          </Button>
+
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            <div className="space-y-2">
+              <Label htmlFor="fuso">Fuso horário</Label>
+              <select
+                id="fuso"
+                value={timezone}
+                onChange={(event) => setTimezone(event.target.value)}
+                className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
+              >
+                {TIMEZONE_OPTIONS.map((zone) => (
+                  <option key={zone} value={zone}>
+                    {zone.replace("_", " ")}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="repeticao">Repetição</Label>
+              <select
+                id="repeticao"
+                value={repeat}
+                onChange={(event) => setRepeat(event.target.value)}
+                className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
+              >
+                {REMINDER_REPEATS.map((item) => (
+                  <option key={item.key} value={item.key}>
+                    {item.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div className="mt-5 space-y-2">
+            <Label>Pausa temporária</Label>
+            <p className="text-xs text-muted-foreground">
+              {pauseActive
+                ? `Lembretes pausados até ${new Date(pausedUntil!).toLocaleString("pt-BR")}.`
+                : "Seus lembretes estão ativos. Pausar não apaga suas outras configurações."}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {PAUSE_OPTIONS.map((item) => (
+                <Button
+                  key={item.key}
+                  variant={
+                    item.key === "0" ? (pauseActive ? "outline" : "gold") : "outline"
+                  }
+                  size="sm"
+                  disabled={mutation.isPending}
+                  onClick={() => applyPause(item.key)}
+                >
+                  {item.label}
+                </Button>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={async () => {
+                const granted = await requestNotificationPermission();
+                toast[granted ? "success" : "error"](
+                  granted
+                    ? "Notificações liberadas neste dispositivo."
+                    : "Permissão de notificação não concedida.",
+                );
+              }}
+            >
+              <BellRing className="size-4" /> Ativar notificações do navegador
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={async () => {
+                const sent = await sendTestReminder();
+                toast[sent ? "success" : "error"](
+                  sent
+                    ? "Lembrete de teste enviado agora."
+                    : "Libere as notificações do navegador para testar.",
+                );
+              }}
+            >
+              <Send className="size-4" /> Testar lembrete agora
+            </Button>
+          </div>
+
         </Card>
 
         <Card className="border-border/50 p-6 shadow-soft">
