@@ -5,6 +5,7 @@ import { Check, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
+import { WeeklySummary } from "@/components/WeeklySummary";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -13,10 +14,12 @@ import { Textarea } from "@/components/ui/textarea";
 import {
   createJournalEntry,
   deleteJournalEntry,
+  getWeeklySummary,
   listJournal,
   setJournalAnswered,
 } from "@/lib/app.functions";
-import { JOURNAL_KINDS } from "@/lib/types";
+import { JOURNAL_KINDS, todayISO } from "@/lib/types";
+
 
 export const Route = createFileRoute("/_authenticated/diario")({
   head: () => ({
