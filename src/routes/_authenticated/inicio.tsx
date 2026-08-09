@@ -70,32 +70,39 @@ function Inicio() {
   return (
     <AppShell title="Início" subtitle="Que a Palavra guie o seu dia.">
       <div className="grid gap-4 lg:grid-cols-3">
-        <Card className="animate-rise border-border/50 p-6 shadow-soft lg:col-span-2">
-          <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-            Versículo do dia
-          </p>
-          {devotional.isLoading ? (
-            <div className="mt-4 space-y-2">
-              <Skeleton className="h-6 w-full" />
-              <Skeleton className="h-6 w-4/5" />
-            </div>
-          ) : d ? (
-            <>
-              <blockquote className="mt-3 font-display text-xl leading-relaxed">
-                “{d.verse.text}”
-              </blockquote>
-              <p className="mt-2 text-sm font-medium text-muted-foreground">{d.verse.reference}</p>
-              <p className="mt-5 text-sm leading-relaxed">{d.motivational}</p>
-              <Button asChild variant="hero" size="sm" className="mt-6">
-                <Link to="/devocional">Abrir devocional completo</Link>
-              </Button>
-            </>
-          ) : (
-            <p className="mt-4 text-sm text-muted-foreground">
-              Não conseguimos carregar o devocional agora. Tente novamente em instantes.
-            </p>
-          )}
-        </Card>
+        <div className="lg:col-span-2">
+          <ExportCard filename="devocional-do-dia" title="Meu devocional de hoje">
+            <Card className="animate-rise border-border/50 p-6 shadow-soft">
+              <p className="text-xs font-semibold tracking-wide text-primary uppercase">
+                Versículo do dia
+              </p>
+              {devotional.isLoading ? (
+                <div className="mt-4 space-y-2">
+                  <Skeleton className="h-6 w-full" />
+                  <Skeleton className="h-6 w-4/5" />
+                </div>
+              ) : d ? (
+                <>
+                  <blockquote className="mt-3 font-display text-xl leading-relaxed">
+                    “{d.verse.text}”
+                  </blockquote>
+                  <p className="mt-2 text-sm font-medium text-muted-foreground">
+                    {d.verse.reference}
+                  </p>
+                  <p className="mt-5 text-sm leading-relaxed">{d.motivational}</p>
+                  <Button asChild variant="hero" size="sm" className="mt-6">
+                    <Link to="/devocional">Abrir devocional completo</Link>
+                  </Button>
+                </>
+              ) : (
+                <p className="mt-4 text-sm text-muted-foreground">
+                  Não conseguimos carregar o devocional agora. Tente novamente em instantes.
+                </p>
+              )}
+            </Card>
+          </ExportCard>
+        </div>
+
 
         <Card className="animate-rise border-border/50 p-6 shadow-soft">
           <p className="text-xs font-semibold tracking-wide text-primary uppercase">
