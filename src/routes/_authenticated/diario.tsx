@@ -5,6 +5,7 @@ import { Check, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
+import { WeeklySummary } from "@/components/WeeklySummary";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -13,10 +14,12 @@ import { Textarea } from "@/components/ui/textarea";
 import {
   createJournalEntry,
   deleteJournalEntry,
+  getWeeklySummary,
   listJournal,
   setJournalAnswered,
 } from "@/lib/app.functions";
-import { JOURNAL_KINDS } from "@/lib/types";
+import { JOURNAL_KINDS, todayISO } from "@/lib/types";
+
 
 export const Route = createFileRoute("/_authenticated/diario")({
   head: () => ({
@@ -48,6 +51,14 @@ function DiarioPage() {
   const entries = useQuery({ queryKey: ["journal"], queryFn: () => list({}) });
   const invalidate = () => queryClient.invalidateQueries({ queryKey: ["journal"] });
 
+  const day = todayISO();
+  const summaryFn = useServerFn(getWeeklySummary);
+  const summary = useQuery({
+    queryKey: ["weekly-summary", day],
+    queryFn: () => summaryFn({ data: { day } }),
+  });
+
+
   const add = useMutation({
     mutationFn: () => create({ data: { kind, title, content } }),
     onSuccess: () => {
@@ -71,8 +82,12 @@ function DiarioPage() {
 
   return (
     <AppShell title="Diário espiritual" subtitle="Escreva e guarde o que Deus tem feito.">
+      <div className="mb-6">
+        <WeeklySummary summary={summary.data} isLoading={summary.isLoading} />
+      </div>
       <Card className="border-border/50 p-6 shadow-soft">
         <div className="flex flex-wrap gap-2">
+
           {JOURNAL_KINDS.map((item) => (
             <Button
               key={item.key}

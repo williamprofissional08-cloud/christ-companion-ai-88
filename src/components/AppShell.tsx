@@ -83,10 +83,14 @@ export function AppShell({
   useReminders(settings);
 
   useEffect(() => {
-    if (settings && !settings.onboarding_completed) {
-      navigate({ to: "/onboarding", replace: true });
-    }
+    if (!settings) return;
+    const incomplete =
+      !settings.onboarding_completed ||
+      (settings.interests?.length ?? 0) === 0 ||
+      !settings.daily_goal?.trim();
+    if (incomplete) navigate({ to: "/onboarding", replace: true });
   }, [settings, navigate]);
+
 
   async function signOut() {
     await queryClient.cancelQueries();

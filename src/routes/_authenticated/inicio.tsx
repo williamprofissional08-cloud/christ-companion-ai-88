@@ -3,14 +3,17 @@ import { useServerFn } from "@tanstack/react-start";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
+import { ExportCard } from "@/components/ExportCard";
+import { WeeklySummary } from "@/components/WeeklySummary";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getDashboard, toggleHabit } from "@/lib/app.functions";
+import { getDashboard, getWeeklySummary, toggleHabit } from "@/lib/app.functions";
 import { getDevotional } from "@/lib/ai.functions";
 import { HABIT_ITEMS, todayISO } from "@/lib/types";
+
 
 export const Route = createFileRoute("/_authenticated/inicio")({
   head: () => ({
@@ -45,6 +48,13 @@ function Inicio() {
     staleTime: Infinity,
   });
 
+  const summaryFn = useServerFn(getWeeklySummary);
+  const summary = useQuery({
+    queryKey: ["weekly-summary", day],
+    queryFn: () => summaryFn({ data: { day } }),
+  });
+
+
   const habitMutation = useMutation({
     mutationFn: (vars: { key: string; value: boolean }) =>
       toggle({ data: { day, key: vars.key, value: vars.value } }),
@@ -60,32 +70,39 @@ function Inicio() {
   return (
     <AppShell title="Início" subtitle="Que a Palavra guie o seu dia.">
       <div className="grid gap-4 lg:grid-cols-3">
-        <Card className="animate-rise border-border/50 p-6 shadow-soft lg:col-span-2">
-          <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-            Versículo do dia
-          </p>
-          {devotional.isLoading ? (
-            <div className="mt-4 space-y-2">
-              <Skeleton className="h-6 w-full" />
-              <Skeleton className="h-6 w-4/5" />
-            </div>
-          ) : d ? (
-            <>
-              <blockquote className="mt-3 font-display text-xl leading-relaxed">
-                “{d.verse.text}”
-              </blockquote>
-              <p className="mt-2 text-sm font-medium text-muted-foreground">{d.verse.reference}</p>
-              <p className="mt-5 text-sm leading-relaxed">{d.motivational}</p>
-              <Button asChild variant="hero" size="sm" className="mt-6">
-                <Link to="/devocional">Abrir devocional completo</Link>
-              </Button>
-            </>
-          ) : (
-            <p className="mt-4 text-sm text-muted-foreground">
-              Não conseguimos carregar o devocional agora. Tente novamente em instantes.
-            </p>
-          )}
-        </Card>
+        <div className="lg:col-span-2">
+          <ExportCard filename="devocional-do-dia" title="Meu devocional de hoje">
+            <Card className="animate-rise border-border/50 p-6 shadow-soft">
+              <p className="text-xs font-semibold tracking-wide text-primary uppercase">
+                Versículo do dia
+              </p>
+              {devotional.isLoading ? (
+                <div className="mt-4 space-y-2">
+                  <Skeleton className="h-6 w-full" />
+                  <Skeleton className="h-6 w-4/5" />
+                </div>
+              ) : d ? (
+                <>
+                  <blockquote className="mt-3 font-display text-xl leading-relaxed">
+                    “{d.verse.text}”
+                  </blockquote>
+                  <p className="mt-2 text-sm font-medium text-muted-foreground">
+                    {d.verse.reference}
+                  </p>
+                  <p className="mt-5 text-sm leading-relaxed">{d.motivational}</p>
+                  <Button asChild variant="hero" size="sm" className="mt-6">
+                    <Link to="/devocional">Abrir devocional completo</Link>
+                  </Button>
+                </>
+              ) : (
+                <p className="mt-4 text-sm text-muted-foreground">
+                  Não conseguimos carregar o devocional agora. Tente novamente em instantes.
+                </p>
+              )}
+            </Card>
+          </ExportCard>
+        </div>
+
 
         <Card className="animate-rise border-border/50 p-6 shadow-soft">
           <p className="text-xs font-semibold tracking-wide text-primary uppercase">
@@ -144,6 +161,13 @@ function Inicio() {
             </p>
           ) : null}
         </Card>
+
+        <div className="lg:col-span-3">
+          <ExportCard filename="meu-progresso-espiritual" title="Meu progresso espiritual">
+            <WeeklySummary summary={summary.data} isLoading={summary.isLoading} />
+          </ExportCard>
+        </div>
+
 
         <Card className="animate-rise border-border/50 p-6 shadow-soft lg:col-span-3">
           <p className="text-xs font-semibold tracking-wide text-primary uppercase">Suas metas</p>

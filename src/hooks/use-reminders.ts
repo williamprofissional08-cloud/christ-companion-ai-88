@@ -15,20 +15,64 @@ const MESSAGES = [
   { title: "Desafio espiritual", body: "Coloque a Palavra em prática hoje (Tiago 1:22)." },
 ];
 
+/** Envia um lembrete de teste imediatamente, sem alterar as configurações salvas. */
+export async function sendTestReminder() {
+  const granted = await requestNotificationPermission();
+  if (!granted) return false;
+  const message = MESSAGES[new Date().getMinutes() % MESSAGES.length]!;
+  new Notification(`${message.title} (teste)`, { body: message.body, tag: "ccc-test" });
+  return true;
+}
+
 function storageKey(kind: string) {
   return `ccc-reminder-${kind}`;
 }
 
-function alreadySentToday(kind: string) {
-  const today = new Date().toDateString();
-  return localStorage.getItem(storageKey(kind)) === today;
+/** Data/hora atual convertidas para o fuso escolhido pelo usuário. */
+function zoned(timezone: string) {
+  const now = new Date();
+  try {
+    const parts = new Intl.DateTimeFormat("en-CA", {
+      timeZone: timezone,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      weekday: "short",
+      hour12: false,
+    }).formatToParts(now);
+    const get = (type: string) => parts.find((p) => p.type === type)?.value ?? "";
+    const weekdayMap: Record<string, number> = {
+      Sun: 0,
+      Mon: 1,
+      Tue: 2,
+      Wed: 3,
+      Thu: 4,
+      Fri: 5,
+      Sat: 6,
+    };
+    return {
+      dateKey: `${get("year")}-${get("month")}-${get("day")}`,
+      minutes: Number(get("hour")) * 60 + Number(get("minute")),
+      weekday: weekdayMap[get("weekday")] ?? now.getDay(),
+    };
+  } catch {
+    return {
+      dateKey: now.toDateString(),
+      minutes: now.getHours() * 60 + now.getMinutes(),
+      weekday: now.getDay(),
+    };
+  }
 }
 
-function markSent(kind: string) {
-  localStorage.setItem(storageKey(kind), new Date().toDateString());
+function allowedToday(repeat: string, weekday: number) {
+  if (repeat === "semana") return weekday >= 1 && weekday <= 5;
+  if (repeat === "fimdesemana") return weekday === 0 || weekday === 6;
+  return true;
 }
 
-/** Dispara lembretes diários consistentes no horário configurado. */
+/** Dispara lembretes diários consistentes no horário, fuso e repetição configurados. */
 export function useReminders(settings: UserSettings | undefined) {
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -36,18 +80,30 @@ export function useReminders(settings: UserSettings | undefined) {
     if (!settings?.reminders_enabled) return;
     if (typeof window === "undefined" || !("Notification" in window)) return;
 
+    const timezone = settings.timezone || "America/Sao_Paulo";
+    const repeat = settings.reminder_repeat || "diario";
+    const pausedUntil = settings.reminder_paused_until
+      ? new Date(settings.reminder_paused_until)
+      : null;
+
     const [hourText, minuteText] = (settings.reminder_time ?? "07:00").split(":");
-    const hour = Number(hourText);
-    const minute = Number(minuteText);
+    const baseMinutes = Number(hourText) * 60 + Number(minuteText);
+    const slots = repeat === "duasvezes" ? [baseMinutes, (baseMinutes + 720) % 1440] : [baseMinutes];
 
     function tick() {
       if (Notification.permission !== "granted") return;
-      const now = new Date();
-      const due = now.getHours() * 60 + now.getMinutes() >= hour * 60 + minute;
-      if (!due || alreadySentToday("daily")) return;
-      const message = MESSAGES[now.getDate() % MESSAGES.length]!;
-      new Notification(message.title, { body: message.body, tag: "ccc-daily" });
-      markSent("daily");
+      if (pausedUntil && pausedUntil.getTime() > Date.now()) return;
+      const { dateKey, minutes, weekday } = zoned(timezone);
+      if (!allowedToday(repeat, weekday)) return;
+
+      slots.forEach((slot, index) => {
+        if (minutes < slot) return;
+        const key = storageKey(`slot-${index}`);
+        if (localStorage.getItem(key) === dateKey) return;
+        const message = MESSAGES[(new Date().getDate() + index) % MESSAGES.length]!;
+        new Notification(message.title, { body: message.body, tag: `ccc-daily-${index}` });
+        localStorage.setItem(key, dateKey);
+      });
     }
 
     tick();
@@ -55,5 +111,11 @@ export function useReminders(settings: UserSettings | undefined) {
     return () => {
       if (timer.current) clearInterval(timer.current);
     };
-  }, [settings?.reminders_enabled, settings?.reminder_time]);
+  }, [
+    settings?.reminders_enabled,
+    settings?.reminder_time,
+    settings?.timezone,
+    settings?.reminder_repeat,
+    settings?.reminder_paused_until,
+  ]);
 }

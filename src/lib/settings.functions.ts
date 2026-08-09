@@ -11,7 +11,11 @@ const DEFAULTS = {
   reading_minutes: 10,
   challenge_type: "equilibrado",
   reminders_enabled: true,
+  timezone: "America/Sao_Paulo",
+  reminder_repeat: "diario",
+  reminder_paused_until: null as string | null,
 };
+
 
 export const getSettings = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
@@ -36,6 +40,9 @@ const settingsSchema = z.object({
   challenge_type: z.string().max(30).optional(),
   reminders_enabled: z.boolean().optional(),
   onboarding_completed: z.boolean().optional(),
+  timezone: z.string().max(60).optional(),
+  reminder_repeat: z.string().max(20).optional(),
+  reminder_paused_until: z.string().datetime().nullable().optional(),
 });
 
 export const saveSettings = createServerFn({ method: "POST" })
@@ -45,11 +52,17 @@ export const saveSettings = createServerFn({ method: "POST" })
     const provided = Object.fromEntries(
       Object.entries(data).filter(([, value]) => value !== undefined),
     );
+    const { data: existing } = await context.supabase
+      .from("user_settings")
+      .select("*")
+      .eq("user_id", context.userId)
+      .maybeSingle();
     const { error } = await context.supabase.from("user_settings").upsert(
       {
-        user_id: context.userId,
         ...DEFAULTS,
+        ...(existing ?? {}),
         ...provided,
+        user_id: context.userId,
         updated_at: new Date().toISOString(),
       },
       { onConflict: "user_id" },
@@ -57,6 +70,7 @@ export const saveSettings = createServerFn({ method: "POST" })
     if (error) throw new Error(error.message);
     return { ok: true };
   });
+
 
 export const completeOnboarding = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])

@@ -324,8 +324,11 @@ export type Database = {
           interests: string[]
           onboarding_completed: boolean
           reading_minutes: number
+          reminder_paused_until: string | null
+          reminder_repeat: string
           reminder_time: string
           reminders_enabled: boolean
+          timezone: string
           updated_at: string
           user_id: string
         }
@@ -336,8 +339,11 @@ export type Database = {
           interests?: string[]
           onboarding_completed?: boolean
           reading_minutes?: number
+          reminder_paused_until?: string | null
+          reminder_repeat?: string
           reminder_time?: string
           reminders_enabled?: boolean
+          timezone?: string
           updated_at?: string
           user_id: string
         }
@@ -348,8 +354,11 @@ export type Database = {
           interests?: string[]
           onboarding_completed?: boolean
           reading_minutes?: number
+          reminder_paused_until?: string | null
+          reminder_repeat?: string
           reminder_time?: string
           reminders_enabled?: boolean
+          timezone?: string
           updated_at?: string
           user_id?: string
         }
