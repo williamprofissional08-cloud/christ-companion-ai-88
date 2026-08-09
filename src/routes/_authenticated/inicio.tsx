@@ -48,6 +48,13 @@ function Inicio() {
     staleTime: Infinity,
   });
 
+  const summaryFn = useServerFn(getWeeklySummary);
+  const summary = useQuery({
+    queryKey: ["weekly-summary", day],
+    queryFn: () => summaryFn({ data: { day } }),
+  });
+
+
   const habitMutation = useMutation({
     mutationFn: (vars: { key: string; value: boolean }) =>
       toggle({ data: { day, key: vars.key, value: vars.value } }),
