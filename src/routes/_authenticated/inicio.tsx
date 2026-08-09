@@ -162,6 +162,13 @@ function Inicio() {
           ) : null}
         </Card>
 
+        <div className="lg:col-span-3">
+          <ExportCard filename="meu-progresso-espiritual" title="Meu progresso espiritual">
+            <WeeklySummary summary={summary.data} isLoading={summary.isLoading} />
+          </ExportCard>
+        </div>
+
+
         <Card className="animate-rise border-border/50 p-6 shadow-soft lg:col-span-3">
           <p className="text-xs font-semibold tracking-wide text-primary uppercase">Suas metas</p>
           {data?.goals?.length ? (
