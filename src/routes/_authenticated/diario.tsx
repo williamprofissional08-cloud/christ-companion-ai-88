@@ -82,8 +82,12 @@ function DiarioPage() {
 
   return (
     <AppShell title="Diário espiritual" subtitle="Escreva e guarde o que Deus tem feito.">
+      <div className="mb-6">
+        <WeeklySummary summary={summary.data} isLoading={summary.isLoading} />
+      </div>
       <Card className="border-border/50 p-6 shadow-soft">
         <div className="flex flex-wrap gap-2">
+
           {JOURNAL_KINDS.map((item) => (
             <Button
               key={item.key}
