@@ -313,7 +313,7 @@ function ConfiguracoesPage() {
           </div>
         </Card>
 
-        <Button onClick={() => mutation.mutate()} disabled={mutation.isPending}>
+        <Button onClick={() => mutation.mutate(undefined)} disabled={mutation.isPending}>
           {mutation.isPending ? "Salvando..." : "Salvar configurações"}
         </Button>
       </div>
