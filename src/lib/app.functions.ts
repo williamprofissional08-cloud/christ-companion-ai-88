@@ -343,4 +343,6 @@ export const getWeeklySummary = createServerFn({ method: "GET" })
       goalsTotal: goals.data?.length ?? 0,
       tracks: tracks.sort((a, b) => b.percent - a.percent),
       tracksCompleted: tracks.filter((t) => t.total > 0 && t.completed >= t.total).length,
+    };
   });
+
