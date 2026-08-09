@@ -11,7 +11,11 @@ const DEFAULTS = {
   reading_minutes: 10,
   challenge_type: "equilibrado",
   reminders_enabled: true,
+  timezone: "America/Sao_Paulo",
+  reminder_repeat: "diario",
+  reminder_paused_until: null as string | null,
 };
+
 
 export const getSettings = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
