@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
-import { BellRing } from "lucide-react";
+import { BellRing, Send } from "lucide-react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
@@ -13,8 +13,16 @@ import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getSettings, saveSettings } from "@/lib/settings.functions";
-import { CHALLENGE_TYPES, INTEREST_OPTIONS, READING_DURATIONS } from "@/lib/types";
-import { requestNotificationPermission } from "@/hooks/use-reminders";
+import {
+  CHALLENGE_TYPES,
+  INTEREST_OPTIONS,
+  PAUSE_OPTIONS,
+  READING_DURATIONS,
+  REMINDER_REPEATS,
+  TIMEZONE_OPTIONS,
+} from "@/lib/types";
+import { requestNotificationPermission, sendTestReminder } from "@/hooks/use-reminders";
+
 
 export const Route = createFileRoute("/_authenticated/configuracoes")({
   head: () => ({
