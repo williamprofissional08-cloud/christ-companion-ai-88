@@ -3,14 +3,17 @@ import { useServerFn } from "@tanstack/react-start";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
+import { ExportCard } from "@/components/ExportCard";
+import { WeeklySummary } from "@/components/WeeklySummary";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getDashboard, toggleHabit } from "@/lib/app.functions";
+import { getDashboard, getWeeklySummary, toggleHabit } from "@/lib/app.functions";
 import { getDevotional } from "@/lib/ai.functions";
 import { HABIT_ITEMS, todayISO } from "@/lib/types";
+
 
 export const Route = createFileRoute("/_authenticated/inicio")({
   head: () => ({
