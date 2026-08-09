@@ -82,7 +82,40 @@ export type UserSettings = {
   reading_minutes: number;
   challenge_type: string;
   reminders_enabled: boolean;
+  timezone: string;
+  reminder_repeat: string;
+  reminder_paused_until: string | null;
 };
+
+export const REMINDER_REPEATS = [
+  { key: "diario", label: "Todos os dias" },
+  { key: "semana", label: "Somente dias de semana" },
+  { key: "fimdesemana", label: "Somente fins de semana" },
+  { key: "duasvezes", label: "Duas vezes ao dia (manhã e noite)" },
+] as const;
+
+export const TIMEZONE_OPTIONS = [
+  "America/Sao_Paulo",
+  "America/Manaus",
+  "America/Belem",
+  "America/Fortaleza",
+  "America/Rio_Branco",
+  "America/New_York",
+  "America/Los_Angeles",
+  "Europe/Lisbon",
+  "Europe/London",
+  "Africa/Luanda",
+  "Africa/Maputo",
+] as const;
+
+export const PAUSE_OPTIONS = [
+  { key: "0", label: "Sem pausa" },
+  { key: "1", label: "Pausar 1 dia" },
+  { key: "3", label: "Pausar 3 dias" },
+  { key: "7", label: "Pausar 7 dias" },
+  { key: "30", label: "Pausar 30 dias" },
+] as const;
+
 
 export const INTEREST_OPTIONS = [
   "Ansiedade",
