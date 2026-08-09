@@ -54,6 +54,9 @@ function ConfiguracoesPage() {
   const [minutes, setMinutes] = useState(10);
   const [challenge, setChallenge] = useState("equilibrado");
   const [reminders, setReminders] = useState(true);
+  const [timezone, setTimezone] = useState("America/Sao_Paulo");
+  const [repeat, setRepeat] = useState("diario");
+  const [pausedUntil, setPausedUntil] = useState<string | null>(null);
 
   useEffect(() => {
     if (!data) return;
@@ -63,10 +66,13 @@ function ConfiguracoesPage() {
     setMinutes(data.reading_minutes ?? 10);
     setChallenge(data.challenge_type ?? "equilibrado");
     setReminders(data.reminders_enabled ?? true);
+    setTimezone(data.timezone ?? "America/Sao_Paulo");
+    setRepeat(data.reminder_repeat ?? "diario");
+    setPausedUntil(data.reminder_paused_until ?? null);
   }, [data]);
 
   const mutation = useMutation({
-    mutationFn: () =>
+    mutationFn: (overrides?: { reminder_paused_until?: string | null }) =>
       persist({
         data: {
           interests,
@@ -75,7 +81,11 @@ function ConfiguracoesPage() {
           reading_minutes: minutes,
           challenge_type: challenge,
           reminders_enabled: reminders,
+          timezone,
+          reminder_repeat: repeat,
+          reminder_paused_until: pausedUntil,
           onboarding_completed: true,
+          ...(overrides ?? {}),
         },
       }),
     onSuccess: async () => {
@@ -84,6 +94,16 @@ function ConfiguracoesPage() {
     },
     onError: () => toast.error("Não foi possível salvar agora."),
   });
+
+  function applyPause(days: string) {
+    const value =
+      days === "0" ? null : new Date(Date.now() + Number(days) * 86400000).toISOString();
+    setPausedUntil(value);
+    mutation.mutate({ reminder_paused_until: value });
+  }
+
+  const pauseActive = pausedUntil && new Date(pausedUntil).getTime() > Date.now();
+
 
   if (isLoading) {
     return (
