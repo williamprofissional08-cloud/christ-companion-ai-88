@@ -279,3 +279,68 @@ export const savePlanDay = createServerFn({ method: "POST" })
     if (error) throw new Error(error.message);
     return { ok: true };
   });
+
+export const getWeeklySummary = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) => daySchema.parse(input))
+  .handler(async ({ data, context }) => {
+    const { supabase, userId } = context;
+    const end = new Date(`${data.day}T00:00:00`);
+    const start = new Date(end.getTime() - 6 * 86400000);
+    const startISO = start.toISOString().slice(0, 10);
+
+    const [habitRows, journalRows, goals, trackRows] = await Promise.all([
+      supabase
+        .from("habit_days")
+        .select("day, habits")
+        .eq("user_id", userId)
+        .gte("day", startISO)
+        .lte("day", data.day),
+      supabase
+        .from("journal_entries")
+        .select("id, created_at")
+        .eq("user_id", userId)
+        .gte("created_at", start.toISOString()),
+      supabase.from("goals").select("completed").eq("user_id", userId),
+      supabase
+        .from("track_progress")
+        .select("track_slug, completed_steps, updated_at")
+        .eq("user_id", userId),
+    ]);
+
+    const byDay = new Map<string, Record<string, boolean>>();
+    for (const row of habitRows.data ?? [])
+      byDay.set(row.day, (row.habits ?? {}) as Record<string, boolean>);
+
+    const days = Array.from({ length: 7 }, (_, index) => {
+      const cursor = new Date(start.getTime() + index * 86400000);
+      const iso = cursor.toISOString().slice(0, 10);
+      const habits = byDay.get(iso) ?? {};
+      return { day: iso, done: Object.values(habits).filter(Boolean).length };
+    });
+
+    const { READING_TRACKS, buildSteps } = await import("./content/tracks");
+    const tracks = (trackRows.data ?? []).map((row) => {
+      const track = READING_TRACKS.find((t) => t.slug === row.track_slug);
+      const total = track ? buildSteps(track).length : 0;
+      const completed = (row.completed_steps ?? []).length;
+      return {
+        slug: row.track_slug,
+        title: track?.title ?? row.track_slug,
+        completed,
+        total,
+        percent: total ? Math.round((completed / total) * 100) : 0,
+        updatedAt: row.updated_at,
+      };
+    });
+
+    return {
+      days,
+      habitTotal: days.reduce((sum, d) => sum + d.done, 0),
+      activeDays: days.filter((d) => d.done > 0).length,
+      journalCount: journalRows.data?.length ?? 0,
+      goalsCompleted: (goals.data ?? []).filter((g) => g.completed).length,
+      goalsTotal: goals.data?.length ?? 0,
+      tracks: tracks.sort((a, b) => b.percent - a.percent),
+      tracksCompleted: tracks.filter((t) => t.total > 0 && t.completed >= t.total).length,
+  });
