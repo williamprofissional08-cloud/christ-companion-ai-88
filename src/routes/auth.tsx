@@ -17,9 +17,11 @@ import {
 
 export const Route = createFileRoute("/auth")({
   ssr: false,
-  validateSearch: (search: Record<string, unknown>) => ({
-    redirect: sanitizeRedirect(search['redirect']) ?? undefined,
-  }),
+  validateSearch: (search: Record<string, unknown>): { redirect?: string } => {
+    const safe = sanitizeRedirect(search['redirect']);
+    return safe ? { redirect: safe } : {};
+  },
+
   head: () => ({
     meta: [
       { title: "Entrar — Caminhando com Cristo" },
