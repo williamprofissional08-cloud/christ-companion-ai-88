@@ -8,8 +8,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import logo from "@/assets/logo.png";
+import {
+  friendlyAuthError,
+  rememberRedirect,
+  sanitizeRedirect,
+  takeRedirect,
+} from "@/lib/auth-redirect";
 
 export const Route = createFileRoute("/auth")({
+  ssr: false,
+  validateSearch: (search: Record<string, unknown>) => ({
+    redirect: sanitizeRedirect(search['redirect']) ?? undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Entrar — Caminhando com Cristo" },
@@ -29,25 +39,48 @@ export const Route = createFileRoute("/auth")({
 
 function AuthPage() {
   const navigate = useNavigate();
+  const { redirect } = Route.useSearch();
   const [mode, setMode] = useState<"login" | "signup">("login");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [checking, setChecking] = useState(true);
   const [sent, setSent] = useState(false);
 
+  // Guarda o destino pretendido para usar depois do login (inclusive via Google).
   useEffect(() => {
+    rememberRedirect(redirect ?? null);
+  }, [redirect]);
+
+  useEffect(() => {
+    let active = true;
+    const go = () => navigate({ to: takeRedirect(), replace: true });
+
     supabase.auth.getSession().then(({ data }) => {
-      if (data.session) navigate({ to: "/inicio", replace: true });
+      if (!active) return;
+      if (data.session) go();
+      else setChecking(false);
     });
     const { data: sub } = supabase.auth.onAuthStateChange((_e, session) => {
-      if (session) navigate({ to: "/inicio", replace: true });
+      if (session) go();
     });
-    return () => sub.subscription.unsubscribe();
+    return () => {
+      active = false;
+      sub.subscription.unsubscribe();
+    };
   }, [navigate]);
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      toast.error("Informe um e-mail válido.");
+      return;
+    }
+    if (password.length < 6) {
+      toast.error("Sua senha precisa ter pelo menos 6 caracteres.");
+      return;
+    }
     setLoading(true);
     try {
       if (mode === "signup") {
@@ -55,12 +88,14 @@ function AuthPage() {
           email,
           password,
           options: {
-            emailRedirectTo: window.location.origin,
-            data: { full_name: name },
+            emailRedirectTo: `${window.location.origin}/auth-callback`,
+            data: { full_name: name.trim(), display_name: name.trim() },
           },
         });
         if (error) throw error;
-        if (!data.session) {
+        if (data.session) {
+          toast.success("Seu cadastro foi concluído com sucesso!");
+        } else {
           setSent(true);
           toast.success("Confirme seu e-mail para ativar a conta.");
         }
@@ -69,19 +104,26 @@ function AuthPage() {
         if (error) throw error;
       }
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Não foi possível continuar.");
+      toast.error(friendlyAuthError(error));
     } finally {
       setLoading(false);
     }
   }
 
   async function google() {
-    const result = await lovable.auth.signInWithOAuth("google", {
-      redirect_uri: window.location.origin,
-    });
-    if (result.error) {
-      toast.error("Não foi possível entrar com o Google.");
-      return;
+    try {
+      const result = await lovable.auth.signInWithOAuth("google", {
+        // Precisa ser uma URL pública same-origin; a rota de callback conclui a sessão.
+        redirect_uri: `${window.location.origin}/auth-callback`,
+      });
+      if (result.error) {
+        toast.error(friendlyAuthError(result.error));
+        return;
+      }
+      if (result.redirected) return;
+      navigate({ to: takeRedirect(), replace: true });
+    } catch (error) {
+      toast.error(friendlyAuthError(error));
     }
   }
 
@@ -91,10 +133,21 @@ function AuthPage() {
       return;
     }
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirect: `${window.location.origin}/reset-password`,
-    } as never);
-    if (error) toast.error(error.message);
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+    if (error) toast.error(friendlyAuthError(error));
     else toast.success("Enviamos um link de redefinição para seu e-mail.");
+  }
+
+  if (checking) {
+    return (
+      <main className="flex min-h-screen items-center justify-center bg-heaven px-4">
+        <div
+          className="size-8 animate-spin rounded-full border-2 border-primary border-t-transparent"
+          aria-hidden
+        />
+      </main>
+    );
   }
 
   return (
@@ -124,6 +177,7 @@ function AuthPage() {
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Como podemos te chamar?"
                   autoComplete="name"
+                  required
                 />
               </div>
             ) : null}
