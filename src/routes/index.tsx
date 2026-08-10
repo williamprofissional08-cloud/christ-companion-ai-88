@@ -3,6 +3,8 @@ import { BookOpen, Flame, HeartHandshake, MessageCircleHeart, Sparkles } from "l
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import logo from "@/assets/logo.png";
+import { useAuth } from "@/hooks/use-auth";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
