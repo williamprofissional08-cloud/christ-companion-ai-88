@@ -48,6 +48,10 @@ const FEATURES = [
 ];
 
 function Landing() {
+  const { isAuthenticated, loading } = useAuth();
+  const signedIn = !loading && isAuthenticated;
+  const primaryTo = signedIn ? "/inicio" : "/auth";
+
   return (
     <main className="min-h-screen bg-heaven">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-5 py-6">
@@ -56,7 +60,7 @@ function Landing() {
           <span className="font-display text-lg font-semibold">Caminhando com Cristo</span>
         </div>
         <Button asChild variant="outline" size="sm">
-          <Link to="/auth">Entrar</Link>
+          <Link to={primaryTo}>{signedIn ? "Ir para o app" : "Entrar"}</Link>
         </Button>
       </header>
 
@@ -73,12 +77,15 @@ function Landing() {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Button asChild variant="hero" size="lg">
-            <Link to="/auth">Começar agora</Link>
+            <Link to={primaryTo}>{signedIn ? "Continuar minha jornada" : "Começar agora"}</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link to="/auth">Já tenho conta</Link>
-          </Button>
+          {signedIn ? null : (
+            <Button asChild variant="outline" size="lg">
+              <Link to="/auth">Já tenho conta</Link>
+            </Button>
+          )}
         </div>
+
         <blockquote className="mt-10 font-display text-lg text-foreground/80 italic">
           “Lâmpada para os meus pés é a tua palavra e luz para o meu caminho.”
           <footer className="mt-1 text-sm not-italic text-muted-foreground">Salmos 119:105</footer>
