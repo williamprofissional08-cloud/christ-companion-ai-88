@@ -59,9 +59,10 @@ export const getCourseOutline = createServerFn({ method: "GET" })
     if (error) throw new Error(error.message);
     if (!course) return null;
 
-    const { course_modules: rawModules, ...rest } = course as typeof course & {
-      course_modules: CourseOutline["modules"][number][];
+    const { course_modules: rawModules, ...rest } = course as unknown as Record<string, unknown> & {
+      course_modules: CourseOutline["modules"];
     };
+
     const modules = [...(rawModules ?? [])]
       .sort((a, b) => a.order_index - b.order_index)
       .map((m) => ({ ...m, lessons: [...(m.lessons ?? [])].sort((a, b) => a.order_index - b.order_index) }));
