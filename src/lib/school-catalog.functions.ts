@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { z } from "zod";
-import type { CatalogCourse } from "./school/admin-types";
+import type { CatalogCourse, CatalogLesson } from "./school/admin-types";
 
 /** Catálogo do aluno: somente cursos publicados, com contagens e progresso próprio. */
 export const listCatalog = createServerFn({ method: "GET" })
