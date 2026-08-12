@@ -30,6 +30,7 @@ import { Route as AuthenticatedPesquisaRouteImport } from './routes/_authenticat
 import { Route as AuthenticatedPlanosRouteImport } from './routes/_authenticated/planos'
 import { Route as AuthenticatedTrilhasRouteImport } from './routes/_authenticated/trilhas'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin.index'
 import { Route as AuthenticatedAssistenteIndexRouteImport } from './routes/_authenticated/assistente.index'
 import { Route as AuthenticatedAssistenteThreadIdRouteImport } from './routes/_authenticated/assistente.$threadId'
 import { Route as AuthenticatedEscolaIndexRouteImport } from './routes/_authenticated/escola.index'
@@ -146,6 +147,11 @@ const ApiChatRoute = ApiChatRouteImport.update({
   path: '/api/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedAdminIndexRoute = AuthenticatedAdminIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AuthenticatedAdminRoute,
+} as any)
 const AuthenticatedAssistenteIndexRoute =
   AuthenticatedAssistenteIndexRouteImport.update({
     id: '/',
@@ -210,7 +216,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/auth-callback': typeof AuthCallbackRoute
   '/reset-password': typeof ResetPasswordRoute
-  '/admin': typeof AuthenticatedAdminRoute
+  '/admin': typeof AuthenticatedAdminRouteWithChildren
   '/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/biblia': typeof AuthenticatedBibliaRoute
   '/configuracoes': typeof AuthenticatedConfiguracoesRoute
@@ -231,6 +237,7 @@ export interface FileRoutesByFullPath {
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
+  '/admin/': typeof AuthenticatedAdminIndexRoute
   '/assistente/': typeof AuthenticatedAssistenteIndexRoute
   '/escola/': typeof AuthenticatedEscolaIndexRoute
   '/estudos/': typeof AuthenticatedEstudosIndexRoute
@@ -242,7 +249,6 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/auth-callback': typeof AuthCallbackRoute
   '/reset-password': typeof ResetPasswordRoute
-  '/admin': typeof AuthenticatedAdminRoute
   '/biblia': typeof AuthenticatedBibliaRoute
   '/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
@@ -258,6 +264,7 @@ export interface FileRoutesByTo {
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
+  '/admin': typeof AuthenticatedAdminIndexRoute
   '/assistente': typeof AuthenticatedAssistenteIndexRoute
   '/escola': typeof AuthenticatedEscolaIndexRoute
   '/estudos': typeof AuthenticatedEstudosIndexRoute
@@ -271,7 +278,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/auth-callback': typeof AuthCallbackRoute
   '/reset-password': typeof ResetPasswordRoute
-  '/_authenticated/admin': typeof AuthenticatedAdminRoute
+  '/_authenticated/admin': typeof AuthenticatedAdminRouteWithChildren
   '/_authenticated/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/_authenticated/biblia': typeof AuthenticatedBibliaRoute
   '/_authenticated/configuracoes': typeof AuthenticatedConfiguracoesRoute
@@ -292,6 +299,7 @@ export interface FileRoutesById {
   '/_authenticated/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/_authenticated/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/_authenticated/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
+  '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
   '/_authenticated/assistente/': typeof AuthenticatedAssistenteIndexRoute
   '/_authenticated/escola/': typeof AuthenticatedEscolaIndexRoute
   '/_authenticated/estudos/': typeof AuthenticatedEstudosIndexRoute
@@ -326,6 +334,7 @@ export interface FileRouteTypes {
     | '/estudos/$slug'
     | '/planos/$slug'
     | '/trilhas/$slug'
+    | '/admin/'
     | '/assistente/'
     | '/escola/'
     | '/estudos/'
@@ -337,7 +346,6 @@ export interface FileRouteTypes {
     | '/auth'
     | '/auth-callback'
     | '/reset-password'
-    | '/admin'
     | '/biblia'
     | '/configuracoes'
     | '/devocional'
@@ -353,6 +361,7 @@ export interface FileRouteTypes {
     | '/estudos/$slug'
     | '/planos/$slug'
     | '/trilhas/$slug'
+    | '/admin'
     | '/assistente'
     | '/escola'
     | '/estudos'
@@ -386,6 +395,7 @@ export interface FileRouteTypes {
     | '/_authenticated/estudos/$slug'
     | '/_authenticated/planos/$slug'
     | '/_authenticated/trilhas/$slug'
+    | '/_authenticated/admin/'
     | '/_authenticated/assistente/'
     | '/_authenticated/escola/'
     | '/_authenticated/estudos/'
@@ -551,6 +561,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/admin/': {
+      id: '/_authenticated/admin/'
+      path: '/'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AuthenticatedAdminIndexRouteImport
+      parentRoute: typeof AuthenticatedAdminRoute
+    }
     '/_authenticated/assistente/': {
       id: '/_authenticated/assistente/'
       path: '/'
@@ -624,6 +641,17 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AuthenticatedAdminRouteChildren {
+  AuthenticatedAdminIndexRoute: typeof AuthenticatedAdminIndexRoute
+}
+
+const AuthenticatedAdminRouteChildren: AuthenticatedAdminRouteChildren = {
+  AuthenticatedAdminIndexRoute: AuthenticatedAdminIndexRoute,
+}
+
+const AuthenticatedAdminRouteWithChildren =
+  AuthenticatedAdminRoute._addFileChildren(AuthenticatedAdminRouteChildren)
+
 interface AuthenticatedAssistenteRouteChildren {
   AuthenticatedAssistenteThreadIdRoute: typeof AuthenticatedAssistenteThreadIdRoute
   AuthenticatedAssistenteIndexRoute: typeof AuthenticatedAssistenteIndexRoute
@@ -693,7 +721,7 @@ const AuthenticatedTrilhasRouteWithChildren =
   AuthenticatedTrilhasRoute._addFileChildren(AuthenticatedTrilhasRouteChildren)
 
 interface AuthenticatedRouteRouteChildren {
-  AuthenticatedAdminRoute: typeof AuthenticatedAdminRoute
+  AuthenticatedAdminRoute: typeof AuthenticatedAdminRouteWithChildren
   AuthenticatedAssistenteRoute: typeof AuthenticatedAssistenteRouteWithChildren
   AuthenticatedBibliaRoute: typeof AuthenticatedBibliaRoute
   AuthenticatedConfiguracoesRoute: typeof AuthenticatedConfiguracoesRoute
@@ -711,7 +739,7 @@ interface AuthenticatedRouteRouteChildren {
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
-  AuthenticatedAdminRoute: AuthenticatedAdminRoute,
+  AuthenticatedAdminRoute: AuthenticatedAdminRouteWithChildren,
   AuthenticatedAssistenteRoute: AuthenticatedAssistenteRouteWithChildren,
   AuthenticatedBibliaRoute: AuthenticatedBibliaRoute,
   AuthenticatedConfiguracoesRoute: AuthenticatedConfiguracoesRoute,
