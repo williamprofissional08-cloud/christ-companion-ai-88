@@ -14,6 +14,7 @@ import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthCallbackRouteImport } from './routes/auth-callback'
 import { Route as ResetPasswordRouteImport } from './routes/reset-password'
+import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
 import { Route as AuthenticatedAssistenteRouteImport } from './routes/_authenticated/assistente'
 import { Route as AuthenticatedBibliaRouteImport } from './routes/_authenticated/biblia'
 import { Route as AuthenticatedConfiguracoesRouteImport } from './routes/_authenticated/configuracoes'
@@ -63,6 +64,11 @@ const ResetPasswordRoute = ResetPasswordRouteImport.update({
   id: '/reset-password',
   path: '/reset-password',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedAssistenteRoute = AuthenticatedAssistenteRouteImport.update({
   id: '/assistente',
@@ -204,6 +210,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/auth-callback': typeof AuthCallbackRoute
   '/reset-password': typeof ResetPasswordRoute
+  '/admin': typeof AuthenticatedAdminRoute
   '/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/biblia': typeof AuthenticatedBibliaRoute
   '/configuracoes': typeof AuthenticatedConfiguracoesRoute
@@ -235,6 +242,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/auth-callback': typeof AuthCallbackRoute
   '/reset-password': typeof ResetPasswordRoute
+  '/admin': typeof AuthenticatedAdminRoute
   '/biblia': typeof AuthenticatedBibliaRoute
   '/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
@@ -263,6 +271,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/auth-callback': typeof AuthCallbackRoute
   '/reset-password': typeof ResetPasswordRoute
+  '/_authenticated/admin': typeof AuthenticatedAdminRoute
   '/_authenticated/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/_authenticated/biblia': typeof AuthenticatedBibliaRoute
   '/_authenticated/configuracoes': typeof AuthenticatedConfiguracoesRoute
@@ -296,6 +305,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/auth-callback'
     | '/reset-password'
+    | '/admin'
     | '/assistente'
     | '/biblia'
     | '/configuracoes'
@@ -327,6 +337,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/auth-callback'
     | '/reset-password'
+    | '/admin'
     | '/biblia'
     | '/configuracoes'
     | '/devocional'
@@ -354,6 +365,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/auth-callback'
     | '/reset-password'
+    | '/_authenticated/admin'
     | '/_authenticated/assistente'
     | '/_authenticated/biblia'
     | '/_authenticated/configuracoes'
@@ -426,6 +438,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/reset-password'
       preLoaderRoute: typeof ResetPasswordRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/admin': {
+      id: '/_authenticated/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AuthenticatedAdminRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/assistente': {
       id: '/_authenticated/assistente'
@@ -674,6 +693,7 @@ const AuthenticatedTrilhasRouteWithChildren =
   AuthenticatedTrilhasRoute._addFileChildren(AuthenticatedTrilhasRouteChildren)
 
 interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAdminRoute: typeof AuthenticatedAdminRoute
   AuthenticatedAssistenteRoute: typeof AuthenticatedAssistenteRouteWithChildren
   AuthenticatedBibliaRoute: typeof AuthenticatedBibliaRoute
   AuthenticatedConfiguracoesRoute: typeof AuthenticatedConfiguracoesRoute
@@ -691,6 +711,7 @@ interface AuthenticatedRouteRouteChildren {
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAdminRoute: AuthenticatedAdminRoute,
   AuthenticatedAssistenteRoute: AuthenticatedAssistenteRouteWithChildren,
   AuthenticatedBibliaRoute: AuthenticatedBibliaRoute,
   AuthenticatedConfiguracoesRoute: AuthenticatedConfiguracoesRoute,
