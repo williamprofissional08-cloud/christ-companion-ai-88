@@ -72,12 +72,14 @@ export const getCatalogCourse = createServerFn({ method: "GET" })
       .order("order_index", { ascending: true });
 
     const cleaned = (modules ?? []).map((m) => {
-      const raw = (m as unknown as { lessons?: Record<string, unknown>[] }).lessons ?? [];
+      const raw = (m as unknown as { lessons?: CatalogLesson[] }).lessons ?? [];
       const lessons = raw
-        .filter((l) => l["status"] === "published")
-        .sort((a, b) => Number(a["order_index"]) - Number(b["order_index"]));
-      return { ...m, lessons };
+        .filter((l) => l.status === "published")
+        .sort((a, b) => a.order_index - b.order_index);
+      const { id, title, summary, order_index } = m;
+      return { id, title, summary, order_index, lessons };
     });
+
 
     return { course, modules: cleaned };
   });
