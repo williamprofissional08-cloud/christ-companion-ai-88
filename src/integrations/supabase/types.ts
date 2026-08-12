@@ -118,6 +118,7 @@ export type Database = {
           id: string
           is_published: boolean
           order_index: number
+          status: Database["public"]["Enums"]["content_status"]
           summary: string
           title: string
           updated_at: string
@@ -128,6 +129,7 @@ export type Database = {
           id?: string
           is_published?: boolean
           order_index?: number
+          status?: Database["public"]["Enums"]["content_status"]
           summary?: string
           title: string
           updated_at?: string
@@ -138,6 +140,7 @@ export type Database = {
           id?: string
           is_published?: boolean
           order_index?: number
+          status?: Database["public"]["Enums"]["content_status"]
           summary?: string
           title?: string
           updated_at?: string
@@ -215,7 +218,9 @@ export type Database = {
           is_published: boolean
           level: Database["public"]["Enums"]["course_level"]
           order_index: number
+          published_at: string | null
           slug: string
+          status: Database["public"]["Enums"]["content_status"]
           subtitle: string | null
           tier: Database["public"]["Enums"]["access_tier"]
           title: string
@@ -229,7 +234,9 @@ export type Database = {
           is_published?: boolean
           level?: Database["public"]["Enums"]["course_level"]
           order_index?: number
+          published_at?: string | null
           slug: string
+          status?: Database["public"]["Enums"]["content_status"]
           subtitle?: string | null
           tier?: Database["public"]["Enums"]["access_tier"]
           title: string
@@ -243,7 +250,9 @@ export type Database = {
           is_published?: boolean
           level?: Database["public"]["Enums"]["course_level"]
           order_index?: number
+          published_at?: string | null
           slug?: string
+          status?: Database["public"]["Enums"]["content_status"]
           subtitle?: string | null
           tier?: Database["public"]["Enums"]["access_tier"]
           title?: string
@@ -677,6 +686,7 @@ export type Database = {
           module_id: string
           order_index: number
           slug: string
+          status: Database["public"]["Enums"]["content_status"]
           summary: string
           tier: Database["public"]["Enums"]["access_tier"]
           title: string
@@ -690,6 +700,7 @@ export type Database = {
           module_id: string
           order_index?: number
           slug: string
+          status?: Database["public"]["Enums"]["content_status"]
           summary?: string
           tier?: Database["public"]["Enums"]["access_tier"]
           title: string
@@ -703,6 +714,7 @@ export type Database = {
           module_id?: string
           order_index?: number
           slug?: string
+          status?: Database["public"]["Enums"]["content_status"]
           summary?: string
           tier?: Database["public"]["Enums"]["access_tier"]
           title?: string
@@ -853,6 +865,27 @@ export type Database = {
         }
         Relationships: []
       }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_settings: {
         Row: {
           challenge_type: string
@@ -954,9 +987,19 @@ export type Database = {
     }
     Functions: {
       has_premium: { Args: { _user_id: string }; Returns: boolean }
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
+      is_admin: { Args: never; Returns: boolean }
     }
     Enums: {
       access_tier: "free" | "premium"
+      app_role: "admin" | "user"
+      content_status: "draft" | "published" | "archived"
       course_level: "iniciante" | "intermediario" | "avancado" | "profundo"
       lesson_status: "nao_iniciada" | "em_andamento" | "concluida"
     }
@@ -1087,6 +1130,8 @@ export const Constants = {
   public: {
     Enums: {
       access_tier: ["free", "premium"],
+      app_role: ["admin", "user"],
+      content_status: ["draft", "published", "archived"],
       course_level: ["iniciante", "intermediario", "avancado", "profundo"],
       lesson_status: ["nao_iniciada", "em_andamento", "concluida"],
     },

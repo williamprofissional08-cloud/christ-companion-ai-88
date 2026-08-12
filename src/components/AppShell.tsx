@@ -3,6 +3,8 @@ import {
   BookOpen,
   Compass,
   Flame,
+  GraduationCap,
+
   HeartHandshake,
   Home,
   LogOut,
@@ -33,7 +35,9 @@ const NAV = [
   { to: "/devocional", label: "Devocional", icon: Flame },
   { to: "/assistente", label: "Assistente", icon: MessageCircleHeart },
   { to: "/trilhas", label: "Trilhas guiadas", icon: RouteIcon },
+  { to: "/escola", label: "Escola Bíblica", icon: GraduationCap },
   { to: "/planos", label: "Planos de oração", icon: HeartHandshake },
+
   { to: "/estudos", label: "Estudos", icon: Compass },
   { to: "/biblia", label: "Bíblia", icon: BookOpen },
   { to: "/pesquisa", label: "Pesquisa", icon: Search },
