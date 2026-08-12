@@ -3,6 +3,8 @@ import {
   BookOpen,
   Compass,
   Flame,
+  GraduationCap,
+
   HeartHandshake,
   Home,
   LogOut,
