@@ -32,6 +32,7 @@ import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedAssistenteIndexRouteImport } from './routes/_authenticated/assistente.index'
 import { Route as AuthenticatedAssistenteThreadIdRouteImport } from './routes/_authenticated/assistente.$threadId'
 import { Route as AuthenticatedEscolaIndexRouteImport } from './routes/_authenticated/escola.index'
+import { Route as AuthenticatedEscolaSlugRouteImport } from './routes/_authenticated/escola.$slug'
 import { Route as AuthenticatedEstudosIndexRouteImport } from './routes/_authenticated/estudos.index'
 import { Route as AuthenticatedEstudosSlugRouteImport } from './routes/_authenticated/estudos.$slug'
 import { Route as AuthenticatedPlanosIndexRouteImport } from './routes/_authenticated/planos.index'
@@ -157,6 +158,11 @@ const AuthenticatedEscolaIndexRoute =
     path: '/',
     getParentRoute: () => AuthenticatedEscolaRoute,
   } as any)
+const AuthenticatedEscolaSlugRoute = AuthenticatedEscolaSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => AuthenticatedEscolaRoute,
+} as any)
 const AuthenticatedEstudosIndexRoute =
   AuthenticatedEstudosIndexRouteImport.update({
     id: '/',
@@ -214,6 +220,7 @@ export interface FileRoutesByFullPath {
   '/trilhas': typeof AuthenticatedTrilhasRouteWithChildren
   '/api/chat': typeof ApiChatRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
+  '/escola/$slug': typeof AuthenticatedEscolaSlugRoute
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
@@ -239,6 +246,7 @@ export interface FileRoutesByTo {
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/api/chat': typeof ApiChatRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
+  '/escola/$slug': typeof AuthenticatedEscolaSlugRoute
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
@@ -271,6 +279,7 @@ export interface FileRoutesById {
   '/_authenticated/trilhas': typeof AuthenticatedTrilhasRouteWithChildren
   '/api/chat': typeof ApiChatRoute
   '/_authenticated/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
+  '/_authenticated/escola/$slug': typeof AuthenticatedEscolaSlugRoute
   '/_authenticated/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/_authenticated/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/_authenticated/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
@@ -303,6 +312,7 @@ export interface FileRouteTypes {
     | '/trilhas'
     | '/api/chat'
     | '/assistente/$threadId'
+    | '/escola/$slug'
     | '/estudos/$slug'
     | '/planos/$slug'
     | '/trilhas/$slug'
@@ -328,6 +338,7 @@ export interface FileRouteTypes {
     | '/pesquisa'
     | '/api/chat'
     | '/assistente/$threadId'
+    | '/escola/$slug'
     | '/estudos/$slug'
     | '/planos/$slug'
     | '/trilhas/$slug'
@@ -359,6 +370,7 @@ export interface FileRouteTypes {
     | '/_authenticated/trilhas'
     | '/api/chat'
     | '/_authenticated/assistente/$threadId'
+    | '/_authenticated/escola/$slug'
     | '/_authenticated/estudos/$slug'
     | '/_authenticated/planos/$slug'
     | '/_authenticated/trilhas/$slug'
@@ -541,6 +553,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedEscolaIndexRouteImport
       parentRoute: typeof AuthenticatedEscolaRoute
     }
+    '/_authenticated/escola/$slug': {
+      id: '/_authenticated/escola/$slug'
+      path: '/$slug'
+      fullPath: '/escola/$slug'
+      preLoaderRoute: typeof AuthenticatedEscolaSlugRouteImport
+      parentRoute: typeof AuthenticatedEscolaRoute
+    }
     '/_authenticated/estudos/': {
       id: '/_authenticated/estudos/'
       path: '/'
@@ -603,10 +622,12 @@ const AuthenticatedAssistenteRouteWithChildren =
   )
 
 interface AuthenticatedEscolaRouteChildren {
+  AuthenticatedEscolaSlugRoute: typeof AuthenticatedEscolaSlugRoute
   AuthenticatedEscolaIndexRoute: typeof AuthenticatedEscolaIndexRoute
 }
 
 const AuthenticatedEscolaRouteChildren: AuthenticatedEscolaRouteChildren = {
+  AuthenticatedEscolaSlugRoute: AuthenticatedEscolaSlugRoute,
   AuthenticatedEscolaIndexRoute: AuthenticatedEscolaIndexRoute,
 }
 

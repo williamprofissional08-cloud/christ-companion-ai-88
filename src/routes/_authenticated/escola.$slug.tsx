@@ -37,7 +37,7 @@ function CoursePage() {
   const course = data?.course;
 
   return (
-    <AppShell title={course?.title ?? "Curso"} subtitle={course?.subtitle ?? undefined}>
+    <AppShell title={course?.title ?? "Curso"} subtitle={course?.subtitle ?? "Escola Bíblica"}>
       <div className="space-y-5">
         <Button asChild variant="ghost" size="sm" className="-ml-2">
           <Link to="/escola">
