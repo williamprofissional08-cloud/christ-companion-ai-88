@@ -61,7 +61,20 @@ export type AdminStats = {
   usersWithProgress: number;
 };
 
+/** Aula publicada exibida ao aluno. */
+export type CatalogLesson = {
+  id: string;
+  slug: string;
+  title: string;
+  summary: string;
+  duration_minutes: number;
+  tier: AccessTier;
+  status: ContentStatus;
+  order_index: number;
+};
+
 /** Card do catálogo do aluno. */
+
 export type CatalogCourse = {
   id: string;
   slug: string;
