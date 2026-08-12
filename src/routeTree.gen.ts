@@ -19,6 +19,7 @@ import { Route as AuthenticatedBibliaRouteImport } from './routes/_authenticated
 import { Route as AuthenticatedConfiguracoesRouteImport } from './routes/_authenticated/configuracoes'
 import { Route as AuthenticatedDevocionalRouteImport } from './routes/_authenticated/devocional'
 import { Route as AuthenticatedDiarioRouteImport } from './routes/_authenticated/diario'
+import { Route as AuthenticatedEscolaRouteImport } from './routes/_authenticated/escola'
 import { Route as AuthenticatedEstudosRouteImport } from './routes/_authenticated/estudos'
 import { Route as AuthenticatedFavoritosRouteImport } from './routes/_authenticated/favoritos'
 import { Route as AuthenticatedInicioRouteImport } from './routes/_authenticated/inicio'
@@ -85,6 +86,11 @@ const AuthenticatedDevocionalRoute = AuthenticatedDevocionalRouteImport.update({
 const AuthenticatedDiarioRoute = AuthenticatedDiarioRouteImport.update({
   id: '/diario',
   path: '/diario',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedEscolaRoute = AuthenticatedEscolaRouteImport.update({
+  id: '/escola',
+  path: '/escola',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedEstudosRoute = AuthenticatedEstudosRouteImport.update({
@@ -190,6 +196,7 @@ export interface FileRoutesByFullPath {
   '/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
+  '/escola': typeof AuthenticatedEscolaRoute
   '/estudos': typeof AuthenticatedEstudosRouteWithChildren
   '/favoritos': typeof AuthenticatedFavoritosRoute
   '/inicio': typeof AuthenticatedInicioRoute
@@ -217,6 +224,7 @@ export interface FileRoutesByTo {
   '/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
+  '/escola': typeof AuthenticatedEscolaRoute
   '/favoritos': typeof AuthenticatedFavoritosRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
@@ -244,6 +252,7 @@ export interface FileRoutesById {
   '/_authenticated/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/_authenticated/devocional': typeof AuthenticatedDevocionalRoute
   '/_authenticated/diario': typeof AuthenticatedDiarioRoute
+  '/_authenticated/escola': typeof AuthenticatedEscolaRoute
   '/_authenticated/estudos': typeof AuthenticatedEstudosRouteWithChildren
   '/_authenticated/favoritos': typeof AuthenticatedFavoritosRoute
   '/_authenticated/inicio': typeof AuthenticatedInicioRoute
@@ -274,6 +283,7 @@ export interface FileRouteTypes {
     | '/configuracoes'
     | '/devocional'
     | '/diario'
+    | '/escola'
     | '/estudos'
     | '/favoritos'
     | '/inicio'
@@ -301,6 +311,7 @@ export interface FileRouteTypes {
     | '/configuracoes'
     | '/devocional'
     | '/diario'
+    | '/escola'
     | '/favoritos'
     | '/inicio'
     | '/metas'
@@ -327,6 +338,7 @@ export interface FileRouteTypes {
     | '/_authenticated/configuracoes'
     | '/_authenticated/devocional'
     | '/_authenticated/diario'
+    | '/_authenticated/escola'
     | '/_authenticated/estudos'
     | '/_authenticated/favoritos'
     | '/_authenticated/inicio'
@@ -425,6 +437,13 @@ declare module '@tanstack/react-router' {
       path: '/diario'
       fullPath: '/diario'
       preLoaderRoute: typeof AuthenticatedDiarioRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/escola': {
+      id: '/_authenticated/escola'
+      path: '/escola'
+      fullPath: '/escola'
+      preLoaderRoute: typeof AuthenticatedEscolaRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/estudos': {
@@ -610,6 +629,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedConfiguracoesRoute: typeof AuthenticatedConfiguracoesRoute
   AuthenticatedDevocionalRoute: typeof AuthenticatedDevocionalRoute
   AuthenticatedDiarioRoute: typeof AuthenticatedDiarioRoute
+  AuthenticatedEscolaRoute: typeof AuthenticatedEscolaRoute
   AuthenticatedEstudosRoute: typeof AuthenticatedEstudosRouteWithChildren
   AuthenticatedFavoritosRoute: typeof AuthenticatedFavoritosRoute
   AuthenticatedInicioRoute: typeof AuthenticatedInicioRoute
@@ -626,6 +646,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedConfiguracoesRoute: AuthenticatedConfiguracoesRoute,
   AuthenticatedDevocionalRoute: AuthenticatedDevocionalRoute,
   AuthenticatedDiarioRoute: AuthenticatedDiarioRoute,
+  AuthenticatedEscolaRoute: AuthenticatedEscolaRoute,
   AuthenticatedEstudosRoute: AuthenticatedEstudosRouteWithChildren,
   AuthenticatedFavoritosRoute: AuthenticatedFavoritosRoute,
   AuthenticatedInicioRoute: AuthenticatedInicioRoute,
