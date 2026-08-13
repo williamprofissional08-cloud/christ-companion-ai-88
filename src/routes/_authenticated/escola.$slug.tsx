@@ -1,13 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, Clock, Lock } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Circle, Clock, Lock } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getCatalogCourse } from "@/lib/school-catalog.functions";
+import { Progress } from "@/components/ui/progress";
+import { getStudentCourse } from "@/lib/school-catalog.functions";
 import { levelLabel } from "@/lib/school/types";
+import { percentOf } from "@/lib/school/lesson-view";
 
 export const Route = createFileRoute("/_authenticated/escola/$slug")({
   head: () => ({
@@ -28,8 +30,8 @@ export const Route = createFileRoute("/_authenticated/escola/$slug")({
 
 function CoursePage() {
   const { slug } = Route.useParams();
-  const fetchCourse = useServerFn(getCatalogCourse);
-  const { data, isLoading } = useQuery({
+  const fetchCourse = useServerFn(getStudentCourse);
+  const { data, isLoading, isError, refetch } = useQuery({
     queryKey: ["school-course", slug],
     queryFn: () => fetchCourse({ data: { slug } }),
   });
@@ -38,7 +40,7 @@ function CoursePage() {
 
   return (
     <AppShell title={course?.title ?? "Curso"} subtitle={course?.subtitle ?? "Escola Bíblica"}>
-      <div className="space-y-5">
+      <div className="mx-auto w-full max-w-3xl space-y-5">
         <Button asChild variant="ghost" size="sm" className="-ml-2">
           <Link to="/escola">
             <ArrowLeft className="mr-1 size-4" /> Escola Bíblica
@@ -47,13 +49,20 @@ function CoursePage() {
 
         {isLoading ? (
           <p className="text-sm text-muted-foreground">Carregando curso…</p>
-        ) : !course ? (
+        ) : isError ? (
+          <Card className="space-y-3 p-5 text-sm text-muted-foreground">
+            <p>Não foi possível carregar o curso. Tente novamente.</p>
+            <Button size="sm" variant="outline" onClick={() => refetch()}>
+              Tentar novamente
+            </Button>
+          </Card>
+        ) : !course || !data ? (
           <Card className="p-5 text-sm text-muted-foreground">
             Este curso não está disponível no momento.
           </Card>
         ) : (
           <>
-            <Card className="space-y-3 p-5">
+            <Card className="space-y-4 p-5">
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">{levelLabel(course.level)}</Badge>
                 <Badge variant={course.tier === "premium" ? "default" : "outline"}>
@@ -61,11 +70,37 @@ function CoursePage() {
                 </Badge>
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground">{course.description}</p>
+              <p className="text-xs text-muted-foreground">
+                {data.modules.length} módulo(s) · {data.totalLessons} aula(s)
+              </p>
+              {data.totalLessons ? (
+                <div className="space-y-1">
+                  <Progress value={data.percent} />
+                  <p className="text-xs text-muted-foreground">
+                    {data.percent}% concluído · {data.completedLessons} de {data.totalLessons} aulas
+                  </p>
+                </div>
+              ) : null}
+              {data.nextLessonSlug ? (
+                <Button asChild className="w-full sm:w-auto">
+                  <Link
+                    to="/escola/$slug/aula/$lessonSlug"
+                    params={{ slug: course.slug, lessonSlug: data.nextLessonSlug }}
+                  >
+                    {data.completedLessons ? "Continuar curso" : "Começar curso"}
+                    <ArrowRight className="ml-1 size-4" />
+                  </Link>
+                </Button>
+              ) : data.totalLessons ? (
+                <p className="text-sm font-medium text-primary">
+                  Você concluiu todas as aulas deste curso. 🙌
+                </p>
+              ) : null}
             </Card>
 
-            {(data?.modules ?? []).length ? (
+            {data.modules.length ? (
               <div className="space-y-4">
-                {(data?.modules ?? []).map((mod, index) => (
+                {data.modules.map((mod, index) => (
                   <Card key={mod.id} className="space-y-3 p-5">
                     <div>
                       <p className="text-xs font-semibold tracking-wide text-primary uppercase">
@@ -73,21 +108,46 @@ function CoursePage() {
                       </p>
                       <h2 className="font-display text-lg font-semibold">{mod.title}</h2>
                       <p className="mt-1 text-sm text-muted-foreground">{mod.summary}</p>
+                      <p className="mt-2 text-xs text-muted-foreground">
+                        {mod.lessons.length} aula(s) ·{" "}
+                        {percentOf(mod.completedLessons, mod.lessons.length)}% concluído
+                      </p>
                     </div>
                     {mod.lessons.length ? (
                       <ul className="divide-y divide-border/70">
-                        {mod.lessons.map((lesson) => (
-                          <li key={lesson.id} className="flex items-center gap-3 py-2.5">
-                            <div className="min-w-0 flex-1">
-                              <p className="truncate text-sm font-medium">{lesson.title}</p>
-                              <p className="truncate text-xs text-muted-foreground">
-                                {lesson.summary}
-                              </p>
-                            </div>
-                            <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                              {lesson.tier === "premium" ? <Lock className="size-3" /> : null}
-                              <Clock className="size-3" /> {lesson.duration_minutes} min
-                            </span>
+                        {mod.lessons.map((lesson, lessonIndex) => (
+                          <li key={lesson.id}>
+                            <Link
+                              to="/escola/$slug/aula/$lessonSlug"
+                              params={{ slug: course.slug, lessonSlug: lesson.slug }}
+                              className="flex items-center gap-3 py-2.5 transition-colors hover:text-primary"
+                            >
+                              {lesson.completed ? (
+                                <CheckCircle2 className="size-4 shrink-0 text-primary" aria-hidden />
+                              ) : (
+                                <Circle
+                                  className="size-4 shrink-0 text-muted-foreground"
+                                  aria-hidden
+                                />
+                              )}
+                              <div className="min-w-0 flex-1">
+                                <p className="truncate text-sm font-medium">
+                                  Aula {lessonIndex + 1} — {lesson.title}
+                                  {lesson.slug === data.nextLessonSlug ? (
+                                    <span className="ml-2 rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">
+                                      Você está aqui
+                                    </span>
+                                  ) : null}
+                                </p>
+                                <p className="truncate text-xs text-muted-foreground">
+                                  {lesson.summary}
+                                </p>
+                              </div>
+                              <span className="flex shrink-0 items-center gap-1 text-xs text-muted-foreground">
+                                {lesson.locked ? <Lock className="size-3" /> : null}
+                                <Clock className="size-3" /> {lesson.duration_minutes} min
+                              </span>
+                            </Link>
                           </li>
                         ))}
                       </ul>
