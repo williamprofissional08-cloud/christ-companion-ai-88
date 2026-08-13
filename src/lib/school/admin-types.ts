@@ -87,6 +87,9 @@ export type CatalogCourse = {
   modules: number;
   lessons: number;
   completedLessons: number;
+  nextLessonSlug?: string | null;
+  nextLessonTitle?: string | null;
+  nextModuleTitle?: string | null;
 };
 
 export function slugify(value: string): string {

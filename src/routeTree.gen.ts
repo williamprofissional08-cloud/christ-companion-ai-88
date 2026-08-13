@@ -44,6 +44,7 @@ import { Route as AuthenticatedTrilhasSlugRouteImport } from './routes/_authenti
 import { Route as AuthenticatedAdminCursosIndexRouteImport } from './routes/_authenticated/admin.cursos.index'
 import { Route as AuthenticatedAdminCursosIdRouteImport } from './routes/_authenticated/admin.cursos.$id'
 import { Route as AuthenticatedEscolaSlugIndexRouteImport } from './routes/_authenticated/escola.$slug.index'
+import { Route as AuthenticatedEscolaSlugAulaLessonSlugRouteImport } from './routes/_authenticated/escola.$slug.aula.$lessonSlug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -231,6 +232,12 @@ const AuthenticatedEscolaSlugIndexRoute =
     path: '/',
     getParentRoute: () => AuthenticatedEscolaSlugRoute,
   } as any)
+const AuthenticatedEscolaSlugAulaLessonSlugRoute =
+  AuthenticatedEscolaSlugAulaLessonSlugRouteImport.update({
+    id: '/aula/$lessonSlug',
+    path: '/aula/$lessonSlug',
+    getParentRoute: () => AuthenticatedEscolaSlugRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -267,6 +274,7 @@ export interface FileRoutesByFullPath {
   '/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
   '/admin/cursos/': typeof AuthenticatedAdminCursosIndexRoute
   '/escola/$slug/': typeof AuthenticatedEscolaSlugIndexRoute
+  '/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -296,6 +304,7 @@ export interface FileRoutesByTo {
   '/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
   '/admin/cursos': typeof AuthenticatedAdminCursosIndexRoute
   '/escola/$slug': typeof AuthenticatedEscolaSlugIndexRoute
+  '/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -334,6 +343,7 @@ export interface FileRoutesById {
   '/_authenticated/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
   '/_authenticated/admin/cursos/': typeof AuthenticatedAdminCursosIndexRoute
   '/_authenticated/escola/$slug/': typeof AuthenticatedEscolaSlugIndexRoute
+  '/_authenticated/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -372,6 +382,7 @@ export interface FileRouteTypes {
     | '/admin/cursos/$id'
     | '/admin/cursos/'
     | '/escola/$slug/'
+    | '/escola/$slug/aula/$lessonSlug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -401,6 +412,7 @@ export interface FileRouteTypes {
     | '/admin/cursos/$id'
     | '/admin/cursos'
     | '/escola/$slug'
+    | '/escola/$slug/aula/$lessonSlug'
   id:
     | '__root__'
     | '/'
@@ -438,6 +450,7 @@ export interface FileRouteTypes {
     | '/_authenticated/admin/cursos/$id'
     | '/_authenticated/admin/cursos/'
     | '/_authenticated/escola/$slug/'
+    | '/_authenticated/escola/$slug/aula/$lessonSlug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -696,6 +709,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedEscolaSlugIndexRouteImport
       parentRoute: typeof AuthenticatedEscolaSlugRoute
     }
+    '/_authenticated/escola/$slug/aula/$lessonSlug': {
+      id: '/_authenticated/escola/$slug/aula/$lessonSlug'
+      path: '/aula/$lessonSlug'
+      fullPath: '/escola/$slug/aula/$lessonSlug'
+      preLoaderRoute: typeof AuthenticatedEscolaSlugAulaLessonSlugRouteImport
+      parentRoute: typeof AuthenticatedEscolaSlugRoute
+    }
   }
 }
 
@@ -732,11 +752,14 @@ const AuthenticatedAssistenteRouteWithChildren =
 
 interface AuthenticatedEscolaSlugRouteChildren {
   AuthenticatedEscolaSlugIndexRoute: typeof AuthenticatedEscolaSlugIndexRoute
+  AuthenticatedEscolaSlugAulaLessonSlugRoute: typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
 
 const AuthenticatedEscolaSlugRouteChildren: AuthenticatedEscolaSlugRouteChildren =
   {
     AuthenticatedEscolaSlugIndexRoute: AuthenticatedEscolaSlugIndexRoute,
+    AuthenticatedEscolaSlugAulaLessonSlugRoute:
+      AuthenticatedEscolaSlugAulaLessonSlugRoute,
   }
 
 const AuthenticatedEscolaSlugRouteWithChildren =
