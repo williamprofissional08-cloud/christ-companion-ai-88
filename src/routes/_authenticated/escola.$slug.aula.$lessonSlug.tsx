@@ -141,7 +141,7 @@ function LessonPage() {
                         {block.scripture_refs.map((ref) => (
                           <span
                             key={ref}
-                            className="font-scripture text-sm font-medium text-primary"
+                            className="text-sm font-medium text-primary"
                           >
                             {ref}
                           </span>

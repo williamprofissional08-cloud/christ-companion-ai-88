@@ -64,10 +64,20 @@ function CourseCard({ course }: { course: CatalogCourse }) {
         </div>
       ) : null}
       <Button asChild className="mt-auto w-full">
-        <Link to="/escola/$slug" params={{ slug: course.slug }}>
-          {started ? "Continuar curso" : "Começar curso"}
-          <ArrowRight className="ml-1 size-4" />
-        </Link>
+        {course.nextLessonSlug ? (
+          <Link
+            to="/escola/$slug/aula/$lessonSlug"
+            params={{ slug: course.slug, lessonSlug: course.nextLessonSlug }}
+          >
+            {started ? "Continuar curso" : "Começar curso"}
+            <ArrowRight className="ml-1 size-4" />
+          </Link>
+        ) : (
+          <Link to="/escola/$slug" params={{ slug: course.slug }}>
+            Ver curso
+            <ArrowRight className="ml-1 size-4" />
+          </Link>
+        )}
       </Button>
     </Card>
   );
@@ -75,7 +85,7 @@ function CourseCard({ course }: { course: CatalogCourse }) {
 
 function EscolaPage() {
   const fetchCatalog = useServerFn(listCatalog);
-  const { data: courses, isLoading } = useQuery({
+  const { data: courses, isLoading, isError, refetch } = useQuery({
     queryKey: ["school-catalog"],
     queryFn: () => fetchCatalog(),
   });
@@ -106,7 +116,50 @@ function EscolaPage() {
           {continuing.length ? (
             <div className="grid gap-4 sm:grid-cols-2">
               {continuing.map((course) => (
-                <CourseCard key={course.id} course={course} />
+                <Card key={course.id} className="space-y-3 p-5">
+                  <div>
+                    <h3 className="font-display text-base font-semibold">{course.title}</h3>
+                    {course.nextModuleTitle ? (
+                      <p className="mt-1 text-xs text-muted-foreground">
+                        Módulo atual: {course.nextModuleTitle}
+                      </p>
+                    ) : null}
+                    {course.nextLessonTitle ? (
+                      <p className="text-xs text-muted-foreground">
+                        Próxima aula: {course.nextLessonTitle}
+                      </p>
+                    ) : null}
+                  </div>
+                  <div className="space-y-1">
+                    <Progress
+                      value={
+                        course.lessons
+                          ? Math.round((course.completedLessons / course.lessons) * 100)
+                          : 0
+                      }
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      {course.lessons
+                        ? Math.round((course.completedLessons / course.lessons) * 100)
+                        : 0}
+                      % concluído
+                    </p>
+                  </div>
+                  <Button asChild className="w-full">
+                    {course.nextLessonSlug ? (
+                      <Link
+                        to="/escola/$slug/aula/$lessonSlug"
+                        params={{ slug: course.slug, lessonSlug: course.nextLessonSlug }}
+                      >
+                        Continuar <ArrowRight className="ml-1 size-4" />
+                      </Link>
+                    ) : (
+                      <Link to="/escola/$slug" params={{ slug: course.slug }}>
+                        Ver curso <ArrowRight className="ml-1 size-4" />
+                      </Link>
+                    )}
+                  </Button>
+                </Card>
               ))}
             </div>
           ) : (
@@ -158,6 +211,13 @@ function EscolaPage() {
 
           {isLoading ? (
             <p className="text-sm text-muted-foreground">Carregando cursos…</p>
+          ) : isError ? (
+            <Card className="space-y-3 p-5 text-sm text-muted-foreground">
+              <p>Não foi possível carregar os cursos. Tente novamente.</p>
+              <Button size="sm" variant="outline" onClick={() => refetch()}>
+                Tentar novamente
+              </Button>
+            </Card>
           ) : list.length ? (
             <div className="grid gap-4 sm:grid-cols-2">
               {list.map((course) => (
@@ -168,8 +228,7 @@ function EscolaPage() {
             <Card className="flex items-start gap-3 p-5">
               <BookMarked className="mt-0.5 size-5 shrink-0 text-muted-foreground" aria-hidden />
               <p className="text-sm text-muted-foreground">
-                Os primeiros cursos estão sendo preparados com cuidado. Em breve você poderá
-                começar sua jornada de estudo aqui.
+                Em breve teremos novos cursos disponíveis.
               </p>
             </Card>
           )}
