@@ -157,6 +157,33 @@ export const getStudentLesson = createServerFn({ method: "GET" })
         scripture_refs: b.scripture_refs ?? [],
         order_index: b.order_index,
       })),
+      audio: audio
+        ? {
+            id: audio.id,
+            kind: audio.kind,
+            provider: audio.provider,
+            url: audio.url,
+            thumbnail_url: audio.thumbnail_url,
+            duration_seconds: audio.duration_seconds,
+            order_index: audio.order_index,
+          }
+        : null,
+      hasNarrationScript: Boolean(
+        (rawLesson as { tts_script?: string | null } | null)?.tts_script?.trim(),
+      ),
+      questions: (questions ?? []).map((q) => ({
+        id: q.id,
+        kind: q.kind,
+        prompt: q.prompt,
+        options: Array.isArray(q.options) ? (q.options as unknown[]).map((o) => String(o)) : [],
+        explanation: q.explanation,
+        scripture_refs: q.scripture_refs ?? [],
+        order_index: q.order_index,
+      })),
+      resume: {
+        readPercent: progressRow?.read_percent ?? 0,
+        audioPositionSeconds: progressRow?.audio_position_seconds ?? 0,
+      },
       status: current.lesson.completed ? "concluida" : "nao_iniciada",
       locked,
       lockReason: locked ? "premium" : null,
