@@ -100,7 +100,37 @@ export const getStudentLesson = createServerFn({ method: "GET" })
           .eq("lesson_id", current.lesson.id)
           .order("order_index", { ascending: true });
 
+    const [{ data: media }, { data: questions }, { data: rawLesson }, { data: progressRow }] =
+      locked
+        ? [{ data: [] }, { data: [] }, { data: null }, { data: null }]
+        : await Promise.all([
+            context.supabase
+              .from("lesson_media")
+              .select("id, kind, provider, url, thumbnail_url, duration_seconds, order_index")
+              .eq("lesson_id", current.lesson.id)
+              .order("order_index", { ascending: true }),
+            context.supabase
+              .from("lesson_questions")
+              .select("id, kind, prompt, options, explanation, scripture_refs, order_index")
+              .eq("lesson_id", current.lesson.id)
+              .order("order_index", { ascending: true }),
+            context.supabase
+              .from("lessons")
+              .select("tts_script")
+              .eq("id", current.lesson.id)
+              .maybeSingle(),
+            context.supabase
+              .from("lesson_progress")
+              .select("read_percent, audio_position_seconds")
+              .eq("user_id", context.userId)
+              .eq("lesson_id", current.lesson.id)
+              .maybeSingle(),
+          ]);
+
+    const audio = (media ?? []).find((m) => m.kind === "audio") ?? null;
+
     const moduleIndex = view.modules.findIndex((m) => m.id === current.module.id);
+
 
     return {
       course: view.course,
@@ -127,6 +157,33 @@ export const getStudentLesson = createServerFn({ method: "GET" })
         scripture_refs: b.scripture_refs ?? [],
         order_index: b.order_index,
       })),
+      audio: audio
+        ? {
+            id: audio.id,
+            kind: audio.kind,
+            provider: audio.provider,
+            url: audio.url,
+            thumbnail_url: audio.thumbnail_url,
+            duration_seconds: audio.duration_seconds,
+            order_index: audio.order_index,
+          }
+        : null,
+      hasNarrationScript: Boolean(
+        (rawLesson as { tts_script?: string | null } | null)?.tts_script?.trim(),
+      ),
+      questions: (questions ?? []).map((q) => ({
+        id: q.id,
+        kind: q.kind,
+        prompt: q.prompt,
+        options: Array.isArray(q.options) ? (q.options as unknown[]).map((o) => String(o)) : [],
+        explanation: q.explanation,
+        scripture_refs: q.scripture_refs ?? [],
+        order_index: q.order_index,
+      })),
+      resume: {
+        readPercent: progressRow?.read_percent ?? 0,
+        audioPositionSeconds: progressRow?.audio_position_seconds ?? 0,
+      },
       status: current.lesson.completed ? "concluida" : "nao_iniciada",
       locked,
       lockReason: locked ? "premium" : null,
@@ -200,4 +257,69 @@ export const completeLesson = createServerFn({ method: "POST" })
     );
 
     return syncCourseProgress(context.supabase, context.userId, courseId, lessonIds, lesson.id);
+  });
+
+/**
+ * Registra o ponto de estudo do aluno (leitura e áudio) na própria linha de lesson_progress.
+ * Simples e idempotente: sempre restrito ao usuário autenticado pela RLS.
+ */
+export const saveLessonCheckpoint = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) =>
+    z
+      .object({
+        lessonId: z.string().uuid(),
+        readPercent: z.number().int().min(0).max(100).optional(),
+        audioPositionSeconds: z.number().int().min(0).max(86400).optional(),
+      })
+      .parse(input),
+  )
+  .handler(async ({ data, context }) => {
+    const { data: lesson, error } = await context.supabase
+      .from("lessons")
+      .select("id, status, course_modules(course_id, status)")
+      .eq("id", data.lessonId)
+      .maybeSingle();
+    if (error) throw new Error(error.message);
+    const mod = lesson
+      ? (lesson as unknown as { course_modules?: { course_id: string; status: string } })
+          .course_modules
+      : null;
+    if (!lesson || lesson.status !== "published" || !mod || mod.status !== "published") {
+      throw new Error("Aula não disponível.");
+    }
+
+    const { data: existing } = await context.supabase
+      .from("lesson_progress")
+      .select("id, status, read_percent, audio_position_seconds")
+      .eq("user_id", context.userId)
+      .eq("lesson_id", lesson.id)
+      .maybeSingle();
+
+    const readPercent = Math.max(data.readPercent ?? 0, existing?.read_percent ?? 0);
+    const audioPositionSeconds = data.audioPositionSeconds ?? existing?.audio_position_seconds ?? 0;
+
+    if (existing) {
+      const { error: upErr } = await context.supabase
+        .from("lesson_progress")
+        .update({
+          read_percent: readPercent,
+          audio_position_seconds: audioPositionSeconds,
+          status: existing.status === "concluida" ? existing.status : "em_andamento",
+        })
+        .eq("id", existing.id);
+      if (upErr) throw new Error(upErr.message);
+    } else {
+      const { error: insErr } = await context.supabase.from("lesson_progress").insert({
+        user_id: context.userId,
+        lesson_id: lesson.id,
+        course_id: mod.course_id,
+        status: "em_andamento",
+        read_percent: readPercent,
+        audio_position_seconds: audioPositionSeconds,
+      });
+      if (insErr) throw new Error(insErr.message);
+    }
+
+    return { readPercent, audioPositionSeconds };
   });

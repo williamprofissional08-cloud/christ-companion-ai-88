@@ -526,39 +526,48 @@ export type Database = {
           duration_seconds: number | null
           id: string
           kind: string
+          language: string
           lesson_id: string
           order_index: number
           provider: string
+          source: string
           thumbnail_url: string | null
           transcript: string | null
           updated_at: string
           url: string
+          voice: string | null
         }
         Insert: {
           created_at?: string
           duration_seconds?: number | null
           id?: string
           kind?: string
+          language?: string
           lesson_id: string
           order_index?: number
           provider?: string
+          source?: string
           thumbnail_url?: string | null
           transcript?: string | null
           updated_at?: string
           url: string
+          voice?: string | null
         }
         Update: {
           created_at?: string
           duration_seconds?: number | null
           id?: string
           kind?: string
+          language?: string
           lesson_id?: string
           order_index?: number
           provider?: string
+          source?: string
           thumbnail_url?: string | null
           transcript?: string | null
           updated_at?: string
           url?: string
+          voice?: string | null
         }
         Relationships: [
           {
@@ -572,12 +581,14 @@ export type Database = {
       }
       lesson_progress: {
         Row: {
+          audio_position_seconds: number
           completed_at: string | null
           course_id: string | null
           created_at: string
           id: string
           lesson_id: string
           notes: string
+          read_percent: number
           reflection: string
           seconds_watched: number
           status: Database["public"]["Enums"]["lesson_status"]
@@ -585,12 +596,14 @@ export type Database = {
           user_id: string
         }
         Insert: {
+          audio_position_seconds?: number
           completed_at?: string | null
           course_id?: string | null
           created_at?: string
           id?: string
           lesson_id: string
           notes?: string
+          read_percent?: number
           reflection?: string
           seconds_watched?: number
           status?: Database["public"]["Enums"]["lesson_status"]
@@ -598,12 +611,14 @@ export type Database = {
           user_id: string
         }
         Update: {
+          audio_position_seconds?: number
           completed_at?: string | null
           course_id?: string | null
           created_at?: string
           id?: string
           lesson_id?: string
           notes?: string
+          read_percent?: number
           reflection?: string
           seconds_watched?: number
           status?: Database["public"]["Enums"]["lesson_status"]
@@ -690,6 +705,7 @@ export type Database = {
           summary: string
           tier: Database["public"]["Enums"]["access_tier"]
           title: string
+          tts_script: string | null
           updated_at: string
         }
         Insert: {
@@ -704,6 +720,7 @@ export type Database = {
           summary?: string
           tier?: Database["public"]["Enums"]["access_tier"]
           title: string
+          tts_script?: string | null
           updated_at?: string
         }
         Update: {
@@ -718,6 +735,7 @@ export type Database = {
           summary?: string
           tier?: Database["public"]["Enums"]["access_tier"]
           title?: string
+          tts_script?: string | null
           updated_at?: string
         }
         Relationships: [
