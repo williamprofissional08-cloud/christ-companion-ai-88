@@ -124,6 +124,10 @@ export type LessonView = {
     position: number;
   };
   blocks: LessonContentBlock[];
+  audio: LessonMediaItem | null;
+  hasNarrationScript: boolean;
+  questions: LessonQuestion[];
+  resume: LessonResume;
   status: LessonStatus;
   locked: boolean;
   lockReason: "premium" | null;
