@@ -100,7 +100,37 @@ export const getStudentLesson = createServerFn({ method: "GET" })
           .eq("lesson_id", current.lesson.id)
           .order("order_index", { ascending: true });
 
+    const [{ data: media }, { data: questions }, { data: rawLesson }, { data: progressRow }] =
+      locked
+        ? [{ data: [] }, { data: [] }, { data: null }, { data: null }]
+        : await Promise.all([
+            context.supabase
+              .from("lesson_media")
+              .select("id, kind, provider, url, thumbnail_url, duration_seconds, order_index")
+              .eq("lesson_id", current.lesson.id)
+              .order("order_index", { ascending: true }),
+            context.supabase
+              .from("lesson_questions")
+              .select("id, kind, prompt, options, explanation, scripture_refs, order_index")
+              .eq("lesson_id", current.lesson.id)
+              .order("order_index", { ascending: true }),
+            context.supabase
+              .from("lessons")
+              .select("tts_script")
+              .eq("id", current.lesson.id)
+              .maybeSingle(),
+            context.supabase
+              .from("lesson_progress")
+              .select("read_percent, audio_position_seconds")
+              .eq("user_id", context.userId)
+              .eq("lesson_id", current.lesson.id)
+              .maybeSingle(),
+          ]);
+
+    const audio = (media ?? []).find((m) => m.kind === "audio") ?? null;
+
     const moduleIndex = view.modules.findIndex((m) => m.id === current.module.id);
+
 
     return {
       course: view.course,
