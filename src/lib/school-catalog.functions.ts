@@ -258,3 +258,68 @@ export const completeLesson = createServerFn({ method: "POST" })
 
     return syncCourseProgress(context.supabase, context.userId, courseId, lessonIds, lesson.id);
   });
+
+/**
+ * Registra o ponto de estudo do aluno (leitura e áudio) na própria linha de lesson_progress.
+ * Simples e idempotente: sempre restrito ao usuário autenticado pela RLS.
+ */
+export const saveLessonCheckpoint = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) =>
+    z
+      .object({
+        lessonId: z.string().uuid(),
+        readPercent: z.number().int().min(0).max(100).optional(),
+        audioPositionSeconds: z.number().int().min(0).max(86400).optional(),
+      })
+      .parse(input),
+  )
+  .handler(async ({ data, context }) => {
+    const { data: lesson, error } = await context.supabase
+      .from("lessons")
+      .select("id, status, course_modules(course_id, status)")
+      .eq("id", data.lessonId)
+      .maybeSingle();
+    if (error) throw new Error(error.message);
+    const mod = lesson
+      ? (lesson as unknown as { course_modules?: { course_id: string; status: string } })
+          .course_modules
+      : null;
+    if (!lesson || lesson.status !== "published" || !mod || mod.status !== "published") {
+      throw new Error("Aula não disponível.");
+    }
+
+    const { data: existing } = await context.supabase
+      .from("lesson_progress")
+      .select("id, status, read_percent, audio_position_seconds")
+      .eq("user_id", context.userId)
+      .eq("lesson_id", lesson.id)
+      .maybeSingle();
+
+    const readPercent = Math.max(data.readPercent ?? 0, existing?.read_percent ?? 0);
+    const audioPositionSeconds = data.audioPositionSeconds ?? existing?.audio_position_seconds ?? 0;
+
+    if (existing) {
+      const { error: upErr } = await context.supabase
+        .from("lesson_progress")
+        .update({
+          read_percent: readPercent,
+          audio_position_seconds: audioPositionSeconds,
+          status: existing.status === "concluida" ? existing.status : "em_andamento",
+        })
+        .eq("id", existing.id);
+      if (upErr) throw new Error(upErr.message);
+    } else {
+      const { error: insErr } = await context.supabase.from("lesson_progress").insert({
+        user_id: context.userId,
+        lesson_id: lesson.id,
+        course_id: mod.course_id,
+        status: "em_andamento",
+        read_percent: readPercent,
+        audio_position_seconds: audioPositionSeconds,
+      });
+      if (insErr) throw new Error(insErr.message);
+    }
+
+    return { readPercent, audioPositionSeconds };
+  });
