@@ -60,7 +60,11 @@ export const LESSON_SECTIONS = [
   { kind: "encerramento", label: "Encerramento" },
 ] as const;
 
+/** Blocos de destaque (frase-princípio da aula) são renderizados como citação. */
+export const HIGHLIGHT_KIND = "destaque";
+
 export function sectionLabel(kind: string): string {
+  if (kind === HIGHLIGHT_KIND) return "Destaque";
   return LESSON_SECTIONS.find((s) => s.kind === kind)?.label ?? "Conteúdo";
 }
 
