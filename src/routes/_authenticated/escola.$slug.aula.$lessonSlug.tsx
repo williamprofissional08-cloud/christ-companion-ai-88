@@ -327,7 +327,12 @@ function LessonPage() {
                     Próxima aula <ArrowRight className="ml-1 size-4" />
                   </Link>
                 </Button>
-              ) : null}
+              ) : (
+                <p className="rounded-xl bg-muted/40 p-3 text-xs text-muted-foreground sm:ml-auto sm:self-center">
+                  Esta é a última aula disponível do curso por enquanto. Novas aulas serão
+                  publicadas em breve.
+                </p>
+              )}
             </div>
           </>
         )}
