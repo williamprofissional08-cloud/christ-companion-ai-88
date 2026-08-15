@@ -25,7 +25,12 @@ import {
   getStudentLesson,
   saveLessonCheckpoint,
 } from "@/lib/school-catalog.functions";
-import { LESSON_SECTIONS, percentOf, sectionLabel } from "@/lib/school/lesson-view";
+import {
+  HIGHLIGHT_KIND,
+  LESSON_SECTIONS,
+  percentOf,
+  sectionLabel,
+} from "@/lib/school/lesson-view";
 
 export const Route = createFileRoute("/_authenticated/escola/$slug/aula/$lessonSlug")({
   head: () => ({
