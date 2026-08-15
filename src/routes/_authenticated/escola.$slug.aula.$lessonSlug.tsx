@@ -222,31 +222,52 @@ function LessonPage() {
 
                   <TabsContent value="ler" className="mt-4 space-y-4">
                     {data.blocks.length ? (
-                      data.blocks.map((block) => (
-                        <Card key={block.id} className="space-y-3 p-5">
-                          <h2 className="font-display text-base font-semibold">
-                            {block.title ?? sectionLabel(block.kind)}
-                          </h2>
-                          <div className="space-y-3 text-[15px] leading-7 text-foreground/90">
-                            {block.body
-                              .split(/\n{2,}/)
-                              .filter(Boolean)
-                              .map((paragraph, index) => (
-                                <p key={index}>{paragraph}</p>
-                              ))}
-                          </div>
-                          {block.scripture_refs.length ? (
-                            <div className="flex flex-wrap items-center gap-2 rounded-xl bg-primary/5 p-3">
-                              <BookOpen className="size-4 shrink-0 text-primary" aria-hidden />
-                              {block.scripture_refs.map((ref) => (
-                                <span key={ref} className="text-sm font-medium text-primary">
-                                  {ref}
-                                </span>
-                              ))}
+                      data.blocks.map((block) =>
+                        block.kind === HIGHLIGHT_KIND ? (
+                          <Card
+                            key={block.id}
+                            className="space-y-2 border-l-4 border-l-primary bg-primary/5 p-5"
+                          >
+                            <p className="text-xs font-semibold tracking-wide text-primary uppercase">
+                              {block.title ?? sectionLabel(block.kind)}
+                            </p>
+                            <blockquote className="font-display text-lg leading-relaxed font-semibold text-foreground">
+                              {block.body
+                                .split(/\n{2,}/)
+                                .filter(Boolean)
+                                .map((paragraph, index) => (
+                                  <p key={index} className={index > 0 ? "mt-2" : undefined}>
+                                    {paragraph}
+                                  </p>
+                                ))}
+                            </blockquote>
+                          </Card>
+                        ) : (
+                          <Card key={block.id} className="space-y-3 p-5">
+                            <h2 className="font-display text-base font-semibold">
+                              {block.title ?? sectionLabel(block.kind)}
+                            </h2>
+                            <div className="space-y-3 text-[15px] leading-7 text-foreground/90">
+                              {block.body
+                                .split(/\n{2,}/)
+                                .filter(Boolean)
+                                .map((paragraph, index) => (
+                                  <p key={index}>{paragraph}</p>
+                                ))}
                             </div>
-                          ) : null}
-                        </Card>
-                      ))
+                            {block.scripture_refs.length ? (
+                              <div className="flex flex-wrap items-center gap-2 rounded-xl bg-primary/5 p-3">
+                                <BookOpen className="size-4 shrink-0 text-primary" aria-hidden />
+                                {block.scripture_refs.map((ref) => (
+                                  <span key={ref} className="text-sm font-medium text-primary">
+                                    {ref}
+                                  </span>
+                                ))}
+                              </div>
+                            ) : null}
+                          </Card>
+                        ),
+                      )
                     ) : (
                       <Card className="space-y-3 p-5">
                         <p className="text-sm text-muted-foreground">
