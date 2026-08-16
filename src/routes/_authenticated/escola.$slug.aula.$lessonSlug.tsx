@@ -293,6 +293,9 @@ function LessonPage() {
 
                 {data.questions.length ? <LessonQuiz questions={data.questions} /> : null}
 
+                <ProfessorIA lessonId={data.lesson.id} lessonTitle={data.lesson.title} />
+
+
                 <Button
                   className="w-full"
                   disabled={complete.isPending || data.status === "concluida"}
