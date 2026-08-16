@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LessonAudioPlayer } from "@/components/school/LessonAudioPlayer";
+import { ProfessorIA } from "@/components/school/ProfessorIA";
 import {
   completeLesson,
   getStudentLesson,
@@ -292,6 +293,9 @@ function LessonPage() {
                 </Tabs>
 
                 {data.questions.length ? <LessonQuiz questions={data.questions} /> : null}
+
+                <ProfessorIA lessonId={data.lesson.id} lessonTitle={data.lesson.title} />
+
 
                 <Button
                   className="w-full"
