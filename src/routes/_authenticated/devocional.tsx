@@ -48,11 +48,14 @@ function DevocionalPage() {
     return (
       <AppShell title="Devocional de hoje">
         <p className="text-sm text-muted-foreground">
-          Não foi possível gerar o devocional agora. Recarregue a página em instantes.
+          {error instanceof Error && error.message
+            ? error.message
+            : "Não foi possível gerar o devocional agora. Recarregue a página em instantes."}
         </p>
       </AppShell>
     );
   }
+
 
   const blocks = [
     { label: "Reflexão", text: data.reflection },
