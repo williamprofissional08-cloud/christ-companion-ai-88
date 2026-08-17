@@ -93,9 +93,15 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
     try {
       urlsRef.current = await generate();
       playFrom(0);
-    } catch {
+    } catch (error) {
+      setErrorMessage(
+        error instanceof Error && error.message === "credits"
+          ? "A narração está temporariamente indisponível. Tente novamente mais tarde."
+          : TTS_LABELS.error,
+      );
       setState("error");
     }
+
   }
 
   function handleStop() {
