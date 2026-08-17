@@ -26,7 +26,7 @@ export const Route = createFileRoute("/_authenticated/devocional")({
 function DevocionalPage() {
   const day = todayISO();
   const fn = useServerFn(getDevotional);
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ["devotional", day],
     queryFn: () => fn({ data: { day } }),
     staleTime: Infinity,
