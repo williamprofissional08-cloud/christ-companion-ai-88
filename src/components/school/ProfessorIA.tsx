@@ -146,10 +146,14 @@ function ProfessorChat({ lessonId, lessonTitle }: { lessonId: string; lessonTitl
                 }
               >
                 {text}
+                {!mine && !busy ? (
+                  <ProfessorAnswerAudio messageId={message.id} text={text} />
+                ) : null}
               </div>
             </div>
           );
         })}
+
 
         {status === "submitted" ? (
           <p className="text-sm text-muted-foreground">{PROFESSOR_IA_LOADING}</p>
