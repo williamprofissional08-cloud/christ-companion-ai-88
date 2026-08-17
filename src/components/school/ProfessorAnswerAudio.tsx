@@ -16,6 +16,7 @@ const sessionCache = new Map<string, string[]>();
 
 export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; text: string }) {
   const [state, setState] = useState<State>("idle");
+  const [errorMessage, setErrorMessage] = useState<string>(TTS_LABELS.error);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const urlsRef = useRef<string[]>([]);
   const indexRef = useRef(0);
