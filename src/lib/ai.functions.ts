@@ -22,17 +22,26 @@ export const getDevotional = createServerFn({ method: "POST" })
       .maybeSingle();
 
     const { generateDevotional } = await import("./ai-content.server");
-    const content = await generateDevotional(
-      data.day,
-      settings.data
-        ? {
-            readingMinutes: settings.data.reading_minutes,
-            challengeType: settings.data.challenge_type,
-            interests: settings.data.interests,
-            dailyGoal: settings.data.daily_goal,
-          }
-        : undefined,
-    );
+    const prefs = settings.data
+      ? {
+          readingMinutes: settings.data.reading_minutes,
+          challengeType: settings.data.challenge_type,
+          interests: settings.data.interests,
+          dailyGoal: settings.data.daily_goal,
+        }
+      : undefined;
+
+    let content: DevotionalContent;
+    try {
+      content = await generateDevotional(data.day, prefs);
+    } catch (aiError) {
+      // IA indisponível (ex.: créditos esgotados): entrega devocional de reserva
+      // em vez de deixar a tela sem conteúdo. Não é salvo no banco.
+      console.error("devotional AI unavailable", (aiError as Error).message);
+      const { fallbackDevotional } = await import("./content/fallback-devotional");
+      return fallbackDevotional(data.day);
+    }
+
     const { error } = await context.supabase
       .from("devotionals")
       .upsert(
@@ -42,6 +51,7 @@ export const getDevotional = createServerFn({ method: "POST" })
     if (error) console.error("devotional save failed", error.message);
     return content;
   });
+
 
 export const getPlanDayContent = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
