@@ -13,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ProfessorAnswerAudio } from "@/components/school/ProfessorAnswerAudio";
 import { supabase } from "@/integrations/supabase/client";
 import {
   PROFESSOR_IA_ERROR,
