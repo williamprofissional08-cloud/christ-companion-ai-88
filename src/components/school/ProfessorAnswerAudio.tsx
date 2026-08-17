@@ -162,7 +162,7 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
       ) : null}
 
       {state === "error" ? (
-        <span className="text-xs text-destructive">{TTS_LABELS.error}</span>
+        <span className="text-xs text-destructive">{errorMessage}</span>
       ) : null}
     </div>
   );
