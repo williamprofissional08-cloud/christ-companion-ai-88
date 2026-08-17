@@ -42,6 +42,7 @@ import { Route as AuthenticatedPlanosSlugRouteImport } from './routes/_authentic
 import { Route as AuthenticatedTrilhasIndexRouteImport } from './routes/_authenticated/trilhas.index'
 import { Route as AuthenticatedTrilhasSlugRouteImport } from './routes/_authenticated/trilhas.$slug'
 import { Route as ApiEscolaProfessorIaRouteImport } from './routes/api/escola/professor-ia'
+import { Route as ApiEscolaProfessorTtsRouteImport } from './routes/api/escola/professor-tts'
 import { Route as AuthenticatedAdminCursosIndexRouteImport } from './routes/_authenticated/admin.cursos.index'
 import { Route as AuthenticatedAdminCursosIdRouteImport } from './routes/_authenticated/admin.cursos.$id'
 import { Route as AuthenticatedEscolaSlugIndexRouteImport } from './routes/_authenticated/escola.$slug.index'
@@ -220,6 +221,11 @@ const ApiEscolaProfessorIaRoute = ApiEscolaProfessorIaRouteImport.update({
   path: '/api/escola/professor-ia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiEscolaProfessorTtsRoute = ApiEscolaProfessorTtsRouteImport.update({
+  id: '/api/escola/professor-tts',
+  path: '/api/escola/professor-tts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthenticatedAdminCursosIndexRoute =
   AuthenticatedAdminCursosIndexRouteImport.update({
     id: '/cursos/',
@@ -272,6 +278,7 @@ export interface FileRoutesByFullPath {
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
   '/api/escola/professor-ia': typeof ApiEscolaProfessorIaRoute
+  '/api/escola/professor-tts': typeof ApiEscolaProfessorTtsRoute
   '/admin/': typeof AuthenticatedAdminIndexRoute
   '/assistente/': typeof AuthenticatedAssistenteIndexRoute
   '/escola/': typeof AuthenticatedEscolaIndexRoute
@@ -303,6 +310,7 @@ export interface FileRoutesByTo {
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
   '/api/escola/professor-ia': typeof ApiEscolaProfessorIaRoute
+  '/api/escola/professor-tts': typeof ApiEscolaProfessorTtsRoute
   '/admin': typeof AuthenticatedAdminIndexRoute
   '/assistente': typeof AuthenticatedAssistenteIndexRoute
   '/escola': typeof AuthenticatedEscolaIndexRoute
@@ -343,6 +351,7 @@ export interface FileRoutesById {
   '/_authenticated/planos/$slug': typeof AuthenticatedPlanosSlugRoute
   '/_authenticated/trilhas/$slug': typeof AuthenticatedTrilhasSlugRoute
   '/api/escola/professor-ia': typeof ApiEscolaProfessorIaRoute
+  '/api/escola/professor-tts': typeof ApiEscolaProfessorTtsRoute
   '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
   '/_authenticated/assistente/': typeof AuthenticatedAssistenteIndexRoute
   '/_authenticated/escola/': typeof AuthenticatedEscolaIndexRoute
@@ -383,6 +392,7 @@ export interface FileRouteTypes {
     | '/planos/$slug'
     | '/trilhas/$slug'
     | '/api/escola/professor-ia'
+    | '/api/escola/professor-tts'
     | '/admin/'
     | '/assistente/'
     | '/escola/'
@@ -414,6 +424,7 @@ export interface FileRouteTypes {
     | '/planos/$slug'
     | '/trilhas/$slug'
     | '/api/escola/professor-ia'
+    | '/api/escola/professor-tts'
     | '/admin'
     | '/assistente'
     | '/escola'
@@ -453,6 +464,7 @@ export interface FileRouteTypes {
     | '/_authenticated/planos/$slug'
     | '/_authenticated/trilhas/$slug'
     | '/api/escola/professor-ia'
+    | '/api/escola/professor-tts'
     | '/_authenticated/admin/'
     | '/_authenticated/assistente/'
     | '/_authenticated/escola/'
@@ -473,6 +485,7 @@ export interface RootRouteChildren {
   ResetPasswordRoute: typeof ResetPasswordRoute
   ApiChatRoute: typeof ApiChatRoute
   ApiEscolaProfessorIaRoute: typeof ApiEscolaProfessorIaRoute
+  ApiEscolaProfessorTtsRoute: typeof ApiEscolaProfessorTtsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -708,6 +721,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiEscolaProfessorIaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/escola/professor-tts': {
+      id: '/api/escola/professor-tts'
+      path: '/api/escola/professor-tts'
+      fullPath: '/api/escola/professor-tts'
+      preLoaderRoute: typeof ApiEscolaProfessorTtsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_authenticated/admin/cursos/': {
       id: '/_authenticated/admin/cursos/'
       path: '/cursos'
@@ -886,6 +906,7 @@ const rootRouteChildren: RootRouteChildren = {
   ResetPasswordRoute: ResetPasswordRoute,
   ApiChatRoute: ApiChatRoute,
   ApiEscolaProfessorIaRoute: ApiEscolaProfessorIaRoute,
+  ApiEscolaProfessorTtsRoute: ApiEscolaProfessorTtsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

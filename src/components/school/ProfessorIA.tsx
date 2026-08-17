@@ -13,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ProfessorAnswerAudio } from "@/components/school/ProfessorAnswerAudio";
 import { supabase } from "@/integrations/supabase/client";
 import {
   PROFESSOR_IA_ERROR,
@@ -146,10 +147,14 @@ function ProfessorChat({ lessonId, lessonTitle }: { lessonId: string; lessonTitl
                 }
               >
                 {text}
+                {!mine && !busy ? (
+                  <ProfessorAnswerAudio messageId={message.id} text={text} />
+                ) : null}
               </div>
             </div>
           );
         })}
+
 
         {status === "submitted" ? (
           <p className="text-sm text-muted-foreground">{PROFESSOR_IA_LOADING}</p>
