@@ -26,7 +26,7 @@ export const Route = createFileRoute("/_authenticated/devocional")({
 function DevocionalPage() {
   const day = todayISO();
   const fn = useServerFn(getDevotional);
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ["devotional", day],
     queryFn: () => fn({ data: { day } }),
     staleTime: Infinity,
@@ -48,11 +48,14 @@ function DevocionalPage() {
     return (
       <AppShell title="Devocional de hoje">
         <p className="text-sm text-muted-foreground">
-          Não foi possível gerar o devocional agora. Recarregue a página em instantes.
+          {error instanceof Error && error.message
+            ? error.message
+            : "Não foi possível gerar o devocional agora. Recarregue a página em instantes."}
         </p>
       </AppShell>
     );
   }
+
 
   const blocks = [
     { label: "Reflexão", text: data.reflection },
