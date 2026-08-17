@@ -63,14 +63,28 @@ function missingReferenceFields(value: unknown, fields: string[]): string[] {
 
 async function complete(prompt: string, system: string) {
   const gateway = aiGateway();
-  const { text } = await generateText({
-    model: gateway(CHAT_MODEL),
-    system,
-    prompt,
-    providerOptions: PROVIDER_OPTIONS,
-  });
-  return text;
+  try {
+    const { text } = await generateText({
+      model: gateway(CHAT_MODEL),
+      system,
+      prompt,
+      providerOptions: PROVIDER_OPTIONS,
+    });
+    return text;
+  } catch (error) {
+    const status = (error as { statusCode?: number })?.statusCode;
+    if (status === 402) {
+      throw new Error(
+        "Os créditos de IA do aplicativo acabaram. O conteúdo gerado por IA volta assim que os créditos forem renovados.",
+      );
+    }
+    if (status === 429) {
+      throw new Error("Muitas solicitações agora. Aguarde alguns instantes e tente novamente.");
+    }
+    throw new Error("Não foi possível gerar o conteúdo com a IA agora. Tente novamente em instantes.");
+  }
 }
+
 
 async function generateJson<T>(prompt: string, requiredRefFields: string[] = []): Promise<T> {
   const system = `${BIBLICAL_SYSTEM_PROMPT}\n\n${REFERENCE_RULE}\n\nQuando pedirem JSON, responda SOMENTE com JSON válido, sem cercas de código e sem texto extra.`;
