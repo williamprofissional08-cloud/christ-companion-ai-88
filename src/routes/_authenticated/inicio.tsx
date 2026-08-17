@@ -96,8 +96,11 @@ function Inicio() {
                 </>
               ) : (
                 <p className="mt-4 text-sm text-muted-foreground">
-                  Não conseguimos carregar o devocional agora. Tente novamente em instantes.
+                  {devotional.error instanceof Error && devotional.error.message
+                    ? devotional.error.message
+                    : "Não conseguimos carregar o devocional agora. Tente novamente em instantes."}
                 </p>
+
               )}
             </Card>
           </ExportCard>
