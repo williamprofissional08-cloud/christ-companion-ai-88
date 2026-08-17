@@ -68,6 +68,7 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
         },
         body: JSON.stringify({ text: chunk }),
       });
+      if (response.status === 402) throw new Error("credits");
       if (!response.ok) throw new Error(`tts ${response.status}`);
       urls.push(URL.createObjectURL(await response.blob()));
     }
