@@ -171,11 +171,15 @@ function ProfessorChat({ lessonId, lessonTitle }: { lessonId: string; lessonTitl
           <p className="text-sm text-muted-foreground">{PROFESSOR_IA_LOADING}</p>
         ) : null}
 
-        {failed ? (
-          <p className="rounded-xl bg-destructive/10 p-3 text-sm text-destructive">
-            {PROFESSOR_IA_ERROR}
-          </p>
+        {errorMessage ? (
+          <div className="space-y-2 rounded-xl bg-destructive/10 p-3">
+            <p className="text-sm text-destructive">{errorMessage}</p>
+            <Button size="sm" variant="outline" onClick={() => setFailed(false)}>
+              Entendi
+            </Button>
+          </div>
         ) : null}
+
         <div ref={bottomRef} />
       </div>
 
