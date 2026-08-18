@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
-import { aiGateway, CHAT_MODEL, PROVIDER_OPTIONS } from "@/lib/ai-gateway.server";
+import { aiErrorMessage, aiGateway, CHAT_MODEL, PROVIDER_OPTIONS } from "@/lib/ai-gateway.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
 import {
   buildProfessorSystemPrompt,
@@ -13,27 +13,39 @@ export const Route = createFileRoute("/api/escola/professor-ia")({
   server: {
     handlers: {
       POST: async ({ request }) => {
-        const auth = await authenticateRequest(request);
-        if (!auth) return new Response("Unauthorized", { status: 401 });
+        try {
+          const auth = await authenticateRequest(request);
+          if (!auth) return new Response("Unauthorized", { status: 401 });
 
-        const body = (await request.json()) as Body;
-        const lessonId = typeof body.lessonId === "string" ? body.lessonId : null;
-        if (!Array.isArray(body.messages) || !body.messages.length || !lessonId) {
-          return new Response("Dados inválidos", { status: 400 });
+          const body = (await request.json()) as Body;
+          const lessonId = typeof body.lessonId === "string" ? body.lessonId : null;
+          if (!Array.isArray(body.messages) || !body.messages.length || !lessonId) {
+            return new Response("Dados inválidos", { status: 400 });
+          }
+
+          const context = await loadLessonContext(auth.supabase, auth.userId, lessonId);
+          if (!context) return new Response("Aula não disponível", { status: 404 });
+
+          const gateway = aiGateway();
+          const result = streamText({
+            model: gateway(CHAT_MODEL),
+            system: buildProfessorSystemPrompt(context),
+            // Mantém o histórico da conversa da sessão para perguntas de seguimento.
+            messages: convertToModelMessages(body.messages as UIMessage[]),
+            providerOptions: PROVIDER_OPTIONS,
+            onError: ({ error }) => {
+              console.error("professor-ia stream error", error);
+            },
+          });
+
+          return result.toUIMessageStreamResponse({
+            // Erros durante o streaming chegam ao cliente já traduzidos.
+            onError: (error) => aiErrorMessage(error),
+          });
+        } catch (error) {
+          console.error("professor-ia failed", error);
+          return new Response(aiErrorMessage(error), { status: 502 });
         }
-
-        const context = await loadLessonContext(auth.supabase, auth.userId, lessonId);
-        if (!context) return new Response("Aula não disponível", { status: 404 });
-
-        const gateway = aiGateway();
-        const result = streamText({
-          model: gateway(CHAT_MODEL),
-          system: buildProfessorSystemPrompt(context),
-          messages: await convertToModelMessages(body.messages as UIMessage[]),
-          providerOptions: PROVIDER_OPTIONS,
-        });
-
-        return result.toUIMessageStreamResponse();
       },
     },
   },
