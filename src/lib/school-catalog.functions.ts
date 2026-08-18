@@ -187,17 +187,9 @@ export const getStudentLesson = createServerFn({ method: "GET" })
         scripture_refs: b.scripture_refs ?? [],
         order_index: b.order_index,
       })),
-      audio: audio
-        ? {
-            id: audio.id,
-            kind: audio.kind,
-            provider: audio.provider,
-            url: audio.url,
-            thumbnail_url: audio.thumbnail_url,
-            duration_seconds: audio.duration_seconds,
-            order_index: audio.order_index,
-          }
-        : null,
+      audio,
+      video,
+
       hasNarrationScript: Boolean(
         (rawLesson as { tts_script?: string | null } | null)?.tts_script?.trim(),
       ),
