@@ -131,7 +131,33 @@ export const getStudentLesson = createServerFn({ method: "GET" })
               .maybeSingle(),
           ]);
 
-    const audio = (media ?? []).find((m) => m.kind === "audio") ?? null;
+    type MediaRow = {
+      id: string;
+      kind: string;
+      provider: string | null;
+      url: string;
+      title?: string | null;
+      thumbnail_url: string | null;
+      duration_seconds: number | null;
+      order_index: number;
+    };
+    const mediaRows = (media ?? []) as unknown as MediaRow[];
+    const toMedia = (row: MediaRow | undefined) =>
+      row
+        ? {
+            id: row.id,
+            kind: row.kind,
+            provider: row.provider,
+            url: row.url,
+            title: row.title ?? null,
+            thumbnail_url: row.thumbnail_url,
+            duration_seconds: row.duration_seconds,
+            order_index: row.order_index,
+          }
+        : null;
+    const audio = toMedia(mediaRows.find((m) => m.kind === "audio"));
+    const video = toMedia(mediaRows.find((m) => m.kind === "video"));
+
 
     const moduleIndex = view.modules.findIndex((m) => m.id === current.module.id);
 
