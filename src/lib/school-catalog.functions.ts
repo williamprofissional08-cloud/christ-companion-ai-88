@@ -144,17 +144,18 @@ export const getStudentLesson = createServerFn({ method: "GET" })
     const mediaRows = (media ?? []) as unknown as MediaRow[];
     const toMedia = (row: MediaRow | undefined) =>
       row
-        ? {
+        ? ({
             id: row.id,
             kind: row.kind,
-            provider: row.provider,
+            provider: row.provider ?? "upload",
             url: row.url,
             title: row.title ?? null,
             thumbnail_url: row.thumbnail_url,
             duration_seconds: row.duration_seconds,
             order_index: row.order_index,
-          }
+          } as LessonView["audio"])
         : null;
+
     const audio = toMedia(mediaRows.find((m) => m.kind === "audio"));
     const video = toMedia(mediaRows.find((m) => m.kind === "video"));
 
