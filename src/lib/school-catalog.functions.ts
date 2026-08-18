@@ -106,9 +106,13 @@ export const getStudentLesson = createServerFn({ method: "GET" })
         : await Promise.all([
             context.supabase
               .from("lesson_media")
-              .select("id, kind, provider, url, thumbnail_url, duration_seconds, order_index")
+              .select(
+                "id, kind, provider, url, title, status, thumbnail_url, duration_seconds, order_index",
+              )
               .eq("lesson_id", current.lesson.id)
+              .eq("status", "published")
               .order("order_index", { ascending: true }),
+
             context.supabase
               .from("lesson_questions")
               .select("id, kind, prompt, options, explanation, scripture_refs, order_index")
@@ -127,7 +131,34 @@ export const getStudentLesson = createServerFn({ method: "GET" })
               .maybeSingle(),
           ]);
 
-    const audio = (media ?? []).find((m) => m.kind === "audio") ?? null;
+    type MediaRow = {
+      id: string;
+      kind: string;
+      provider: string | null;
+      url: string;
+      title?: string | null;
+      thumbnail_url: string | null;
+      duration_seconds: number | null;
+      order_index: number;
+    };
+    const mediaRows = (media ?? []) as unknown as MediaRow[];
+    const toMedia = (row: MediaRow | undefined) =>
+      row
+        ? ({
+            id: row.id,
+            kind: row.kind,
+            provider: row.provider ?? "upload",
+            url: row.url,
+            title: row.title ?? null,
+            thumbnail_url: row.thumbnail_url,
+            duration_seconds: row.duration_seconds,
+            order_index: row.order_index,
+          } as LessonView["audio"])
+        : null;
+
+    const audio = toMedia(mediaRows.find((m) => m.kind === "audio"));
+    const video = toMedia(mediaRows.find((m) => m.kind === "video"));
+
 
     const moduleIndex = view.modules.findIndex((m) => m.id === current.module.id);
 
@@ -157,17 +188,9 @@ export const getStudentLesson = createServerFn({ method: "GET" })
         scripture_refs: b.scripture_refs ?? [],
         order_index: b.order_index,
       })),
-      audio: audio
-        ? {
-            id: audio.id,
-            kind: audio.kind,
-            provider: audio.provider,
-            url: audio.url,
-            thumbnail_url: audio.thumbnail_url,
-            duration_seconds: audio.duration_seconds,
-            order_index: audio.order_index,
-          }
-        : null,
+      audio,
+      video,
+
       hasNarrationScript: Boolean(
         (rawLesson as { tts_script?: string | null } | null)?.tts_script?.trim(),
       ),

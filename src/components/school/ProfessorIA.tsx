@@ -81,13 +81,23 @@ function ProfessorChat({ lessonId, lessonTitle }: { lessonId: string; lessonTitl
     [lessonId],
   );
 
-  const { messages, sendMessage, status } = useChat({
+  const { messages, sendMessage, status, error } = useChat({
     id: `professor-ia-${lessonId}`,
     transport,
-    onError: () => setFailed(true),
+    onError: (err) => {
+      console.error("professor-ia client error", err);
+      setFailed(true);
+    },
   });
 
   const busy = status === "submitted" || status === "streaming";
+
+  // Mensagem amigável: usa o texto vindo do servidor quando existir.
+  const errorMessage = failed
+    ? (error?.message && error.message.length > 3 && !error.message.includes("{")
+        ? error.message
+        : PROFESSOR_IA_ERROR)
+    : null;
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -104,6 +114,7 @@ function ProfessorChat({ lessonId, lessonTitle }: { lessonId: string; lessonTitl
     setFailed(false);
     void sendMessage({ text: value });
   }
+
 
   return (
     <>
@@ -160,11 +171,15 @@ function ProfessorChat({ lessonId, lessonTitle }: { lessonId: string; lessonTitl
           <p className="text-sm text-muted-foreground">{PROFESSOR_IA_LOADING}</p>
         ) : null}
 
-        {failed ? (
-          <p className="rounded-xl bg-destructive/10 p-3 text-sm text-destructive">
-            {PROFESSOR_IA_ERROR}
-          </p>
+        {errorMessage ? (
+          <div className="space-y-2 rounded-xl bg-destructive/10 p-3">
+            <p className="text-sm text-destructive">{errorMessage}</p>
+            <Button size="sm" variant="outline" onClick={() => setFailed(false)}>
+              Entendi
+            </Button>
+          </div>
         ) : null}
+
         <div ref={bottomRef} />
       </div>
 

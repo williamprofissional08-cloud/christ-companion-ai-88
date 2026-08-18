@@ -531,7 +531,9 @@ export type Database = {
           order_index: number
           provider: string
           source: string
+          status: Database["public"]["Enums"]["content_status"]
           thumbnail_url: string | null
+          title: string | null
           transcript: string | null
           updated_at: string
           url: string
@@ -547,7 +549,9 @@ export type Database = {
           order_index?: number
           provider?: string
           source?: string
+          status?: Database["public"]["Enums"]["content_status"]
           thumbnail_url?: string | null
+          title?: string | null
           transcript?: string | null
           updated_at?: string
           url: string
@@ -563,7 +567,9 @@ export type Database = {
           order_index?: number
           provider?: string
           source?: string
+          status?: Database["public"]["Enums"]["content_status"]
           thumbnail_url?: string | null
+          title?: string | null
           transcript?: string | null
           updated_at?: string
           url?: string

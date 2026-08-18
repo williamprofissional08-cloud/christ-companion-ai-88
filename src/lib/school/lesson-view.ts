@@ -88,7 +88,10 @@ export type LessonMediaItem = {
   thumbnail_url: string | null;
   duration_seconds: number | null;
   order_index: number;
+  /** Título opcional da mídia (ex.: "Videoaula 1 — Introdução"). */
+  title?: string | null;
 };
+
 
 export type LessonQuestion = {
   id: string;
@@ -129,6 +132,9 @@ export type LessonView = {
   };
   blocks: LessonContentBlock[];
   audio: LessonMediaItem | null;
+  /** Videoaula (preparado para uso futuro; hoje normalmente null). */
+  video: LessonMediaItem | null;
+
   hasNarrationScript: boolean;
   questions: LessonQuestion[];
   resume: LessonResume;

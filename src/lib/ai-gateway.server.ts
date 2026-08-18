@@ -18,6 +18,26 @@ export function aiGateway() {
 export const CHAT_MODEL = "openai/gpt-5.6-sol";
 export const PROVIDER_OPTIONS = { lovable: { reasoningEffort: "none" } } as const;
 
+/**
+ * Traduz falhas do AI Gateway em mensagem amigável (sem stack trace nem chaves).
+ * Reutilizada pelo chat do app e pelo Professor IA.
+ */
+export function aiErrorMessage(error: unknown): string {
+  const status = (error as { statusCode?: number; status?: number })?.statusCode
+    ?? (error as { status?: number })?.status;
+  if (status === 402) {
+    return "Os créditos de IA do aplicativo acabaram. O Professor IA volta assim que os créditos forem renovados.";
+  }
+  if (status === 429) {
+    return "Muitas perguntas ao mesmo tempo. Aguarde alguns instantes e tente novamente.";
+  }
+  if (status === 401 || status === 403) {
+    return "O serviço de IA está indisponível agora. Tente novamente em alguns instantes.";
+  }
+  return "Não foi possível obter uma resposta agora. Tente novamente em alguns instantes.";
+}
+
+
 export const BIBLICAL_SYSTEM_PROMPT = `Você é o assistente do aplicativo "Caminhando com Cristo", um companheiro espiritual cristão.
 
 Princípios invioláveis:
