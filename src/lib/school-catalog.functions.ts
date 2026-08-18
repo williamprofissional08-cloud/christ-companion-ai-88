@@ -106,9 +106,13 @@ export const getStudentLesson = createServerFn({ method: "GET" })
         : await Promise.all([
             context.supabase
               .from("lesson_media")
-              .select("id, kind, provider, url, thumbnail_url, duration_seconds, order_index")
+              .select(
+                "id, kind, provider, url, title, status, thumbnail_url, duration_seconds, order_index",
+              )
               .eq("lesson_id", current.lesson.id)
+              .eq("status", "published")
               .order("order_index", { ascending: true }),
+
             context.supabase
               .from("lesson_questions")
               .select("id, kind, prompt, options, explanation, scripture_refs, order_index")
