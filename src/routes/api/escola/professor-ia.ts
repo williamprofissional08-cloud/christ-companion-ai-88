@@ -31,7 +31,7 @@ export const Route = createFileRoute("/api/escola/professor-ia")({
             model: gateway(CHAT_MODEL),
             system: buildProfessorSystemPrompt(context),
             // Mantém o histórico da conversa da sessão para perguntas de seguimento.
-            messages: convertToModelMessages(body.messages as UIMessage[]),
+            messages: await convertToModelMessages(body.messages as UIMessage[]),
             providerOptions: PROVIDER_OPTIONS,
             onError: ({ error }) => {
               console.error("professor-ia stream error", error);
