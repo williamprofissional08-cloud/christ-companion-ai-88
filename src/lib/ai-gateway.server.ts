@@ -26,7 +26,7 @@ export function aiErrorMessage(error: unknown): string {
   const status = (error as { statusCode?: number; status?: number })?.statusCode
     ?? (error as { status?: number })?.status;
   if (status === 402) {
-    return "Os créditos de IA do aplicativo acabaram. O Professor IA volta assim que os créditos forem renovados.";
+    return "Os créditos de IA do aplicativo acabaram. As respostas voltam assim que os créditos forem renovados.";
   }
   if (status === 429) {
     return "Muitas perguntas ao mesmo tempo. Aguarde alguns instantes e tente novamente.";
