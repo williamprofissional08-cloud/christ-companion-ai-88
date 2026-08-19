@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
 import {
+  aiErrorMessage,
   aiGateway,
   BIBLICAL_SYSTEM_PROMPT,
   CHAT_MODEL,
@@ -14,6 +15,7 @@ export const Route = createFileRoute("/api/chat")({
   server: {
     handlers: {
       POST: async ({ request }) => {
+       try {
         const auth = await authenticateRequest(request);
         if (!auth) return new Response("Unauthorized", { status: 401 });
 
@@ -68,10 +70,15 @@ export const Route = createFileRoute("/api/chat")({
           system: BIBLICAL_SYSTEM_PROMPT,
           messages: await convertToModelMessages(uiMessages),
           providerOptions: PROVIDER_OPTIONS,
+          onError: ({ error }) => {
+            console.error("chat stream error", error);
+          },
         });
 
         return result.toUIMessageStreamResponse({
           originalMessages: uiMessages,
+          // Erros do gateway chegam ao cliente já traduzidos, sem quebrar a tela.
+          onError: (error) => aiErrorMessage(error),
           onFinish: async ({ responseMessage }) => {
             const { error } = await auth.supabase.from("chat_messages").insert({
               user_id: auth.userId,
@@ -82,6 +89,10 @@ export const Route = createFileRoute("/api/chat")({
             if (error) console.error("save assistant message failed", error.message);
           },
         });
+       } catch (error) {
+        console.error("chat failed", error);
+        return new Response(aiErrorMessage(error), { status: 502 });
+       }
       },
     },
   },
