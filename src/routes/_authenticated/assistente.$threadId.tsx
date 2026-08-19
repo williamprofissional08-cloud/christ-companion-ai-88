@@ -101,11 +101,20 @@ function ChatWindow({
     [threadId],
   );
 
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
   const { messages, sendMessage, status } = useChat({
     id: threadId,
     messages: initial,
     transport,
-    onError: () => toast.error("O assistente não conseguiu responder agora. Tente novamente."),
+    onError: (error) => {
+      const message =
+        error.message?.trim() && !/^\s*(failed|error)/i.test(error.message)
+          ? error.message.trim()
+          : "O assistente não conseguiu responder agora. Tente novamente.";
+      setErrorMessage(message);
+      toast.error(message);
+    },
   });
 
   const busy = status === "submitted" || status === "streaming";
@@ -122,6 +131,7 @@ function ChatWindow({
     const text = input.trim();
     if (!text || busy) return;
     setInput("");
+    setErrorMessage(null);
     void sendMessage({ text });
   }
 
@@ -143,7 +153,10 @@ function ChatWindow({
                   key={s}
                   variant="outline"
                   size="sm"
-                  onClick={() => void sendMessage({ text: s })}
+                  onClick={() => {
+                    setErrorMessage(null);
+                    void sendMessage({ text: s });
+                  }}
                 >
                   {s}
                 </Button>
@@ -174,6 +187,20 @@ function ChatWindow({
             </div>
           );
         })}
+
+        {errorMessage ? (
+          <Card className="border-destructive/40 bg-destructive/5 p-4 shadow-soft">
+            <p className="text-sm text-foreground">{errorMessage}</p>
+            <Button
+              variant="outline"
+              size="sm"
+              className="mt-3"
+              onClick={() => setErrorMessage(null)}
+            >
+              Entendi
+            </Button>
+          </Card>
+        ) : null}
 
         {status === "submitted" ? (
           <div className="text-sm text-muted-foreground">O assistente está buscando na Palavra...</div>
