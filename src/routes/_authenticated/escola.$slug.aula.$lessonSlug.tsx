@@ -186,7 +186,34 @@ function LessonPage() {
               </Card>
             ) : (
               <>
+                {data.video ? (
+                  <Card className="space-y-3 p-5">
+                    <h2 className="font-display text-base font-semibold">
+                      {data.video.title ?? "Videoaula"}
+                    </h2>
+                    <div className="overflow-hidden rounded-xl bg-muted">
+                      {data.video.provider === "upload" ? (
+                        <video
+                          src={data.video.url}
+                          controls
+                          preload="metadata"
+                          poster={data.video.thumbnail_url ?? undefined}
+                          className="aspect-video w-full"
+                        />
+                      ) : (
+                        <iframe
+                          src={data.video.url}
+                          title={data.video.title ?? "Videoaula"}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                          allowFullScreen
+                          className="aspect-video w-full"
+                        />
+                      )}
+                    </div>
+                  </Card>
+                ) : null}
                 <Tabs value={mode} onValueChange={(value) => setMode(value as "ler" | "ouvir")}>
+
                   <TabsList className="w-full">
                     <TabsTrigger value="ouvir" className="flex-1 gap-1.5">
                       <Headphones className="size-4" aria-hidden /> Ouvir aula
