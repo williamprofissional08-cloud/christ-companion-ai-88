@@ -75,7 +75,7 @@ async function complete(prompt: string, system: string) {
     const status = (error as { statusCode?: number })?.statusCode;
     if (status === 402) {
       throw new Error(
-        "Os créditos de IA do aplicativo acabaram. O conteúdo gerado por IA volta assim que os créditos forem renovados.",
+        "O conteúdo gerado por IA está temporariamente indisponível. Tente novamente em instantes.",
       );
     }
     if (status === 429) {
