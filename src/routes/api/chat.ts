@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { convertToModelMessages, streamText, type UIMessage } from "ai";
+import {
+  convertToModelMessages,
+  createUIMessageStream,
+  createUIMessageStreamResponse,
+  streamText,
+  type UIMessage,
+} from "ai";
 import {
   aiErrorMessage,
   aiGateway,
@@ -8,6 +14,7 @@ import {
   PROVIDER_OPTIONS,
 } from "@/lib/ai-gateway.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
+import { getBiblicalFallbackAnswer } from "@/lib/biblical-chat-fallback.server";
 
 type Body = { messages?: unknown; threadId?: unknown };
 
@@ -64,22 +71,56 @@ export const Route = createFileRoute("/api/chat")({
           }
         }
 
-        const gateway = aiGateway();
-        const result = streamText({
-          model: gateway(CHAT_MODEL),
-          system: BIBLICAL_SYSTEM_PROMPT,
-          messages: await convertToModelMessages(uiMessages),
-          providerOptions: PROVIDER_OPTIONS,
-          onError: ({ error }) => {
-            console.error("chat stream error", error);
-          },
-        });
-
-        return result.toUIMessageStreamResponse({
+        const lastQuestion = last?.parts
+          ?.filter((part): part is Extract<typeof part, { type: "text" }> => part.type === "text")
+          .map((part) => part.text)
+          .join(" ")
+          .trim() ?? "";
+        const textPartId = crypto.randomUUID();
+        const responseMessageId = crypto.randomUUID();
+        const stream = createUIMessageStream({
           originalMessages: uiMessages,
-          // Erros do gateway chegam ao cliente já traduzidos, sem quebrar a tela.
-          onError: (error) => aiErrorMessage(error),
-          onFinish: async ({ responseMessage }) => {
+          generateId: () => responseMessageId,
+          execute: async ({ writer }) => {
+            writer.write({ type: "text-start", id: textPartId });
+            let answer = "";
+
+            try {
+              const gateway = aiGateway();
+              const result = streamText({
+                model: gateway(CHAT_MODEL),
+                system: BIBLICAL_SYSTEM_PROMPT,
+                messages: await convertToModelMessages(uiMessages),
+                providerOptions: PROVIDER_OPTIONS,
+              });
+
+              for await (const part of result.fullStream) {
+                if (part.type === "text-delta") {
+                  answer += part.text;
+                  writer.write({ type: "text-delta", id: textPartId, delta: part.text });
+                } else if (part.type === "error") {
+                  throw part.error;
+                }
+              }
+            } catch (error) {
+              console.error("chat gateway unavailable; using biblical fallback", error);
+              if (!answer) {
+                answer = getBiblicalFallbackAnswer(lastQuestion);
+                writer.write({ type: "text-delta", id: textPartId, delta: answer });
+              }
+            }
+
+            if (!answer) {
+              answer = getBiblicalFallbackAnswer(lastQuestion);
+              writer.write({ type: "text-delta", id: textPartId, delta: answer });
+            }
+            writer.write({ type: "text-end", id: textPartId });
+
+            const responseMessage: UIMessage = {
+              id: responseMessageId,
+              role: "assistant",
+              parts: [{ type: "text", text: answer }],
+            };
             const { error } = await auth.supabase.from("chat_messages").insert({
               user_id: auth.userId,
               thread_id: threadId,
@@ -88,7 +129,10 @@ export const Route = createFileRoute("/api/chat")({
             });
             if (error) console.error("save assistant message failed", error.message);
           },
+          onError: (error) => aiErrorMessage(error),
         });
+
+        return createUIMessageStreamResponse({ stream });
        } catch (error) {
         console.error("chat failed", error);
         return new Response(aiErrorMessage(error), { status: 502 });
