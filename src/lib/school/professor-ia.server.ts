@@ -5,7 +5,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database } from "@/integrations/supabase/types";
 import { BIBLICAL_SYSTEM_PROMPT, REFERENCE_RULE } from "@/lib/ai-gateway.server";
-import { isPremium } from "./lesson-queries";
+
 
 type Client = SupabaseClient<Database>;
 
@@ -44,10 +44,8 @@ export async function loadLessonContext(
   };
   const course = moduleRow.courses;
 
-  if (lesson.tier === "premium" || course.tier === "premium") {
-    const premium = await isPremium(supabase, userId);
-    if (!premium) return null;
-  }
+  // Professor IA é gratuito para qualquer usuário autenticado: sem trava de assinatura.
+
 
   const [{ data: blocks }, { data: questions }] = await Promise.all([
     supabase
