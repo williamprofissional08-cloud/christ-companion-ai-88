@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
-import { aiErrorMessage, aiGateway, CHAT_MODEL, PROVIDER_OPTIONS } from "@/lib/ai-gateway.server";
+import {
+  aiErrorMessage,
+  aiResponsesModel,
+  RESPONSES_PROVIDER_OPTIONS,
+} from "@/lib/ai-gateway.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
 import {
   buildProfessorSystemPrompt,
@@ -26,19 +30,20 @@ export const Route = createFileRoute("/api/escola/professor-ia")({
           const context = await loadLessonContext(auth.supabase, auth.userId, lessonId);
           if (!context) return new Response("Aula não disponível", { status: 404 });
 
-          const gateway = aiGateway();
           const result = streamText({
-            model: gateway(CHAT_MODEL),
+            model: aiResponsesModel(),
             system: buildProfessorSystemPrompt(context),
             // Mantém o histórico da conversa da sessão para perguntas de seguimento.
             messages: await convertToModelMessages(body.messages as UIMessage[]),
-            providerOptions: PROVIDER_OPTIONS,
+            providerOptions: RESPONSES_PROVIDER_OPTIONS,
+            maxRetries: 2,
             onError: ({ error }) => {
               console.error("professor-ia stream error", error);
             },
           });
 
           return result.toUIMessageStreamResponse({
+            sendReasoning: true,
             // Erros durante o streaming chegam ao cliente já traduzidos.
             onError: (error) => aiErrorMessage(error),
           });
