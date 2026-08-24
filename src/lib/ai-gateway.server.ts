@@ -1,4 +1,5 @@
 import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
+import { createOpenAI } from "@ai-sdk/openai";
 
 /** Provider do Lovable AI Gateway (uso exclusivo no servidor). */
 export function createLovableAiGatewayProvider(apiKey: string) {
@@ -15,8 +16,32 @@ export function aiGateway() {
   return createLovableAiGatewayProvider(key);
 }
 
+/** Modelo de chat via Responses API, exigida pelos modelos OpenAI atuais. */
+export function aiResponsesModel() {
+  const key = process.env["LOVABLE_API_KEY"];
+  if (!key) throw new Error("Missing LOVABLE_API_KEY");
+  const provider = createOpenAI({
+    baseURL: "https://ai.gateway.lovable.dev/v1",
+    apiKey: key,
+    headers: {
+      "Lovable-API-Key": key,
+      "X-Lovable-AIG-SDK": "vercel-ai-sdk",
+    },
+  });
+  return provider.responses(CHAT_MODEL);
+}
+
 export const CHAT_MODEL = "openai/gpt-5.6-sol";
 export const PROVIDER_OPTIONS = { lovable: { reasoningEffort: "none" } } as const;
+export const RESPONSES_PROVIDER_OPTIONS = {
+  openai: {
+    forceReasoning: true,
+    reasoningEffort: "medium",
+    reasoningSummary: "auto",
+    store: false,
+    include: ["reasoning.encrypted_content"],
+  },
+} as const;
 
 /**
  * Traduz falhas do AI Gateway em mensagem amigável (sem stack trace nem chaves).
