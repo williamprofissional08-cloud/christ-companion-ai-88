@@ -41,7 +41,7 @@ export const RESPONSES_PROVIDER_OPTIONS = {
     store: false,
     include: ["reasoning.encrypted_content"],
   },
-} as const;
+};
 
 /**
  * Traduz falhas do AI Gateway em mensagem amigável (sem stack trace nem chaves).
