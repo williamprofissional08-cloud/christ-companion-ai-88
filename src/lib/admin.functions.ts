@@ -361,3 +361,126 @@ export const adminDeleteLessonQuestion = createServerFn({ method: "POST" })
     if (error) throw new Error(error.message);
     return { ok: true };
   });
+
+/** Aula com o contexto de módulo e curso (usado no editor de conteúdo e pelo Professor IA). */
+export const adminGetLesson = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context.supabase, context.userId);
+    const { data: lesson, error } = await context.supabase
+      .from("lessons")
+      .select(
+        "id, module_id, slug, title, summary, duration_minutes, tier, status, order_index, tts_script",
+      )
+      .eq("id", data.id)
+      .maybeSingle();
+    if (error) throw new Error(error.message);
+    if (!lesson) return null;
+
+    const { data: mod } = await context.supabase
+      .from("course_modules")
+      .select("id, course_id, title, summary, order_index, status")
+      .eq("id", lesson.module_id)
+      .maybeSingle();
+
+    const { data: course } = mod
+      ? await context.supabase
+          .from("courses")
+          .select("id, slug, title, level, tier, status")
+          .eq("id", mod.course_id)
+          .maybeSingle()
+      : { data: null };
+
+    return { lesson, module: mod ?? null, course: course ?? null };
+  });
+
+/** Roteiro de narração da aula (preparado para TTS futuro, sem gerar áudio agora). */
+export const adminSaveLessonScript = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) =>
+    z
+      .object({
+        id: z.string().uuid(),
+        tts_script: z.string().max(40000).nullable(),
+      })
+      .parse(input),
+  )
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context.supabase, context.userId);
+    const { error } = await context.supabase
+      .from("lessons")
+      .update({ tts_script: data.tts_script?.trim() ? data.tts_script : null })
+      .eq("id", data.id);
+    if (error) throw new Error(error.message);
+    return { ok: true };
+  });
+
+/** Mídias da aula (áudio/vídeo) por URL — sem upload de arquivo nesta etapa. */
+export const adminListLessonMedia = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) => z.object({ lesson_id: z.string().uuid() }).parse(input))
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context.supabase, context.userId);
+    const { data: rows, error } = await context.supabase
+      .from("lesson_media")
+      .select(
+        "id, lesson_id, kind, provider, url, thumbnail_url, duration_seconds, order_index, source, language, title, status",
+      )
+      .eq("lesson_id", data.lesson_id)
+      .order("order_index", { ascending: true });
+    if (error) throw new Error(error.message);
+    return rows ?? [];
+  });
+
+export const adminSaveLessonMedia = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) =>
+    z
+      .object({
+        id: z.string().uuid().optional(),
+        lesson_id: z.string().uuid(),
+        kind: z.enum(["video", "audio"]),
+        provider: z.string().min(2).max(40),
+        url: z.string().url().max(2000),
+        thumbnail_url: z.string().url().max(2000).nullable().optional(),
+        duration_seconds: z.number().int().min(0).max(86400).nullable().optional(),
+        title: z.string().max(200).nullable().optional(),
+        status: statusEnum,
+        order_index: z.number().int().min(0).max(999),
+      })
+      .parse(input),
+  )
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context.supabase, context.userId);
+    const { id, ...rest } = data;
+    const payload = {
+      ...rest,
+      thumbnail_url: rest.thumbnail_url ?? null,
+      duration_seconds: rest.duration_seconds ?? null,
+      title: rest.title ?? null,
+      source: "url",
+    };
+    if (id) {
+      const { error } = await context.supabase.from("lesson_media").update(payload).eq("id", id);
+      if (error) throw new Error(error.message);
+      return { id };
+    }
+    const { data: created, error } = await context.supabase
+      .from("lesson_media")
+      .insert(payload)
+      .select("id")
+      .single();
+    if (error) throw new Error(error.message);
+    return { id: created.id };
+  });
+
+export const adminDeleteLessonMedia = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context.supabase, context.userId);
+    const { error } = await context.supabase.from("lesson_media").delete().eq("id", data.id);
+    if (error) throw new Error(error.message);
+    return { ok: true };
+  });
