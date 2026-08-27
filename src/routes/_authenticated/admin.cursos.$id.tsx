@@ -409,7 +409,13 @@ function AdminCourseEditor() {
                         >
                           {lesson.status === "published" ? "Despublicar" : "Publicar"}
                         </Button>
+                        <Button asChild size="sm" variant="secondary">
+                          <Link to="/admin/aulas/$lessonId" params={{ lessonId: lesson.id }}>
+                            Editar conteúdo
+                          </Link>
+                        </Button>
                         <Button
+
                           size="icon-sm"
                           variant="ghost"
                           aria-label="Remover aula"
