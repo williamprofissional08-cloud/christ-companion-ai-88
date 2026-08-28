@@ -51,16 +51,20 @@ export function aiErrorMessage(error: unknown): string {
   const status = (error as { statusCode?: number; status?: number })?.statusCode
     ?? (error as { status?: number })?.status;
   if (status === 402) {
-    return "O assistente está temporariamente indisponível. Tente novamente em alguns instantes.";
+    return "Os créditos de IA do aplicativo acabaram. O responsável pelo app precisa adicionar créditos de IA no Lovable para que o Assistente e o Professor IA voltem a responder. (Você não é cobrado por usar a IA.)";
   }
   if (status === 429) {
     return "Muitas perguntas ao mesmo tempo. Aguarde alguns instantes e tente novamente.";
   }
-  if (status === 401 || status === 403) {
-    return "O serviço de IA está indisponível agora. Tente novamente em alguns instantes.";
+  if (status === 403) {
+    return "O uso de IA está bloqueado nas configurações do workspace do app. O responsável precisa reativar a IA ou revisar o limite de créditos.";
+  }
+  if (status === 401) {
+    return "A configuração da chave de IA do app está inválida. É necessário reconfigurar a chave do serviço de IA.";
   }
   return "Não foi possível obter uma resposta agora. Tente novamente em alguns instantes.";
 }
+
 
 
 export const BIBLICAL_SYSTEM_PROMPT = `Você é o assistente do aplicativo "Caminhando com Cristo", um companheiro espiritual cristão.
