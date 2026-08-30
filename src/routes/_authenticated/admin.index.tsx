@@ -1,11 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink, RefreshCw, Sparkles } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { getAdminStats } from "@/lib/admin.functions";
+import { getAiStatus } from "@/lib/ai-status.functions";
+
 
 export const Route = createFileRoute("/_authenticated/admin/")({
   head: () => ({
