@@ -25,10 +25,17 @@ export const Route = createFileRoute("/_authenticated/admin/")({
 
 function AdminDashboard() {
   const fetchStats = useServerFn(getAdminStats);
+  const fetchAiStatus = useServerFn(getAiStatus);
   const { data: stats, isLoading } = useQuery({
     queryKey: ["admin-stats"],
     queryFn: () => fetchStats(),
   });
+  const ai = useQuery({
+    queryKey: ["ai-status"],
+    queryFn: () => fetchAiStatus(),
+    staleTime: 60_000,
+  });
+
 
   const cards = [
     { label: "Total de cursos", value: stats?.courses },
