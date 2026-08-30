@@ -75,6 +75,49 @@ function AdminDashboard() {
             </Link>
           </Button>
         </Card>
+
+        <Card className="space-y-3 p-5">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Sparkles className="size-4 text-primary" /> Créditos de IA
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                O Assistente IA e o Professor IA usam os créditos de IA do aplicativo. O aluno nunca
+                é cobrado.
+              </p>
+            </div>
+            <Badge variant={ai.data?.ok ? "default" : "destructive"}>
+              {ai.isFetching ? "Verificando…" : ai.data?.ok ? "IA disponível" : "IA indisponível"}
+            </Badge>
+          </div>
+
+          <p className="text-sm">
+            {ai.isLoading ? "Verificando o provedor de IA…" : (ai.data?.message ?? "—")}
+          </p>
+
+          <div className="flex flex-wrap gap-2">
+            <Button variant="outline" onClick={() => ai.refetch()} disabled={ai.isFetching}>
+              <RefreshCw className="mr-1 size-4" /> Testar agora
+            </Button>
+            <Button asChild>
+              <a
+                href="https://lovable.dev/settings/workspace"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Adicionar créditos de IA <ExternalLink className="ml-1 size-4" />
+              </a>
+            </Button>
+          </div>
+
+          <p className="text-xs text-muted-foreground">
+            Os créditos são recarregados no workspace do aplicativo (Settings → Workspace → Usage /
+            Credits). Assim que houver saldo, o Assistente e o Professor IA voltam a responder
+            automaticamente, sem nenhuma outra alteração.
+          </p>
+        </Card>
+
       </div>
     </AppShell>
   );
