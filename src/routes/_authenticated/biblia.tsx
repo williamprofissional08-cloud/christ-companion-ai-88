@@ -161,7 +161,7 @@ function BibliaPage() {
       {explanation ? (
         <Card className="mt-4 border-border/50 p-6 shadow-soft">
           <p className="text-xs font-semibold tracking-wide text-primary uppercase">Explicação</p>
-          <p className="mt-3 text-sm leading-relaxed whitespace-pre-wrap">{explanation}</p>
+          <MarkdownContent className="mt-3">{explanation}</MarkdownContent>
         </Card>
       ) : null}
 
