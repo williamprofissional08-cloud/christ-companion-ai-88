@@ -3,6 +3,7 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { GraduationCap, Send, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MarkdownContent } from "@/components/MarkdownContent";
 import { Card } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import {
