@@ -31,7 +31,7 @@ export const Route = createFileRoute("/_authenticated/assistente/$threadId")({
 });
 
 const SUGESTOES = [
-  "Explique o Salmo 23 versículo por versículo.",
+  "Faça o estudo completo do Salmo 23, versículo por versículo.",
   "O que a Bíblia ensina sobre a ansiedade?",
   "Qual o contexto histórico da carta aos Romanos?",
   "Faça uma oração por sabedoria para minhas decisões.",
