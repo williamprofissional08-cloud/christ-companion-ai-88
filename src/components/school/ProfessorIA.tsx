@@ -154,10 +154,10 @@ function ProfessorChat({ lessonId, lessonTitle }: { lessonId: string; lessonTitl
                 className={
                   mine
                     ? "max-w-[85%] rounded-2xl bg-primary px-4 py-3 text-sm text-primary-foreground"
-                    : "max-w-[90%] rounded-2xl border border-border/60 bg-card px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap"
+                    : "max-w-[90%] rounded-2xl border border-border/60 bg-card px-4 py-3"
                 }
               >
-                {text}
+                {mine ? text : <MarkdownContent>{text}</MarkdownContent>}
                 {!mine && !busy ? (
                   <ProfessorAnswerAudio messageId={message.id} text={text} />
                 ) : null}
