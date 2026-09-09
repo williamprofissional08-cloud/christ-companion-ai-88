@@ -178,11 +178,11 @@ function ChatWindow({
               <div
                 className={
                   mine
-                    ? "max-w-[85%] rounded-2xl bg-primary px-4 py-3 text-sm text-primary-foreground"
-                    : "max-w-[85%] rounded-2xl border border-border/60 bg-card px-4 py-3 text-sm whitespace-pre-wrap"
+                    ? "max-w-[85%] rounded-2xl bg-primary px-4 py-3 text-sm whitespace-pre-wrap text-primary-foreground"
+                    : "max-w-[92%] rounded-2xl border border-border/60 bg-card px-4 py-3"
                 }
               >
-                {text}
+                {mine ? text : <MarkdownContent>{text}</MarkdownContent>}
               </div>
             </div>
           );
