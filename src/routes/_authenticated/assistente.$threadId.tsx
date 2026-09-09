@@ -7,6 +7,7 @@ import { ArrowLeft, Send } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
+import { MarkdownContent } from "@/components/MarkdownContent";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -30,7 +31,7 @@ export const Route = createFileRoute("/_authenticated/assistente/$threadId")({
 });
 
 const SUGESTOES = [
-  "Explique o Salmo 23 versículo por versículo.",
+  "Faça o estudo completo do Salmo 23, versículo por versículo.",
   "O que a Bíblia ensina sobre a ansiedade?",
   "Qual o contexto histórico da carta aos Romanos?",
   "Faça uma oração por sabedoria para minhas decisões.",
@@ -178,11 +179,11 @@ function ChatWindow({
               <div
                 className={
                   mine
-                    ? "max-w-[85%] rounded-2xl bg-primary px-4 py-3 text-sm text-primary-foreground"
-                    : "max-w-[85%] rounded-2xl border border-border/60 bg-card px-4 py-3 text-sm whitespace-pre-wrap"
+                    ? "max-w-[85%] rounded-2xl bg-primary px-4 py-3 text-sm whitespace-pre-wrap text-primary-foreground"
+                    : "max-w-[92%] rounded-2xl border border-border/60 bg-card px-4 py-3"
                 }
               >
-                {text}
+                {mine ? text : <MarkdownContent>{text}</MarkdownContent>}
               </div>
             </div>
           );

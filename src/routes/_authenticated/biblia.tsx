@@ -5,6 +5,7 @@ import { Moon, Search, Sparkles, Star } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
+import { MarkdownContent } from "@/components/MarkdownContent";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -161,7 +162,7 @@ function BibliaPage() {
       {explanation ? (
         <Card className="mt-4 border-border/50 p-6 shadow-soft">
           <p className="text-xs font-semibold tracking-wide text-primary uppercase">Explicação</p>
-          <p className="mt-3 text-sm leading-relaxed whitespace-pre-wrap">{explanation}</p>
+          <MarkdownContent className="mt-3">{explanation}</MarkdownContent>
         </Card>
       ) : null}
 

@@ -212,8 +212,8 @@ export async function fetchPassage(reference: string): Promise<BiblePassage> {
 
 export async function explainPassage(reference: string, text: string) {
   const system = `${BIBLICAL_SYSTEM_PROMPT}\n\n${REFERENCE_RULE}`;
-  const prompt = `Explique a passagem ${reference}. Texto: "${text.slice(0, 4000)}".
-Organize em markdown com: **Contexto histórico**, **Significado espiritual**, **Aplicação prática**, **Referências cruzadas** e **Pergunta para reflexão**. Seja conciso (no máximo 400 palavras) e cite referências completas.`;
+  const prompt = `Faça o ESTUDO COMPLETO da passagem ${reference}. Texto: "${text.slice(0, 6000)}".
+Use exatamente o formato de "ESTUDO COMPLETO" descrito nas suas instruções (introdução, contexto histórico e literário, estrutura, explicação versículo por versículo, temas e doutrinas, Cristo na passagem, referências cruzadas, aplicação prática, perguntas para reflexão e oração final). Cubra a passagem inteira, com markdown organizado e referências completas.`;
   let output = await complete(prompt, system);
   if (!hasReference(output)) {
     output = await complete(

@@ -3,6 +3,7 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { GraduationCap, Send, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MarkdownContent } from "@/components/MarkdownContent";
 import { Card } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -154,10 +155,10 @@ function ProfessorChat({ lessonId, lessonTitle }: { lessonId: string; lessonTitl
                 className={
                   mine
                     ? "max-w-[85%] rounded-2xl bg-primary px-4 py-3 text-sm text-primary-foreground"
-                    : "max-w-[90%] rounded-2xl border border-border/60 bg-card px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap"
+                    : "max-w-[90%] rounded-2xl border border-border/60 bg-card px-4 py-3"
                 }
               >
-                {text}
+                {mine ? text : <MarkdownContent>{text}</MarkdownContent>}
                 {!mine && !busy ? (
                   <ProfessorAnswerAudio messageId={message.id} text={text} />
                 ) : null}
