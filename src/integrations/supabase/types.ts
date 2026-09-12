@@ -113,6 +113,8 @@ export type Database = {
       }
       course_modules: {
         Row: {
+          book_number: number | null
+          category: string | null
           course_id: string
           created_at: string
           id: string
@@ -120,10 +122,13 @@ export type Database = {
           order_index: number
           status: Database["public"]["Enums"]["content_status"]
           summary: string
+          testament: string | null
           title: string
           updated_at: string
         }
         Insert: {
+          book_number?: number | null
+          category?: string | null
           course_id: string
           created_at?: string
           id?: string
@@ -131,10 +136,13 @@ export type Database = {
           order_index?: number
           status?: Database["public"]["Enums"]["content_status"]
           summary?: string
+          testament?: string | null
           title: string
           updated_at?: string
         }
         Update: {
+          book_number?: number | null
+          category?: string | null
           course_id?: string
           created_at?: string
           id?: string
@@ -142,6 +150,7 @@ export type Database = {
           order_index?: number
           status?: Database["public"]["Enums"]["content_status"]
           summary?: string
+          testament?: string | null
           title?: string
           updated_at?: string
         }
@@ -698,14 +707,64 @@ export type Database = {
           },
         ]
       }
+      lesson_reflections: {
+        Row: {
+          created_at: string
+          exercise_response: string
+          id: string
+          lesson_id: string
+          meditation: string
+          prayer_reflection: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          exercise_response?: string
+          id?: string
+          lesson_id: string
+          meditation?: string
+          prayer_reflection?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          exercise_response?: string
+          id?: string
+          lesson_id?: string
+          meditation?: string
+          prayer_reflection?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_reflections_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "lesson_reflections_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       lessons: {
         Row: {
           created_at: string
           duration_minutes: number
           id: string
           is_published: boolean
+          keywords: string[]
           module_id: string
           order_index: number
+          passage: string | null
           slug: string
           status: Database["public"]["Enums"]["content_status"]
           summary: string
@@ -719,8 +778,10 @@ export type Database = {
           duration_minutes?: number
           id?: string
           is_published?: boolean
+          keywords?: string[]
           module_id: string
           order_index?: number
+          passage?: string | null
           slug: string
           status?: Database["public"]["Enums"]["content_status"]
           summary?: string
@@ -734,8 +795,10 @@ export type Database = {
           duration_minutes?: number
           id?: string
           is_published?: boolean
+          keywords?: string[]
           module_id?: string
           order_index?: number
+          passage?: string | null
           slug?: string
           status?: Database["public"]["Enums"]["content_status"]
           summary?: string
@@ -810,6 +873,79 @@ export type Database = {
           last_seen_at?: string
         }
         Relationships: []
+      }
+      sermon_messages: {
+        Row: {
+          application: string
+          conclusion: string
+          course_id: string | null
+          created_at: string
+          id: string
+          introduction: string
+          lesson_id: string | null
+          notes: string
+          objective: string
+          points: Json
+          scripture_text: string
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          application?: string
+          conclusion?: string
+          course_id?: string | null
+          created_at?: string
+          id?: string
+          introduction?: string
+          lesson_id?: string | null
+          notes?: string
+          objective?: string
+          points?: Json
+          scripture_text?: string
+          title: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          application?: string
+          conclusion?: string
+          course_id?: string | null
+          created_at?: string
+          id?: string
+          introduction?: string
+          lesson_id?: string | null
+          notes?: string
+          objective?: string
+          points?: Json
+          scripture_text?: string
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "sermon_messages_course_id_fkey"
+            columns: ["course_id"]
+            isOneToOne: false
+            referencedRelation: "courses"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "sermon_messages_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "sermon_messages_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       subscription_plans: {
         Row: {
@@ -1019,6 +1155,24 @@ export type Database = {
         Returns: boolean
       }
       is_admin: { Args: never; Returns: boolean }
+      issue_course_certificate: {
+        Args: { _course_id: string }
+        Returns: {
+          code: string
+          course_id: string
+          created_at: string
+          id: string
+          issued_at: string
+          student_name: string | null
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "certificates"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
     }
     Enums: {
       access_tier: "free" | "premium"

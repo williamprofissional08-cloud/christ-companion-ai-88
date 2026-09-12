@@ -12,6 +12,8 @@ export type StudentLesson = {
   duration_minutes: number;
   tier: AccessTier;
   order_index: number;
+  passage: string | null;
+  keywords: string[];
   completed: boolean;
   locked: boolean;
 };
@@ -21,6 +23,9 @@ export type StudentModule = {
   title: string;
   summary: string;
   order_index: number;
+  testament: string | null;
+  category: string | null;
+  book_number: number | null;
   lessons: StudentLesson[];
   completedLessons: number;
 };
@@ -47,6 +52,13 @@ export type CourseView = {
 
 /** Seções previstas da página da aula. O conteúdo vem do banco (lesson_content). */
 export const LESSON_SECTIONS = [
+  { kind: "leitura", label: "Leia a Palavra" },
+  { kind: "meditacao", label: "Medite na Palavra" },
+  { kind: "observacao", label: "Observe o texto" },
+  { kind: "contexto", label: "Contexto bíblico" },
+  { kind: "mensagem_central", label: "A mensagem central" },
+  { kind: "conexao_cristo", label: "Conexão com Cristo" },
+  { kind: "pregacao", label: "Preparando a pregação" },
   { kind: "introducao", label: "Introdução" },
   { kind: "objetivos", label: "Objetivos" },
   { kind: "texto", label: "Conteúdo" },
@@ -128,6 +140,8 @@ export type LessonView = {
     summary: string;
     duration_minutes: number;
     tier: AccessTier;
+    passage: string | null;
+    keywords: string[];
     position: number;
   };
   blocks: LessonContentBlock[];

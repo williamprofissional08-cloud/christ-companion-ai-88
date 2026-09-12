@@ -30,6 +30,8 @@ type RawLesson = {
   tier: "free" | "premium";
   status: string;
   order_index: number;
+  passage: string | null;
+  keywords: string[];
 };
 
 /** Estrutura publicada do curso + progresso do usuário. */
@@ -51,7 +53,7 @@ export async function loadCourseView(
     supabase
       .from("course_modules")
       .select(
-        "id, title, summary, order_index, lessons(id, slug, title, summary, duration_minutes, tier, status, order_index)",
+        "id, title, summary, order_index, testament, category, book_number, lessons(id, slug, title, summary, duration_minutes, tier, status, order_index, passage, keywords)",
       )
       .eq("course_id", course.id)
       .eq("status", "published")
@@ -89,6 +91,8 @@ export async function loadCourseView(
         duration_minutes: l.duration_minutes,
         tier: l.tier,
         order_index: l.order_index,
+        passage: l.passage,
+        keywords: l.keywords ?? [],
         completed: done.has(l.id),
         locked: l.tier === "premium" && !premium,
       }));
@@ -97,6 +101,9 @@ export async function loadCourseView(
       title: m.title,
       summary: m.summary,
       order_index: m.order_index,
+      testament: m.testament,
+      category: m.category,
+      book_number: m.book_number,
       lessons,
       completedLessons: lessons.filter((l) => l.completed).length,
     };
