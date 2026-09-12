@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { z } from "zod";
 import { useServerFn } from "@tanstack/react-start";
 import { useMutation } from "@tanstack/react-query";
 import { Moon, Search, Sparkles, Star } from "lucide-react";
@@ -13,6 +14,7 @@ import { explainReference, readPassage } from "@/lib/ai.functions";
 import { addFavorite } from "@/lib/app.functions";
 
 export const Route = createFileRoute("/_authenticated/biblia")({
+  validateSearch: (search) => z.object({ referencia: z.string().optional() }).parse(search),
   head: () => ({
     meta: [
       { title: "Bíblia — Caminhando com Cristo" },
@@ -31,7 +33,8 @@ export const Route = createFileRoute("/_authenticated/biblia")({
 const SUGGESTIONS = ["João 3:16", "Salmos 23", "Romanos 8", "Filipenses 4:6-7", "Mateus 5"];
 
 function BibliaPage() {
-  const [reference, setReference] = useState("Salmos 23");
+  const { referencia } = Route.useSearch();
+  const [reference, setReference] = useState(referencia ?? "Salmos 23");
   const [night, setNight] = useState(false);
   const [history, setHistory] = useState<string[]>([]);
   const [explanation, setExplanation] = useState<string | null>(null);
