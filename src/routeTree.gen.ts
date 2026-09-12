@@ -25,6 +25,7 @@ import { Route as AuthenticatedEstudosRouteImport } from './routes/_authenticate
 import { Route as AuthenticatedFavoritosRouteImport } from './routes/_authenticated/favoritos'
 import { Route as AuthenticatedInicioRouteImport } from './routes/_authenticated/inicio'
 import { Route as AuthenticatedMetasRouteImport } from './routes/_authenticated/metas'
+import { Route as AuthenticatedMinhasMensagensRouteImport } from './routes/_authenticated/minhas-mensagens'
 import { Route as AuthenticatedOnboardingRouteImport } from './routes/_authenticated/onboarding'
 import { Route as AuthenticatedPesquisaRouteImport } from './routes/_authenticated/pesquisa'
 import { Route as AuthenticatedPlanosRouteImport } from './routes/_authenticated/planos'
@@ -129,6 +130,12 @@ const AuthenticatedMetasRoute = AuthenticatedMetasRouteImport.update({
   path: '/metas',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedMinhasMensagensRoute =
+  AuthenticatedMinhasMensagensRouteImport.update({
+    id: '/minhas-mensagens',
+    path: '/minhas-mensagens',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedOnboardingRoute = AuthenticatedOnboardingRouteImport.update({
   id: '/onboarding',
   path: '/onboarding',
@@ -274,6 +281,7 @@ export interface FileRoutesByFullPath {
   '/favoritos': typeof AuthenticatedFavoritosRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
+  '/minhas-mensagens': typeof AuthenticatedMinhasMensagensRoute
   '/onboarding': typeof AuthenticatedOnboardingRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/planos': typeof AuthenticatedPlanosRouteWithChildren
@@ -310,6 +318,7 @@ export interface FileRoutesByTo {
   '/favoritos': typeof AuthenticatedFavoritosRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/metas': typeof AuthenticatedMetasRoute
+  '/minhas-mensagens': typeof AuthenticatedMinhasMensagensRoute
   '/onboarding': typeof AuthenticatedOnboardingRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/api/chat': typeof ApiChatRoute
@@ -349,6 +358,7 @@ export interface FileRoutesById {
   '/_authenticated/favoritos': typeof AuthenticatedFavoritosRoute
   '/_authenticated/inicio': typeof AuthenticatedInicioRoute
   '/_authenticated/metas': typeof AuthenticatedMetasRoute
+  '/_authenticated/minhas-mensagens': typeof AuthenticatedMinhasMensagensRoute
   '/_authenticated/onboarding': typeof AuthenticatedOnboardingRoute
   '/_authenticated/pesquisa': typeof AuthenticatedPesquisaRoute
   '/_authenticated/planos': typeof AuthenticatedPlanosRouteWithChildren
@@ -391,6 +401,7 @@ export interface FileRouteTypes {
     | '/favoritos'
     | '/inicio'
     | '/metas'
+    | '/minhas-mensagens'
     | '/onboarding'
     | '/pesquisa'
     | '/planos'
@@ -427,6 +438,7 @@ export interface FileRouteTypes {
     | '/favoritos'
     | '/inicio'
     | '/metas'
+    | '/minhas-mensagens'
     | '/onboarding'
     | '/pesquisa'
     | '/api/chat'
@@ -465,6 +477,7 @@ export interface FileRouteTypes {
     | '/_authenticated/favoritos'
     | '/_authenticated/inicio'
     | '/_authenticated/metas'
+    | '/_authenticated/minhas-mensagens'
     | '/_authenticated/onboarding'
     | '/_authenticated/pesquisa'
     | '/_authenticated/planos'
@@ -613,6 +626,13 @@ declare module '@tanstack/react-router' {
       path: '/metas'
       fullPath: '/metas'
       preLoaderRoute: typeof AuthenticatedMetasRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/minhas-mensagens': {
+      id: '/_authenticated/minhas-mensagens'
+      path: '/minhas-mensagens'
+      fullPath: '/minhas-mensagens'
+      preLoaderRoute: typeof AuthenticatedMinhasMensagensRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/onboarding': {
@@ -893,6 +913,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedFavoritosRoute: typeof AuthenticatedFavoritosRoute
   AuthenticatedInicioRoute: typeof AuthenticatedInicioRoute
   AuthenticatedMetasRoute: typeof AuthenticatedMetasRoute
+  AuthenticatedMinhasMensagensRoute: typeof AuthenticatedMinhasMensagensRoute
   AuthenticatedOnboardingRoute: typeof AuthenticatedOnboardingRoute
   AuthenticatedPesquisaRoute: typeof AuthenticatedPesquisaRoute
   AuthenticatedPlanosRoute: typeof AuthenticatedPlanosRouteWithChildren
@@ -911,6 +932,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedFavoritosRoute: AuthenticatedFavoritosRoute,
   AuthenticatedInicioRoute: AuthenticatedInicioRoute,
   AuthenticatedMetasRoute: AuthenticatedMetasRoute,
+  AuthenticatedMinhasMensagensRoute: AuthenticatedMinhasMensagensRoute,
   AuthenticatedOnboardingRoute: AuthenticatedOnboardingRoute,
   AuthenticatedPesquisaRoute: AuthenticatedPesquisaRoute,
   AuthenticatedPlanosRoute: AuthenticatedPlanosRouteWithChildren,

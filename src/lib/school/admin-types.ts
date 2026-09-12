@@ -36,6 +36,9 @@ export type AdminModule = {
   summary: string;
   order_index: number;
   status: ContentStatus;
+  testament: string | null;
+  category: string | null;
+  book_number: number | null;
 };
 
 export type AdminLesson = {
@@ -48,6 +51,8 @@ export type AdminLesson = {
   tier: AccessTier;
   status: ContentStatus;
   order_index: number;
+  passage: string | null;
+  keywords: string[];
 };
 
 export type AdminStats = {

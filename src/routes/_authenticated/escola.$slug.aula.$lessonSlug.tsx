@@ -12,6 +12,7 @@ import {
   Headphones,
   Lock,
   ScrollText,
+  ExternalLink,
 } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
@@ -21,6 +22,7 @@ import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LessonAudioPlayer } from "@/components/school/LessonAudioPlayer";
 import { ProfessorIA } from "@/components/school/ProfessorIA";
+import { LessonWorkspace } from "@/components/school/LessonWorkspace";
 import {
   completeLesson,
   getStudentLesson,
@@ -160,6 +162,14 @@ function LessonPage() {
                 {data.lesson.title}
               </h1>
               <p className="text-sm leading-relaxed text-muted-foreground">{data.lesson.summary}</p>
+              {data.lesson.passage ? (
+                <Button asChild variant="outline" size="sm" className="w-fit">
+                  <Link to="/biblia" search={{ referencia: data.lesson.passage }}>
+                    <BookOpen className="mr-1 size-4" /> Ler {data.lesson.passage}
+                    <ExternalLink className="ml-1 size-3" />
+                  </Link>
+                </Button>
+              ) : null}
               <div className="space-y-1">
                 <Progress value={percentOf(data.completedLessons, data.totalLessons)} />
                 <p className="text-xs text-muted-foreground">
@@ -320,6 +330,15 @@ function LessonPage() {
                 </Tabs>
 
                 {data.questions.length ? <LessonQuiz questions={data.questions} /> : null}
+
+                {slug === "formacao-de-pregadores" ? (
+                  <LessonWorkspace
+                    lessonId={data.lesson.id}
+                    courseId={data.course.id}
+                    lessonTitle={data.lesson.title}
+                    passage={data.lesson.passage}
+                  />
+                ) : null}
 
                 <ProfessorIA lessonId={data.lesson.id} lessonTitle={data.lesson.title} />
 

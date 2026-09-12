@@ -122,6 +122,8 @@ function AdminLessonEditor() {
     tier: "free" as AccessTier,
     status: "draft" as ContentStatus,
     order_index: 1,
+    passage: "",
+    keywords: "",
   });
   const [script, setScript] = useState("");
 
@@ -135,6 +137,8 @@ function AdminLessonEditor() {
       tier: lesson.tier as AccessTier,
       status: lesson.status as ContentStatus,
       order_index: lesson.order_index,
+      passage: lesson.passage ?? "",
+      keywords: (lesson.keywords ?? []).join(", "),
     });
     setScript(lesson.tts_script ?? "");
   }, [lesson]);
@@ -158,6 +162,8 @@ function AdminLessonEditor() {
           tier: form.tier,
           status: form.status,
           order_index: form.order_index,
+          passage: form.passage.trim() || null,
+          keywords: form.keywords.split(",").map((item) => item.trim()).filter(Boolean),
         },
       }),
     onSuccess: () => {
@@ -417,6 +423,16 @@ function AdminLessonEditor() {
                   value={form.summary}
                   onChange={(event) => setForm((f) => ({ ...f, summary: event.target.value }))}
                 />
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="space-y-1.5">
+                  <Label htmlFor="lesson-passage">Passagem-base</Label>
+                  <Input id="lesson-passage" value={form.passage} onChange={(event) => setForm((f) => ({ ...f, passage: event.target.value }))} placeholder="Ex.: Gênesis 1:1–2:3" />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="lesson-keywords">Palavras-chave</Label>
+                  <Input id="lesson-keywords" value={form.keywords} onChange={(event) => setForm((f) => ({ ...f, keywords: event.target.value }))} placeholder="criação, aliança, pregação" />
+                </div>
               </div>
               <div className="grid gap-3 sm:grid-cols-3">
                 <div className="space-y-1.5">

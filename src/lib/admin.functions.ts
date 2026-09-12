@@ -135,7 +135,7 @@ export const adminGetCourse = createServerFn({ method: "GET" })
 
     const { data: modules } = await context.supabase
       .from("course_modules")
-      .select("id, course_id, title, summary, order_index, status")
+      .select("id, course_id, title, summary, order_index, status, testament, category, book_number")
       .eq("course_id", data.id)
       .order("order_index", { ascending: true });
 
@@ -143,7 +143,7 @@ export const adminGetCourse = createServerFn({ method: "GET" })
     const { data: lessons } = moduleIds.length
       ? await context.supabase
           .from("lessons")
-          .select("id, module_id, slug, title, summary, duration_minutes, tier, status, order_index")
+          .select("id, module_id, slug, title, summary, duration_minutes, tier, status, order_index, passage, keywords")
           .in("module_id", moduleIds)
           .order("order_index", { ascending: true })
       : { data: [] as AdminLesson[] };
@@ -166,12 +166,21 @@ export const adminSaveModule = createServerFn({ method: "POST" })
         summary: z.string().max(2000).default(""),
         order_index: z.number().int().min(0).max(999),
         status: statusEnum,
+        testament: z.string().max(40).nullable().optional(),
+        category: z.string().max(80).nullable().optional(),
+        book_number: z.number().int().min(1).max(66).nullable().optional(),
       })
       .parse(input),
   )
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    const { id, ...payload } = data;
+    const { id, ...rest } = data;
+    const payload = {
+      ...rest,
+      testament: rest.testament ?? null,
+      category: rest.category ?? null,
+      book_number: rest.book_number ?? null,
+    };
     if (id) {
       const { error } = await context.supabase.from("course_modules").update(payload).eq("id", id);
       if (error) throw new Error(error.message);
@@ -210,12 +219,15 @@ export const adminSaveLesson = createServerFn({ method: "POST" })
         tier: tierEnum,
         status: statusEnum,
         order_index: z.number().int().min(0).max(999),
+        passage: z.string().max(200).nullable().optional(),
+        keywords: z.array(z.string().max(80)).max(20).default([]),
       })
       .parse(input),
   )
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    const { id, ...payload } = data;
+    const { id, ...rest } = data;
+    const payload = { ...rest, passage: rest.passage ?? null };
     if (id) {
       const { error } = await context.supabase.from("lessons").update(payload).eq("id", id);
       if (error) throw new Error(error.message);
@@ -371,7 +383,7 @@ export const adminGetLesson = createServerFn({ method: "GET" })
     const { data: lesson, error } = await context.supabase
       .from("lessons")
       .select(
-        "id, module_id, slug, title, summary, duration_minutes, tier, status, order_index, tts_script",
+        "id, module_id, slug, title, summary, duration_minutes, tier, status, order_index, tts_script, passage, keywords",
       )
       .eq("id", data.id)
       .maybeSingle();
