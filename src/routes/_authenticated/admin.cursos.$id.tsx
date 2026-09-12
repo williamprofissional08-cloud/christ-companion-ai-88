@@ -118,6 +118,9 @@ function AdminCourseEditor() {
           summary: "",
           order_index: (data?.modules.length ?? 0) + 1,
           status: "draft" as ContentStatus,
+          testament: null,
+          category: null,
+          book_number: null,
         },
       }),
     onSuccess: () => {
@@ -135,6 +138,9 @@ function AdminCourseEditor() {
       summary: string;
       order_index: number;
       status: ContentStatus;
+      testament: string | null;
+      category: string | null;
+      book_number: number | null;
     }) => saveModule({ data: { ...input, course_id: id } }),
     onSuccess: () => {
       toast.success("Módulo atualizado.");
@@ -360,6 +366,9 @@ function AdminCourseEditor() {
                             summary: mod.summary,
                             order_index: mod.order_index,
                             status: mod.status === "published" ? "draft" : "published",
+                            testament: mod.testament,
+                            category: mod.category,
+                            book_number: mod.book_number,
                           })
                         }
                       >
@@ -402,6 +411,8 @@ function AdminCourseEditor() {
                                 duration_minutes: lesson.duration_minutes,
                                 tier: lesson.tier,
                                 order_index: lesson.order_index,
+                                passage: lesson.passage,
+                                keywords: lesson.keywords,
                               },
                               status: lesson.status === "published" ? "draft" : "published",
                             })
