@@ -177,3 +177,35 @@ export const getPreacherCourseStats = createServerFn({ method: "GET" })
     const studyDays = new Set((progress ?? []).map((row) => row.updated_at.slice(0, 10))).size;
     return { messages: messages ?? 0, studiedBooks, studyDays };
   });
+
+export const issueCourseCertificate = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) => z.object({ courseId: z.string().uuid() }).parse(input))
+  .handler(async ({ data, context }) => {
+    const [{ count: total }, { count: completed }, { data: profile }] = await Promise.all([
+      context.supabase
+        .from("lessons")
+        .select("id, course_modules!inner(course_id)", { count: "exact", head: true })
+        .eq("course_modules.course_id", data.courseId)
+        .eq("status", "published"),
+      context.supabase
+        .from("lesson_progress")
+        .select("id", { count: "exact", head: true })
+        .eq("user_id", context.userId)
+        .eq("course_id", data.courseId)
+        .eq("status", "concluida"),
+      context.supabase.from("profiles").select("display_name").eq("id", context.userId).maybeSingle(),
+    ]);
+    if (!total || (completed ?? 0) < total) throw new Error("Conclua todos os estudos para emitir o certificado.");
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const { data: certificate, error } = await supabaseAdmin
+      .from("certificates")
+      .upsert(
+        { user_id: context.userId, course_id: data.courseId, student_name: profile?.display_name ?? null },
+        { onConflict: "user_id,course_id" },
+      )
+      .select("id, code, student_name, issued_at")
+      .single();
+    if (error) throw new Error(error.message);
+    return certificate;
+  });

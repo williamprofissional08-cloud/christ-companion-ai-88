@@ -1,13 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
-import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, ArrowRight, CheckCircle2, Circle, Clock, Lock } from "lucide-react";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMemo, useState } from "react";
+import { ArrowLeft, ArrowRight, Award, BookOpen, CheckCircle2, Circle, Clock, FilePenLine, Lock, Search } from "lucide-react";
+import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import { Input } from "@/components/ui/input";
 import { getStudentCourse } from "@/lib/school-catalog.functions";
+import { getPreacherCourseStats, issueCourseCertificate } from "@/lib/preacher-course.functions";
 import { levelLabel } from "@/lib/school/types";
 import { percentOf } from "@/lib/school/lesson-view";
 
@@ -31,12 +35,36 @@ export const Route = createFileRoute("/_authenticated/escola/$slug/")({
 function CoursePage() {
   const { slug } = Route.useParams();
   const fetchCourse = useServerFn(getStudentCourse);
+  const fetchStats = useServerFn(getPreacherCourseStats);
+  const issueCertificate = useServerFn(issueCourseCertificate);
+  const [search, setSearch] = useState("");
   const { data, isLoading, isError, refetch } = useQuery({
     queryKey: ["school-course", slug],
     queryFn: () => fetchCourse({ data: { slug } }),
   });
 
   const course = data?.course;
+  const isPreacherCourse = slug === "formacao-de-pregadores";
+  const stats = useQuery({
+    queryKey: ["preacher-course-stats", course?.id],
+    queryFn: () => fetchStats({ data: { courseId: course?.id ?? "" } }),
+    enabled: isPreacherCourse && Boolean(course?.id),
+  });
+  const certificate = useMutation({
+    mutationFn: () => issueCertificate({ data: { courseId: course?.id ?? "" } }),
+    onSuccess: (result) => toast.success(`Certificado emitido: ${result.code}`),
+    onError: (error: Error) => toast.error(error.message),
+  });
+  const visibleModules = useMemo(() => {
+    if (!data) return [];
+    const term = search.trim().toLocaleLowerCase("pt-BR");
+    if (!term) return data.modules;
+    return data.modules.filter((mod) =>
+      [mod.title, mod.summary, mod.testament, mod.category, ...mod.lessons.flatMap((lesson) => [lesson.title, lesson.summary, lesson.passage, ...lesson.keywords])]
+        .filter(Boolean)
+        .some((value) => value?.toLocaleLowerCase("pt-BR").includes(term)),
+    );
+  }, [data, search]);
 
   return (
     <AppShell title={course?.title ?? "Curso"} subtitle={course?.subtitle ?? "Escola Bíblica"}>
@@ -92,19 +120,36 @@ function CoursePage() {
                   </Link>
                 </Button>
               ) : data.totalLessons ? (
-                <p className="text-sm font-medium text-primary">
-                  Você concluiu todas as aulas deste curso. 🙌
-                </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <p className="text-sm font-medium text-primary">Você concluiu todas as aulas deste curso.</p>
+                  <Button size="sm" onClick={() => certificate.mutate()} disabled={certificate.isPending}>
+                    <Award className="mr-1 size-4" /> Emitir certificado
+                  </Button>
+                </div>
               ) : null}
             </Card>
 
-            {data.modules.length ? (
+            {isPreacherCourse ? (
+              <>
+                <div className="grid gap-3 sm:grid-cols-3">
+                  <Card className="p-4"><BookOpen className="size-5 text-primary" /><strong className="mt-2 block text-2xl">{stats.data?.studiedBooks ?? 0}/66</strong><span className="text-xs text-muted-foreground">livros estudados</span></Card>
+                  <Card className="p-4"><Clock className="size-5 text-primary" /><strong className="mt-2 block text-2xl">{stats.data?.studyDays ?? 0}</strong><span className="text-xs text-muted-foreground">dias de estudo</span></Card>
+                  <Card className="p-4"><FilePenLine className="size-5 text-primary" /><strong className="mt-2 block text-2xl">{stats.data?.messages ?? 0}</strong><span className="text-xs text-muted-foreground">mensagens preparadas</span></Card>
+                </div>
+                <div className="relative">
+                  <Search className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
+                  <Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar livro, passagem, tema ou palavra-chave" className="pl-9" />
+                </div>
+              </>
+            ) : null}
+
+            {visibleModules.length ? (
               <div className="space-y-4">
-                {data.modules.map((mod, index) => (
+                {visibleModules.map((mod) => (
                   <Card key={mod.id} className="space-y-3 p-5">
                     <div>
                       <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-                        Módulo {index + 1}
+                        {mod.testament ? `${mod.testament} · ` : ""}Livro {mod.book_number ?? mod.order_index}
                       </p>
                       <h2 className="font-display text-lg font-semibold">{mod.title}</h2>
                       <p className="mt-1 text-sm text-muted-foreground">{mod.summary}</p>
@@ -140,7 +185,7 @@ function CoursePage() {
                                   ) : null}
                                 </p>
                                 <p className="truncate text-xs text-muted-foreground">
-                                  {lesson.summary}
+                                  {lesson.passage ? `${lesson.passage} · ` : ""}{lesson.summary}
                                 </p>
                               </div>
                               <span className="flex shrink-0 items-center gap-1 text-xs text-muted-foreground">
