@@ -178,6 +178,8 @@ export const getStudentLesson = createServerFn({ method: "GET" })
         summary: current.lesson.summary,
         duration_minutes: current.lesson.duration_minutes,
         tier: current.lesson.tier,
+        passage: current.lesson.passage,
+        keywords: current.lesson.keywords,
         position: current.module.lessons.findIndex((l) => l.id === current.lesson.id) + 1,
       },
       blocks: (blocks ?? []).map((b) => ({
