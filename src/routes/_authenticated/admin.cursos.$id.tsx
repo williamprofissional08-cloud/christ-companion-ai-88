@@ -192,6 +192,8 @@ function AdminCourseEditor() {
         duration_minutes: number;
         tier: AccessTier;
         order_index: number;
+        passage: string | null;
+        keywords: string[];
       };
       status: ContentStatus;
     }) => saveLesson({ data: { ...input.lesson, status: input.status } }),

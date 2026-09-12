@@ -174,7 +174,13 @@ export const adminSaveModule = createServerFn({ method: "POST" })
   )
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    const { id, ...payload } = data;
+    const { id, ...rest } = data;
+    const payload = {
+      ...rest,
+      testament: rest.testament ?? null,
+      category: rest.category ?? null,
+      book_number: rest.book_number ?? null,
+    };
     if (id) {
       const { error } = await context.supabase.from("course_modules").update(payload).eq("id", id);
       if (error) throw new Error(error.message);
@@ -220,7 +226,8 @@ export const adminSaveLesson = createServerFn({ method: "POST" })
   )
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    const { id, ...payload } = data;
+    const { id, ...rest } = data;
+    const payload = { ...rest, passage: rest.passage ?? null };
     if (id) {
       const { error } = await context.supabase.from("lessons").update(payload).eq("id", id);
       if (error) throw new Error(error.message);
