@@ -145,9 +145,9 @@ export function LessonWorkspace({
 }
 
 function Field({ label, value, onChange, placeholder }: { label: string; value: string; onChange: (value: string) => void; placeholder?: string }) {
-  return <div className="space-y-1.5"><Label>{label}</Label><Textarea rows={4} value={value} onChange={(event) => onChange(event.target.value)} placeholder={placeholder} /></div>;
+  return <div className="space-y-1.5"><Label>{label}</Label><Textarea aria-label={label} rows={4} value={value} onChange={(event) => onChange(event.target.value)} placeholder={placeholder} /></div>;
 }
 
 function TextInput({ label, value, onChange }: { label: string; value: string; onChange: (value: string) => void }) {
-  return <div className="space-y-1.5"><Label>{label}</Label><Input value={value} onChange={(event) => onChange(event.target.value)} /></div>;
+  return <div className="space-y-1.5"><Label>{label}</Label><Input aria-label={label} value={value} onChange={(event) => onChange(event.target.value)} /></div>;
 }
