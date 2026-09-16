@@ -14,6 +14,124 @@ export type Database = {
   }
   public: {
     Tables: {
+      book_chapters: {
+        Row: {
+          chapter_number: number
+          created_at: string
+          id: string
+          module_id: string
+          summary: string
+          title: string
+          total_verses: number | null
+          updated_at: string
+        }
+        Insert: {
+          chapter_number: number
+          created_at?: string
+          id?: string
+          module_id: string
+          summary?: string
+          title?: string
+          total_verses?: number | null
+          updated_at?: string
+        }
+        Update: {
+          chapter_number?: number
+          created_at?: string
+          id?: string
+          module_id?: string
+          summary?: string
+          title?: string
+          total_verses?: number | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "book_chapters_module_id_fkey"
+            columns: ["module_id"]
+            isOneToOne: false
+            referencedRelation: "course_modules"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      book_introductions: {
+        Row: {
+          academic_notes: string
+          audience: string
+          authorship: string
+          canon_relation: string
+          central_theme: string
+          christ_connection: string
+          created_at: string
+          cultural_context: string
+          dating: string
+          geography: string
+          historical_context: string
+          id: string
+          main_characters: string
+          module_id: string
+          name_meaning: string
+          original_name: string
+          purpose: string
+          status: Database["public"]["Enums"]["content_status"]
+          structure: string
+          updated_at: string
+        }
+        Insert: {
+          academic_notes?: string
+          audience?: string
+          authorship?: string
+          canon_relation?: string
+          central_theme?: string
+          christ_connection?: string
+          created_at?: string
+          cultural_context?: string
+          dating?: string
+          geography?: string
+          historical_context?: string
+          id?: string
+          main_characters?: string
+          module_id: string
+          name_meaning?: string
+          original_name?: string
+          purpose?: string
+          status?: Database["public"]["Enums"]["content_status"]
+          structure?: string
+          updated_at?: string
+        }
+        Update: {
+          academic_notes?: string
+          audience?: string
+          authorship?: string
+          canon_relation?: string
+          central_theme?: string
+          christ_connection?: string
+          created_at?: string
+          cultural_context?: string
+          dating?: string
+          geography?: string
+          historical_context?: string
+          id?: string
+          main_characters?: string
+          module_id?: string
+          name_meaning?: string
+          original_name?: string
+          purpose?: string
+          status?: Database["public"]["Enums"]["content_status"]
+          structure?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "book_introductions_module_id_fkey"
+            columns: ["module_id"]
+            isOneToOne: true
+            referencedRelation: "course_modules"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       certificates: {
         Row: {
           code: string
@@ -111,6 +229,63 @@ export type Database = {
         }
         Relationships: []
       }
+      content_sources: {
+        Row: {
+          author: string
+          created_at: string
+          detail: string
+          id: string
+          kind: string
+          lesson_id: string | null
+          module_id: string | null
+          order_index: number
+          title: string
+          updated_at: string
+          url: string | null
+        }
+        Insert: {
+          author?: string
+          created_at?: string
+          detail?: string
+          id?: string
+          kind?: string
+          lesson_id?: string | null
+          module_id?: string | null
+          order_index?: number
+          title: string
+          updated_at?: string
+          url?: string | null
+        }
+        Update: {
+          author?: string
+          created_at?: string
+          detail?: string
+          id?: string
+          kind?: string
+          lesson_id?: string | null
+          module_id?: string | null
+          order_index?: number
+          title?: string
+          updated_at?: string
+          url?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "content_sources_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "content_sources_module_id_fkey"
+            columns: ["module_id"]
+            isOneToOne: false
+            referencedRelation: "course_modules"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       course_modules: {
         Row: {
           book_number: number | null
@@ -119,7 +294,9 @@ export type Database = {
           created_at: string
           id: string
           is_published: boolean
+          module_kind: string
           order_index: number
+          phase: number | null
           status: Database["public"]["Enums"]["content_status"]
           summary: string
           testament: string | null
@@ -133,7 +310,9 @@ export type Database = {
           created_at?: string
           id?: string
           is_published?: boolean
+          module_kind?: string
           order_index?: number
+          phase?: number | null
           status?: Database["public"]["Enums"]["content_status"]
           summary?: string
           testament?: string | null
@@ -147,7 +326,9 @@ export type Database = {
           created_at?: string
           id?: string
           is_published?: boolean
+          module_kind?: string
           order_index?: number
+          phase?: number | null
           status?: Database["public"]["Enums"]["content_status"]
           summary?: string
           testament?: string | null
@@ -293,6 +474,61 @@ export type Database = {
         }
         Relationships: []
       }
+      exercise_submissions: {
+        Row: {
+          answers: Json
+          completed: boolean
+          created_at: string
+          exercise_id: string
+          id: string
+          lesson_id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          answers?: Json
+          completed?: boolean
+          created_at?: string
+          exercise_id: string
+          id?: string
+          lesson_id: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          answers?: Json
+          completed?: boolean
+          created_at?: string
+          exercise_id?: string
+          id?: string
+          lesson_id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "exercise_submissions_exercise_id_fkey"
+            columns: ["exercise_id"]
+            isOneToOne: false
+            referencedRelation: "lesson_exercises"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "exercise_submissions_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "exercise_submissions_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       favorites: {
         Row: {
           content: string | null
@@ -341,6 +577,54 @@ export type Database = {
           id?: string
           kind?: string
           slug?: string
+        }
+        Relationships: []
+      }
+      glossary_terms: {
+        Row: {
+          contextual_note: string
+          created_at: string
+          definition: string
+          id: string
+          kind: string
+          language: string
+          original_term: string
+          scripture_refs: string[]
+          slug: string
+          status: Database["public"]["Enums"]["content_status"]
+          term: string
+          transliteration: string
+          updated_at: string
+        }
+        Insert: {
+          contextual_note?: string
+          created_at?: string
+          definition?: string
+          id?: string
+          kind?: string
+          language?: string
+          original_term?: string
+          scripture_refs?: string[]
+          slug: string
+          status?: Database["public"]["Enums"]["content_status"]
+          term: string
+          transliteration?: string
+          updated_at?: string
+        }
+        Update: {
+          contextual_note?: string
+          created_at?: string
+          definition?: string
+          id?: string
+          kind?: string
+          language?: string
+          original_term?: string
+          scripture_refs?: string[]
+          slug?: string
+          status?: Database["public"]["Enums"]["content_status"]
+          term?: string
+          transliteration?: string
+          updated_at?: string
         }
         Relationships: []
       }
@@ -525,6 +809,133 @@ export type Database = {
             columns: ["lesson_id"]
             isOneToOne: false
             referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      lesson_cross_references: {
+        Row: {
+          created_at: string
+          explanation: string
+          id: string
+          lesson_id: string
+          order_index: number
+          reference: string
+          relation_kind: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          explanation?: string
+          id?: string
+          lesson_id: string
+          order_index?: number
+          reference: string
+          relation_kind?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          explanation?: string
+          id?: string
+          lesson_id?: string
+          order_index?: number
+          reference?: string
+          relation_kind?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_cross_references_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      lesson_exercises: {
+        Row: {
+          created_at: string
+          fields: Json
+          id: string
+          instructions: string
+          kind: string
+          lesson_id: string
+          order_index: number
+          status: Database["public"]["Enums"]["content_status"]
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          fields?: Json
+          id?: string
+          instructions?: string
+          kind?: string
+          lesson_id: string
+          order_index?: number
+          status?: Database["public"]["Enums"]["content_status"]
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          fields?: Json
+          id?: string
+          instructions?: string
+          kind?: string
+          lesson_id?: string
+          order_index?: number
+          status?: Database["public"]["Enums"]["content_status"]
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_exercises_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      lesson_glossary_terms: {
+        Row: {
+          created_at: string
+          id: string
+          lesson_id: string
+          order_index: number
+          term_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          lesson_id: string
+          order_index?: number
+          term_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          lesson_id?: string
+          order_index?: number
+          term_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_glossary_terms_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "lesson_glossary_terms_term_id_fkey"
+            columns: ["term_id"]
+            isOneToOne: false
+            referencedRelation: "glossary_terms"
             referencedColumns: ["id"]
           },
         ]
@@ -757,6 +1168,7 @@ export type Database = {
       }
       lessons: {
         Row: {
+          chapter_id: string | null
           created_at: string
           duration_minutes: number
           id: string
@@ -772,8 +1184,11 @@ export type Database = {
           title: string
           tts_script: string | null
           updated_at: string
+          verse_end: number | null
+          verse_start: number | null
         }
         Insert: {
+          chapter_id?: string | null
           created_at?: string
           duration_minutes?: number
           id?: string
@@ -789,8 +1204,11 @@ export type Database = {
           title: string
           tts_script?: string | null
           updated_at?: string
+          verse_end?: number | null
+          verse_start?: number | null
         }
         Update: {
+          chapter_id?: string | null
           created_at?: string
           duration_minutes?: number
           id?: string
@@ -806,8 +1224,17 @@ export type Database = {
           title?: string
           tts_script?: string | null
           updated_at?: string
+          verse_end?: number | null
+          verse_start?: number | null
         }
         Relationships: [
+          {
+            foreignKeyName: "lessons_chapter_id_fkey"
+            columns: ["chapter_id"]
+            isOneToOne: false
+            referencedRelation: "book_chapters"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "lessons_module_id_fkey"
             columns: ["module_id"]
