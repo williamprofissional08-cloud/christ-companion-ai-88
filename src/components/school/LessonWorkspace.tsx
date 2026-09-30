@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
-import { BookMarked, FilePenLine, Heart, Save } from "lucide-react";
+import { BookMarked, ClipboardCheck, FilePenLine, Heart, Save } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -12,6 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   getLessonWorkspace,
   saveLessonReflection,
+  saveExerciseSubmission,
   saveSermonMessage,
   toggleStudyFavorite,
 } from "@/lib/preacher-course.functions";
@@ -39,6 +40,7 @@ export function LessonWorkspace({
   const saveReflection = useServerFn(saveLessonReflection);
   const saveMessage = useServerFn(saveSermonMessage);
   const toggleFavorite = useServerFn(toggleStudyFavorite);
+  const saveExercise = useServerFn(saveExerciseSubmission);
   const workspace = useQuery({
     queryKey: ["lesson-workspace", lessonId],
     queryFn: () => fetchWorkspace({ data: { lessonId } }),
@@ -54,6 +56,7 @@ export function LessonWorkspace({
     conclusion: "",
     notes: "",
   });
+  const [exerciseAnswers, setExerciseAnswers] = useState<Record<string, Record<string, string>>>({});
 
   useEffect(() => {
     const saved = workspace.data?.reflection;
@@ -64,6 +67,20 @@ export function LessonWorkspace({
       exerciseResponse: saved.exercise_response,
     });
   }, [workspace.data?.reflection]);
+
+  useEffect(() => {
+    const saved = workspace.data?.submissions ?? [];
+    setExerciseAnswers(
+      Object.fromEntries(
+        saved.map((submission) => [
+          submission.exercise_id,
+          (submission.answers && typeof submission.answers === "object" && !Array.isArray(submission.answers)
+            ? submission.answers
+            : {}) as Record<string, string>,
+        ]),
+      ),
+    );
+  }, [workspace.data?.submissions]);
 
   const reflectionMutation = useMutation({
     mutationFn: () => saveReflection({ data: { lessonId, ...reflection } }),
@@ -90,6 +107,22 @@ export function LessonWorkspace({
       queryClient.invalidateQueries({ queryKey: ["favorites"] });
     },
   });
+  const exerciseMutation = useMutation({
+    mutationFn: ({ exerciseId, completed }: { exerciseId: string; completed: boolean }) =>
+      saveExercise({
+        data: {
+          lessonId,
+          exerciseId,
+          answers: exerciseAnswers[exerciseId] ?? {},
+          completed,
+        },
+      }),
+    onSuccess: () => {
+      toast.success("Exercício salvo.");
+      queryClient.invalidateQueries({ queryKey: ["lesson-workspace", lessonId] });
+    },
+    onError: () => toast.error("Não foi possível salvar o exercício."),
+  });
 
   return (
     <Card className="space-y-4 p-5">
@@ -104,9 +137,10 @@ export function LessonWorkspace({
         </Button>
       </div>
       <Tabs defaultValue="reflexao">
-        <TabsList className="grid w-full grid-cols-2">
+        <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="reflexao" className="gap-1"><BookMarked className="size-4" /> Meditação</TabsTrigger>
           <TabsTrigger value="mensagem" className="gap-1"><FilePenLine className="size-4" /> Minha mensagem</TabsTrigger>
+          <TabsTrigger value="exercicios" className="gap-1"><ClipboardCheck className="size-4" /> Exercícios</TabsTrigger>
         </TabsList>
         <TabsContent value="reflexao" className="mt-4 space-y-4">
           <Field label="Minha meditação" value={reflection.meditation} onChange={(value) => setReflection((old) => ({ ...old, meditation: value }))} placeholder="O que observei sobre Deus, o texto e seu contexto?" />
@@ -138,6 +172,44 @@ export function LessonWorkspace({
           <Button onClick={() => messageMutation.mutate()} disabled={messageMutation.isPending || !message.title.trim()}>
             <Save className="mr-1 size-4" /> {messageMutation.isPending ? "Salvando…" : "Salvar em Minhas Mensagens"}
           </Button>
+        </TabsContent>
+        <TabsContent value="exercicios" className="mt-4 space-y-5">
+          {(workspace.data?.exercises ?? []).length ? workspace.data?.exercises.map((exercise) => {
+            const fields = Array.isArray(exercise.fields)
+              ? exercise.fields.filter((field): field is { key: string; label: string; placeholder?: string } =>
+                  Boolean(field && typeof field === "object" && "key" in field && "label" in field),
+                )
+              : [];
+            const completed = workspace.data?.submissions.some(
+              (submission) => submission.exercise_id === exercise.id && submission.completed,
+            );
+            return (
+              <div key={exercise.id} className="space-y-4 border-l-2 border-primary/30 pl-4">
+                <div>
+                  <p className="font-medium">{exercise.title}</p>
+                  <p className="text-sm text-muted-foreground">{exercise.instructions}</p>
+                </div>
+                {fields.map((field) => (
+                  <Field
+                    key={field.key}
+                    label={field.label}
+                    value={exerciseAnswers[exercise.id]?.[field.key] ?? ""}
+                    placeholder={field.placeholder}
+                    onChange={(value) => setExerciseAnswers((current) => ({
+                      ...current,
+                      [exercise.id]: { ...(current[exercise.id] ?? {}), [field.key]: value },
+                    }))}
+                  />
+                ))}
+                <Button
+                  onClick={() => exerciseMutation.mutate({ exerciseId: exercise.id, completed: true })}
+                  disabled={exerciseMutation.isPending}
+                >
+                  <Save className="mr-1 size-4" /> {completed ? "Atualizar exercício" : "Concluir exercício"}
+                </Button>
+              </div>
+            );
+          }) : <p className="text-sm text-muted-foreground">Esta aula ainda não possui exercício publicado.</p>}
         </TabsContent>
       </Tabs>
     </Card>

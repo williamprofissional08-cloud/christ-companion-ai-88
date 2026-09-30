@@ -17,6 +17,7 @@
 - [x] Fase 1 — Criar a arquitetura escalável de livros, capítulos, passagens, fontes, glossário, cultura e exercícios
 - [ ] Fase 2 — Converter os 66 livros existentes em uma jornada completa por capítulos e passagens (1.189 capítulos cadastrados; conteúdo integral pendente)
 - [ ] Fase 3 — Produzir, revisar e publicar Gênesis completo
+  - [ ] Gênesis 1 — oito passagens profundas, exercícios, perguntas, fontes, navegação, salvamento e progresso
 - [ ] Fase 4 — Produzir, revisar e publicar Êxodo completo
 - [ ] Fase 5 — Produzir, revisar e publicar Levítico completo
 - [ ] Fase 6 — Completar os demais livros do Antigo Testamento
