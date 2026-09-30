@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import { ArrowLeft, ArrowRight, Award, BookOpen, CheckCircle2, Circle, Clock, FilePenLine, Lock, Search } from "lucide-react";
+import { ArrowLeft, ArrowRight, Award, BookMarked, BookOpen, CheckCircle2, Circle, Clock, FilePenLine, Lock, Search } from "lucide-react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Input } from "@/components/ui/input";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getStudentCourse } from "@/lib/school-catalog.functions";
 import { getPreacherCourseStats, issueCourseCertificate } from "@/lib/preacher-course.functions";
 import { levelLabel } from "@/lib/school/types";
@@ -133,9 +134,15 @@ function CoursePage() {
               <>
                 <div className="grid gap-3 sm:grid-cols-3">
                   <Card className="p-4"><BookOpen className="size-5 text-primary" /><strong className="mt-2 block text-2xl">{stats.data?.studiedBooks ?? 0}/66</strong><span className="text-xs text-muted-foreground">livros estudados</span></Card>
-                  <Card className="p-4"><Clock className="size-5 text-primary" /><strong className="mt-2 block text-2xl">{stats.data?.studyDays ?? 0}</strong><span className="text-xs text-muted-foreground">dias de estudo</span></Card>
+                  <Card className="p-4"><BookMarked className="size-5 text-primary" /><strong className="mt-2 block text-2xl">{stats.data?.studiedChapters ?? 0}/{stats.data?.totalChapters ?? data.totalChapters}</strong><span className="text-xs text-muted-foreground">capítulos estudados</span></Card>
                   <Card className="p-4"><FilePenLine className="size-5 text-primary" /><strong className="mt-2 block text-2xl">{stats.data?.messages ?? 0}</strong><span className="text-xs text-muted-foreground">mensagens preparadas</span></Card>
                 </div>
+                <Card className="p-4">
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+                    <span><strong>{data.completedLessons}</strong> de {data.totalLessons} passagens publicadas concluídas</span>
+                    <span className="text-muted-foreground">{stats.data?.completedExercises ?? 0} exercícios · {stats.data?.studyDays ?? 0} dias de estudo</span>
+                  </div>
+                </Card>
                 <div className="relative">
                   <Search className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
                   <Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar livro, passagem, tema ou palavra-chave" className="pl-9" />
@@ -154,44 +161,50 @@ function CoursePage() {
                       <h2 className="font-display text-lg font-semibold">{mod.title}</h2>
                       <p className="mt-1 text-sm text-muted-foreground">{mod.summary}</p>
                       <p className="mt-2 text-xs text-muted-foreground">
-                        {mod.lessons.length} aula(s) ·{" "}
+                        {mod.chapters.length} capítulo(s) · {mod.lessons.length} passagem(ns) publicada(s) ·{" "}
                         {percentOf(mod.completedLessons, mod.lessons.length)}% concluído
                       </p>
                     </div>
-                    {mod.lessons.length ? (
+                    {isPreacherCourse && mod.chapters.length ? (
+                      <Accordion type="single" collapsible className="border-t">
+                        {mod.chapters.map((chapter) => (
+                          <AccordionItem key={chapter.id} value={chapter.id}>
+                            <AccordionTrigger className="gap-3 no-underline hover:no-underline">
+                              <span className="flex min-w-0 items-center gap-2">
+                                {chapter.status === "concluido" ? <CheckCircle2 className="size-4 shrink-0 text-primary" /> : chapter.status === "em_andamento" ? <Circle className="size-4 shrink-0 fill-gold text-gold" /> : <Circle className="size-4 shrink-0 text-muted-foreground" />}
+                                <span className="text-left">Capítulo {chapter.chapter_number}</span>
+                              </span>
+                              <span className="ml-auto mr-2 text-xs font-normal text-muted-foreground">{chapter.lessons.length ? `${chapter.lessons.length} passagem(ns)` : "em preparação"}</span>
+                            </AccordionTrigger>
+                            <AccordionContent>
+                              {chapter.lessons.length ? (
+                                <ul className="divide-y divide-border/70 border-l pl-4">
+                                  {chapter.lessons.map((lesson) => (
+                                    <li key={lesson.id}>
+                                      <Link to="/escola/$slug/aula/$lessonSlug" params={{ slug: course.slug, lessonSlug: lesson.slug }} className="flex items-center gap-3 py-3 transition-colors hover:text-primary">
+                                        {lesson.completed ? <CheckCircle2 className="size-4 shrink-0 text-primary" /> : <Circle className="size-4 shrink-0 text-muted-foreground" />}
+                                        <div className="min-w-0 flex-1">
+                                          <p className="text-sm font-medium">{lesson.passage ?? lesson.title}</p>
+                                          <p className="line-clamp-1 text-xs text-muted-foreground">{lesson.title} · {lesson.summary}</p>
+                                        </div>
+                                        {lesson.locked ? <Lock className="size-3 shrink-0" /> : null}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              ) : <p className="border-l pl-4 text-xs text-muted-foreground">As passagens deste capítulo serão publicadas após revisão bíblica e editorial.</p>}
+                            </AccordionContent>
+                          </AccordionItem>
+                        ))}
+                      </Accordion>
+                    ) : mod.lessons.length ? (
                       <ul className="divide-y divide-border/70">
                         {mod.lessons.map((lesson, lessonIndex) => (
                           <li key={lesson.id}>
-                            <Link
-                              to="/escola/$slug/aula/$lessonSlug"
-                              params={{ slug: course.slug, lessonSlug: lesson.slug }}
-                              className="flex items-center gap-3 py-2.5 transition-colors hover:text-primary"
-                            >
-                              {lesson.completed ? (
-                                <CheckCircle2 className="size-4 shrink-0 text-primary" aria-hidden />
-                              ) : (
-                                <Circle
-                                  className="size-4 shrink-0 text-muted-foreground"
-                                  aria-hidden
-                                />
-                              )}
-                              <div className="min-w-0 flex-1">
-                                <p className="truncate text-sm font-medium">
-                                  Aula {lessonIndex + 1} — {lesson.title}
-                                  {lesson.slug === data.nextLessonSlug ? (
-                                    <span className="ml-2 rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">
-                                      Você está aqui
-                                    </span>
-                                  ) : null}
-                                </p>
-                                <p className="truncate text-xs text-muted-foreground">
-                                  {lesson.passage ? `${lesson.passage} · ` : ""}{lesson.summary}
-                                </p>
-                              </div>
-                              <span className="flex shrink-0 items-center gap-1 text-xs text-muted-foreground">
-                                {lesson.locked ? <Lock className="size-3" /> : null}
-                                <Clock className="size-3" /> {lesson.duration_minutes} min
-                              </span>
+                            <Link to="/escola/$slug/aula/$lessonSlug" params={{ slug: course.slug, lessonSlug: lesson.slug }} className="flex items-center gap-3 py-2.5 transition-colors hover:text-primary">
+                              {lesson.completed ? <CheckCircle2 className="size-4 shrink-0 text-primary" /> : <Circle className="size-4 shrink-0 text-muted-foreground" />}
+                              <div className="min-w-0 flex-1"><p className="truncate text-sm font-medium">Aula {lessonIndex + 1} — {lesson.title}</p><p className="truncate text-xs text-muted-foreground">{lesson.summary}</p></div>
+                              <span className="flex shrink-0 items-center gap-1 text-xs text-muted-foreground"><Clock className="size-3" /> {lesson.duration_minutes} min</span>
                             </Link>
                           </li>
                         ))}
