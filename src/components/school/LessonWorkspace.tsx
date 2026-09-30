@@ -194,7 +194,7 @@ export function LessonWorkspace({
                     key={field.key}
                     label={field.label}
                     value={exerciseAnswers[exercise.id]?.[field.key] ?? ""}
-                    placeholder={field.placeholder}
+                    {...(field.placeholder ? { placeholder: field.placeholder } : {})}
                     onChange={(value) => setExerciseAnswers((current) => ({
                       ...current,
                       [exercise.id]: { ...(current[exercise.id] ?? {}), [field.key]: value },
