@@ -14,8 +14,8 @@
 
 ## Expansão Gênesis ao Apocalipse
 
-- [ ] Fase 1 — Criar a arquitetura escalável de livros, capítulos, passagens, fontes, glossário, cultura e exercícios
-- [ ] Fase 2 — Converter os 66 livros existentes em uma jornada completa por capítulos e passagens
+- [x] Fase 1 — Criar a arquitetura escalável de livros, capítulos, passagens, fontes, glossário, cultura e exercícios
+- [ ] Fase 2 — Converter os 66 livros existentes em uma jornada completa por capítulos e passagens (1.189 capítulos cadastrados; conteúdo integral pendente)
 - [ ] Fase 3 — Produzir, revisar e publicar Gênesis completo
 - [ ] Fase 4 — Produzir, revisar e publicar Êxodo completo
 - [ ] Fase 5 — Produzir, revisar e publicar Levítico completo

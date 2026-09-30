@@ -32,6 +32,16 @@ type RawLesson = {
   order_index: number;
   passage: string | null;
   keywords: string[];
+  chapter_id: string | null;
+  verse_start: number | null;
+  verse_end: number | null;
+};
+
+type RawChapter = {
+  id: string;
+  chapter_number: number;
+  title: string;
+  total_verses: number | null;
 };
 
 /** Estrutura publicada do curso + progresso do usuário. */
@@ -53,7 +63,7 @@ export async function loadCourseView(
     supabase
       .from("course_modules")
       .select(
-        "id, title, summary, order_index, testament, category, book_number, lessons(id, slug, title, summary, duration_minutes, tier, status, order_index, passage, keywords)",
+        "id, title, summary, order_index, testament, category, book_number, book_chapters(id, chapter_number, title, total_verses), lessons(id, slug, title, summary, duration_minutes, tier, status, order_index, passage, keywords, chapter_id, verse_start, verse_end)",
       )
       .eq("course_id", course.id)
       .eq("status", "published")
@@ -93,9 +103,27 @@ export async function loadCourseView(
         order_index: l.order_index,
         passage: l.passage,
         keywords: l.keywords ?? [],
+        chapter_id: l.chapter_id,
+        verse_start: l.verse_start,
+        verse_end: l.verse_end,
         completed: done.has(l.id),
         locked: l.tier === "premium" && !premium,
       }));
+    const chapters = ((m as unknown as { book_chapters?: RawChapter[] }).book_chapters ?? [])
+      .sort((a, b) => a.chapter_number - b.chapter_number)
+      .map((chapter) => {
+        const chapterLessons = lessons.filter((lesson) => lesson.chapter_id === chapter.id);
+        const completed = chapterLessons.filter((lesson) => lesson.completed).length;
+        return {
+          ...chapter,
+          lessons: chapterLessons,
+          status: chapterLessons.length > 0 && completed === chapterLessons.length
+            ? "concluido" as const
+            : completed > 0
+              ? "em_andamento" as const
+              : "nao_iniciado" as const,
+        };
+      });
     return {
       id: m.id,
       title: m.title,
@@ -105,12 +133,15 @@ export async function loadCourseView(
       category: m.category,
       book_number: m.book_number,
       lessons,
+      chapters,
       completedLessons: lessons.filter((l) => l.completed).length,
     };
   });
 
   const flat = built.flatMap((m) => m.lessons);
   const completedLessons = flat.filter((l) => l.completed).length;
+  const chapters = built.flatMap((module) => module.chapters);
+  const completedChapters = chapters.filter((chapter) => chapter.status === "concluido").length;
   const next = flat.find((l) => !l.completed && !l.locked) ?? flat.find((l) => !l.completed) ?? null;
 
   return {
@@ -118,6 +149,8 @@ export async function loadCourseView(
     modules: built,
     totalLessons: flat.length,
     completedLessons,
+    totalChapters: chapters.length,
+    completedChapters,
     percent: percentOf(completedLessons, flat.length),
     nextLessonSlug: next?.slug ?? null,
     isPremium: premium,
