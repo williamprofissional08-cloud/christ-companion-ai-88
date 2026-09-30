@@ -27,7 +27,7 @@ export const getLessonWorkspace = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ lessonId: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
-    const [{ data: reflection, error: reflectionError }, { data: messages, error: messageError }, { data: favorite }] =
+    const [{ data: reflection, error: reflectionError }, { data: messages, error: messageError }, { data: favorite }, { data: exercises, error: exerciseError }, { data: submissions, error: submissionError }] =
       await Promise.all([
         context.supabase
           .from("lesson_reflections")
@@ -48,10 +48,63 @@ export const getLessonWorkspace = createServerFn({ method: "GET" })
           .eq("kind", "estudo")
           .eq("reference", data.lessonId)
           .maybeSingle(),
+        context.supabase
+          .from("lesson_exercises")
+          .select("id, kind, title, instructions, fields, order_index")
+          .eq("lesson_id", data.lessonId)
+          .eq("status", "published")
+          .order("order_index", { ascending: true }),
+        context.supabase
+          .from("exercise_submissions")
+          .select("exercise_id, answers, completed")
+          .eq("user_id", context.userId)
+          .eq("lesson_id", data.lessonId),
       ]);
     if (reflectionError) throw new Error(reflectionError.message);
     if (messageError) throw new Error(messageError.message);
-    return { reflection, messages: messages ?? [], favoriteId: favorite?.id ?? null };
+    if (exerciseError) throw new Error(exerciseError.message);
+    if (submissionError) throw new Error(submissionError.message);
+    return {
+      reflection,
+      messages: messages ?? [],
+      favoriteId: favorite?.id ?? null,
+      exercises: exercises ?? [],
+      submissions: submissions ?? [],
+    };
+  });
+
+export const saveExerciseSubmission = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) =>
+    z.object({
+      lessonId: z.string().uuid(),
+      exerciseId: z.string().uuid(),
+      answers: z.record(z.string(), z.string().max(12000)),
+      completed: z.boolean(),
+    }).parse(input),
+  )
+  .handler(async ({ data, context }) => {
+    const { data: exercise, error: exerciseError } = await context.supabase
+      .from("lesson_exercises")
+      .select("id, lesson_id, status")
+      .eq("id", data.exerciseId)
+      .eq("lesson_id", data.lessonId)
+      .eq("status", "published")
+      .maybeSingle();
+    if (exerciseError) throw new Error(exerciseError.message);
+    if (!exercise) throw new Error("Exercício não disponível.");
+    const { error } = await context.supabase.from("exercise_submissions").upsert(
+      {
+        user_id: context.userId,
+        lesson_id: data.lessonId,
+        exercise_id: data.exerciseId,
+        answers: data.answers,
+        completed: data.completed,
+      },
+      { onConflict: "user_id,exercise_id" },
+    );
+    if (error) throw new Error(error.message);
+    return { ok: true };
   });
 
 export const saveLessonReflection = createServerFn({ method: "POST" })
