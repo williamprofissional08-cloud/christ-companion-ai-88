@@ -14,8 +14,20 @@ export type StudentLesson = {
   order_index: number;
   passage: string | null;
   keywords: string[];
+  chapter_id: string | null;
+  verse_start: number | null;
+  verse_end: number | null;
   completed: boolean;
   locked: boolean;
+};
+
+export type StudentChapter = {
+  id: string;
+  chapter_number: number;
+  title: string;
+  total_verses: number | null;
+  lessons: StudentLesson[];
+  status: "nao_iniciado" | "em_andamento" | "concluido";
 };
 
 export type StudentModule = {
@@ -27,6 +39,7 @@ export type StudentModule = {
   category: string | null;
   book_number: number | null;
   lessons: StudentLesson[];
+  chapters: StudentChapter[];
   completedLessons: number;
 };
 
@@ -45,6 +58,8 @@ export type CourseView = {
   modules: StudentModule[];
   totalLessons: number;
   completedLessons: number;
+  totalChapters: number;
+  completedChapters: number;
   percent: number;
   nextLessonSlug: string | null;
   isPremium: boolean;
@@ -56,6 +71,11 @@ export const LESSON_SECTIONS = [
   { kind: "meditacao", label: "Medite na Palavra" },
   { kind: "observacao", label: "Observe o texto" },
   { kind: "contexto", label: "Contexto bíblico" },
+  { kind: "contexto_cultural", label: "Contexto cultural" },
+  { kind: "interpretacao", label: "Interpretação" },
+  { kind: "glossario", label: "Palavras e termos" },
+  { kind: "referencias_cruzadas", label: "Referências cruzadas" },
+  { kind: "principios", label: "Princípios espirituais" },
   { kind: "mensagem_central", label: "A mensagem central" },
   { kind: "conexao_cristo", label: "Conexão com Cristo" },
   { kind: "pregacao", label: "Preparando a pregação" },
@@ -67,6 +87,7 @@ export const LESSON_SECTIONS = [
   { kind: "aplicacao", label: "Aplicação" },
   { kind: "reflexao", label: "Reflexão" },
   { kind: "exercicio", label: "Exercício" },
+  { kind: "fonte", label: "Fontes e referências" },
   { kind: "oracao", label: "Oração" },
   { kind: "desafio", label: "Desafio" },
   { kind: "encerramento", label: "Encerramento" },

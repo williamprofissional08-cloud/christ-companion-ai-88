@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Preserve the existing course hierarchy and extend it additively through `book_chapters` and lesson chapter links, because published URLs and student progress must remain valid.

@@ -159,7 +159,7 @@ export const getPreacherCourseStats = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ courseId: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
-    const [{ count: messages }, { data: progress }] = await Promise.all([
+    const [{ count: messages }, { data: progress }, { count: exercises }, { count: completedExercises }, { count: totalChapters }] = await Promise.all([
       context.supabase
         .from("sermon_messages")
         .select("id", { count: "exact", head: true })
@@ -167,15 +167,43 @@ export const getPreacherCourseStats = createServerFn({ method: "GET" })
         .eq("course_id", data.courseId),
       context.supabase
         .from("lesson_progress")
-        .select("lesson_id, updated_at, lessons(module_id)")
+        .select("lesson_id, updated_at, lessons(module_id, chapter_id)")
         .eq("user_id", context.userId)
         .eq("course_id", data.courseId),
+      context.supabase
+        .from("lesson_exercises")
+        .select("id, lessons!inner(course_modules!inner(course_id))", { count: "exact", head: true })
+        .eq("lessons.course_modules.course_id", data.courseId)
+        .eq("status", "published"),
+      context.supabase
+        .from("exercise_submissions")
+        .select("id, lessons!inner(course_modules!inner(course_id))", { count: "exact", head: true })
+        .eq("user_id", context.userId)
+        .eq("completed", true)
+        .eq("lessons.course_modules.course_id", data.courseId),
+      context.supabase
+        .from("book_chapters")
+        .select("id, course_modules!inner(course_id)", { count: "exact", head: true })
+        .eq("course_modules.course_id", data.courseId),
     ]);
     const studiedBooks = new Set(
       (progress ?? []).map((row) => (row.lessons as { module_id?: string } | null)?.module_id).filter(Boolean),
     ).size;
     const studyDays = new Set((progress ?? []).map((row) => row.updated_at.slice(0, 10))).size;
-    return { messages: messages ?? 0, studiedBooks, studyDays };
+    const studiedChapters = new Set(
+      (progress ?? [])
+        .map((row) => (row.lessons as { chapter_id?: string } | null)?.chapter_id)
+        .filter(Boolean),
+    ).size;
+    return {
+      messages: messages ?? 0,
+      studiedBooks,
+      studiedChapters,
+      totalChapters: totalChapters ?? 0,
+      studyDays,
+      exercises: exercises ?? 0,
+      completedExercises: completedExercises ?? 0,
+    };
   });
 
 export const issueCourseCertificate = createServerFn({ method: "POST" })
