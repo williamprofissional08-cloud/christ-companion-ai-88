@@ -4,7 +4,7 @@
  * (preload="none") e a posição pode ser reportada ao servidor pelo callback.
  */
 import { useEffect, useRef, useState } from "react";
-import { Headphones, Pause, Play, RotateCcw, Volume2 } from "lucide-react";
+import { Headphones, Pause, Play, RotateCcw, SkipForward, Square, Volume2 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -20,7 +20,13 @@ type Props = {
   onPosition?: (seconds: number) => void;
 };
 
-export function LessonAudioPlayer({ src, title, startAt = 0, fallbackDuration, onPosition }: Props) {
+export function LessonAudioPlayer({
+  src,
+  title,
+  startAt = 0,
+  fallbackDuration,
+  onPosition,
+}: Props) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(startAt);
@@ -39,6 +45,12 @@ export function LessonAudioPlayer({ src, title, startAt = 0, fallbackDuration, o
     if (audio) audio.volume = volume;
   }, [volume]);
 
+  useEffect(() => {
+    const stopForOtherAudio = () => audioRef.current?.pause();
+    window.addEventListener("ccc:stop-audio", stopForOtherAudio);
+    return () => window.removeEventListener("ccc:stop-audio", stopForOtherAudio);
+  }, []);
+
   const toggle = async () => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -52,6 +64,7 @@ export function LessonAudioPlayer({ src, title, startAt = 0, fallbackDuration, o
       setResumed(true);
     }
     try {
+      window.dispatchEvent(new Event("ccc:stop-audio"));
       await audio.play();
     } catch {
       setPlaying(false);
@@ -63,6 +76,14 @@ export function LessonAudioPlayer({ src, title, startAt = 0, fallbackDuration, o
     if (!audio) return;
     audio.currentTime = value;
     setCurrent(value);
+  };
+
+  const stop = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.pause();
+    seek(0);
+    onPosition?.(0);
   };
 
   const total = duration || fallbackDuration || 0;
@@ -130,6 +151,26 @@ export function LessonAudioPlayer({ src, title, startAt = 0, fallbackDuration, o
           aria-label="Voltar 15 segundos"
         >
           <RotateCcw className="size-4" />
+        </Button>
+        <Button
+          type="button"
+          size="icon"
+          variant="ghost"
+          className="size-9 shrink-0"
+          onClick={() => seek(Math.min(total || current + 15, current + 15))}
+          aria-label="Avançar 15 segundos"
+        >
+          <SkipForward className="size-4" />
+        </Button>
+        <Button
+          type="button"
+          size="icon"
+          variant="ghost"
+          className="size-9 shrink-0"
+          onClick={stop}
+          aria-label="Parar e reiniciar áudio"
+        >
+          <Square className="size-4" />
         </Button>
       </div>
 

@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LessonAudioPlayer } from "@/components/school/LessonAudioPlayer";
+import { LessonNarrationPlayer } from "@/components/school/LessonNarrationPlayer";
 import { ProfessorIA } from "@/components/school/ProfessorIA";
 import { LessonWorkspace } from "@/components/school/LessonWorkspace";
 import {
@@ -28,12 +29,7 @@ import {
   getStudentLesson,
   saveLessonCheckpoint,
 } from "@/lib/school-catalog.functions";
-import {
-  HIGHLIGHT_KIND,
-  LESSON_SECTIONS,
-  percentOf,
-  sectionLabel,
-} from "@/lib/school/lesson-view";
+import { HIGHLIGHT_KIND, LESSON_SECTIONS, percentOf, sectionLabel } from "@/lib/school/lesson-view";
 
 export const Route = createFileRoute("/_authenticated/escola/$slug/aula/$lessonSlug")({
   head: () => ({
@@ -92,7 +88,10 @@ function LessonPage() {
     const onScroll = () => {
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
       const percent = scrollable > 0 ? Math.round((window.scrollY / scrollable) * 100) : 100;
-      readPercentRef.current = Math.max(readPercentRef.current, Math.min(100, Math.max(0, percent)));
+      readPercentRef.current = Math.max(
+        readPercentRef.current,
+        Math.min(100, Math.max(0, percent)),
+      );
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -223,7 +222,6 @@ function LessonPage() {
                   </Card>
                 ) : null}
                 <Tabs value={mode} onValueChange={(value) => setMode(value as "ler" | "ouvir")}>
-
                   <TabsList className="w-full">
                     <TabsTrigger value="ouvir" className="flex-1 gap-1.5">
                       <Headphones className="size-4" aria-hidden /> Ouvir aula
@@ -234,7 +232,9 @@ function LessonPage() {
                   </TabsList>
 
                   <TabsContent value="ouvir" className="mt-4">
-                    {data.audio ? (
+                    {data.blocks.length ? (
+                      <LessonNarrationPlayer title={data.lesson.title} blocks={data.blocks} />
+                    ) : data.audio ? (
                       <LessonAudioPlayer
                         src={data.audio.url}
                         title={data.lesson.title}
@@ -245,20 +245,9 @@ function LessonPage() {
                         }}
                       />
                     ) : (
-                      <Card className="space-y-2 p-5">
-                        <div className="flex items-center gap-2">
-                          <Headphones className="size-4 text-primary" aria-hidden />
-                          <h2 className="font-display text-base font-semibold">Ouvir esta aula</h2>
-                        </div>
-                        <p className="text-sm text-muted-foreground">
-                          {data.hasNarrationScript
-                            ? "O roteiro de narração desta aula já está pronto. A narração em áudio será disponibilizada aqui em breve, com controles de velocidade e retomada do ponto onde você parou."
-                            : "A narração em áudio desta aula está sendo preparada e aparecerá aqui quando estiver disponível."}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          Enquanto isso, você pode acompanhar a aula na aba{" "}
-                          <strong>Ler aula</strong>.
-                        </p>
+                      <Card className="p-5 text-sm text-muted-foreground">
+                        A narração ficará disponível quando esta aula receber conteúdo publicado.
+                        Enquanto isso, use a aba <strong>Ler aula</strong>.
                       </Card>
                     )}
                   </TabsContent>
@@ -341,7 +330,6 @@ function LessonPage() {
                 ) : null}
 
                 <ProfessorIA lessonId={data.lesson.id} lessonTitle={data.lesson.title} />
-
 
                 <Button
                   className="w-full"
