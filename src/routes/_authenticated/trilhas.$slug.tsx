@@ -118,7 +118,11 @@ function TrilhaPage() {
               <button key={item.index} type="button" onClick={() => setActive(item.index)}>
                 <Badge
                   variant={
-                    item.index === active ? "default" : completed.has(item.index) ? "secondary" : "outline"
+                    item.index === active
+                      ? "default"
+                      : completed.has(item.index)
+                        ? "secondary"
+                        : "outline"
                   }
                   className="cursor-pointer gap-1 px-2.5 py-1"
                 >
@@ -197,9 +201,16 @@ function TrilhaPage() {
                   </p>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {references.map((reference) => (
-                      <Badge key={reference} variant="secondary">
-                        {reference}
-                      </Badge>
+                      <Link
+                        key={reference}
+                        to="/biblia"
+                        search={{ referencia }}
+                        className="focus:outline-none"
+                      >
+                        <Badge variant="secondary" className="cursor-pointer hover:bg-secondary/70">
+                          {reference}
+                        </Badge>
+                      </Link>
                     ))}
                   </div>
                 </Card>

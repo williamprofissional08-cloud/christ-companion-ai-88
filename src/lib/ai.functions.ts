@@ -114,14 +114,6 @@ export const searchScriptures = createServerFn({ method: "POST" })
     return generateSearch(data.query);
   });
 
-export const readPassage = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
-  .inputValidator((input: unknown) => z.object({ reference: z.string().min(2).max(80) }).parse(input))
-  .handler(async ({ data }) => {
-    const { fetchPassage } = await import("./ai-content.server");
-    return fetchPassage(data.reference);
-  });
-
 export const explainReference = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) =>
