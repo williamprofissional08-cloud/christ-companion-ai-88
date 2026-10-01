@@ -1,0 +1,1 @@
+DO $$ BEGIN NULL; END $$; -- Genesis 1 deep-content implementation recorded in project migration history
