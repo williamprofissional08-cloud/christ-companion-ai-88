@@ -180,36 +180,6 @@ Inclua de 5 a 8 versículos, 4 passos práticos e 3 sugestões de estudo.`,
   );
 }
 
-const ALMEIDA_URL = "https://bible-api.com";
-
-export type BiblePassage = {
-  reference: string;
-  text: string;
-  verses: { chapter: number; verse: number; text: string }[];
-};
-
-export async function fetchPassage(reference: string): Promise<BiblePassage> {
-  const url = `${ALMEIDA_URL}/${encodeURIComponent(reference)}?translation=almeida`;
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error("Não encontramos essa passagem. Tente por exemplo: João 3:16 ou Salmos 23");
-  }
-  const data = (await response.json()) as {
-    reference?: string;
-    text?: string;
-    verses?: { chapter: number; verse: number; text: string }[];
-  };
-  return {
-    reference: data.reference ?? reference,
-    text: (data.text ?? "").trim(),
-    verses: (data.verses ?? []).map((v) => ({
-      chapter: v.chapter,
-      verse: v.verse,
-      text: v.text.trim(),
-    })),
-  };
-}
-
 export async function explainPassage(reference: string, text: string) {
   const system = `${BIBLICAL_SYSTEM_PROMPT}\n\n${REFERENCE_RULE}`;
   const prompt = `Faça o ESTUDO COMPLETO da passagem ${reference}. Texto: "${text.slice(0, 6000)}".
