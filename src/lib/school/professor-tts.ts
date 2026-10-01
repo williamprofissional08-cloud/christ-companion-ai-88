@@ -18,9 +18,7 @@ function refToSpeech(match: string): string {
   if (!m) return match;
   const [, ordinal, book, chapter, verseStart, verseEnd] = m;
   const prefix = ordinal ? `${BOOK_SPEECH[ordinal]} ` : "";
-  const verses = verseEnd
-    ? `versículos ${verseStart} a ${verseEnd}`
-    : `versículo ${verseStart}`;
+  const verses = verseEnd ? `versículos ${verseStart} a ${verseEnd}` : `versículo ${verseStart}`;
   return `${prefix}${book!.trim()}, capítulo ${chapter}, ${verses}`;
 }
 
@@ -47,6 +45,30 @@ export function buildSpeechText(answer: string): string {
     /\b([123]\s+)?([\p{Lu}][\p{L}.]*(?:\s+[\p{L}.]+)?)\s+(\d+):(\d+)(?:-(\d+))?\b/gu,
     (match) => refToSpeech(match),
   );
+}
+
+type NarrationBlock = { title: string | null; body: string; kind: string };
+
+/**
+ * Monta o roteiro a partir dos blocos publicados da própria aula.
+ * Respostas e anotações privadas vivem no Caderno do pregador e nunca entram aqui.
+ */
+export function buildLessonNarrationText(title: string, blocks: NarrationBlock[]): string {
+  const narration = blocks
+    .filter((block) => {
+      const heading = (block.title ?? "").toLocaleLowerCase("pt-BR");
+      return (
+        block.body.trim() && block.kind !== "exercicio" && !heading.includes("meditação do aluno")
+      );
+    })
+    .map((block) => {
+      const heading = block.title?.trim();
+      const body = buildSpeechText(block.body);
+      return heading ? `${heading}. ${body}` : body;
+    })
+    .filter(Boolean);
+
+  return buildSpeechText([`Aula: ${title}.`, ...narration].join("\n\n"));
 }
 
 /** Divide o texto em partes seguras, sem cortar palavras nem duplicar conteúdo. */

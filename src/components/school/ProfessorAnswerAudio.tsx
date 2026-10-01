@@ -22,7 +22,10 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
   const indexRef = useRef(0);
 
   useEffect(() => {
+    const stopForOtherAudio = () => audioRef.current?.pause();
+    window.addEventListener("ccc:stop-audio", stopForOtherAudio);
     return () => {
+      window.removeEventListener("ccc:stop-audio", stopForOtherAudio);
       audioRef.current?.pause();
       audioRef.current = null;
     };
@@ -92,6 +95,7 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
     }
     setState("loading");
     try {
+      window.dispatchEvent(new Event("ccc:stop-audio"));
       urlsRef.current = await generate();
       playFrom(0);
     } catch (error) {
@@ -102,7 +106,6 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
       );
       setState("error");
     }
-
   }
 
   function handleStop() {
@@ -161,9 +164,7 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
         </Button>
       ) : null}
 
-      {state === "error" ? (
-        <span className="text-xs text-destructive">{errorMessage}</span>
-      ) : null}
+      {state === "error" ? <span className="text-xs text-destructive">{errorMessage}</span> : null}
     </div>
   );
 }
