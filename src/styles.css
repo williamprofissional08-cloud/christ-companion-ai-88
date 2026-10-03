@@ -226,3 +226,11 @@
 @utility animate-rise {
   animation: rise-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+/* Oculta o selo promocional injetado na prévia/publicação. */
+#lovable-badge,
+[data-lovable-badge],
+a[href*="lovable.dev"][style*="position: fixed"] {
+  display: none !important;
+  visibility: hidden !important;
+}
