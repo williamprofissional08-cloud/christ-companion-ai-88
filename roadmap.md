@@ -18,6 +18,7 @@
 - [ ] Fase 2 — Converter os 66 livros existentes em uma jornada completa por capítulos e passagens (1.189 capítulos cadastrados; conteúdo integral pendente)
 - [ ] Fase 3 — Produzir, revisar e publicar Gênesis completo
   - [x] Gênesis 1 — oito passagens profundas, exercícios, perguntas, fontes, navegação, salvamento e progresso
+  - [ ] Gênesis 2 — seis passagens profundas, exercícios, perguntas, fontes, navegação, salvamento e progresso
 - [ ] Fase 4 — Produzir, revisar e publicar Êxodo completo
 - [ ] Fase 5 — Produzir, revisar e publicar Levítico completo
 - [ ] Fase 6 — Completar os demais livros do Antigo Testamento
@@ -25,3 +26,7 @@
 - [ ] Fase 8 — Criar os 32 módulos específicos de formação de pregadores
 - [ ] Fase 9 — Integrar exercícios avaliados, quizzes, glossário, dicionário cultural e fontes
 - [ ] Fase 10 — Revisar conteúdo, referências, pesquisa, navegação, progresso, segurança e responsividade
+
+## Ajustes visuais
+
+- [ ] Ocultar o badge Lovable com CSS
