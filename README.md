@@ -586,3 +586,23 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+
+## Configuração local e segurança
+
+O arquivo `.env` não faz parte do versionamento. Para desenvolvimento local, copie `.env.example` para `.env` e preencha somente as variáveis necessárias ao ambiente local.
+
+Nunca commitе:
+- chaves privadas;
+- Service Role Keys;
+- tokens;
+- credenciais de provedores de IA;
+- arquivos `.env` com valores reais.
+
+As credenciais de servidor devem permanecer somente no ambiente de execução do servidor. As variáveis públicas do Supabase utilizadas pelo frontend devem continuar usando os nomes já adotados pelo código.
+
+O texto bíblico integral permanece desativado enquanto não houver licença/termos de uso verificáveis para a tradução escolhida. Consulte `docs-bible-license.md` antes de adicionar qualquer tradução.
+
+### TTS
+
+O Professor IA prioriza a voz nativa do dispositivo via Web Speech API quando existe uma voz compatível com português. Quando a API ou uma voz compatível não estiver disponível, o aplicativo mantém o gateway TTS existente como fallback. Nenhuma chave privada é exposta ao navegador.
