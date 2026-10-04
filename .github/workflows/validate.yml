@@ -1,0 +1,31 @@
+name: Validate
+
+on:
+  push:
+    branches: ["main", "maintenance/**", "codex/**"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # O package-lock atual está defasado em relação ao package.json.
+      # npm install resolve a árvore declarada sem alterar o código do app.
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
