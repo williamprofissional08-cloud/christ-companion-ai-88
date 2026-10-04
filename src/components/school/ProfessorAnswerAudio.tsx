@@ -6,6 +6,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Loader2, Pause, Play, Square, Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNativeTTS } from "@/hooks/useNativeTTS";
 import { supabase } from "@/integrations/supabase/client";
 import { buildSpeechText, chunkSpeechText, TTS_LABELS } from "@/lib/school/professor-tts";
 
@@ -17,6 +18,7 @@ const sessionCache = new Map<string, string[]>();
 export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; text: string }) {
   const [state, setState] = useState<State>("idle");
   const [errorMessage, setErrorMessage] = useState<string>(TTS_LABELS.error);
+  const nativeTTS = useNativeTTS({ lang: "pt-BR", rate: 1, pitch: 1 });
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const urlsRef = useRef<string[]>([]);
   const indexRef = useRef(0);
@@ -80,7 +82,7 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
     return urls;
   }
 
-  async function handleMain() {
+  async function handleGateway() {
     if (state === "playing") {
       audioRef.current?.pause();
       setState("paused");
@@ -108,7 +110,30 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
     }
   }
 
+  function handleMain() {
+    if (nativeTTS.supported && nativeTTS.hasPreferredLanguage) {
+      if (nativeTTS.state === "playing") {
+        nativeTTS.pause();
+        setState("paused");
+        return;
+      }
+      if (nativeTTS.state === "paused") {
+        nativeTTS.resume();
+        setState("playing");
+        return;
+      }
+      window.dispatchEvent(new Event("ccc:stop-audio"));
+      const started = nativeTTS.speak(buildSpeechText(text));
+      if (started) {
+        setState("playing");
+        return;
+      }
+    }
+    void handleGateway();
+  }
+
   function handleStop() {
+    nativeTTS.stop();
     const audio = audioRef.current;
     if (audio) {
       audio.pause();
@@ -126,6 +151,7 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
         : state === "paused"
           ? TTS_LABELS.paused
           : TTS_LABELS.idle;
+  const modeLabel = nativeTTS.supported && nativeTTS.hasPreferredLanguage ? "Voz do dispositivo" : "Narração";
 
   return (
     <div className="mt-2 flex flex-wrap items-center gap-1.5">
@@ -149,6 +175,7 @@ export function ProfessorAnswerAudio({ messageId, text }: { messageId: string; t
         )}
         {label}
       </Button>
+      <span className="text-[11px] text-muted-foreground" aria-live="polite">{modeLabel}</span>
 
       {state === "playing" || state === "paused" ? (
         <Button
