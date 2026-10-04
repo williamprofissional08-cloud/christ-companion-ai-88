@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { chunkSpeechText } from "@/lib/school/professor-tts";
 
 export type NativeTTSState = "unsupported" | "idle" | "playing" | "paused";
 
@@ -17,6 +18,7 @@ export function useNativeTTS(options: Options = {}) {
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [state, setState] = useState<NativeTTSState>(() => (getNativeSupport() ? "idle" : "unsupported"));
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const queueRef = useRef<string[]>([]);
 
   const refreshVoices = useCallback(() => {
     if (!getNativeSupport()) return;
@@ -47,6 +49,7 @@ export function useNativeTTS(options: Options = {}) {
   const stop = useCallback(() => {
     if (!getNativeSupport()) return;
     window.speechSynthesis.cancel();
+    queueRef.current = [];
     utteranceRef.current = null;
     setState("idle");
   }, []);
@@ -56,8 +59,11 @@ export function useNativeTTS(options: Options = {}) {
       if (!getNativeSupport() || !text.trim()) return false;
       const synthesis = window.speechSynthesis;
       synthesis.cancel();
+      queueRef.current = chunkSpeechText(text, 200);
+      const next = queueRef.current.shift();
+      if (!next) return false;
 
-      const utterance = new SpeechSynthesisUtterance(text);
+      const utterance = new SpeechSynthesisUtterance(next);
       utterance.lang = lang;
       utterance.rate = rate;
       utterance.pitch = pitch;
@@ -67,6 +73,12 @@ export function useNativeTTS(options: Options = {}) {
       utterance.onpause = () => setState("paused");
       utterance.onresume = () => setState("playing");
       utterance.onend = () => {
+        const remaining = queueRef.current;
+        if (remaining.length) {
+          utteranceRef.current = null;
+          void speak(remaining.shift()!);
+          return;
+        }
         utteranceRef.current = null;
         setState("idle");
       };
@@ -93,6 +105,12 @@ export function useNativeTTS(options: Options = {}) {
     window.speechSynthesis.resume();
     setState("playing");
   }, []);
+
+  useEffect(() => {
+    const handler = () => stop();
+    window.addEventListener("ccc:stop-audio", handler);
+    return () => window.removeEventListener("ccc:stop-audio", handler);
+  }, [stop]);
 
   useEffect(() => stop, [stop]);
 
