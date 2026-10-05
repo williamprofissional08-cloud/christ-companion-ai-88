@@ -34,7 +34,10 @@ export function useNativeTTS(options: Options = {}) {
   }, [refreshVoices]);
 
   const ptBrVoices = useMemo(
-    () => voices.filter((voice) => voice.lang.toLowerCase().startsWith(lang.toLowerCase().split("-")[0])),
+    () => {
+      const languagePrefix = lang.toLowerCase().split("-")[0] ?? lang.toLowerCase();
+      return voices.filter((voice) => voice.lang.toLowerCase().startsWith(languagePrefix));
+    },
     [lang, voices],
   );
 
