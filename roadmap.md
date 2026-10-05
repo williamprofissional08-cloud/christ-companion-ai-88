@@ -30,3 +30,14 @@
 ## Ajustes visuais
 
 - [x] Ocultar o badge Lovable com CSS
+
+## Atualização de estudos e áudio
+
+- [ ] Auditar estudos, geração bíblica, TTS, áudio, progresso e experiência móvel atuais
+- [ ] Diferenciar Estudo Bíblico e Estudo Bíblico Aprofundado sem invalidar estudos existentes
+- [ ] Reestruturar a leitura dos estudos em seções navegáveis e confortáveis no celular
+- [ ] Implementar TTS robusto em pt-BR com fallback e controles completos
+- [ ] Sincronizar áudio, destaque do trecho, rolagem e navegação por seção
+- [ ] Persistir seção, trecho, velocidade e retomada sem alterar a conclusão explícita
+- [ ] Reforçar geração com análise prévia, classificações, confiança, fontes e validações
+- [ ] Validar Android/mobile, desktop, estudos longos, navegação, console e regressões
