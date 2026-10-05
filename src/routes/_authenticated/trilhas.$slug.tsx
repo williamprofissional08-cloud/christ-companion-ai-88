@@ -204,7 +204,7 @@ function TrilhaPage() {
                       <Link
                         key={reference}
                         to="/biblia"
-                        search={{ referencia }}
+                        search={{ referencia: reference }}
                         className="focus:outline-none"
                       >
                         <Badge variant="secondary" className="cursor-pointer hover:bg-secondary/70">

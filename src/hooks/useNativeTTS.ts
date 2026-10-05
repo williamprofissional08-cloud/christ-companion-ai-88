@@ -74,9 +74,10 @@ export function useNativeTTS(options: Options = {}) {
       utterance.onresume = () => setState("playing");
       utterance.onend = () => {
         const remaining = queueRef.current;
-        if (remaining.length) {
+        const nextChunk = remaining.shift();
+        if (nextChunk) {
           utteranceRef.current = null;
-          void speak(remaining.shift()!);
+          void speak(nextChunk);
           return;
         }
         utteranceRef.current = null;

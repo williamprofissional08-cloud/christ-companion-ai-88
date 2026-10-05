@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Preserve the existing course hierarchy and extend it additively through `book_chapters` and lesson chapter links, because published URLs and student progress must remain valid.
+- Keep Lovable's VITE environment replacement enabled because the browser auth client requires the public backend URL and publishable key.
