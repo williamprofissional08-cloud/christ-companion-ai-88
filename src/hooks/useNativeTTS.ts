@@ -34,7 +34,10 @@ export function useNativeTTS(options: Options = {}) {
   }, [refreshVoices]);
 
   const ptBrVoices = useMemo(
-    () => voices.filter((voice) => voice.lang.toLowerCase().startsWith(lang.toLowerCase().split("-")[0])),
+    () => {
+      const languagePrefix = lang.toLowerCase().split("-")[0] ?? lang.toLowerCase();
+      return voices.filter((voice) => voice.lang.toLowerCase().startsWith(languagePrefix));
+    },
     [lang, voices],
   );
 
@@ -74,9 +77,10 @@ export function useNativeTTS(options: Options = {}) {
       utterance.onresume = () => setState("playing");
       utterance.onend = () => {
         const remaining = queueRef.current;
-        if (remaining.length) {
+        const nextChunk = remaining.shift();
+        if (nextChunk) {
           utteranceRef.current = null;
-          void speak(remaining.shift()!);
+          void speak(nextChunk);
           return;
         }
         utteranceRef.current = null;
