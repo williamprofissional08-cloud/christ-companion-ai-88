@@ -139,6 +139,9 @@ export type LessonQuestion = {
 export type LessonResume = {
   readPercent: number;
   audioPositionSeconds: number;
+  lastSectionIndex: number;
+  audioChunkIndex: number;
+  playbackRate: number;
 };
 
 export function formatClock(totalSeconds: number): string {
@@ -148,7 +151,7 @@ export function formatClock(totalSeconds: number): string {
   return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }
 
-export const PLAYBACK_RATES = [0.75, 1, 1.25, 1.5, 2] as const;
+export const PLAYBACK_RATES = [0.75, 1, 1.25, 1.5, 1.75, 2] as const;
 
 export type LessonView = {
   course: StudentCourse;

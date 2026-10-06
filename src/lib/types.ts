@@ -21,6 +21,8 @@ export type PlanDayContent = {
 };
 
 export type StudyContent = {
+  version?: number;
+  depth?: "simple" | "deep";
   intro: string;
   historicalContext: string;
   keyPoints: { title: string; text: string }[];
@@ -29,6 +31,15 @@ export type StudyContent = {
   questions: string[];
   conclusion: string;
   prayer: string;
+  sections?: {
+    id: string;
+    title: string;
+    body: string;
+    kind?: string;
+    scriptureRefs?: string[];
+    confidence?: "high" | "probable" | "debated" | "uncertain";
+    collapsible?: boolean;
+  }[];
 };
 
 export type SearchContent = {
