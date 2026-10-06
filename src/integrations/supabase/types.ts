@@ -1007,13 +1007,16 @@ export type Database = {
       }
       lesson_progress: {
         Row: {
+          audio_chunk_index: number
           audio_position_seconds: number
           completed_at: string | null
           course_id: string | null
           created_at: string
           id: string
+          last_section_index: number
           lesson_id: string
           notes: string
+          playback_rate: number
           read_percent: number
           reflection: string
           seconds_watched: number
@@ -1022,13 +1025,16 @@ export type Database = {
           user_id: string
         }
         Insert: {
+          audio_chunk_index?: number
           audio_position_seconds?: number
           completed_at?: string | null
           course_id?: string | null
           created_at?: string
           id?: string
+          last_section_index?: number
           lesson_id: string
           notes?: string
+          playback_rate?: number
           read_percent?: number
           reflection?: string
           seconds_watched?: number
@@ -1037,13 +1043,16 @@ export type Database = {
           user_id: string
         }
         Update: {
+          audio_chunk_index?: number
           audio_position_seconds?: number
           completed_at?: string | null
           course_id?: string | null
           created_at?: string
           id?: string
+          last_section_index?: number
           lesson_id?: string
           notes?: string
+          playback_rate?: number
           read_percent?: number
           reflection?: string
           seconds_watched?: number
@@ -1373,6 +1382,48 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      study_progress: {
+        Row: {
+          audio_chunk_index: number
+          completed: boolean
+          completed_at: string | null
+          created_at: string
+          id: string
+          last_section_index: number
+          playback_rate: number
+          read_percent: number
+          study_slug: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          audio_chunk_index?: number
+          completed?: boolean
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          last_section_index?: number
+          playback_rate?: number
+          read_percent?: number
+          study_slug: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          audio_chunk_index?: number
+          completed?: boolean
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          last_section_index?: number
+          playback_rate?: number
+          read_percent?: number
+          study_slug?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
       }
       subscription_plans: {
         Row: {
