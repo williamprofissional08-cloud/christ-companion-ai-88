@@ -1,15 +1,19 @@
-name: Lovable Mobile AI
+name: Nexora Forge AI
 on:
   workflow_dispatch:
     inputs:
       prompt:
-        description: Pedido de alteraÃ§Ã£o
+        description: Pedido de alteração
         required: true
         type: string
       model:
         description: Modelo GitHub Models
         required: false
         default: openai/gpt-4.1
+        type: string
+      target_branch:
+        description: Branch que receberá a alteração
+        required: true
         type: string
 permissions:
   contents: write
@@ -18,66 +22,133 @@ jobs:
   modify:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout projeto alvo
         uses: actions/checkout@v4
         with:
+          ref: ${{ inputs.target_branch }}
           fetch-depth: 0
-      - name: Apply AI change
+      - name: Aplicar alteração com GitHub Models
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           USER_PROMPT: ${{ inputs.prompt }}
           MODEL: ${{ inputs.model }}
         run: |
           python - <<'PY'
-          import os,json,pathlib,urllib.request,urllib.error,re,subprocess
+          import os,json,pathlib,urllib.request,urllib.error,re
           root=pathlib.Path('.')
           prompt=os.environ['USER_PROMPT']; model=os.environ.get('MODEL') or 'openai/gpt-4.1'; token=os.environ['GH_TOKEN']
-          exts={'.ts','.tsx','.js','.jsx','.mjs','.cjs','.json','.css','.scss','.sass','.less','.html','.md','.mdx','.vue','.svelte','.astro','.py','.java','.kt','.go','.rs','.rb','.php','.sql','.graphql','.yml','.yaml','.toml','.xml','.txt','.sh'}
-          names={'Dockerfile','Makefile','README','LICENSE'}; skip_dirs={'.git','node_modules','dist','build','.next','.vercel','.turbo','coverage'}
-          files=[]
+          exts={'.ts','.tsx','.js','.jsx','.mjs','.cjs','.json','.css','.scss','.sass','.less','.html','.md','.mdx','.vue','.svelte','.astro','.py','.java','.kt','.go','.rs','.rb','.php','.sql','.graphql','.yml','.yaml','.toml','.xml','.txt','.sh','.svg'}
+          names={'Dockerfile','Makefile','README','LICENSE'}; skip={'.git'}; files=[]
           for p in root.rglob('*'):
-            if not p.is_file() or any(part in skip_dirs for part in p.parts): continue
+            if not p.is_file() or any(x in skip for x in p.parts): continue
             if p.name.startswith('.env') and p.name!='.env.example': continue
-            if p.name not in names and p.suffix.lower() not in exts: continue
-            try: data=p.read_text(encoding='utf-8')
+            try: data=p.read_text(encoding='utf-8',errors='replace')
             except Exception: continue
-            if len(data)>50000: continue
             files.append((p.as_posix(),data))
-          terms=set(re.findall(r'[A-Za-zÃ-Ã¿0-9_/-]{3,}',prompt.lower())); scored=[]
+          terms=set(re.findall(r'[A-Za-zÀ-ÿ0-9_/-]{3,}',prompt.lower())); scored=[]
           for path,data in files:
             low=(path+' '+data[:12000]).lower(); score=sum(2 for t in terms if t in low)
             if pathlib.Path(path).name.lower() in {'package.json','vite.config.ts','vite.config.js','src/app.tsx','src/app.jsx','src/main.tsx','src/main.jsx'}: score+=3
             scored.append((score,path,data))
-          scored.sort(key=lambda x:(-x[0],x[1])); selected=scored[:24]
-          while selected and sum(len(x[2]) for x in selected)>110000: selected.pop()
+          scored.sort(key=lambda x:(-x[0],x[1])); selected=scored
           context='\n\n'.join('===== FILE: '+p+' =====\n'+d for _,p,d in selected)
-          system='''You are a senior software engineer modifying an existing GitHub repository. Preserve existing functionality. Make only the changes required by the user's request. Never expose or create secrets. Never modify .github/workflows, .env files, lockfiles, or generated/binary files unless explicitly requested. Return ONLY valid JSON: {"summary":"...","files":[{"path":"...","content":"FULL FILE CONTENT"}]}. Each returned file must be complete, not a diff or snippet. Only return files actually provided in context. Keep imports and project conventions consistent.'''
-          user='User request:\n'+prompt+'\n\nRepository files selected for context ('+str(len(selected))+'):\n'+context
+          system='''You are a senior software engineer modifying an existing GitHub repository. Preserve existing functionality. Make only changes required by the user. Never modify .github/workflows, .env files, lockfiles, generated/binary files, or files outside the repository. Return ONLY valid JSON with keys summary and files. files must contain objects {path,content} where content is the COMPLETE new file content. Only include files that actually need changes. New source/test files are allowed when necessary, but use a safe relative path. Do not return diffs or snippets.'''
+          user='User request:\n'+prompt+'\n\nRelevant repository files:\n'+context
           payload=json.dumps({'model':model,'messages':[{'role':'system','content':system},{'role':'user','content':user}],'temperature':0.1}).encode()
           req=urllib.request.Request('https://models.github.ai/inference/chat/completions',data=payload,headers={'Content-Type':'application/json','Accept':'application/json','Authorization':'Bearer '+token})
           try:
             with urllib.request.urlopen(req,timeout=180) as r: result=json.loads(r.read().decode())
-          except urllib.error.HTTPError as e: raise SystemExit('GitHub Models HTTP '+str(e.code)+': '+e.read().decode(errors='replace')[:1000])
-          except Exception as e: raise SystemExit('GitHub Models connection error: '+str(e))
-          raw=result.get('choices',[{}])[0].get('message',{}).get('content','').strip(); raw=re.sub(r'^```(?:json)?\s*','',raw); raw=re.sub(r'\s*```$','',raw)
+          except urllib.error.HTTPError as e:
+            raise SystemExit('GitHub Models HTTP '+str(e.code)+': '+e.read().decode(errors='replace')[:1200])
+          raw=result.get('choices',[{}])[0].get('message',{}).get('content','').strip(); fence=chr(96); raw=re.sub(r'^'+re.escape(fence)*3+r'(?:json)?\s*','',raw); raw=re.sub(r'\s*'+re.escape(fence)*3+r'$','',raw)
           try: proposal=json.loads(raw)
-          except Exception: raise SystemExit('Model did not return valid JSON: '+raw[:1500])
-          changed=proposal.get('files') or []; allowed={p for _,p,_ in selected}
-          if not changed: raise SystemExit('The AI returned no files to change.')
-          for f in changed:
-            path=f.get('path'); content=f.get('content')
-            if not path or not isinstance(content,str): raise SystemExit('Invalid file returned by model.')
-            if path not in allowed: raise SystemExit('Model attempted to modify a file not in context: '+path)
-            if path.startswith('.github/workflows/') or '.env' in pathlib.Path(path).name: raise SystemExit('Blocked protected file: '+path)
-            target=root/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(content,encoding='utf-8')
-          pkg=root/'package.json'
-          if pkg.exists():
-            try: json.loads(pkg.read_text(encoding='utf-8'))
-            except Exception as e: raise SystemExit('package.json became invalid: '+str(e))
-          subprocess.run(['git','config','user.name','Lovable Mobile AI'],check=True); subprocess.run(['git','config','user.email','actions@github.com'],check=True)
-          subprocess.run(['git','add','-A'],check=True)
-          if subprocess.run(['git','diff','--cached','--quiet']).returncode==0: raise SystemExit('No actual changes were produced.')
-          summary=str(proposal.get('summary') or 'AI modification applied')[:120]
-          subprocess.run(['git','commit','-m','Lovable Mobile AI: '+summary],check=True); subprocess.run(['git','push'],check=True)
-          print('LOVABLE_MOBILE_SUMMARY='+summary); print('LOVABLE_MOBILE_FILES='+','.join(f.get('path','') for f in changed))
+          except Exception: raise SystemExit('A IA não retornou JSON válido: '+raw[:1500])
+          def safe_path(raw_path):
+            try: p=pathlib.PurePosixPath(str(raw_path))
+            except Exception: return None
+            if p.is_absolute() or '..' in p.parts: return None
+            clean=p.as_posix().lstrip('./')
+            if not clean or clean.startswith('.github/') or clean.startswith('.git/') or any(part.startswith('.env') and part!='.env.example' for part in p.parts): return None
+            return clean
+          allowed={p for _,p,_ in selected}; changed=[]
+          for f in proposal.get('files') or []:
+            path=safe_path(f.get('path')) if isinstance(f,dict) else None; content=f.get('content') if isinstance(f,dict) else None
+            if not path: raise SystemExit('Caminho de arquivo inseguro: '+str(f.get('path') if isinstance(f,dict) else f))
+            if not isinstance(content,str): raise SystemExit('Conteúdo inválido para: '+path)
+            target=(root/path).resolve()
+            if not target.is_relative_to(root.resolve()): raise SystemExit('Arquivo fora do repositório: '+path)
+            target.parent.mkdir(parents=True,exist_ok=True); target.write_text(content,encoding='utf-8'); changed.append(path)
+          changed=list(dict.fromkeys(changed))
+          if not changed: raise SystemExit('A IA não identificou arquivos para alterar.')
+          tracked_changed=os.system('git diff --quiet -- '+ ' '.join(__import__('shlex').quote(p) for p in changed)) != 0
+          untracked=__import__('subprocess').check_output(['git','ls-files','--others','--exclude-standard','--',*changed],text=True).strip()
+          if not tracked_changed and not untracked: raise SystemExit('Nenhuma alteração real foi produzida.')
+          summary=str(proposal.get('summary') or 'Alteração aplicada')[:180]
+          pathlib.Path('.lovable-mobile-changed.json').write_text(json.dumps(changed),encoding='utf-8')
+          pathlib.Path('.lovable-mobile-summary.txt').write_text(summary,encoding='utf-8')
+          print('LOVABLE_MOBILE_SUMMARY='+summary); print('LOVABLE_MOBILE_FILES='+','.join(changed))
+          PY
+      - name: Instalar dependências e validar o projeto
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          if [ -f package.json ]; then
+            if [ -f pnpm-lock.yaml ]; then
+              corepack enable
+              pnpm install --frozen-lockfile
+              PM=(pnpm)
+            elif [ -f yarn.lock ]; then
+              corepack enable
+              yarn install --immutable || yarn install --frozen-lockfile
+              PM=(yarn)
+            elif [ -f package-lock.json ]; then
+              npm ci --no-audit --no-fund
+              PM=(npm)
+            else
+              npm install --no-audit --no-fund
+              PM=(npm)
+            fi
+            script_value(){ node -e "const s=require('./package.json').scripts||{}; process.stdout.write(s[process.argv[1]]||'')" "$1"; }
+            run_script(){
+              local name="$1" command
+              command="$(script_value "$name")"
+              if [ -n "$command" ] && [[ "$command" != *"no test specified"* ]]; then
+                echo "Executando script: $name"
+                CI=true "${PM[@]}" run "$name"
+              else
+                echo "Script $name não configurado; etapa ignorada."
+              fi
+            }
+            run_script lint
+            run_script typecheck
+            run_script test
+            run_script build
+          else
+            echo "package.json não encontrado; validação de Node não aplicável."
+          fi
+          if find . -type f -name '*.py' -not -path './.git/*' -print -quit | grep -q .; then
+            python - <<'PY'
+          import pathlib,py_compile
+          for p in pathlib.Path('.').rglob('*.py'):
+              if '.git' in p.parts or 'node_modules' in p.parts: continue
+              py_compile.compile(str(p),doraise=True)
+          print('Sintaxe Python validada.')
+          PY
+          fi
+          git diff --check
+      - name: Confirmar alteração validada
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          python - <<'PY'
+          import json,pathlib,subprocess
+          changed=json.loads(pathlib.Path('.lovable-mobile-changed.json').read_text())
+          subprocess.run(['git','config','user.name','Nexora Forge AI'],check=True)
+          subprocess.run(['git','config','user.email','actions@github.com'],check=True)
+          subprocess.run(['git','add','--',*changed],check=True)
+          subprocess.run(['git','diff','--cached','--check'],check=True)
+          if subprocess.run(['git','diff','--cached','--quiet'],check=False).returncode==0: raise SystemExit('Nenhuma alteração validada para commit.')
+          summary=pathlib.Path('.lovable-mobile-summary.txt').read_text().strip()[:180]
+          subprocess.run(['git','commit','-m','Nexora Forge AI: '+summary],check=True)
+          subprocess.run(['git','push'],check=True)
           PY
