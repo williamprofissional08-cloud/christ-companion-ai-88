@@ -125,7 +125,9 @@ export const getStudentLesson = createServerFn({ method: "GET" })
               .maybeSingle(),
             context.supabase
               .from("lesson_progress")
-              .select("read_percent, audio_position_seconds")
+              .select(
+                "read_percent, audio_position_seconds, last_section_index, audio_chunk_index, playback_rate",
+              )
               .eq("user_id", context.userId)
               .eq("lesson_id", current.lesson.id)
               .maybeSingle(),
@@ -208,6 +210,9 @@ export const getStudentLesson = createServerFn({ method: "GET" })
       resume: {
         readPercent: progressRow?.read_percent ?? 0,
         audioPositionSeconds: progressRow?.audio_position_seconds ?? 0,
+        lastSectionIndex: progressRow?.last_section_index ?? 0,
+        audioChunkIndex: progressRow?.audio_chunk_index ?? 0,
+        playbackRate: Number(progressRow?.playback_rate ?? 1),
       },
       status: current.lesson.completed ? "concluida" : "nao_iniciada",
       locked,
