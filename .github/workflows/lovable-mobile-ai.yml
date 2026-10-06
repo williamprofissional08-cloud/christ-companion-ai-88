@@ -15,6 +15,10 @@ on:
         description: Branch que receberá a alteração
         required: true
         type: string
+      lovable_project_id:
+        description: ID do projeto Lovable autorizado para edição
+        required: true
+        type: string
 permissions:
   contents: write
 jobs:
@@ -31,12 +35,14 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           USER_PROMPT: ${{ inputs.prompt }}
           GEMINI_MODEL: ${{ inputs.model }}
+          LOVABLE_PROJECT_ID: ${{ inputs.lovable_project_id }}
         run: |
           python - <<'PY'
           import os,json,pathlib,urllib.request,urllib.error,urllib.parse,re
           root=pathlib.Path('.')
-          prompt=os.environ.get('USER_PROMPT','').strip(); model=os.environ.get('GEMINI_MODEL') or 'gemini-3.8-flash'; api_key=os.environ.get('GEMINI_API_KEY','').strip()
+          prompt=os.environ.get('USER_PROMPT','').strip(); model=os.environ.get('GEMINI_MODEL') or 'gemini-3.8-flash'; api_key=os.environ.get('GEMINI_API_KEY','').strip(); lovable_project_id=os.environ.get('LOVABLE_PROJECT_ID','').strip()
           if not prompt: raise SystemExit('Entrada inválida: o prompt do workflow está vazio.')
+          if not lovable_project_id: raise SystemExit('Lovable Project ID ausente: a edição foi bloqueada.')
           if not api_key: raise SystemExit('Credencial ausente: GEMINI_API_KEY não foi configurada nos Secrets do repositório.')
           exts={'.ts','.tsx','.js','.jsx','.mjs','.cjs','.json','.css','.scss','.sass','.less','.html','.md','.mdx','.vue','.svelte','.astro','.py','.java','.kt','.go','.rs','.rb','.php','.sql','.graphql','.yml','.yaml','.toml','.xml','.txt','.sh','.svg'}
           binary_exts={'.png','.jpg','.jpeg','.gif','.webp','.ico','.bmp','.pdf','.zip','.gz','.tar','.woff','.woff2','.ttf','.eot','.mp4','.mp3','.mov','.avi','.exe','.dll','.so','.dylib','.db','.sqlite'}
@@ -57,7 +63,7 @@ jobs:
           scored.sort(key=lambda x:(-x[0],x[1])); selected=scored[:160]
           context='\n\n'.join('===== FILE: '+p+' =====\n'+d for _,p,d in selected)
           system='''You are a senior software engineer modifying an existing GitHub repository. Preserve existing functionality. Make only changes required by the user. Never modify .github/workflows, .env files, lockfiles, generated/binary files, or files outside the repository. Return ONLY valid JSON with keys summary and files. files must contain objects {path,content} where content is the COMPLETE new file content. Only include files that actually need changes. New source/test files are allowed when necessary, but use a safe relative path. Do not return diffs or snippets.'''
-          user='User request:\n'+prompt+'\n\nRelevant repository files:\n'+context
+          user='Lovable Project ID: '+lovable_project_id+'\nUser request:\n'+prompt+'\n\nRelevant repository files:\n'+context
           schema={'type':'OBJECT','properties':{'summary':{'type':'STRING'},'files':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'path':{'type':'STRING'},'content':{'type':'STRING'}},'required':['path','content']}}},'required':['summary','files']}
           payload=json.dumps({'contents':[{'role':'user','parts':[{'text':system+'\n\n'+user}]}],'generationConfig':{'temperature':0.1,'responseMimeType':'application/json','responseSchema':schema}}).encode()
           endpoint='https://generativelanguage.googleapis.com/v1beta/models/'+urllib.parse.quote(model,safe='')+':generateContent?key='+urllib.parse.quote(api_key,safe='')
