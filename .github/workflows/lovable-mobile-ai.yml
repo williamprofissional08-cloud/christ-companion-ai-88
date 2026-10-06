@@ -36,7 +36,9 @@ jobs:
           python - <<'PY'
           import os,json,pathlib,urllib.request,urllib.error,re
           root=pathlib.Path('.')
-          prompt=os.environ['USER_PROMPT']; model=os.environ.get('MODEL') or 'openai/gpt-4.1'; token=os.environ['GH_TOKEN']
+          prompt=os.environ.get('USER_PROMPT','').strip(); model=os.environ.get('MODEL') or 'openai/gpt-4.1'; token=os.environ.get('GH_TOKEN','').strip()
+          if not prompt: raise SystemExit('Entrada inválida: o prompt do workflow está vazio.')
+          if not token: raise SystemExit('Credencial ausente: GH_TOKEN não foi disponibilizado pelo GitHub Actions.')
           exts={'.ts','.tsx','.js','.jsx','.mjs','.cjs','.json','.css','.scss','.sass','.less','.html','.md','.mdx','.vue','.svelte','.astro','.py','.java','.kt','.go','.rs','.rb','.php','.sql','.graphql','.yml','.yaml','.toml','.xml','.txt','.sh','.svg'}
           names={'Dockerfile','Makefile','README','LICENSE'}; skip={'.git'}; files=[]
           for p in root.rglob('*'):
@@ -56,13 +58,34 @@ jobs:
           user='User request:\n'+prompt+'\n\nRelevant repository files:\n'+context
           payload=json.dumps({'model':model,'messages':[{'role':'system','content':system},{'role':'user','content':user}],'temperature':0.1}).encode()
           req=urllib.request.Request('https://models.github.ai/inference/chat/completions',data=payload,headers={'Content-Type':'application/json','Accept':'application/json','Authorization':'Bearer '+token})
+          def safe_error_text(value):
+            text=re.sub(r'Bearer\s+[^\s]+','Bearer [redacted]',str(value or ''),flags=re.I)
+            text=re.sub(r'(token|api[_-]?key|secret|authorization)\s*[:=]\s*[^,\s]+',r'\1=[redacted]',text,flags=re.I)
+            return text.replace('\n',' ')[:1200]
+          def parse_json_text(label, raw):
+            text=raw.decode('utf-8','replace') if isinstance(raw,(bytes,bytearray)) else str(raw or '')
+            if not text.strip(): raise SystemExit(label+' retornou corpo vazio; json não foi interpretado.')
+            try: return json.loads(text)
+            except json.JSONDecodeError as e: raise SystemExit(label+' retornou conteúdo que não é JSON válido (linha '+str(e.lineno)+', coluna '+str(e.colno)+').')
           try:
-            with urllib.request.urlopen(req,timeout=180) as r: result=json.loads(r.read().decode())
+            with urllib.request.urlopen(req,timeout=180) as r:
+              status=getattr(r,'status',200); body=r.read()
+              if status<200 or status>=300: raise SystemExit('GitHub Models HTTP '+str(status)+': resposta não bem-sucedida.')
+              result=parse_json_text('GitHub Models',body)
           except urllib.error.HTTPError as e:
-            raise SystemExit('GitHub Models HTTP '+str(e.code)+': '+e.read().decode(errors='replace')[:1200])
-          raw=result.get('choices',[{}])[0].get('message',{}).get('content','').strip(); fence=chr(96); raw=re.sub(r'^'+re.escape(fence)*3+r'(?:json)?\s*','',raw); raw=re.sub(r'\s*'+re.escape(fence)*3+r'$','',raw)
-          try: proposal=json.loads(raw)
-          except Exception: raise SystemExit('A IA não retornou JSON válido: '+raw[:1500])
+            body=e.read().decode(errors='replace')
+            raise SystemExit('GitHub Models HTTP '+str(e.code)+': '+safe_error_text(body))
+          except urllib.error.URLError as e:
+            raise SystemExit('Falha de rede ao acessar GitHub Models: '+safe_error_text(e.reason))
+          if not isinstance(result,dict): raise SystemExit('GitHub Models retornou JSON com formato inesperado.')
+          choices=result.get('choices')
+          if not isinstance(choices,list) or not choices: raise SystemExit('GitHub Models não retornou choices; verifique modelo, permissões e limite da API.')
+          message=choices[0].get('message') if isinstance(choices[0],dict) else None
+          raw=message.get('content','').strip() if isinstance(message,dict) else ''
+          if not raw: raise SystemExit('GitHub Models retornou choices sem conteúdo; verifique a resposta e as permissões do modelo.')
+          fence=chr(96); raw=re.sub(r'^'+re.escape(fence)*3+r'(?:json)?\s*','',raw); raw=re.sub(r'\s*'+re.escape(fence)*3+r'$','',raw)
+          proposal=parse_json_text('Conteúdo JSON retornado pela IA',raw)
+          if not isinstance(proposal,dict): raise SystemExit('A IA retornou JSON, mas o objeto principal é inválido.')
           def safe_path(raw_path):
             try: p=pathlib.PurePosixPath(str(raw_path))
             except Exception: return None
@@ -84,7 +107,7 @@ jobs:
           untracked=__import__('subprocess').check_output(['git','ls-files','--others','--exclude-standard','--',*changed],text=True).strip()
           if not tracked_changed and not untracked: raise SystemExit('Nenhuma alteração real foi produzida.')
           summary=str(proposal.get('summary') or 'Alteração aplicada')[:180]
-          pathlib.Path('.lovable-mobile-changed.json').write_text(json.dumps(changed),encoding='utf-8')
+          pathlib.Path('.lovable-mobile-changed.json').write_text(json.dumps(changed,ensure_ascii=False),encoding='utf-8')
           pathlib.Path('.lovable-mobile-summary.txt').write_text(summary,encoding='utf-8')
           print('LOVABLE_MOBILE_SUMMARY='+summary); print('LOVABLE_MOBILE_FILES='+','.join(changed))
           PY
@@ -142,7 +165,13 @@ jobs:
           set -Eeuo pipefail
           python - <<'PY'
           import json,pathlib,subprocess
-          changed=json.loads(pathlib.Path('.lovable-mobile-changed.json').read_text())
+          control=pathlib.Path('.lovable-mobile-changed.json')
+          if not control.is_file(): raise SystemExit('Arquivo de controle ausente: .lovable-mobile-changed.json')
+          raw=control.read_text(encoding='utf-8')
+          if not raw.strip(): raise SystemExit('Arquivo de controle vazio: .lovable-mobile-changed.json')
+          try: changed=json.loads(raw)
+          except json.JSONDecodeError as e: raise SystemExit('Arquivo de controle inválido: JSON na linha '+str(e.lineno)+', coluna '+str(e.colno))
+          if not isinstance(changed,list) or not changed or not all(isinstance(x,str) and x for x in changed): raise SystemExit('Arquivo de controle inválido: lista de arquivos ausente ou vazia.')
           subprocess.run(['git','config','user.name','Nexora Forge AI'],check=True)
           subprocess.run(['git','config','user.email','actions@github.com'],check=True)
           subprocess.run(['git','add','--',*changed],check=True)
