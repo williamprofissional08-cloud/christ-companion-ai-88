@@ -7,9 +7,9 @@ on:
         required: true
         type: string
       model:
-        description: Modelo GitHub Models
+        description: Modelo Gemini
         required: false
-        default: openai/gpt-4.1
+        default: gemini-3.8-flash
         type: string
       target_branch:
         description: Branch que receberá a alteração
@@ -17,7 +17,6 @@ on:
         type: string
 permissions:
   contents: write
-  models: read
 jobs:
   modify:
     runs-on: ubuntu-latest
@@ -27,23 +26,26 @@ jobs:
         with:
           ref: ${{ inputs.target_branch }}
           fetch-depth: 0
-      - name: Aplicar alteração com GitHub Models
+      - name: Aplicar alteração com Gemini API
         env:
-          GH_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           USER_PROMPT: ${{ inputs.prompt }}
-          MODEL: ${{ inputs.model }}
+          GEMINI_MODEL: ${{ inputs.model }}
         run: |
           python - <<'PY'
-          import os,json,pathlib,urllib.request,urllib.error,re
+          import os,json,pathlib,urllib.request,urllib.error,urllib.parse,re
           root=pathlib.Path('.')
-          prompt=os.environ.get('USER_PROMPT','').strip(); model=os.environ.get('MODEL') or 'openai/gpt-4.1'; token=os.environ.get('GH_TOKEN','').strip()
+          prompt=os.environ.get('USER_PROMPT','').strip(); model=os.environ.get('GEMINI_MODEL') or 'gemini-3.8-flash'; api_key=os.environ.get('GEMINI_API_KEY','').strip()
           if not prompt: raise SystemExit('Entrada inválida: o prompt do workflow está vazio.')
-          if not token: raise SystemExit('Credencial ausente: GH_TOKEN não foi disponibilizado pelo GitHub Actions.')
+          if not api_key: raise SystemExit('Credencial ausente: GEMINI_API_KEY não foi configurada nos Secrets do repositório.')
           exts={'.ts','.tsx','.js','.jsx','.mjs','.cjs','.json','.css','.scss','.sass','.less','.html','.md','.mdx','.vue','.svelte','.astro','.py','.java','.kt','.go','.rs','.rb','.php','.sql','.graphql','.yml','.yaml','.toml','.xml','.txt','.sh','.svg'}
-          names={'Dockerfile','Makefile','README','LICENSE'}; skip={'.git'}; files=[]
+          binary_exts={'.png','.jpg','.jpeg','.gif','.webp','.ico','.bmp','.pdf','.zip','.gz','.tar','.woff','.woff2','.ttf','.eot','.mp4','.mp3','.mov','.avi','.exe','.dll','.so','.dylib','.db','.sqlite'}
+          names={'Dockerfile','Makefile','README','LICENSE'}; skip={'.git','node_modules','dist','build','.next','.cache','coverage'}; files=[]
           for p in root.rglob('*'):
             if not p.is_file() or any(x in skip for x in p.parts): continue
             if p.name.startswith('.env') and p.name!='.env.example': continue
+            if p.suffix.lower() in binary_exts: continue
+            if p.suffix.lower() not in exts and p.name not in names: continue
             try: data=p.read_text(encoding='utf-8',errors='replace')
             except Exception: continue
             files.append((p.as_posix(),data))
@@ -52,40 +54,43 @@ jobs:
             low=(path+' '+data[:12000]).lower(); score=sum(2 for t in terms if t in low)
             if pathlib.Path(path).name.lower() in {'package.json','vite.config.ts','vite.config.js','src/app.tsx','src/app.jsx','src/main.tsx','src/main.jsx'}: score+=3
             scored.append((score,path,data))
-          scored.sort(key=lambda x:(-x[0],x[1])); selected=scored
+          scored.sort(key=lambda x:(-x[0],x[1])); selected=scored[:160]
           context='\n\n'.join('===== FILE: '+p+' =====\n'+d for _,p,d in selected)
           system='''You are a senior software engineer modifying an existing GitHub repository. Preserve existing functionality. Make only changes required by the user. Never modify .github/workflows, .env files, lockfiles, generated/binary files, or files outside the repository. Return ONLY valid JSON with keys summary and files. files must contain objects {path,content} where content is the COMPLETE new file content. Only include files that actually need changes. New source/test files are allowed when necessary, but use a safe relative path. Do not return diffs or snippets.'''
           user='User request:\n'+prompt+'\n\nRelevant repository files:\n'+context
-          payload=json.dumps({'model':model,'messages':[{'role':'system','content':system},{'role':'user','content':user}],'temperature':0.1}).encode()
-          req=urllib.request.Request('https://models.github.ai/inference/chat/completions',data=payload,headers={'Content-Type':'application/json','Accept':'application/json','Authorization':'Bearer '+token})
+          schema={'type':'OBJECT','properties':{'summary':{'type':'STRING'},'files':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'path':{'type':'STRING'},'content':{'type':'STRING'}},'required':['path','content']}}},'required':['summary','files']}
+          payload=json.dumps({'contents':[{'role':'user','parts':[{'text':system+'\n\n'+user}]}],'generationConfig':{'temperature':0.1,'responseMimeType':'application/json','responseSchema':schema}}).encode()
+          endpoint='https://generativelanguage.googleapis.com/v1beta/models/'+urllib.parse.quote(model,safe='')+':generateContent?key='+urllib.parse.quote(api_key,safe='')
+          req=urllib.request.Request(endpoint,data=payload,headers={'Content-Type':'application/json','Accept':'application/json'})
           def safe_error_text(value):
-            text=re.sub(r'Bearer\s+[^\s]+','Bearer [redacted]',str(value or ''),flags=re.I)
-            text=re.sub(r'(token|api[_-]?key|secret|authorization)\s*[:=]\s*[^,\s]+',r'\1=[redacted]',text,flags=re.I)
+            text=re.sub(r'(key|token|secret|authorization)\s*[:=]\s*[^,\s]+',r'\1=[redacted]',str(value or ''),flags=re.I)
             return text.replace('\n',' ')[:1200]
           def parse_json_text(label, raw):
             text=raw.decode('utf-8','replace') if isinstance(raw,(bytes,bytearray)) else str(raw or '')
-            if not text.strip(): raise SystemExit(label+' retornou corpo vazio; json não foi interpretado.')
+            if not text.strip(): raise SystemExit(label+' retornou resposta vazia.')
             try: return json.loads(text)
-            except json.JSONDecodeError as e: raise SystemExit(label+' retornou conteúdo que não é JSON válido (linha '+str(e.lineno)+', coluna '+str(e.colno)+').')
+            except json.JSONDecodeError: raise SystemExit(label+' retornou JSON inválido.')
           try:
             with urllib.request.urlopen(req,timeout=180) as r:
               status=getattr(r,'status',200); body=r.read()
-              if status<200 or status>=300: raise SystemExit('GitHub Models HTTP '+str(status)+': resposta não bem-sucedida.')
-              result=parse_json_text('GitHub Models',body)
+              if status<200 or status>=300: raise SystemExit('Gemini API HTTP '+str(status)+': erro ao consultar a API.')
+              result=parse_json_text('Gemini API',body)
           except urllib.error.HTTPError as e:
-            body=e.read().decode(errors='replace')
-            raise SystemExit('GitHub Models HTTP '+str(e.code)+': '+safe_error_text(body))
+            if e.code in (401,403): raise SystemExit('Falha de autenticação da Gemini API. Verifique GEMINI_API_KEY.')
+            if e.code==404: raise SystemExit('Modelo Gemini inválido ou indisponível: '+model+'.')
+            raise SystemExit('Gemini API HTTP '+str(e.code)+': erro ao consultar a API.')
           except urllib.error.URLError as e:
-            raise SystemExit('Falha de rede ao acessar GitHub Models: '+safe_error_text(e.reason))
-          if not isinstance(result,dict): raise SystemExit('GitHub Models retornou JSON com formato inesperado.')
-          choices=result.get('choices')
-          if not isinstance(choices,list) or not choices: raise SystemExit('GitHub Models não retornou choices; verifique modelo, permissões e limite da API.')
-          message=choices[0].get('message') if isinstance(choices[0],dict) else None
-          raw=message.get('content','').strip() if isinstance(message,dict) else ''
-          if not raw: raise SystemExit('GitHub Models retornou choices sem conteúdo; verifique a resposta e as permissões do modelo.')
-          fence=chr(96); raw=re.sub(r'^'+re.escape(fence)*3+r'(?:json)?\s*','',raw); raw=re.sub(r'\s*'+re.escape(fence)*3+r'$','',raw)
-          proposal=parse_json_text('Conteúdo JSON retornado pela IA',raw)
-          if not isinstance(proposal,dict): raise SystemExit('A IA retornou JSON, mas o objeto principal é inválido.')
+            raise SystemExit('Falha de rede ao consultar a Gemini API.')
+          candidates=result.get('candidates') if isinstance(result,dict) else None
+          if not isinstance(candidates,list) or not candidates: raise SystemExit('Gemini API retornou resposta sem candidatos.')
+          parts=candidates[0].get('content',{}).get('parts',[]) if isinstance(candidates[0],dict) else []
+          raw=''.join(str(part.get('text','')) for part in parts if isinstance(part,dict)).strip()
+          if not raw: raise SystemExit('Gemini API retornou resposta vazia.')
+          proposal=parse_json_text('Gemini API',raw)
+          if not isinstance(proposal,dict): raise SystemExit('Gemini API retornou JSON inválido.')
+          if not isinstance(proposal.get('summary'),str): raise SystemExit('Gemini API retornou summary inválido.')
+          if not isinstance(proposal.get('files'),list): raise SystemExit('A IA não retornou arquivos para alteração.')
+          if not proposal['files']: raise SystemExit('Nenhuma alteração foi proposta pela IA.')
           def safe_path(raw_path):
             try: p=pathlib.PurePosixPath(str(raw_path))
             except Exception: return None
@@ -98,6 +103,9 @@ jobs:
             path=safe_path(f.get('path')) if isinstance(f,dict) else None; content=f.get('content') if isinstance(f,dict) else None
             if not path: raise SystemExit('Caminho de arquivo inseguro: '+str(f.get('path') if isinstance(f,dict) else f))
             if not isinstance(content,str): raise SystemExit('Conteúdo inválido para: '+path)
+            allowed={p for _,p,_ in selected}
+            existing=(root/path).exists()
+            if existing and path not in allowed: raise SystemExit('Arquivo existente fora do contexto permitido: '+path)
             target=(root/path).resolve()
             if not target.is_relative_to(root.resolve()): raise SystemExit('Arquivo fora do repositório: '+path)
             target.parent.mkdir(parents=True,exist_ok=True); target.write_text(content,encoding='utf-8'); changed.append(path)
