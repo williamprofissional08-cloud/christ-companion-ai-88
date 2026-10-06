@@ -4,6 +4,7 @@ export type Study = {
   category: string;
   reference: string;
   summary: string;
+  depth: "simple" | "deep";
 };
 
 export const STUDY_CATEGORIES = [
@@ -26,8 +27,9 @@ function study(
   category: string,
   reference: string,
   summary: string,
+  depth: "simple" | "deep" = "simple",
 ): Study {
-  return { slug, title, category, reference, summary };
+  return { slug, title, category, reference, summary, depth };
 }
 
 export const STUDIES: Study[] = [
@@ -61,7 +63,7 @@ export const STUDIES: Study[] = [
   study("talentos", "A parábola dos talentos", "Parábolas", "Mateus 25:14-30", "Fidelidade e mordomia enquanto o Senhor não volta."),
   study("ovelha-perdida", "A ovelha perdida", "Parábolas", "Lucas 15:1-7", "O valor de uma única alma."),
   study("multiplicacao-paes", "A multiplicação dos pães", "Milagres", "João 6:1-15", "Deus multiplica o pouco entregue."),
-  study("acalmando-tempestade", "Jesus acalma a tempestade", "Milagres", "Marcos 4:35-41", "Fé em meio ao caos."),
+  study("acalmando-tempestade", "Jesus acalma a tempestade", "Milagres", "Marcos 4:35-41", "A autoridade de Jesus sobre a criação e o chamado à confiança nele em meio ao perigo.", "deep"),
   study("cego-de-nascenca", "A cura do cego de nascença", "Milagres", "João 9", "Da escuridão à luz e ao testemunho."),
   study("ressurreicao-lazaro", "A ressurreição de Lázaro", "Milagres", "João 11", "Jesus é a ressurreição e a vida."),
   study("mar-vermelho", "A travessia do mar Vermelho", "Milagres", "Êxodo 14", "Quando não há caminho, Deus abre caminho."),
