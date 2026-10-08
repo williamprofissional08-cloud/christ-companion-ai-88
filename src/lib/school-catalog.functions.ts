@@ -87,7 +87,8 @@ export const getStudentLesson = createServerFn({ method: "GET" })
     );
     const index = flat.findIndex((item) => item.lesson.slug === data.lessonSlug);
     if (index === -1) return null;
-    const current = flat[index]!;
+    const current = flat[index];
+    if (!current) return null;
 
     const premium = view.isPremium;
     const locked = current.lesson.tier === "premium" && !premium;
@@ -217,10 +218,10 @@ export const getStudentLesson = createServerFn({ method: "GET" })
       status: current.lesson.completed ? "concluida" : "nao_iniciada",
       locked,
       lockReason: locked ? "premium" : null,
-      prev: index > 0 ? { slug: flat[index - 1]!.lesson.slug, title: flat[index - 1]!.lesson.title } : null,
+      prev: flat[index - 1] ? { slug: flat[index - 1].lesson.slug, title: flat[index - 1].lesson.title } : null,
       next:
-        index < flat.length - 1
-          ? { slug: flat[index + 1]!.lesson.slug, title: flat[index + 1]!.lesson.title }
+        flat[index + 1]
+          ? { slug: flat[index + 1].lesson.slug, title: flat[index + 1].lesson.title }
           : null,
       totalLessons: view.totalLessons,
       completedLessons: view.completedLessons,
@@ -301,6 +302,9 @@ export const saveLessonCheckpoint = createServerFn({ method: "POST" })
         lessonId: z.string().uuid(),
         readPercent: z.number().int().min(0).max(100).optional(),
         audioPositionSeconds: z.number().int().min(0).max(86400).optional(),
+        lastSectionIndex: z.number().int().min(0).max(10000).optional(),
+        audioChunkIndex: z.number().int().min(0).max(100000).optional(),
+        playbackRate: z.number().refine((value) => [0.75, 1, 1.25, 1.5, 1.75, 2].includes(value)).optional(),
       })
       .parse(input),
   )
@@ -321,13 +325,18 @@ export const saveLessonCheckpoint = createServerFn({ method: "POST" })
 
     const { data: existing } = await context.supabase
       .from("lesson_progress")
-      .select("id, status, read_percent, audio_position_seconds")
+      .select("id, status, read_percent, audio_position_seconds, last_section_index, audio_chunk_index, playback_rate")
       .eq("user_id", context.userId)
       .eq("lesson_id", lesson.id)
       .maybeSingle();
 
     const readPercent = Math.max(data.readPercent ?? 0, existing?.read_percent ?? 0);
     const audioPositionSeconds = data.audioPositionSeconds ?? existing?.audio_position_seconds ?? 0;
+    const checkpoint = {
+      last_section_index: data.lastSectionIndex ?? existing?.last_section_index ?? 0,
+      audio_chunk_index: data.audioChunkIndex ?? existing?.audio_chunk_index ?? 0,
+      playback_rate: data.playbackRate ?? existing?.playback_rate ?? 1,
+    };
 
     if (existing) {
       const { error: upErr } = await context.supabase
@@ -335,6 +344,7 @@ export const saveLessonCheckpoint = createServerFn({ method: "POST" })
         .update({
           read_percent: readPercent,
           audio_position_seconds: audioPositionSeconds,
+          ...checkpoint,
           status: existing.status === "concluida" ? existing.status : "em_andamento",
         })
         .eq("id", existing.id);
@@ -347,9 +357,10 @@ export const saveLessonCheckpoint = createServerFn({ method: "POST" })
         status: "em_andamento",
         read_percent: readPercent,
         audio_position_seconds: audioPositionSeconds,
+        ...checkpoint,
       });
       if (insErr) throw new Error(insErr.message);
     }
 
-    return { readPercent, audioPositionSeconds };
+    return { readPercent, audioPositionSeconds, lastSectionIndex: checkpoint.last_section_index, audioChunkIndex: checkpoint.audio_chunk_index, playbackRate: Number(checkpoint.playback_rate) };
   });
