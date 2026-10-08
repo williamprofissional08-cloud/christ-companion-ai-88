@@ -18,6 +18,10 @@ export const Route = createFileRoute("/_authenticated/biblia")({
   validateSearch: (search) => searchSchema.parse(search),
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { property: "og:title", content: "Bíblia — Caminhando com Cristo" },
+      { property: "og:description", content: "Navegue pelos 66 livros e capítulos da Bíblia." },
       { title: "Bíblia — Caminhando com Cristo" },
       { name: "description", content: "Navegue pelos 66 livros e capítulos da Bíblia." },
     ],

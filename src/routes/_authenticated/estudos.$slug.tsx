@@ -14,6 +14,8 @@ import { getStudy } from "@/lib/content/studies";
 export const Route = createFileRoute("/_authenticated/estudos/$slug")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Estudo bíblico — Caminhando com Cristo" },
       {
         name: "description",

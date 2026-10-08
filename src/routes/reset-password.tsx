@@ -12,6 +12,8 @@ export const Route = createFileRoute("/reset-password")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Redefinir senha — Caminhando com Cristo" },
       { name: "description", content: "Defina uma nova senha para acessar sua conta." },
       { property: "og:title", content: "Redefinir senha — Caminhando com Cristo" },
