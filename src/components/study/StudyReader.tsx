@@ -143,7 +143,10 @@ export function StudyReader({
       const bounded = Math.max(checkpointRef.current.readPercent, Math.min(100, Math.max(0, nextPercent)));
       setReadPercent(bounded);
       checkpointRef.current.readPercent = bounded;
-      const visibleIndex = sectionRefs.current.findLastIndex((node) => node && node.getBoundingClientRect().top <= 180);
+      let visibleIndex = -1;
+      sectionRefs.current.forEach((node, index) => {
+        if (node && node.getBoundingClientRect().top <= 180) visibleIndex = index;
+      });
       if (visibleIndex >= 0) checkpointRef.current.lastSectionIndex = visibleIndex;
     };
     const onScroll = () => {
