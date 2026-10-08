@@ -164,6 +164,8 @@ export const getStudentLesson = createServerFn({ method: "GET" })
 
 
     const moduleIndex = view.modules.findIndex((m) => m.id === current.module.id);
+    const previous = flat[index - 1];
+    const following = flat[index + 1];
 
 
     return {
@@ -218,11 +220,8 @@ export const getStudentLesson = createServerFn({ method: "GET" })
       status: current.lesson.completed ? "concluida" : "nao_iniciada",
       locked,
       lockReason: locked ? "premium" : null,
-      prev: flat[index - 1] ? { slug: flat[index - 1].lesson.slug, title: flat[index - 1].lesson.title } : null,
-      next:
-        flat[index + 1]
-          ? { slug: flat[index + 1].lesson.slug, title: flat[index + 1].lesson.title }
-          : null,
+      prev: previous ? { slug: previous.lesson.slug, title: previous.lesson.title } : null,
+      next: following ? { slug: following.lesson.slug, title: following.lesson.title } : null,
       totalLessons: view.totalLessons,
       completedLessons: view.completedLessons,
     };

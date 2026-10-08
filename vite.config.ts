@@ -9,9 +9,9 @@ import { loadEnv } from "vite";
 
 // Explicit public defines also cover bracket notation in the generated client.
 // Only these two public values may be embedded; never expose server credentials.
-const publicEnv = loadEnv(process.env.NODE_ENV ?? "production", process.cwd(), "VITE_");
-const publicBackendUrl = publicEnv.VITE_SUPABASE_URL || "https://hbpbnbsxtzrwisyiixlw.supabase.co";
-const publicBackendKey = publicEnv.VITE_SUPABASE_PUBLISHABLE_KEY || "sb_publishable_GakKaDzexpGcS5q4KMgwVA_WXDv1xYm";
+const publicEnv = loadEnv(process.env["NODE_ENV"] ?? "production", process.cwd(), "VITE_");
+const publicBackendUrl = publicEnv["VITE_SUPABASE_URL"] || "https://hbpbnbsxtzrwisyiixlw.supabase.co";
+const publicBackendKey = publicEnv["VITE_SUPABASE_PUBLISHABLE_KEY"] || "sb_publishable_GakKaDzexpGcS5q4KMgwVA_WXDv1xYm";
 
 export default defineConfig({
   // Keep Lovable's explicit VITE_* replacement enabled for browser bundles.
