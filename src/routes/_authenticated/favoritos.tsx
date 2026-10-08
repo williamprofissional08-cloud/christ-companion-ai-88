@@ -12,6 +12,8 @@ import { listFavorites, removeFavorite } from "@/lib/app.functions";
 export const Route = createFileRoute("/_authenticated/favoritos")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Favoritos — Caminhando com Cristo" },
       {
         name: "description",

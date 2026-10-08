@@ -41,6 +41,8 @@ import type { AccessTier } from "@/lib/school/types";
 export const Route = createFileRoute("/_authenticated/admin/aulas/$lessonId")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Editar aula — Painel Administrativo | Caminhando com Cristo" },
       {
         name: "description",

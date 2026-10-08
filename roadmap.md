@@ -1,5 +1,11 @@
 # Formação de Pregadores
 
+## Correção de erros atuais
+
+- [ ] Corrigir a falta de configuração pública da conexão na prévia
+- [ ] Corrigir perda dos novos campos de retomada de aulas
+- [ ] Validar páginas públicas, navegação autenticada e registros de erros
+
 ## Base entregue
 
 - [x] Expandir metadados de livros e estudos no banco

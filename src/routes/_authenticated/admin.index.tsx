@@ -13,6 +13,8 @@ import { getAiStatus } from "@/lib/ai-status.functions";
 export const Route = createFileRoute("/_authenticated/admin/")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Painel Administrativo — Caminhando com Cristo" },
       { name: "description", content: "Gestão de cursos, módulos e aulas da Escola Bíblica." },
       { property: "og:title", content: "Painel Administrativo" },

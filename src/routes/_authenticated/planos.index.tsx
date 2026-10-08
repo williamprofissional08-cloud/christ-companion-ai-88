@@ -9,6 +9,8 @@ import { PLAN_CATEGORIES, PRAYER_PLANS } from "@/lib/content/plans";
 export const Route = createFileRoute("/_authenticated/planos/")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Planos de oração — Caminhando com Cristo" },
       {
         name: "description",

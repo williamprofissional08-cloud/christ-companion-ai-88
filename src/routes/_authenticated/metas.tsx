@@ -15,6 +15,8 @@ import { createGoal, deleteGoal, listGoals, updateGoal } from "@/lib/app.functio
 export const Route = createFileRoute("/_authenticated/metas")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Metas espirituais — Caminhando com Cristo" },
       {
         name: "description",

@@ -18,6 +18,8 @@ import { getPlan } from "@/lib/content/plans";
 export const Route = createFileRoute("/_authenticated/planos/$slug")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Plano de oração — Caminhando com Cristo" },
       {
         name: "description",
