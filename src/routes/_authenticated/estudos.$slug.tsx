@@ -1,3 +1,4 @@
+import { useCallback, useMemo } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useMutation, useQuery } from "@tanstack/react-query";
@@ -5,7 +6,10 @@ import { ArrowLeft, Star } from "lucide-react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { StudyReader, type ReaderCheckpoint } from "@/components/study/StudyReader";
+import { getStudyCheckpoint, saveStudyCheckpoint } from "@/lib/study-progress.functions";
+import { studySections } from "@/lib/study-sections";
+import { STUDY_PLAYBACK_RATES, type StudyPlaybackRate } from "@/lib/study-reader";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getStudyContent } from "@/lib/ai.functions";
 import { addFavorite } from "@/lib/app.functions";
@@ -33,6 +37,18 @@ function EstudoDetalhe() {
   const study = getStudy(slug);
   const contentFn = useServerFn(getStudyContent);
   const favoriteFn = useServerFn(addFavorite);
+  const checkpointFn = useServerFn(getStudyCheckpoint);
+  const saveCheckpointFn = useServerFn(saveStudyCheckpoint);
+  const checkpoint = useQuery({
+    queryKey: ["study-checkpoint", slug],
+    queryFn: () => checkpointFn({ data: { slug } }),
+    enabled: Boolean(study),
+  });
+  const persistCheckpoint = useCallback((value: ReaderCheckpoint) => {
+    void saveCheckpointFn({ data: { slug, ...value } }).catch(() => {
+      toast.error("Não foi possível salvar sua posição de leitura.", { id: "study-checkpoint-error" });
+    });
+  }, [saveCheckpointFn, slug]);
 
   const content = useQuery({
     queryKey: ["study", slug],
@@ -40,6 +56,8 @@ function EstudoDetalhe() {
     staleTime: Infinity,
     enabled: Boolean(study),
   });
+
+  const sections = useMemo(() => content.data ? studySections(content.data) : [], [content.data]);
 
   const favorite = useMutation({
     mutationFn: () =>
@@ -79,69 +97,31 @@ function EstudoDetalhe() {
         </Button>
       </div>
 
-      {content.isLoading ? (
+      {content.isLoading || checkpoint.isLoading ? (
         <div className="space-y-3">
           {[0, 1, 2, 3].map((i) => (
             <Skeleton key={i} className="h-24 w-full" />
           ))}
         </div>
       ) : content.data ? (
-        <div className="flex flex-col gap-4">
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-sm leading-relaxed">{content.data.intro}</p>
-          </Card>
-          <Block label="Contexto histórico" text={content.data.historicalContext} />
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-              Pontos principais
-            </p>
-            <div className="mt-3 flex flex-col gap-4">
-              {content.data.keyPoints.map((point) => (
-                <div key={point.title}>
-                  <p className="font-display text-base font-semibold">{point.title}</p>
-                  <p className="mt-1 text-sm leading-relaxed">{point.text}</p>
-                </div>
-              ))}
-            </div>
-          </Card>
-          <Block label="Aplicação prática" text={content.data.application} />
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-              Referências cruzadas
-            </p>
-            <ul className="mt-3 list-inside list-disc text-sm">
-              {content.data.crossReferences.map((ref) => (
-                <li key={ref}>{ref}</li>
-              ))}
-            </ul>
-          </Card>
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-              Perguntas para reflexão
-            </p>
-            <ul className="mt-3 list-inside list-decimal text-sm leading-relaxed">
-              {content.data.questions.map((question) => (
-                <li key={question}>{question}</li>
-              ))}
-            </ul>
-          </Card>
-          <Block label="Conclusão" text={content.data.conclusion} />
-          <Block label="Oração final" text={content.data.prayer} />
-        </div>
+        <StudyReader
+          key={slug}
+          title={study.title}
+          reference={study.reference}
+          depth={content.data.depth ?? study.depth}
+          sections={sections}
+          initialCheckpoint={checkpoint.data ? {
+            ...checkpoint.data,
+            playbackRate: STUDY_PLAYBACK_RATES.includes(checkpoint.data.playbackRate as StudyPlaybackRate)
+              ? checkpoint.data.playbackRate as StudyPlaybackRate : 1,
+          } : undefined}
+          onCheckpoint={persistCheckpoint}
+        />
       ) : (
         <p className="text-sm text-muted-foreground">
           Não conseguimos gerar este estudo agora. Tente novamente em instantes.
         </p>
       )}
     </AppShell>
-  );
-}
-
-function Block({ label, text }: { label: string; text: string }) {
-  return (
-    <Card className="border-border/50 p-6 shadow-soft">
-      <p className="text-xs font-semibold tracking-wide text-primary uppercase">{label}</p>
-      <p className="mt-2 text-sm leading-relaxed">{text}</p>
-    </Card>
   );
 }

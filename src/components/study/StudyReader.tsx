@@ -140,9 +140,11 @@ export function StudyReader({
       const doc = document.documentElement;
       const scrollable = doc.scrollHeight - window.innerHeight;
       const nextPercent = scrollable > 0 ? Math.round((window.scrollY / scrollable) * 100) : 100;
-      const bounded = Math.max(readPercent, Math.min(100, Math.max(0, nextPercent)));
+      const bounded = Math.max(checkpointRef.current.readPercent, Math.min(100, Math.max(0, nextPercent)));
       setReadPercent(bounded);
       checkpointRef.current.readPercent = bounded;
+      const visibleIndex = sectionRefs.current.findLastIndex((node) => node && node.getBoundingClientRect().top <= 180);
+      if (visibleIndex >= 0) checkpointRef.current.lastSectionIndex = visibleIndex;
     };
     const onScroll = () => {
       if (pending) return;
@@ -157,7 +159,7 @@ export function StudyReader({
       window.clearInterval(timer);
       onCheckpoint?.(checkpointRef.current);
     };
-  }, [onCheckpoint, readPercent]);
+  }, [onCheckpoint]);
 
   if (!sections.length) return null;
   const showResume = (initialCheckpoint?.readPercent ?? 0) > 4 || (initialCheckpoint?.lastSectionIndex ?? 0) > 0;
