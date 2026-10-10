@@ -117,3 +117,11 @@ jobs:
           print('LOVABLE_MOBILE_SUMMARY='+summary)
           print('LOVABLE_MOBILE_FILES='+','.join(paths))
           PY
+      - name: Validar projeto antes do commit
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+          npx tsc --noEmit
+          npm run lint
+          npm run build
+          git diff --check
