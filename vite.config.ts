@@ -7,21 +7,26 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { loadEnv } from "vite";
 
-// Explicit public defines also cover bracket notation in the generated client.
-// Only these two public values may be embedded; never expose server credentials.
 const publicEnv = loadEnv(process.env["NODE_ENV"] ?? "production", process.cwd(), "VITE_");
-const publicBackendUrl = publicEnv["VITE_SUPABASE_URL"] || "https://hbpbnbsxtzrwisyiixlw.supabase.co";
-const publicBackendKey = publicEnv["VITE_SUPABASE_PUBLISHABLE_KEY"] || "sb_publishable_GakKaDzexpGcS5q4KMgwVA_WXDv1xYm";
+const publicBackendUrl = publicEnv["VITE_SUPABASE_URL"];
+const publicBackendKey = publicEnv["VITE_SUPABASE_PUBLISHABLE_KEY"];
+
+// Keep explicit public defines only when the corresponding local build values exist.
+// Never ship a fallback URL/key from another Supabase project.
+const publicDefines =
+  publicBackendUrl && publicBackendKey
+    ? {
+        "import.meta.env.VITE_SUPABASE_URL": JSON.stringify(publicBackendUrl),
+        "import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY": JSON.stringify(publicBackendKey),
+      }
+    : {};
 
 export default defineConfig({
   // Keep Lovable's explicit VITE_* replacement enabled for browser bundles.
   // The generated browser client reads these public values at runtime.
   envDefine: true,
   vite: {
-    define: {
-      "import.meta.env.VITE_SUPABASE_URL": JSON.stringify(publicBackendUrl),
-      "import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY": JSON.stringify(publicBackendKey),
-    },
+    define: publicDefines,
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
