@@ -36,9 +36,15 @@ jobs:
           python - <<'PY'
           import os,json,pathlib,urllib.request,urllib.error,re,subprocess
           root=pathlib.Path('.')
-          prompt=os.environ['USER_PROMPT']; model=os.environ.get('MODEL') or 'openai/gpt-4.1'; token=os.environ['GH_TOKEN']
+          prompt=os.environ.get('USER_PROMPT','').strip()
+          model=os.environ.get('MODEL') or 'openai/gpt-4.1'
+          token=os.environ.get('GH_TOKEN','').strip()
+          if not prompt: raise SystemExit('Entrada inválida: o prompt está vazio.')
+          if not token: raise SystemExit('Credencial ausente: GH_TOKEN não está disponível.')
           exts={'.ts','.tsx','.js','.jsx','.mjs','.cjs','.json','.css','.scss','.sass','.less','.html','.md','.mdx','.vue','.svelte','.astro','.py','.java','.kt','.go','.rs','.rb','.php','.sql','.graphql','.yml','.yaml','.toml','.xml','.txt','.sh'}
-          names={'Dockerfile','Makefile','README','LICENSE'}; skip={'node_modules','.git','dist','build','.next','.vercel','.turbo','coverage'}; files=[]
+          names={'Dockerfile','Makefile','README','LICENSE'}
+          skip={'node_modules','.git','dist','build','.next','.vercel','.turbo','coverage'}
+          files=[]
           for p in root.rglob('*'):
             if not p.is_file() or any(x in skip for x in p.parts): continue
             if p.name.startswith('.env') and p.name!='.env.example': continue
@@ -47,42 +53,67 @@ jobs:
             except Exception: continue
             if len(data)>50000: continue
             files.append((str(p),data))
-          terms=set(re.findall(r'[A-Za-zÀ-ÿ0-9_/-]{3,}',prompt.lower())); scored=[]
+          terms=set(re.findall(r'[A-Za-zÀ-ÿ0-9_/-]{3,}',prompt.lower()))
+          scored=[]
           for path,data in files:
-            low=(path+' '+data[:12000]).lower(); score=sum(2 for t in terms if t in low)
+            low=(path+' '+data[:12000]).lower()
+            score=sum(2 for t in terms if t in low)
             if pathlib.Path(path).name.lower() in {'package.json','vite.config.ts','vite.config.js','src/app.tsx','src/app.jsx','src/main.tsx','src/main.jsx'}: score+=3
             scored.append((score,path,data))
-          scored.sort(key=lambda x:(-x[0],x[1])); selected=scored[:24]
+          scored.sort(key=lambda x:(-x[0],x[1]))
+          selected=scored[:24]
           while selected and sum(len(x[2]) for x in selected)>110000: selected.pop()
-          context='
-
-'.join('===== FILE: '+p+' =====
-'+d for _,p,d in selected)
+          context='\\n\\n'.join('===== FILE: '+p+' =====\\n'+d for _,p,d in selected)
           system='''You are a senior software engineer modifying an existing GitHub repository. Preserve existing functionality. Make only changes required by the user. Never modify .github/workflows, .env files, lockfiles, generated/binary files. Return ONLY valid JSON with keys summary and files. files must contain objects {path,content} where content is the COMPLETE new file content. Only include files that actually need changes. Do not return diffs or snippets.'''
-          user='User request:
-'+prompt+'
-
-Relevant repository files:
-'+context
+          user='User request:\\n'+prompt+'\\n\\nRelevant repository files:\\n'+context
           payload=json.dumps({'model':model,'messages':[{'role':'system','content':system},{'role':'user','content':user}],'temperature':0.1}).encode()
           req=urllib.request.Request('https://models.github.ai/inference/chat/completions',data=payload,headers={'Content-Type':'application/json','Accept':'application/json','Authorization':'Bearer '+token})
           try:
-            with urllib.request.urlopen(req,timeout=180) as r: result=json.loads(r.read().decode())
+            with urllib.request.urlopen(req,timeout=180) as response:
+              raw_response=response.read().decode('utf-8','replace')
+              try:
+                result=json.loads(raw_response)
+              except json.JSONDecodeError:
+                raise SystemExit('GitHub Models retornou resposta não-JSON: '+raw_response[:1200].replace('\\n',' '))
           except urllib.error.HTTPError as e:
-            raise SystemExit('GitHub Models HTTP '+str(e.code)+': '+e.read().decode(errors='replace')[:1200])
-          raw=result.get('choices',[{}])[0].get('message',{}).get('content','').strip(); fence=chr(96); raw=re.sub(r'^'+re.escape(fence)*3+r'(?:json)?s*','',raw); raw=re.sub(r's*'+re.escape(fence)*3+r'$','',raw)
+            detail=e.read().decode(errors='replace')[:1200].replace('\\n',' ')
+            raise SystemExit('GitHub Models HTTP '+str(e.code)+': '+detail)
+          except urllib.error.URLError as e:
+            raise SystemExit('Falha de rede ao consultar GitHub Models: '+str(e.reason))
+          choices=result.get('choices')
+          if not isinstance(choices,list) or not choices:
+            raise SystemExit('GitHub Models retornou resposta sem choices.')
+          message=choices[0].get('message') if isinstance(choices[0],dict) else None
+          raw=message.get('content','').strip() if isinstance(message,dict) else ''
+          fence=chr(96)
+          raw=re.sub(r'^'+re.escape(fence)*3+r'(?:json)?\\s*','',raw)
+          raw=re.sub(r'\\s*'+re.escape(fence)*3+r'$','',raw)
           try: proposal=json.loads(raw)
           except Exception: raise SystemExit('A IA não retornou JSON válido: '+raw[:1500])
-          allowed={p for _,p,_ in selected}; changed=proposal.get('files') or []
+          allowed={p for _,p,_ in selected}
+          changed=proposal.get('files') or []
           if not changed: raise SystemExit('A IA não identificou arquivos para alterar.')
+          paths=[]
           for f in changed:
+            if not isinstance(f,dict): raise SystemExit('Formato inválido na lista de arquivos.')
             path=f.get('path'); content=f.get('content')
             if path not in allowed: raise SystemExit('Arquivo fora do contexto permitido: '+str(path))
-            if path.startswith('.github/workflows/') or '.env' in pathlib.Path(path).name: raise SystemExit('Arquivo protegido: '+path)
-            target=root/path; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(content,encoding='utf-8')
-          if subprocess.run(['git','diff','--quiet','--',*[f.get('path') for f in changed]]).returncode==0: raise SystemExit('Nenhuma alteração real foi produzida.')
+            if path.startswith('.github/workflows/') or '.env' in pathlib.Path(path).name: raise SystemExit('Arquivo protegido: '+str(path))
+            if not isinstance(content,str): raise SystemExit('Conteúdo inválido para: '+str(path))
+            target=root/path
+            target.parent.mkdir(parents=True,exist_ok=True)
+            target.write_text(content,encoding='utf-8')
+            paths.append(path)
+          paths=list(dict.fromkeys(paths))
+          if subprocess.run(['git','diff','--quiet','--',*paths]).returncode==0:
+            raise SystemExit('Nenhuma alteração real foi produzida.')
           summary=str(proposal.get('summary') or 'Alteração aplicada')[:180]
-          subprocess.run(['git','config','user.name','Lovable Mobile AI'],check=True); subprocess.run(['git','config','user.email','actions@github.com'],check=True)
-          subprocess.run(['git','add','--',*[f.get('path') for f in changed]],check=True); subprocess.run(['git','commit','-m','Lovable Mobile AI: '+summary],check=True); subprocess.run(['git','push'],check=True)
-          print('LOVABLE_MOBILE_SUMMARY='+summary); print('LOVABLE_MOBILE_FILES='+','.join(f.get('path') for f in changed))
+          subprocess.run(['git','config','user.name','Lovable Mobile AI'],check=True)
+          subprocess.run(['git','config','user.email','actions@github.com'],check=True)
+          subprocess.run(['git','add','--',*paths],check=True)
+          subprocess.run(['git','diff','--cached','--check'],check=True)
+          subprocess.run(['git','commit','-m','Lovable Mobile AI: '+summary],check=True)
+          subprocess.run(['git','push'],check=True)
+          print('LOVABLE_MOBILE_SUMMARY='+summary)
+          print('LOVABLE_MOBILE_FILES='+','.join(paths))
           PY
