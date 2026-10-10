@@ -114,7 +114,7 @@ function EstudoDetalhe() {
             ...checkpoint.data,
             playbackRate: STUDY_PLAYBACK_RATES.includes(checkpoint.data.playbackRate as StudyPlaybackRate)
               ? checkpoint.data.playbackRate as StudyPlaybackRate : 1,
-          } : undefined}
+          } : {}}
           onCheckpoint={persistCheckpoint}
         />
       ) : (
