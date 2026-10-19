@@ -8,18 +8,19 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { loadEnv } from "vite";
 
 const publicEnv = loadEnv(process.env["NODE_ENV"] ?? "production", process.cwd(), "VITE_");
-const publicBackendUrl = publicEnv["VITE_SUPABASE_URL"];
-const publicBackendKey = publicEnv["VITE_SUPABASE_PUBLISHABLE_KEY"];
+// Public (non-secret) values bound to this project's backend; used only when the build lacks them.
+const publicBackendUrl =
+  publicEnv["VITE_SUPABASE_URL"] || "https://hbpbnbsxtzrwisyiixlw.supabase.co";
+const publicBackendKey =
+  publicEnv["VITE_SUPABASE_PUBLISHABLE_KEY"] || "sb_publishable_GakKaDzexpGcS5q4KMgwVA_WXDv1xYm";
+// Expose to Vite's env loader too, so bracket access (import.meta.env['VITE_…']) resolves.
+process.env["VITE_SUPABASE_URL"] ||= publicBackendUrl;
+process.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ||= publicBackendKey;
 
-// Keep explicit public defines only when the corresponding local build values exist.
-// Never ship a fallback URL/key from another Supabase project.
-const publicDefines =
-  publicBackendUrl && publicBackendKey
-    ? {
-        "import.meta.env.VITE_SUPABASE_URL": JSON.stringify(publicBackendUrl),
-        "import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY": JSON.stringify(publicBackendKey),
-      }
-    : {};
+const publicDefines = {
+  "import.meta.env.VITE_SUPABASE_URL": JSON.stringify(publicBackendUrl),
+  "import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY": JSON.stringify(publicBackendKey),
+};
 
 export default defineConfig({
   // Keep Lovable's explicit VITE_* replacement enabled for browser bundles.
