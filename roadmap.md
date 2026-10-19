@@ -47,3 +47,4 @@
 - [x] Persistir seção, trecho, velocidade e retomada sem alterar a conclusão explícita
 - [ ] Reforçar geração com análise prévia, classificações, confiança, fontes e validações
 - [ ] Validar Android/mobile, desktop, estudos longos, navegação, console e regressões
+- [x] Corrigir todos os erros possíveis (verificação geral pós-estudo Gênesis 1)
