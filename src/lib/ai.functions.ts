@@ -88,6 +88,9 @@ export const getStudyContent = createServerFn({ method: "POST" })
     const { getStudy } = await import("./content/studies");
     const study = getStudy(data.slug);
     if (!study) throw new Error("Estudo não encontrado");
+    const { CURATED_STUDIES } = await import("./content/curated-studies");
+    const curated = CURATED_STUDIES[data.slug];
+    if (curated) return curated;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")

@@ -34,6 +34,7 @@ function study(
 
 export const STUDIES: Study[] = [
   study("genesis-panorama", "Gênesis: as origens", "Livros da Bíblia", "Gênesis 1—50", "Criação, queda, aliança e a promessa da semente."),
+  study("genesis-1-criacao", "Gênesis 1: No princípio, Deus", "Antigo Testamento", "Gênesis 1:1-31", "Estudo aprofundado da criação: texto, contexto, referências e classificação textual.", "deep"),
   study("exodo-libertacao", "Êxodo: o Deus que liberta", "Livros da Bíblia", "Êxodo 1—40", "Do cativeiro à presença: páscoa, lei e tabernáculo."),
   study("salmos-oracao", "Salmos: a escola da oração", "Livros da Bíblia", "Salmos", "Como orar com sinceridade em todas as estações da alma."),
   study("provérbios-sabedoria", "Provérbios: sabedoria prática", "Livros da Bíblia", "Provérbios", "Temor do Senhor, palavras, trabalho, amizades e dinheiro."),
