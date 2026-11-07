@@ -195,7 +195,7 @@ Inclua de 5 a 8 versículos, 4 passos práticos e 3 sugestões de estudo.`,
 export async function explainPassage(reference: string, text: string) {
   const system = `${BIBLICAL_SYSTEM_PROMPT}\n\n${REFERENCE_RULE}`;
   const prompt = `Faça o ESTUDO COMPLETO da passagem ${reference}. Texto: "${text.slice(0, 6000)}".
-Use exatamente o formato de "ESTUDO COMPLETO" descrito nas suas instruções (introdução, contexto histórico e literário, estrutura, explicação versículo por versículo, temas e doutrinas, Cristo na passagem, referências cruzadas, aplicação prática, perguntas para reflexão e oração final). Cubra a passagem inteira, com markdown organizado e referências completas.`;
+Use o formato de "ESTUDO COMPLETO" descrito nas suas instruções (objetivo, contexto histórico e literário, arquitetura, explicação versículo por versículo, temas e doutrinas, Cristo na passagem, referências cruzadas, aplicação, oficina do pregador, exercícios de fixação e oração final). Cubra a passagem inteira, com markdown organizado, classificações e referências completas. Adapte a apostila ao gênero desta passagem sem copiar interpretações do exemplo como fatos.`;
   let output = await complete(prompt, system);
   if (!hasReference(output)) {
     output = await complete(
