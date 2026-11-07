@@ -11,4 +11,5 @@
 
 - Preserve the existing course hierarchy and extend it additively through `book_chapters` and lesson chapter links, because published URLs and student progress must remain valid.
 - Persist study reading checkpoints through authenticated server functions and adapt legacy cached content into reader sections, because older studies and per-user resume positions must remain usable without regeneration.
+- Pass catalog study depth into generation and return structured reader sections for deep studies; preserve curated precedence and legacy caches so existing content and resume positions remain usable.
 - Keep Lovable's VITE environment replacement enabled and explicitly define the two public backend values with project-bound public fallbacks in Vite config, because remote browser builds must not depend on server-only environment variables; never embed private credentials.

@@ -160,7 +160,19 @@ export function generateStudy(
   reference: string,
   summary: string,
   category: string,
+  depth: "simple" | "deep" = "simple",
 ) {
+  if (depth === "deep") {
+    return generateJson<StudyContent>(
+      `Crie um Estudo Bíblico Aprofundado em português do Brasil sobre "${title}" (categoria: ${category}; base: ${reference}; resumo: ${summary}).
+Use o modelo de apostila de formação de pregadores descrito nas instruções: objetivo, contexto, arquitetura, exposição por versículo ou bloco curto, teologia, referências explicadas, Cristo, aplicações, oficina do pregador, exercícios e oração. Analise texto e contexto antes de escrever. Não reproduza afirmações do exemplo sem revisão crítica.
+Responda SOMENTE em JSON com esta estrutura:
+{"version":2,"depth":"deep","intro":"introdução com referência","historicalContext":"síntese contextual com referência","keyPoints":[{"title":"ideia central","text":"explicação com referência"}],"application":"aplicação fundamentada com referência","crossReferences":["referência completa e ligação"],"questions":["pergunta"],"conclusion":"síntese","prayer":"oração com referência","sections":[{"id":"identificador único e estável","title":"título didático","body":"markdown da seção com classificações e referências","kind":"introduction","confidence":"high","scriptureRefs":["Livro capítulo:versículo"]}]}
+sections deve conter o estudo inteiro, não títulos vazios ou resumos repetidos. kind deve ser introduction, scripture, context, analysis, theology, cross-references, application, reflection, summary, challenge, sources, reasoning ou other; confidence deve ser high, probable, debated ou uncertain, conforme as conclusões da seção. Classifique também afirmações individuais no body. A oficina usa kind application e os exercícios reflection.
+Não invente bibliografia ou diga que consultou fontes sem acesso real. Não apresente perguntas históricas debatidas como testes de resposta única. Se a referência abranger um livro inteiro, entregue panorama e exposição do primeiro bloco, declarando o limite, sem fingir que todos os capítulos foram expostos.`,
+      ["intro", "historicalContext", "application", "crossReferences", "prayer"],
+    );
+  }
   return generateJson<StudyContent>(
     `Crie um estudo bíblico completo em português do Brasil sobre "${title}" (categoria: ${category}; base: ${reference}; resumo: ${summary}).
 Responda em JSON:
