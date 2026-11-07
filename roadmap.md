@@ -20,6 +20,8 @@
 
 ## Expansão Gênesis ao Apocalipse
 
+- [ ] Adotar o modelo didático da apostila enviada na geração aprofundada e no estudo-modelo de Gênesis 1, preservando os conteúdos e a jornada existentes
+
 - [x] Fase 1 — Criar a arquitetura escalável de livros, capítulos, passagens, fontes, glossário, cultura e exercícios
 - [ ] Fase 2 — Converter os 66 livros existentes em uma jornada completa por capítulos e passagens (1.189 capítulos cadastrados; conteúdo integral pendente)
 - [ ] Fase 3 — Produzir, revisar e publicar Gênesis completo

@@ -160,7 +160,19 @@ export function generateStudy(
   reference: string,
   summary: string,
   category: string,
+  depth: "simple" | "deep" = "simple",
 ) {
+  if (depth === "deep") {
+    return generateJson<StudyContent>(
+      `Crie um Estudo Bíblico Aprofundado em português do Brasil sobre "${title}" (categoria: ${category}; base: ${reference}; resumo: ${summary}).
+Use o modelo de apostila de formação de pregadores descrito nas instruções: objetivo, contexto, arquitetura, exposição por versículo ou bloco curto, teologia, referências explicadas, Cristo, aplicações, oficina do pregador, exercícios e oração. Analise texto e contexto antes de escrever. Não reproduza afirmações do exemplo sem revisão crítica.
+Responda SOMENTE em JSON com esta estrutura:
+{"version":2,"depth":"deep","intro":"introdução com referência","historicalContext":"síntese contextual com referência","keyPoints":[{"title":"ideia central","text":"explicação com referência"}],"application":"aplicação fundamentada com referência","crossReferences":["referência completa e ligação"],"questions":["pergunta"],"conclusion":"síntese","prayer":"oração com referência","sections":[{"id":"identificador único e estável","title":"título didático","body":"markdown da seção com classificações e referências","kind":"introduction","confidence":"high","scriptureRefs":["Livro capítulo:versículo"]}]}
+sections deve conter o estudo inteiro, não títulos vazios ou resumos repetidos. kind deve ser introduction, scripture, context, analysis, theology, cross-references, application, reflection, summary, challenge, sources, reasoning ou other; confidence deve ser high, probable, debated ou uncertain, conforme as conclusões da seção. Classifique também afirmações individuais no body. A oficina usa kind application e os exercícios reflection.
+Não invente bibliografia ou diga que consultou fontes sem acesso real. Não apresente perguntas históricas debatidas como testes de resposta única. Se a referência abranger um livro inteiro, entregue panorama e exposição do primeiro bloco, declarando o limite, sem fingir que todos os capítulos foram expostos.`,
+      ["intro", "historicalContext", "application", "crossReferences", "prayer"],
+    );
+  }
   return generateJson<StudyContent>(
     `Crie um estudo bíblico completo em português do Brasil sobre "${title}" (categoria: ${category}; base: ${reference}; resumo: ${summary}).
 Responda em JSON:
@@ -183,7 +195,7 @@ Inclua de 5 a 8 versículos, 4 passos práticos e 3 sugestões de estudo.`,
 export async function explainPassage(reference: string, text: string) {
   const system = `${BIBLICAL_SYSTEM_PROMPT}\n\n${REFERENCE_RULE}`;
   const prompt = `Faça o ESTUDO COMPLETO da passagem ${reference}. Texto: "${text.slice(0, 6000)}".
-Use exatamente o formato de "ESTUDO COMPLETO" descrito nas suas instruções (introdução, contexto histórico e literário, estrutura, explicação versículo por versículo, temas e doutrinas, Cristo na passagem, referências cruzadas, aplicação prática, perguntas para reflexão e oração final). Cubra a passagem inteira, com markdown organizado e referências completas.`;
+Use o formato de "ESTUDO COMPLETO" descrito nas suas instruções (objetivo, contexto histórico e literário, arquitetura, explicação versículo por versículo, temas e doutrinas, Cristo na passagem, referências cruzadas, aplicação, oficina do pregador, exercícios de fixação e oração final). Cubra a passagem inteira, com markdown organizado, classificações e referências completas. Adapte a apostila ao gênero desta passagem sem copiar interpretações do exemplo como fatos.`;
   let output = await complete(prompt, system);
   if (!hasReference(output)) {
     output = await complete(

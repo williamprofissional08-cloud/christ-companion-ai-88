@@ -44,7 +44,9 @@ Observação: o relato da criação continua até Gênesis 2:3 (o sétimo dia). 
 - Dia 2 — águas de cima e de baixo separadas (1:6-8) ↔ Dia 5 — aves e seres das águas (1:20-23)
 - Dia 3 — terra seca e vegetação (1:9-13) ↔ Dia 6 — animais terrestres e o ser humano (1:24-31)
 
-**[INFERÊNCIA]** O versículo 2 descreve a terra "sem forma e vazia". Os dias 1–3 parecem dar *forma* (separações) e os dias 4–6 *preenchem* esses espaços. Essa correspondência é amplamente reconhecida pelos estudiosos e se apoia no próprio texto, mas é uma leitura da estrutura, não uma afirmação explícita do capítulo.`,
+**[INFERÊNCIA]** O versículo 2 descreve a terra "sem forma e vazia". Os dias 1–3 parecem dar *forma* (separações) e os dias 4–6 *preenchem* esses espaços. A correspondência ajuda a acompanhar o relato, mas não é um esquema perfeito em todos os detalhes nem uma afirmação explícita do capítulo. O sétimo dia encerra o movimento em Gênesis 2:1–3.
+
+**[INTERPRETAÇÃO]** O relato tem ritmo e repetições solenes; isso não basta para classificá-lo como poema. É frequentemente lido como narrativa cuidadosamente estruturada.`,
     },
     {
       id: "contexto-livro",
@@ -64,7 +66,7 @@ Observação: o relato da criação continua até Gênesis 2:3 (o sétimo dia). 
       title: "4. Explicação versículo por versículo",
       kind: "analysis",
       confidence: "high",
-      body: `**1:1** — **[TEXTO BÍBLICO]** "No princípio criou Deus os céus e a terra." "Céus e terra" é uma expressão que indica a totalidade do que existe. O verbo hebraico *bara* ("criar"), no Antigo Testamento, tem sempre Deus como sujeito (ex.: Isaías 40:26; 45:7).
+      body: `**1:1** — **[TEXTO BÍBLICO]** "No princípio criou Deus os céus e a terra." **[INTERPRETAÇÃO]** "Céus e terra" expressa a totalidade. O verbo hebraico *bara*, no sentido de criar aqui empregado, tem Deus como sujeito (Isaías 40:26; 45:7); o verbo sozinho não especifica o material nem significa automaticamente "do nada". A doutrina da criação depende do conjunto das Escrituras, não apenas da etimologia (Hebreus 11:3). *Elohim* apresenta forma plural e concordância singular neste versículo; essa gramática não demonstra por si só a Trindade.
 **[INTERPRETAÇÃO]** Se o v. 1 é uma afirmação-título que resume o capítulo ou o primeiro ato da criação é debatido entre tradutores.
 
 **1:2** — **[TEXTO BÍBLICO]** A terra estava "sem forma e vazia" (*tohu wabohu*), havia trevas sobre o abismo e o Espírito de Deus "pairava" sobre as águas.
@@ -90,7 +92,7 @@ Observação: o relato da criação continua até Gênesis 2:3 (o sétimo dia). 
 
 **1:29-30** — Deus dá plantas como alimento ao ser humano e aos animais. Comparado com Gênesis 9:3, há uma mudança posterior.
 
-**1:31** — Deus vê "tudo" e é "muito bom". Somente aqui aparece o artigo em "o sexto dia" no hebraico, destacando o clímax.`,
+**1:31** — **[TEXTO BÍBLICO]** Deus vê "tudo quanto havia feito" e declara "muito bom". A avaliação abrange a obra inteira, não somente o ser humano. O capítulo não narra a origem do mal nem permite datar acontecimentos não descritos.`,
     },
     {
       id: "dias",
@@ -186,7 +188,7 @@ Evite conexões artificiais, como ver cada dia como símbolo de uma era da igrej
       kind: "sources",
       collapsible: true,
       body: `- Base primária: o texto bíblico de Gênesis 1:1–2:3 e as passagens citadas.
-- Termos hebraicos (*bara*, *tohu wabohu*, *ruach*, *raqia*, *yom*, *tanninim*, *tselem*) conforme o uso no Antigo Testamento e léxicos de referência como Brown-Driver-Briggs e HALOT (consultados de forma geral; nenhuma citação literal ou página é atribuída aqui).
+- Termos hebraicos devem ser conferidos no contexto e no uso bíblico. Brown-Driver-Briggs e HALOT são referências para aprofundamento, não obras cuja consulta direta esteja documentada neste estudo; nenhuma citação literal ou página lhes é atribuída.
 - As posições sobre os "dias" e a "imagem de Deus" são apresentadas como existem no debate cristão, sem atribuir consenso.
 - Níveis de confiança: 🟢 alta (texto explícito) · 🟡 provável · 🟠 debatido · 🔴 incerto.`,
     },
@@ -195,6 +197,75 @@ Evite conexões artificiais, como ver cada dia como símbolo de uma era da igrej
       title: "13. Oração final",
       kind: "summary",
       body: `Senhor, Criador dos céus e da terra, eu te adoro porque tudo veio da tua palavra (Salmos 33:6). Obrigado por me criar à tua imagem (Gênesis 1:27). Traz ordem ao que em mim está sem forma e vazio, e faze-me cuidar do que confiaste a mim. Em Cristo, por quem todas as coisas foram feitas (João 1:3), amém.`,
+    },
+    {
+      id: "objetivos-aula",
+      title: "14. Objetivos de aprendizagem",
+      kind: "introduction",
+      confidence: "high",
+      body: `Ao final, você deverá conseguir:
+- Identificar as repetições e os blocos de Gênesis 1:1–2:3.
+- Explicar a dignidade de homem e mulher a partir de Gênesis 1:27.
+- Separar afirmação textual, hipótese histórica e aplicação pastoral.
+- Mostrar a ligação com Cristo usando João 1:1–3 e Colossenses 1:15–17.
+- Preparar uma mensagem cuja ideia central e pontos possam ser conferidos na passagem.`,
+    },
+    {
+      id: "setimo-dia",
+      title: "15. O encerramento: Gênesis 2:1–3",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 2:1-3", "Isaías 40:28", "Êxodo 20:8-11", "Hebreus 4:1-11"],
+      body: `**[TEXTO BÍBLICO]** Os céus, a terra e seu conjunto estão concluídos. Deus cessa sua obra, abençoa o sétimo dia e o santifica (Gênesis 2:1–3).
+
+**[INTERPRETAÇÃO]** O verbo associado ao descanso expressa cessação; não se deve atribuir a Deus esgotamento físico (Isaías 40:28). A imagem do rei que assume seu trono é uma interpretação teológica, não uma frase destes versículos.
+
+**[TEXTO BÍBLICO]** Êxodo 20:8–11 fundamenta o mandamento sabático dado a Israel na criação. Hebreus 4:1–11 retoma o descanso de Deus e chama à fé e à perseverança.
+
+**[APLICAÇÃO]** Reconhecer limites no trabalho e confiar em Deus é uma aplicação legítima; a observância do sábado e sua relação com o domingo recebem leituras cristãs diferentes. Gênesis 2:1–3 não apresenta sozinho todas essas conclusões.`,
+    },
+    {
+      id: "oficina-pregador",
+      title: "16. Oficina do pregador: três esboços fundamentados",
+      kind: "application",
+      confidence: "probable",
+      body: `### 1. O Criador e sua palavra
+**Texto:** Gênesis 1:1–5. **Ideia central:** Deus cria e ordena pela sua palavra.
+**Introdução:** Observe quem age e o que acontece quando Deus fala.
+1. Deus é o sujeito da criação (1:1).
+2. O relato descreve a condição inicial da terra (1:2), não um retrato moral de toda pessoa sem Deus.
+3. A palavra divina produz luz e separação (1:3–5; Salmos 33:6–9).
+**Aplicação e conclusão:** adore o Criador. Para falar da iluminação do coração em Cristo, explicite que a ligação vem de 2 Coríntios 4:6; não prometa que todo problema pessoal desaparecerá.
+
+### 2. Dignidade recebida, responsabilidade confiada
+**Texto:** Gênesis 1:26–31. **Ideia central:** homem e mulher recebem dignidade e vocação de Deus.
+**Introdução:** Nosso valor não depende de aparência, renda ou reconhecimento.
+1. Homem e mulher são imagem de Deus (1:26–27).
+2. A bênção envolve responsabilidade na criação (1:28).
+3. Deus provê alimento e declara boa a obra inteira (1:29–31).
+**Aplicação e conclusão:** respeite o próximo (Tiago 3:9) e cuide da criação (Gênesis 2:15). O domínio do v. 28 não é promessa de poder sobre emoções ou sucesso. O pecado não elimina a dignidade humana (Gênesis 9:6); a renovação em Cristo é desenvolvida em Colossenses 3:10.
+
+### 3. Obra concluída, descanso separado
+**Texto:** Gênesis 2:1–3, como encerramento do relato. **Ideia central:** Deus conclui sua obra e separa o sétimo dia.
+**Introdução:** Diferencie o descanso de Deus de nosso cansaço.
+1. A obra está concluída (2:1–2).
+2. Deus cessa de criar (2:2; Isaías 40:28).
+3. Deus abençoa e santifica o dia (2:3).
+**Aplicação e conclusão:** trabalho não deve ocupar o lugar de Deus. Explique a relação com Êxodo 20:8–11 e Hebreus 4:1–11 sem confundir o mandamento dado a Israel com todas as posições cristãs sobre sua observância.
+
+**Cuidados no púlpito:** não invente sentidos secretos para animais e plantas; não apresente hipóteses como certezas; não transforme analogias em doutrina. Declare quando estiver saindo da exposição para uma aplicação.`,
+    },
+    {
+      id: "fixacao-apostila",
+      title: "17. Exercícios de fixação e revisão",
+      kind: "reflection",
+      body: `1. Liste três repetições do capítulo e indique versículos. **Orientação:** confira “disse Deus” (Gênesis 1:3, 6), “era bom” (1:10, 12) e “tarde e manhã” (1:5, 8).
+2. O texto declara por que usa “luzeiro maior” e “luzeiro menor”? **Orientação:** Gênesis 1:16 usa esses termos; a intenção anti-idolátrica é uma interpretação contextual, não uma explicação explícita do versículo.
+3. O que Gênesis 1:27 afirma com segurança? **Orientação:** homem e mulher são criados à imagem de Deus. Detalhes sobre o alcance dessa imagem exigem interpretação e comparação bíblica.
+4. Como 2 Coríntios 4:6 usa a criação da luz? **Orientação:** Paulo relaciona a ação criadora de Deus à iluminação do coração para conhecer sua glória em Cristo, não a uma promessa de sucesso pessoal.
+5. Escolha um esboço e escreva uma introdução de três minutos. Vincule cada ponto a um versículo; marque texto, interpretação e aplicação. Revise qualquer frase que a passagem não sustente.
+
+**Desafio:** explique Gênesis 1:27 a um novo leitor em linguagem simples e pratique uma atitude concreta de respeito ao próximo nesta semana (Tiago 3:9).`,
     },
   ],
 };
