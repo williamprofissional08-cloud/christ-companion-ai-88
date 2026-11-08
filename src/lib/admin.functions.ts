@@ -552,9 +552,10 @@ export const adminListManagedContent = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .handler(async ({ context }): Promise<ManagedContentItem[]> => {
     await assertAdmin(context.supabase, context.userId);
-    const [{ STUDIES }, { PRAYER_PLANS }, stored] = await Promise.all([
+    const [{ STUDIES }, { PRAYER_PLANS }, { CURATED_STUDIES }, stored] = await Promise.all([
       import("./content/studies"),
       import("./content/plans"),
+      import("./content/curated-studies"),
       context.supabase.from("managed_content")
         .select("kind, slug, metadata, content, status")
         .order("kind", { ascending: true })
@@ -567,7 +568,7 @@ export const adminListManagedContent = createServerFn({ method: "GET" })
       items.set(`study:${item.slug}`, {
         kind: "study", slug: item.slug, title: item.title, category: item.category,
         reference: item.reference, summary: item.summary, depth: item.depth,
-        status: "legacy", content: null,
+        status: "legacy", content: CURATED_STUDIES[item.slug] ?? null,
       });
     }
     for (const item of PRAYER_PLANS) {
