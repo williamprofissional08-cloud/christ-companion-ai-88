@@ -92,7 +92,8 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
 
     const { generatePlanDay } = await import("./ai-content.server");
     const content = await generatePlanDay(plan.title, plan.summary, plan.keyVerse, plan.days, data.day);
-    const { error } = await supabaseAdmin
+    if (!supabaseAdminClient) throw new Error("Supabase admin client unavailable");
+    const { error } = await supabaseAdminClient
       .from("generated_content")
       .upsert({ kind: "plan-day", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });
     if (error) console.error("plan cache failed", error.message);
