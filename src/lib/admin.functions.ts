@@ -111,7 +111,7 @@ export const adminSetCourseStatus = createServerFn({ method: "POST" })
   });
 
 /** Arquiva o curso para preservar módulos, aulas, respostas, progresso e certificados vinculados. */
-export const adminDeleteCourse = createServerFn({ method: "POST" })
+export const adminArchiveCourse = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
@@ -200,7 +200,7 @@ export const adminSaveModule = createServerFn({ method: "POST" })
   });
 
 /** Arquiva o módulo sem apagar capítulos, aulas ou progresso associado. */
-export const adminDeleteModule = createServerFn({ method: "POST" })
+export const adminArchiveModule = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
@@ -251,7 +251,7 @@ export const adminSaveLesson = createServerFn({ method: "POST" })
   });
 
 /** Arquiva a aula para preservar conteúdo, respostas, exercícios e progresso dos alunos. */
-export const adminDeleteLesson = createServerFn({ method: "POST" })
+export const adminArchiveLesson = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
@@ -312,7 +312,7 @@ export const adminSaveLessonContent = createServerFn({ method: "POST" })
     return { id: created.id };
   });
 
-export const adminDeleteLessonContent = createServerFn({ method: "POST" })
+export const adminArchiveLessonContent = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
@@ -376,7 +376,7 @@ export const adminSaveLessonQuestion = createServerFn({ method: "POST" })
     return { id: created.id };
   });
 
-export const adminDeleteLessonQuestion = createServerFn({ method: "POST" })
+export const adminArchiveLessonQuestion = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
@@ -511,7 +511,7 @@ export const adminSaveLessonMedia = createServerFn({ method: "POST" })
     return { id: created.id };
   });
 
-export const adminDeleteLessonMedia = createServerFn({ method: "POST" })
+export const adminArchiveLessonMedia = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
