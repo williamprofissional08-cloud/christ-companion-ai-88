@@ -625,7 +625,7 @@ export const adminSaveManagedContent = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) =>
     z.object({
       kind: managedKindSchema,
-      slug: z.string().min(3).max(80).regex(/^[\\p{L}\\p{N}-]+$/u),
+      slug: z.string().min(3).max(80).regex(/^[\p{L}\p{N}-]+$/u),
       title: z.string().min(3).max(160),
       category: z.string().min(2).max(80),
       reference: z.string().max(200).default(""),
