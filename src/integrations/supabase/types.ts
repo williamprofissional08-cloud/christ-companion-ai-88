@@ -715,6 +715,39 @@ export type Database = {
         }
         Relationships: []
       }
+      managed_content: {
+        Row: {
+          content: Json | null
+          created_at: string
+          id: string
+          kind: string
+          metadata: Json
+          slug: string
+          status: Database["public"]["Enums"]["content_status"]
+          updated_at: string
+        }
+        Insert: {
+          content?: Json | null
+          created_at?: string
+          id?: string
+          kind: string
+          metadata?: Json
+          slug: string
+          status?: Database["public"]["Enums"]["content_status"]
+          updated_at?: string
+        }
+        Update: {
+          content?: Json | null
+          created_at?: string
+          id?: string
+          kind?: string
+          metadata?: Json
+          slug?: string
+          status?: Database["public"]["Enums"]["content_status"]
+          updated_at?: string
+        }
+        Relationships: []
+      }
       lesson_answers: {
         Row: {
           created_at: string
