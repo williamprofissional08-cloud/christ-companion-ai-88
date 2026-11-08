@@ -89,7 +89,7 @@ export async function readLimitedResponseBytes(
 ): Promise<Uint8Array | null> {
   const contentLength = response.headers.get("content-length");
   if (contentLength !== null) {
-    if (!/^\\d+$/.test(contentLength)) return null;
+    if (!/^\d+$/.test(contentLength)) return null;
     const declaredLength = Number(contentLength);
     if (!Number.isSafeInteger(declaredLength) || declaredLength > maxBytes) return null;
   }
