@@ -9,7 +9,7 @@ returns table (
 )
 language plpgsql
 security definer
-set search_path = pg_catalog, public, auth
+set search_path = ''
 as $$
 declare
   v_user_id uuid;
