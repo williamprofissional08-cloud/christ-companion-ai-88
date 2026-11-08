@@ -61,6 +61,25 @@ jobs:
         run: |
           npm run lint -- --rule 'prettier/prettier: off'
 
+      - name: Format changed validation files
+        run: npx prettier --write src/routes/api/chat.ts src/routes/api/escola/professor-ia.ts src/routes/api/escola/professor-tts.ts src/lib/request-body.server.ts .github/workflows/validate.yml
+
+      - name: Commit formatting fixes on preparation branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/release/prelaunch-hardening-2026-11'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet; then
+            echo "No formatting changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/routes/api/chat.ts src/routes/api/escola/professor-ia.ts src/routes/api/escola/professor-tts.ts src/lib/request-body.server.ts .github/workflows/validate.yml
+          git commit -m "style: format prelaunch API hardening"
+          gh auth setup-git
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
       - name: Check formatting of changed validation files
         run: npx prettier --check src/routes/api/chat.ts src/routes/api/escola/professor-ia.ts src/routes/api/escola/professor-tts.ts src/lib/request-body.server.ts .github/workflows/validate.yml
 
