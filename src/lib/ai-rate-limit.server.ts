@@ -11,8 +11,6 @@ type RateLimitClient = {
     functionName: "consume_ai_rate_limit",
     args: {
       p_endpoint: AiRateLimitEndpoint;
-      p_limit: number;
-      p_window_seconds: number;
     },
   ) => PromiseLike<{ data: unknown; error: unknown }>;
 };
