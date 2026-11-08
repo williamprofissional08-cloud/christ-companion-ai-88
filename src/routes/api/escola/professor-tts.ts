@@ -10,7 +10,8 @@ import { TTS_MAX_CHARS } from "@/lib/school/professor-tts";
 
 type Body = { text?: unknown };
 
-const MAX_BODY_BYTES = 16 * 1024;\nconst MAX_AUDIO_BYTES = 8 * 1024 * 1024;
+const MAX_BODY_BYTES = 16 * 1024;
+const MAX_AUDIO_BYTES = 8 * 1024 * 1024;
 
 export const Route = createFileRoute("/api/escola/professor-tts")({
   server: {
