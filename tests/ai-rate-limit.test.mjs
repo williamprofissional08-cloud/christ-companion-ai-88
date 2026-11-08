@@ -209,8 +209,7 @@ test("audio response reader rejects empty responses", async () => {
   assert.equal(bytes, null);
 });
 
-
-test("TTS enforces its documented text limit and validates MP3 content type", () => {
+test("TTS enforces the text limit and MP3 content type", () => {
   assert.equal(TTS_MAX_CHARS, 3500);
   assert.equal(isMp3ContentType("audio/mpeg"), true);
   assert.equal(isMp3ContentType("audio/mpeg; charset=binary"), true);
