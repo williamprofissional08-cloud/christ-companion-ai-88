@@ -1,250 +1,37 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { useServerFn } from "@tanstack/react-start";
-import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
-import { ArrowRight, BookMarked, GraduationCap, Lock, Sparkles } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { BookOpen } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
-import { listCatalog } from "@/lib/school-catalog.functions";
-import { COURSE_LEVELS, levelLabel } from "@/lib/school/types";
-import type { CatalogCourse } from "@/lib/school/admin-types";
 
 export const Route = createFileRoute("/_authenticated/escola/")({
   head: () => ({
     meta: [
-      { title: "Escola Bíblica — Caminhando com Cristo" },
+      { title: "Escola Bíblica — Caminho Divino" },
       {
         name: "description",
-        content:
-          "Cursos para aprender a compreender as Escrituras de maneira simples, profunda e responsável.",
+        content: "Área reservada para os próximos conteúdos de estudo bíblico.",
       },
-      { property: "og:title", content: "Escola Bíblica" },
-      {
-        property: "og:description",
-        content: "Estude a Bíblia com cursos organizados por nível, do iniciante ao profundo.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: EscolaPage,
 });
 
-function CourseCard({ course }: { course: CatalogCourse }) {
-  const percent = course.lessons ? Math.round((course.completedLessons / course.lessons) * 100) : 0;
-  const started = course.completedLessons > 0;
-  return (
-    <Card className="flex flex-col gap-3 p-5">
-      <div className="flex flex-wrap items-center gap-2">
-        <Badge variant="secondary">{levelLabel(course.level)}</Badge>
-        <Badge variant={course.tier === "premium" ? "default" : "outline"}>
-          {course.tier === "premium" ? (
-            <>
-              <Lock className="mr-1 size-3" /> Premium
-            </>
-          ) : (
-            "Gratuito"
-          )}
-        </Badge>
-      </div>
-      <div>
-        <h3 className="font-display text-lg font-semibold">{course.title}</h3>
-        <p className="mt-1 text-sm text-muted-foreground">{course.subtitle ?? course.description}</p>
-      </div>
-      <p className="text-xs text-muted-foreground">
-        {course.modules} módulo(s) · {course.lessons} aula(s)
-      </p>
-      {started ? (
-        <div className="space-y-1">
-          <Progress value={percent} />
-          <p className="text-xs text-muted-foreground">{percent}% concluído</p>
-        </div>
-      ) : null}
-      <Button asChild className="mt-auto w-full">
-        {course.nextLessonSlug ? (
-          <Link
-            to="/escola/$slug/aula/$lessonSlug"
-            params={{ slug: course.slug, lessonSlug: course.nextLessonSlug }}
-          >
-            {started ? "Continuar curso" : "Começar curso"}
-            <ArrowRight className="ml-1 size-4" />
-          </Link>
-        ) : (
-          <Link to="/escola/$slug" params={{ slug: course.slug }}>
-            Ver curso
-            <ArrowRight className="ml-1 size-4" />
-          </Link>
-        )}
-      </Button>
-    </Card>
-  );
-}
-
 function EscolaPage() {
-  const fetchCatalog = useServerFn(listCatalog);
-  const { data: courses, isLoading, isError, refetch } = useQuery({
-    queryKey: ["school-catalog"],
-    queryFn: () => fetchCatalog(),
-  });
-  const [level, setLevel] = useState<string>("todos");
-  const [tier, setTier] = useState<string>("todos");
-
-  const list = (courses ?? []).filter(
-    (c) => (level === "todos" || c.level === level) && (tier === "todos" || c.tier === tier),
-  );
-  const continuing = (courses ?? []).filter((c) => c.completedLessons > 0);
-
   return (
     <AppShell
       title="Escola Bíblica"
-      subtitle="Aprenda a compreender as Escrituras de maneira simples, profunda e responsável."
+      subtitle="Um espaço reservado para novos conteúdos de estudo da Palavra."
     >
-      <div className="space-y-6">
-        <Card className="flex items-start gap-3 bg-primary/5 p-5">
-          <GraduationCap className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden />
-          <p className="text-sm text-muted-foreground">
-            Você não precisa saber teologia para começar. Escolha um curso, siga as aulas no seu
-            ritmo e deixe a Palavra formar o seu caminhar com Cristo.
-          </p>
-        </Card>
-
-        <section className="space-y-3">
-          <h2 className="font-display text-lg font-semibold">Continuar estudando</h2>
-          {continuing.length ? (
-            <div className="grid gap-4 sm:grid-cols-2">
-              {continuing.map((course) => (
-                <Card key={course.id} className="space-y-3 p-5">
-                  <div>
-                    <h3 className="font-display text-base font-semibold">{course.title}</h3>
-                    {course.nextModuleTitle ? (
-                      <p className="mt-1 text-xs text-muted-foreground">
-                        Módulo atual: {course.nextModuleTitle}
-                      </p>
-                    ) : null}
-                    {course.nextLessonTitle ? (
-                      <p className="text-xs text-muted-foreground">
-                        Próxima aula: {course.nextLessonTitle}
-                      </p>
-                    ) : null}
-                  </div>
-                  <div className="space-y-1">
-                    <Progress
-                      value={
-                        course.lessons
-                          ? Math.round((course.completedLessons / course.lessons) * 100)
-                          : 0
-                      }
-                    />
-                    <p className="text-xs text-muted-foreground">
-                      {course.lessons
-                        ? Math.round((course.completedLessons / course.lessons) * 100)
-                        : 0}
-                      % concluído
-                    </p>
-                  </div>
-                  <Button asChild className="w-full">
-                    {course.nextLessonSlug ? (
-                      <Link
-                        to="/escola/$slug/aula/$lessonSlug"
-                        params={{ slug: course.slug, lessonSlug: course.nextLessonSlug }}
-                      >
-                        Continuar <ArrowRight className="ml-1 size-4" />
-                      </Link>
-                    ) : (
-                      <Link to="/escola/$slug" params={{ slug: course.slug }}>
-                        Ver curso <ArrowRight className="ml-1 size-4" />
-                      </Link>
-                    )}
-                  </Button>
-                </Card>
-              ))}
-            </div>
-          ) : (
-            <p className="text-sm text-muted-foreground">
-              Quando você começar um curso, ele aparecerá aqui para retomar de onde parou.
-            </p>
-          )}
-        </section>
-
-        <section className="space-y-3">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <h2 className="font-display text-lg font-semibold">Cursos disponíveis</h2>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <Button
-              size="sm"
-              variant={level === "todos" ? "default" : "outline"}
-              onClick={() => setLevel("todos")}
-            >
-              Todos os níveis
-            </Button>
-            {COURSE_LEVELS.map((l) => (
-              <Button
-                key={l.key}
-                size="sm"
-                variant={level === l.key ? "default" : "outline"}
-                onClick={() => setLevel(l.key)}
-              >
-                {l.label}
-              </Button>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {[
-              { key: "todos", label: "Todo o acesso" },
-              { key: "free", label: "Gratuitos" },
-              { key: "premium", label: "Premium" },
-            ].map((option) => (
-              <Button
-                key={option.key}
-                size="sm"
-                variant={tier === option.key ? "secondary" : "ghost"}
-                onClick={() => setTier(option.key)}
-              >
-                {option.label}
-              </Button>
-            ))}
-          </div>
-
-          {isLoading ? (
-            <p className="text-sm text-muted-foreground">Carregando cursos…</p>
-          ) : isError ? (
-            <Card className="space-y-3 p-5 text-sm text-muted-foreground">
-              <p>Não foi possível carregar os cursos. Tente novamente.</p>
-              <Button size="sm" variant="outline" onClick={() => refetch()}>
-                Tentar novamente
-              </Button>
-            </Card>
-          ) : list.length ? (
-            <div className="grid gap-4 sm:grid-cols-2">
-              {list.map((course) => (
-                <CourseCard key={course.id} course={course} />
-              ))}
-            </div>
-          ) : (
-            <Card className="flex items-start gap-3 p-5">
-              <BookMarked className="mt-0.5 size-5 shrink-0 text-muted-foreground" aria-hidden />
-              <p className="text-sm text-muted-foreground">
-                Em breve teremos novos cursos disponíveis.
-              </p>
-            </Card>
-          )}
-        </section>
-
-        <section className="space-y-3">
-          <h2 className="font-display text-lg font-semibold">Recomendados para você</h2>
-          <Card className="flex items-start gap-3 p-5">
-            <Sparkles className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden />
-            <p className="text-sm text-muted-foreground">
-              Em breve a Escola Bíblica sugerirá cursos com base nos seus interesses e no seu
-              progresso.
-            </p>
-          </Card>
-        </section>
-      </div>
+      <Card className="mx-auto flex max-w-2xl flex-col items-center gap-4 px-6 py-12 text-center">
+        <div className="rounded-full bg-primary/10 p-4">
+          <BookOpen className="size-8 text-primary" aria-hidden />
+        </div>
+        <h2 className="font-display text-xl font-semibold">Novos estudos em preparação</h2>
+        <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">
+          A Escola Bíblica está sendo reorganizada. Em breve, este espaço receberá novos cursos,
+          aulas e materiais de estudo bíblico.
+        </p>
+      </Card>
     </AppShell>
   );
 }
