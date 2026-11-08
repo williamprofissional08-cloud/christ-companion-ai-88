@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { AI_RATE_LIMIT_POLICIES, enforceAiRateLimit } from "../src/lib/ai-rate-limit.server.ts";
-import { readLimitedJson } from "../src/lib/request-body.server.ts";
+import { readLimitedJson, readLimitedResponseBytes } from "../src/lib/request-body.server.ts";
 
 test("AI endpoints have explicit and independent usage policies", () => {
   assert.deepEqual(AI_RATE_LIMIT_POLICIES, {
@@ -153,4 +153,50 @@ test("JSON reader rejects oversized streamed bodies", async () => {
 
   assert.equal(result.ok, false);
   assert.equal(result.response.status, 413);
+});
+
+
+test("audio response reader accepts a body within the configured limit", async () => {
+  const response = new Response(new Uint8Array([1, 2, 3]), {
+    headers: { "content-type": "audio/mpeg", "content-length": "3" },
+  });
+
+  const bytes = await readLimitedResponseBytes(response, 3);
+
+  assert.deepEqual([...bytes], [1, 2, 3]);
+});
+
+test("audio response reader rejects oversized declared responses", async () => {
+  const response = new Response(new Uint8Array([1]), {
+    headers: { "content-length": "9" },
+  });
+
+  const bytes = await readLimitedResponseBytes(response, 8);
+
+  assert.equal(bytes, null);
+});
+
+test("audio response reader rejects oversized streamed responses without Content-Length", async () => {
+  const stream = new ReadableStream({
+    start(controller) {
+      controller.enqueue(new Uint8Array([1, 2, 3]));
+      controller.enqueue(new Uint8Array([4, 5, 6]));
+      controller.close();
+    },
+  });
+  const response = new Response(stream);
+
+  const bytes = await readLimitedResponseBytes(response, 5);
+
+  assert.equal(bytes, null);
+});
+
+test("audio response reader rejects malformed Content-Length", async () => {
+  const response = new Response(new Uint8Array([1]), {
+    headers: { "content-length": "unknown" },
+  });
+
+  const bytes = await readLimitedResponseBytes(response, 8);
+
+  assert.equal(bytes, null);
 });
