@@ -58,7 +58,8 @@ jobs:
       # Keep all semantic ESLint rules enabled. The legacy repository still has
       # Prettier-only violations; changed files are checked independently below.
       - name: Run ESLint
-        run: npm run lint -- --rule 'prettier/prettier: off'
+        run: |
+          npm run lint -- --rule 'prettier/prettier: off'
 
       - name: Check formatting of changed validation files
         run: npx prettier --check src/routes/api/chat.ts .github/workflows/validate.yml
