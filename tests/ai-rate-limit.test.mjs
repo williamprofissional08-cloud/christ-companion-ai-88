@@ -99,6 +99,30 @@ test("JSON reader rejects malformed JSON", async () => {
   assert.equal(result.response.status, 400);
 });
 
+test("JSON reader rejects an invalid Content-Length", async () => {
+  const request = new Request("https://example.test/api", {
+    method: "POST",
+    headers: { "content-length": "-1" },
+    body: "{}",
+  });
+
+  const result = await readLimitedJson(request, 100);
+
+  assert.equal(result.ok, false);
+  assert.equal(result.response.status, 400);
+});
+
+test("JSON reader rejects an empty request body", async () => {
+  const request = new Request("https://example.test/api", {
+    method: "POST",
+  });
+
+  const result = await readLimitedJson(request, 100);
+
+  assert.equal(result.ok, false);
+  assert.equal(result.response.status, 400);
+});
+
 test("JSON reader rejects oversized declared bodies", async () => {
   const request = new Request("https://example.test/api", {
     method: "POST",
