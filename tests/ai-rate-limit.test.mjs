@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { AI_RATE_LIMIT_POLICIES, enforceAiRateLimit } from "../src/lib/ai-rate-limit.server.ts";
 import { readLimitedJson, readLimitedResponseBytes } from "../src/lib/request-body.server.ts";
+import { isMp3ContentType, TTS_MAX_CHARS } from "../src/lib/school/professor-tts.ts";
 
 test("AI endpoints have explicit and independent usage policies", () => {
   assert.deepEqual(AI_RATE_LIMIT_POLICIES, {
@@ -206,4 +207,13 @@ test("audio response reader rejects empty responses", async () => {
   const bytes = await readLimitedResponseBytes(response, 8);
 
   assert.equal(bytes, null);
+});
+
+
+test("TTS enforces its documented text limit and validates MP3 content type", () => {
+  assert.equal(TTS_MAX_CHARS, 3500);
+  assert.equal(isMp3ContentType("audio/mpeg"), true);
+  assert.equal(isMp3ContentType("audio/mpeg; charset=binary"), true);
+  assert.equal(isMp3ContentType("application/json"), false);
+  assert.equal(isMp3ContentType(null), false);
 });
