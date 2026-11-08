@@ -1,6 +1,6 @@
 name: Validate
 
-"on":
+on:
   pull_request:
     branches: [main]
   push:
@@ -8,7 +8,7 @@ name: Validate
       - release/prelaunch-hardening-2026-11
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: validate-${{ github.workflow }}-${{ github.ref }}
@@ -16,12 +16,14 @@ concurrency:
 
 jobs:
   validate:
-    name: Install, lint and production build
+    name: Install, test and production build
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@v5
@@ -29,21 +31,29 @@ jobs:
           node-version: 22
           cache: npm
 
-      # npm ci fails if package.json and the committed lockfile are inconsistent.
       - name: Install reproducible dependencies
         run: npm ci --no-audit --no-fund
 
-      # Preserve semantic ESLint rules; only the repository-wide legacy Prettier
-      # rule is excluded. All files touched by this PR are checked below.
       - name: Run ESLint
-        run: |
-          npm run lint -- --rule 'prettier/prettier: off'
+        run: npm run lint -- --rule 'prettier/prettier: off'
 
       - name: Check formatting of hardened files
-        run: npx prettier --check src/routes/api/chat.ts src/routes/api/escola/professor-ia.ts src/routes/api/escola/professor-tts.ts src/lib/request-body.server.ts .github/workflows/validate.yml
+        run: >-
+          npx prettier --check
+          .github/workflows/validate.yml
+          package.json
+          src/lib/ai-rate-limit.server.ts
+          src/lib/request-body.server.ts
+          src/routes/api/chat.ts
+          src/routes/api/escola/professor-ia.ts
+          src/routes/api/escola/professor-tts.ts
+          tests/ai-rate-limit.test.mjs
 
       - name: TypeScript check
         run: npx tsc --noEmit
+
+      - name: Run automated tests
+        run: npm test
 
       - name: Build production app
         run: npm run build

@@ -4,6 +4,7 @@
  */
 import { createFileRoute } from "@tanstack/react-router";
 import { authenticateRequest } from "@/lib/request-auth.server";
+import { enforceAiRateLimit } from "@/lib/ai-rate-limit.server";
 import { readLimitedJson } from "@/lib/request-body.server";
 import { TTS_MAX_CHARS } from "@/lib/school/professor-tts";
 
@@ -18,6 +19,8 @@ export const Route = createFileRoute("/api/escola/professor-tts")({
         try {
           const auth = await authenticateRequest(request);
           if (!auth) return new Response("Unauthorized", { status: 401 });
+          const rateLimitResponse = await enforceAiRateLimit(auth.supabase, "professor_tts");
+          if (rateLimitResponse) return rateLimitResponse;
 
           const parsed = await readLimitedJson(request, MAX_BODY_BYTES);
           if (!parsed.ok) return parsed.response;

@@ -7,6 +7,7 @@ import {
   RESPONSES_PROVIDER_OPTIONS,
 } from "@/lib/ai-gateway.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
+import { enforceAiRateLimit } from "@/lib/ai-rate-limit.server";
 
 type Body = { messages?: unknown; threadId?: unknown };
 
@@ -58,6 +59,11 @@ export const Route = createFileRoute("/api/chat")({
     handlers: {
       POST: async ({ request }) => {
         try {
+          const auth = await authenticateRequest(request);
+          if (!auth) return new Response("Unauthorized", { status: 401 });
+          const rateLimitResponse = await enforceAiRateLimit(auth.supabase, "chat");
+          if (rateLimitResponse) return rateLimitResponse;
+
           const contentLength = request.headers.get("content-length");
           if (contentLength !== null) {
             const declaredLength = Number(contentLength);
@@ -84,9 +90,6 @@ export const Route = createFileRoute("/api/chat")({
           } catch {
             return new Response("JSON inválido", { status: 400 });
           }
-
-          const auth = await authenticateRequest(request);
-          if (!auth) return new Response("Unauthorized", { status: 401 });
 
           const messages = body?.messages;
           const threadId = typeof body?.threadId === "string" ? body.threadId : null;

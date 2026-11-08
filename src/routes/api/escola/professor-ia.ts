@@ -7,6 +7,7 @@ import {
 } from "@/lib/ai-gateway.server";
 import { readLimitedJson } from "@/lib/request-body.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
+import { enforceAiRateLimit } from "@/lib/ai-rate-limit.server";
 import { buildProfessorSystemPrompt, loadLessonContext } from "@/lib/school/professor-ia.server";
 
 type Body = { messages?: unknown; lessonId?: unknown };
@@ -44,6 +45,8 @@ export const Route = createFileRoute("/api/escola/professor-ia")({
         try {
           const auth = await authenticateRequest(request);
           if (!auth) return new Response("Unauthorized", { status: 401 });
+          const rateLimitResponse = await enforceAiRateLimit(auth.supabase, "professor_ia");
+          if (rateLimitResponse) return rateLimitResponse;
 
           const parsed = await readLimitedJson(request, MAX_BODY_BYTES);
           if (!parsed.ok) return parsed.response;
