@@ -5,18 +5,43 @@ import type { Session, User } from "@supabase/supabase-js";
 export function useAuth() {
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const [authError, setAuthError] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
-    supabase.auth.getSession().then(({ data }) => {
-      if (!active) return;
-      setSession(data.session);
-      setLoading(false);
-    });
+    let authEventReceived = false;
+
+    // Subscribe first so an auth event cannot be overwritten by a slower
+    // getSession() response from the initial render.
     const { data: sub } = supabase.auth.onAuthStateChange((_event, next) => {
+      authEventReceived = true;
+      if (!active) return;
       setSession(next);
+      setAuthError(null);
       setLoading(false);
     });
+
+    void supabase.auth
+      .getSession()
+      .then(({ data, error }) => {
+        if (!active || authEventReceived) return;
+        if (error) {
+          setSession(null);
+          setAuthError(error.message);
+          return;
+        }
+        setSession(data.session);
+        setAuthError(null);
+      })
+      .catch((error: unknown) => {
+        if (!active || authEventReceived) return;
+        setSession(null);
+        setAuthError(error instanceof Error ? error.message : "Não foi possível recuperar a sessão.");
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+
     return () => {
       active = false;
       sub.subscription.unsubscribe();
@@ -24,7 +49,7 @@ export function useAuth() {
   }, []);
 
   const user: User | null = session?.user ?? null;
-  return { session, user, loading, isAuthenticated: Boolean(user) };
+  return { session, user, loading, authError, isAuthenticated: Boolean(user) };
 }
 
 export function useTheme() {
