@@ -67,7 +67,10 @@ export const Route = createFileRoute("/api/escola/professor-tts")({
             return new Response("Áudio inválido ou acima do limite permitido", { status: 502 });
           }
 
-          return new Response(audio, {
+          const audioBody = new ArrayBuffer(audio.byteLength);
+          new Uint8Array(audioBody).set(audio);
+
+          return new Response(audioBody, {
             headers: {
               "Content-Type": "audio/mpeg",
               "Content-Length": String(audio.byteLength),
