@@ -1,10 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { useQuery } from "@tanstack/react-query";
 import { AppShell } from "@/components/AppShell";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { PLAN_CATEGORIES, PRAYER_PLANS } from "@/lib/content/plans";
+import { getPublishedManagedCatalog } from "@/lib/admin.functions";
 
 export const Route = createFileRoute("/_authenticated/planos/")({
   head: () => ({
@@ -25,10 +28,28 @@ export const Route = createFileRoute("/_authenticated/planos/")({
 });
 
 function PlanosPage() {
+  const catalogFn = useServerFn(getPublishedManagedCatalog);
+  const { data: managedPlans = [] } = useQuery({
+    queryKey: ["published-managed-catalog", "prayer_plan"],
+    queryFn: () => catalogFn({ data: { kind: "prayer_plan" } }),
+  });
+  const catalog = new Map(PRAYER_PLANS.map((item) => [item.slug, item]));
+  for (const item of managedPlans) {
+    const old = catalog.get(item.slug);
+    const meta = item.metadata as Record<string, unknown>;
+    catalog.set(item.slug, {
+      slug: item.slug,
+      title: String(meta.title ?? old?.title ?? item.slug),
+      category: String(meta.category ?? old?.category ?? "Oração"),
+      days: Number(meta.days ?? old?.days ?? 1),
+      summary: String(meta.summary ?? old?.summary ?? ""),
+      keyVerse: String(meta.keyVerse ?? old?.keyVerse ?? ""),
+    });
+  }
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string | null>(null);
 
-  const plans = PRAYER_PLANS.filter((plan) => {
+  const plans = [...catalog.values()].filter((plan) => {
     const matchesCategory = !category || plan.category === category;
     const q = query.trim().toLowerCase();
     const matchesQuery =
