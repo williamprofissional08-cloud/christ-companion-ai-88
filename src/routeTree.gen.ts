@@ -433,6 +433,7 @@ export interface FileRouteTypes {
     | '/admin/aulas/$lessonId'
     | '/admin/cursos/$id'
     | '/admin/cursos/'
+    | '/admin/conteudo'
     | '/escola/$slug/'
     | '/escola/$slug/aula/$lessonSlug'
   fileRoutesByTo: FileRoutesByTo
