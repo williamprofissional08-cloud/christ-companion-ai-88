@@ -36,7 +36,8 @@ jobs:
       # Preserve semantic ESLint rules; only the repository-wide legacy Prettier
       # rule is excluded. All files touched by this PR are checked below.
       - name: Run ESLint
-        run: npm run lint -- --rule 'prettier/prettier: off'
+        run: |
+          npm run lint -- --rule 'prettier/prettier: off'
 
       - name: Check formatting of hardened files
         run: npx prettier --check src/routes/api/chat.ts src/routes/api/escola/professor-ia.ts src/routes/api/escola/professor-tts.ts src/lib/request-body.server.ts .github/workflows/validate.yml
