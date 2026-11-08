@@ -1,5 +1,6 @@
 import type { StudyContent } from "../types";
 import { genesis2Study } from "./genesis-2-study";
+import { genesis3Study } from "./genesis-3-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -297,4 +298,5 @@ Evite conexões artificiais, como ver cada dia como símbolo de uma era da igrej
 export const CURATED_STUDIES: Record<string, StudyContent> = {
   "genesis-1-criacao": genesis1,
   "biblia-genesis-cap-2": genesis2Study,
+  "biblia-genesis-cap-3": genesis3Study,
 };
