@@ -155,7 +155,6 @@ test("JSON reader rejects oversized streamed bodies", async () => {
   assert.equal(result.response.status, 413);
 });
 
-
 test("audio response reader accepts a body within the configured limit", async () => {
   const response = new Response(new Uint8Array([1, 2, 3]), {
     headers: { "content-type": "audio/mpeg", "content-length": "3" },
@@ -176,7 +175,9 @@ test("audio response reader rejects oversized declared responses", async () => {
   assert.equal(bytes, null);
 });
 
-test("audio response reader rejects oversized streamed responses without Content-Length", async () => {
+test(
+  "audio response reader rejects oversized streamed responses without Content-Length",
+  async () => {
   const stream = new ReadableStream({
     start(controller) {
       controller.enqueue(new Uint8Array([1, 2, 3]));
@@ -188,8 +189,9 @@ test("audio response reader rejects oversized streamed responses without Content
 
   const bytes = await readLimitedResponseBytes(response, 5);
 
-  assert.equal(bytes, null);
-});
+    assert.equal(bytes, null);
+  },
+);
 
 test("audio response reader rejects malformed Content-Length", async () => {
   const response = new Response(new Uint8Array([1]), {
@@ -200,7 +202,6 @@ test("audio response reader rejects malformed Content-Length", async () => {
 
   assert.equal(bytes, null);
 });
-
 
 test("audio response reader rejects empty responses", async () => {
   const response = new Response(new Uint8Array());
