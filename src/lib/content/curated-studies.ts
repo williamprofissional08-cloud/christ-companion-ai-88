@@ -108,7 +108,9 @@ Cristãos fiéis às Escrituras sustentam leituras diferentes:
 - **Dias analógicos** — os "dias de trabalho" de Deus são análogos à semana humana.
 
 **O que é seguro:** Deus criou tudo, com ordem, pela sua palavra, e o mundo foi declarado bom.
-**O que permanece debatido:** a duração e a natureza cronológica dos dias. Este estudo não apresenta nenhuma dessas posições como unanimidade.`,
+**O que permanece debatido:** a duração e a natureza cronológica dos dias. Este estudo não apresenta nenhuma dessas posições como unanimidade.
+
+**Cuidados:** não atribua a Deus esgotamento físico (Isaías 40:28); não interprete "tarde e manhã" como 24 horas sem base textual.`,
     },
     {
       id: "teologia",
@@ -123,8 +125,29 @@ Cristãos fiéis às Escrituras sustentam leituras diferentes:
 - **Vocação humana** — frutificar e cuidar da criação como representantes de Deus (Gênesis 1:28; Salmos 8:5-8).`,
     },
     {
+      id: "linguistica",
+      title: "7. Análise linguística (termos hebraicos relevantes)",
+      kind: "analysis",
+      confidence: "high",
+      body: `**Elohim** (אֱלֹהִים) — plural de majestade ou plural de natureza; forma plural com verbo singular. Não demonstra isoladamente a Trindade, mas é compatível com a pluralidade divina.
+
+**Bara** (בָּרָא) — verbo "criar" usado exclusivamente com Deus como sujeito (Isaías 40:26; 45:7; Gênesis 1:1,21,27; 2:4; 5:1,2). O contexto define o significado; não usar etimologia como prova.
+
+**Tohu wabohu** (תֹּהוּ וָבֹהוּ) — "sem forma e vazio" (1:2). Significa desordem e indefinição, não necessariamente "vazio absoluto".
+
+**Raqia** (רָקִיעַ) — "firmamento/estendimento" (1:6,8,17). Algo estendido como uma lâmina. O termo descreve a perspectiva do observador, não um modelo físico.
+
+**Nephesh** (נֶפֶשׁ) — "alma/sopro" (1:20,30; 2:7). Indica vida/sujeito vivo; não estabelece dualismo alma-corpo.
+
+**Tselem** (צֶלֶם) — "imagem" (1:26,27). Relação de representação, semelhança funcional. O contexto imediato liga à autoridade (1:28).
+
+**Barukha** (בָּרַךְ) — "abençoar" (1:22,28,29). No contexto, a primeira bênção sobre os seres vivos (1:22) descreve fecundidade e multiplicação; a bênção sobre o ser humano (1:28) acrescenta a vocação sobre a criação. Não é bênção em sentido sacramental.
+
+**Yom** (יוֹם) — "dia" (1:5,8,10-13,15-19,20-23,25-31). Com "tarde e manhã" e numerais, provavelmente 24 horas, mas o debate permanece aberto entre cristãos fieis às Escrituras.`,
+    },
+    {
       id: "referencias",
-      title: "7. Referências cruzadas (com relação real)",
+      title: "8. Referências cruzadas (com relação real)",
       kind: "cross-references",
       confidence: "high",
       body: `- **João 1:1-3** — "No princípio era o Verbo... todas as coisas foram feitas por intermédio dele": João retoma deliberadamente Gênesis 1:1 e identifica a Palavra criadora com Cristo.
