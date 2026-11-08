@@ -32,7 +32,10 @@ export async function readLimitedJson(
   }
 
   if (!request.body) {
-    return { ok: false, response: new Response("JSON inválido", { status: 400 }) };
+    return {
+      ok: false,
+      response: new Response("JSON inválido", { status: 400 }),
+    };
   }
 
   const reader = request.body.getReader();
@@ -66,8 +69,14 @@ export async function readLimitedJson(
   }
 
   try {
-    return { ok: true, value: JSON.parse(new TextDecoder().decode(bytes)) as unknown };
+    return {
+      ok: true,
+      value: JSON.parse(new TextDecoder().decode(bytes)) as unknown,
+    };
   } catch {
-    return { ok: false, response: new Response("JSON inválido", { status: 400 }) };
+    return {
+      ok: false,
+      response: new Response("JSON inválido", { status: 400 }),
+    };
   }
 }
