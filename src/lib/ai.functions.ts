@@ -128,7 +128,7 @@ export const getStudyContent = createServerFn({ method: "POST" })
     if (!study) throw new Error("Estudo não encontrado");
     const { CURATED_STUDIES } = await import("./content/curated-studies");
     const curated = CURATED_STUDIES[data.slug];
-    if (curated && !published) return curated;
+    if (curated && (!published || !managed.data?.content)) return curated;
     const cacheKey = published ? `${data.slug}:v${new Date(managed.data!.updated_at).getTime()}` : data.slug;
     const cached = await context.supabase
       .from("generated_content")
