@@ -55,6 +55,17 @@ export const Route = createFileRoute("/api/chat")({
             return new Response("Dados inválidos", { status: 400 });
           }
 
+          const hasOnlySupportedRoles = messages.every(
+            (message) =>
+              !!message &&
+              typeof message === "object" &&
+              "role" in message &&
+              (message.role === "user" || message.role === "assistant"),
+          );
+          if (!hasOnlySupportedRoles) {
+            return new Response("Papel de mensagem inválido", { status: 400 });
+          }
+
           const textChars = messages.reduce((total: number, message: unknown) => {
             if (!message || typeof message !== "object" || !("parts" in message)) return total;
             const parts = (message as { parts?: unknown }).parts;
@@ -100,7 +111,11 @@ export const Route = createFileRoute("/api/chat")({
           });
           if (saveUserError) console.error("save user message failed", saveUserError.message);
 
-          const firstText = last.parts?.find((part) => part.type === "text")?.text ?? "";
+          const firstTextPart = last.parts?.find((part) => part.type === "text");
+          const firstText =
+            firstTextPart && "text" in firstTextPart && typeof firstTextPart.text === "string"
+              ? firstTextPart.text
+              : "";
           if (thread.data.title === "Nova conversa" && firstText) {
             await auth.supabase
               .from("chat_threads")
