@@ -47,6 +47,7 @@ import { Route as ApiEscolaProfessorTtsRouteImport } from './routes/api/escola/p
 import { Route as AuthenticatedAdminAulasLessonIdRouteImport } from './routes/_authenticated/admin.aulas.$lessonId'
 import { Route as AuthenticatedAdminCursosIndexRouteImport } from './routes/_authenticated/admin.cursos.index'
 import { Route as AuthenticatedAdminCursosIdRouteImport } from './routes/_authenticated/admin.cursos.$id'
+import { Route as AuthenticatedAdminConteudoRouteImport } from './routes/_authenticated/admin.conteudo'
 import { Route as AuthenticatedEscolaSlugIndexRouteImport } from './routes/_authenticated/escola.$slug.index'
 import { Route as AuthenticatedEscolaSlugAulaLessonSlugRouteImport } from './routes/_authenticated/escola.$slug.aula.$lessonSlug'
 
@@ -252,6 +253,12 @@ const AuthenticatedAdminCursosIdRoute =
     path: '/cursos/$id',
     getParentRoute: () => AuthenticatedAdminRoute,
   } as any)
+const AuthenticatedAdminConteudoRoute =
+  AuthenticatedAdminConteudoRouteImport.update({
+    id: '/conteudo',
+    path: '/conteudo',
+    getParentRoute: () => AuthenticatedAdminRoute,
+  } as any)
 const AuthenticatedEscolaSlugIndexRoute =
   AuthenticatedEscolaSlugIndexRouteImport.update({
     id: '/',
@@ -303,6 +310,7 @@ export interface FileRoutesByFullPath {
   '/admin/aulas/$lessonId': typeof AuthenticatedAdminAulasLessonIdRoute
   '/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
   '/admin/cursos/': typeof AuthenticatedAdminCursosIndexRoute
+  '/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/escola/$slug/': typeof AuthenticatedEscolaSlugIndexRoute
   '/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
@@ -337,6 +345,7 @@ export interface FileRoutesByTo {
   '/admin/aulas/$lessonId': typeof AuthenticatedAdminAulasLessonIdRoute
   '/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
   '/admin/cursos': typeof AuthenticatedAdminCursosIndexRoute
+  '/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/escola/$slug': typeof AuthenticatedEscolaSlugIndexRoute
   '/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
@@ -380,6 +389,7 @@ export interface FileRoutesById {
   '/_authenticated/admin/aulas/$lessonId': typeof AuthenticatedAdminAulasLessonIdRoute
   '/_authenticated/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
   '/_authenticated/admin/cursos/': typeof AuthenticatedAdminCursosIndexRoute
+  '/_authenticated/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/_authenticated/escola/$slug/': typeof AuthenticatedEscolaSlugIndexRoute
   '/_authenticated/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
@@ -782,6 +792,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminCursosIdRouteImport
       parentRoute: typeof AuthenticatedAdminRoute
     }
+    '/_authenticated/admin/conteudo': {
+      id: '/_authenticated/admin/conteudo'
+      path: '/conteudo'
+      fullPath: '/admin/conteudo'
+      preLoaderRoute: typeof AuthenticatedAdminConteudoRouteImport
+      parentRoute: typeof AuthenticatedAdminRoute
+    }
     '/_authenticated/escola/$slug/': {
       id: '/_authenticated/escola/$slug/'
       path: '/'
@@ -804,6 +821,7 @@ interface AuthenticatedAdminRouteChildren {
   AuthenticatedAdminAulasLessonIdRoute: typeof AuthenticatedAdminAulasLessonIdRoute
   AuthenticatedAdminCursosIdRoute: typeof AuthenticatedAdminCursosIdRoute
   AuthenticatedAdminCursosIndexRoute: typeof AuthenticatedAdminCursosIndexRoute
+  AuthenticatedAdminConteudoRoute: typeof AuthenticatedAdminConteudoRoute
 }
 
 const AuthenticatedAdminRouteChildren: AuthenticatedAdminRouteChildren = {
@@ -811,6 +829,7 @@ const AuthenticatedAdminRouteChildren: AuthenticatedAdminRouteChildren = {
   AuthenticatedAdminAulasLessonIdRoute: AuthenticatedAdminAulasLessonIdRoute,
   AuthenticatedAdminCursosIdRoute: AuthenticatedAdminCursosIdRoute,
   AuthenticatedAdminCursosIndexRoute: AuthenticatedAdminCursosIndexRoute,
+  AuthenticatedAdminConteudoRoute: AuthenticatedAdminConteudoRoute,
 }
 
 const AuthenticatedAdminRouteWithChildren =
