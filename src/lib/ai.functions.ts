@@ -62,7 +62,7 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
     const { getPlan } = await import("./content/plans");
     const legacyPlan = getPlan(data.slug);
     const managed = await context.supabase.from("managed_content")
-      .select("metadata")
+      .select("metadata, updated_at")
       .eq("kind", "prayer_plan")
       .eq("slug", data.slug)
       .eq("status", "published")
@@ -79,7 +79,7 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
     } : legacyPlan;
     if (!plan) throw new Error("Plano não encontrado");
     if (data.day > plan.days) throw new Error("Dia fora da duração deste plano");
-    const cacheKey = `${data.slug}:${data.day}`;
+    const cacheKey = managed.data ? `${data.slug}:${data.day}:v${new Date(managed.data.updated_at).getTime()}` : `${data.slug}:${data.day}`;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
@@ -105,7 +105,7 @@ export const getStudyContent = createServerFn({ method: "POST" })
     const { getStudy } = await import("./content/studies");
     const legacyStudy = getStudy(data.slug);
     const managed = await context.supabase.from("managed_content")
-      .select("metadata, content")
+      .select("metadata, content, updated_at")
       .eq("kind", "study")
       .eq("slug", data.slug)
       .eq("status", "published")
@@ -126,11 +126,12 @@ export const getStudyContent = createServerFn({ method: "POST" })
     const { CURATED_STUDIES } = await import("./content/curated-studies");
     const curated = CURATED_STUDIES[data.slug];
     if (curated && !managed.data) return curated;
+    const cacheKey = managed.data ? `${data.slug}:v${new Date(managed.data.updated_at).getTime()}` : data.slug;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
       .eq("kind", "study")
-      .eq("slug", data.slug)
+      .eq("slug", cacheKey)
       .maybeSingle();
     if (cached.data?.content) return cached.data.content as unknown as StudyContent;
 
@@ -139,7 +140,7 @@ export const getStudyContent = createServerFn({ method: "POST" })
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { error } = await supabaseAdmin
       .from("generated_content")
-      .upsert({ kind: "study", slug: data.slug, content: content as never }, { onConflict: "kind,slug" });
+      .upsert({ kind: "study", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });
     if (error) console.error("study cache failed", error.message);
     return content;
   });
