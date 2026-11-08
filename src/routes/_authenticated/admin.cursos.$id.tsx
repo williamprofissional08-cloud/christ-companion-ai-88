@@ -154,7 +154,7 @@ function AdminCourseEditor() {
   const deleteModule = useMutation({
     mutationFn: (moduleId: string) => removeModule({ data: { id: moduleId } }),
     onSuccess: () => {
-      toast.success("Módulo removido.");
+      toast.success("Módulo arquivado. O conteúdo e o progresso foram preservados.");
       invalidate();
     },
     onError: (error: Error) => toast.error(error.message),
@@ -209,7 +209,7 @@ function AdminCourseEditor() {
   const deleteLesson = useMutation({
     mutationFn: (lessonId: string) => removeLesson({ data: { id: lessonId } }),
     onSuccess: () => {
-      toast.success("Aula removida.");
+      toast.success("Aula arquivada. O conteúdo e o progresso foram preservados.");
       invalidate();
     },
     onError: (error: Error) => toast.error(error.message),
@@ -381,8 +381,16 @@ function AdminCourseEditor() {
                       <Button
                         size="icon-sm"
                         variant="ghost"
-                        aria-label="Remover módulo"
-                        onClick={() => deleteModule.mutate(mod.id)}
+                        aria-label="Arquivar módulo"
+                        onClick={() => {
+                          if (
+                            window.confirm(
+                              "Arquivar este módulo? Ele deixará de aparecer para os alunos, mas seus capítulos, aulas e registros serão preservados.",
+                            )
+                          ) {
+                            deleteModule.mutate(mod.id);
+                          }
+                        }}
                       >
                         <Trash2 className="size-4" />
                       </Button>
@@ -433,8 +441,16 @@ function AdminCourseEditor() {
 
                           size="icon-sm"
                           variant="ghost"
-                          aria-label="Remover aula"
-                          onClick={() => deleteLesson.mutate(lesson.id)}
+                          aria-label="Arquivar aula"
+                          onClick={() => {
+                            if (
+                              window.confirm(
+                                "Arquivar esta aula? Ela deixará de aparecer para os alunos, mas conteúdo, respostas e progresso serão preservados.",
+                              )
+                            ) {
+                              deleteLesson.mutate(lesson.id);
+                            }
+                          }}
                         >
                           <Trash2 className="size-4" />
                         </Button>
