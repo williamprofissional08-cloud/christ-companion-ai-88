@@ -520,3 +520,148 @@ export const adminDeleteLessonMedia = createServerFn({ method: "POST" })
     if (error) throw new Error(error.message);
     return { ok: true };
   });
+
+
+type ManagedContentKind = "study" | "prayer_plan";
+type ManagedContentStatus = "draft" | "published" | "archived";
+type ManagedContentItem = {
+  kind: ManagedContentKind;
+  slug: string;
+  title: string;
+  category: string;
+  reference: string;
+  summary: string;
+  depth?: "simple" | "deep";
+  days?: number;
+  keyVerse?: string;
+  status: ManagedContentStatus | "legacy";
+  content: unknown | null;
+};
+
+const managedKindSchema = z.enum(["study", "prayer_plan"]);
+const managedStatusSchema = z.enum(["draft", "published", "archived"]);
+
+function managedMetadata(value: unknown): Record<string, unknown> {
+  return value && typeof value === "object" && !Array.isArray(value)
+    ? value as Record<string, unknown>
+    : {};
+}
+
+/** Lista o catálogo legado junto com as versões gerenciadas, sem duplicar slugs. */
+export const adminListManagedContent = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .handler(async ({ context }): Promise<ManagedContentItem[]> => {
+    await assertAdmin(context.supabase, context.userId);
+    const [{ STUDIES }, { PRAYER_PLANS }, stored] = await Promise.all([
+      import("./content/studies"),
+      import("./content/plans"),
+      context.supabase.from("managed_content")
+        .select("kind, slug, metadata, content, status")
+        .order("kind", { ascending: true })
+        .order("slug", { ascending: true }),
+    ]);
+    if (stored.error) throw new Error(stored.error.message);
+
+    const items = new Map<string, ManagedContentItem>();
+    for (const item of STUDIES) {
+      items.set(`study:${item.slug}`, {
+        kind: "study", slug: item.slug, title: item.title, category: item.category,
+        reference: item.reference, summary: item.summary, depth: item.depth,
+        status: "legacy", content: null,
+      });
+    }
+    for (const item of PRAYER_PLANS) {
+      items.set(`prayer_plan:${item.slug}`, {
+        kind: "prayer_plan", slug: item.slug, title: item.title, category: item.category,
+        reference: item.keyVerse, summary: item.summary, days: item.days,
+        keyVerse: item.keyVerse, status: "legacy", content: null,
+      });
+    }
+    for (const row of stored.data ?? []) {
+      const metadata = managedMetadata(row.metadata);
+      const key = `${row.kind}:${row.slug}`;
+      const previous = items.get(key);
+      items.set(key, {
+        kind: row.kind as ManagedContentKind,
+        slug: row.slug,
+        title: String(metadata.title ?? previous?.title ?? row.slug),
+        category: String(metadata.category ?? previous?.category ?? ""),
+        reference: String(metadata.reference ?? previous?.reference ?? ""),
+        summary: String(metadata.summary ?? previous?.summary ?? ""),
+        ...(metadata.depth === "deep" || metadata.depth === "simple" ? { depth: metadata.depth } : {}),
+        ...(typeof metadata.days === "number" ? { days: metadata.days } : {}),
+        ...(typeof metadata.keyVerse === "string" ? { keyVerse: metadata.keyVerse } : {}),
+        status: row.status as ManagedContentStatus,
+        content: row.content,
+      });
+    }
+    return [...items.values()].sort((a, b) =>
+      a.kind.localeCompare(b.kind) || a.title.localeCompare(b.title, "pt-BR"),
+    );
+  });
+
+/** Salva rascunhos/publicações. A autorização é conferida no servidor em cada chamada. */
+export const adminSaveManagedContent = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) =>
+    z.object({
+      kind: managedKindSchema,
+      slug: z.string().min(3).max(100).regex(/^[a-z0-9-]+$/),
+      title: z.string().min(3).max(160),
+      category: z.string().min(2).max(80),
+      reference: z.string().max(200).default(""),
+      summary: z.string().min(1).max(2000),
+      depth: z.enum(["simple", "deep"]).optional(),
+      days: z.number().int().min(1).max(400).optional(),
+      keyVerse: z.string().max(160).optional(),
+      status: managedStatusSchema,
+      content: z.unknown().nullable().optional(),
+    }).superRefine((value, ctx) => {
+      if (value.kind === "prayer_plan" && (!value.days || !value.keyVerse)) {
+        ctx.addIssue({ code: "custom", message: "Planos precisam informar duração e versículo-chave.", path: ["days"] });
+      }
+      if (value.kind === "study" && value.content !== undefined && value.content !== null &&
+        (typeof value.content !== "object" || Array.isArray(value.content))) {
+        ctx.addIssue({ code: "custom", message: "O conteúdo do estudo precisa ser um objeto JSON.", path: ["content"] });
+      }
+    }).parse(input),
+  )
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context.supabase, context.userId);
+    const { error } = await context.supabase.from("managed_content").upsert({
+      kind: data.kind,
+      slug: data.slug,
+      metadata: {
+        title: data.title,
+        category: data.category,
+        reference: data.reference,
+        summary: data.summary,
+        ...(data.depth ? { depth: data.depth } : {}),
+        ...(data.days ? { days: data.days } : {}),
+        ...(data.keyVerse ? { keyVerse: data.keyVerse } : {}),
+      },
+      content: data.content ?? null,
+      status: data.status,
+      updated_at: new Date().toISOString(),
+    }, { onConflict: "kind,slug" });
+    if (error) throw new Error(error.message);
+    return { ok: true, slug: data.slug, status: data.status };
+  });
+
+/** Catálogo publicado para as telas dos alunos; itens legados continuam como fallback local. */
+export const getPublishedManagedCatalog = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) => z.object({ kind: managedKindSchema }).parse(input))
+  .handler(async ({ data, context }) => {
+    const { data: rows, error } = await context.supabase
+      .from("managed_content")
+      .select("slug, metadata, content")
+      .eq("kind", data.kind)
+      .eq("status", "published");
+    if (error) throw new Error(error.message);
+    return (rows ?? []).map((row) => ({
+      slug: row.slug,
+      metadata: managedMetadata(row.metadata),
+      content: row.content,
+    }));
+  });
