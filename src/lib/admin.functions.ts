@@ -560,6 +560,11 @@ const managedStudyContentSchema = z.object({
   })).optional(),
 });
 
+function normalizeManagedIdentity(value: string): string {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
 function managedMetadata(value: unknown): Record<string, unknown> {
   return value && typeof value === "object" && !Array.isArray(value)
     ? value as Record<string, unknown>
@@ -648,6 +653,27 @@ export const adminSaveManagedContent = createServerFn({ method: "POST" })
   )
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
+    // Mesmo título + mesma referência identificam o mesmo estudo/plano:
+    // mantém o slug escolhido e arquiva as cópias, sem apagar seu conteúdo.
+    const { data: existingItems, error: lookupError } = await context.supabase
+      .from("managed_content")
+      .select("slug, metadata")
+      .eq("kind", data.kind)
+      .neq("slug", data.slug);
+    if (lookupError) throw new Error(lookupError.message);
+    const duplicateSlugs = (existingItems ?? []).filter((item) => {
+      const metadata = managedMetadata(item.metadata);
+      return normalizeManagedIdentity(String(metadata.title ?? "")) === normalizeManagedIdentity(data.title) &&
+        normalizeManagedIdentity(String(metadata.reference ?? "")) === normalizeManagedIdentity(data.reference);
+    }).map((item) => item.slug);
+    if (duplicateSlugs.length) {
+      const { error: archiveError } = await context.supabase
+        .from("managed_content")
+        .update({ status: "archived" })
+        .eq("kind", data.kind)
+        .in("slug", duplicateSlugs);
+      if (archiveError) throw new Error(archiveError.message);
+    }
     const { error } = await context.supabase.from("managed_content").upsert({
       kind: data.kind,
       slug: data.slug,
