@@ -178,18 +178,18 @@ test("audio response reader rejects oversized declared responses", async () => {
 test(
   "audio response reader rejects oversized streamed responses without Content-Length",
   async () => {
-  const stream = new ReadableStream({
-    start(controller) {
-      controller.enqueue(new Uint8Array([1, 2, 3]));
-      controller.enqueue(new Uint8Array([4, 5, 6]));
-      controller.close();
-    },
-  });
-  const response = new Response(stream);
+    const stream = new ReadableStream({
+      start(controller) {
+        controller.enqueue(new Uint8Array([1, 2, 3]));
+        controller.enqueue(new Uint8Array([4, 5, 6]));
+        controller.close();
+      },
+    });
+    const response = new Response(stream);
 
-  const bytes = await readLimitedResponseBytes(response, 5);
+    const bytes = await readLimitedResponseBytes(response, 5);
 
-    assert.equal(bytes, null);
+      assert.equal(bytes, null);
   },
 );
 
