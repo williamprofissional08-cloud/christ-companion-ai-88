@@ -40,11 +40,11 @@ function PlanosPage() {
     const meta = item.metadata as Record<string, unknown>;
     catalog.set(item.slug, {
       slug: item.slug,
-      title: String(meta.title ?? old?.title ?? item.slug),
-      category: String(meta.category ?? old?.category ?? "Oração"),
-      days: Number(meta.days ?? old?.days ?? 1),
-      summary: String(meta.summary ?? old?.summary ?? ""),
-      keyVerse: String(meta.keyVerse ?? old?.keyVerse ?? ""),
+      title: String(meta["title"] ?? old?.title ?? item.slug),
+      category: String(meta["category"] ?? old?.category ?? "Oração"),
+      days: Number(meta["days"] ?? old?.days ?? 1),
+      summary: String(meta["summary"] ?? old?.summary ?? ""),
+      keyVerse: String(meta["keyVerse"] ?? old?.keyVerse ?? ""),
     });
   }
   const [query, setQuery] = useState("");
