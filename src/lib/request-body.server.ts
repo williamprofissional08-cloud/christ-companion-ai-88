@@ -78,3 +78,49 @@ export async function readLimitedJson(
     };
   }
 }
+
+/**
+ * Lê uma resposta externa sem permitir que o corpo exceda o limite de memória.
+ * Retorna null para respostas sem corpo, Content-Length inválido ou corpo acima do limite.
+ */
+export async function readLimitedResponseBytes(
+  response: Response,
+  maxBytes: number,
+): Promise<Uint8Array | null> {
+  const contentLength = response.headers.get("content-length");
+  if (contentLength !== null) {
+    if (!/^\\d+$/.test(contentLength)) return null;
+    const declaredLength = Number(contentLength);
+    if (!Number.isSafeInteger(declaredLength) || declaredLength > maxBytes) return null;
+  }
+
+  if (!response.body) return null;
+
+  const reader = response.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let totalBytes = 0;
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      totalBytes += value.byteLength;
+
+      if (totalBytes > maxBytes) {
+        await reader.cancel();
+        return null;
+      }
+      chunks.push(value);
+    }
+  } finally {
+    reader.releaseLock();
+  }
+
+  const bytes = new Uint8Array(totalBytes);
+  let offset = 0;
+  for (const chunk of chunks) {
+    bytes.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  return bytes;
+}
