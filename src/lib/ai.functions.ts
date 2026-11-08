@@ -74,10 +74,10 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
       ? managed.data.metadata as Record<string, unknown> : {};
     const plan = published ? {
       slug: data.slug,
-      title: String(metadata.title ?? legacyPlan?.title ?? data.slug),
-      summary: String(metadata.summary ?? legacyPlan?.summary ?? ""),
-      keyVerse: String(metadata.keyVerse ?? legacyPlan?.keyVerse ?? ""),
-      days: Number(metadata.days ?? legacyPlan?.days ?? 0),
+      title: String(metadata["title"] ?? legacyPlan?.title ?? data.slug),
+      summary: String(metadata["summary"] ?? legacyPlan?.summary ?? ""),
+      keyVerse: String(metadata["keyVerse"] ?? legacyPlan?.keyVerse ?? ""),
+      days: Number(metadata["days"] ?? legacyPlan?.days ?? 0),
     } : legacyPlan;
     if (!plan) throw new Error("Plano não encontrado");
     if (data.day > plan.days) throw new Error("Dia fora da duração deste plano");
@@ -119,11 +119,11 @@ export const getStudyContent = createServerFn({ method: "POST" })
       ? managed.data.metadata as Record<string, unknown> : {};
     const study = published ? {
       slug: data.slug,
-      title: String(metadata.title ?? legacyStudy?.title ?? data.slug),
-      category: String(metadata.category ?? legacyStudy?.category ?? "Estudos bíblicos"),
-      reference: String(metadata.reference ?? legacyStudy?.reference ?? ""),
-      summary: String(metadata.summary ?? legacyStudy?.summary ?? ""),
-      depth: (metadata.depth === "deep" ? "deep" : "simple") as "simple" | "deep",
+      title: String(metadata["title"] ?? legacyStudy?.title ?? data.slug),
+      category: String(metadata["category"] ?? legacyStudy?.category ?? "Estudos bíblicos"),
+      reference: String(metadata["reference"] ?? legacyStudy?.reference ?? ""),
+      summary: String(metadata["summary"] ?? legacyStudy?.summary ?? ""),
+      depth: (metadata["depth"] === "deep" ? "deep" : "simple") as "simple" | "deep",
     } : legacyStudy;
     if (!study) throw new Error("Estudo não encontrado");
     const { CURATED_STUDIES } = await import("./content/curated-studies");
@@ -138,15 +138,12 @@ export const getStudyContent = createServerFn({ method: "POST" })
       .maybeSingle();
     if (cached.data?.content) return cached.data.content as unknown as StudyContent;
 
-    const { generateStudy } = await import("./ai-content.server");
-    const content = await generateStudy(study.title, study.reference, study.summary, study.category, study.depth);
     const { generateChapterStudy, generateStudy } = await import("./ai-content.server");
     const { getChapterStudy } = await import("./content/bible-books");
     const chapterStudy = getChapterStudy(data.slug);
     const content = chapterStudy
       ? await generateChapterStudy(chapterStudy.book.name, chapterStudy.chapter, chapterStudy.book.category)
       : await generateStudy(study.title, study.reference, study.summary, study.category, study.depth);
-    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { error } = await supabaseAdmin
       .from("generated_content")
       .upsert({ kind: "study", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });

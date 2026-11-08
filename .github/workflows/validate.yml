@@ -1,26 +1,15 @@
 name: Validate
 
-on:
-  push:
-    branches: ["main", "maintenance/**", "codex/**"]
-  pull_request:
-    branches: ["main"]
-
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
 "on":
   pull_request:
     branches: [main]
   push:
     branches:
-      - release/prelaunch-hardening-2026-11
+      - main
+      - "maintenance/**"
+      - "codex/**"
+      - "release/**"
+      - "fix/**"
 
 permissions:
   contents: read
@@ -46,15 +35,6 @@ jobs:
           node-version: 22
           cache: npm
 
-      # O package-lock atual está defasado em relação ao package.json.
-      # npm install resolve a árvore declarada sem alterar o código do app.
-      - name: Install dependencies
-        run: npm install
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Build
       - name: Install reproducible dependencies
         run: npm ci --no-audit --no-fund
 
@@ -74,11 +54,11 @@ jobs:
           src/routes/api/escola/professor-tts.ts
           tests/ai-rate-limit.test.mjs
 
+      - name: Build production app
+        run: npm run build
+
       - name: TypeScript check
         run: npx tsc --noEmit
 
       - name: Run automated tests
         run: npm test
-
-      - name: Build production app
-        run: npm run build

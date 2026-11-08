@@ -52,13 +52,12 @@ function EstudoDetalhe() {
   const legacyStudy = getStudy(slug);
   const study = managedStudy?.status === "archived" ? undefined : managedStudy ? {
     slug,
-    title: String(metadata?.title ?? legacyStudy?.title ?? slug),
-    category: String(metadata?.category ?? legacyStudy?.category ?? "Estudos bíblicos"),
-    reference: String(metadata?.reference ?? legacyStudy?.reference ?? ""),
-    summary: String(metadata?.summary ?? legacyStudy?.summary ?? ""),
-    depth: metadata?.depth === "deep" ? "deep" as const : legacyStudy?.depth ?? "simple" as const,
+    title: String(metadata?.["title"] ?? legacyStudy?.title ?? slug),
+    category: String(metadata?.["category"] ?? legacyStudy?.category ?? "Estudos bíblicos"),
+    reference: String(metadata?.["reference"] ?? legacyStudy?.reference ?? ""),
+    summary: String(metadata?.["summary"] ?? legacyStudy?.summary ?? ""),
+    depth: metadata?.["depth"] === "deep" ? "deep" as const : legacyStudy?.depth ?? "simple" as const,
   } : legacyStudy;
-  const study = getStudy(slug);
   const genesis = getBibleBook("genesis");
   const chapterStudy = getChapterStudy(slug)
     ?? (slug === "genesis-1-criacao" && genesis ? { book: genesis, chapter: 1 } : null);

@@ -6,10 +6,9 @@ import { AppShell } from "@/components/AppShell";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { deduplicateStudies, STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
 import { getPublishedManagedCatalog } from "@/lib/admin.functions";
-import { STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
 import { BIBLE_BOOKS, BIBLE_CHAPTER_TOTAL, getChapterStudySlug } from "@/lib/content/bible-books";
+import { deduplicateStudies, STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
 
 export const Route = createFileRoute("/_authenticated/estudos/")({
   head: () => ({
@@ -35,37 +34,47 @@ function EstudosPage() {
     queryKey: ["published-managed-catalog", "study"],
     queryFn: () => catalogFn({ data: { kind: "study" } }),
   });
-  const catalog = new Map(STUDIES.map((item) => [item.slug, item]));
-  for (const item of managedStudies) {
-    if (item.status === "archived") { catalog.delete(item.slug); continue; }
-    const old = catalog.get(item.slug);
-    const meta = item.metadata as Record<string, unknown>;
-    catalog.set(item.slug, {
-      slug: item.slug,
-      title: String(meta.title ?? old?.title ?? item.slug),
-      category: String(meta.category ?? old?.category ?? "Estudos bíblicos"),
-      reference: String(meta.reference ?? old?.reference ?? ""),
-      summary: String(meta.summary ?? old?.summary ?? ""),
-      depth: meta.depth === "deep" ? "deep" : old?.depth ?? "simple",
-    });
-  }
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string | null>(null);
+  const normalizedQuery = query.trim().toLocaleLowerCase("pt-BR");
+
+  const catalog = new Map(STUDIES.map((item) => [item.slug, item]));
+  for (const item of managedStudies) {
+    if (item.status === "archived") {
+      catalog.delete(item.slug);
+      continue;
+    }
+
+    const previous = catalog.get(item.slug);
+    const metadata = item.metadata as Record<string, unknown>;
+    catalog.set(item.slug, {
+      slug: item.slug,
+      title: String(metadata["title"] ?? previous?.title ?? item.slug),
+      category: String(metadata["category"] ?? previous?.category ?? "Estudos bíblicos"),
+      reference: String(metadata["reference"] ?? previous?.reference ?? ""),
+      summary: String(metadata["summary"] ?? previous?.summary ?? ""),
+      depth: metadata["depth"] === "deep" ? "deep" : previous?.depth ?? "simple",
+    });
+  }
 
   const studies = deduplicateStudies([...catalog.values()]).filter((study) => {
-  const q = query.trim().toLocaleLowerCase("pt-BR");
-  const books = BIBLE_BOOKS.filter((book) => !q || book.name.toLocaleLowerCase("pt-BR").includes(q) || book.testament.toLocaleLowerCase("pt-BR").includes(q) || book.category.toLocaleLowerCase("pt-BR").includes(q));
-
-  const studies = STUDIES.filter((study) => {
     const matchesCategory = !category || study.category === category;
-    const q = query.trim().toLowerCase();
     const matchesQuery =
-      !q ||
-      study.title.toLowerCase().includes(q) ||
-      study.summary.toLowerCase().includes(q) ||
-      study.reference.toLowerCase().includes(q);
+      !normalizedQuery ||
+      study.title.toLocaleLowerCase("pt-BR").includes(normalizedQuery) ||
+      study.summary.toLocaleLowerCase("pt-BR").includes(normalizedQuery) ||
+      study.reference.toLocaleLowerCase("pt-BR").includes(normalizedQuery);
+
     return matchesCategory && matchesQuery;
   });
+
+  const books = BIBLE_BOOKS.filter(
+    (book) =>
+      !normalizedQuery ||
+      book.name.toLocaleLowerCase("pt-BR").includes(normalizedQuery) ||
+      book.testament.toLocaleLowerCase("pt-BR").includes(normalizedQuery) ||
+      book.category.toLocaleLowerCase("pt-BR").includes(normalizedQuery),
+  );
 
   return (
     <AppShell title="Estudos bíblicos" subtitle="Contexto, aplicação e referências.">
@@ -80,40 +89,51 @@ function EstudosPage() {
         <Button variant={category ? "outline" : "gold"} size="sm" onClick={() => setCategory(null)}>
           Todos
         </Button>
-        {STUDY_CATEGORIES.map((c) => (
+        {STUDY_CATEGORIES.map((itemCategory) => (
           <Button
-            key={c}
-            variant={category === c ? "gold" : "outline"}
+            key={itemCategory}
+            variant={category === itemCategory ? "gold" : "outline"}
             size="sm"
-            onClick={() => setCategory(c)}
+            onClick={() => setCategory(itemCategory)}
           >
-            {c}
+            {itemCategory}
           </Button>
         ))}
       </div>
 
       <section className="mt-8 space-y-4">
         <div>
-          <h2 className="font-display text-xl font-semibold">Jornada Bíblica — 66 livros, capítulo por capítulo</h2>
+          <h2 className="font-display text-xl font-semibold">
+            Jornada Bíblica — 66 livros, capítulo por capítulo
+          </h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            {BIBLE_BOOKS.length} livros · {BIBLE_CHAPTER_TOTAL.toLocaleString("pt-BR")} capítulos. Escolha um livro e abra o capítulo que deseja estudar.
-            Os estudos são preparados individualmente por capítulo; Gênesis 1 mantém o estudo aprofundado revisado como modelo.
+            {BIBLE_BOOKS.length} livros · {BIBLE_CHAPTER_TOTAL.toLocaleString("pt-BR")} capítulos.
+            Escolha um livro e abra o capítulo que deseja estudar. Os estudos são preparados
+            individualmente por capítulo; Gênesis 1 mantém o estudo aprofundado revisado como modelo.
           </p>
         </div>
+
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
           {books.map((book) => (
             <details key={book.slug} className="rounded-xl border border-border/60 bg-card p-4">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
                 <span>
                   <span className="block font-semibold">{book.name}</span>
-                  <span className="text-xs text-muted-foreground">{book.testament} · {book.category}</span>
+                  <span className="text-xs text-muted-foreground">
+                    {book.testament} · {book.category}
+                  </span>
                 </span>
-                <span className="shrink-0 text-xs text-muted-foreground">{book.chapters} caps.</span>
+                <span className="shrink-0 text-xs text-muted-foreground">
+                  {book.chapters} caps.
+                </span>
               </summary>
               <div className="mt-4 grid grid-cols-5 gap-2 sm:grid-cols-6">
                 {Array.from({ length: book.chapters }, (_, index) => index + 1).map((chapter) => (
                   <Button key={chapter} asChild size="sm" variant="outline" className="h-9 px-2">
-                    <Link to="/estudos/$slug" params={{ slug: getChapterStudySlug(book.slug, chapter) }}>
+                    <Link
+                      to="/estudos/$slug"
+                      params={{ slug: getChapterStudySlug(book.slug, chapter) }}
+                    >
                       {chapter}
                     </Link>
                   </Button>
@@ -121,7 +141,11 @@ function EstudosPage() {
               </div>
             </details>
           ))}
-          {books.length === 0 ? <p className="text-sm text-muted-foreground">Nenhum livro corresponde à busca.</p> : null}
+          {books.length === 0 ? (
+            <p className="text-sm text-muted-foreground">
+              Nenhum livro corresponde à busca.
+            </p>
+          ) : null}
         </div>
       </section>
 

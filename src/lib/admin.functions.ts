@@ -525,6 +525,7 @@ export const adminDeleteLessonMedia = createServerFn({ method: "POST" })
 
 type ManagedContentKind = "study" | "prayer_plan";
 type ManagedContentStatus = "draft" | "published" | "archived";
+type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue | undefined };
 type ManagedContentItem = {
   kind: ManagedContentKind;
   slug: string;
@@ -536,7 +537,7 @@ type ManagedContentItem = {
   days?: number;
   keyVerse?: string;
   status: ManagedContentStatus | "legacy";
-  content: unknown | null;
+  content: JsonValue | null;
 };
 
 const managedKindSchema = z.enum(["study", "prayer_plan"]);
@@ -565,9 +566,9 @@ function normalizeManagedIdentity(value: string): string {
     .toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
-function managedMetadata(value: unknown): Record<string, unknown> {
+function managedMetadata(value: unknown): Record<string, JsonValue> {
   return value && typeof value === "object" && !Array.isArray(value)
-    ? value as Record<string, unknown>
+    ? value as Record<string, JsonValue>
     : {};
 }
 
@@ -592,7 +593,7 @@ export const adminListManagedContent = createServerFn({ method: "GET" })
       items.set(`study:${item.slug}`, {
         kind: "study", slug: item.slug, title: item.title, category: item.category,
         reference: item.reference, summary: item.summary, depth: item.depth,
-        status: "legacy", content: CURATED_STUDIES[item.slug] ?? null,
+        status: "legacy", content: (CURATED_STUDIES[item.slug] as JsonValue | undefined) ?? null,
       });
     }
     for (const item of PRAYER_PLANS) {
@@ -609,15 +610,15 @@ export const adminListManagedContent = createServerFn({ method: "GET" })
       items.set(key, {
         kind: row.kind as ManagedContentKind,
         slug: row.slug,
-        title: String(metadata.title ?? previous?.title ?? row.slug),
-        category: String(metadata.category ?? previous?.category ?? ""),
-        reference: String(metadata.reference ?? previous?.reference ?? ""),
-        summary: String(metadata.summary ?? previous?.summary ?? ""),
-        ...(metadata.depth === "deep" || metadata.depth === "simple" ? { depth: metadata.depth } : {}),
-        ...(typeof metadata.days === "number" ? { days: metadata.days } : {}),
-        ...(typeof metadata.keyVerse === "string" ? { keyVerse: metadata.keyVerse } : {}),
+        title: String(metadata["title"] ?? previous?.title ?? row.slug),
+        category: String(metadata["category"] ?? previous?.category ?? ""),
+        reference: String(metadata["reference"] ?? previous?.reference ?? ""),
+        summary: String(metadata["summary"] ?? previous?.summary ?? ""),
+        ...(metadata["depth"] === "deep" || metadata["depth"] === "simple" ? { depth: metadata["depth"] } : {}),
+        ...(typeof metadata["days"] === "number" ? { days: metadata["days"] } : {}),
+        ...(typeof metadata["keyVerse"] === "string" ? { keyVerse: metadata["keyVerse"] } : {}),
         status: row.status as ManagedContentStatus,
-        content: row.content,
+        content: row.content as JsonValue | null,
       });
     }
     const all = [...items.values()];
@@ -663,8 +664,8 @@ export const adminSaveManagedContent = createServerFn({ method: "POST" })
     if (lookupError) throw new Error(lookupError.message);
     const duplicateSlugs = (existingItems ?? []).filter((item) => {
       const metadata = managedMetadata(item.metadata);
-      return normalizeManagedIdentity(String(metadata.title ?? "")) === normalizeManagedIdentity(data.title) &&
-        normalizeManagedIdentity(String(metadata.reference ?? "")) === normalizeManagedIdentity(data.reference);
+      return normalizeManagedIdentity(String(metadata["title"] ?? "")) === normalizeManagedIdentity(data.title) &&
+        normalizeManagedIdentity(String(metadata["reference"] ?? "")) === normalizeManagedIdentity(data.reference);
     }).map((item) => item.slug);
     if (duplicateSlugs.length) {
       const { error: archiveError } = await context.supabase
@@ -694,11 +695,18 @@ export const adminSaveManagedContent = createServerFn({ method: "POST" })
     return { ok: true, slug: data.slug, status: data.status };
   });
 
+type ManagedCatalogItem = {
+  slug: string;
+  status: ManagedContentStatus;
+  metadata: Record<string, JsonValue>;
+  content: JsonValue | null;
+};
+
 /** Catálogo publicado para as telas dos alunos; itens legados continuam como fallback local. */
 export const getPublishedManagedCatalog = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ kind: managedKindSchema }).parse(input))
-  .handler(async ({ data, context }) => {
+  .handler(async ({ data, context }): Promise<ManagedCatalogItem[]> => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { data: rows, error } = await supabaseAdmin
       .from("managed_content")
@@ -708,8 +716,8 @@ export const getPublishedManagedCatalog = createServerFn({ method: "GET" })
     if (error) throw new Error(error.message);
     return (rows ?? []).map((row) => ({
       slug: row.slug,
-      status: row.status,
+      status: row.status as ManagedContentStatus,
       metadata: row.status === "published" ? managedMetadata(row.metadata) : {},
-      content: row.status === "published" ? row.content : null,
+      content: row.status === "published" ? (row.content as JsonValue | null) : null,
     }));
   });
