@@ -1658,6 +1658,10 @@ export type Database = {
     }
     Functions: {
       admin_question_has_answers: { Args: { _question_id: string }; Returns: boolean }
+      consume_ai_rate_limit: {
+        Args: { p_endpoint: string }
+        Returns: { allowed: boolean; retry_after_seconds: number }[]
+      }
       has_premium: { Args: { _user_id: string }; Returns: boolean }
       has_role: {
         Args: {

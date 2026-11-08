@@ -140,6 +140,13 @@ export const getStudyContent = createServerFn({ method: "POST" })
 
     const { generateStudy } = await import("./ai-content.server");
     const content = await generateStudy(study.title, study.reference, study.summary, study.category, study.depth);
+    const { generateChapterStudy, generateStudy } = await import("./ai-content.server");
+    const { getChapterStudy } = await import("./content/bible-books");
+    const chapterStudy = getChapterStudy(data.slug);
+    const content = chapterStudy
+      ? await generateChapterStudy(chapterStudy.book.name, chapterStudy.chapter, chapterStudy.book.category)
+      : await generateStudy(study.title, study.reference, study.summary, study.category, study.depth);
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { error } = await supabaseAdmin
       .from("generated_content")
       .upsert({ kind: "study", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });
