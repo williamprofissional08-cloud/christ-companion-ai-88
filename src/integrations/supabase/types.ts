@@ -1624,6 +1624,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      admin_question_has_answers: { Args: { _question_id: string }; Returns: boolean }
       has_premium: { Args: { _user_id: string }; Returns: boolean }
       has_role: {
         Args: {
