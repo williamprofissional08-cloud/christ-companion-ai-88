@@ -62,11 +62,10 @@ function TrilhaPage() {
 
   const step = steps.find((s) => s.index === active);
   const completed = new Set<number>(progress.data?.completed_steps ?? []);
-  const notes = (progress.data?.checkpoints ?? {}) as Record<string, string>;
-
   useEffect(() => {
+    const notes = (progress.data?.checkpoints ?? {}) as Record<string, string>;
     setNote(notes[String(active)] ?? "");
-  }, [active, notes]);
+  }, [active, progress.data?.checkpoints]);
 
   const mutation = useMutation({
     mutationFn: (input: { done: boolean; saveNote?: boolean }) =>

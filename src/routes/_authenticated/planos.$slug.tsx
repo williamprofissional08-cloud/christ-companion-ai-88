@@ -55,10 +55,10 @@ function PlanoDetalhe() {
     enabled: Boolean(plan),
   });
 
-  const notes = (progress.data?.notes ?? {}) as Record<string, string>;
   useEffect(() => {
+    const notes = (progress.data?.notes ?? {}) as Record<string, string>;
     setNote(notes[String(day)] ?? "");
-  }, [day, notes]);
+  }, [day, progress.data?.notes]);
 
   const save = useMutation({
     mutationFn: (vars: { done: boolean; note?: string }) =>

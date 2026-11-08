@@ -1,6 +1,6 @@
 name: Validate
 
-on:
+"on":
   pull_request:
     branches: [main]
   push:
@@ -8,7 +8,7 @@ on:
       - release/prelaunch-hardening-2026-11
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: validate-${{ github.workflow }}-${{ github.ref }}
@@ -16,52 +16,45 @@ concurrency:
 
 jobs:
   validate:
-    name: Install, lint and production build
+    name: Install, test and production build
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
           persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@v5
         with:
           node-version: 22
-
-      # The current lockfile is known to be stale. Resolve it without executing
-      # third-party install scripts, then commit the generated lock on our release branch.
-      - name: Regenerate package-lock.json
-        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
-
-      - name: Commit regenerated lockfile
-        if: github.event_name == 'push' && github.ref == 'refs/heads/release/prelaunch-hardening-2026-11'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          if git diff --quiet -- package-lock.json; then
-            echo "package-lock.json is already synchronized."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package-lock.json
-          git commit -m "chore: regenerate npm lockfile"
-          gh auth setup-git
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          cache: npm
 
       - name: Install reproducible dependencies
         run: npm ci --no-audit --no-fund
 
-      # Keep all semantic ESLint rules enabled. The legacy repository still has
-      # Prettier-only violations; changed files are checked independently below.
       - name: Run ESLint
-        run: npm run lint -- --rule 'prettier/prettier: off'
+        run: |
+          npm run lint -- --rule 'prettier/prettier: off'
 
-      - name: Check formatting of changed validation files
-        run: npx prettier --check src/routes/api/chat.ts .github/workflows/validate.yml
+      - name: Check formatting of hardened files
+        run: >-
+          npx prettier --check
+          .github/workflows/validate.yml
+          package.json
+          src/lib/ai-rate-limit.server.ts
+          src/lib/request-body.server.ts
+          src/routes/api/chat.ts
+          src/routes/api/escola/professor-ia.ts
+          src/routes/api/escola/professor-tts.ts
+          tests/ai-rate-limit.test.mjs
+
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      - name: Run automated tests
+        run: npm test
 
       - name: Build production app
         run: npm run build

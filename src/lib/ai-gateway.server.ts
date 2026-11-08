@@ -1,5 +1,6 @@
 import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
 import { createOpenAI } from "@ai-sdk/openai";
+import type { LanguageModel } from "ai";
 
 /** Provider do Lovable AI Gateway (uso exclusivo no servidor). */
 export function createLovableAiGatewayProvider(apiKey: string) {
@@ -28,7 +29,9 @@ export function aiResponsesModel() {
       "X-Lovable-AIG-SDK": "vercel-ai-sdk",
     },
   });
-  return provider.responses(CHAT_MODEL);
+  // The OpenAI provider and core SDK currently resolve distinct compatible
+  // v4 provider declarations; bridge their TypeScript-only structural mismatch.
+  return provider.responses(CHAT_MODEL) as unknown as LanguageModel;
 }
 
 export const CHAT_MODEL = "openai/gpt-5.6-sol";
