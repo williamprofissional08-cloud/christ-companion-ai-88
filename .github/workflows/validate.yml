@@ -34,7 +34,9 @@ jobs:
       # The current lockfile is known to be stale. Resolve it without executing
       # third-party install scripts, then commit the generated lock on our release branch.
       - name: Regenerate package-lock.json
-        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+        run: |
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          npm dedupe --package-lock-only --ignore-scripts --no-audit --no-fund
 
       - name: Commit regenerated lockfile
         if: github.event_name == 'push' && github.ref == 'refs/heads/release/prelaunch-hardening-2026-11'
