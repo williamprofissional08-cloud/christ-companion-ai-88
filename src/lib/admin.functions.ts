@@ -381,15 +381,14 @@ export const adminDeleteLessonQuestion = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    // lesson_answers.question_id uses ON DELETE CASCADE. Never delete a question
-    // after students have answered it, or their answer history would be lost.
-    const { data: answers, error: answersError } = await context.supabase
-      .from("lesson_answers")
-      .select("id")
-      .eq("question_id", data.id)
-      .limit(1);
+    // lesson_answers.question_id uses ON DELETE CASCADE. The SECURITY DEFINER
+    // RPC returns only a boolean, so private answers are never exposed to admins.
+    const { data: hasAnswers, error: answersError } = await context.supabase.rpc(
+      "admin_question_has_answers",
+      { _question_id: data.id },
+    );
     if (answersError) throw new Error(answersError.message);
-    if (answers?.length) {
+    if (hasAnswers) {
       throw new Error(
         "Esta questão já possui respostas de alunos e não pode ser excluída. Mantenha-a para preservar o histórico.",
       );
