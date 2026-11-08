@@ -6,7 +6,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { authenticateRequest } from "@/lib/request-auth.server";
 import { enforceAiRateLimit } from "@/lib/ai-rate-limit.server";
 import { readLimitedJson, readLimitedResponseBytes } from "@/lib/request-body.server";
-import { TTS_MAX_CHARS } from "@/lib/school/professor-tts";
+import { isMp3ContentType, TTS_MAX_CHARS } from "@/lib/school/professor-tts";
 
 type Body = { text?: unknown };
 
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/api/escola/professor-tts")({
 
           const body = parsed.value as Body;
           const text = body && typeof body.text === "string" ? body.text.trim() : "";
-          if (!text || text.length > TTS_MAX_CHARS + 500) {
+          if (!text || text.length > TTS_MAX_CHARS) {
             return new Response("Texto inválido para narração", { status: 400 });
           }
 
@@ -57,10 +57,23 @@ export const Route = createFileRoute("/api/escola/professor-tts")({
             return new Response("Falha ao gerar áudio", { status: upstream.status });
           }
 
-          const audio = await upstream.arrayBuffer();
-          return new Response(audio, {
+          if (!isMp3ContentType(upstream.headers.get("content-type"))) {
+            console.error("TTS provider returned an unexpected content type");
+            return new Response("Formato de áudio inválido", { status: 502 });
+          }
+
+          const audio = await readLimitedResponseBytes(upstream, MAX_AUDIO_BYTES);
+          if (!audio) {
+            return new Response("Áudio inválido ou acima do limite permitido", { status: 502 });
+          }
+
+          const audioBody = new ArrayBuffer(audio.byteLength);
+          new Uint8Array(audioBody).set(audio);
+
+          return new Response(audioBody, {
             headers: {
               "Content-Type": "audio/mpeg",
+              "Content-Length": String(audio.byteLength),
               "Cache-Control": "no-store",
               "X-Content-Type-Options": "nosniff",
             },

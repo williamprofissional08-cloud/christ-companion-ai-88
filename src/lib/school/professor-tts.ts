@@ -6,6 +6,11 @@
 /** Margem de segurança sobre o limite técnico (~10.000 caracteres). */
 export const TTS_MAX_CHARS = 3500;
 
+/** Aceita somente respostas MP3 do provedor de narração. */
+export function isMp3ContentType(contentType: string | null): boolean {
+  return contentType?.split(";")[0]?.trim().toLowerCase() === "audio/mpeg";
+}
+
 const BOOK_SPEECH: Record<string, string> = {
   "1": "primeira",
   "2": "segunda",
