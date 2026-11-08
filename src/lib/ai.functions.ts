@@ -114,8 +114,8 @@ export const getStudyContent = createServerFn({ method: "POST" })
     let managedData: {
       metadata: unknown;
       content: unknown;
-      updated_at: string;
-      status: string;
+      updated_at: string | null;
+      status: string | null;
     } | null = null;
     try {
       const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
@@ -147,7 +147,7 @@ export const getStudyContent = createServerFn({ method: "POST" })
     } : legacyStudy;
     if (!study) throw new Error("Estudo não encontrado");
     if (curated && (!published || !managedData?.content)) return curated;
-    const cacheKey = published ? `${data.slug}:v${new Date(managedData!.updated_at).getTime()}` : data.slug;
+    const cacheKey = published ? `${data.slug}:v${new Date(managedData!.updated_at ?? 0).getTime()}` : data.slug;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
