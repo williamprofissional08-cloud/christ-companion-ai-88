@@ -7,10 +7,7 @@ import {
 } from "@/lib/ai-gateway.server";
 import { readLimitedJson } from "@/lib/request-body.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
-import {
-  buildProfessorSystemPrompt,
-  loadLessonContext,
-} from "@/lib/school/professor-ia.server";
+import { buildProfessorSystemPrompt, loadLessonContext } from "@/lib/school/professor-ia.server";
 
 type Body = { messages?: unknown; lessonId?: unknown };
 
@@ -35,8 +32,7 @@ function isValidMessage(message: unknown): message is UIMessage {
         typeof part === "object" &&
         "type" in part &&
         typeof part.type === "string" &&
-        (part.type !== "text" ||
-          ("text" in part && typeof part.text === "string")),
+        (part.type !== "text" || ("text" in part && typeof part.text === "string")),
     )
   );
 }
@@ -53,8 +49,7 @@ export const Route = createFileRoute("/api/escola/professor-ia")({
           if (!parsed.ok) return parsed.response;
 
           const body = parsed.value as Body;
-          const lessonId =
-            body && typeof body.lessonId === "string" ? body.lessonId : null;
+          const lessonId = body && typeof body.lessonId === "string" ? body.lessonId : null;
           const messages = body?.messages;
 
           if (

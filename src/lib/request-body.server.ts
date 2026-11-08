@@ -2,9 +2,7 @@
  * Lê e interpreta JSON de forma limitada para rotas server-side.
  * O limite é aplicado durante a leitura, inclusive quando Content-Length não existe.
  */
-export type LimitedJsonResult =
-  | { ok: true; value: unknown }
-  | { ok: false; response: Response };
+export type LimitedJsonResult = { ok: true; value: unknown } | { ok: false; response: Response };
 
 export async function readLimitedJson(
   request: Request,
