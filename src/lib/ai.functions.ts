@@ -92,7 +92,6 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
 
     const { generatePlanDay } = await import("./ai-content.server");
     const content = await generatePlanDay(plan.title, plan.summary, plan.keyVerse, plan.days, data.day);
-    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { error } = await supabaseAdmin
       .from("generated_content")
       .upsert({ kind: "plan-day", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });
@@ -106,7 +105,6 @@ export const getStudyContent = createServerFn({ method: "POST" })
   .handler(async ({ data, context }): Promise<StudyContent> => {
     const { getStudy } = await import("./content/studies");
     const legacyStudy = getStudy(data.slug);
-    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const managed = await supabaseAdmin.from("managed_content")
       .select("metadata, content, updated_at, status")
       .eq("kind", "study")
