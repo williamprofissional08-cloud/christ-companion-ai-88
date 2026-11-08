@@ -35,6 +35,7 @@ function PlanosPage() {
   });
   const catalog = new Map(PRAYER_PLANS.map((item) => [item.slug, item]));
   for (const item of managedPlans) {
+    if (item.status === "archived") { catalog.delete(item.slug); continue; }
     const old = catalog.get(item.slug);
     const meta = item.metadata as Record<string, unknown>;
     catalog.set(item.slug, {
