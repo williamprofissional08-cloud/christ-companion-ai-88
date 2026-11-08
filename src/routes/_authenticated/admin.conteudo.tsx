@@ -91,7 +91,7 @@ function AdminContentPage() {
       return saveFn({ data: {
         kind, slug, title, category, reference, summary, depth,
         ...(kind === "prayer_plan" ? { days: Number(days), keyVerse } : {}),
-        status, content: parsedContent,
+        status, content: parsedContent as never,
       } });
     },
     onSuccess: async () => {
@@ -164,7 +164,7 @@ function AdminContentPage() {
                 <label className="text-sm">Slug (identificador) <Input className="mt-1" value={slug} onChange={(e) => setSlug(e.target.value)} /></label>
                 <label className="text-sm">Título <Input className="mt-1" value={title} onChange={(e) => setTitle(e.target.value)} /></label>
                 <label className="text-sm">Categoria <Input className="mt-1" value={category} onChange={(e) => setCategory(e.target.value)} /></label>
-                <label className="text-sm">Referência bíblica <Input className="mt-1" value={reference} onChange={(e) => setReference(e.target.value)} /></label>
+                <label className="text-sm">Referência bíblica <Input className="mt-1" value={reference} onChange={(e) => { setReference(e.target.value); if (kind === "prayer_plan") setKeyVerse(e.target.value); }} /></label>
               </div>
               <label className="block text-sm">Resumo <Textarea className="mt-1" rows={3} value={summary} onChange={(e) => setSummary(e.target.value)} /></label>
               {kind === "study" ? (
@@ -183,7 +183,7 @@ function AdminContentPage() {
               ) : (
                 <div className="grid gap-3 sm:grid-cols-2">
                   <label className="text-sm">Duração (dias) <Input className="mt-1" type="number" min="1" max="400" value={days} onChange={(e) => setDays(e.target.value)} /></label>
-                  <label className="text-sm">Versículo-chave <Input className="mt-1" value={keyVerse} onChange={(e) => setKeyVerse(e.target.value)} /></label>
+                  
                   <p className="text-xs text-muted-foreground sm:col-span-2">Os textos diários continuam sendo gerados e armazenados pelo mecanismo atual. A edição de cada dia será uma etapa separada.</p>
                 </div>
               )}
