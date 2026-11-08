@@ -6,7 +6,7 @@ Este documento é o portão operacional para o piloto controlado. Ele não signi
 
 - [x] `npm ci` concluiu com o `package-lock.json` versionado na CI da PR #8.
 - [x] ESLint concluiu sem erros; a execução registrou 13 avisos preexistentes de Fast Refresh.
-- [x] Os arquivos de código explicitamente listados no workflow passam na verificação Prettier; a migration SQL exige revisão própria.
+- [x] Os arquivos de código explicitamente listados no workflow passam na verificação Prettier; o arquivo de tipos gerado e a migration SQL exigem revisão própria.
 - [x] `npx tsc --noEmit` concluiu sem erros na CI da PR #8.
 - [x] `npm run build` concluiu em produção na CI da PR #8.
 - [x] Existem testes automatizados de unidade para rate limiting e leitura limitada de JSON; testes de integração dos fluxos críticos ainda pendentes.

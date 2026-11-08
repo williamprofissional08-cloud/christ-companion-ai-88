@@ -44,7 +44,6 @@ jobs:
           .github/workflows/validate.yml
           package.json
           src/lib/ai-rate-limit.server.ts
-          src/integrations/supabase/types.ts
           src/lib/request-body.server.ts
           src/routes/api/chat.ts
           src/routes/api/escola/professor-ia.ts
