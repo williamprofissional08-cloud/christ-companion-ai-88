@@ -161,7 +161,7 @@ function AdminContentPage() {
                     <option value="draft">Rascunho</option><option value="published">Publicado</option><option value="archived">Arquivado</option>
                   </select>
                 </label>
-                <label className="text-sm">Slug (identificador) <Input className="mt-1" value={slug} onChange={(e) => setSlug(e.target.value)} /></label>
+                <label className="text-sm">Slug (identificador) <Input className="mt-1" value={slug} disabled={!selectedKey.startsWith("new:")} onChange={(e) => setSlug(e.target.value)} /></label>
                 <label className="text-sm">Título <Input className="mt-1" value={title} onChange={(e) => setTitle(e.target.value)} /></label>
                 <label className="text-sm">Categoria <Input className="mt-1" value={category} onChange={(e) => setCategory(e.target.value)} /></label>
                 <label className="text-sm">Referência bíblica <Input className="mt-1" value={reference} onChange={(e) => { setReference(e.target.value); if (kind === "prayer_plan") setKeyVerse(e.target.value); }} /></label>
@@ -175,7 +175,7 @@ function AdminContentPage() {
                     </select>
                   </label>
                   <label className="block text-sm">Conteúdo completo do estudo (JSON opcional)
-                    <Textarea className="mt-1 font-mono text-xs" rows={12} value={contentJson} onChange={(e) => setContentJson(e.target.value)} placeholder={'{"version":1,"depth":"deep","sections":[{"id":"intro","title":"Introdução","body":"..."}]}'}/>
+                    <Textarea className="mt-1 font-mono text-xs" rows={12} value={contentJson} onChange={(e) => setContentJson(e.target.value)} placeholder={'{"version":1,"depth":"deep","intro":"","historicalContext":"","keyPoints":[],"application":"","crossReferences":[],"questions":[],"conclusion":"","prayer":"","sections":[{"id":"intro","title":"Introdução","body":"..."}]}'}/>
                   </label>
                   {jsonError ? <p className="text-sm text-destructive">{jsonError}</p> : null}
                   <p className="text-xs text-muted-foreground">Se deixar vazio, o estudo continua usando o conteúdo revisado local ou a geração atual. Para substituir o texto completo, informe um objeto JSON compatível com StudyContent.</p>
