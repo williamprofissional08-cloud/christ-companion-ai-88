@@ -95,6 +95,7 @@ function AdminContentPage() {
       } });
     },
     onSuccess: async () => {
+      setSelectedKey(`${kind}:${slug}`);
       await queryClient.invalidateQueries({ queryKey: ["admin-managed-content"] });
       await queryClient.invalidateQueries({ queryKey: ["published-managed-catalog"] });
       toast.success(status === "published" ? "Conteúdo publicado." : "Rascunho salvo.");
