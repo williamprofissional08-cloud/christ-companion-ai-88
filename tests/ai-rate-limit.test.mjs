@@ -200,3 +200,12 @@ test("audio response reader rejects malformed Content-Length", async () => {
 
   assert.equal(bytes, null);
 });
+
+
+test("audio response reader rejects empty responses", async () => {
+  const response = new Response(new Uint8Array());
+
+  const bytes = await readLimitedResponseBytes(response, 8);
+
+  assert.equal(bytes, null);
+});
