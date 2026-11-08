@@ -45,11 +45,11 @@ function PlanoDetalhe() {
   const legacyPlan = getPlan(slug);
   const plan = managedPlan?.status === "archived" ? undefined : managedPlan ? {
     slug,
-    title: String(metadata?.title ?? legacyPlan?.title ?? slug),
-    category: String(metadata?.category ?? legacyPlan?.category ?? "Oração"),
-    days: Number(metadata?.days ?? legacyPlan?.days ?? 1),
-    summary: String(metadata?.summary ?? legacyPlan?.summary ?? ""),
-    keyVerse: String(metadata?.keyVerse ?? legacyPlan?.keyVerse ?? ""),
+    title: String(metadata?.["title"] ?? legacyPlan?.title ?? slug),
+    category: String(metadata?.["category"] ?? legacyPlan?.category ?? "Oração"),
+    days: Number(metadata?.["days"] ?? legacyPlan?.days ?? 1),
+    summary: String(metadata?.["summary"] ?? legacyPlan?.summary ?? ""),
+    keyVerse: String(metadata?.["keyVerse"] ?? legacyPlan?.keyVerse ?? ""),
   } : legacyPlan;
   const queryClient = useQueryClient();
   const progressFn = useServerFn(getPlanProgress);
