@@ -92,3 +92,32 @@ export const STUDIES: Study[] = [
 export function getStudy(slug: string) {
   return STUDIES.find((s) => s.slug === slug) ?? getChapterStudy(slug);
 }
+
+
+/**
+ * Remove duplicidades de catálogo pelo título + referência bíblica.
+ * Mantém a versão publicada; em empate, prioriza conteúdo revisado e estudo aprofundado.
+ */
+export function deduplicateStudies<T extends Pick<Study, "slug" | "title" | "reference"> & {
+  status?: string;
+  content?: unknown;
+  depth?: Study["depth"];
+}>(items: T[]): T[] {
+  const normalize = (value: string) => value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  const rank = (item: T) =>
+    (item.status === "published" ? 100 : item.status === "draft" ? 50 : 0) +
+    (item.content ? 20 : 0) +
+    (item.depth === "deep" ? 5 : 0);
+  const unique = new Map<string, T>();
+  for (const item of items) {
+    const key = `${normalize(item.title)}::${normalize(item.reference)}`;
+    const current = unique.get(key);
+    if (!current || rank(item) > rank(current)) unique.set(key, item);
+  }
+  return [...unique.values()];
+}

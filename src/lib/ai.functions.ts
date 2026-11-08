@@ -60,9 +60,28 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
   )
   .handler(async ({ data, context }): Promise<PlanDayContent> => {
     const { getPlan } = await import("./content/plans");
-    const plan = getPlan(data.slug);
+    const legacyPlan = getPlan(data.slug);
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const managed = await supabaseAdmin.from("managed_content")
+      .select("metadata, updated_at, status")
+      .eq("kind", "prayer_plan")
+      .eq("slug", data.slug)
+      .maybeSingle();
+    if (managed.error) throw new Error(managed.error.message);
+    if (managed.data?.status === "archived") throw new Error("Este plano foi arquivado.");
+    const published = managed.data?.status === "published";
+    const metadata = published && managed.data?.metadata && typeof managed.data.metadata === "object"
+      ? managed.data.metadata as Record<string, unknown> : {};
+    const plan = published ? {
+      slug: data.slug,
+      title: String(metadata.title ?? legacyPlan?.title ?? data.slug),
+      summary: String(metadata.summary ?? legacyPlan?.summary ?? ""),
+      keyVerse: String(metadata.keyVerse ?? legacyPlan?.keyVerse ?? ""),
+      days: Number(metadata.days ?? legacyPlan?.days ?? 0),
+    } : legacyPlan;
     if (!plan) throw new Error("Plano não encontrado");
-    const cacheKey = `${data.slug}:${data.day}`;
+    if (data.day > plan.days) throw new Error("Dia fora da duração deste plano");
+    const cacheKey = published ? `${data.slug}:${data.day}:v${new Date(managed.data!.updated_at).getTime()}` : `${data.slug}:${data.day}`;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
@@ -73,7 +92,6 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
 
     const { generatePlanDay } = await import("./ai-content.server");
     const content = await generatePlanDay(plan.title, plan.summary, plan.keyVerse, plan.days, data.day);
-    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { error } = await supabaseAdmin
       .from("generated_content")
       .upsert({ kind: "plan-day", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });
@@ -85,20 +103,43 @@ export const getStudyContent = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ slug: z.string().max(80) }).parse(input))
   .handler(async ({ data, context }): Promise<StudyContent> => {
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { getStudy } = await import("./content/studies");
-    const study = getStudy(data.slug);
+    const legacyStudy = getStudy(data.slug);
+    const managed = await supabaseAdmin.from("managed_content")
+      .select("metadata, content, updated_at, status")
+      .eq("kind", "study")
+      .eq("slug", data.slug)
+      .maybeSingle();
+    if (managed.error) throw new Error(managed.error.message);
+    if (managed.data?.status === "archived") throw new Error("Este estudo foi arquivado.");
+    const published = managed.data?.status === "published";
+    if (published && managed.data?.content) return managed.data.content as unknown as StudyContent;
+    const metadata = published && managed.data?.metadata && typeof managed.data.metadata === "object"
+      ? managed.data.metadata as Record<string, unknown> : {};
+    const study = published ? {
+      slug: data.slug,
+      title: String(metadata.title ?? legacyStudy?.title ?? data.slug),
+      category: String(metadata.category ?? legacyStudy?.category ?? "Estudos bíblicos"),
+      reference: String(metadata.reference ?? legacyStudy?.reference ?? ""),
+      summary: String(metadata.summary ?? legacyStudy?.summary ?? ""),
+      depth: (metadata.depth === "deep" ? "deep" : "simple") as "simple" | "deep",
+    } : legacyStudy;
     if (!study) throw new Error("Estudo não encontrado");
     const { CURATED_STUDIES } = await import("./content/curated-studies");
     const curated = CURATED_STUDIES[data.slug];
-    if (curated) return curated;
+    if (curated && (!published || !managed.data?.content)) return curated;
+    const cacheKey = published ? `${data.slug}:v${new Date(managed.data!.updated_at).getTime()}` : data.slug;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
       .eq("kind", "study")
-      .eq("slug", data.slug)
+      .eq("slug", cacheKey)
       .maybeSingle();
     if (cached.data?.content) return cached.data.content as unknown as StudyContent;
 
+    const { generateStudy } = await import("./ai-content.server");
+    const content = await generateStudy(study.title, study.reference, study.summary, study.category, study.depth);
     const { generateChapterStudy, generateStudy } = await import("./ai-content.server");
     const { getChapterStudy } = await import("./content/bible-books");
     const chapterStudy = getChapterStudy(data.slug);
@@ -108,7 +149,7 @@ export const getStudyContent = createServerFn({ method: "POST" })
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { error } = await supabaseAdmin
       .from("generated_content")
-      .upsert({ kind: "study", slug: data.slug, content: content as never }, { onConflict: "kind,slug" });
+      .upsert({ kind: "study", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });
     if (error) console.error("study cache failed", error.message);
     return content;
   });

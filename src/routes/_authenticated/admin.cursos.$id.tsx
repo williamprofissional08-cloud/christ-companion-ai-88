@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
-import { ArrowLeft, Plus, Trash2 } from "lucide-react";
+import { Archive, ArrowLeft, Plus } from "lucide-react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
@@ -12,8 +12,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import {
-  adminDeleteLesson,
-  adminDeleteModule,
+  adminArchiveLesson,
+  adminArchiveModule,
   adminGetCourse,
   adminSaveCourse,
   adminSaveLesson,
@@ -46,9 +46,9 @@ function AdminCourseEditor() {
   const fetchCourse = useServerFn(adminGetCourse);
   const saveCourse = useServerFn(adminSaveCourse);
   const saveModule = useServerFn(adminSaveModule);
-  const removeModule = useServerFn(adminDeleteModule);
+  const archiveModule = useServerFn(adminArchiveModule);
   const saveLesson = useServerFn(adminSaveLesson);
-  const removeLesson = useServerFn(adminDeleteLesson);
+  const archiveLesson = useServerFn(adminArchiveLesson);
 
   const { data, isLoading } = useQuery({
     queryKey: ["admin-course", id],
@@ -151,10 +151,10 @@ function AdminCourseEditor() {
     onError: (error: Error) => toast.error(error.message),
   });
 
-  const deleteModule = useMutation({
-    mutationFn: (moduleId: string) => removeModule({ data: { id: moduleId } }),
+  const archiveModuleMutation = useMutation({
+    mutationFn: (moduleId: string) => archiveModule({ data: { id: moduleId } }),
     onSuccess: () => {
-      toast.success("Módulo removido.");
+      toast.success("Módulo arquivado. O conteúdo e o progresso foram preservados.");
       invalidate();
     },
     onError: (error: Error) => toast.error(error.message),
@@ -206,10 +206,10 @@ function AdminCourseEditor() {
     onError: (error: Error) => toast.error(error.message),
   });
 
-  const deleteLesson = useMutation({
-    mutationFn: (lessonId: string) => removeLesson({ data: { id: lessonId } }),
+  const archiveLessonMutation = useMutation({
+    mutationFn: (lessonId: string) => archiveLesson({ data: { id: lessonId } }),
     onSuccess: () => {
-      toast.success("Aula removida.");
+      toast.success("Aula arquivada. O conteúdo e o progresso foram preservados.");
       invalidate();
     },
     onError: (error: Error) => toast.error(error.message),
@@ -381,10 +381,18 @@ function AdminCourseEditor() {
                       <Button
                         size="icon-sm"
                         variant="ghost"
-                        aria-label="Remover módulo"
-                        onClick={() => deleteModule.mutate(mod.id)}
+                        aria-label="Arquivar módulo"
+                        onClick={() => {
+                          if (
+                            window.confirm(
+                              "Arquivar este módulo? Ele deixará de aparecer para os alunos, mas seus capítulos, aulas e registros serão preservados.",
+                            )
+                          ) {
+                            archiveModuleMutation.mutate(mod.id);
+                          }
+                        }}
                       >
-                        <Trash2 className="size-4" />
+                        <Archive className="size-4" />
                       </Button>
                     </div>
                   </div>
@@ -433,10 +441,18 @@ function AdminCourseEditor() {
 
                           size="icon-sm"
                           variant="ghost"
-                          aria-label="Remover aula"
-                          onClick={() => deleteLesson.mutate(lesson.id)}
+                          aria-label="Arquivar aula"
+                          onClick={() => {
+                            if (
+                              window.confirm(
+                                "Arquivar esta aula? Ela deixará de aparecer para os alunos, mas conteúdo, respostas e progresso serão preservados.",
+                              )
+                            ) {
+                              archiveLessonMutation.mutate(lesson.id);
+                            }
+                          }}
                         >
-                          <Trash2 className="size-4" />
+                          <Archive className="size-4" />
                         </Button>
                       </li>
                     ))}

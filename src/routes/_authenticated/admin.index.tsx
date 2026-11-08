@@ -78,6 +78,20 @@ function AdminDashboard() {
           </Button>
         </Card>
 
+        <Card className="flex flex-wrap items-center justify-between gap-3 p-5">
+          <div>
+            <h2 className="font-display text-lg font-semibold">Estudos e planos de oração</h2>
+            <p className="text-sm text-muted-foreground">
+              Editar títulos, referências, categorias, resumos, conteúdo dos estudos e publicar versões revisadas.
+            </p>
+          </div>
+          <Button asChild>
+            <Link to="/admin/conteudo">
+              Gerenciar biblioteca <ArrowRight className="ml-1 size-4" />
+            </Link>
+          </Button>
+        </Card>
+
         <Card className="space-y-3 p-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>

@@ -715,6 +715,39 @@ export type Database = {
         }
         Relationships: []
       }
+      managed_content: {
+        Row: {
+          content: Json | null
+          created_at: string
+          id: string
+          kind: string
+          metadata: Json
+          slug: string
+          status: Database["public"]["Enums"]["content_status"]
+          updated_at: string
+        }
+        Insert: {
+          content?: Json | null
+          created_at?: string
+          id?: string
+          kind: string
+          metadata?: Json
+          slug: string
+          status?: Database["public"]["Enums"]["content_status"]
+          updated_at?: string
+        }
+        Update: {
+          content?: Json | null
+          created_at?: string
+          id?: string
+          kind?: string
+          metadata?: Json
+          slug?: string
+          status?: Database["public"]["Enums"]["content_status"]
+          updated_at?: string
+        }
+        Relationships: []
+      }
       lesson_answers: {
         Row: {
           created_at: string
@@ -1624,6 +1657,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      admin_question_has_answers: { Args: { _question_id: string }; Returns: boolean }
       consume_ai_rate_limit: {
         Args: { p_endpoint: string }
         Returns: { allowed: boolean; retry_after_seconds: number }[]
