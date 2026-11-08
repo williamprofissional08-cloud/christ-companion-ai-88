@@ -59,6 +59,8 @@ export async function readLimitedJson(
     reader.releaseLock();
   }
 
+  if (totalBytes === 0) return null;
+
   const bytes = new Uint8Array(totalBytes);
   let offset = 0;
   for (const chunk of chunks) {
