@@ -80,12 +80,16 @@ export const Route = createFileRoute("/api/escola/professor-ia")({
             0,
           );
           if (textChars > MAX_TEXT_CHARS) {
-            return new Response("A conversa excede o limite permitido", { status: 413 });
+            return new Response("A conversa excede o limite permitido", {
+              status: 413,
+            });
           }
 
           const last = messages[messages.length - 1];
           if (last?.role !== "user") {
-            return new Response("A última mensagem precisa ser do usuário", { status: 400 });
+            return new Response("A última mensagem precisa ser do usuário", {
+              status: 400,
+            });
           }
 
           const context = await loadLessonContext(auth.supabase, auth.userId, lessonId);
