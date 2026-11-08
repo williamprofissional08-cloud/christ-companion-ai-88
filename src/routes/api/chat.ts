@@ -62,7 +62,7 @@ export const Route = createFileRoute("/api/chat")({
           if (contentLength !== null) {
             const declaredLength = Number(contentLength);
             if (
-              !/^\\d+$/.test(contentLength) ||
+              !/^\d+$/.test(contentLength) ||
               !Number.isSafeInteger(declaredLength) ||
               declaredLength < 0
             ) {
