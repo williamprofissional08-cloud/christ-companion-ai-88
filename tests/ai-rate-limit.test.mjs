@@ -189,7 +189,7 @@ test(
 
     const bytes = await readLimitedResponseBytes(response, 5);
 
-      assert.equal(bytes, null);
+    assert.equal(bytes, null);
   },
 );
 
