@@ -74,7 +74,7 @@ export const BIBLE_CHAPTER_TOTAL = BIBLE_BOOKS.reduce((total, book) => total + b
 
 export function getBibleBook(slug: string) { return BIBLE_BOOKS.find((book) => book.slug === slug); }
 
-export function getChapterStudySlug(bookSlug: string, chapter: number) { return `biblia-${bookSlug}-cap-${chapter}`; }
+export function getChapterStudySlug(bookSlug: string, chapter: number) { return bookSlug === "genesis" && chapter === 1 ? "genesis-1-criacao" : `biblia-${bookSlug}-cap-${chapter}`; }
 
 export function getChapterStudy(slug: string) {
   const match = /^biblia-([a-z0-9-]+)-cap-(\\d+)$/.exec(slug);
