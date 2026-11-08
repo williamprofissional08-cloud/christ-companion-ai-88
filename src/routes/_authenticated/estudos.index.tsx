@@ -49,11 +49,11 @@ function EstudosPage() {
     const metadata = item.metadata as Record<string, unknown>;
     catalog.set(item.slug, {
       slug: item.slug,
-      title: String(metadata.title ?? previous?.title ?? item.slug),
-      category: String(metadata.category ?? previous?.category ?? "Estudos bíblicos"),
-      reference: String(metadata.reference ?? previous?.reference ?? ""),
-      summary: String(metadata.summary ?? previous?.summary ?? ""),
-      depth: metadata.depth === "deep" ? "deep" : previous?.depth ?? "simple",
+      title: String(metadata["title"] ?? previous?.title ?? item.slug),
+      category: String(metadata["category"] ?? previous?.category ?? "Estudos bíblicos"),
+      reference: String(metadata["reference"] ?? previous?.reference ?? ""),
+      summary: String(metadata["summary"] ?? previous?.summary ?? ""),
+      depth: metadata["depth"] === "deep" ? "deep" : previous?.depth ?? "simple",
     });
   }
 
