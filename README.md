@@ -583,6 +583,31 @@ Prefer working locally? You need Node.js and npm — [install with nvm](https://
 ```sh
 git clone <this-repository-url>
 cd <repository-name>
-npm i
+npm ci
 npm run dev
 ```
+
+
+## Configuração local e segurança
+
+O arquivo `.env` não faz parte do versionamento. Para desenvolvimento local, copie `.env.example` para `.env` e preencha somente as variáveis necessárias ao ambiente local.
+
+Nunca commitе:
+- chaves privadas;
+- Service Role Keys;
+- tokens;
+- credenciais de provedores de IA;
+- arquivos `.env` com valores reais.
+
+As credenciais de servidor devem permanecer somente no ambiente de execução do servidor. As variáveis públicas do Supabase utilizadas pelo frontend devem continuar usando os nomes já adotados pelo código.
+
+O texto bíblico integral permanece desativado enquanto não houver licença/termos de uso verificáveis para a tradução escolhida. Consulte `docs-bible-license.md` antes de adicionar qualquer tradução.
+
+### TTS
+
+O Professor IA prioriza a voz nativa do dispositivo via Web Speech API quando existe uma voz compatível com português. Quando a API ou uma voz compatível não estiver disponível, o aplicativo mantém o gateway TTS existente como fallback. Nenhuma chave privada é exposta ao navegador.
+
+
+## Preparação para lançamento
+
+Consulte o [checklist de prontidão](docs/PRELAUNCH-CHECKLIST.md) antes do piloto. Ele registra as validações obrigatórias de CI, Supabase/RLS, autenticação, privacidade, IA e TTS; itens não verificados não devem ser considerados concluídos.

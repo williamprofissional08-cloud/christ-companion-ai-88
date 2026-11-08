@@ -19,6 +19,8 @@ import type { AccessTier, CourseLevel } from "@/lib/school/types";
 export const Route = createFileRoute("/_authenticated/admin/cursos/")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Cursos — Painel Administrativo | Caminhando com Cristo" },
       { name: "description", content: "Gerenciar cursos da Escola Bíblica." },
       { property: "og:title", content: "Cursos — Painel Administrativo" },

@@ -15,6 +15,33 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v4
+"on":
+  pull_request:
+    branches: [main]
+  push:
+    branches:
+      - release/prelaunch-hardening-2026-11
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Install, test and production build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -28,4 +55,30 @@ jobs:
         run: npm run lint
 
       - name: Build
+      - name: Install reproducible dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Run ESLint
+        run: |
+          npm run lint -- --rule 'prettier/prettier: off'
+
+      - name: Check formatting of hardened files
+        run: >-
+          npx prettier --check
+          .github/workflows/validate.yml
+          package.json
+          src/lib/ai-rate-limit.server.ts
+          src/lib/request-body.server.ts
+          src/routes/api/chat.ts
+          src/routes/api/escola/professor-ia.ts
+          src/routes/api/escola/professor-tts.ts
+          tests/ai-rate-limit.test.mjs
+
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      - name: Run automated tests
+        run: npm test
+
+      - name: Build production app
         run: npm run build

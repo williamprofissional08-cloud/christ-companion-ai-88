@@ -23,6 +23,8 @@ export const Route = createFileRoute("/_authenticated/trilhas/$slug")({
     const description = track?.summary ?? "Trilha guiada de leitura bíblica por tema.";
     return {
       meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
         { title: `${title} | Caminhando com Cristo` },
         { name: "description", content: description },
         { property: "og:title", content: title },
@@ -60,11 +62,10 @@ function TrilhaPage() {
 
   const step = steps.find((s) => s.index === active);
   const completed = new Set<number>(progress.data?.completed_steps ?? []);
-  const notes = (progress.data?.checkpoints ?? {}) as Record<string, string>;
-
   useEffect(() => {
+    const notes = (progress.data?.checkpoints ?? {}) as Record<string, string>;
     setNote(notes[String(active)] ?? "");
-  }, [active, progress.data]);
+  }, [active, progress.data?.checkpoints]);
 
   const mutation = useMutation({
     mutationFn: (input: { done: boolean; saveNote?: boolean }) =>
@@ -204,7 +205,7 @@ function TrilhaPage() {
                       <Link
                         key={reference}
                         to="/biblia"
-                        search={{ referencia }}
+                        search={{ referencia: reference }}
                         className="focus:outline-none"
                       >
                         <Badge variant="secondary" className="cursor-pointer hover:bg-secondary/70">

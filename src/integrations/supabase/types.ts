@@ -10,7 +10,7 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "14.5"
+    PostgrestVersion: "14.18"
   }
   public: {
     Tables: {
@@ -715,6 +715,39 @@ export type Database = {
         }
         Relationships: []
       }
+      managed_content: {
+        Row: {
+          content: Json | null
+          created_at: string
+          id: string
+          kind: string
+          metadata: Json
+          slug: string
+          status: Database["public"]["Enums"]["content_status"]
+          updated_at: string
+        }
+        Insert: {
+          content?: Json | null
+          created_at?: string
+          id?: string
+          kind: string
+          metadata?: Json
+          slug: string
+          status?: Database["public"]["Enums"]["content_status"]
+          updated_at?: string
+        }
+        Update: {
+          content?: Json | null
+          created_at?: string
+          id?: string
+          kind?: string
+          metadata?: Json
+          slug?: string
+          status?: Database["public"]["Enums"]["content_status"]
+          updated_at?: string
+        }
+        Relationships: []
+      }
       lesson_answers: {
         Row: {
           created_at: string
@@ -1007,13 +1040,16 @@ export type Database = {
       }
       lesson_progress: {
         Row: {
+          audio_chunk_index: number
           audio_position_seconds: number
           completed_at: string | null
           course_id: string | null
           created_at: string
           id: string
+          last_section_index: number
           lesson_id: string
           notes: string
+          playback_rate: number
           read_percent: number
           reflection: string
           seconds_watched: number
@@ -1022,13 +1058,16 @@ export type Database = {
           user_id: string
         }
         Insert: {
+          audio_chunk_index?: number
           audio_position_seconds?: number
           completed_at?: string | null
           course_id?: string | null
           created_at?: string
           id?: string
+          last_section_index?: number
           lesson_id: string
           notes?: string
+          playback_rate?: number
           read_percent?: number
           reflection?: string
           seconds_watched?: number
@@ -1037,13 +1076,16 @@ export type Database = {
           user_id: string
         }
         Update: {
+          audio_chunk_index?: number
           audio_position_seconds?: number
           completed_at?: string | null
           course_id?: string | null
           created_at?: string
           id?: string
+          last_section_index?: number
           lesson_id?: string
           notes?: string
+          playback_rate?: number
           read_percent?: number
           reflection?: string
           seconds_watched?: number
@@ -1374,6 +1416,48 @@ export type Database = {
           },
         ]
       }
+      study_progress: {
+        Row: {
+          audio_chunk_index: number
+          completed: boolean
+          completed_at: string | null
+          created_at: string
+          id: string
+          last_section_index: number
+          playback_rate: number
+          read_percent: number
+          study_slug: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          audio_chunk_index?: number
+          completed?: boolean
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          last_section_index?: number
+          playback_rate?: number
+          read_percent?: number
+          study_slug: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          audio_chunk_index?: number
+          completed?: boolean
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          last_section_index?: number
+          playback_rate?: number
+          read_percent?: number
+          study_slug?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       subscription_plans: {
         Row: {
           billing_interval: string
@@ -1573,6 +1657,11 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      admin_question_has_answers: { Args: { _question_id: string }; Returns: boolean }
+      consume_ai_rate_limit: {
+        Args: { p_endpoint: string }
+        Returns: { allowed: boolean; retry_after_seconds: number }[]
+      }
       has_premium: { Args: { _user_id: string }; Returns: boolean }
       has_role: {
         Args: {

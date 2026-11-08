@@ -41,6 +41,8 @@ import type { AccessTier } from "@/lib/school/types";
 export const Route = createFileRoute("/_authenticated/admin/aulas/$lessonId")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Editar aula — Painel Administrativo | Caminhando com Cristo" },
       {
         name: "description",
@@ -710,7 +712,11 @@ function AdminLessonEditor() {
                     className="ml-auto"
                     aria-label="Remover questão"
                     onClick={() => {
-                      if (window.confirm("Remover esta questão?")) {
+                      if (
+                        window.confirm(
+                          "Remover esta questão? Se alunos já responderam, a exclusão será bloqueada para preservar o histórico de respostas.",
+                        )
+                      ) {
                         questionDelete.mutate(question.id);
                       }
                     }}

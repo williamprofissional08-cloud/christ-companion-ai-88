@@ -18,6 +18,8 @@ import { HABIT_ITEMS, todayISO } from "@/lib/types";
 export const Route = createFileRoute("/_authenticated/inicio")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Início — Caminhando com Cristo" },
       {
         name: "description",

@@ -9,6 +9,8 @@ import { useAuth } from "@/hooks/use-auth";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Caminhando com Cristo — companheiro espiritual diário" },
       {
         name: "description",

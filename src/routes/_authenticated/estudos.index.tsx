@@ -1,14 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { useQuery } from "@tanstack/react-query";
 import { AppShell } from "@/components/AppShell";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { deduplicateStudies, STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
+import { getPublishedManagedCatalog } from "@/lib/admin.functions";
 import { STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
+import { BIBLE_BOOKS, BIBLE_CHAPTER_TOTAL, getChapterStudySlug } from "@/lib/content/bible-books";
 
 export const Route = createFileRoute("/_authenticated/estudos/")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Estudos bíblicos — Caminhando com Cristo" },
       {
         name: "description",
@@ -23,8 +30,31 @@ export const Route = createFileRoute("/_authenticated/estudos/")({
 });
 
 function EstudosPage() {
+  const catalogFn = useServerFn(getPublishedManagedCatalog);
+  const { data: managedStudies = [] } = useQuery({
+    queryKey: ["published-managed-catalog", "study"],
+    queryFn: () => catalogFn({ data: { kind: "study" } }),
+  });
+  const catalog = new Map(STUDIES.map((item) => [item.slug, item]));
+  for (const item of managedStudies) {
+    if (item.status === "archived") { catalog.delete(item.slug); continue; }
+    const old = catalog.get(item.slug);
+    const meta = item.metadata as Record<string, unknown>;
+    catalog.set(item.slug, {
+      slug: item.slug,
+      title: String(meta.title ?? old?.title ?? item.slug),
+      category: String(meta.category ?? old?.category ?? "Estudos bíblicos"),
+      reference: String(meta.reference ?? old?.reference ?? ""),
+      summary: String(meta.summary ?? old?.summary ?? ""),
+      depth: meta.depth === "deep" ? "deep" : old?.depth ?? "simple",
+    });
+  }
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string | null>(null);
+
+  const studies = deduplicateStudies([...catalog.values()]).filter((study) => {
+  const q = query.trim().toLocaleLowerCase("pt-BR");
+  const books = BIBLE_BOOKS.filter((book) => !q || book.name.toLocaleLowerCase("pt-BR").includes(q) || book.testament.toLocaleLowerCase("pt-BR").includes(q) || book.category.toLocaleLowerCase("pt-BR").includes(q));
 
   const studies = STUDIES.filter((study) => {
     const matchesCategory = !category || study.category === category;
@@ -61,6 +91,39 @@ function EstudosPage() {
           </Button>
         ))}
       </div>
+
+      <section className="mt-8 space-y-4">
+        <div>
+          <h2 className="font-display text-xl font-semibold">Jornada Bíblica — 66 livros, capítulo por capítulo</h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {BIBLE_BOOKS.length} livros · {BIBLE_CHAPTER_TOTAL.toLocaleString("pt-BR")} capítulos. Escolha um livro e abra o capítulo que deseja estudar.
+            Os estudos são preparados individualmente por capítulo; Gênesis 1 mantém o estudo aprofundado revisado como modelo.
+          </p>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          {books.map((book) => (
+            <details key={book.slug} className="rounded-xl border border-border/60 bg-card p-4">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
+                <span>
+                  <span className="block font-semibold">{book.name}</span>
+                  <span className="text-xs text-muted-foreground">{book.testament} · {book.category}</span>
+                </span>
+                <span className="shrink-0 text-xs text-muted-foreground">{book.chapters} caps.</span>
+              </summary>
+              <div className="mt-4 grid grid-cols-5 gap-2 sm:grid-cols-6">
+                {Array.from({ length: book.chapters }, (_, index) => index + 1).map((chapter) => (
+                  <Button key={chapter} asChild size="sm" variant="outline" className="h-9 px-2">
+                    <Link to="/estudos/$slug" params={{ slug: getChapterStudySlug(book.slug, chapter) }}>
+                      {chapter}
+                    </Link>
+                  </Button>
+                ))}
+              </div>
+            </details>
+          ))}
+          {books.length === 0 ? <p className="text-sm text-muted-foreground">Nenhum livro corresponde à busca.</p> : null}
+        </div>
+      </section>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {studies.map((study) => (

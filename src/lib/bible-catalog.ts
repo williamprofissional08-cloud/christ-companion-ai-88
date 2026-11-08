@@ -99,8 +99,12 @@ export const BIBLE_BOOKS: BibleBook[] = [
   })),
 ];
 
-export function getBibleBook(id: string | undefined) {
-  return BIBLE_BOOKS.find((book) => book.id === id) ?? BIBLE_BOOKS[0];
+export function getBibleBook(id: string | undefined): BibleBook {
+  const fallback = BIBLE_BOOKS[0];
+  if (!fallback) {
+    throw new Error("O catálogo bíblico está vazio.");
+  }
+  return BIBLE_BOOKS.find((book) => book.id === id) ?? fallback;
 }
 
 /** Parses only known canonical book names before building an internal Bible URL. */

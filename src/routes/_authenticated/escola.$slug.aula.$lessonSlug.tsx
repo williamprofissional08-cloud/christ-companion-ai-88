@@ -233,7 +233,17 @@ function LessonPage() {
 
                   <TabsContent value="ouvir" className="mt-4">
                     {data.blocks.length ? (
-                      <LessonNarrationPlayer title={data.lesson.title} blocks={data.blocks} />
+                      <LessonNarrationPlayer
+                        key={data.lesson.id}
+                        title={data.lesson.title}
+                        blocks={data.blocks}
+                        initialChunkIndex={data.resume.audioChunkIndex}
+                        initialRate={data.resume.playbackRate}
+                        onCheckpoint={(checkpoint) => {
+                          void saveCheckpoint({ data: { lessonId: data.lesson.id, ...checkpoint } })
+                            .catch(() => toast.error("Não foi possível salvar a posição do áudio.", { id: "lesson-audio-checkpoint" }));
+                        }}
+                      />
                     ) : data.audio ? (
                       <LessonAudioPlayer
                         src={data.audio.url}

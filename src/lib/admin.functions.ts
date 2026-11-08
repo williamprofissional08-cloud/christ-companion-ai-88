@@ -3,6 +3,7 @@ import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { z } from "zod";
 import { assertAdmin, isAdminUser } from "./school/admin-guard";
 import type { AdminCourse, AdminLesson, AdminModule, AdminStats } from "./school/admin-types";
+import { deduplicateStudies } from "./content/studies";
 
 const statusEnum = z.enum(["draft", "published", "archived"]);
 const levelEnum = z.enum(["iniciante", "intermediario", "avancado", "profundo"]);
@@ -110,14 +111,18 @@ export const adminSetCourseStatus = createServerFn({ method: "POST" })
     return { ok: true };
   });
 
-export const adminDeleteCourse = createServerFn({ method: "POST" })
+/** Arquiva o curso para preservar módulos, aulas, respostas, progresso e certificados vinculados. */
+export const adminArchiveCourse = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    const { error } = await context.supabase.from("courses").delete().eq("id", data.id);
+    const { error } = await context.supabase
+      .from("courses")
+      .update({ status: "archived", published_at: null })
+      .eq("id", data.id);
     if (error) throw new Error(error.message);
-    return { ok: true };
+    return { ok: true, archived: true };
   });
 
 export const adminGetCourse = createServerFn({ method: "GET" })
@@ -195,14 +200,18 @@ export const adminSaveModule = createServerFn({ method: "POST" })
     return { id: created.id };
   });
 
-export const adminDeleteModule = createServerFn({ method: "POST" })
+/** Arquiva o módulo sem apagar capítulos, aulas ou progresso associado. */
+export const adminArchiveModule = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    const { error } = await context.supabase.from("course_modules").delete().eq("id", data.id);
+    const { error } = await context.supabase
+      .from("course_modules")
+      .update({ status: "archived" })
+      .eq("id", data.id);
     if (error) throw new Error(error.message);
-    return { ok: true };
+    return { ok: true, archived: true };
   });
 
 export const adminSaveLesson = createServerFn({ method: "POST" })
@@ -242,14 +251,18 @@ export const adminSaveLesson = createServerFn({ method: "POST" })
     return { id: created.id };
   });
 
-export const adminDeleteLesson = createServerFn({ method: "POST" })
+/** Arquiva a aula para preservar conteúdo, respostas, exercícios e progresso dos alunos. */
+export const adminArchiveLesson = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    const { error } = await context.supabase.from("lessons").delete().eq("id", data.id);
+    const { error } = await context.supabase
+      .from("lessons")
+      .update({ status: "archived" })
+      .eq("id", data.id);
     if (error) throw new Error(error.message);
-    return { ok: true };
+    return { ok: true, archived: true };
   });
 
 /** Blocos de conteúdo da aula (abertura, ensino, aplicação, oração, desafio...). */
@@ -369,6 +382,18 @@ export const adminDeleteLessonQuestion = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
+    // lesson_answers.question_id uses ON DELETE CASCADE. The SECURITY DEFINER
+    // RPC returns only a boolean, so private answers are never exposed to admins.
+    const { data: hasAnswers, error: answersError } = await context.supabase.rpc(
+      "admin_question_has_answers",
+      { _question_id: data.id },
+    );
+    if (answersError) throw new Error(answersError.message);
+    if (hasAnswers) {
+      throw new Error(
+        "Esta questão já possui respostas de alunos e não pode ser excluída. Mantenha-a para preservar o histórico.",
+      );
+    }
     const { error } = await context.supabase.from("lesson_questions").delete().eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
@@ -495,4 +520,196 @@ export const adminDeleteLessonMedia = createServerFn({ method: "POST" })
     const { error } = await context.supabase.from("lesson_media").delete().eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
+  });
+
+
+type ManagedContentKind = "study" | "prayer_plan";
+type ManagedContentStatus = "draft" | "published" | "archived";
+type ManagedContentItem = {
+  kind: ManagedContentKind;
+  slug: string;
+  title: string;
+  category: string;
+  reference: string;
+  summary: string;
+  depth?: "simple" | "deep";
+  days?: number;
+  keyVerse?: string;
+  status: ManagedContentStatus | "legacy";
+  content: unknown | null;
+};
+
+const managedKindSchema = z.enum(["study", "prayer_plan"]);
+const managedStatusSchema = z.enum(["draft", "published", "archived"]);
+const managedStudyContentSchema = z.object({
+  version: z.number().optional(),
+  depth: z.enum(["simple", "deep"]).optional(),
+  intro: z.string(),
+  historicalContext: z.string(),
+  keyPoints: z.array(z.object({ title: z.string(), text: z.string() })),
+  application: z.string(),
+  crossReferences: z.array(z.string()),
+  questions: z.array(z.string()),
+  conclusion: z.string(),
+  prayer: z.string(),
+  sections: z.array(z.object({
+    id: z.string(), title: z.string(), body: z.string(), kind: z.string().optional(),
+    scriptureRefs: z.array(z.string()).optional(),
+    confidence: z.enum(["high", "probable", "debated", "uncertain"]).optional(),
+    collapsible: z.boolean().optional(),
+  })).optional(),
+});
+
+function normalizeManagedIdentity(value: string): string {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+function managedMetadata(value: unknown): Record<string, unknown> {
+  return value && typeof value === "object" && !Array.isArray(value)
+    ? value as Record<string, unknown>
+    : {};
+}
+
+/** Lista o catálogo legado junto com as versões gerenciadas, sem duplicar slugs. */
+export const adminListManagedContent = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .handler(async ({ context }): Promise<ManagedContentItem[]> => {
+    await assertAdmin(context.supabase, context.userId);
+    const [{ STUDIES }, { PRAYER_PLANS }, { CURATED_STUDIES }, stored] = await Promise.all([
+      import("./content/studies"),
+      import("./content/plans"),
+      import("./content/curated-studies"),
+      context.supabase.from("managed_content")
+        .select("kind, slug, metadata, content, status")
+        .order("kind", { ascending: true })
+        .order("slug", { ascending: true }),
+    ]);
+    if (stored.error) throw new Error(stored.error.message);
+
+    const items = new Map<string, ManagedContentItem>();
+    for (const item of STUDIES) {
+      items.set(`study:${item.slug}`, {
+        kind: "study", slug: item.slug, title: item.title, category: item.category,
+        reference: item.reference, summary: item.summary, depth: item.depth,
+        status: "legacy", content: CURATED_STUDIES[item.slug] ?? null,
+      });
+    }
+    for (const item of PRAYER_PLANS) {
+      items.set(`prayer_plan:${item.slug}`, {
+        kind: "prayer_plan", slug: item.slug, title: item.title, category: item.category,
+        reference: item.keyVerse, summary: item.summary, days: item.days,
+        keyVerse: item.keyVerse, status: "legacy", content: null,
+      });
+    }
+    for (const row of stored.data ?? []) {
+      const metadata = managedMetadata(row.metadata);
+      const key = `${row.kind}:${row.slug}`;
+      const previous = items.get(key);
+      items.set(key, {
+        kind: row.kind as ManagedContentKind,
+        slug: row.slug,
+        title: String(metadata.title ?? previous?.title ?? row.slug),
+        category: String(metadata.category ?? previous?.category ?? ""),
+        reference: String(metadata.reference ?? previous?.reference ?? ""),
+        summary: String(metadata.summary ?? previous?.summary ?? ""),
+        ...(metadata.depth === "deep" || metadata.depth === "simple" ? { depth: metadata.depth } : {}),
+        ...(typeof metadata.days === "number" ? { days: metadata.days } : {}),
+        ...(typeof metadata.keyVerse === "string" ? { keyVerse: metadata.keyVerse } : {}),
+        status: row.status as ManagedContentStatus,
+        content: row.content,
+      });
+    }
+    const all = [...items.values()];
+    const studies = deduplicateStudies(all.filter((item) => item.kind === "study"));
+    const plans = all.filter((item) => item.kind === "prayer_plan");
+    return [...studies, ...plans].sort((a, b) =>
+      a.kind.localeCompare(b.kind) || a.title.localeCompare(b.title, "pt-BR"),
+    );
+  });
+
+/** Salva rascunhos/publicações. A autorização é conferida no servidor em cada chamada. */
+export const adminSaveManagedContent = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) =>
+    z.object({
+      kind: managedKindSchema,
+      slug: z.string().min(3).max(80).regex(/^[\p{L}\p{N}-]+$/u),
+      title: z.string().min(3).max(160),
+      category: z.string().min(2).max(80),
+      reference: z.string().max(200).default(""),
+      summary: z.string().min(1).max(2000),
+      depth: z.enum(["simple", "deep"]).optional(),
+      days: z.number().int().min(1).max(400).optional(),
+      keyVerse: z.string().max(160).optional(),
+      status: managedStatusSchema,
+      content: managedStudyContentSchema.nullable().optional(),
+    }).superRefine((value, ctx) => {
+      if (value.kind === "prayer_plan" && (!value.days || !value.keyVerse)) {
+        ctx.addIssue({ code: "custom", message: "Planos precisam informar duração e versículo-chave.", path: ["days"] });
+      }
+
+    }).parse(input),
+  )
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context.supabase, context.userId);
+    // Mesmo título + mesma referência identificam o mesmo estudo/plano:
+    // mantém o slug escolhido e arquiva as cópias, sem apagar seu conteúdo.
+    const { data: existingItems, error: lookupError } = await context.supabase
+      .from("managed_content")
+      .select("slug, metadata")
+      .eq("kind", data.kind)
+      .neq("slug", data.slug);
+    if (lookupError) throw new Error(lookupError.message);
+    const duplicateSlugs = (existingItems ?? []).filter((item) => {
+      const metadata = managedMetadata(item.metadata);
+      return normalizeManagedIdentity(String(metadata.title ?? "")) === normalizeManagedIdentity(data.title) &&
+        normalizeManagedIdentity(String(metadata.reference ?? "")) === normalizeManagedIdentity(data.reference);
+    }).map((item) => item.slug);
+    if (duplicateSlugs.length) {
+      const { error: archiveError } = await context.supabase
+        .from("managed_content")
+        .update({ status: "archived" })
+        .eq("kind", data.kind)
+        .in("slug", duplicateSlugs);
+      if (archiveError) throw new Error(archiveError.message);
+    }
+    const { error } = await context.supabase.from("managed_content").upsert({
+      kind: data.kind,
+      slug: data.slug,
+      metadata: {
+        title: data.title,
+        category: data.category,
+        reference: data.reference,
+        summary: data.summary,
+        ...(data.depth ? { depth: data.depth } : {}),
+        ...(data.days ? { days: data.days } : {}),
+        ...(data.keyVerse ? { keyVerse: data.keyVerse } : {}),
+      },
+      content: data.content ?? null,
+      status: data.status,
+      updated_at: new Date().toISOString(),
+    }, { onConflict: "kind,slug" });
+    if (error) throw new Error(error.message);
+    return { ok: true, slug: data.slug, status: data.status };
+  });
+
+/** Catálogo publicado para as telas dos alunos; itens legados continuam como fallback local. */
+export const getPublishedManagedCatalog = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) => z.object({ kind: managedKindSchema }).parse(input))
+  .handler(async ({ data, context }) => {
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const { data: rows, error } = await supabaseAdmin
+      .from("managed_content")
+      .select("slug, metadata, content, status")
+      .eq("kind", data.kind)
+      .in("status", ["published", "archived"]);
+    if (error) throw new Error(error.message);
+    return (rows ?? []).map((row) => ({
+      slug: row.slug,
+      status: row.status,
+      metadata: row.status === "published" ? managedMetadata(row.metadata) : {},
+      content: row.status === "published" ? row.content : null,
+    }));
   });

@@ -14,10 +14,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { getPlanDayContent } from "@/lib/ai.functions";
 import { getPlanProgress, savePlanDay } from "@/lib/app.functions";
 import { getPlan } from "@/lib/content/plans";
+import { getPublishedManagedCatalog } from "@/lib/admin.functions";
 
 export const Route = createFileRoute("/_authenticated/planos/$slug")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Plano de oração — Caminhando com Cristo" },
       {
         name: "description",
@@ -32,7 +35,22 @@ export const Route = createFileRoute("/_authenticated/planos/$slug")({
 
 function PlanoDetalhe() {
   const { slug } = Route.useParams();
-  const plan = getPlan(slug);
+  const catalogFn = useServerFn(getPublishedManagedCatalog);
+  const { data: managedPlans = [] } = useQuery({
+    queryKey: ["published-managed-catalog", "prayer_plan"],
+    queryFn: () => catalogFn({ data: { kind: "prayer_plan" } }),
+  });
+  const managedPlan = managedPlans.find((item) => item.slug === slug);
+  const metadata = managedPlan?.metadata as Record<string, unknown> | undefined;
+  const legacyPlan = getPlan(slug);
+  const plan = managedPlan?.status === "archived" ? undefined : managedPlan ? {
+    slug,
+    title: String(metadata?.title ?? legacyPlan?.title ?? slug),
+    category: String(metadata?.category ?? legacyPlan?.category ?? "Oração"),
+    days: Number(metadata?.days ?? legacyPlan?.days ?? 1),
+    summary: String(metadata?.summary ?? legacyPlan?.summary ?? ""),
+    keyVerse: String(metadata?.keyVerse ?? legacyPlan?.keyVerse ?? ""),
+  } : legacyPlan;
   const queryClient = useQueryClient();
   const progressFn = useServerFn(getPlanProgress);
   const dayFn = useServerFn(getPlanDayContent);
@@ -53,10 +71,10 @@ function PlanoDetalhe() {
     enabled: Boolean(plan),
   });
 
-  const notes = (progress.data?.notes ?? {}) as Record<string, string>;
   useEffect(() => {
+    const notes = (progress.data?.notes ?? {}) as Record<string, string>;
     setNote(notes[String(day)] ?? "");
-  }, [day, progress.data]);
+  }, [day, progress.data?.notes]);
 
   const save = useMutation({
     mutationFn: (vars: { done: boolean; note?: string }) =>

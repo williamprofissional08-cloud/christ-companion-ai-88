@@ -1,9 +1,12 @@
+import { getChapterStudy } from "./bible-books";
+
 export type Study = {
   slug: string;
   title: string;
   category: string;
   reference: string;
   summary: string;
+  depth: "simple" | "deep";
 };
 
 export const STUDY_CATEGORIES = [
@@ -26,12 +29,15 @@ function study(
   category: string,
   reference: string,
   summary: string,
+  depth: "simple" | "deep" = "simple",
 ): Study {
-  return { slug, title, category, reference, summary };
+  return { slug, title, category, reference, summary, depth };
 }
 
 export const STUDIES: Study[] = [
   study("genesis-panorama", "Gênesis: as origens", "Livros da Bíblia", "Gênesis 1—50", "Criação, queda, aliança e a promessa da semente."),
+  study("genesis-1-criacao", "Gênesis 1: No princípio, Deus", "Antigo Testamento", "Gênesis 1:1-31", "Estudo aprofundado da criação: texto, contexto, referências e classificação textual.", "deep"),
+  study("biblia-genesis-cap-2", "Gênesis 2: Vida, jardim e comunhão", "Antigo Testamento", "Gênesis 2:1-25", "Continuação aprofundada de Gênesis 1: descanso, formação humana, cuidado, obediência e união, com referências e classificação textual.", "deep"),
   study("exodo-libertacao", "Êxodo: o Deus que liberta", "Livros da Bíblia", "Êxodo 1—40", "Do cativeiro à presença: páscoa, lei e tabernáculo."),
   study("salmos-oracao", "Salmos: a escola da oração", "Livros da Bíblia", "Salmos", "Como orar com sinceridade em todas as estações da alma."),
   study("provérbios-sabedoria", "Provérbios: sabedoria prática", "Livros da Bíblia", "Provérbios", "Temor do Senhor, palavras, trabalho, amizades e dinheiro."),
@@ -61,7 +67,7 @@ export const STUDIES: Study[] = [
   study("talentos", "A parábola dos talentos", "Parábolas", "Mateus 25:14-30", "Fidelidade e mordomia enquanto o Senhor não volta."),
   study("ovelha-perdida", "A ovelha perdida", "Parábolas", "Lucas 15:1-7", "O valor de uma única alma."),
   study("multiplicacao-paes", "A multiplicação dos pães", "Milagres", "João 6:1-15", "Deus multiplica o pouco entregue."),
-  study("acalmando-tempestade", "Jesus acalma a tempestade", "Milagres", "Marcos 4:35-41", "Fé em meio ao caos."),
+  study("acalmando-tempestade", "Jesus acalma a tempestade", "Milagres", "Marcos 4:35-41", "A autoridade de Jesus sobre a criação e o chamado à confiança nele em meio ao perigo.", "deep"),
   study("cego-de-nascenca", "A cura do cego de nascença", "Milagres", "João 9", "Da escuridão à luz e ao testemunho."),
   study("ressurreicao-lazaro", "A ressurreição de Lázaro", "Milagres", "João 11", "Jesus é a ressurreição e a vida."),
   study("mar-vermelho", "A travessia do mar Vermelho", "Milagres", "Êxodo 14", "Quando não há caminho, Deus abre caminho."),
@@ -84,5 +90,34 @@ export const STUDIES: Study[] = [
 ];
 
 export function getStudy(slug: string) {
-  return STUDIES.find((s) => s.slug === slug);
+  return STUDIES.find((s) => s.slug === slug) ?? getChapterStudy(slug);
+}
+
+
+/**
+ * Remove duplicidades de catálogo pelo título + referência bíblica.
+ * Mantém a versão publicada; em empate, prioriza conteúdo revisado e estudo aprofundado.
+ */
+export function deduplicateStudies<T extends Pick<Study, "slug" | "title" | "reference"> & {
+  status?: string;
+  content?: unknown;
+  depth?: Study["depth"];
+}>(items: T[]): T[] {
+  const normalize = (value: string) => value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  const rank = (item: T) =>
+    (item.status === "published" ? 100 : item.status === "draft" ? 50 : 0) +
+    (item.content ? 20 : 0) +
+    (item.depth === "deep" ? 5 : 0);
+  const unique = new Map<string, T>();
+  for (const item of items) {
+    const key = `${normalize(item.title)}::${normalize(item.reference)}`;
+    const current = unique.get(key);
+    if (!current || rank(item) > rank(current)) unique.set(key, item);
+  }
+  return [...unique.values()];
 }

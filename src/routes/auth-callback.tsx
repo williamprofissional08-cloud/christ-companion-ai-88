@@ -9,6 +9,8 @@ export const Route = createFileRoute("/auth-callback")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Concluindo login — Caminhando com Cristo" },
       { name: "description", content: "Finalizando o seu acesso com segurança." },
       { property: "og:title", content: "Concluindo login — Caminhando com Cristo" },

@@ -27,6 +27,8 @@ import { requestNotificationPermission, sendTestReminder } from "@/hooks/use-rem
 export const Route = createFileRoute("/_authenticated/configuracoes")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Configurações — Caminhando com Cristo" },
       {
         name: "description",

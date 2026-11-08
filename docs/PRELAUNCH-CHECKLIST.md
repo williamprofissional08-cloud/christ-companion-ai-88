@@ -1,0 +1,60 @@
+# Checklist de prontidão — Caminho Divino
+
+Este documento é o portão operacional para o piloto controlado. Ele não significa que os itens externos já foram executados.
+
+## Validação automatizada
+
+- [x] `npm ci` concluiu com o `package-lock.json` versionado na CI da PR #8.
+- [x] ESLint concluiu sem erros; a execução registrou 13 avisos preexistentes de Fast Refresh.
+- [x] Os arquivos de código explicitamente listados no workflow passam na verificação Prettier; o arquivo de tipos gerado e a migration SQL exigem revisão própria.
+- [x] `npx tsc --noEmit` concluiu sem erros na CI da PR #8.
+- [x] `npm run build` concluiu em produção na CI da PR #8.
+- [x] Existem testes automatizados de unidade para rate limiting e leitura limitada de JSON; testes de integração dos fluxos críticos ainda pendentes.
+- [ ] Nenhuma variável secreta é exposta ao navegador ou commitada.
+
+A workflow `.github/workflows/validate.yml` instala as dependências com `npm ci` (sem regenerar o lockfile), executa ESLint, Prettier nos arquivos listados, TypeScript, testes e build de produção. A execução verde comprova o commit validado, não os testes de integração com serviços externos.
+
+## Supabase — exigir validação no projeto correto
+
+Não aplicar migrations automaticamente a partir deste checklist. Antes do piloto, um responsável com acesso ao projeto Supabase deve:
+
+- [ ] Confirmar que o projeto e o ambiente são os corretos (staging antes de produção).
+- [ ] Comparar migrations versionadas com o histórico real de migrations aplicadas.
+- [ ] Verificar RLS habilitado em todas as tabelas com dados de usuários.
+- [ ] Confirmar que usuário A não lê nem altera conversas, mensagens, progresso, favoritos, anotações ou envios de usuário B.
+- [ ] Confirmar que usuário comum não executa operações administrativas.
+- [ ] Confirmar que apenas administradores podem editar/publicar conteúdo gerenciado.
+- [ ] Fazer backup e plano de reversão antes de qualquer migration.
+- [ ] Executar migrations somente após revisão e aprovação explícitas.
+
+A PR #4 contém duas migrations novas. Elas são aditivas e a enum `public.content_status` já existe na linha principal, mas a PR está divergente/conflitante. Não aplicar suas migrations até que o código e a sequência sejam rebaseados, testados e aprovados.
+
+## Rotas de API e IA
+
+- [ ] Chat: sem token retorna 401; JSON inválido 400; corpo acima de 256 KiB (inclusive sem `Content-Length`) 413; até 40 mensagens; até 24.000 caracteres; thread de outro usuário nunca pode ser lida nem alterada.
+- [ ] Professor IA: sem token retorna 401; corpo acima de 256 KiB é rejeitado; até 40 mensagens e 24.000 caracteres; a aula precisa estar disponível ao usuário.
+- [ ] Professor TTS: sem token retorna 401; corpo acima de 16 KiB é rejeitado; texto limitado a 4.000 caracteres; timeout do provedor; resposta MP3 validada e limitada a 8 MiB, sem cache.
+- [ ] Testar os três endpoints com entradas inválidas, limites excedidos, token ausente, token expirado, usuário sem acesso e falhas 402/403/429 do provedor.
+- [x] Implementar rate limiting persistente por usuário e endpoint para Chat, Professor IA e Professor TTS, com limites fixos no banco (20, 15 e 8 requisições por 10 minutos); migration 002 versionada, ainda pendente de aplicação e validação em staging.
+- [x] 17 testes automatizados de unidade para políticas de limite, falhas da RPC, leitura limitada de JSON e resposta de áudio TTS; [ ] completar testes de integração para autenticação, validação de mensagens, isolamento de threads e autorização do Professor IA.
+
+## Fluxos funcionais para o piloto
+
+- [ ] Cadastro, login, logout, recuperação de senha e sessão expirada.
+- [ ] Catálogo e abertura de cursos/aulas.
+- [ ] Salvar e retomar progresso, favoritos e anotações.
+- [ ] Chat/Professor IA com créditos disponíveis e com erros 401/403/429/402.
+- [ ] TTS em Android e iOS: play, pause, retomar, velocidade, avançar/voltar e retorno após fechar/reabrir a tela.
+- [ ] Permissões e telas administrativas com usuário comum e administrador.
+- [ ] Testar em celular e desktop, com rede lenta e reconexão.
+
+## Privacidade e operação
+
+- [ ] Revisar e publicar Termos de Uso e Política de Privacidade adequados ao funcionamento real.
+- [ ] Definir processo de exclusão de conta e dados pessoais.
+- [ ] Confirmar monitoramento de erros, consumo de IA, limites e contato de suporte.
+- [ ] Fazer piloto com cerca de 10 pessoas, coletar falhas e corrigir antes de abrir ao público.
+
+## Regra de liberação
+
+Não promover a PR, mesclar, aplicar migrations ou publicar enquanto os testes de CI, Supabase/RLS, autenticação, privacidade e fluxos críticos não tiverem evidências registradas e aprovação do responsável.

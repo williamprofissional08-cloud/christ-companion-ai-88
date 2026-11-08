@@ -1,3 +1,4 @@
+import { useCallback, useMemo } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useMutation, useQuery } from "@tanstack/react-query";
@@ -5,32 +6,76 @@ import { ArrowLeft, Star } from "lucide-react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { StudyReader, type ReaderCheckpoint } from "@/components/study/StudyReader";
+import { getStudyCheckpoint, saveStudyCheckpoint } from "@/lib/study-progress.functions";
+import { studySections } from "@/lib/study-sections";
+import { STUDY_PLAYBACK_RATES, type StudyPlaybackRate } from "@/lib/study-reader";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getStudyContent } from "@/lib/ai.functions";
 import { addFavorite } from "@/lib/app.functions";
 import { getStudy } from "@/lib/content/studies";
+import { getPublishedManagedCatalog } from "@/lib/admin.functions";
+import { getBibleBook, getChapterStudy, getChapterStudySlug } from "@/lib/content/bible-books";
+import { CURATED_STUDIES } from "@/lib/content/curated-studies";
 
 export const Route = createFileRoute("/_authenticated/estudos/$slug")({
-  head: () => ({
+  head: ({ params }) => {
+    const study = getStudy(params.slug);
+    const title = `${study?.title ?? "Estudo bíblico"} — Caminhando com Cristo`;
+    const description = study?.summary ?? "Estudo fundamentado nas Escrituras, com contexto, referências e aplicação.";
+    return {
     meta: [
-      { title: "Estudo bíblico — Caminhando com Cristo" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { title },
       {
         name: "description",
-        content: "Contexto histórico, pontos principais, aplicação prática, perguntas e oração final.",
+        content: description,
       },
-      { property: "og:title", content: "Estudo bíblico" },
-      { property: "og:description", content: "Um estudo completo fundamentado nas Escrituras." },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
     ],
-  }),
+    };
+  },
   component: EstudoDetalhe,
 });
 
 function EstudoDetalhe() {
   const { slug } = Route.useParams();
+  const catalogFn = useServerFn(getPublishedManagedCatalog);
+  const { data: managedStudies = [] } = useQuery({
+    queryKey: ["published-managed-catalog", "study"],
+    queryFn: () => catalogFn({ data: { kind: "study" } }),
+  });
+  const managedStudy = managedStudies.find((item) => item.slug === slug);
+  const metadata = managedStudy?.metadata as Record<string, unknown> | undefined;
+  const legacyStudy = getStudy(slug);
+  const study = managedStudy?.status === "archived" ? undefined : managedStudy ? {
+    slug,
+    title: String(metadata?.title ?? legacyStudy?.title ?? slug),
+    category: String(metadata?.category ?? legacyStudy?.category ?? "Estudos bíblicos"),
+    reference: String(metadata?.reference ?? legacyStudy?.reference ?? ""),
+    summary: String(metadata?.summary ?? legacyStudy?.summary ?? ""),
+    depth: metadata?.depth === "deep" ? "deep" as const : legacyStudy?.depth ?? "simple" as const,
+  } : legacyStudy;
   const study = getStudy(slug);
+  const genesis = getBibleBook("genesis");
+  const chapterStudy = getChapterStudy(slug)
+    ?? (slug === "genesis-1-criacao" && genesis ? { book: genesis, chapter: 1 } : null);
   const contentFn = useServerFn(getStudyContent);
   const favoriteFn = useServerFn(addFavorite);
+  const checkpointFn = useServerFn(getStudyCheckpoint);
+  const saveCheckpointFn = useServerFn(saveStudyCheckpoint);
+  const checkpoint = useQuery({
+    queryKey: ["study-checkpoint", slug],
+    queryFn: () => checkpointFn({ data: { slug } }),
+    enabled: Boolean(study),
+  });
+  const persistCheckpoint = useCallback((value: ReaderCheckpoint) => {
+    void saveCheckpointFn({ data: { slug, ...value } }).catch(() => {
+      toast.error("Não foi possível salvar sua posição de leitura.", { id: "study-checkpoint-error" });
+    });
+  }, [saveCheckpointFn, slug]);
 
   const content = useQuery({
     queryKey: ["study", slug],
@@ -38,6 +83,8 @@ function EstudoDetalhe() {
     staleTime: Infinity,
     enabled: Boolean(study),
   });
+
+  const sections = useMemo(() => content.data ? studySections(content.data) : [], [content.data]);
 
   const favorite = useMutation({
     mutationFn: () =>
@@ -66,6 +113,20 @@ function EstudoDetalhe() {
             <ArrowLeft className="size-4" /> Estudos
           </Link>
         </Button>
+        {chapterStudy && chapterStudy.chapter > 1 ? (
+          <Button asChild variant="outline" size="sm">
+            <Link to="/estudos/$slug" params={{ slug: getChapterStudySlug(chapterStudy.book.slug, chapterStudy.chapter - 1) }}>
+              Capítulo anterior
+            </Link>
+          </Button>
+        ) : null}
+        {chapterStudy && chapterStudy.chapter < chapterStudy.book.chapters ? (
+          <Button asChild variant="outline" size="sm">
+            <Link to="/estudos/$slug" params={{ slug: getChapterStudySlug(chapterStudy.book.slug, chapterStudy.chapter + 1) }}>
+              Próximo capítulo
+            </Link>
+          </Button>
+        ) : null}
         <Button
           variant="outline"
           size="sm"
@@ -77,69 +138,38 @@ function EstudoDetalhe() {
         </Button>
       </div>
 
-      {content.isLoading ? (
+      {content.isLoading || checkpoint.isLoading ? (
         <div className="space-y-3">
           {[0, 1, 2, 3].map((i) => (
             <Skeleton key={i} className="h-24 w-full" />
           ))}
         </div>
       ) : content.data ? (
-        <div className="flex flex-col gap-4">
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-sm leading-relaxed">{content.data.intro}</p>
-          </Card>
-          <Block label="Contexto histórico" text={content.data.historicalContext} />
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-              Pontos principais
+        <>
+          {chapterStudy && !CURATED_STUDIES[slug] ? (
+            <p className="mb-4 rounded-lg border border-border/60 bg-muted/30 p-3 text-xs text-muted-foreground">
+              Estudo de capítulo preparado com apoio de IA. Leia a passagem na Bíblia e confira as referências; interpretações e aplicações devem permanecer subordinadas ao texto bíblico.
             </p>
-            <div className="mt-3 flex flex-col gap-4">
-              {content.data.keyPoints.map((point) => (
-                <div key={point.title}>
-                  <p className="font-display text-base font-semibold">{point.title}</p>
-                  <p className="mt-1 text-sm leading-relaxed">{point.text}</p>
-                </div>
-              ))}
-            </div>
-          </Card>
-          <Block label="Aplicação prática" text={content.data.application} />
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-              Referências cruzadas
-            </p>
-            <ul className="mt-3 list-inside list-disc text-sm">
-              {content.data.crossReferences.map((ref) => (
-                <li key={ref}>{ref}</li>
-              ))}
-            </ul>
-          </Card>
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-              Perguntas para reflexão
-            </p>
-            <ul className="mt-3 list-inside list-decimal text-sm leading-relaxed">
-              {content.data.questions.map((question) => (
-                <li key={question}>{question}</li>
-              ))}
-            </ul>
-          </Card>
-          <Block label="Conclusão" text={content.data.conclusion} />
-          <Block label="Oração final" text={content.data.prayer} />
-        </div>
+          ) : null}
+        <StudyReader
+          key={slug}
+          title={study.title}
+          reference={study.reference}
+          depth={content.data.depth ?? study.depth}
+          sections={sections}
+          initialCheckpoint={checkpoint.data ? {
+            ...checkpoint.data,
+            playbackRate: STUDY_PLAYBACK_RATES.includes(checkpoint.data.playbackRate as StudyPlaybackRate)
+              ? checkpoint.data.playbackRate as StudyPlaybackRate : 1,
+          } : {}}
+          onCheckpoint={persistCheckpoint}
+        />
+        </>
       ) : (
         <p className="text-sm text-muted-foreground">
           Não conseguimos gerar este estudo agora. Tente novamente em instantes.
         </p>
       )}
     </AppShell>
-  );
-}
-
-function Block({ label, text }: { label: string; text: string }) {
-  return (
-    <Card className="border-border/50 p-6 shadow-soft">
-      <p className="text-xs font-semibold tracking-wide text-primary uppercase">{label}</p>
-      <p className="mt-2 text-sm leading-relaxed">{text}</p>
-    </Card>
   );
 }

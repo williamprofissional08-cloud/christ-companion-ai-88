@@ -7,7 +7,7 @@ import { Slider } from "@/components/ui/slider";
 import { buildLessonNarrationText } from "@/lib/school/professor-tts";
 import type { LessonContentBlock } from "@/lib/school/lesson-view";
 
-const RATES = [0.75, 1, 1.25, 1.5, 2] as const;
+const RATES = [0.75, 1, 1.25, 1.5, 1.75, 2] as const;
 const AUDIO_STOP_EVENT = "ccc:stop-audio";
 
 type State = "ready" | "playing" | "paused" | "error" | "unsupported";
@@ -19,16 +19,24 @@ type State = "ready" | "playing" | "paused" | "error" | "unsupported";
 export function LessonNarrationPlayer({
   title,
   blocks,
+  initialChunkIndex = 0,
+  initialRate = 1,
+  onCheckpoint,
 }: {
   title: string;
   blocks: LessonContentBlock[];
+  initialChunkIndex?: number;
+  initialRate?: number;
+  onCheckpoint?: (value: { audioChunkIndex: number; playbackRate: number }) => void;
 }) {
   const script = useMemo(() => buildLessonNarrationText(title, blocks), [blocks, title]);
   const [state, setState] = useState<State>("unsupported");
-  const [rate, setRate] = useState<(typeof RATES)[number]>(1);
+  const [rate, setRate] = useState<(typeof RATES)[number]>(
+    RATES.includes(initialRate as (typeof RATES)[number]) ? initialRate as (typeof RATES)[number] : 1,
+  );
   const [position, setPosition] = useState(0);
   const [voiceLabel, setVoiceLabel] = useState("Voz do dispositivo");
-  const indexRef = useRef(0);
+  const indexRef = useRef(initialChunkIndex);
   const rateRef = useRef(rate);
   const runRef = useRef(0);
   const utterancesRef = useRef<SpeechSynthesisUtterance[]>([]);
@@ -84,6 +92,7 @@ export function LessonNarrationPlayer({
       current += chunk;
     }
     if (current) grouped.push(current);
+    index = Math.max(0, Math.min(grouped.length - 1, index));
     utterancesRef.current = grouped.map((text) => new SpeechSynthesisUtterance(text));
     const speak = (next: number) => {
       if (run !== runRef.current) return;
@@ -94,6 +103,7 @@ export function LessonNarrationPlayer({
         return;
       }
       indexRef.current = next;
+      onCheckpoint?.({ audioChunkIndex: next, playbackRate: rateRef.current });
       utterance.lang = portuguese?.lang ?? "pt-BR";
       utterance.voice = portuguese ?? null;
       utterance.rate = rateRef.current;
@@ -136,7 +146,9 @@ export function LessonNarrationPlayer({
   };
 
   const setPlaybackRate = (value: (typeof RATES)[number]) => {
+    rateRef.current = value;
     setRate(value);
+    onCheckpoint?.({ audioChunkIndex: indexRef.current, playbackRate: value });
     if (state === "playing" || state === "paused") {
       const wasPaused = state === "paused";
       window.speechSynthesis.cancel();

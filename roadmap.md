@@ -1,5 +1,11 @@
 # Formação de Pregadores
 
+## Correção de erros atuais
+
+- [x] Corrigir a falta de configuração pública da conexão na prévia
+- [x] Corrigir perda dos novos campos de retomada de aulas
+- [x] Validar páginas públicas, navegação autenticada e registros de erros
+
 ## Base entregue
 
 - [x] Expandir metadados de livros e estudos no banco
@@ -14,11 +20,15 @@
 
 ## Expansão Gênesis ao Apocalipse
 
+- [ ] Acrescentar estudo aprofundado de Gênesis 2:1–25 no modelo de Gênesis 1, preservar URLs e validar leitura e continuidade
+
+- [ ] Adotar o modelo didático da apostila enviada na geração aprofundada e no estudo-modelo de Gênesis 1, preservando os conteúdos e a jornada existentes
+
 - [x] Fase 1 — Criar a arquitetura escalável de livros, capítulos, passagens, fontes, glossário, cultura e exercícios
 - [ ] Fase 2 — Converter os 66 livros existentes em uma jornada completa por capítulos e passagens (1.189 capítulos cadastrados; conteúdo integral pendente)
 - [ ] Fase 3 — Produzir, revisar e publicar Gênesis completo
   - [x] Gênesis 1 — oito passagens profundas, exercícios, perguntas, fontes, navegação, salvamento e progresso
-  - [ ] Gênesis 2 — seis passagens profundas, exercícios, perguntas, fontes, navegação, salvamento e progresso
+  - [x] Gênesis 2 — seis passagens profundas, exercícios, perguntas, fontes, navegação, salvamento e progresso
 - [ ] Fase 4 — Produzir, revisar e publicar Êxodo completo
 - [ ] Fase 5 — Produzir, revisar e publicar Levítico completo
 - [ ] Fase 6 — Completar os demais livros do Antigo Testamento
@@ -29,4 +39,16 @@
 
 ## Ajustes visuais
 
-- [ ] Ocultar o badge Lovable com CSS
+- [x] Ocultar o badge Lovable com CSS
+
+## Atualização de estudos e áudio
+
+- [ ] Auditar estudos, geração bíblica, TTS, áudio, progresso e experiência móvel atuais
+- [x] Diferenciar Estudo Bíblico e Estudo Bíblico Aprofundado sem invalidar estudos existentes
+- [x] Reestruturar a leitura dos estudos em seções navegáveis e confortáveis no celular
+- [ ] Implementar TTS robusto em pt-BR com fallback e controles completos
+- [ ] Sincronizar áudio, destaque do trecho, rolagem e navegação por seção
+- [x] Persistir seção, trecho, velocidade e retomada sem alterar a conclusão explícita
+- [ ] Reforçar geração com análise prévia, classificações, confiança, fontes e validações
+- [ ] Validar Android/mobile, desktop, estudos longos, navegação, console e regressões
+- [x] Corrigir todos os erros possíveis (verificação geral pós-estudo Gênesis 1)

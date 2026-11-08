@@ -12,6 +12,8 @@ import { createThread, deleteThread, listThreads } from "@/lib/chat.functions";
 export const Route = createFileRoute("/_authenticated/assistente/")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Assistente bíblico — Caminhando com Cristo" },
       {
         name: "description",

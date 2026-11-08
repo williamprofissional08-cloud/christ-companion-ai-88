@@ -15,6 +15,8 @@ import logo from "@/assets/logo.png";
 export const Route = createFileRoute("/_authenticated/onboarding")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { title: "Comece sua jornada — Caminhando com Cristo" },
       {
         name: "description",

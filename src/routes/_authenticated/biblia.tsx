@@ -18,6 +18,10 @@ export const Route = createFileRoute("/_authenticated/biblia")({
   validateSearch: (search) => searchSchema.parse(search),
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+      { property: "og:title", content: "Bíblia — Caminhando com Cristo" },
+      { property: "og:description", content: "Navegue pelos 66 livros e capítulos da Bíblia." },
       { title: "Bíblia — Caminhando com Cristo" },
       { name: "description", content: "Navegue pelos 66 livros e capítulos da Bíblia." },
     ],
@@ -41,12 +45,16 @@ function BibliaPage() {
   const previous = () => {
     if (chapter > 1) return setPassage(book, chapter - 1);
     const index = BIBLE_BOOKS.findIndex((item) => item.id === book.id);
-    if (index > 0) setPassage(BIBLE_BOOKS[index - 1], BIBLE_BOOKS[index - 1].chapters);
+    const previousBook = index > 0 ? BIBLE_BOOKS[index - 1] : undefined;
+    if (previousBook) return setPassage(previousBook, previousBook.chapters);
+    return undefined;
   };
   const next = () => {
     if (chapter < book.chapters) return setPassage(book, chapter + 1);
     const index = BIBLE_BOOKS.findIndex((item) => item.id === book.id);
-    if (index < BIBLE_BOOKS.length - 1) setPassage(BIBLE_BOOKS[index + 1], 1);
+    const nextBook = index >= 0 ? BIBLE_BOOKS[index + 1] : undefined;
+    if (nextBook) return setPassage(nextBook, 1);
+    return undefined;
   };
   const copyReference = async () => {
     await navigator.clipboard?.writeText(reference);
@@ -107,7 +115,7 @@ function BibliaPage() {
             variant="outline"
             size="sm"
             onClick={previous}
-            disabled={book.id === BIBLE_BOOKS[0].id && chapter === 1}
+            disabled={book.id === BIBLE_BOOKS[0]?.id && chapter === 1}
           >
             <ChevronLeft className="size-4" /> Anterior
           </Button>
@@ -119,7 +127,7 @@ function BibliaPage() {
             size="sm"
             onClick={next}
             disabled={
-              book.id === BIBLE_BOOKS[BIBLE_BOOKS.length - 1].id && chapter === book.chapters
+              book.id === BIBLE_BOOKS.at(-1)?.id && chapter === book.chapters
             }
           >
             Próximo <ChevronRight className="size-4" />
