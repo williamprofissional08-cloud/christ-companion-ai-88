@@ -61,16 +61,18 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
   .handler(async ({ data, context }): Promise<PlanDayContent> => {
     const { getPlan } = await import("./content/plans");
     const legacyPlan = getPlan(data.slug);
-    const managed = await context.supabase.from("managed_content")
-      .select("metadata, updated_at")
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const managed = await supabaseAdmin.from("managed_content")
+      .select("metadata, updated_at, status")
       .eq("kind", "prayer_plan")
       .eq("slug", data.slug)
-      .eq("status", "published")
       .maybeSingle();
     if (managed.error) throw new Error(managed.error.message);
-    const metadata = managed.data?.metadata && typeof managed.data.metadata === "object"
+    if (managed.data?.status === "archived") throw new Error("Este plano foi arquivado.");
+    const published = managed.data?.status === "published";
+    const metadata = published && managed.data?.metadata && typeof managed.data.metadata === "object"
       ? managed.data.metadata as Record<string, unknown> : {};
-    const plan = managed.data ? {
+    const plan = published ? {
       slug: data.slug,
       title: String(metadata.title ?? legacyPlan?.title ?? data.slug),
       summary: String(metadata.summary ?? legacyPlan?.summary ?? ""),
@@ -79,7 +81,7 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
     } : legacyPlan;
     if (!plan) throw new Error("Plano não encontrado");
     if (data.day > plan.days) throw new Error("Dia fora da duração deste plano");
-    const cacheKey = managed.data ? `${data.slug}:${data.day}:v${new Date(managed.data.updated_at).getTime()}` : `${data.slug}:${data.day}`;
+    const cacheKey = published ? `${data.slug}:${data.day}:v${new Date(managed.data!.updated_at).getTime()}` : `${data.slug}:${data.day}`;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
@@ -104,17 +106,19 @@ export const getStudyContent = createServerFn({ method: "POST" })
   .handler(async ({ data, context }): Promise<StudyContent> => {
     const { getStudy } = await import("./content/studies");
     const legacyStudy = getStudy(data.slug);
-    const managed = await context.supabase.from("managed_content")
-      .select("metadata, content, updated_at")
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const managed = await supabaseAdmin.from("managed_content")
+      .select("metadata, content, updated_at, status")
       .eq("kind", "study")
       .eq("slug", data.slug)
-      .eq("status", "published")
       .maybeSingle();
     if (managed.error) throw new Error(managed.error.message);
-    if (managed.data?.content) return managed.data.content as unknown as StudyContent;
-    const metadata = managed.data?.metadata && typeof managed.data.metadata === "object"
+    if (managed.data?.status === "archived") throw new Error("Este estudo foi arquivado.");
+    const published = managed.data?.status === "published";
+    if (published && managed.data?.content) return managed.data.content as unknown as StudyContent;
+    const metadata = published && managed.data?.metadata && typeof managed.data.metadata === "object"
       ? managed.data.metadata as Record<string, unknown> : {};
-    const study = managed.data ? {
+    const study = published ? {
       slug: data.slug,
       title: String(metadata.title ?? legacyStudy?.title ?? data.slug),
       category: String(metadata.category ?? legacyStudy?.category ?? "Estudos bíblicos"),
@@ -125,8 +129,8 @@ export const getStudyContent = createServerFn({ method: "POST" })
     if (!study) throw new Error("Estudo não encontrado");
     const { CURATED_STUDIES } = await import("./content/curated-studies");
     const curated = CURATED_STUDIES[data.slug];
-    if (curated && !managed.data) return curated;
-    const cacheKey = managed.data ? `${data.slug}:v${new Date(managed.data.updated_at).getTime()}` : data.slug;
+    if (curated && !published) return curated;
+    const cacheKey = published ? `${data.slug}:v${new Date(managed.data!.updated_at).getTime()}` : data.slug;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
