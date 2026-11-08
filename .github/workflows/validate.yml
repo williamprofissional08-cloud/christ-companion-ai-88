@@ -35,7 +35,8 @@ jobs:
         run: npm ci --no-audit --no-fund
 
       - name: Run ESLint
-        run: npm run lint -- --rule 'prettier/prettier: off'
+        run: |
+          npm run lint -- --rule 'prettier/prettier: off'
 
       - name: Check formatting of hardened files
         run: >-
