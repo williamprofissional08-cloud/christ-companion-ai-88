@@ -312,7 +312,7 @@ export const adminSaveLessonContent = createServerFn({ method: "POST" })
     return { id: created.id };
   });
 
-export const adminArchiveLessonContent = createServerFn({ method: "POST" })
+export const adminDeleteLessonContent = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
@@ -376,7 +376,7 @@ export const adminSaveLessonQuestion = createServerFn({ method: "POST" })
     return { id: created.id };
   });
 
-export const adminArchiveLessonQuestion = createServerFn({ method: "POST" })
+export const adminDeleteLessonQuestion = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
@@ -511,7 +511,7 @@ export const adminSaveLessonMedia = createServerFn({ method: "POST" })
     return { id: created.id };
   });
 
-export const adminArchiveLessonMedia = createServerFn({ method: "POST" })
+export const adminDeleteLessonMedia = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
