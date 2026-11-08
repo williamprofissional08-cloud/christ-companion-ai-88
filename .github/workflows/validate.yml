@@ -8,7 +8,7 @@ name: Validate
       - release/prelaunch-hardening-2026-11
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: validate-${{ github.workflow }}-${{ github.ref }}
