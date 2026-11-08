@@ -117,9 +117,11 @@ export const getStudyContent = createServerFn({ method: "POST" })
       updated_at: string | null;
       status: string | null;
     } | null = null;
+    let supabaseAdminClient: typeof import("@/integrations/supabase/client.server")["supabaseAdmin"] | null = null;
     try {
-      const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-      const managed = await supabaseAdmin.from("managed_content")
+      const adminModule = await import("@/integrations/supabase/client.server");
+      supabaseAdminClient = adminModule.supabaseAdmin;
+      const managed = await supabaseAdminClient.from("managed_content")
         .select("metadata, content, updated_at, status")
         .eq("kind", "study")
         .eq("slug", data.slug)
@@ -162,7 +164,8 @@ export const getStudyContent = createServerFn({ method: "POST" })
     const content = chapterStudy
       ? await generateChapterStudy(chapterStudy.book.name, chapterStudy.chapter, chapterStudy.book.category)
       : await generateStudy(study.title, study.reference, study.summary, study.category, study.depth);
-    const { error } = await supabaseAdmin
+    if (!supabaseAdminClient) throw new Error("Supabase admin client unavailable");
+    const { error } = await supabaseAdminClient
       .from("generated_content")
       .upsert({ kind: "study", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });
     if (error) console.error("study cache failed", error.message);
