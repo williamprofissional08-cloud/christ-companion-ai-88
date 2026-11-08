@@ -67,11 +67,12 @@ export async function enforceAiRateLimit(
       "Limite de uso excedido. Tente novamente após o intervalo indicado.",
       {
         status: 429,
-      headers: {
-        "Cache-Control": "no-store",
-        "Retry-After": String(retryAfter),
+        headers: {
+          "Cache-Control": "no-store",
+          "Retry-After": String(retryAfter),
+        },
       },
-    });
+    );
   } catch {
     console.error("AI rate limit request failed");
     return new Response("Proteção de uso temporariamente indisponível", {

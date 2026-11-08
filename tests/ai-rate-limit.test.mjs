@@ -52,7 +52,7 @@ test("rate limit denial returns 429 and Retry-After", async () => {
   assert.equal(response.headers.get("cache-control"), "no-store");
 });
 
-test("rate limiter fails closed when the database reports an error", async () => {
+test("rate limiter fails closed on database errors", async () => {
   const client = {
     rpc: async () => ({ data: null, error: new Error("database unavailable") }),
   };
@@ -62,7 +62,7 @@ test("rate limiter fails closed when the database reports an error", async () =>
   assert.equal(response.status, 503);
 });
 
-test("rate limiter fails closed when the RPC response is malformed", async () => {
+test("rate limiter fails closed on invalid RPC results", async () => {
   const client = {
     rpc: async () => ({ data: [], error: null }),
   };
@@ -72,7 +72,7 @@ test("rate limiter fails closed when the RPC response is malformed", async () =>
   assert.equal(response.status, 503);
 });
 
-test("limited JSON reader accepts a valid JSON body", async () => {
+test("JSON reader accepts valid JSON", async () => {
   const request = new Request("https://example.test/api", {
     method: "POST",
     headers: { "content-type": "application/json" },
@@ -85,7 +85,7 @@ test("limited JSON reader accepts a valid JSON body", async () => {
   assert.deepEqual(result.value, { message: "olá" });
 });
 
-test("limited JSON reader rejects malformed JSON", async () => {
+test("JSON reader rejects malformed JSON", async () => {
   const request = new Request("https://example.test/api", {
     method: "POST",
     body: "{invalid",
@@ -97,7 +97,7 @@ test("limited JSON reader rejects malformed JSON", async () => {
   assert.equal(result.response.status, 400);
 });
 
-test("limited JSON reader rejects declared oversized bodies", async () => {
+test("JSON reader rejects oversized declared bodies", async () => {
   const request = new Request("https://example.test/api", {
     method: "POST",
     headers: { "content-length": "101" },
@@ -110,7 +110,7 @@ test("limited JSON reader rejects declared oversized bodies", async () => {
   assert.equal(result.response.status, 413);
 });
 
-test("limited JSON reader rejects oversized streamed bodies without Content-Length", async () => {
+test("JSON reader rejects oversized streamed bodies", async () => {
   const stream = new ReadableStream({
     start(controller) {
       controller.enqueue(new TextEncoder().encode("12345"));
