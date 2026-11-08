@@ -20,6 +20,8 @@
 
 ## Expansão Gênesis ao Apocalipse
 
+- [ ] Acrescentar estudo aprofundado de Gênesis 2:1–25 no modelo de Gênesis 1, preservar URLs e validar leitura e continuidade
+
 - [ ] Adotar o modelo didático da apostila enviada na geração aprofundada e no estudo-modelo de Gênesis 1, preservando os conteúdos e a jornada existentes
 
 - [x] Fase 1 — Criar a arquitetura escalável de livros, capítulos, passagens, fontes, glossário, cultura e exercícios
