@@ -43,7 +43,7 @@ function PlanoDetalhe() {
   const managedPlan = managedPlans.find((item) => item.slug === slug);
   const metadata = managedPlan?.metadata as Record<string, unknown> | undefined;
   const legacyPlan = getPlan(slug);
-  const plan = managedPlan ? {
+  const plan = managedPlan?.status === "archived" ? undefined : managedPlan ? {
     slug,
     title: String(metadata?.title ?? legacyPlan?.title ?? slug),
     category: String(metadata?.category ?? legacyPlan?.category ?? "Oração"),
