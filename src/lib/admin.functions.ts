@@ -110,14 +110,18 @@ export const adminSetCourseStatus = createServerFn({ method: "POST" })
     return { ok: true };
   });
 
+/** Arquiva o curso para preservar módulos, aulas, respostas, progresso e certificados vinculados. */
 export const adminDeleteCourse = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    const { error } = await context.supabase.from("courses").delete().eq("id", data.id);
+    const { error } = await context.supabase
+      .from("courses")
+      .update({ status: "archived", published_at: null })
+      .eq("id", data.id);
     if (error) throw new Error(error.message);
-    return { ok: true };
+    return { ok: true, archived: true };
   });
 
 export const adminGetCourse = createServerFn({ method: "GET" })
@@ -195,14 +199,18 @@ export const adminSaveModule = createServerFn({ method: "POST" })
     return { id: created.id };
   });
 
+/** Arquiva o módulo sem apagar capítulos, aulas ou progresso associado. */
 export const adminDeleteModule = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    const { error } = await context.supabase.from("course_modules").delete().eq("id", data.id);
+    const { error } = await context.supabase
+      .from("course_modules")
+      .update({ status: "archived" })
+      .eq("id", data.id);
     if (error) throw new Error(error.message);
-    return { ok: true };
+    return { ok: true, archived: true };
   });
 
 export const adminSaveLesson = createServerFn({ method: "POST" })
@@ -242,14 +250,18 @@ export const adminSaveLesson = createServerFn({ method: "POST" })
     return { id: created.id };
   });
 
+/** Arquiva a aula para preservar conteúdo, respostas, exercícios e progresso dos alunos. */
 export const adminDeleteLesson = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
-    const { error } = await context.supabase.from("lessons").delete().eq("id", data.id);
+    const { error } = await context.supabase
+      .from("lessons")
+      .update({ status: "archived" })
+      .eq("id", data.id);
     if (error) throw new Error(error.message);
-    return { ok: true };
+    return { ok: true, archived: true };
   });
 
 /** Blocos de conteúdo da aula (abertura, ensino, aplicação, oração, desafio...). */
@@ -369,6 +381,19 @@ export const adminDeleteLessonQuestion = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
     await assertAdmin(context.supabase, context.userId);
+    // lesson_answers.question_id uses ON DELETE CASCADE. Never delete a question
+    // after students have answered it, or their answer history would be lost.
+    const { data: answers, error: answersError } = await context.supabase
+      .from("lesson_answers")
+      .select("id")
+      .eq("question_id", data.id)
+      .limit(1);
+    if (answersError) throw new Error(answersError.message);
+    if (answers?.length) {
+      throw new Error(
+        "Esta questão já possui respostas de alunos e não pode ser excluída. Mantenha-a para preservar o histórico.",
+      );
+    }
     const { error } = await context.supabase.from("lesson_questions").delete().eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
