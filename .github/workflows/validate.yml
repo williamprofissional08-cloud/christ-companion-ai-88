@@ -38,6 +38,11 @@ jobs:
         run: |
           npm run lint -- --rule 'prettier/prettier: off'
 
+      - name: Diagnose test formatting
+        run: |
+          npx prettier tests/ai-rate-limit.test.mjs > /tmp/ai-rate-limit.formatted.mjs
+          diff -u tests/ai-rate-limit.test.mjs /tmp/ai-rate-limit.formatted.mjs || true
+
       - name: Check formatting of hardened files
         run: >-
           npx prettier --check
