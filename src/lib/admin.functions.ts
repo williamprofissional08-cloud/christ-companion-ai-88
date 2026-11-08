@@ -654,15 +654,17 @@ export const getPublishedManagedCatalog = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ kind: managedKindSchema }).parse(input))
   .handler(async ({ data, context }) => {
-    const { data: rows, error } = await context.supabase
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const { data: rows, error } = await supabaseAdmin
       .from("managed_content")
-      .select("slug, metadata, content")
+      .select("slug, metadata, content, status")
       .eq("kind", data.kind)
-      .eq("status", "published");
+      .in("status", ["published", "archived"]);
     if (error) throw new Error(error.message);
     return (rows ?? []).map((row) => ({
       slug: row.slug,
-      metadata: managedMetadata(row.metadata),
-      content: row.content,
+      status: row.status,
+      metadata: row.status === "published" ? managedMetadata(row.metadata) : {},
+      content: row.status === "published" ? row.content : null,
     }));
   });
