@@ -100,8 +100,10 @@ export const getStudyContent = createServerFn({ method: "POST" })
     if (cached.data?.content) return cached.data.content as unknown as StudyContent;
 
     const { generateChapterStudy, generateStudy } = await import("./ai-content.server");
-    const content = "book" in study && "chapter" in study
-      ? await generateChapterStudy(study.book.name, study.chapter, study.book.category)
+    const { getChapterStudy } = await import("./content/bible-books");
+    const chapterStudy = getChapterStudy(data.slug);
+    const content = chapterStudy
+      ? await generateChapterStudy(chapterStudy.book.name, chapterStudy.chapter, chapterStudy.book.category)
       : await generateStudy(study.title, study.reference, study.summary, study.category, study.depth);
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { error } = await supabaseAdmin

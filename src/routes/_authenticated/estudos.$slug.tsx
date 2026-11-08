@@ -14,31 +14,37 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { getStudyContent } from "@/lib/ai.functions";
 import { addFavorite } from "@/lib/app.functions";
 import { getStudy } from "@/lib/content/studies";
-import { BIBLE_BOOKS, getChapterStudySlug } from "@/lib/content/bible-books";
+import { getBibleBook, getChapterStudy, getChapterStudySlug } from "@/lib/content/bible-books";
+import { CURATED_STUDIES } from "@/lib/content/curated-studies";
 
 export const Route = createFileRoute("/_authenticated/estudos/$slug")({
-  head: () => ({
+  head: ({ params }) => {
+    const study = getStudy(params.slug);
+    const title = `${study?.title ?? "Estudo bíblico"} — Caminhando com Cristo`;
+    const description = study?.summary ?? "Estudo fundamentado nas Escrituras, com contexto, referências e aplicação.";
+    return {
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { title: "Estudo bíblico — Caminhando com Cristo" },
+      { title },
       {
         name: "description",
-        content: "Contexto histórico, pontos principais, aplicação prática, perguntas e oração final.",
+        content: description,
       },
-      { property: "og:title", content: "Estudo bíblico" },
-      { property: "og:description", content: "Um estudo completo fundamentado nas Escrituras." },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
     ],
-  }),
+    };
+  },
   component: EstudoDetalhe,
 });
 
 function EstudoDetalhe() {
   const { slug } = Route.useParams();
   const study = getStudy(slug);
-  const chapterStudy = study && "book" in study && "chapter" in study
-    ? study
-    : slug === "genesis-1-criacao" ? { book: BIBLE_BOOKS[0], chapter: 1 } : null;
+  const genesis = getBibleBook("genesis");
+  const chapterStudy = getChapterStudy(slug)
+    ?? (slug === "genesis-1-criacao" && genesis ? { book: genesis, chapter: 1 } : null);
   const contentFn = useServerFn(getStudyContent);
   const favoriteFn = useServerFn(addFavorite);
   const checkpointFn = useServerFn(getStudyCheckpoint);
@@ -123,7 +129,7 @@ function EstudoDetalhe() {
         </div>
       ) : content.data ? (
         <>
-          {chapterStudy && slug !== "genesis-1-criacao" ? (
+          {chapterStudy && !CURATED_STUDIES[slug] ? (
             <p className="mb-4 rounded-lg border border-border/60 bg-muted/30 p-3 text-xs text-muted-foreground">
               Estudo de capítulo preparado com apoio de IA. Leia a passagem na Bíblia e confira as referências; interpretações e aplicações devem permanecer subordinadas ao texto bíblico.
             </p>

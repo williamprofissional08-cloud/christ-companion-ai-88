@@ -78,7 +78,7 @@ export function getChapterStudySlug(bookSlug: string, chapter: number) { return 
 
 export function getChapterStudy(slug: string) {
   const match = /^biblia-([a-z0-9-]+)-cap-(\d+)$/.exec(slug);
-  if (!match) return undefined;
+  if (!match?.[1] || !match[2]) return undefined;
   const book = getBibleBook(match[1]);
   const chapter = Number(match[2]);
   if (!book || !Number.isInteger(chapter) || chapter < 1 || chapter > book.chapters) return undefined;
