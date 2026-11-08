@@ -103,20 +103,39 @@ export const getStudyContent = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ slug: z.string().max(80) }).parse(input))
   .handler(async ({ data, context }): Promise<StudyContent> => {
-    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { getStudy } = await import("./content/studies");
+    const { CURATED_STUDIES } = await import("./content/curated-studies");
     const legacyStudy = getStudy(data.slug);
-    const managed = await supabaseAdmin.from("managed_content")
-      .select("metadata, content, updated_at, status")
-      .eq("kind", "study")
-      .eq("slug", data.slug)
-      .maybeSingle();
-    if (managed.error) throw new Error(managed.error.message);
-    if (managed.data?.status === "archived") throw new Error("Este estudo foi arquivado.");
-    const published = managed.data?.status === "published";
-    if (published && managed.data?.content) return managed.data.content as unknown as StudyContent;
-    const metadata = published && managed.data?.metadata && typeof managed.data.metadata === "object"
-      ? managed.data.metadata as Record<string, unknown> : {};
+    const curated = CURATED_STUDIES[data.slug];
+
+    // Curated studies are the reliable local source. A missing admin secret,
+    // unavailable database, or missing managed_content table must not hide them.
+    let managedData: {
+      metadata: unknown;
+      content: unknown;
+      updated_at: string;
+      status: string;
+    } | null = null;
+    try {
+      const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+      const managed = await supabaseAdmin.from("managed_content")
+        .select("metadata, content, updated_at, status")
+        .eq("kind", "study")
+        .eq("slug", data.slug)
+        .maybeSingle();
+      if (managed.error) throw managed.error;
+      managedData = managed.data;
+    } catch (error) {
+      console.error("managed study lookup failed; checking local study content", error);
+      if (curated) return curated;
+      throw new Error("Não foi possível consultar o conteúdo deste estudo.");
+    }
+
+    if (managedData?.status === "archived") throw new Error("Este estudo foi arquivado.");
+    const published = managedData?.status === "published";
+    if (published && managedData?.content) return managedData.content as unknown as StudyContent;
+    const metadata = published && managedData?.metadata && typeof managedData.metadata === "object"
+      ? managedData.metadata as Record<string, unknown> : {};
     const study = published ? {
       slug: data.slug,
       title: String(metadata["title"] ?? legacyStudy?.title ?? data.slug),
@@ -126,10 +145,8 @@ export const getStudyContent = createServerFn({ method: "POST" })
       depth: (metadata["depth"] === "deep" ? "deep" : "simple") as "simple" | "deep",
     } : legacyStudy;
     if (!study) throw new Error("Estudo não encontrado");
-    const { CURATED_STUDIES } = await import("./content/curated-studies");
-    const curated = CURATED_STUDIES[data.slug];
-    if (curated && (!published || !managed.data?.content)) return curated;
-    const cacheKey = published ? `${data.slug}:v${new Date(managed.data!.updated_at).getTime()}` : data.slug;
+    if (curated && (!published || !managedData?.content)) return curated;
+    const cacheKey = published ? `${data.slug}:v${new Date(managedData!.updated_at).getTime()}` : data.slug;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
