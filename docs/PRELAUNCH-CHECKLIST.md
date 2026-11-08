@@ -4,11 +4,11 @@ Este documento é o portão operacional para o piloto controlado. Ele não signi
 
 ## Validação automatizada
 
-- [x] `npm ci` concluiu com o `package-lock.json` versionado na CI da PR #8.
+- [x] `npm ci` concluiu com o `package-lock.json` versionado na CI da PR #9 e na CI pós-merge da main.
 - [x] ESLint concluiu sem erros; a execução registrou 13 avisos preexistentes de Fast Refresh.
 - [x] Os arquivos de código explicitamente listados no workflow passam na verificação Prettier; o arquivo de tipos gerado e a migration SQL exigem revisão própria.
-- [x] `npx tsc --noEmit` concluiu sem erros na CI da PR #8.
-- [x] `npm run build` concluiu em produção na CI da PR #8.
+- [x] `npx tsc --noEmit` concluiu sem erros na CI da PR #9 e na CI pós-merge da main.
+- [x] `npm run build` concluiu em produção na CI da PR #9 e na CI pós-merge da main.
 - [x] Existem testes automatizados de unidade para rate limiting e leitura limitada de JSON; testes de integração dos fluxos críticos ainda pendentes.
 - [ ] Nenhuma variável secreta é exposta ao navegador ou commitada.
 
@@ -27,7 +27,7 @@ Não aplicar migrations automaticamente a partir deste checklist. Antes do pilot
 - [ ] Fazer backup e plano de reversão antes de qualquer migration.
 - [ ] Executar migrations somente após revisão e aprovação explícitas.
 
-A PR #4 contém duas migrations novas. Elas são aditivas e a enum `public.content_status` já existe na linha principal, mas a PR está divergente/conflitante. Não aplicar suas migrations até que o código e a sequência sejam rebaseados, testados e aprovados.
+A PR #4 foi mesclada na `main` em 2026-11-08 e suas migrations aditivas estão versionadas no repositório. Isso não comprova que foram aplicadas no banco. Antes do piloto, comparar o histórico real do Supabase com todas as migrations da `main`, especialmente `20261107000100_admin_question_answer_guard.sql` e `20261107000200_managed_biblical_content.sql`.
 
 ## Rotas de API e IA
 
@@ -57,4 +57,4 @@ A PR #4 contém duas migrations novas. Elas são aditivas e a enum `public.conte
 
 ## Regra de liberação
 
-Não promover a PR, mesclar, aplicar migrations ou publicar enquanto os testes de CI, Supabase/RLS, autenticação, privacidade e fluxos críticos não tiverem evidências registradas e aprovação do responsável.
+A CI da `main` está verde no commit `e7ebde73227bb1cfc16701cc344880dea86143de`. Isso valida instalação, lint, formatação dos arquivos listados, build, TypeScript e 17 testes unitários. Não libera deploy: Supabase/RLS, autenticação ponta a ponta, privacidade e fluxos críticos ainda precisam de evidências em staging e aprovação do responsável.
