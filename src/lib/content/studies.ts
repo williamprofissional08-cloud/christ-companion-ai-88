@@ -1,3 +1,5 @@
+import { getChapterStudy } from "./bible-books";
+
 export type Study = {
   slug: string;
   title: string;
@@ -87,5 +89,5 @@ export const STUDIES: Study[] = [
 ];
 
 export function getStudy(slug: string) {
-  return STUDIES.find((s) => s.slug === slug);
+  return STUDIES.find((s) => s.slug === slug) ?? getChapterStudy(slug);
 }
