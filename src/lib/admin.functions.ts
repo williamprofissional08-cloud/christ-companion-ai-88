@@ -3,6 +3,7 @@ import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { z } from "zod";
 import { assertAdmin, isAdminUser } from "./school/admin-guard";
 import type { AdminCourse, AdminLesson, AdminModule, AdminStats } from "./school/admin-types";
+import { deduplicateStudies } from "./content/studies";
 
 const statusEnum = z.enum(["draft", "published", "archived"]);
 const levelEnum = z.enum(["iniciante", "intermediario", "avancado", "profundo"]);
@@ -614,7 +615,10 @@ export const adminListManagedContent = createServerFn({ method: "GET" })
         content: row.content,
       });
     }
-    return [...items.values()].sort((a, b) =>
+    const all = [...items.values()];
+    const studies = deduplicateStudies(all.filter((item) => item.kind === "study"));
+    const plans = all.filter((item) => item.kind === "prayer_plan");
+    return [...studies, ...plans].sort((a, b) =>
       a.kind.localeCompare(b.kind) || a.title.localeCompare(b.title, "pt-BR"),
     );
   });
