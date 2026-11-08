@@ -183,9 +183,9 @@ Inclua de 4 a 6 pontos-chave, 5 referências cruzadas e 4 perguntas. Quando houv
 }
 
 /** Produces a chapter-scoped study using the same editorial depth as the curated Genesis 1 model. */
-export function generateChapterStudy(bookName: string, chapter: number, category: string) {
+export async function generateChapterStudy(bookName: string, chapter: number, category: string) {
   const reference = `${bookName} ${chapter}`;
-  return generateJson<StudyContent>(
+  const content = await generateJson<StudyContent>(
     `Crie uma apostila aprofundada de formação bíblica sobre o capítulo inteiro "${reference}" (seção canônica: ${category}), em português do Brasil.
 O estudo precisa tratar SOMENTE deste capítulo, não fazer panorama do livro no lugar da exposição. O leitor deverá abrir e ler o capítulo na Bíblia antes do estudo. Não invente o texto dos versículos, não reproduza longos trechos de traduções protegidas e não atribua palavras a um versículo sem segurança. Use referências completas e verificáveis.
 Siga a profundidade editorial do estudo-modelo de Gênesis 1, mas adapte a estrutura ao gênero e ao conteúdo real do capítulo. Não force temas de criação, profecia, aliança ou Cristo onde não houver ligação textual/canônica legítima.
@@ -213,6 +213,11 @@ Responda SOMENTE em JSON válido:
 A seção de exposição deve cobrir todas as perícopes do capítulo. Não use títulos vazios, repetições artificiais ou texto genérico que poderia servir igualmente para qualquer capítulo.`,
     ["intro", "historicalContext", "application", "crossReferences", "prayer"],
   );
+  const sections = content.sections ?? [];
+  if (sections.length < 12 || sections.some((section) => !section.title?.trim() || !section.body?.trim())) {
+    throw new Error("O estudo deste capítulo ficou incompleto. Tente novamente para gerar a apostila completa.");
+  }
+  return content;
 }
 
 export function generateSearch(query: string) {
