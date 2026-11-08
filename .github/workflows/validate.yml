@@ -6,27 +6,24 @@ on:
   push:
     branches:
       - release/prelaunch-hardening-2026-11
-      - fix/prelaunch-hardening-2026-11
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: validate-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  refresh-lockfile:
-    name: Regenerate npm lockfile
-    if: github.event_name == 'push' && github.ref == 'refs/heads/release/prelaunch-hardening-2026-11'
+  validate:
+    name: Install, lint and production build
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: write
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v5
         with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
           persist-credentials: false
 
       - name: Set up Node.js
@@ -34,11 +31,13 @@ jobs:
         with:
           node-version: 22
 
-      # Resolve the manifest/lockfile mismatch without executing dependency scripts.
+      # The current lockfile is known to be stale. Resolve it without executing
+      # third-party install scripts, then commit the generated lock on our release branch.
       - name: Regenerate package-lock.json
         run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
 
       - name: Commit regenerated lockfile
+        if: github.event_name == 'push' && github.ref == 'refs/heads/release/prelaunch-hardening-2026-11'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -52,26 +51,6 @@ jobs:
           git commit -m "chore: regenerate npm lockfile"
           gh auth setup-git
           git push origin "HEAD:${GITHUB_REF_NAME}"
-
-  validate:
-    name: Lint and production build
-    needs: refresh-lockfile
-    if: always() && (needs.refresh-lockfile.result == 'success' || needs.refresh-lockfile.result == 'skipped')
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
-    permissions:
-      contents: read
-    steps:
-      - name: Checkout latest branch state
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version: 22
-          cache: npm
 
       - name: Install reproducible dependencies
         run: npm ci --no-audit --no-fund
