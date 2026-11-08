@@ -566,7 +566,7 @@ function normalizeManagedIdentity(value: string): string {
     .toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
-function managedMetadata(value: unknown): Record<string, unknown> {
+function managedMetadata(value: unknown): Record<string, JsonValue> {
   return value && typeof value === "object" && !Array.isArray(value)
     ? value as Record<string, JsonValue>
     : {};
