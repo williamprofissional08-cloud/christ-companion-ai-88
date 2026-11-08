@@ -14,6 +14,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { getStudyContent } from "@/lib/ai.functions";
 import { addFavorite } from "@/lib/app.functions";
 import { getStudy } from "@/lib/content/studies";
+import { getChapterStudySlug } from "@/lib/content/bible-books";
 
 export const Route = createFileRoute("/_authenticated/estudos/$slug")({
   head: () => ({
@@ -35,6 +36,7 @@ export const Route = createFileRoute("/_authenticated/estudos/$slug")({
 function EstudoDetalhe() {
   const { slug } = Route.useParams();
   const study = getStudy(slug);
+  const chapterStudy = study && "book" in study && "chapter" in study ? study : null;
   const contentFn = useServerFn(getStudyContent);
   const favoriteFn = useServerFn(addFavorite);
   const checkpointFn = useServerFn(getStudyCheckpoint);
@@ -86,6 +88,20 @@ function EstudoDetalhe() {
             <ArrowLeft className="size-4" /> Estudos
           </Link>
         </Button>
+        {chapterStudy && chapterStudy.chapter > 1 ? (
+          <Button asChild variant="outline" size="sm">
+            <Link to="/estudos/$slug" params={{ slug: getChapterStudySlug(chapterStudy.book.slug, chapterStudy.chapter - 1) }}>
+              Capítulo anterior
+            </Link>
+          </Button>
+        ) : null}
+        {chapterStudy && chapterStudy.chapter < chapterStudy.book.chapters ? (
+          <Button asChild variant="outline" size="sm">
+            <Link to="/estudos/$slug" params={{ slug: getChapterStudySlug(chapterStudy.book.slug, chapterStudy.chapter + 1) }}>
+              Próximo capítulo
+            </Link>
+          </Button>
+        ) : null}
         <Button
           variant="outline"
           size="sm"
@@ -104,6 +120,12 @@ function EstudoDetalhe() {
           ))}
         </div>
       ) : content.data ? (
+        <>
+          {chapterStudy ? (
+            <p className="mb-4 rounded-lg border border-border/60 bg-muted/30 p-3 text-xs text-muted-foreground">
+              Estudo de capítulo preparado com apoio de IA. Leia a passagem na Bíblia e confira as referências; interpretações e aplicações devem permanecer subordinadas ao texto bíblico.
+            </p>
+          ) : null}
         <StudyReader
           key={slug}
           title={study.title}
@@ -117,6 +139,7 @@ function EstudoDetalhe() {
           } : {}}
           onCheckpoint={persistCheckpoint}
         />
+        </>
       ) : (
         <p className="text-sm text-muted-foreground">
           Não conseguimos gerar este estudo agora. Tente novamente em instantes.
