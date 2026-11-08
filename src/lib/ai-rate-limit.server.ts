@@ -63,8 +63,10 @@ export async function enforceAiRateLimit(
       ? Math.max(1, Math.ceil(Number(row.retry_after_seconds)))
       : policy.windowSeconds;
 
-    return new Response("Limite de uso excedido. Tente novamente após o intervalo indicado.", {
-      status: 429,
+    return new Response(
+      "Limite de uso excedido. Tente novamente após o intervalo indicado.",
+      {
+        status: 429,
       headers: {
         "Cache-Control": "no-store",
         "Retry-After": String(retryAfter),

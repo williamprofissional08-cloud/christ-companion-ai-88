@@ -9,7 +9,7 @@ create table if not exists public.ai_rate_limits (
 );
 
 alter table public.ai_rate_limits enable row level security;
-revoke all on table public.ai_rate_limits from anon, authenticated;
+revoke all on table public.ai_rate_limits from public, anon, authenticated;
 
 create or replace function public.consume_ai_rate_limit(
   p_endpoint text,
@@ -35,7 +35,10 @@ begin
     raise exception 'Authentication required' using errcode = '28000';
   end if;
 
-  if p_endpoint not in ('chat', 'professor_ia', 'professor_tts')
+  if p_endpoint is null
+     or p_limit is null
+     or p_window_seconds is null
+     or p_endpoint not in ('chat', 'professor_ia', 'professor_tts')
      or p_limit < 1 or p_limit > 100
      or p_window_seconds < 60 or p_window_seconds > 3600 then
     raise exception 'Invalid rate limit parameters' using errcode = '22023';
