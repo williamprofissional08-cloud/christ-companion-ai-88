@@ -36,7 +36,7 @@ A PR #4 contém duas migrations novas. Elas são aditivas e a enum `public.conte
 - [ ] Professor TTS: sem token retorna 401; corpo acima de 16 KiB é rejeitado; texto limitado a 4.000 caracteres; timeout do provedor e resposta de áudio sem cache.
 - [ ] Testar os três endpoints com entradas inválidas, limites excedidos, token ausente, token expirado, usuário sem acesso e falhas 402/403/429 do provedor.
 - [x] Implementar rate limiting persistente por usuário e endpoint para Chat, Professor IA e Professor TTS, com limites fixos no banco (20, 15 e 8 requisições por 10 minutos); migration 002 versionada, ainda pendente de aplicação e validação em staging.
-- [x] Adicionar testes automatizados de unidade para rate limiting e leitura limitada de JSON; [ ] completar testes de integração para autenticação, validação de mensagens, isolamento de threads e autorização do Professor IA.
+- [x] 12 testes automatizados de unidade para políticas de limite, falhas da RPC e leitura limitada de JSON; [ ] completar testes de integração para autenticação, validação de mensagens, isolamento de threads e autorização do Professor IA.
 
 ## Fluxos funcionais para o piloto
 
