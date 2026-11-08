@@ -43,7 +43,7 @@ function EstudoDetalhe() {
   const managedStudy = managedStudies.find((item) => item.slug === slug);
   const metadata = managedStudy?.metadata as Record<string, unknown> | undefined;
   const legacyStudy = getStudy(slug);
-  const study = managedStudy ? {
+  const study = managedStudy?.status === "archived" ? undefined : managedStudy ? {
     slug,
     title: String(metadata?.title ?? legacyStudy?.title ?? slug),
     category: String(metadata?.category ?? legacyStudy?.category ?? "Estudos bíblicos"),
