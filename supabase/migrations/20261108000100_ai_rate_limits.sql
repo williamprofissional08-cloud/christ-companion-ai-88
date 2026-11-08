@@ -11,11 +11,7 @@ create table if not exists public.ai_rate_limits (
 alter table public.ai_rate_limits enable row level security;
 revoke all on table public.ai_rate_limits from public, anon, authenticated;
 
-create or replace function public.consume_ai_rate_limit(
-  p_endpoint text,
-  p_limit integer,
-  p_window_seconds integer
-)
+create or replace function public.consume_ai_rate_limit(p_endpoint text)
 returns table (
   allowed boolean,
   retry_after_seconds integer
@@ -29,23 +25,30 @@ declare
   v_now timestamptz := clock_timestamp();
   v_window_start timestamptz;
   v_request_count integer;
+  v_limit integer;
+  v_window_seconds integer;
 begin
   v_user_id := auth.uid();
   if v_user_id is null then
     raise exception 'Authentication required' using errcode = '28000';
   end if;
 
-  if p_endpoint is null
-     or p_limit is null
-     or p_window_seconds is null
-     or p_endpoint not in ('chat', 'professor_ia', 'professor_tts')
-     or p_limit < 1 or p_limit > 100
-     or p_window_seconds < 60 or p_window_seconds > 3600 then
-    raise exception 'Invalid rate limit parameters' using errcode = '22023';
-  end if;
+  case p_endpoint
+    when 'chat' then
+      v_limit := 20;
+      v_window_seconds := 600;
+    when 'professor_ia' then
+      v_limit := 15;
+      v_window_seconds := 600;
+    when 'professor_tts' then
+      v_limit := 8;
+      v_window_seconds := 600;
+    else
+      raise exception 'Invalid rate limit endpoint' using errcode = '22023';
+  end case;
 
   v_window_start := to_timestamp(
-    floor(extract(epoch from v_now) / p_window_seconds) * p_window_seconds
+    floor(extract(epoch from v_now) / v_window_seconds) * v_window_seconds
   );
 
   -- Keep only the active window rows for this user to bound table growth.
@@ -62,15 +65,15 @@ begin
 
   return query
   select
-    v_request_count <= p_limit,
+    v_request_count <= v_limit,
     greatest(
       1,
       ceil(extract(epoch from (
-        v_window_start + make_interval(secs => p_window_seconds) - v_now
+        v_window_start + make_interval(secs => v_window_seconds) - v_now
       )))::integer
     );
 end;
 $$;
 
-revoke all on function public.consume_ai_rate_limit(text, integer, integer) from public, anon;
-grant execute on function public.consume_ai_rate_limit(text, integer, integer) to authenticated;
+revoke all on function public.consume_ai_rate_limit(text) from public, anon;
+grant execute on function public.consume_ai_rate_limit(text) to authenticated;
