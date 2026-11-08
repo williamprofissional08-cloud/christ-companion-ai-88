@@ -33,7 +33,7 @@ A PR #4 foi mesclada na `main` em 2026-11-08 e suas migrations aditivas estão v
 
 - [ ] Chat: sem token retorna 401; JSON inválido 400; corpo acima de 256 KiB (inclusive sem `Content-Length`) 413; até 40 mensagens; até 24.000 caracteres; thread de outro usuário nunca pode ser lida nem alterada.
 - [ ] Professor IA: sem token retorna 401; corpo acima de 256 KiB é rejeitado; até 40 mensagens e 24.000 caracteres; a aula precisa estar disponível ao usuário.
-- [ ] Professor TTS: sem token retorna 401; corpo acima de 16 KiB é rejeitado; texto limitado a 4.000 caracteres; timeout do provedor; resposta MP3 validada e limitada a 8 MiB, sem cache.
+- [ ] Professor TTS: sem token retorna 401; corpo acima de 16 KiB é rejeitado; texto limitado a 3.500 caracteres; timeout do provedor; resposta MP3 validada e limitada a 8 MiB, sem cache.
 - [ ] Testar os três endpoints com entradas inválidas, limites excedidos, token ausente, token expirado, usuário sem acesso e falhas 402/403/429 do provedor.
 - [x] Implementar rate limiting persistente por usuário e endpoint para Chat, Professor IA e Professor TTS, com limites fixos no banco (20, 15 e 8 requisições por 10 minutos); migration 002 versionada, ainda pendente de aplicação e validação em staging.
 - [x] 17 testes automatizados de unidade para políticas de limite, falhas da RPC, leitura limitada de JSON e resposta de áudio TTS; [ ] completar testes de integração para autenticação, validação de mensagens, isolamento de threads e autorização do Professor IA.
@@ -57,4 +57,4 @@ A PR #4 foi mesclada na `main` em 2026-11-08 e suas migrations aditivas estão v
 
 ## Regra de liberação
 
-A CI da `main` está verde no commit `e7ebde73227bb1cfc16701cc344880dea86143de`. Isso valida instalação, lint, formatação dos arquivos listados, build, TypeScript e 17 testes unitários. Não libera deploy: Supabase/RLS, autenticação ponta a ponta, privacidade e fluxos críticos ainda precisam de evidências em staging e aprovação do responsável.
+A CI da `main` deve ser conferida pelo SHA da execução mais recente; este checklist não substitui a verificação do status atual no GitHub. Isso valida instalação, lint, formatação dos arquivos listados, build, TypeScript e 17 testes unitários. Não libera deploy: Supabase/RLS, autenticação ponta a ponta, privacidade e fluxos críticos ainda precisam de evidências em staging e aprovação do responsável.
