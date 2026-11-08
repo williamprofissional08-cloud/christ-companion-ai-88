@@ -99,8 +99,10 @@ export const getStudyContent = createServerFn({ method: "POST" })
       .maybeSingle();
     if (cached.data?.content) return cached.data.content as unknown as StudyContent;
 
-    const { generateStudy } = await import("./ai-content.server");
-    const content = await generateStudy(study.title, study.reference, study.summary, study.category, study.depth);
+    const { generateChapterStudy, generateStudy } = await import("./ai-content.server");
+    const content = "book" in study && "chapter" in study
+      ? await generateChapterStudy(study.book.name, study.chapter, study.book.category)
+      : await generateStudy(study.title, study.reference, study.summary, study.category, study.depth);
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { error } = await supabaseAdmin
       .from("generated_content")
