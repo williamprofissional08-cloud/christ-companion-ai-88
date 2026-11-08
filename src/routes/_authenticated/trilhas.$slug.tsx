@@ -66,7 +66,7 @@ function TrilhaPage() {
 
   useEffect(() => {
     setNote(notes[String(active)] ?? "");
-  }, [active, progress.data]);
+  }, [active, notes]);
 
   const mutation = useMutation({
     mutationFn: (input: { done: boolean; saveNote?: boolean }) =>

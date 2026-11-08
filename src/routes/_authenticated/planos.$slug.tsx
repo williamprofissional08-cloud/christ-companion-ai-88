@@ -58,7 +58,7 @@ function PlanoDetalhe() {
   const notes = (progress.data?.notes ?? {}) as Record<string, string>;
   useEffect(() => {
     setNote(notes[String(day)] ?? "");
-  }, [day, progress.data]);
+  }, [day, notes]);
 
   const save = useMutation({
     mutationFn: (vars: { done: boolean; note?: string }) =>
