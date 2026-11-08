@@ -7,7 +7,9 @@ Este documento é o portão operacional para o piloto controlado. Ele não signi
 - [ ] `npm ci` conclui com o `package-lock.json` versionado.
 - [ ] ESLint conclui sem erros nas regras semânticas.
 - [ ] Os arquivos alterados passam na verificação Prettier.
+- [ ] `npx tsc --noEmit` conclui sem erros.
 - [ ] `npm run build` conclui em produção.
+- [ ] O repositório possui testes automatizados executáveis para os fluxos críticos.
 - [ ] Nenhuma variável secreta é exposta ao navegador ou commitada.
 
 A workflow `.github/workflows/validate.yml` regenera o lockfile na branch de preparação sem executar scripts de dependências e depois instala de forma reproduzível.
@@ -27,16 +29,14 @@ Não aplicar migrations automaticamente a partir deste checklist. Antes do pilot
 
 A PR #4 contém duas migrations novas. Elas são aditivas e a enum `public.content_status` já existe na linha principal, mas a PR está divergente/conflitante. Não aplicar suas migrations até que o código e a sequência sejam rebaseados, testados e aprovados.
 
-## API de chat
+## Rotas de API e IA
 
-- [ ] Sem token: responder 401.
-- [ ] JSON inválido: responder 400.
-- [ ] Corpo acima de 256 KiB, inclusive sem `Content-Length`: responder 413.
-- [ ] Mais de 40 mensagens ou formato inválido: responder 400.
-- [ ] Texto acima de 24.000 caracteres: responder 413.
-- [ ] Thread de outro usuário: não permitir leitura nem gravação.
-- [ ] Usuário válido e thread própria: transmitir resposta e persistir a conversa.
-- [ ] Adicionar rate limiting persistente por usuário antes da abertura pública; não considerar o 429 do provedor de IA como substituto de proteção contra abuso.
+- [ ] Chat: sem token retorna 401; JSON inválido 400; corpo acima de 256 KiB (inclusive sem `Content-Length`) 413; até 40 mensagens; até 24.000 caracteres; thread de outro usuário nunca pode ser lida nem alterada.
+- [ ] Professor IA: sem token retorna 401; corpo acima de 256 KiB é rejeitado; até 40 mensagens e 24.000 caracteres; a aula precisa estar disponível ao usuário.
+- [ ] Professor TTS: sem token retorna 401; corpo acima de 16 KiB é rejeitado; texto limitado a 4.000 caracteres; timeout do provedor e resposta de áudio sem cache.
+- [ ] Testar os três endpoints com entradas inválidas, limites excedidos, token ausente, token expirado, usuário sem acesso e falhas 402/403/429 do provedor.
+- [ ] Implementar rate limiting persistente por usuário e por endpoint antes da abertura pública; o 429 do provedor de IA não substitui proteção contra abuso.
+- [ ] Criar testes automatizados de unidade/integração para leitura limitada de JSON, validação de mensagens, isolamento de threads e autorização do Professor IA.
 
 ## Fluxos funcionais para o piloto
 
