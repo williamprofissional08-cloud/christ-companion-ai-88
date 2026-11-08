@@ -9,7 +9,7 @@ Este documento é o portão operacional para o piloto controlado. Ele não signi
 - [ ] Os arquivos alterados passam na verificação Prettier.
 - [ ] `npx tsc --noEmit` conclui sem erros.
 - [ ] `npm run build` conclui em produção.
-- [ ] O repositório possui testes automatizados executáveis para os fluxos críticos.
+- [x] Existem testes automatizados de unidade para rate limiting e leitura limitada de JSON; testes de integração dos fluxos críticos ainda pendentes.
 - [ ] Nenhuma variável secreta é exposta ao navegador ou commitada.
 
 A workflow `.github/workflows/validate.yml` regenera o lockfile na branch de preparação sem executar scripts de dependências e depois instala de forma reproduzível.

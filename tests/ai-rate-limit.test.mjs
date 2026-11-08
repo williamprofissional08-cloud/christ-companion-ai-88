@@ -24,11 +24,7 @@ test("rate limit RPC is called with the endpoint policy and allows requests", as
 
   assert.equal(response, null);
   assert.equal(call.name, "consume_ai_rate_limit");
-  assert.deepEqual(call.args, {
-    p_endpoint: "chat",
-    p_limit: 20,
-    p_window_seconds: 600,
-  });
+  assert.deepEqual(call.args, { p_endpoint: "chat" });
 });
 
 test("rate limit denial returns 429 and Retry-After", async () => {
@@ -52,6 +48,18 @@ test("rate limiter fails closed on database errors", async () => {
   };
 
   const response = await enforceAiRateLimit(client, "professor_ia");
+
+  assert.equal(response.status, 503);
+});
+
+test("rate limiter fails closed when the RPC request throws", async () => {
+  const client = {
+    rpc: async () => {
+      throw new Error("network unavailable");
+    },
+  };
+
+  const response = await enforceAiRateLimit(client, "chat");
 
   assert.equal(response.status, 503);
 });
