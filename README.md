@@ -606,3 +606,8 @@ O texto bíblico integral permanece desativado enquanto não houver licença/ter
 ### TTS
 
 O Professor IA prioriza a voz nativa do dispositivo via Web Speech API quando existe uma voz compatível com português. Quando a API ou uma voz compatível não estiver disponível, o aplicativo mantém o gateway TTS existente como fallback. Nenhuma chave privada é exposta ao navegador.
+
+
+## Preparação para lançamento
+
+Consulte o [checklist de prontidão](docs/PRELAUNCH-CHECKLIST.md) antes do piloto. Ele registra as validações obrigatórias de CI, Supabase/RLS, autenticação, privacidade, IA e TTS; itens não verificados não devem ser considerados concluídos.
