@@ -712,7 +712,7 @@ function AdminLessonEditor() {
                     className="ml-auto"
                     aria-label="Remover questão"
                     onClick={() => {
-                      if (window.confirm("Remover esta questão?")) {
+                      if (window.confirm("Remover esta questão? Se alunos já responderam, a exclusão será bloqueada para preservar o histórico de respostas.")) {
                         questionDelete.mutate(question.id);
                       }
                     }}
