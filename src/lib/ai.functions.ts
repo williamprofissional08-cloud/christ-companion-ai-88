@@ -60,8 +60,25 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
   )
   .handler(async ({ data, context }): Promise<PlanDayContent> => {
     const { getPlan } = await import("./content/plans");
-    const plan = getPlan(data.slug);
+    const legacyPlan = getPlan(data.slug);
+    const managed = await context.supabase.from("managed_content")
+      .select("metadata")
+      .eq("kind", "prayer_plan")
+      .eq("slug", data.slug)
+      .eq("status", "published")
+      .maybeSingle();
+    if (managed.error) throw new Error(managed.error.message);
+    const metadata = managed.data?.metadata && typeof managed.data.metadata === "object"
+      ? managed.data.metadata as Record<string, unknown> : {};
+    const plan = managed.data ? {
+      slug: data.slug,
+      title: String(metadata.title ?? legacyPlan?.title ?? data.slug),
+      summary: String(metadata.summary ?? legacyPlan?.summary ?? ""),
+      keyVerse: String(metadata.keyVerse ?? legacyPlan?.keyVerse ?? ""),
+      days: Number(metadata.days ?? legacyPlan?.days ?? 0),
+    } : legacyPlan;
     if (!plan) throw new Error("Plano não encontrado");
+    if (data.day > plan.days) throw new Error("Dia fora da duração deste plano");
     const cacheKey = `${data.slug}:${data.day}`;
     const cached = await context.supabase
       .from("generated_content")
@@ -86,11 +103,29 @@ export const getStudyContent = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => z.object({ slug: z.string().max(80) }).parse(input))
   .handler(async ({ data, context }): Promise<StudyContent> => {
     const { getStudy } = await import("./content/studies");
-    const study = getStudy(data.slug);
+    const legacyStudy = getStudy(data.slug);
+    const managed = await context.supabase.from("managed_content")
+      .select("metadata, content")
+      .eq("kind", "study")
+      .eq("slug", data.slug)
+      .eq("status", "published")
+      .maybeSingle();
+    if (managed.error) throw new Error(managed.error.message);
+    if (managed.data?.content) return managed.data.content as unknown as StudyContent;
+    const metadata = managed.data?.metadata && typeof managed.data.metadata === "object"
+      ? managed.data.metadata as Record<string, unknown> : {};
+    const study = managed.data ? {
+      slug: data.slug,
+      title: String(metadata.title ?? legacyStudy?.title ?? data.slug),
+      category: String(metadata.category ?? legacyStudy?.category ?? "Estudos bíblicos"),
+      reference: String(metadata.reference ?? legacyStudy?.reference ?? ""),
+      summary: String(metadata.summary ?? legacyStudy?.summary ?? ""),
+      depth: (metadata.depth === "deep" ? "deep" : "simple") as "simple" | "deep",
+    } : legacyStudy;
     if (!study) throw new Error("Estudo não encontrado");
     const { CURATED_STUDIES } = await import("./content/curated-studies");
     const curated = CURATED_STUDIES[data.slug];
-    if (curated) return curated;
+    if (curated && !managed.data) return curated;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
