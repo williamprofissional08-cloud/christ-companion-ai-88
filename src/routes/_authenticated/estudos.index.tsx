@@ -6,7 +6,7 @@ import { AppShell } from "@/components/AppShell";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
+import { deduplicateStudies, STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
 import { getPublishedManagedCatalog } from "@/lib/admin.functions";
 
 export const Route = createFileRoute("/_authenticated/estudos/")({
@@ -50,7 +50,7 @@ function EstudosPage() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string | null>(null);
 
-  const studies = [...catalog.values()].filter((study) => {
+  const studies = deduplicateStudies([...catalog.values()]).filter((study) => {
     const matchesCategory = !category || study.category === category;
     const q = query.trim().toLowerCase();
     const matchesQuery =
