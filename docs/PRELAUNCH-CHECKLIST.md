@@ -4,15 +4,15 @@ Este documento é o portão operacional para o piloto controlado. Ele não signi
 
 ## Validação automatizada
 
-- [ ] `npm ci` conclui com o `package-lock.json` versionado.
-- [ ] ESLint conclui sem erros nas regras semânticas.
-- [ ] Os arquivos alterados passam na verificação Prettier.
-- [ ] `npx tsc --noEmit` conclui sem erros.
-- [ ] `npm run build` conclui em produção.
+- [x] `npm ci` concluiu com o `package-lock.json` versionado na CI da PR #8.
+- [x] ESLint concluiu sem erros; a execução registrou 13 avisos preexistentes de Fast Refresh.
+- [x] Os arquivos de código explicitamente listados no workflow passam na verificação Prettier; a migration SQL exige revisão própria.
+- [x] `npx tsc --noEmit` concluiu sem erros na CI da PR #8.
+- [x] `npm run build` concluiu em produção na CI da PR #8.
 - [x] Existem testes automatizados de unidade para rate limiting e leitura limitada de JSON; testes de integração dos fluxos críticos ainda pendentes.
 - [ ] Nenhuma variável secreta é exposta ao navegador ou commitada.
 
-A workflow `.github/workflows/validate.yml` regenera o lockfile na branch de preparação sem executar scripts de dependências e depois instala de forma reproduzível.
+A workflow `.github/workflows/validate.yml` instala as dependências com `npm ci` (sem regenerar o lockfile), executa ESLint, Prettier nos arquivos listados, TypeScript, testes e build de produção. A execução verde comprova o commit validado, não os testes de integração com serviços externos.
 
 ## Supabase — exigir validação no projeto correto
 
