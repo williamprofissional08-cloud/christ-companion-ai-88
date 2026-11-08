@@ -103,6 +103,7 @@ export const getStudyContent = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ slug: z.string().max(80) }).parse(input))
   .handler(async ({ data, context }): Promise<StudyContent> => {
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { getStudy } = await import("./content/studies");
     const legacyStudy = getStudy(data.slug);
     const managed = await supabaseAdmin.from("managed_content")
@@ -139,7 +140,6 @@ export const getStudyContent = createServerFn({ method: "POST" })
 
     const { generateStudy } = await import("./ai-content.server");
     const content = await generateStudy(study.title, study.reference, study.summary, study.category, study.depth);
-    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { error } = await supabaseAdmin
       .from("generated_content")
       .upsert({ kind: "study", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });
