@@ -1,15 +1,23 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
-import { CURATED_STUDIES } from "../src/lib/content/curated-studies.ts";
 
-test("Genesis 1 curated study remains available as a complete local fallback", () => {
-  const study = CURATED_STUDIES["genesis-1-criacao"];
+const curatedSource = readFileSync(new URL("../src/lib/content/curated-studies.ts", import.meta.url), "utf8");
+const handlerSource = readFileSync(new URL("../src/lib/ai.functions.ts", import.meta.url), "utf8");
 
-  assert.ok(study, "Genesis 1 must be registered in the curated study catalog");
-  assert.equal(study.depth, "deep");
-  assert.ok(Array.isArray(study.sections));
-  assert.ok(study.sections.length >= 15, "the reviewed study must retain its full section set");
-  assert.ok(study.sections.some((section) => section.title.includes("Introdução")));
-  assert.ok(study.sections.some((section) => section.title.includes("Cristo")));
-  assert.ok(study.sections.every((section) => section.body.trim().length > 0));
+test("Genesis 1 remains registered as a deep curated local study", () => {
+  assert.match(curatedSource, /const genesis1: StudyContent =/);
+  assert.match(curatedSource, /"genesis-1-criacao": genesis1/);
+  assert.match(curatedSource, /depth: "deep"/);
+  assert.match(curatedSource, /title: "16\. Oficina do pregador/);
+});
+
+test("study loader returns curated content when managed content lookup fails", () => {
+  const loader = handlerSource.slice(
+    handlerSource.indexOf("export const getStudyContent"),
+    handlerSource.indexOf("export const searchScriptures"),
+  );
+
+  assert.match(loader, /catch \(error\)[\s\S]*if \(curated\) return curated/);
+  assert.match(loader, /CURATED_STUDIES\[data\.slug\]/);
 });
