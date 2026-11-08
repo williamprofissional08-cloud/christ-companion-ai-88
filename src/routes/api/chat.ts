@@ -61,7 +61,11 @@ export const Route = createFileRoute("/api/chat")({
           const contentLength = request.headers.get("content-length");
           if (contentLength !== null) {
             const declaredLength = Number(contentLength);
-            if (!/^\d+$/.test(contentLength) || !Number.isSafeInteger(declaredLength) || declaredLength < 0) {
+            if (
+              !/^\\d+$/.test(contentLength) ||
+              !Number.isSafeInteger(declaredLength) ||
+              declaredLength < 0
+            ) {
               return new Response("Content-Length inválido", { status: 400 });
             }
             if (declaredLength > MAX_CHAT_BODY_BYTES) {
