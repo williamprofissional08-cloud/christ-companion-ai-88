@@ -14,7 +14,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { getStudyContent } from "@/lib/ai.functions";
 import { addFavorite } from "@/lib/app.functions";
 import { getStudy } from "@/lib/content/studies";
-import { getChapterStudySlug } from "@/lib/content/bible-books";
+import { BIBLE_BOOKS, getChapterStudySlug } from "@/lib/content/bible-books";
 
 export const Route = createFileRoute("/_authenticated/estudos/$slug")({
   head: () => ({
@@ -36,7 +36,9 @@ export const Route = createFileRoute("/_authenticated/estudos/$slug")({
 function EstudoDetalhe() {
   const { slug } = Route.useParams();
   const study = getStudy(slug);
-  const chapterStudy = study && "book" in study && "chapter" in study ? study : null;
+  const chapterStudy = study && "book" in study && "chapter" in study
+    ? study
+    : slug === "genesis-1-criacao" ? { book: BIBLE_BOOKS[0], chapter: 1 } : null;
   const contentFn = useServerFn(getStudyContent);
   const favoriteFn = useServerFn(addFavorite);
   const checkpointFn = useServerFn(getStudyCheckpoint);
@@ -121,7 +123,7 @@ function EstudoDetalhe() {
         </div>
       ) : content.data ? (
         <>
-          {chapterStudy ? (
+          {chapterStudy && slug !== "genesis-1-criacao" ? (
             <p className="mb-4 rounded-lg border border-border/60 bg-muted/30 p-3 text-xs text-muted-foreground">
               Estudo de capítulo preparado com apoio de IA. Leia a passagem na Bíblia e confira as referências; interpretações e aplicações devem permanecer subordinadas ao texto bíblico.
             </p>
