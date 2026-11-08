@@ -38,10 +38,19 @@ function AdminContentPage() {
     queryFn: () => listFn(),
   });
   const [selectedKey, setSelectedKey] = useState("");
-  const selected = useMemo(
-    () => data.find((item) => `${item.kind}:${item.slug}` === selectedKey) ?? data[0],
-    [data, selectedKey],
-  );
+  const selected = useMemo<Item | undefined>(() => {
+    const found = data.find((item) => `${item.kind}:${item.slug}` === selectedKey);
+    if (found) return found;
+    if (selectedKey === "new:study") return {
+      kind: "study", slug: "", title: "", category: "Antigo Testamento", reference: "",
+      summary: "", depth: "simple", status: "draft", content: null,
+    };
+    if (selectedKey === "new:prayer_plan") return {
+      kind: "prayer_plan", slug: "", title: "", category: "Intimidade", reference: "",
+      summary: "", days: 21, keyVerse: "", status: "draft", content: null,
+    };
+    return data[0];
+  }, [data, selectedKey]);
   const [kind, setKind] = useState<"study" | "prayer_plan">("study");
   const [slug, setSlug] = useState("");
   const [title, setTitle] = useState("");
@@ -142,7 +151,7 @@ function AdminContentPage() {
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
                 <label className="text-sm">Tipo
-                  <select value={kind} onChange={(e) => setKind(e.target.value as "study" | "prayer_plan")} className="mt-1 w-full rounded-md border bg-background p-2">
+                  <select value={kind} disabled className="mt-1 w-full rounded-md border bg-background p-2">
                     <option value="study">Estudo bíblico</option><option value="prayer_plan">Plano de oração</option>
                   </select>
                 </label>
