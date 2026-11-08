@@ -1,10 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { useQuery } from "@tanstack/react-query";
 import { AppShell } from "@/components/AppShell";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
+import { getPublishedManagedCatalog } from "@/lib/admin.functions";
 
 export const Route = createFileRoute("/_authenticated/estudos/")({
   head: () => ({
@@ -25,10 +28,28 @@ export const Route = createFileRoute("/_authenticated/estudos/")({
 });
 
 function EstudosPage() {
+  const catalogFn = useServerFn(getPublishedManagedCatalog);
+  const { data: managedStudies = [] } = useQuery({
+    queryKey: ["published-managed-catalog", "study"],
+    queryFn: () => catalogFn({ data: { kind: "study" } }),
+  });
+  const catalog = new Map(STUDIES.map((item) => [item.slug, item]));
+  for (const item of managedStudies) {
+    const old = catalog.get(item.slug);
+    const meta = item.metadata as Record<string, unknown>;
+    catalog.set(item.slug, {
+      slug: item.slug,
+      title: String(meta.title ?? old?.title ?? item.slug),
+      category: String(meta.category ?? old?.category ?? "Estudos bíblicos"),
+      reference: String(meta.reference ?? old?.reference ?? ""),
+      summary: String(meta.summary ?? old?.summary ?? ""),
+      depth: meta.depth === "deep" ? "deep" : old?.depth ?? "simple",
+    });
+  }
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string | null>(null);
 
-  const studies = STUDIES.filter((study) => {
+  const studies = [...catalog.values()].filter((study) => {
     const matchesCategory = !category || study.category === category;
     const q = query.trim().toLowerCase();
     const matchesQuery =
