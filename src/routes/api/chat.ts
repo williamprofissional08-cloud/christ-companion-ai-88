@@ -8,6 +8,7 @@ import {
 } from "@/lib/ai-gateway.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
 import { enforceAiRateLimit } from "@/lib/ai-rate-limit.server";
+import { readLimitedJson } from "@/lib/request-body.server";
 
 type Body = { messages?: unknown; threadId?: unknown };
 
@@ -15,44 +16,6 @@ const MAX_CHAT_BODY_BYTES = 256 * 1024;
 const MAX_CHAT_MESSAGES = 40;
 const MAX_CHAT_PARTS_PER_MESSAGE = 100;
 const MAX_CHAT_TEXT_CHARS = 24_000;
-
-/**
- * Reads the request incrementally so requests without Content-Length cannot
- * allocate an unbounded body before the size limit is checked.
- */
-async function readLimitedBody(request: Request, maxBytes: number): Promise<string | null> {
-  if (!request.body) return "";
-
-  const reader = request.body.getReader();
-  const chunks: Uint8Array[] = [];
-  let totalBytes = 0;
-
-  try {
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      totalBytes += value.byteLength;
-
-      if (totalBytes > maxBytes) {
-        await reader.cancel();
-        return null;
-      }
-
-      chunks.push(value);
-    }
-  } finally {
-    reader.releaseLock();
-  }
-
-  const body = new Uint8Array(totalBytes);
-  let offset = 0;
-  for (const chunk of chunks) {
-    body.set(chunk, offset);
-    offset += chunk.byteLength;
-  }
-
-  return new TextDecoder().decode(body);
-}
 
 export const Route = createFileRoute("/api/chat")({
   server: {
@@ -64,32 +27,10 @@ export const Route = createFileRoute("/api/chat")({
           const rateLimitResponse = await enforceAiRateLimit(auth.supabase, "chat");
           if (rateLimitResponse) return rateLimitResponse;
 
-          const contentLength = request.headers.get("content-length");
-          if (contentLength !== null) {
-            const declaredLength = Number(contentLength);
-            if (
-              !/^\d+$/.test(contentLength) ||
-              !Number.isSafeInteger(declaredLength) ||
-              declaredLength < 0
-            ) {
-              return new Response("Content-Length inválido", { status: 400 });
-            }
-            if (declaredLength > MAX_CHAT_BODY_BYTES) {
-              return new Response("Solicitação muito grande", { status: 413 });
-            }
-          }
+          const parsed = await readLimitedJson(request, MAX_CHAT_BODY_BYTES);
+          if (!parsed.ok) return parsed.response;
 
-          const rawBody = await readLimitedBody(request, MAX_CHAT_BODY_BYTES);
-          if (rawBody === null) {
-            return new Response("Solicitação muito grande", { status: 413 });
-          }
-
-          let body: Body;
-          try {
-            body = JSON.parse(rawBody) as Body;
-          } catch {
-            return new Response("JSON inválido", { status: 400 });
-          }
+          const body = parsed.value as Body;
 
           const messages = body?.messages;
           const threadId = typeof body?.threadId === "string" ? body.threadId : null;

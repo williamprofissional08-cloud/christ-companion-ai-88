@@ -1625,7 +1625,7 @@ export type Database = {
     }
     Functions: {
       consume_ai_rate_limit: {
-        Args: { p_endpoint: string; p_limit: number; p_window_seconds: number }
+        Args: { p_endpoint: string }
         Returns: { allowed: boolean; retry_after_seconds: number }[]
       }
       has_premium: { Args: { _user_id: string }; Returns: boolean }

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { AI_RATE_LIMIT_POLICIES, enforceAiRateLimit } from "../src/lib/ai-rate-limit.server.ts";
-import { readLimitedJson } from "../src/lib/request-body.server.ts";
+import { readLimitedJson, readLimitedResponseBytes } from "../src/lib/request-body.server.ts";
 
 test("AI endpoints have explicit and independent usage policies", () => {
   assert.deepEqual(AI_RATE_LIMIT_POLICIES, {
@@ -24,11 +24,7 @@ test("rate limit RPC is called with the endpoint policy and allows requests", as
 
   assert.equal(response, null);
   assert.equal(call.name, "consume_ai_rate_limit");
-  assert.deepEqual(call.args, {
-    p_endpoint: "chat",
-    p_limit: 20,
-    p_window_seconds: 600,
-  });
+  assert.deepEqual(call.args, { p_endpoint: "chat" });
 });
 
 test("rate limit denial returns 429 and Retry-After", async () => {
@@ -52,6 +48,18 @@ test("rate limiter fails closed on database errors", async () => {
   };
 
   const response = await enforceAiRateLimit(client, "professor_ia");
+
+  assert.equal(response.status, 503);
+});
+
+test("rate limiter fails closed when the RPC request throws", async () => {
+  const client = {
+    rpc: async () => {
+      throw new Error("network unavailable");
+    },
+  };
+
+  const response = await enforceAiRateLimit(client, "chat");
 
   assert.equal(response.status, 503);
 });
@@ -91,6 +99,30 @@ test("JSON reader rejects malformed JSON", async () => {
   assert.equal(result.response.status, 400);
 });
 
+test("JSON reader rejects an invalid Content-Length", async () => {
+  const request = new Request("https://example.test/api", {
+    method: "POST",
+    headers: { "content-length": "-1" },
+    body: "{}",
+  });
+
+  const result = await readLimitedJson(request, 100);
+
+  assert.equal(result.ok, false);
+  assert.equal(result.response.status, 400);
+});
+
+test("JSON reader rejects an empty request body", async () => {
+  const request = new Request("https://example.test/api", {
+    method: "POST",
+  });
+
+  const result = await readLimitedJson(request, 100);
+
+  assert.equal(result.ok, false);
+  assert.equal(result.response.status, 400);
+});
+
 test("JSON reader rejects oversized declared bodies", async () => {
   const request = new Request("https://example.test/api", {
     method: "POST",
@@ -121,4 +153,57 @@ test("JSON reader rejects oversized streamed bodies", async () => {
 
   assert.equal(result.ok, false);
   assert.equal(result.response.status, 413);
+});
+
+test("audio response reader accepts a body within the configured limit", async () => {
+  const response = new Response(new Uint8Array([1, 2, 3]), {
+    headers: { "content-type": "audio/mpeg", "content-length": "3" },
+  });
+
+  const bytes = await readLimitedResponseBytes(response, 3);
+
+  assert.deepEqual([...bytes], [1, 2, 3]);
+});
+
+test("audio response reader rejects oversized declared responses", async () => {
+  const response = new Response(new Uint8Array([1]), {
+    headers: { "content-length": "9" },
+  });
+
+  const bytes = await readLimitedResponseBytes(response, 8);
+
+  assert.equal(bytes, null);
+});
+
+test("audio response reader rejects oversized streamed responses without Content-Length", async () => {
+  const stream = new ReadableStream({
+    start(controller) {
+      controller.enqueue(new Uint8Array([1, 2, 3]));
+      controller.enqueue(new Uint8Array([4, 5, 6]));
+      controller.close();
+    },
+  });
+  const response = new Response(stream);
+
+  const bytes = await readLimitedResponseBytes(response, 5);
+
+  assert.equal(bytes, null);
+});
+
+test("audio response reader rejects malformed Content-Length", async () => {
+  const response = new Response(new Uint8Array([1]), {
+    headers: { "content-length": "unknown" },
+  });
+
+  const bytes = await readLimitedResponseBytes(response, 8);
+
+  assert.equal(bytes, null);
+});
+
+test("audio response reader rejects empty responses", async () => {
+  const response = new Response(new Uint8Array());
+
+  const bytes = await readLimitedResponseBytes(response, 8);
+
+  assert.equal(bytes, null);
 });

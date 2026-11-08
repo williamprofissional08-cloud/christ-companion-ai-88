@@ -4,15 +4,15 @@ Este documento é o portão operacional para o piloto controlado. Ele não signi
 
 ## Validação automatizada
 
-- [ ] `npm ci` conclui com o `package-lock.json` versionado.
-- [ ] ESLint conclui sem erros nas regras semânticas.
-- [ ] Os arquivos alterados passam na verificação Prettier.
-- [ ] `npx tsc --noEmit` conclui sem erros.
-- [ ] `npm run build` conclui em produção.
-- [ ] O repositório possui testes automatizados executáveis para os fluxos críticos.
+- [x] `npm ci` concluiu com o `package-lock.json` versionado na CI da PR #8.
+- [x] ESLint concluiu sem erros; a execução registrou 13 avisos preexistentes de Fast Refresh.
+- [x] Os arquivos de código explicitamente listados no workflow passam na verificação Prettier; o arquivo de tipos gerado e a migration SQL exigem revisão própria.
+- [x] `npx tsc --noEmit` concluiu sem erros na CI da PR #8.
+- [x] `npm run build` concluiu em produção na CI da PR #8.
+- [x] Existem testes automatizados de unidade para rate limiting e leitura limitada de JSON; testes de integração dos fluxos críticos ainda pendentes.
 - [ ] Nenhuma variável secreta é exposta ao navegador ou commitada.
 
-A workflow `.github/workflows/validate.yml` regenera o lockfile na branch de preparação sem executar scripts de dependências e depois instala de forma reproduzível.
+A workflow `.github/workflows/validate.yml` instala as dependências com `npm ci` (sem regenerar o lockfile), executa ESLint, Prettier nos arquivos listados, TypeScript, testes e build de produção. A execução verde comprova o commit validado, não os testes de integração com serviços externos.
 
 ## Supabase — exigir validação no projeto correto
 
@@ -33,10 +33,10 @@ A PR #4 contém duas migrations novas. Elas são aditivas e a enum `public.conte
 
 - [ ] Chat: sem token retorna 401; JSON inválido 400; corpo acima de 256 KiB (inclusive sem `Content-Length`) 413; até 40 mensagens; até 24.000 caracteres; thread de outro usuário nunca pode ser lida nem alterada.
 - [ ] Professor IA: sem token retorna 401; corpo acima de 256 KiB é rejeitado; até 40 mensagens e 24.000 caracteres; a aula precisa estar disponível ao usuário.
-- [ ] Professor TTS: sem token retorna 401; corpo acima de 16 KiB é rejeitado; texto limitado a 4.000 caracteres; timeout do provedor e resposta de áudio sem cache.
+- [ ] Professor TTS: sem token retorna 401; corpo acima de 16 KiB é rejeitado; texto limitado a 4.000 caracteres; timeout do provedor; resposta MP3 validada e limitada a 8 MiB, sem cache.
 - [ ] Testar os três endpoints com entradas inválidas, limites excedidos, token ausente, token expirado, usuário sem acesso e falhas 402/403/429 do provedor.
-- [x] Implementar rate limiting persistente por usuário e endpoint para Chat, Professor IA e Professor TTS (migration criada nesta PR; aplicação e validação em staging ainda pendentes); o 429 do provedor de IA não substitui essa proteção.
-- [x] Adicionar testes automatizados de unidade para rate limiting e leitura limitada de JSON; [ ] completar testes de integração para autenticação, validação de mensagens, isolamento de threads e autorização do Professor IA.
+- [x] Implementar rate limiting persistente por usuário e endpoint para Chat, Professor IA e Professor TTS, com limites fixos no banco (20, 15 e 8 requisições por 10 minutos); migration 002 versionada, ainda pendente de aplicação e validação em staging.
+- [x] 17 testes automatizados de unidade para políticas de limite, falhas da RPC, leitura limitada de JSON e resposta de áudio TTS; [ ] completar testes de integração para autenticação, validação de mensagens, isolamento de threads e autorização do Professor IA.
 
 ## Fluxos funcionais para o piloto
 

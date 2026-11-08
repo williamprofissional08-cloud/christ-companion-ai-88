@@ -11,8 +11,6 @@ type RateLimitClient = {
     functionName: "consume_ai_rate_limit",
     args: {
       p_endpoint: AiRateLimitEndpoint;
-      p_limit: number;
-      p_window_seconds: number;
     },
   ) => PromiseLike<{ data: unknown; error: unknown }>;
 };
@@ -36,8 +34,6 @@ export async function enforceAiRateLimit(
   try {
     const { data, error } = await supabase.rpc("consume_ai_rate_limit", {
       p_endpoint: endpoint,
-      p_limit: policy.limit,
-      p_window_seconds: policy.windowSeconds,
     });
 
     if (error) {

@@ -5,12 +5,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { authenticateRequest } from "@/lib/request-auth.server";
 import { enforceAiRateLimit } from "@/lib/ai-rate-limit.server";
-import { readLimitedJson } from "@/lib/request-body.server";
+import { readLimitedJson, readLimitedResponseBytes } from "@/lib/request-body.server";
 import { TTS_MAX_CHARS } from "@/lib/school/professor-tts";
 
 type Body = { text?: unknown };
 
 const MAX_BODY_BYTES = 16 * 1024;
+const MAX_AUDIO_BYTES = 8 * 1024 * 1024;
 
 export const Route = createFileRoute("/api/escola/professor-tts")({
   server: {
