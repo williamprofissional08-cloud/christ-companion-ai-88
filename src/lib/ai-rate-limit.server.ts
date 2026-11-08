@@ -63,16 +63,13 @@ export async function enforceAiRateLimit(
       ? Math.max(1, Math.ceil(Number(row.retry_after_seconds)))
       : policy.windowSeconds;
 
-    return new Response(
-      "Limite de uso excedido. Tente novamente após o intervalo indicado.",
-      {
-        status: 429,
-        headers: {
-          "Cache-Control": "no-store",
-          "Retry-After": String(retryAfter),
-        },
+    return new Response("Limite de uso excedido. Tente novamente após o intervalo indicado.", {
+      status: 429,
+      headers: {
+        "Cache-Control": "no-store",
+        "Retry-After": String(retryAfter),
       },
-    );
+    });
   } catch {
     console.error("AI rate limit request failed");
     return new Response("Proteção de uso temporariamente indisponível", {

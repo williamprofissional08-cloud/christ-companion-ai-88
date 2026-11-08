@@ -1,9 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {
-  AI_RATE_LIMIT_POLICIES,
-  enforceAiRateLimit,
-} from "../src/lib/ai-rate-limit.server.ts";
+import { AI_RATE_LIMIT_POLICIES, enforceAiRateLimit } from "../src/lib/ai-rate-limit.server.ts";
 import { readLimitedJson } from "../src/lib/request-body.server.ts";
 
 test("AI endpoints have explicit and independent usage policies", () => {
@@ -14,28 +11,25 @@ test("AI endpoints have explicit and independent usage policies", () => {
   });
 });
 
-test(
-  "rate limit RPC is called with the endpoint policy and allows requests",
-  async () => {
-    let call;
-    const client = {
-      rpc: async (name, args) => {
-        call = { name, args };
-        return { data: [{ allowed: true, retry_after_seconds: 0 }], error: null };
-      },
-    };
+test("rate limit RPC is called with the endpoint policy and allows requests", async () => {
+  let call;
+  const client = {
+    rpc: async (name, args) => {
+      call = { name, args };
+      return { data: [{ allowed: true, retry_after_seconds: 0 }], error: null };
+    },
+  };
 
-    const response = await enforceAiRateLimit(client, "chat");
+  const response = await enforceAiRateLimit(client, "chat");
 
-    assert.equal(response, null);
-    assert.equal(call.name, "consume_ai_rate_limit");
-    assert.deepEqual(call.args, {
-      p_endpoint: "chat",
-      p_limit: 20,
-      p_window_seconds: 600,
-    });
-  },
-);
+  assert.equal(response, null);
+  assert.equal(call.name, "consume_ai_rate_limit");
+  assert.deepEqual(call.args, {
+    p_endpoint: "chat",
+    p_limit: 20,
+    p_window_seconds: 600,
+  });
+});
 
 test("rate limit denial returns 429 and Retry-After", async () => {
   const client = {

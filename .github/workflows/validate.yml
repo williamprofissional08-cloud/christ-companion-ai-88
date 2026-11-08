@@ -38,11 +38,6 @@ jobs:
         run: |
           npm run lint -- --rule 'prettier/prettier: off'
 
-      - name: Preview Prettier formatting for new files
-        run: |
-          npx prettier --write src/lib/ai-rate-limit.server.ts tests/ai-rate-limit.test.mjs
-          git diff -- src/lib/ai-rate-limit.server.ts tests/ai-rate-limit.test.mjs
-
       - name: Check formatting of hardened files
         run: >-
           npx prettier --check
