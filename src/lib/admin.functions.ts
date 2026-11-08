@@ -540,6 +540,24 @@ type ManagedContentItem = {
 
 const managedKindSchema = z.enum(["study", "prayer_plan"]);
 const managedStatusSchema = z.enum(["draft", "published", "archived"]);
+const managedStudyContentSchema = z.object({
+  version: z.number().optional(),
+  depth: z.enum(["simple", "deep"]).optional(),
+  intro: z.string(),
+  historicalContext: z.string(),
+  keyPoints: z.array(z.object({ title: z.string(), text: z.string() })),
+  application: z.string(),
+  crossReferences: z.array(z.string()),
+  questions: z.array(z.string()),
+  conclusion: z.string(),
+  prayer: z.string(),
+  sections: z.array(z.object({
+    id: z.string(), title: z.string(), body: z.string(), kind: z.string().optional(),
+    scriptureRefs: z.array(z.string()).optional(),
+    confidence: z.enum(["high", "probable", "debated", "uncertain"]).optional(),
+    collapsible: z.boolean().optional(),
+  })).optional(),
+});
 
 function managedMetadata(value: unknown): Record<string, unknown> {
   return value && typeof value === "object" && !Array.isArray(value)
@@ -607,7 +625,7 @@ export const adminSaveManagedContent = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) =>
     z.object({
       kind: managedKindSchema,
-      slug: z.string().min(3).max(100).regex(/^[a-z0-9-]+$/),
+      slug: z.string().min(3).max(80).regex(/^[\\p{L}\\p{N}-]+$/u),
       title: z.string().min(3).max(160),
       category: z.string().min(2).max(80),
       reference: z.string().max(200).default(""),
@@ -616,15 +634,12 @@ export const adminSaveManagedContent = createServerFn({ method: "POST" })
       days: z.number().int().min(1).max(400).optional(),
       keyVerse: z.string().max(160).optional(),
       status: managedStatusSchema,
-      content: z.unknown().nullable().optional(),
+      content: managedStudyContentSchema.nullable().optional(),
     }).superRefine((value, ctx) => {
       if (value.kind === "prayer_plan" && (!value.days || !value.keyVerse)) {
         ctx.addIssue({ code: "custom", message: "Planos precisam informar duração e versículo-chave.", path: ["days"] });
       }
-      if (value.kind === "study" && value.content !== undefined && value.content !== null &&
-        (typeof value.content !== "object" || Array.isArray(value.content))) {
-        ctx.addIssue({ code: "custom", message: "O conteúdo do estudo precisa ser um objeto JSON.", path: ["content"] });
-      }
+
     }).parse(input),
   )
   .handler(async ({ data, context }) => {
