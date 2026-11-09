@@ -19,6 +19,7 @@ import {
   Star,
   Sun,
   Target,
+  UsersRound,
 } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -40,6 +41,7 @@ const NAV = [
   { to: "/planos", label: "Planos de oração", icon: HeartHandshake },
 
   { to: "/estudos", label: "Estudos", icon: Compass },
+  { to: "/comunidade", label: "Comunidade", icon: UsersRound },
   { to: "/biblia", label: "Bíblia", icon: BookOpen },
   { to: "/pesquisa", label: "Pesquisa", icon: Search },
   { to: "/diario", label: "Diário", icon: NotebookPen },
