@@ -246,6 +246,14 @@ Leia o capítulo em continuidade com Gênesis 25:19–34 e 26:34–35. Antes do 
       confidence: "high",
       scriptureRefs: ["Gênesis 25:23", "Gênesis 27:1–46", "Efésios 4:25", "Colossenses 3:21"],
       body: "Não apresente a fraude de Rebeca e Jacó como modelo de fé. Não use a soberania de Deus para absolver a mentira ou o favoritismo. Não trate o sofrimento de Esaú como irrelevante e não justifique sua intenção homicida. Não use a bênção patriarcal como autorização para manipular heranças ou controlar familiares hoje. Não transforme a passagem em justificativa para violência ou coerção. A aplicação deve honrar a verdade, a dignidade dos familiares, a justiça e a proteção de pessoas ameaçadas."
+    },
+    {
+      id: "avaliacao-revisao",
+      title: "23. Revisão e avaliação do aprendizado",
+      kind: "assessment",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 27:1–46"],
+      body: "**Retome o texto:** (1) Quais preferências dividiam a família? (2) Como Rebeca e Jacó planejam o engano? (3) De que maneira Jacó usa o nome do Senhor durante a fraude? (4) Como Esaú reage? (5) Que consequências aparecem nos relacionamentos?\n\n**Exercício:** compare Gênesis 25:23, 27:1–29 e 27:30–46. Distinga o anúncio da promessa, as escolhas dos personagens e os resultados de suas ações. Não use a soberania de Deus para justificar mentira, manipulação ou favoritismo.\n\n**Critério de aprendizagem:** expor a sequência narrativa, identificar responsabilidades sem simplificações e propor aplicações que promovam verdade, reconciliação responsável e proteção diante de ameaças."
     }
   ]
 };
