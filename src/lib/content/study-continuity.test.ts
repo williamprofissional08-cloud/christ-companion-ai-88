@@ -43,6 +43,16 @@ describe("continuidade dos estudos de Gênesis", () => {
       assert.ok((CURATED_STUDIES[slug]?.sections?.length ?? 0) > 0);
     }
   });
+  test("Êxodo 2 a 10 estão registrados como estudos profundos no catálogo curado", () => {
+    for (let chapter = 2; chapter <= 10; chapter += 1) {
+      const slug = getChapterStudySlug("exodo", chapter);
+      assert.equal(slug, `biblia-exodo-cap-${chapter}`);
+      assert.equal(getChapterStudy(slug)?.book.slug, "exodo");
+      assert.equal(CURATED_STUDIES[slug]?.depth, "deep");
+      assert.ok((CURATED_STUDIES[slug]?.sections?.length ?? 0) >= 8);
+      assert.ok((CURATED_STUDIES[slug]?.questions?.length ?? 0) >= 15);
+    }
+  });
   test("Êxodo 1 está registrado no endereço canônico do livro", () => {
     const slug = getChapterStudySlug("exodo", 1);
     assert.equal(slug, "biblia-exodo-cap-1");
