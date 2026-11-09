@@ -2,188 +2,69 @@ import type { StudyContent } from "../types";
 
 /** Estudo bíblico aprofundado e curado de Êxodo 14. */
 export const exodus14Study: StudyContent = {
-  "version": 1,
-  "depth": "deep",
-  "intro": "Êxodo 14 narra a perseguição de Faraó e a travessia do mar. Israel parece encurralado entre o exército egípcio e as águas. O povo teme e acusa Moisés, mas ele chama a comunidade a permanecer firme e ver a salvação do Senhor. Deus ordena que avancem; o mar se abre, Israel atravessa em terra seca e os egípcios são derrotados quando as águas retornam. O capítulo conclui com o temor do Senhor e a confiança em Deus e em Moisés. O texto destaca que a libertação não resulta de força militar israelita, mas da ação divina.",
-  "historicalContext": "A expressão hebraica yam suph é tradicionalmente traduzida como Mar Vermelho, mas também é discutida como Mar de Juncos; a identificação geográfica exata e a rota são temas de debate. A narrativa combina vento forte, águas divididas e ação extraordinária de Deus. Não é necessário resolver todas as questões geográficas para compreender a ênfase teológica do texto. A travessia se torna memória central de Israel e é retomada em salmos, profetas e no Novo Testamento.",
-  "keyPoints": [
-    {
-      "title": "1. A ordem para acampar (14:1–4)",
-      "text": "Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo."
-    },
-    {
-      "title": "2. A perseguição de Faraó (14:5–9)",
-      "text": "O rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração."
-    },
-    {
-      "title": "3. O medo do povo (14:10–12)",
-      "text": "Ao ver o exército, Israel teme e reclama contra Moisés. A memória da escravidão distorce a avaliação do presente; o povo ainda aprende a confiar."
-    },
-    {
-      "title": "4. Permaneçam firmes e avancem (14:13–18)",
-      "text": "Moisés anuncia que o Senhor pelejará por Israel, e Deus manda o povo avançar. A confiança não é passividade: a fé responde à ordem divina."
-    },
-    {
-      "title": "5. O anjo e a coluna protegem o povo (14:19–20)",
-      "text": "A presença que guiava Israel passa a separar os acampamentos, protegendo o povo durante a noite."
-    },
-    {
-      "title": "6. O mar se abre (14:21–22)",
-      "text": "O vento oriental sopra durante a noite e as águas se dividem. Israel atravessa em terra seca, com as águas como limites laterais."
-    },
-    {
-      "title": "7. A derrota dos egípcios (14:23–28)",
-      "text": "Os carros entram no caminho e enfrentam confusão. Quando as águas retornam, o exército é submerso. A narrativa atribui a vitória ao Senhor."
-    },
-    {
-      "title": "8. A fé após a travessia (14:29–31)",
-      "text": "Israel vê os egípcios mortos na praia, teme ao Senhor e crê nele e em Moisés. A travessia inaugura nova compreensão da libertação."
-    }
+  version: 1,
+  depth: "deep",
+  intro: "Êxodo 14 narra o confronto decisivo entre o poder opressor do Egito e a libertação realizada pelo Senhor. Israel parece encurralado diante do mar e do exército de Faraó. O povo sente medo, questiona Moisés e interpreta a crise a partir da antiga escravidão. Deus, porém, conduz a narrativa: ordena que avancem, protege o acampamento, abre caminho pelas águas e derrota os perseguidores. O capítulo termina com Israel reconhecendo a grande ação do Senhor e confiando nele e em Moisés. A ênfase central é que a salvação vem de Deus, não da capacidade militar de Israel.",
+  historicalContext: "O capítulo continua a saída do Egito narrada desde Êxodo 12 e a orientação pela coluna de nuvem e fogo em Êxodo 13:17–22. Os nomes Pi-Hairote, Migdol e Baal-Zefom não permitem, por si sós, fixar uma rota moderna indiscutível. A expressão hebraica Yam Suf é tradicionalmente traduzida como Mar Vermelho e também discutida como Mar de Juncos. A localização exata, a cronologia do êxodo e a relação entre a descrição do vento e a divisão das águas são temas de debate. A narrativa apresenta a travessia como acontecimento fundador da memória de Israel; sua interpretação deve respeitar tanto os detalhes narrados quanto os limites do que não é especificado.",
+  keyPoints: [
+    { title: "1. O acampamento aparentemente vulnerável (14:1–4)", text: "Deus orienta o lugar do acampamento. Faraó interpreta a posição de Israel como sinal de desorientação e oportunidade para persegui-lo; o narrador, porém, revela um propósito divino maior." },
+    { title: "2. A mobilização egípcia (14:5–9)", text: "Faraó muda de decisão e mobiliza carros e tropas, incluindo seiscentos carros escolhidos. A força militar egípcia se volta contra o povo que havia sido libertado." },
+    { title: "3. O medo e a acusação de Israel (14:10–12)", text: "Diante do perigo, o povo clama e acusa Moisés. A lembrança da escravidão aparece de modo contraditório: a liberdade parece mais assustadora que a servidão conhecida." },
+    { title: "4. A palavra de Moisés e a ordem para avançar (14:13–18)", text: "Moisés chama o povo a não temer e anuncia que o Senhor pelejará por eles. Em seguida, Deus ordena que avancem, mostrando que confiança e obediência caminham juntas." },
+    { title: "5. A coluna separa os acampamentos (14:19–20)", text: "O anjo de Deus e a coluna mudam de posição e ficam entre Israel e os egípcios. A presença que guiava também protege o povo." },
+    { title: "6. O vento e a abertura do caminho (14:21–22)", text: "Um forte vento oriental sopra durante a noite; as águas se dividem e Israel atravessa em terra seca. O texto atribui a ação ao Senhor, sem oferecer uma explicação física completa." },
+    { title: "7. A perseguição e o reconhecimento egípcio (14:23–25)", text: "Os carros entram no caminho aberto. Em meio à confusão, os egípcios reconhecem que o Senhor peleja por Israel e tentam fugir." },
+    { title: "8. O retorno das águas e a libertação (14:26–31)", text: "As águas retornam sobre o exército perseguidor. Israel vê a grande mão do Senhor, teme a Deus e crê nele e em Moisés, seu servo." }
   ],
-  "application": "A passagem ensina que a salvação pertence ao Senhor e que a memória da libertação sustenta a fé. Não use o texto para prometer que toda crise pessoal terá uma solução espetacular ou para culpar quem sente medo. Reconheça o contexto histórico e a violência do juízo narrado, sem transformar a cena em autorização para violência religiosa hoje.",
-  "crossReferences": [
+  application: "A passagem ensina a recordar a libertação de Deus e a responder à sua direção com confiança obediente. Fé bíblica não significa ausência de medo: o próprio povo sente pavor, e sua reação é tratada dentro da história de formação de Israel. Não transforme o episódio em promessa de que toda crise pessoal terminará com um milagre imediato, nem use a narrativa para culpar pessoas traumatizadas ou justificar violência religiosa contemporânea. A aplicação deve nascer do sentido do texto: Deus é o libertador, a opressão não tem a palavra final e o povo é chamado a confiar nele.",
+  crossReferences: [
     "Êxodo 13:17–22",
     "Êxodo 15:1–21",
     "Salmo 77:16–20",
     "Salmo 106:7–12",
-    "Isaías 43:16–19",
+    "Isaías 43:16–21",
     "1 Coríntios 10:1–2",
     "Hebreus 11:29"
   ],
-  "questions": [
-    "Por que Israel parece encurralado?",
-    "Como Faraó reage à saída do povo?",
-    "Quais palavras revelam o medo dos israelitas?",
-    "O que Moisés ordena ao povo?",
-    "Por que Deus manda avançar?",
-    "Qual é a função da coluna entre os acampamentos?",
-    "O que o texto diz sobre o vento e a divisão das águas?",
-    "Como o exército egípcio é derrotado?",
-    "Qual é a resposta de Israel depois da travessia?",
-    "Quais aplicações seriam exageradas ou irresponsáveis ao usar esta narrativa hoje?"
+  questions: [
+    "Por que Deus orienta Israel a acampar em uma posição que parece vulnerável?",
+    "Como Faraó interpreta a situação e que decisão toma?",
+    "O que o medo leva os israelitas a dizer a Moisés?",
+    "Como a fala de Moisés em 14:13–14 deve ser lida junto à ordem de avançar em 14:15?",
+    "Qual é a função narrativa da coluna entre os dois acampamentos?",
+    "Quais elementos o texto associa à abertura do caminho pelo mar?",
+    "O que os egípcios reconhecem em 14:25?",
+    "Como a narrativa descreve o retorno das águas e o resultado para o exército?",
+    "O que significa Israel temer ao Senhor e crer nele e em Moisés?",
+    "Quais aplicações atuais respeitam o contexto e quais extrapolam o que o capítulo afirma?"
   ],
-  "conclusion": "Êxodo 14 deve ser compreendido dentro da história da libertação e da formação de Israel. Sua mensagem central não deve ser separada do contexto da aliança, da ação de Deus e da resposta humana. Ao ensinar o capítulo, leia a passagem integralmente, explique sua estrutura, distinga o que o texto afirma das inferências e conduza a aplicação à luz do conjunto das Escrituras e de Cristo, sem alegorias inventadas.",
-  "prayer": "Senhor Deus, ajuda-nos a compreender Êxodo 14 com reverência, atenção ao contexto e fidelidade à tua Palavra. Dá-nos humildade para reconhecer o que o texto afirma e os limites do que podemos concluir. Forma em nós fé, obediência, justiça e amor ao próximo, tendo Cristo como centro da esperança revelada nas Escrituras. Amém.",
-  "sections": [
-    {
-      "id": "exodo-14-1",
-      "title": "1. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
-      "kind": "observation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ]
-    },
-    {
-      "id": "exodo-14-2",
-      "title": "2. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ]
-    },
-    {
-      "id": "exodo-14-3",
-      "title": "3. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ]
-    },
-    {
-      "id": "exodo-14-4",
-      "title": "4. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ]
-    },
-    {
-      "id": "exodo-14-5",
-      "title": "5. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ]
-    },
-    {
-      "id": "exodo-14-6",
-      "title": "6. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ]
-    },
-    {
-      "id": "exodo-14-7",
-      "title": "7. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ]
-    },
-    {
-      "id": "exodo-14-8",
-      "title": "8. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
-      "kind": "application",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ]
-    },
-    {
-      "id": "exodo-14-metodo",
-      "title": "9. Método de estudo e exegese",
-      "kind": "method",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14:1–40"
-      ],
-      "body": "Leia o capítulo em sua totalidade e delimite suas unidades narrativas ou discursivas. Observe repetições, personagens, verbos, mudanças de cenário e falas. Consulte o contexto imediato dos capítulos anteriores e seguintes. Registre primeiro o que o texto diz; depois investigue o contexto histórico e literário; em seguida formule a interpretação mais bem sustentada, identificando questões debatidas; por fim, construa uma aplicação coerente com o capítulo e com o conjunto da Bíblia. Não transforme detalhes incertos em fatos nem use uma aplicação moderna para substituir o sentido original."
-    },
-    {
-      "id": "exodo-14-pregacao",
-      "title": "10. Preparação de mensagem expositiva",
-      "kind": "sermon",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ],
-      "body": "**Tema:** A travessia do mar e a salvação do Senhor. **Ideia central:** Êxodo 14 narra a perseguição de Faraó e a travessia do mar. Israel parece encurralado entre o exército egípcio e as águas. O povo teme e acusa Moisés, mas ele chama a comunidade a permanecer firme e ver a salvação do Senhor. Deus ordena que avancem; o mar se a **Roteiro:** (1) Leia o contexto e delimite as unidades do capítulo; (2) explique cada movimento a partir dos versículos; (3) destaque o ensino teológico principal; (4) mostre as conexões bíblicas explícitas e a relação com Cristo sem alegorizar; (5) conclua com aplicações concretas, responsáveis e fiéis ao texto. **Cuidado pastoral:** não prometa o que a passagem não promete, não use o texto para manipular ou condenar pessoas e distinga descrição narrativa de aprovação divina."
-    },
-    {
-      "id": "exodo-14-glossario",
-      "title": "11. Glossário e conceitos importantes",
-      "kind": "glossary",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ],
-      "body": "**Aliança:** compromisso relacional estabelecido por Deus com seu povo. **Êxodo:** saída de Israel do Egito, evento fundador da memória nacional. **Santo/santidade:** separado para Deus e coerente com seu caráter. **Memorial:** prática ou sinal que preserva a lembrança de um ato de Deus. **Mediação:** serviço de quem representa o povo diante de Deus ou transmite sua palavra. Os termos específicos deste capítulo devem ser explicados conforme seu contexto, sem atribuir sentidos técnicos que o texto não fornece."
-    },
-    {
-      "id": "exodo-14-avaliacao",
-      "title": "12. Revisão e avaliação do aprendizado",
-      "kind": "assessment",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 14"
-      ],
-      "body": "Responda às perguntas de revisão do estudo com base na leitura bíblica. Depois, escolha uma unidade do capítulo e escreva quatro itens: (1) observação — o que está explicitamente escrito; (2) contexto — como a unidade se conecta ao livro; (3) interpretação — qual sentido é sustentado pelo texto; (4) aplicação — como obedecer ao princípio sem repetir mecanicamente uma situação histórica única. Para preparar uma aula, apresente a ideia central em uma frase, organize o desenvolvimento em movimentos do próprio texto e indique referências cruzadas que realmente iluminem a passagem. Avalie se evitou especulação, alegorias e promessas não autorizadas pelo texto."
-    }
+  conclusion: "Êxodo 14 é o relato da libertação de Israel diante de uma ameaça militar que o povo não poderia vencer por seus próprios recursos. O capítulo articula direção divina, medo humano, obediência, juízo e fé. Ao ensiná-lo, é essencial distinguir o que a narrativa afirma das reconstruções geográficas e científicas debatidas. No conjunto das Escrituras, a travessia torna-se memória da salvação de Deus e prepara conexões canônicas que o próprio Novo Testamento desenvolve, sem exigir alegorias arbitrárias para cada detalhe.",
+  prayer: "Senhor Deus, ensina-nos a ler Êxodo 14 com reverência, atenção ao contexto e fidelidade à tua Palavra. Ajuda-nos a reconhecer tua ação libertadora, a não transformar nossas suposições em doutrina e a responder à tua direção com fé e obediência. Que a memória da salvação conduza nossa esperança a Cristo e produza em nós humildade, justiça e confiança. Amém.",
+  sections: [
+    { id: "exodo-14-contexto", title: "1. Contexto literário e histórico", kind: "context", confidence: "high", scriptureRefs: ["Êxodo 12:29–42", "Êxodo 13:17–22"], body: "Êxodo 14 não é um episódio isolado. Israel já saiu do Egito, recebeu orientação pelo caminho e está sendo conduzido pelo Senhor. O capítulo desenvolve a perseguição anunciada pela mudança de rota e prepara o cântico de Êxodo 15. A narrativa combina falas, movimentos dos acampamentos, ações divinas e o desfecho militar.\n\n**Limite histórico:** o texto não identifica nominalmente o faraó nem fornece uma data absoluta. Também não oferece coordenadas suficientes para identificar com certeza todos os locais mencionados. Qualquer proposta cronológica ou geográfica deve ser apresentada como hipótese, não como informação explícita do capítulo." },
+    { id: "exodo-14-estrutura", title: "2. Estrutura e movimentos da narrativa", kind: "observation", confidence: "high", scriptureRefs: ["Êxodo 14:1–31"], body: "O capítulo pode ser acompanhado em oito movimentos: (1) ordem para acampar e propósito divino (vv. 1–4); (2) decisão e perseguição de Faraó (vv. 5–9); (3) medo e protesto de Israel (vv. 10–12); (4) resposta de Moisés e ordem para avançar (vv. 13–18); (5) coluna entre os acampamentos (vv. 19–20); (6) abertura do caminho (vv. 21–22); (7) entrada e confusão dos perseguidores (vv. 23–25); (8) retorno das águas e resposta de fé (vv. 26–31).\n\nObserve a progressão: ameaça, temor, palavra, ação divina, derrota do opressor e reconhecimento do Senhor. O capítulo não é apenas uma descrição de fenômenos; é uma narrativa teológica sobre quem governa e liberta." },
+    { id: "exodo-14-1-4", title: "3. A ordem para acampar e o propósito do Senhor (14:1–4)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 14:1–4"], body: "Deus manda Moisés orientar Israel a voltar e acampar diante de Pi-Hairote, entre Migdol e o mar, diante de Baal-Zefom. Faraó concluirá que o povo está confuso e encurralado. A ironia narrativa é importante: o que parece desorientação aos olhos do rei está dentro da direção de Deus.\n\nO versículo 4 declara que Deus será glorificado sobre Faraó e seu exército e que os egípcios reconhecerão que ele é o Senhor. A finalidade teológica é explícita. Não se deve, contudo, converter os nomes dos lugares em uma rota moderna exata sem evidência suficiente." },
+    { id: "exodo-14-5-9", title: "4. A decisão de Faraó e a força militar egípcia (14:5–9)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 14:5–9"], body: "Quando Faraó e seus oficiais percebem que Israel partiu, reconsideram a perda da mão de obra e decidem persegui-lo. O rei prepara seu carro, leva consigo o povo e mobiliza carros, cavaleiros e tropas. O texto menciona seiscentos carros escolhidos, além dos demais carros do Egito.\n\nO número seiscentos é o dado textual específico; o capítulo não fornece uma contagem completa de todos os soldados nem descreve em detalhe a composição de cada unidade militar. A perseguição revela que a autorização para partir não significou que o poder opressor havia aceitado a libertação." },
+    { id: "exodo-14-10-12", title: "5. O medo, o clamor e a memória da escravidão (14:10–12)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 14:10–12"], body: "Ao ver os egípcios se aproximando, Israel teme intensamente e clama ao Senhor. Em seguida, acusa Moisés: questiona se faltavam sepulturas no Egito e afirma que teria sido melhor servir aos egípcios. A fala é amarga e contraditória, pois a escravidão que antes clamava por libertação agora é lembrada como alternativa aparentemente segura.\n\nO texto não esconde a fragilidade do povo. A fé de Israel ainda está em formação. É importante não reduzir o medo a uma falha moral simples nem ignorar a experiência traumática da opressão; a narrativa mostra como o medo pode distorcer a memória e a avaliação do presente." },
+    { id: "exodo-14-13-14", title: "6. “Não temais”: a palavra de Moisés (14:13–14)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 14:13–14"], body: "Moisés responde com quatro movimentos: não temer, permanecer firme, contemplar a salvação do Senhor e reconhecer que os egípcios vistos naquele dia não voltarão a ser vistos daquela maneira. Ele declara que o Senhor pelejará por Israel e que o povo deve aquietar-se.\n\nA fala anuncia que a libertação não dependerá da força israelita. O versículo 14 não deve ser isolado como fórmula para evitar qualquer ação humana: o texto continua com a ordem divina para o povo marchar. A quietude aqui expressa confiança na ação de Deus, não uma regra universal de inércia." },
+    { id: "exodo-14-15-18", title: "7. A ordem para avançar e a glória do Senhor (14:15–18)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 14:15–18"], body: "Deus pergunta por que Moisés clama e manda que os israelitas avancem. Moisés deve levantar a vara e estender a mão sobre o mar. O Senhor anuncia que endurecerá o coração dos egípcios para que entrem atrás de Israel e que será glorificado sobre Faraó e seu exército.\n\nHá uma tensão teológica que atravessa Êxodo: Deus é soberano sobre os acontecimentos, enquanto Faraó permanece responsável por suas decisões opressoras. O texto não autoriza apagar um desses polos. A ordem para avançar mostra que a confiança anunciada por Moisés se expressa agora em obediência concreta à palavra recebida." },
+    { id: "exodo-14-19-20", title: "8. O anjo de Deus e a coluna entre os acampamentos (14:19–20)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 13:21–22", "Êxodo 14:19–20"], body: "O anjo de Deus, que ia adiante do acampamento, muda de posição, e a coluna também passa para trás. A presença divina fica entre Israel e os egípcios. Para um lado, a nuvem traz trevas; para o outro, ilumina a noite, conforme a forma como o versículo é traduzido.\n\nA função narrativa é clara: Deus separa os grupos e protege Israel, impedindo que os exércitos se aproximem durante a noite. O texto não descreve a composição física da nuvem nem permite reconstruir cientificamente o fenômeno. A ênfase está na presença protetora e na diferença entre os destinos dos dois acampamentos." },
+    { id: "exodo-14-21-22", title: "9. O vento oriental e a travessia em terra seca (14:21–22)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 14:21–22"], body: "Moisés estende a mão, e o Senhor faz recuar o mar por meio de um forte vento oriental durante toda a noite. As águas se dividem, e os israelitas entram pelo meio do mar em terra seca, com as águas como muro à direita e à esquerda.\n\nA narrativa apresenta simultaneamente um meio descrito — o vento — e a ação soberana do Senhor. Não é necessário escolher entre mencionar o vento ou confessar a ação divina: o próprio texto associa os dois. A expressão “como muro” comunica a contenção das águas na imagem narrativa; o estudo não deve impor detalhes físicos que o capítulo não fornece." },
+    { id: "exodo-14-23-25", title: "10. A perseguição e o reconhecimento dos egípcios (14:23–25)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 14:23–25"], body: "Os egípcios entram atrás de Israel com cavalos, carros e cavaleiros. Na vigília da manhã, o Senhor olha para o exército egípcio a partir da coluna de fogo e nuvem e provoca confusão. As rodas dos carros são afetadas, tornando difícil a marcha. Os próprios egípcios concluem: “Fujamos de diante de Israel, porque o Senhor peleja por eles contra os egípcios”.\n\nA narrativa apresenta o reconhecimento tardio dos perseguidores: a força que parecia invencível não pode prevalecer contra o Senhor. O texto não especifica o mecanismo técnico pelo qual as rodas foram prejudicadas; não se deve inventar uma falha mecânica particular." },
+    { id: "exodo-14-26-28", title: "11. O retorno das águas e o fim da perseguição (14:26–28)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 14:26–28"], body: "Deus manda Moisés estender a mão novamente. Ao amanhecer, o mar retorna ao seu curso, e os egípcios que haviam entrado nele são alcançados pelas águas. O texto declara que as águas cobriram os carros, os cavaleiros e todo o exército de Faraó que os seguira; não ficou deles nem um.\n\nO relato descreve um juízo severo contra a força que perseguia os libertos. Ensinar essa passagem exige seriedade diante da violência e da morte narradas. Não se deve transformá-la em autorização para que comunidades atuais identifiquem seus adversários como alvos de extermínio ou reivindiquem para si o papel do juízo divino." },
+    { id: "exodo-14-29-31", title: "12. A resposta de Israel: temor e fé (14:29–31)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 14:29–31"], body: "O narrador retoma que Israel atravessou em terra seca, com as águas como muro. O Senhor salvou Israel naquele dia e o povo viu os egípcios mortos na praia. Ao contemplar a grande mão do Senhor, Israel teme ao Senhor e crê nele e em Moisés, seu servo.\n\nO temor aqui não é simplesmente pânico: no desfecho, expressa reconhecimento reverente da autoridade de Deus. A confiança em Moisés não o transforma em salvador independente; ele é reconhecido como servo por meio de quem Deus conduziu o povo. O capítulo seguinte responderá com o cântico de Êxodo 15." },
+    { id: "exodo-14-teologia", title: "13. Temas teológicos centrais", kind: "interpretation", confidence: "high", scriptureRefs: ["Êxodo 14:4", "Êxodo 14:13–14", "Êxodo 14:30–31"], body: "**Deus como libertador:** a salvação é atribuída ao Senhor, não à superioridade militar de Israel.\n\n**Juízo contra a opressão:** o poder que tenta escravizar novamente o povo é julgado.\n\n**Presença e proteção:** a coluna que guia também se coloca entre os acampamentos.\n\n**Fé em formação:** Israel passa do medo e da acusação ao temor reverente e à confiança.\n\n**Soberania e responsabilidade:** a ação divina não torna irrelevantes as decisões de Faraó, cuja perseguição integra o contexto de sua opressão." },
+    { id: "exodo-14-hebraico", title: "14. Termos hebraicos importantes", kind: "glossary", confidence: "debated", scriptureRefs: ["Êxodo 14:2", "Êxodo 14:4", "Êxodo 14:16", "Êxodo 14:21", "Êxodo 14:30"], body: "**Yam Suf (יַם־סוּף):** expressão tradicionalmente traduzida como “Mar Vermelho”; também discutida como “Mar de Juncos”. A identificação geográfica é debatida.\n\n**Ḥāzaq (חָזַק):** verbo ligado a tornar-se forte, fortalecer ou endurecer; seu sentido específico depende da construção e do contexto em que aparece.\n\n**Yāšaʿ (יָשַׁע):** campo semântico de salvar, libertar ou trazer livramento; relacionado ao tema da salvação do Senhor.\n\n**Rûaḥ qādîm (רוּחַ קָדִים):** “vento oriental”, mencionado em 14:21.\n\n**Yābāšāh (יַבָּשָׁה):** “terra seca”, expressão que destaca a passagem acessível em meio às águas.\n\n**Kābēd / kābôd (כבד / כָּבוֹד):** a raiz pode expressar peso ou importância; formas relacionadas a glória aparecem no tema de Deus ser glorificado. Não confundir automaticamente todas as ocorrências da raiz.\n\n**Maḥănêh (מַחֲנֶה):** acampamento, termo importante para os movimentos e a separação dos grupos na narrativa." },
+    { id: "exodo-14-referencias", title: "15. Referências cruzadas e desenvolvimento bíblico", kind: "references", confidence: "high", scriptureRefs: ["Êxodo 15:1–21", "Salmo 77:16–20", "Salmo 106:7–12", "Isaías 43:16–21", "1 Coríntios 10:1–2", "Hebreus 11:29"], body: "**Êxodo 15:1–21:** transforma a travessia em cântico de louvor e memória.\n\n**Salmo 77:16–20:** recorda as águas, o caminho de Deus e a condução do povo.\n\n**Salmo 106:7–12:** relembra a incredulidade de Israel, a salvação e a resposta de fé.\n\n**Isaías 43:16–21:** usa a memória do caminho pelo mar para anunciar a ação renovadora de Deus.\n\n**1 Coríntios 10:1–2:** Paulo relaciona a passagem pelo mar à experiência de Israel sob a nuvem e ao batismo em sentido tipológico.\n\n**Hebreus 11:29:** apresenta a travessia como ato de fé, contrastando a experiência de Israel com a dos egípcios." },
+    { id: "exodo-14-questoes", title: "16. Questões interpretativas e debates", kind: "interpretation", confidence: "debated", scriptureRefs: ["Êxodo 14:2", "Êxodo 14:21–22", "Êxodo 14:28"], body: "**Onde ficava o mar?** Yam Suf pode ser traduzido de maneiras diferentes, e as propostas de localização variam. Pi-Hairote, Migdol e Baal-Zefom não resolvem sozinhos a rota. Apresente hipóteses com seus argumentos, sem afirmar uma identificação como consenso.\n\n**Como ocorreu a divisão das águas?** O texto menciona vento oriental forte durante a noite e atribui a ação ao Senhor. Há debates sobre como relacionar descrição natural e intervenção extraordinária; não há necessidade de fingir que o texto oferece uma explicação científica completa.\n\n**O que significa “muro” de água?** É a linguagem da narrativa para descrever a passagem protegida pelas águas divididas. Evite especular sobre altura, forma ou mecanismo não descritos.\n\n**Qual a cronologia?** O capítulo não apresenta uma data absoluta. Propostas de datação do êxodo dependem de discussões mais amplas sobre textos e evidências históricas.\n\n**Quantos soldados havia?** O texto menciona seiscentos carros escolhidos e outros carros, mas não fornece o total exato de combatentes." },
+    { id: "exodo-14-cristo", title: "17. Conexão com Cristo e leitura canônica", kind: "christ_connection", confidence: "high", scriptureRefs: ["1 Coríntios 10:1–2", "Hebreus 11:29", "Lucas 9:31"], body: "O Novo Testamento retoma a travessia como parte da memória da redenção de Israel. Em 1 Coríntios 10:1–2, Paulo emprega linguagem tipológica ao falar da nuvem e do mar; em Hebreus 11:29, a travessia é lembrada no contexto da fé. Essas conexões são explícitas e oferecem uma base segura para a leitura cristã.\n\nA obra de Cristo é o centro da esperança cristã e a libertação do êxodo integra a história bíblica da redenção. A conexão deve ser construída pelo testemunho do conjunto das Escrituras, sem afirmar que cada elemento físico — como cada margem, roda ou rajada de vento — representa individualmente um aspecto de Jesus. A tipologia bíblica não é licença para alegorias arbitrárias." },
+    { id: "exodo-14-aplicacao", title: "18. Aplicações para a vida e a comunidade", kind: "application", confidence: "high", scriptureRefs: ["Êxodo 14:13–15", "Salmo 106:7–12"], body: "1. **Recordar a fidelidade de Deus:** a memória da libertação ajuda a comunidade a interpretar o presente sem apagar o passado.\n\n2. **Levar o medo a Deus:** a narrativa não esconde a angústia do povo; ela mostra a necessidade de confiança amadurecida.\n\n3. **Unir fé e obediência:** depois da palavra de confiança, Israel recebe a ordem de avançar.\n\n4. **Não romantizar a opressão:** o Egito é cenário de escravidão e perseguição; a libertação tem dimensão concreta.\n\n5. **Praticar humildade interpretativa:** reconhecer debates históricos e geográficos não enfraquece a leitura; impede que hipóteses sejam ensinadas como Escritura.\n\n6. **Não fazer promessas indevidas:** o capítulo não garante que todo sofrimento contemporâneo terminará com uma intervenção espetacular no prazo desejado." },
+    { id: "exodo-14-cuidados", title: "19. Cuidados exegéticos e pastorais", kind: "caution", confidence: "high", scriptureRefs: ["Êxodo 14:1–31"], body: "- Não identifique com certeza moderna a localização do mar ou dos acampamentos sem qualificar a hipótese.\n- Não invente o nome de Faraó, a data absoluta do êxodo ou o total de soldados.\n- Não reduza o vento oriental a uma explicação que o texto não apresenta; tampouco ignore que ele é mencionado.\n- Não transforme “o Senhor pelejará por vós” em regra de passividade para qualquer situação.\n- Não use o juízo narrado para justificar violência religiosa, perseguição ou vingança atual.\n- Não trate o medo de Israel como motivo para humilhar pessoas em sofrimento.\n- Não afirme que todo problema moderno é um equivalente direto do Egito ou que todo livramento terá a mesma forma.\n- Diferencie afirmação textual, reconstrução histórica, interpretação teológica e aplicação pastoral." },
+    { id: "exodo-14-resumo", title: "20. Resumo para revisão", kind: "summary", confidence: "high", scriptureRefs: ["Êxodo 14:1–31"], body: "Deus conduz Israel a um lugar aparentemente vulnerável. Faraó persegue o povo com carros e tropas. Israel teme e protesta; Moisés anuncia a salvação do Senhor. Deus manda o povo avançar, coloca a coluna entre os acampamentos, abre caminho pelo mar mediante forte vento oriental e conduz Israel em terra seca. Os egípcios perseguem, são confundidos e perecem quando as águas retornam. Israel reconhece a grande ação de Deus, teme ao Senhor e crê nele e em Moisés.\n\n**Ideia central:** o Senhor é o libertador de Israel; sua ação vence o poder opressor e chama o povo à confiança." },
+    { id: "exodo-14-exercicios", title: "21. Exercícios de fixação e aprofundamento", kind: "exercise", confidence: "high", scriptureRefs: ["Êxodo 14:1–31"], body: "**Exercício 1 — Observação:** divida o capítulo em oito unidades e registre em cada uma os personagens, ações e falas principais.\n\n**Exercício 2 — Interpretação:** explique a relação entre 14:13–14 e 14:15. Por que a confiança não exclui a obediência?\n\n**Exercício 3 — Contexto:** compare Êxodo 14:21–31 com o cântico de Êxodo 15. O que o cântico destaca sobre a travessia?\n\n**Exercício 4 — Termos:** pesquise Yam Suf e rûaḥ qādîm em ferramentas lexicais confiáveis. Registre possibilidades de tradução e limites de certeza.\n\n**Exercício 5 — Leitura canônica:** explique como 1 Coríntios 10:1–2 e Hebreus 11:29 retomam a travessia.\n\n**Exercício 6 — Aplicação:** escreva uma aplicação pastoral que console pessoas com medo sem prometer um resultado que o capítulo não promete." },
+    { id: "exodo-14-oficina", title: "22. Oficina do pregador: preparando uma mensagem expositiva", kind: "sermon", confidence: "high", scriptureRefs: ["Êxodo 14:1–31"], body: "**Tema:** O Senhor liberta seu povo diante do mar.\n\n**Proposição:** quando o povo de Deus parece sem saída diante do poder opressor, a narrativa de Êxodo 14 revela que a libertação pertence ao Senhor e chama seu povo a confiar e obedecer à sua direção.\n\n**Esboço possível:**\n1. O caminho que parece sem saída (vv. 1–12): direção divina, perseguição e medo.\n2. A palavra que chama à confiança e ao avanço (vv. 13–20): promessa, ordem e proteção.\n3. A libertação que revela o Senhor (vv. 21–31): travessia, derrota dos perseguidores e fé.\n\n**Trabalho exegético:** explique cada movimento a partir dos versículos; contextualize o medo de Israel; mostre a tensão entre soberania divina e responsabilidade de Faraó; esclareça os debates geográficos sem transformar hipótese em certeza; conecte o texto ao testemunho canônico e a Cristo com base em 1 Coríntios 10:1–2 e Hebreus 11:29.\n\n**Aplicação pastoral:** convide à confiança e à obediência sem manipular pessoas em sofrimento, prometer milagres específicos ou usar a narrativa para legitimar violência." },
+    { id: "exodo-14-glossario-aplicado", title: "23. Glossário de conceitos bíblicos", kind: "glossary", confidence: "high", scriptureRefs: ["Êxodo 14:4", "Êxodo 14:13–14", "Êxodo 14:31"], body: "**Libertação:** ação pela qual alguém é retirado de uma condição de opressão ou perigo.\n\n**Salvação:** no contexto, livramento concreto concedido pelo Senhor; no conjunto bíblico, o termo desenvolve um campo teológico mais amplo.\n\n**Temor do Senhor:** resposta de reverência, reconhecimento da autoridade divina e confiança obediente; o contexto determina a nuance.\n\n**Soberania:** autoridade e governo de Deus sobre a história.\n\n**Tipologia:** relação bíblica em que um acontecimento anterior é retomado à luz de uma realidade posterior, conforme o próprio testemunho das Escrituras. Não equivale a atribuir significados secretos a cada detalhe." },
+    { id: "exodo-14-perguntas-pregador", title: "24. Perguntas para o professor e pregador", kind: "assessment", confidence: "high", scriptureRefs: ["Êxodo 14:1–31"], body: "1. A ideia central da aula pode ser demonstrada diretamente pelo texto?\n2. A explicação acompanha a sequência narrativa ou salta para aplicações desconectadas?\n3. Os dados geográficos, militares e cronológicos foram apresentados com o grau correto de certeza?\n4. A relação entre vento e ação divina foi explicada sem criar uma falsa oposição?\n5. A soberania de Deus e a responsabilidade de Faraó foram preservadas?\n6. A violência do juízo foi tratada com seriedade e sem incitação contemporânea?\n7. A conexão com Cristo está apoiada no desenvolvimento canônico, especialmente em 1 Coríntios 10:1–2 e Hebreus 11:29?\n8. A aplicação consola e orienta sem prometer resultados que o texto não garante?" },
+    { id: "exodo-14-oracao", title: "25. Oração final", kind: "prayer", confidence: "high", scriptureRefs: ["Êxodo 14:13–31"], body: "Senhor Deus, reconhecemos que a libertação de Israel foi obra tua e que tua Palavra nos chama a confiar em ti. Dá-nos discernimento para compreender a Escritura com fidelidade, coragem para obedecer ao que revelas e humildade para reconhecer os limites do nosso conhecimento. Sustenta os que enfrentam medo e opressão; ensina tua igreja a agir com justiça, misericórdia e esperança. Que a memória da redenção nos conduza a Cristo e a uma fé perseverante. Amém." }
   ]
 };
