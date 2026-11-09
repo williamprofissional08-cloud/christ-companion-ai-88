@@ -69,10 +69,7 @@ export const exodus12Study: StudyContent = {
     {
       "id": "exodo-12-1",
       "title": "1. Um novo começo no calendário (12:1–2),A libertação reorganiza a memória do povo: o mês do acontecimento passa a marcar o princípio dos meses. Deus não apenas retira Israel do Egito; forma uma comunidade que contará sua história a partir da redenção.",
-      "body": [
-        "O cordeiro e a refeição familiar (12:3–11)",
-        "A família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer."
-      ],
+      "body": "O cordeiro e a refeição familiar (12:3–11)\n\nA família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer.",
       "kind": "observation",
       "confidence": "high",
       "scriptureRefs": [
@@ -82,10 +79,7 @@ export const exodus12Study: StudyContent = {
     {
       "id": "exodo-12-2",
       "title": "2. Um novo começo no calendário (12:1–2),A libertação reorganiza a memória do povo: o mês do acontecimento passa a marcar o princípio dos meses. Deus não apenas retira Israel do Egito; forma uma comunidade que contará sua história a partir da redenção.",
-      "body": [
-        "O cordeiro e a refeição familiar (12:3–11)",
-        "A família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer."
-      ],
+      "body": "O cordeiro e a refeição familiar (12:3–11)\n\nA família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -95,10 +89,7 @@ export const exodus12Study: StudyContent = {
     {
       "id": "exodo-12-3",
       "title": "3. Um novo começo no calendário (12:1–2),A libertação reorganiza a memória do povo: o mês do acontecimento passa a marcar o princípio dos meses. Deus não apenas retira Israel do Egito; forma uma comunidade que contará sua história a partir da redenção.",
-      "body": [
-        "O cordeiro e a refeição familiar (12:3–11)",
-        "A família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer."
-      ],
+      "body": "O cordeiro e a refeição familiar (12:3–11)\n\nA família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -108,10 +99,7 @@ export const exodus12Study: StudyContent = {
     {
       "id": "exodo-12-4",
       "title": "4. Um novo começo no calendário (12:1–2),A libertação reorganiza a memória do povo: o mês do acontecimento passa a marcar o princípio dos meses. Deus não apenas retira Israel do Egito; forma uma comunidade que contará sua história a partir da redenção.",
-      "body": [
-        "O cordeiro e a refeição familiar (12:3–11)",
-        "A família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer."
-      ],
+      "body": "O cordeiro e a refeição familiar (12:3–11)\n\nA família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -121,10 +109,7 @@ export const exodus12Study: StudyContent = {
     {
       "id": "exodo-12-5",
       "title": "5. Um novo começo no calendário (12:1–2),A libertação reorganiza a memória do povo: o mês do acontecimento passa a marcar o princípio dos meses. Deus não apenas retira Israel do Egito; forma uma comunidade que contará sua história a partir da redenção.",
-      "body": [
-        "O cordeiro e a refeição familiar (12:3–11)",
-        "A família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer."
-      ],
+      "body": "O cordeiro e a refeição familiar (12:3–11)\n\nA família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -134,10 +119,7 @@ export const exodus12Study: StudyContent = {
     {
       "id": "exodo-12-6",
       "title": "6. Um novo começo no calendário (12:1–2),A libertação reorganiza a memória do povo: o mês do acontecimento passa a marcar o princípio dos meses. Deus não apenas retira Israel do Egito; forma uma comunidade que contará sua história a partir da redenção.",
-      "body": [
-        "O cordeiro e a refeição familiar (12:3–11)",
-        "A família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer."
-      ],
+      "body": "O cordeiro e a refeição familiar (12:3–11)\n\nA família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -147,10 +129,7 @@ export const exodus12Study: StudyContent = {
     {
       "id": "exodo-12-7",
       "title": "7. Um novo começo no calendário (12:1–2),A libertação reorganiza a memória do povo: o mês do acontecimento passa a marcar o princípio dos meses. Deus não apenas retira Israel do Egito; forma uma comunidade que contará sua história a partir da redenção.",
-      "body": [
-        "O cordeiro e a refeição familiar (12:3–11)",
-        "A família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer."
-      ],
+      "body": "O cordeiro e a refeição familiar (12:3–11)\n\nA família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -160,10 +139,7 @@ export const exodus12Study: StudyContent = {
     {
       "id": "exodo-12-8",
       "title": "8. Um novo começo no calendário (12:1–2),A libertação reorganiza a memória do povo: o mês do acontecimento passa a marcar o princípio dos meses. Deus não apenas retira Israel do Egito; forma uma comunidade que contará sua história a partir da redenção.",
-      "body": [
-        "O cordeiro e a refeição familiar (12:3–11)",
-        "A família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer."
-      ],
+      "body": "O cordeiro e a refeição familiar (12:3–11)\n\nA família separa um animal sem defeito, prepara-o e come a refeição com ervas amargas e pães sem fermento. A prontidão — cintos, sandálias e cajado — expressa que a libertação está prestes a acontecer.",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
