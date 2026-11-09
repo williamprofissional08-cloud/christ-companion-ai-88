@@ -70,7 +70,9 @@ Para a pregação, o capítulo pode ser organizado em quatro movimentos: a prome
     "Salmo 105:23–25 — A entrada de Israel no Egito e o crescimento do povo.",
     "Salmo 106:8–12 — Deus age por causa de seu nome e conduz Israel pelo mar.",
     "Atos 7:17–19 — Estêvão recorda o crescimento de Israel e a opressão no Egito.",
-    "Hebreus 11:23 — A fé dos pais de Moisés ao preservá-lo.",\n    "João 8:34–36 — Jesus ensina sobre a libertação da escravidão do pecado.",\n    "Colossenses 1:13–14 — Paulo descreve a redenção e a transferência para o reino do Filho."
+    "Hebreus 11:23 — A fé dos pais de Moisés ao preservá-lo.",
+    "João 8:34–36 — Jesus ensina sobre a libertação da escravidão do pecado.",
+    "Colossenses 1:13–14 — Paulo descreve a redenção e a transferência para o reino do Filho."
   ],
   questions: [
     "Quais nomes são recordados no início do capítulo e por que essa lista conecta Êxodo a Gênesis?",
@@ -96,7 +98,8 @@ Para a pregação, o capítulo pode ser organizado em quatro movimentos: a prome
     "Como aplicar o exemplo das parteiras sem transformar a narrativa em justificativa simplista para toda forma de desobediência?",
     "Por que não devemos romantizar a escravidão ao falar da multiplicação do povo?",
     "Como Êxodo 1 prepara o nascimento e a preservação de Moisés em Êxodo 2?",
-    "Como o tema do êxodo contribui para a compreensão cristã da libertação em Cristo?",\n    "Quais textos do Novo Testamento sustentam a aplicação cristã do tema da libertação (João 8:34–36; Colossenses 1:13–14)?",
+    "Como o tema do êxodo contribui para a compreensão cristã da libertação em Cristo?",
+    "Quais textos do Novo Testamento sustentam a aplicação cristã do tema da libertação (João 8:34–36; Colossenses 1:13–14)?",
     "Prepare uma mensagem expositiva com o tema: “O temor de Deus acima do medo do poder”."
   ],
   conclusion: "Êxodo 1 apresenta a passagem de uma família acolhida no Egito para um povo submetido à escravidão. A nova política do faraó nasce do medo e se transforma em exploração e tentativa de extermínio. Apesar disso, o povo continua a crescer, e duas parteiras demonstram que a autoridade do rei não pode exigir que se pratique o mal. O capítulo não minimiza o sofrimento de Israel, mas afirma que a opressão não encerra a promessa de Deus. A narrativa prepara o leitor para o nascimento de Moisés e para o agir libertador do Senhor.",
