@@ -4,11 +4,7 @@ import type { StudyContent } from "../types";
 export const genesis5Study: StudyContent = {
   version: 1,
   depth: "deep",
-  intro: "Gênesis 5 apresenta a genealogia de Adão até Noé. À primeira vista, a repetição de nomes, idades e fórmulas de nascimento e morte pode parecer apenas uma lista. Porém, o capítulo retoma a criação à imagem de Deus, mostra a continuidade da humanidade, registra a realidade da morte e destaca a caminhada de Enoque com Deus. A esperança ligada ao nascimento de Noé prepara a narrativa do dilúvio.
-
-**Ideia central [SÍNTESE INTERPRETATIVA]:** a humanidade continua portando a dignidade recebida na criação, mas vive sob a realidade da morte; em meio a essa condição, Enoque é lembrado por andar com Deus, e a linhagem chega a Noé, associado à esperança de alívio diante do trabalho penoso.
-
-Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução livre de estudo, não uma tradução bíblica publicada.",
+  intro: "Gênesis 5 apresenta a genealogia de Adão até Noé. À primeira vista, a repetição de nomes, idades e fórmulas de nascimento e morte pode parecer apenas uma lista. Porém, o capítulo retoma a criação à imagem de Deus, mostra a continuidade da humanidade, registra a realidade da morte e destaca a caminhada de Enoque com Deus. A esperança ligada ao nascimento de Noé prepara a narrativa do dilúvio.\n\n**Ideia central [SÍNTESE INTERPRETATIVA]:** a humanidade continua portando a dignidade recebida na criação, mas vive sob a realidade da morte; em meio a essa condição, Enoque é lembrado por andar com Deus, e a linhagem chega a Noé, associado à esperança de alívio diante do trabalho penoso.\n\nLeia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução livre de estudo, não uma tradução bíblica publicada.",
   historicalContext: "Gênesis 5 vem depois do relato de Caim e Abel (Gênesis 4) e antes da corrupção da humanidade e do dilúvio (Gênesis 6–9). A genealogia acompanha a linhagem de Sete, apresentada no fim do capítulo anterior. O texto organiza gerações por fórmulas recorrentes: idade ao gerar um descendente, anos vividos depois disso, outros filhos e filhas e idade ao morrer. A genealogia não fornece, por si só, uma datação moderna consensual; cálculos cronológicos dependem de decisões sobre os números e as tradições textuais. O capítulo deve ser lido primeiro em sua função literária e teológica dentro de Gênesis.",
   keyPoints: [
     { title: "A dignidade humana permanece ligada à imagem de Deus", text: "O capítulo retoma a criação do ser humano à semelhança de Deus e a distinção entre homem e mulher (5:1–2)." },
@@ -50,73 +46,7 @@ Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução liv
       kind: "scripture",
       confidence: "high",
       scriptureRefs: ["Gênesis 5:1-32"],
-      body: "**Texto de estudo em tradução livre para linguagem atual.** Esta redação procura acompanhar o sentido do texto, mas não é uma edição oficial de Almeida nem substitui a tradução bíblica utilizada pelo aluno. Compare os nomes, números e expressões com sua Bíblia.
-
-**1** Este é o registro da descendência de Adão. Quando Deus criou o ser humano, fez-o à semelhança de Deus.
-
-**2** Criou-os homem e mulher, abençoou-os e, no dia em que foram criados, chamou-os de humanidade.
-
-**3** Adão viveu cento e trinta anos e gerou um filho à sua semelhança, conforme sua imagem, e lhe deu o nome de Sete.
-
-**4** Depois do nascimento de Sete, Adão viveu oitocentos anos e teve outros filhos e filhas.
-
-**5** Todos os dias da vida de Adão foram novecentos e trinta anos; e morreu.
-
-**6** Sete viveu cento e cinco anos e gerou Enos.
-
-**7** Depois do nascimento de Enos, Sete viveu oitocentos e sete anos e teve outros filhos e filhas.
-
-**8** Todos os dias de Sete foram novecentos e doze anos; e morreu.
-
-**9** Enos viveu noventa anos e gerou Cainã.
-
-**10** Depois do nascimento de Cainã, Enos viveu oitocentos e quinze anos e teve outros filhos e filhas.
-
-**11** Todos os dias de Enos foram novecentos e cinco anos; e morreu.
-
-**12** Cainã viveu setenta anos e gerou Maalalel.
-
-**13** Depois do nascimento de Maalalel, Cainã viveu oitocentos e quarenta anos e teve outros filhos e filhas.
-
-**14** Todos os dias de Cainã foram novecentos e dez anos; e morreu.
-
-**15** Maalalel viveu sessenta e cinco anos e gerou Jarede.
-
-**16** Depois do nascimento de Jarede, Maalalel viveu oitocentos e trinta anos e teve outros filhos e filhas.
-
-**17** Todos os dias de Maalalel foram oitocentos e noventa e cinco anos; e morreu.
-
-**18** Jarede viveu cento e sessenta e dois anos e gerou Enoque.
-
-**19** Depois do nascimento de Enoque, Jarede viveu oitocentos anos e teve outros filhos e filhas.
-
-**20** Todos os dias de Jarede foram novecentos e sessenta e dois anos; e morreu.
-
-**21** Enoque viveu sessenta e cinco anos e gerou Matusalém.
-
-**22** Depois do nascimento de Matusalém, Enoque andou com Deus por trezentos anos e teve outros filhos e filhas.
-
-**23** Todos os dias de Enoque foram trezentos e sessenta e cinco anos.
-
-**24** Enoque andou com Deus; então já não foi encontrado, porque Deus o tomou para si.
-
-**25** Matusalém viveu cento e oitenta e sete anos e gerou Lameque.
-
-**26** Depois do nascimento de Lameque, Matusalém viveu setecentos e oitenta e dois anos e teve outros filhos e filhas.
-
-**27** Todos os dias de Matusalém foram novecentos e sessenta e nove anos; e morreu.
-
-**28** Lameque viveu cento e oitenta e dois anos e gerou um filho.
-
-**29** Deu-lhe o nome de Noé, dizendo: Este nos trará consolo em relação ao nosso trabalho e ao esforço de nossas mãos, por causa do solo que o SENHOR amaldiçoou.
-
-**30** Depois do nascimento de Noé, Lameque viveu quinhentos e noventa e cinco anos e teve outros filhos e filhas.
-
-**31** Todos os dias de Lameque foram setecentos e setenta e sete anos; e morreu.
-
-**32** Noé tinha quinhentos anos quando se tornou pai de Sem, Cam e Jafé.
-
-**Nota de leitura:** os nomes podem aparecer com grafias diferentes entre traduções em português (por exemplo, Cainã/Quenã e Maalalel/Maalaleel). Os números e a ordem genealógica devem ser conferidos na versão bíblica do aluno. A expressão de 5:24 sobre Enoque é breve e não descreve os detalhes do acontecimento."
+      body: "**Texto de estudo em tradução livre para linguagem atual.** Esta redação procura acompanhar o sentido do texto, mas não é uma edição oficial de Almeida nem substitui a tradução bíblica utilizada pelo aluno. Compare os nomes, números e expressões com sua Bíblia.\n\n**1** Este é o registro da descendência de Adão. Quando Deus criou o ser humano, fez-o à semelhança de Deus.\n\n**2** Criou-os homem e mulher, abençoou-os e, no dia em que foram criados, chamou-os de humanidade.\n\n**3** Adão viveu cento e trinta anos e gerou um filho à sua semelhança, conforme sua imagem, e lhe deu o nome de Sete.\n\n**4** Depois do nascimento de Sete, Adão viveu oitocentos anos e teve outros filhos e filhas.\n\n**5** Todos os dias da vida de Adão foram novecentos e trinta anos; e morreu.\n\n**6** Sete viveu cento e cinco anos e gerou Enos.\n\n**7** Depois do nascimento de Enos, Sete viveu oitocentos e sete anos e teve outros filhos e filhas.\n\n**8** Todos os dias de Sete foram novecentos e doze anos; e morreu.\n\n**9** Enos viveu noventa anos e gerou Cainã.\n\n**10** Depois do nascimento de Cainã, Enos viveu oitocentos e quinze anos e teve outros filhos e filhas.\n\n**11** Todos os dias de Enos foram novecentos e cinco anos; e morreu.\n\n**12** Cainã viveu setenta anos e gerou Maalalel.\n\n**13** Depois do nascimento de Maalalel, Cainã viveu oitocentos e quarenta anos e teve outros filhos e filhas.\n\n**14** Todos os dias de Cainã foram novecentos e dez anos; e morreu.\n\n**15** Maalalel viveu sessenta e cinco anos e gerou Jarede.\n\n**16** Depois do nascimento de Jarede, Maalalel viveu oitocentos e trinta anos e teve outros filhos e filhas.\n\n**17** Todos os dias de Maalalel foram oitocentos e noventa e cinco anos; e morreu.\n\n**18** Jarede viveu cento e sessenta e dois anos e gerou Enoque.\n\n**19** Depois do nascimento de Enoque, Jarede viveu oitocentos anos e teve outros filhos e filhas.\n\n**20** Todos os dias de Jarede foram novecentos e sessenta e dois anos; e morreu.\n\n**21** Enoque viveu sessenta e cinco anos e gerou Matusalém.\n\n**22** Depois do nascimento de Matusalém, Enoque andou com Deus por trezentos anos e teve outros filhos e filhas.\n\n**23** Todos os dias de Enoque foram trezentos e sessenta e cinco anos.\n\n**24** Enoque andou com Deus; então já não foi encontrado, porque Deus o tomou para si.\n\n**25** Matusalém viveu cento e oitenta e sete anos e gerou Lameque.\n\n**26** Depois do nascimento de Lameque, Matusalém viveu setecentos e oitenta e dois anos e teve outros filhos e filhas.\n\n**27** Todos os dias de Matusalém foram novecentos e sessenta e nove anos; e morreu.\n\n**28** Lameque viveu cento e oitenta e dois anos e gerou um filho.\n\n**29** Deu-lhe o nome de Noé, dizendo: Este nos trará consolo em relação ao nosso trabalho e ao esforço de nossas mãos, por causa do solo que o SENHOR amaldiçoou.\n\n**30** Depois do nascimento de Noé, Lameque viveu quinhentos e noventa e cinco anos e teve outros filhos e filhas.\n\n**31** Todos os dias de Lameque foram setecentos e setenta e sete anos; e morreu.\n\n**32** Noé tinha quinhentos anos quando se tornou pai de Sem, Cam e Jafé.\n\n**Nota de leitura:** os nomes podem aparecer com grafias diferentes entre traduções em português (por exemplo, Cainã/Quenã e Maalalel/Maalaleel). Os números e a ordem genealógica devem ser conferidos na versão bíblica do aluno. A expressão de 5:24 sobre Enoque é breve e não descreve os detalhes do acontecimento."
     },
     {
       id: "introducao",
@@ -124,17 +54,7 @@ Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução liv
       kind: "introduction",
       confidence: "high",
       scriptureRefs: ["Gênesis 4:25-26", "Gênesis 5:1-32", "Gênesis 6:1-9"],
-      body: "O capítulo parece repetir uma fórmula: alguém viveu certa idade, gerou um filho, teve outros filhos e filhas, viveu mais anos e morreu. Essa repetição, porém, tem propósito. Ela liga a geração de Adão à geração de Noé, preserva a memória das gerações e faz o leitor perceber que a promessa de continuidade da humanidade convive com a realidade da morte.
-
-**Objetivos de aprendizagem:**
-- Identificar a função da genealogia no fluxo de Gênesis.
-- Explicar a retomada da imagem de Deus em 5:1–3.
-- Reconhecer a estrutura repetitiva e a exceção narrativa de Enoque.
-- Interpretar com cuidado a frase 'andou com Deus'.
-- Compreender a fala de Lameque sobre Noé sem antecipar o restante da narrativa.
-- Preparar uma exposição bíblica fiel, evitando cálculos e afirmações que o texto não sustenta.
-
-**Método:** observe primeiro o que é repetido, depois o que é diferente. Em genealogias, a repetição é parte da mensagem; as exceções também merecem atenção."
+      body: "O capítulo parece repetir uma fórmula: alguém viveu certa idade, gerou um filho, teve outros filhos e filhas, viveu mais anos e morreu. Essa repetição, porém, tem propósito. Ela liga a geração de Adão à geração de Noé, preserva a memória das gerações e faz o leitor perceber que a promessa de continuidade da humanidade convive com a realidade da morte.\n\n**Objetivos de aprendizagem:**\n- Identificar a função da genealogia no fluxo de Gênesis.\n- Explicar a retomada da imagem de Deus em 5:1–3.\n- Reconhecer a estrutura repetitiva e a exceção narrativa de Enoque.\n- Interpretar com cuidado a frase 'andou com Deus'.\n- Compreender a fala de Lameque sobre Noé sem antecipar o restante da narrativa.\n- Preparar uma exposição bíblica fiel, evitando cálculos e afirmações que o texto não sustenta.\n\n**Método:** observe primeiro o que é repetido, depois o que é diferente. Em genealogias, a repetição é parte da mensagem; as exceções também merecem atenção."
     },
     {
       id: "estrutura",
@@ -142,14 +62,7 @@ Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução liv
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 5:1-32"],
-      body: "O capítulo pode ser organizado em cinco movimentos:
-1. **5:1–3 — Criação e transmissão da imagem:** o narrador retoma a criação de homem e mulher e apresenta Sete como filho à imagem e semelhança de Adão.
-2. **5:4–20 — Primeiras gerações:** Adão, Sete, Enos, Cainã, Maalalel e Jarede aparecem na fórmula genealógica, encerrada pela declaração de morte.
-3. **5:21–24 — Enoque:** a repetição é interrompida pela ênfase em sua caminhada com Deus e pelo fato de Deus o tomar.
-4. **5:25–27 — Matusalém:** a fórmula retorna, incluindo a idade de 969 anos e a declaração de morte.
-5. **5:28–32 — Lameque e Noé:** o nome de Noé é explicado por uma esperança de consolo; o capítulo termina mencionando Sem, Cam e Jafé.
-
-**Observação:** a genealogia é seletiva. A própria repetição 'teve outros filhos e filhas' mostra que a lista não pretende registrar todos os descendentes. Ela acompanha uma linha específica da narrativa."
+      body: "O capítulo pode ser organizado em cinco movimentos:\n1. **5:1–3 — Criação e transmissão da imagem:** o narrador retoma a criação de homem e mulher e apresenta Sete como filho à imagem e semelhança de Adão.\n2. **5:4–20 — Primeiras gerações:** Adão, Sete, Enos, Cainã, Maalalel e Jarede aparecem na fórmula genealógica, encerrada pela declaração de morte.\n3. **5:21–24 — Enoque:** a repetição é interrompida pela ênfase em sua caminhada com Deus e pelo fato de Deus o tomar.\n4. **5:25–27 — Matusalém:** a fórmula retorna, incluindo a idade de 969 anos e a declaração de morte.\n5. **5:28–32 — Lameque e Noé:** o nome de Noé é explicado por uma esperança de consolo; o capítulo termina mencionando Sem, Cam e Jafé.\n\n**Observação:** a genealogia é seletiva. A própria repetição 'teve outros filhos e filhas' mostra que a lista não pretende registrar todos os descendentes. Ela acompanha uma linha específica da narrativa."
     },
     {
       id: "imagem-de-deus",
@@ -157,23 +70,7 @@ Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução liv
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 1:26-28", "Gênesis 5:1-3", "Tiago 3:9"],
-      body: "**Texto bíblico — Gênesis 5:1–3 (tradução livre de estudo)**
-
-**1** Este é o registro da descendência de Adão. Quando Deus criou o ser humano, fez-o à semelhança de Deus.
-
-**2** Criou-os homem e mulher, abençoou-os e, no dia em que foram criados, chamou-os de humanidade.
-
-**3** Adão viveu cento e trinta anos e gerou um filho à sua semelhança, conforme sua imagem, e lhe deu o nome de Sete.
-
-**Versículos 1–2 — [TEXTO]:** o narrador retoma deliberadamente a linguagem da criação de Gênesis 1:26–28. Homem e mulher são apresentados como criaturas abençoadas por Deus e pertencentes à humanidade criada por Ele.
-
-**[INTERPRETAÇÃO]:** a repetição da imagem de Deus antes da genealogia confere dignidade à história que será contada. A lista não é apenas sucessão biológica: trata de seres humanos cuja origem e valor estão relacionados ao Criador. Tiago 3:9 retoma a linguagem da semelhança divina ao advertir contra amaldiçoar pessoas.
-
-**Versículo 3 — [TEXTO]:** Adão gera Sete à sua semelhança e imagem. A frase não cancela a afirmação anterior sobre a imagem de Deus; ela descreve a relação entre pai e filho dentro da genealogia.
-
-**Cuidado interpretativo:** não conclua que a imagem de Deus desapareceu após a queda, nem que a expressão 'à imagem de Adão' significa que Sete recebeu apenas pecado e nenhuma dignidade. O capítulo mantém juntas a referência à criação divina e a continuidade da família humana.
-
-**[APLICAÇÃO]:** trate cada pessoa com dignidade. A linguagem da imagem de Deus não pode ser usada para justificar desprezo, discriminação ou violência."
+      body: "**Texto bíblico — Gênesis 5:1–3 (tradução livre de estudo)**\n\n**1** Este é o registro da descendência de Adão. Quando Deus criou o ser humano, fez-o à semelhança de Deus.\n\n**2** Criou-os homem e mulher, abençoou-os e, no dia em que foram criados, chamou-os de humanidade.\n\n**3** Adão viveu cento e trinta anos e gerou um filho à sua semelhança, conforme sua imagem, e lhe deu o nome de Sete.\n\n**Versículos 1–2 — [TEXTO]:** o narrador retoma deliberadamente a linguagem da criação de Gênesis 1:26–28. Homem e mulher são apresentados como criaturas abençoadas por Deus e pertencentes à humanidade criada por Ele.\n\n**[INTERPRETAÇÃO]:** a repetição da imagem de Deus antes da genealogia confere dignidade à história que será contada. A lista não é apenas sucessão biológica: trata de seres humanos cuja origem e valor estão relacionados ao Criador. Tiago 3:9 retoma a linguagem da semelhança divina ao advertir contra amaldiçoar pessoas.\n\n**Versículo 3 — [TEXTO]:** Adão gera Sete à sua semelhança e imagem. A frase não cancela a afirmação anterior sobre a imagem de Deus; ela descreve a relação entre pai e filho dentro da genealogia.\n\n**Cuidado interpretativo:** não conclua que a imagem de Deus desapareceu após a queda, nem que a expressão 'à imagem de Adão' significa que Sete recebeu apenas pecado e nenhuma dignidade. O capítulo mantém juntas a referência à criação divina e a continuidade da família humana.\n\n**[APLICAÇÃO]:** trate cada pessoa com dignidade. A linguagem da imagem de Deus não pode ser usada para justificar desprezo, discriminação ou violência."
     },
     {
       id: "formula-genealogica",
@@ -181,35 +78,7 @@ Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução liv
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 5:4-20", "Gênesis 2:17", "Gênesis 3:17-19", "Romanos 5:12"],
-      body: "**Texto bíblico — Gênesis 5:4–20 (tradução livre de estudo)**
-
-**4** Depois do nascimento de Sete, Adão viveu oitocentos anos e teve outros filhos e filhas.
-**5** Todos os dias da vida de Adão foram novecentos e trinta anos; e morreu.
-**6** Sete viveu cento e cinco anos e gerou Enos.
-**7** Depois do nascimento de Enos, Sete viveu oitocentos e sete anos e teve outros filhos e filhas.
-**8** Todos os dias de Sete foram novecentos e doze anos; e morreu.
-**9** Enos viveu noventa anos e gerou Cainã.
-**10** Depois do nascimento de Cainã, Enos viveu oitocentos e quinze anos e teve outros filhos e filhas.
-**11** Todos os dias de Enos foram novecentos e cinco anos; e morreu.
-**12** Cainã viveu setenta anos e gerou Maalalel.
-**13** Depois do nascimento de Maalalel, Cainã viveu oitocentos e quarenta anos e teve outros filhos e filhas.
-**14** Todos os dias de Cainã foram novecentos e dez anos; e morreu.
-**15** Maalalel viveu sessenta e cinco anos e gerou Jarede.
-**16** Depois do nascimento de Jarede, Maalalel viveu oitocentos e trinta anos e teve outros filhos e filhas.
-**17** Todos os dias de Maalalel foram oitocentos e noventa e cinco anos; e morreu.
-**18** Jarede viveu cento e sessenta e dois anos e gerou Enoque.
-**19** Depois do nascimento de Enoque, Jarede viveu oitocentos anos e teve outros filhos e filhas.
-**20** Todos os dias de Jarede foram novecentos e sessenta e dois anos; e morreu.
-
-**Como a fórmula funciona:** cada geração é apresentada por idade ao gerar o descendente nomeado, anos vividos depois, menção a outros filhos e filhas e idade total seguida de 'e morreu'. A repetição permite acompanhar a sequência e, ao mesmo tempo, cria um ritmo solene.
-
-**[OBSERVAÇÃO TEXTUAL]:** o texto menciona explicitamente outros filhos e filhas, mas seleciona apenas um descendente em cada elo principal da genealogia. Portanto, não é uma lista completa de todos os filhos, nem um censo da população.
-
-**A repetição de 'e morreu':** depois da promessa de vida e da advertência sobre a morte em Gênesis 2–3, a fórmula repetida recorda que a mortalidade passou a marcar a experiência humana. Romanos 5:12–21 desenvolve posteriormente a relação entre pecado e morte na teologia de Paulo; leia o argumento completo, sem tratar Gênesis 5 como se já contivesse todas as formulações do apóstolo.
-
-**Sobre as idades:** os números são parte do texto bíblico e devem ser apresentados com fidelidade. Há debates sobre cronologia, transmissão textual e como relacionar as genealogias com calendários modernos. Não transforme uma soma de idades em data histórica exata sem explicar as premissas adotadas.
-
-**[APLICAÇÃO]:** a repetição da morte convida à seriedade, humildade e responsabilidade. O texto não ensina a medir o valor de uma vida apenas por sua duração."
+      body: "**Texto bíblico — Gênesis 5:4–20 (tradução livre de estudo)**\n\n**4** Depois do nascimento de Sete, Adão viveu oitocentos anos e teve outros filhos e filhas.\n**5** Todos os dias da vida de Adão foram novecentos e trinta anos; e morreu.\n**6** Sete viveu cento e cinco anos e gerou Enos.\n**7** Depois do nascimento de Enos, Sete viveu oitocentos e sete anos e teve outros filhos e filhas.\n**8** Todos os dias de Sete foram novecentos e doze anos; e morreu.\n**9** Enos viveu noventa anos e gerou Cainã.\n**10** Depois do nascimento de Cainã, Enos viveu oitocentos e quinze anos e teve outros filhos e filhas.\n**11** Todos os dias de Enos foram novecentos e cinco anos; e morreu.\n**12** Cainã viveu setenta anos e gerou Maalalel.\n**13** Depois do nascimento de Maalalel, Cainã viveu oitocentos e quarenta anos e teve outros filhos e filhas.\n**14** Todos os dias de Cainã foram novecentos e dez anos; e morreu.\n**15** Maalalel viveu sessenta e cinco anos e gerou Jarede.\n**16** Depois do nascimento de Jarede, Maalalel viveu oitocentos e trinta anos e teve outros filhos e filhas.\n**17** Todos os dias de Maalalel foram oitocentos e noventa e cinco anos; e morreu.\n**18** Jarede viveu cento e sessenta e dois anos e gerou Enoque.\n**19** Depois do nascimento de Enoque, Jarede viveu oitocentos anos e teve outros filhos e filhas.\n**20** Todos os dias de Jarede foram novecentos e sessenta e dois anos; e morreu.\n\n**Como a fórmula funciona:** cada geração é apresentada por idade ao gerar o descendente nomeado, anos vividos depois, menção a outros filhos e filhas e idade total seguida de 'e morreu'. A repetição permite acompanhar a sequência e, ao mesmo tempo, cria um ritmo solene.\n\n**[OBSERVAÇÃO TEXTUAL]:** o texto menciona explicitamente outros filhos e filhas, mas seleciona apenas um descendente em cada elo principal da genealogia. Portanto, não é uma lista completa de todos os filhos, nem um censo da população.\n\n**A repetição de 'e morreu':** depois da promessa de vida e da advertência sobre a morte em Gênesis 2–3, a fórmula repetida recorda que a mortalidade passou a marcar a experiência humana. Romanos 5:12–21 desenvolve posteriormente a relação entre pecado e morte na teologia de Paulo; leia o argumento completo, sem tratar Gênesis 5 como se já contivesse todas as formulações do apóstolo.\n\n**Sobre as idades:** os números são parte do texto bíblico e devem ser apresentados com fidelidade. Há debates sobre cronologia, transmissão textual e como relacionar as genealogias com calendários modernos. Não transforme uma soma de idades em data histórica exata sem explicar as premissas adotadas.\n\n**[APLICAÇÃO]:** a repetição da morte convida à seriedade, humildade e responsabilidade. O texto não ensina a medir o valor de uma vida apenas por sua duração."
     },
     {
       id: "enoch",
@@ -217,24 +86,7 @@ Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução liv
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 5:21-24", "Hebreus 11:5-6", "Judas 14-15"],
-      body: "**Texto bíblico — Gênesis 5:21–24 (tradução livre de estudo)**
-
-**21** Enoque viveu sessenta e cinco anos e gerou Matusalém.
-**22** Depois do nascimento de Matusalém, Enoque andou com Deus por trezentos anos e teve outros filhos e filhas.
-**23** Todos os dias de Enoque foram trezentos e sessenta e cinco anos.
-**24** Enoque andou com Deus; então já não foi encontrado, porque Deus o tomou para si.
-
-**Versículos 21–22 — [TEXTO]:** a expressão 'andou com Deus' é repetida e ocupa lugar de destaque. Em vez de apenas registrar idade, filhos e morte, o narrador destaca a relação de Enoque com Deus.
-
-**[INTERPRETAÇÃO]:** andar com Deus descreve uma vida orientada pela comunhão e fidelidade ao Senhor. Não é uma referência a deslocamento físico, nem uma técnica para obter longevidade. O texto destaca a qualidade da relação com Deus, não uma fórmula de sucesso terreno.
-
-**Versículos 23–24 — [TEXTO]:** a fórmula habitual 'e morreu' não aparece para Enoque. O relato diz que ele andou com Deus e que Deus o tomou. A narrativa é breve e não descreve o mecanismo ou todos os detalhes do acontecimento.
-
-**Hebreus 11:5–6:** o Novo Testamento interpreta a experiência de Enoque em conexão com fé e o testemunho de que agradou a Deus. O versículo seguinte afirma que sem fé é impossível agradar a Deus. Assim, a ênfase cristã não deve ser curiosidade sobre o evento, mas fé que busca a Deus.
-
-**Judas 14–15:** menciona uma profecia associada a Enoque em seu argumento contra a impiedade. Leia a passagem em seu contexto; ela não autoriza atribuir a Gênesis detalhes que o capítulo não apresenta.
-
-**[APLICAÇÃO]:** pergunte não apenas quanto tempo vive, mas como vive diante de Deus. A caminhada com Deus envolve confiança, obediência, perseverança e coerência cotidiana."
+      body: "**Texto bíblico — Gênesis 5:21–24 (tradução livre de estudo)**\n\n**21** Enoque viveu sessenta e cinco anos e gerou Matusalém.\n**22** Depois do nascimento de Matusalém, Enoque andou com Deus por trezentos anos e teve outros filhos e filhas.\n**23** Todos os dias de Enoque foram trezentos e sessenta e cinco anos.\n**24** Enoque andou com Deus; então já não foi encontrado, porque Deus o tomou para si.\n\n**Versículos 21–22 — [TEXTO]:** a expressão 'andou com Deus' é repetida e ocupa lugar de destaque. Em vez de apenas registrar idade, filhos e morte, o narrador destaca a relação de Enoque com Deus.\n\n**[INTERPRETAÇÃO]:** andar com Deus descreve uma vida orientada pela comunhão e fidelidade ao Senhor. Não é uma referência a deslocamento físico, nem uma técnica para obter longevidade. O texto destaca a qualidade da relação com Deus, não uma fórmula de sucesso terreno.\n\n**Versículos 23–24 — [TEXTO]:** a fórmula habitual 'e morreu' não aparece para Enoque. O relato diz que ele andou com Deus e que Deus o tomou. A narrativa é breve e não descreve o mecanismo ou todos os detalhes do acontecimento.\n\n**Hebreus 11:5–6:** o Novo Testamento interpreta a experiência de Enoque em conexão com fé e o testemunho de que agradou a Deus. O versículo seguinte afirma que sem fé é impossível agradar a Deus. Assim, a ênfase cristã não deve ser curiosidade sobre o evento, mas fé que busca a Deus.\n\n**Judas 14–15:** menciona uma profecia associada a Enoque em seu argumento contra a impiedade. Leia a passagem em seu contexto; ela não autoriza atribuir a Gênesis detalhes que o capítulo não apresenta.\n\n**[APLICAÇÃO]:** pergunte não apenas quanto tempo vive, mas como vive diante de Deus. A caminhada com Deus envolve confiança, obediência, perseverança e coerência cotidiana."
     },
     {
       id: "matusalem",
@@ -242,17 +94,7 @@ Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução liv
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 5:25-27"],
-      body: "**Texto bíblico — Gênesis 5:25–27 (tradução livre de estudo)**
-
-**25** Matusalém viveu cento e oitenta e sete anos e gerou Lameque.
-**26** Depois do nascimento de Lameque, Matusalém viveu setecentos e oitenta e dois anos e teve outros filhos e filhas.
-**27** Todos os dias de Matusalém foram novecentos e sessenta e nove anos; e morreu.
-
-**[TEXTO]:** Matusalém é apresentado como o personagem de maior idade explicitamente registrada nesta genealogia: novecentos e sessenta e nove anos. O texto, contudo, não interrompe a narrativa para explicar biologicamente como essa longevidade ocorreu.
-
-**Cuidado com cálculos populares:** algumas leituras tentam estabelecer a data da morte de Matusalém em relação ao dilúvio por meio da soma das idades de Gênesis 5 e 7. O resultado depende da forma de contar os anos, das relações cronológicas assumidas e da tradição textual utilizada. Não apresente cálculos populares como declaração explícita do capítulo.
-
-**[APLICAÇÃO]:** a longevidade não deve ser confundida com aprovação moral automática. O capítulo não informa que Matusalém foi mais justo por ter vivido mais anos. A mensagem da genealogia está no conjunto da história, não em transformar um número em medida de espiritualidade."
+      body: "**Texto bíblico — Gênesis 5:25–27 (tradução livre de estudo)**\n\n**25** Matusalém viveu cento e oitenta e sete anos e gerou Lameque.\n**26** Depois do nascimento de Lameque, Matusalém viveu setecentos e oitenta e dois anos e teve outros filhos e filhas.\n**27** Todos os dias de Matusalém foram novecentos e sessenta e nove anos; e morreu.\n\n**[TEXTO]:** Matusalém é apresentado como o personagem de maior idade explicitamente registrada nesta genealogia: novecentos e sessenta e nove anos. O texto, contudo, não interrompe a narrativa para explicar biologicamente como essa longevidade ocorreu.\n\n**Cuidado com cálculos populares:** algumas leituras tentam estabelecer a data da morte de Matusalém em relação ao dilúvio por meio da soma das idades de Gênesis 5 e 7. O resultado depende da forma de contar os anos, das relações cronológicas assumidas e da tradição textual utilizada. Não apresente cálculos populares como declaração explícita do capítulo.\n\n**[APLICAÇÃO]:** a longevidade não deve ser confundida com aprovação moral automática. O capítulo não informa que Matusalém foi mais justo por ter vivido mais anos. A mensagem da genealogia está no conjunto da história, não em transformar um número em medida de espiritualidade."
     },
     {
       id: "lameque-noe",
@@ -260,25 +102,7 @@ Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução liv
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 5:28-32", "Gênesis 3:17-19", "Gênesis 6:5-9"],
-      body: "**Texto bíblico — Gênesis 5:28–32 (tradução livre de estudo)**
-
-**28** Lameque viveu cento e oitenta e dois anos e gerou um filho.
-**29** Deu-lhe o nome de Noé, dizendo: Este nos trará consolo em relação ao nosso trabalho e ao esforço de nossas mãos, por causa do solo que o SENHOR amaldiçoou.
-**30** Depois do nascimento de Noé, Lameque viveu quinhentos e noventa e cinco anos e teve outros filhos e filhas.
-**31** Todos os dias de Lameque foram setecentos e setenta e sete anos; e morreu.
-**32** Noé tinha quinhentos anos quando se tornou pai de Sem, Cam e Jafé.
-
-**Versículos 28–29 — [TEXTO]:** Lameque dá ao filho o nome de Noé e associa esse nome à esperança de consolo em relação ao trabalho penoso e ao solo amaldiçoado. A fala retoma o cenário de Gênesis 3:17–19, no qual o trabalho da terra é marcado por sofrimento.
-
-**[OBSERVAÇÃO LINGUÍSTICA]:** o nome Noé é relacionado no relato à ideia de descanso/consolo por meio de um jogo de palavras. A relação sonora não deve ser transformada em identidade exata entre todas as raízes hebraicas envolvidas.
-
-**[INTERPRETAÇÃO]:** a fala de Lameque expressa expectativa. O leitor ainda precisa acompanhar Gênesis 6–9 para ver como Noé participa da história do dilúvio e da preservação da vida. Não antecipe que Lameque compreendia todos os acontecimentos futuros.
-
-**Versículos 30–32 — [TEXTO]:** Lameque vive mais 595 anos após o nascimento de Noé; a genealogia registra sua morte e informa que Noé tinha quinhentos anos quando se tornou pai de Sem, Cam e Jafé.
-
-**Cuidado com a ordem dos filhos:** Gênesis 5:32 os nomeia nessa sequência, mas outros textos e detalhes cronológicos levam intérpretes a discutir a idade relativa e a ordem de nascimento. Não deduza automaticamente que Sem nasceu primeiro apenas pela ordem da lista; compare Gênesis 9:24, 10:21 e 11:10 em suas traduções e contexto.
-
-**[APLICAÇÃO]:** a esperança bíblica não ignora o trabalho difícil nem a realidade da maldição descrita em Gênesis. Ela espera a ação de Deus sem fingir que o sofrimento já desapareceu."
+      body: "**Texto bíblico — Gênesis 5:28–32 (tradução livre de estudo)**\n\n**28** Lameque viveu cento e oitenta e dois anos e gerou um filho.\n**29** Deu-lhe o nome de Noé, dizendo: Este nos trará consolo em relação ao nosso trabalho e ao esforço de nossas mãos, por causa do solo que o SENHOR amaldiçoou.\n**30** Depois do nascimento de Noé, Lameque viveu quinhentos e noventa e cinco anos e teve outros filhos e filhas.\n**31** Todos os dias de Lameque foram setecentos e setenta e sete anos; e morreu.\n**32** Noé tinha quinhentos anos quando se tornou pai de Sem, Cam e Jafé.\n\n**Versículos 28–29 — [TEXTO]:** Lameque dá ao filho o nome de Noé e associa esse nome à esperança de consolo em relação ao trabalho penoso e ao solo amaldiçoado. A fala retoma o cenário de Gênesis 3:17–19, no qual o trabalho da terra é marcado por sofrimento.\n\n**[OBSERVAÇÃO LINGUÍSTICA]:** o nome Noé é relacionado no relato à ideia de descanso/consolo por meio de um jogo de palavras. A relação sonora não deve ser transformada em identidade exata entre todas as raízes hebraicas envolvidas.\n\n**[INTERPRETAÇÃO]:** a fala de Lameque expressa expectativa. O leitor ainda precisa acompanhar Gênesis 6–9 para ver como Noé participa da história do dilúvio e da preservação da vida. Não antecipe que Lameque compreendia todos os acontecimentos futuros.\n\n**Versículos 30–32 — [TEXTO]:** Lameque vive mais 595 anos após o nascimento de Noé; a genealogia registra sua morte e informa que Noé tinha quinhentos anos quando se tornou pai de Sem, Cam e Jafé.\n\n**Cuidado com a ordem dos filhos:** Gênesis 5:32 os nomeia nessa sequência, mas outros textos e detalhes cronológicos levam intérpretes a discutir a idade relativa e a ordem de nascimento. Não deduza automaticamente que Sem nasceu primeiro apenas pela ordem da lista; compare Gênesis 9:24, 10:21 e 11:10 em suas traduções e contexto.\n\n**[APLICAÇÃO]:** a esperança bíblica não ignora o trabalho difícil nem a realidade da maldição descrita em Gênesis. Ela espera a ação de Deus sem fingir que o sofrimento já desapareceu."
     },
     {
       id: "genealogia-cronologia",
@@ -286,15 +110,7 @@ Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução liv
       kind: "reasoning",
       confidence: "debated",
       scriptureRefs: ["Gênesis 5:1-32", "Gênesis 11:10-26", "1 Crônicas 1:1-4", "Lucas 3:23-38"],
-      body: "Genealogias bíblicas podem cumprir funções familiares, históricas, literárias e teológicas. Em Gênesis 5, a estrutura seleciona uma linha de descendência e destaca a continuidade de Adão até Noé.
-
-- **Seleção genealógica:** a menção a outros filhos e filhas demonstra que nem todos os descendentes foram nomeados.
-- **Fórmula repetida:** idade, descendente, outros filhos e filhas e morte criam uma estrutura que organiza a memória das gerações.
-- **Números do texto:** registre os números conforme a tradução consultada. Há diferenças entre tradições manuscritas antigas em algumas genealogias e números; estudos cronológicos precisam indicar qual texto-base utilizam.
-- **Cronologia absoluta:** o capítulo não fornece uma data do calendário moderno. Qualquer cálculo deve declarar sua base textual, método de contagem e premissas.
-- **Genealogias posteriores:** 1 Crônicas 1 e Lucas 3 apresentam listas genealógicas com propósitos e contextos próprios. Compare sem presumir que todas as listas têm o mesmo formato ou objetivo.
-
-**Regra de interpretação:** primeiro explique a função da genealogia no próprio livro. Só depois apresente debates sobre cronologia, tradição textual ou harmonização. Não use um cálculo controverso como fundamento central da fé."
+      body: "Genealogias bíblicas podem cumprir funções familiares, históricas, literárias e teológicas. Em Gênesis 5, a estrutura seleciona uma linha de descendência e destaca a continuidade de Adão até Noé.\n\n- **Seleção genealógica:** a menção a outros filhos e filhas demonstra que nem todos os descendentes foram nomeados.\n- **Fórmula repetida:** idade, descendente, outros filhos e filhas e morte criam uma estrutura que organiza a memória das gerações.\n- **Números do texto:** registre os números conforme a tradução consultada. Há diferenças entre tradições manuscritas antigas em algumas genealogias e números; estudos cronológicos precisam indicar qual texto-base utilizam.\n- **Cronologia absoluta:** o capítulo não fornece uma data do calendário moderno. Qualquer cálculo deve declarar sua base textual, método de contagem e premissas.\n- **Genealogias posteriores:** 1 Crônicas 1 e Lucas 3 apresentam listas genealógicas com propósitos e contextos próprios. Compare sem presumir que todas as listas têm o mesmo formato ou objetivo.\n\n**Regra de interpretação:** primeiro explique a função da genealogia no próprio livro. Só depois apresente debates sobre cronologia, tradição textual ou harmonização. Não use um cálculo controverso como fundamento central da fé."
     },
     {
       id: "cristo",
@@ -302,46 +118,21 @@ Leia Gênesis 5 inteiro em sua Bíblia. A redação abaixo é uma tradução liv
       kind: "theology",
       confidence: "high",
       scriptureRefs: ["Romanos 5:12-21", "1 Coríntios 15:21-26", "Lucas 3:23-38", "Hebreus 11:5-6"],
-      body: "**A humanidade e a imagem de Deus:** Gênesis 5 retoma a criação; a dignidade humana permanece como fundamento para tratar o próximo com respeito. Tiago 3:9 mostra que a linguagem da semelhança divina continua relevante na ética bíblica.
-
-**A morte e Adão:** Romanos 5:12–21 apresenta a relação entre pecado, morte, Adão e a obra de Cristo. Paulo desenvolve uma comparação teológica ampla; não reduza o argumento a uma simples repetição da genealogia.
-
-**Adão e Cristo:** 1 Coríntios 15:21–26 e 15:45–49 relaciona a morte que veio por meio de um homem à ressurreição por meio de Cristo, o último Adão. A esperança cristã não está em alcançar a longevidade dos patriarcas, mas na ressurreição em Cristo.
-
-**Enoque e a fé:** Hebreus 11:5–6 lê a vida de Enoque em conexão com a fé e o agrado a Deus. O foco é a confiança em Deus, não a busca de experiências extraordinárias.
-
-**A genealogia de Jesus:** Lucas 3:23–38 apresenta a genealogia de Jesus em seu próprio contexto. Ela conecta a missão de Jesus à história humana e a Adão; leia a lista como parte do argumento de Lucas.
-
-**[SÍNTESE CRISTOCÊNTRICA]:** Gênesis 5 mostra a humanidade criada por Deus e marcada pela morte. O Novo Testamento apresenta Jesus como aquele por meio de quem vêm a ressurreição e a vida. Essa conexão é explícita em Romanos 5 e 1 Coríntios 15; não depende de alegorias inventadas sobre cada nome da genealogia."
+      body: "**A humanidade e a imagem de Deus:** Gênesis 5 retoma a criação; a dignidade humana permanece como fundamento para tratar o próximo com respeito. Tiago 3:9 mostra que a linguagem da semelhança divina continua relevante na ética bíblica.\n\n**A morte e Adão:** Romanos 5:12–21 apresenta a relação entre pecado, morte, Adão e a obra de Cristo. Paulo desenvolve uma comparação teológica ampla; não reduza o argumento a uma simples repetição da genealogia.\n\n**Adão e Cristo:** 1 Coríntios 15:21–26 e 15:45–49 relaciona a morte que veio por meio de um homem à ressurreição por meio de Cristo, o último Adão. A esperança cristã não está em alcançar a longevidade dos patriarcas, mas na ressurreição em Cristo.\n\n**Enoque e a fé:** Hebreus 11:5–6 lê a vida de Enoque em conexão com a fé e o agrado a Deus. O foco é a confiança em Deus, não a busca de experiências extraordinárias.\n\n**A genealogia de Jesus:** Lucas 3:23–38 apresenta a genealogia de Jesus em seu próprio contexto. Ela conecta a missão de Jesus à história humana e a Adão; leia a lista como parte do argumento de Lucas.\n\n**[SÍNTESE CRISTOCÊNTRICA]:** Gênesis 5 mostra a humanidade criada por Deus e marcada pela morte. O Novo Testamento apresenta Jesus como aquele por meio de quem vêm a ressurreição e a vida. Essa conexão é explícita em Romanos 5 e 1 Coríntios 15; não depende de alegorias inventadas sobre cada nome da genealogia."
     },
     {
       id: "questoes",
       title: "10. Questões interpretativas e limites do que podemos afirmar",
       kind: "reasoning",
       confidence: "debated",
-      body: "- **A imagem de Deus foi perdida na queda?** Gênesis 5 retoma a imagem divina e Tiago 3:9 ainda usa essa linguagem para falar dos seres humanos. Evite afirmar que a imagem desapareceu completamente.
-- **Por que os patriarcas viveram tantos anos?** O capítulo registra as idades, mas não oferece explicação biológica detalhada. Apresente o dado textual e, se necessário, explique que existem diferentes propostas interpretativas.
-- **As genealogias são completas?** Não; o texto menciona outros filhos e filhas e seleciona uma linha principal.
-- **Enoque não morreu?** O texto diz que Deus o tomou e não usa a fórmula 'e morreu' para ele. Hebreus 11:5 interpreta o acontecimento. Não invente detalhes físicos que Gênesis não fornece.
-- **O que significa andar com Deus?** O contexto destaca comunhão e fidelidade. Hebreus 11 relaciona a vida de Enoque à fé.
-- **Matusalém morreu no ano do dilúvio?** Essa conclusão depende de cálculos e premissas cronológicas; não é frase explícita de Gênesis 5.
-- **Noé é o filho mais velho de Lameque?** A lista não resolve sozinha a ordem relativa dos filhos. Compare as passagens relacionadas.
-- **Noé é o cumprimento completo da esperança de Lameque?** Gênesis 5 registra a expectativa; os capítulos seguintes desenvolvem o papel de Noé. A esperança final da redenção é apresentada progressivamente no cânon."
+      body: "- **A imagem de Deus foi perdida na queda?** Gênesis 5 retoma a imagem divina e Tiago 3:9 ainda usa essa linguagem para falar dos seres humanos. Evite afirmar que a imagem desapareceu completamente.\n- **Por que os patriarcas viveram tantos anos?** O capítulo registra as idades, mas não oferece explicação biológica detalhada. Apresente o dado textual e, se necessário, explique que existem diferentes propostas interpretativas.\n- **As genealogias são completas?** Não; o texto menciona outros filhos e filhas e seleciona uma linha principal.\n- **Enoque não morreu?** O texto diz que Deus o tomou e não usa a fórmula 'e morreu' para ele. Hebreus 11:5 interpreta o acontecimento. Não invente detalhes físicos que Gênesis não fornece.\n- **O que significa andar com Deus?** O contexto destaca comunhão e fidelidade. Hebreus 11 relaciona a vida de Enoque à fé.\n- **Matusalém morreu no ano do dilúvio?** Essa conclusão depende de cálculos e premissas cronológicas; não é frase explícita de Gênesis 5.\n- **Noé é o filho mais velho de Lameque?** A lista não resolve sozinha a ordem relativa dos filhos. Compare as passagens relacionadas.\n- **Noé é o cumprimento completo da esperança de Lameque?** Gênesis 5 registra a expectativa; os capítulos seguintes desenvolvem o papel de Noé. A esperança final da redenção é apresentada progressivamente no cânon."
     },
     {
       id: "aplicacao",
       title: "11. Aplicações responsáveis para a vida cristã",
       kind: "application",
       confidence: "probable",
-      body: "1. **Valorize a dignidade humana:** a humanidade é apresentada em relação à imagem de Deus; rejeite desprezo e discriminação.
-2. **Considere a brevidade da vida:** a repetição de 'e morreu' chama à humildade e à responsabilidade diante de Deus.
-3. **Cultive uma caminhada constante com Deus:** Enoque é lembrado por sua comunhão, não por fama ou poder.
-4. **Não transforme longevidade em medida de espiritualidade:** o texto registra anos, mas não ensina que viver mais significa ser mais aprovado.
-5. **Tenha cuidado ao ensinar números e genealogias:** explique o que o texto diz e sinalize o que é debate cronológico.
-6. **Mantenha esperança em meio ao trabalho difícil:** Lameque expressa expectativa de consolo, mas a Bíblia não promete ausência imediata de sofrimento.
-7. **Encontre a esperança definitiva em Cristo:** o Novo Testamento relaciona a vitória sobre a morte à ressurreição de Jesus.
-
-As aplicações decorrem da leitura do capítulo e de suas conexões bíblicas; não devem ser usadas para prometer longevidade, prosperidade ou ausência de sofrimento."
+      body: "1. **Valorize a dignidade humana:** a humanidade é apresentada em relação à imagem de Deus; rejeite desprezo e discriminação.\n2. **Considere a brevidade da vida:** a repetição de 'e morreu' chama à humildade e à responsabilidade diante de Deus.\n3. **Cultive uma caminhada constante com Deus:** Enoque é lembrado por sua comunhão, não por fama ou poder.\n4. **Não transforme longevidade em medida de espiritualidade:** o texto registra anos, mas não ensina que viver mais significa ser mais aprovado.\n5. **Tenha cuidado ao ensinar números e genealogias:** explique o que o texto diz e sinalize o que é debate cronológico.\n6. **Mantenha esperança em meio ao trabalho difícil:** Lameque expressa expectativa de consolo, mas a Bíblia não promete ausência imediata de sofrimento.\n7. **Encontre a esperança definitiva em Cristo:** o Novo Testamento relaciona a vitória sobre a morte à ressurreição de Jesus.\n\nAs aplicações decorrem da leitura do capítulo e de suas conexões bíblicas; não devem ser usadas para prometer longevidade, prosperidade ou ausência de sofrimento."
     },
     {
       id: "oficina",
@@ -349,51 +140,21 @@ As aplicações decorrem da leitura do capítulo e de suas conexões bíblicas; 
       kind: "application",
       confidence: "probable",
       scriptureRefs: ["Gênesis 5:1-32", "Hebreus 11:5-6", "Romanos 5:12-21", "1 Coríntios 15:21-26"],
-      body: "**Tema:** Uma geração após outra: dignidade, mortalidade e caminhada com Deus.
-
-**Ideia central:** Gênesis 5 recorda que a humanidade foi criada à imagem de Deus, que a morte marca a história humana e que Enoque se destaca por andar com Deus; a linhagem chega a Noé com uma esperança de consolo.
-
-**Objetivo pastoral:** conduzir a comunidade a reconhecer a dignidade humana, viver com fidelidade diante de Deus e colocar a esperança na vida que Ele oferece.
-
-**Introdução:** explique por que o capítulo começa retomando a criação. Mostre que genealogias não são interrupções sem propósito: elas conectam as narrativas e acompanham a história da promessa.
-
-1. **Nossa origem aponta para Deus (5:1–3):** destaque a imagem divina e a dignidade de homem e mulher.
-2. **A morte atravessa as gerações (5:4–20, 25–27, 30–31):** observe a fórmula repetida e conecte com cuidado a Gênesis 2–3 e Romanos 5.
-3. **A vida fiel é descrita como caminhada com Deus (5:21–24):** explique o destaque de Enoque e a leitura de Hebreus 11.
-4. **A esperança aparece em meio ao trabalho penoso (5:28–32):** apresente a fala de Lameque e deixe que Gênesis 6–9 desenvolva o papel de Noé.
-
-**Conclusão cristocêntrica:** leia 1 Coríntios 15:21–26. A genealogia mostra a realidade da morte; a esperança cristã se firma na ressurreição de Jesus. Evite transformar Enoque em fórmula de sucesso ou Noé em promessa de vida sem sofrimento.
-
-**Revisão do sermão:** você explicou a função da genealogia? Distinguiu texto e debate cronológico? Tratou a imagem de Deus com implicações éticas? Explicou 'andou com Deus' a partir do contexto e de Hebreus 11? A conexão com Cristo está apoiada no Novo Testamento?"
+      body: "**Tema:** Uma geração após outra: dignidade, mortalidade e caminhada com Deus.\n\n**Ideia central:** Gênesis 5 recorda que a humanidade foi criada à imagem de Deus, que a morte marca a história humana e que Enoque se destaca por andar com Deus; a linhagem chega a Noé com uma esperança de consolo.\n\n**Objetivo pastoral:** conduzir a comunidade a reconhecer a dignidade humana, viver com fidelidade diante de Deus e colocar a esperança na vida que Ele oferece.\n\n**Introdução:** explique por que o capítulo começa retomando a criação. Mostre que genealogias não são interrupções sem propósito: elas conectam as narrativas e acompanham a história da promessa.\n\n1. **Nossa origem aponta para Deus (5:1–3):** destaque a imagem divina e a dignidade de homem e mulher.\n2. **A morte atravessa as gerações (5:4–20, 25–27, 30–31):** observe a fórmula repetida e conecte com cuidado a Gênesis 2–3 e Romanos 5.\n3. **A vida fiel é descrita como caminhada com Deus (5:21–24):** explique o destaque de Enoque e a leitura de Hebreus 11.\n4. **A esperança aparece em meio ao trabalho penoso (5:28–32):** apresente a fala de Lameque e deixe que Gênesis 6–9 desenvolva o papel de Noé.\n\n**Conclusão cristocêntrica:** leia 1 Coríntios 15:21–26. A genealogia mostra a realidade da morte; a esperança cristã se firma na ressurreição de Jesus. Evite transformar Enoque em fórmula de sucesso ou Noé em promessa de vida sem sofrimento.\n\n**Revisão do sermão:** você explicou a função da genealogia? Distinguiu texto e debate cronológico? Tratou a imagem de Deus com implicações éticas? Explicou 'andou com Deus' a partir do contexto e de Hebreus 11? A conexão com Cristo está apoiada no Novo Testamento?"
     },
     {
       id: "exercicios",
       title: "13. Exercícios de fixação, pesquisa e preparação",
       kind: "reflection",
       confidence: "high",
-      body: "1. Faça uma tabela com os nomes principais da genealogia, idade ao gerar o descendente nomeado, anos posteriores e idade total.
-2. Explique por que Gênesis 5:1–2 retoma Gênesis 1:26–28.
-3. Compare a expressão sobre a imagem de Deus (5:1–2) com a expressão sobre Sete (5:3). O que cada uma afirma?
-4. Identifique a fórmula repetida nas gerações e explique o efeito da expressão 'e morreu'.
-5. Destaque o que torna a narrativa de Enoque diferente das demais.
-6. Leia Hebreus 11:5–6 e explique como o Novo Testamento interpreta a caminhada de Enoque.
-7. Explique a fala de Lameque sobre Noé e sua relação com Gênesis 3:17–19.
-8. Pesquise as diferenças de grafia dos nomes em duas traduções bíblicas e registre sem tratar variação ortográfica como contradição automática.
-9. Leia Romanos 5:12–21 e 1 Coríntios 15:21–26. Escreva como esses textos desenvolvem o tema da morte e da vida em Cristo.
-10. Prepare um esboço expositivo de Gênesis 5 com tema, ideia central, divisões, referências de apoio e conclusão cristocêntrica.
-
-**Critérios de avaliação:** fidelidade ao texto, leitura do contexto, uso correto das referências, distinção entre afirmação e hipótese, cuidado com números e aplicação coerente."
+      body: "1. Faça uma tabela com os nomes principais da genealogia, idade ao gerar o descendente nomeado, anos posteriores e idade total.\n2. Explique por que Gênesis 5:1–2 retoma Gênesis 1:26–28.\n3. Compare a expressão sobre a imagem de Deus (5:1–2) com a expressão sobre Sete (5:3). O que cada uma afirma?\n4. Identifique a fórmula repetida nas gerações e explique o efeito da expressão 'e morreu'.\n5. Destaque o que torna a narrativa de Enoque diferente das demais.\n6. Leia Hebreus 11:5–6 e explique como o Novo Testamento interpreta a caminhada de Enoque.\n7. Explique a fala de Lameque sobre Noé e sua relação com Gênesis 3:17–19.\n8. Pesquise as diferenças de grafia dos nomes em duas traduções bíblicas e registre sem tratar variação ortográfica como contradição automática.\n9. Leia Romanos 5:12–21 e 1 Coríntios 15:21–26. Escreva como esses textos desenvolvem o tema da morte e da vida em Cristo.\n10. Prepare um esboço expositivo de Gênesis 5 com tema, ideia central, divisões, referências de apoio e conclusão cristocêntrica.\n\n**Critérios de avaliação:** fidelidade ao texto, leitura do contexto, uso correto das referências, distinção entre afirmação e hipótese, cuidado com números e aplicação coerente."
     },
     {
       id: "meditacao",
       title: "14. Meditação, revisão e oração",
       kind: "reflection",
       confidence: "probable",
-      body: "**Medite:** Tenho tratado as pessoas como portadoras de dignidade diante de Deus? Estou vivendo apenas contando dias ou caminhando com o Senhor? Minha fé é constante também nas tarefas comuns? Tenho ensinado a Bíblia com honestidade, reconhecendo o que o texto não explica?
-
-**Resumo do capítulo:** Gênesis 5 retoma a criação à imagem de Deus, acompanha a linhagem de Adão por Sete, repete a realidade da morte, destaca Enoque por andar com Deus e apresenta Noé como sinal de esperança de consolo diante do trabalho penoso.
-
-**Oração:** Senhor Deus, ajuda-nos a viver com consciência de que nossos dias estão em tuas mãos. Ensina-nos a respeitar cada pessoa, a caminhar contigo com fidelidade e a ensinar tua Palavra sem distorções. Que nossa esperança diante da morte esteja na ressurreição de Jesus Cristo. Amém."
+      body: "**Medite:** Tenho tratado as pessoas como portadoras de dignidade diante de Deus? Estou vivendo apenas contando dias ou caminhando com o Senhor? Minha fé é constante também nas tarefas comuns? Tenho ensinado a Bíblia com honestidade, reconhecendo o que o texto não explica?\n\n**Resumo do capítulo:** Gênesis 5 retoma a criação à imagem de Deus, acompanha a linhagem de Adão por Sete, repete a realidade da morte, destaca Enoque por andar com Deus e apresenta Noé como sinal de esperança de consolo diante do trabalho penoso.\n\n**Oração:** Senhor Deus, ajuda-nos a viver com consciência de que nossos dias estão em tuas mãos. Ensina-nos a respeitar cada pessoa, a caminhar contigo com fidelidade e a ensinar tua Palavra sem distorções. Que nossa esperança diante da morte esteja na ressurreição de Jesus Cristo. Amém."
     }
   ]
 };
