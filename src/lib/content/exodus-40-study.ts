@@ -70,7 +70,7 @@ export const exodus40Study: StudyContent = {
       "scriptureRefs": [
         "Êxodo 40:1–38"
       ],
-      "body": "Leia o capítulo inteiro e depois divida-o em quatro movimentos: 1–16, ordem para montar e consagrar; 17–33, montagem e organização dos utensílios; 34–支38, a glória do Senhor enche o tabernáculo e guia Israel. Observe a repetição de que Moisés fez conforme o Senhor ordenara."
+      "body": "Leia o capítulo inteiro e depois divida-o em quatro movimentos: 1–16, ordem para montar e consagrar; 17–33, montagem e organização dos utensílios; 34–38, a glória do Senhor enche o tabernáculo e guia Israel. Observe a repetição de que Moisés fez conforme o Senhor ordenara."
     },
     {
       "id": "exodo-40-introducao",
