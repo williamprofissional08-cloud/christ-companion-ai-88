@@ -103,7 +103,7 @@ Leia Gênesis 15 integralmente em sua Bíblia. Este estudo acompanha o texto e n
       body: "Abrão pergunta o que Deus lhe dará, uma vez que continua sem filho. Ele menciona Eliezer de Damasco e descreve a situação de sua casa. O ponto central é a tensão entre a promessa de descendência e a realidade presente: Abrão envelhece e não tem herdeiro. A identidade e a situação jurídica exata de Eliezer são discutidas; o capítulo o apresenta como alguém ligado à casa de Abrão, mas não oferece uma biografia completa nem permite afirmar todos os detalhes de um costume legal."
     },
     {
-      id: "el iezer",
+      id: "eliezer",
       title: "6. Eliezer de Damasco e os costumes do mundo antigo",
       kind: "historical",
       confidence: "debated",
@@ -207,7 +207,7 @@ Leia Gênesis 15 integralmente em sua Bíblia. Este estudo acompanha o texto e n
       body: "Deus declara que julgará a nação à qual os descendentes servirão e que eles sairão com muitos bens. A libertação do Egito, narrada em Êxodo, é o desenvolvimento mais direto dessa promessa na leitura canônica. O texto apresenta Deus como juiz da opressão e libertador de seu povo. A saída com bens não deve ser transformada em fórmula individual de enriquecimento; trata-se de um acontecimento específico na história da descendência de Abrão."
     },
     {
-      id: "paz-abr ao",
+      id: "paz-abrao",
       title: "19. Gênesis 15:15 — Abrão morrerá em paz",
       kind: "exegesis",
       confidence: "high",
