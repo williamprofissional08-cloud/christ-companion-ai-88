@@ -485,7 +485,8 @@ Uma aplicação pode ser edificante e ainda assim não ser a interpretação do 
       title: "25. Oração final",
       kind: "summary",
       body: `Senhor Deus, reconhecemos que recebemos de ti a vida. Obrigado por tua provisão e pela dignidade que deste ao ser humano. Ensina-nos a cultivar e guardar o que está sob nossos cuidados, a respeitar tua palavra e a tratar o próximo com honra. Ajuda-nos a cuidar de quem enfrenta solidão e a promover relações sem violência nem desprezo. Dá-nos humildade para reconhecer limites, distinguir o que o texto afirma das nossas opiniões e conhecer melhor a Cristo conforme as Escrituras. Amém.`,
-    },    ,{
+    },
+    {
       id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 2:1-25"], body: "**Éden:** jardim onde Deus coloca o ser humano. **Éden:** espaço de vida, trabalho e comunhão. **Adão:** termo ligado à humanidade e também nome do primeiro homem na narrativa. **Auxiliadora:** expressão que descreve a mulher como correspondente adequada ao homem, não como pessoa inferior. **Uma só carne:** linguagem de união e vínculo matrimonial."
     },
     {
