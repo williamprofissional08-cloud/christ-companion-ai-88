@@ -59,6 +59,16 @@ import { exodus7Study } from "./exodus-7-study";
 import { exodus8Study } from "./exodus-8-study";
 import { exodus9Study } from "./exodus-9-study";
 import { exodus10Study } from "./exodus-10-study";
+import { exodus11Study } from "./exodus-11-study";
+import { exodus12Study } from "./exodus-12-study";
+import { exodus13Study } from "./exodus-13-study";
+import { exodus14Study } from "./exodus-14-study";
+import { exodus15Study } from "./exodus-15-study";
+import { exodus16Study } from "./exodus-16-study";
+import { exodus17Study } from "./exodus-17-study";
+import { exodus18Study } from "./exodus-18-study";
+import { exodus19Study } from "./exodus-19-study";
+import { exodus20Study } from "./exodus-20-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -126,4 +136,14 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-exodo-cap-8": exodus8Study,
   "biblia-exodo-cap-9": exodus9Study,
   "biblia-exodo-cap-10": exodus10Study,
+  "biblia-exodo-cap-11": exodus11Study,
+  "biblia-exodo-cap-12": exodus12Study,
+  "biblia-exodo-cap-13": exodus13Study,
+  "biblia-exodo-cap-14": exodus14Study,
+  "biblia-exodo-cap-15": exodus15Study,
+  "biblia-exodo-cap-16": exodus16Study,
+  "biblia-exodo-cap-17": exodus17Study,
+  "biblia-exodo-cap-18": exodus18Study,
+  "biblia-exodo-cap-19": exodus19Study,
+  "biblia-exodo-cap-20": exodus20Study,
 };
