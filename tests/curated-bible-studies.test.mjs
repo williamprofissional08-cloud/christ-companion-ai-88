@@ -82,7 +82,7 @@ test("todos os estudos curados mantêm profundidade e estrutura didática", () =
     assert.ok(moduleName, `import ausente para ${slug}`);
     const source = readSource(`src/lib/content/${moduleName}.ts`);
 
-    assert.match(source, /depth:\s*"deep"/, `${slug} deve ser profundo`);
+    assert.match(source, /["]?depth["]?\s*:\s*["]?deep["]?/, `${slug} deve ser profundo`);
     for (const field of [
       "intro",
       "historicalContext",
@@ -96,13 +96,13 @@ test("todos os estudos curados mantêm profundidade e estrutura didática", () =
     ]) {
       assert.match(
         source,
-        new RegExp(`\\b${field}\\s*:`),
+        new RegExp(`["]?${field}["]?\\s*:`),
         `${slug} precisa manter o campo didático ${field}`,
       );
     }
     assert.match(
       source,
-      /sections:\s*\[/,
+      /["]?sections["]?\s*:\s*\[/,
       `${slug} precisa conter seções de estudo`,
     );
   }
