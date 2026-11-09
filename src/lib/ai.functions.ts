@@ -108,6 +108,9 @@ export const getStudyContent = createServerFn({ method: "POST" })
     const legacyStudy = getStudy(data.slug);
     const curated = CURATED_STUDIES[data.slug];
 
+    // Curated local studies are canonical; do not let stale managed_content or generated cache replace them.
+    if (curated) return curated;
+
     // Curated studies are the reliable local source. A missing admin secret,
     // unavailable database, or missing managed_content table must not hide them.
     let managedData: {
