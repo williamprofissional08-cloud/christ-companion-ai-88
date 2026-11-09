@@ -2,7 +2,7 @@ import type { StudyContent } from "../types";
 
 /** Continuação editorial do estudo de Gênesis 1; não substitui aulas existentes. */
 export const genesis2Study: StudyContent = {
-  version: 2,
+  version: 3,
   depth: "deep",
   intro: "",
   historicalContext: "",
@@ -13,6 +13,66 @@ export const genesis2Study: StudyContent = {
   conclusion: "",
   prayer: "",
   sections: [
+    {
+      id: "leitura-biblica-completa",
+      title: "Leitura bíblica — Gênesis 2:1–25, versículo por versículo",
+      kind: "scripture",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 2:1-25"],
+      body: `**Texto de estudo em tradução livre para linguagem atual, elaborado a partir do texto hebraico.** Não é uma edição oficial de Almeida nem substitui a leitura na tradução bíblica utilizada pelo aluno. Compare cada versículo com sua Bíblia.
+
+**1** Assim foram concluídos os céus, a terra e tudo o que neles existe.
+
+**2** No sétimo dia, Deus havia concluído a obra que fizera; nesse dia, cessou sua obra de criação.
+
+**3** Deus abençoou o sétimo dia e o separou como santo, porque nele cessou a obra que havia realizado ao criar.
+
+**4** Esta é a história das origens dos céus e da terra, quando foram criados, no tempo em que o SENHOR Deus fez a terra e os céus.
+
+**5** Ainda não havia arbusto do campo na terra, nem planta do campo havia brotado, pois o SENHOR Deus ainda não tinha enviado chuva sobre a terra, e não havia ser humano para cultivar o solo.
+
+**6** Entretanto, uma corrente de água subia da terra e umedecia toda a superfície do solo.
+
+**7** Então o SENHOR Deus formou o ser humano do pó da terra, soprou em suas narinas o fôlego de vida, e o ser humano tornou-se um ser vivente.
+
+**8** O SENHOR Deus plantou um jardim no Éden, para o lado do oriente, e colocou ali o ser humano que havia formado.
+
+**9** O SENHOR Deus fez brotar do solo árvores agradáveis à vista e boas para alimento. No meio do jardim estavam a árvore da vida e a árvore do conhecimento do bem e do mal.
+
+**10** Um rio saía do Éden para regar o jardim e dali se dividia, formando quatro braços.
+
+**11** O primeiro se chamava Pisom; ele rodeava toda a região de Havilá, onde havia ouro.
+
+**12** O ouro daquela região era bom; ali também se encontravam resina aromática e pedra de ônix.
+
+**13** O segundo rio se chamava Giom; ele rodeava toda a região de Cuxe.
+
+**14** O terceiro rio se chamava Hidequel e corria a leste da Assíria. O quarto rio era o Eufrates.
+
+**15** O SENHOR Deus tomou o ser humano e o colocou no jardim do Éden para cultivá-lo e guardá-lo.
+
+**16** O SENHOR Deus ordenou ao ser humano: Você pode comer livremente do fruto de todas as árvores do jardim,
+
+**17** mas não coma da árvore do conhecimento do bem e do mal, pois, no dia em que dela comer, certamente morrerá.
+
+**18** O SENHOR Deus disse: Não é bom que o ser humano esteja só. Farei para ele alguém que lhe corresponda e o auxilie.
+
+**19** O SENHOR Deus havia formado do solo todos os animais do campo e todas as aves do céu. Ele os trouxe ao ser humano para ver como os chamaria; e o nome que o ser humano desse a cada ser vivente, esse seria o seu nome.
+
+**20** O ser humano deu nomes aos animais domésticos, às aves do céu e a todos os animais do campo; mas não se encontrou para ele alguém que lhe correspondesse.
+
+**21** Então o SENHOR Deus fez o ser humano cair em profundo sono. Enquanto ele dormia, tomou uma de suas costelas e fechou o lugar com carne.
+
+**22** Da costela que havia tomado do ser humano, o SENHOR Deus formou uma mulher e a levou até ele.
+
+**23** Então o ser humano disse: Esta, sim, é osso dos meus ossos e carne da minha carne; ela será chamada mulher, porque do homem foi tomada.
+
+**24** Por isso, o homem deixa pai e mãe, une-se à sua mulher, e os dois se tornam uma só carne.
+
+**25** O homem e sua mulher estavam nus, mas não sentiam vergonha.
+
+**Orientação:** esta é uma redação livre de estudo, não uma tradução bíblica publicada. Consulte Gênesis 2 diretamente em sua Bíblia e compare especialmente termos como “corrente/neblina” (v. 6), “costela/lado” (v. 21–22), “auxiliadora” (v. 18) e “cessou/descansou” (v. 2–3).`,
+    },
     {
       id: "intro",
       title: "1. Introdução: da criação ao jardim",
@@ -90,7 +150,7 @@ Em 2:5, alguns intérpretes distinguem a vegetação do campo vinculada à chuva
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 2:1-3", "Isaías 40:28", "Êxodo 20:8-11", "Hebreus 4:1-11"],
-      body: `**Versículo 1 — [TEXTO BÍBLICO]:** céus, terra e seu conjunto estão concluídos. A expressão traduzida como “exército” ou “conjunto” neste contexto abrange a criação ordenada; não exige que se esteja falando de guerra.
+      body: `**Texto bíblico — Gênesis 2:1–3 (tradução livre de estudo)**\n\n**1** Assim foram concluídos os céus, a terra e tudo o que neles existe.\n\n**2** No sétimo dia, Deus havia concluído a obra que fizera; nesse dia, cessou sua obra de criação.\n\n**3** Deus abençoou o sétimo dia e o separou como santo, porque nele cessou a obra que havia realizado ao criar.\n\n**Versículo 1 — [TEXTO BÍBLICO]:** céus, terra e seu conjunto estão concluídos. A expressão traduzida como “exército” ou “conjunto” neste contexto abrange a criação ordenada; não exige que se esteja falando de guerra.
 
 **Versículo 2 — [TEXTO BÍBLICO]:** Deus termina a obra e descansa no sétimo dia. **[INTERPRETAÇÃO]** O verbo hebraico associado ao descanso, *shavat*, comunica cessação. Não se trata de recuperação de fadiga: Isaías 40:28 afirma que Deus não se cansa.
 
@@ -108,7 +168,7 @@ Em 2:5, alguns intérpretes distinguem a vegetação do campo vinculada à chuva
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 2:4-7", "Gênesis 3:19", "Salmos 103:14", "1 Coríntios 15:45"],
-      body: `**Versículo 4 — [TEXTO BÍBLICO]:** a fórmula das origens introduz o novo foco do relato. A expressão “no dia em que” pode designar o tempo em que Deus fez céu e terra; o contexto, não uma regra isolada de vocabulário, orienta sua leitura.
+      body: `**Texto bíblico — Gênesis 2:4–7 (tradução livre de estudo)**\n\n**4** Esta é a história das origens dos céus e da terra, quando foram criados, no tempo em que o SENHOR Deus fez a terra e os céus.\n\n**5** Ainda não havia arbusto do campo na terra, nem planta do campo havia brotado, pois o SENHOR Deus ainda não tinha enviado chuva sobre a terra, e não havia ser humano para cultivar o solo.\n\n**6** Entretanto, uma corrente de água subia da terra e umedecia toda a superfície do solo.\n\n**7** Então o SENHOR Deus formou o ser humano do pó da terra, soprou em suas narinas o fôlego de vida, e o ser humano tornou-se um ser vivente.\n\n**Versículo 4 — [TEXTO BÍBLICO]:** a fórmula das origens introduz o novo foco do relato. A expressão “no dia em que” pode designar o tempo em que Deus fez céu e terra; o contexto, não uma regra isolada de vocabulário, orienta sua leitura.
 
 **Versículos 5–6 — [TEXTO BÍBLICO]:** o cenário menciona ausência de chuva e de quem cultivasse o solo; uma forma de água umedece a terra. O termo traduzido como “neblina”, “vapor” ou “corrente” é discutido. **[INCERTEZA]** Não se pode deduzir daqui um sistema climático global ou afirmar que nunca choveu antes do dilúvio.
 
@@ -128,7 +188,7 @@ Em 2:5, alguns intérpretes distinguem a vegetação do campo vinculada à chuva
       kind: "analysis",
       confidence: "probable",
       scriptureRefs: ["Gênesis 2:8-14", "Apocalipse 22:1-2"],
-      body: `**Versículo 8 — [TEXTO BÍBLICO]:** Deus planta um jardim no Éden, ao oriente, e coloca nele o homem que formou. O texto distingue o jardim e a região de Éden.
+      body: `**Texto bíblico — Gênesis 2:8–14 (tradução livre de estudo)**\n\n**8** O SENHOR Deus plantou um jardim no Éden, para o lado do oriente, e colocou ali o ser humano que havia formado.\n\n**9** O SENHOR Deus fez brotar do solo árvores agradáveis à vista e boas para alimento. No meio do jardim estavam a árvore da vida e a árvore do conhecimento do bem e do mal.\n\n**10** Um rio saía do Éden para regar o jardim e dali se dividia, formando quatro braços.\n\n**11** O primeiro se chamava Pisom; ele rodeava toda a região de Havilá, onde havia ouro.\n\n**12** O ouro daquela região era bom; ali também se encontravam resina aromática e pedra de ônix.\n\n**13** O segundo rio se chamava Giom; ele rodeava toda a região de Cuxe.\n\n**14** O terceiro rio se chamava Hidequel e corria a leste da Assíria. O quarto rio era o Eufrates.\n\n**Versículo 8 — [TEXTO BÍBLICO]:** Deus planta um jardim no Éden, ao oriente, e coloca nele o homem que formou. O texto distingue o jardim e a região de Éden.
 
 **Versículo 9 — [TEXTO BÍBLICO]:** as árvores são agradáveis à vista e boas para alimento. O relato destaca a árvore da vida e a árvore do conhecimento do bem e do mal. Há beleza, sustento e um limite que será explicado nos versículos 16–17.
 
@@ -146,7 +206,7 @@ Em 2:5, alguns intérpretes distinguem a vegetação do campo vinculada à chuva
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 2:15-17", "Gênesis 1:28", "Gênesis 3:17-19"],
-      body: `**Versículo 15 — [TEXTO BÍBLICO]:** Deus coloca o homem no jardim para cultivá-lo e guardá-lo. **[INFERÊNCIA]** O trabalho aparece antes da queda; portanto, não é apresentado aqui como castigo. Gênesis 3:17–19 acrescentará dor e dificuldade ao cultivo, não a primeira existência de toda tarefa.
+      body: `**Texto bíblico — Gênesis 2:15–17 (tradução livre de estudo)**\n\n**15** O SENHOR Deus tomou o ser humano e o colocou no jardim do Éden para cultivá-lo e guardá-lo.\n\n**16** O SENHOR Deus ordenou ao ser humano: Você pode comer livremente do fruto de todas as árvores do jardim,\n\n**17** mas não coma da árvore do conhecimento do bem e do mal, pois, no dia em que dela comer, certamente morrerá.\n\n**Versículo 15 — [TEXTO BÍBLICO]:** Deus coloca o homem no jardim para cultivá-lo e guardá-lo. **[INFERÊNCIA]** O trabalho aparece antes da queda; portanto, não é apresentado aqui como castigo. Gênesis 3:17–19 acrescentará dor e dificuldade ao cultivo, não a primeira existência de toda tarefa.
 
 **Versículo 16 — [TEXTO BÍBLICO]:** o mandamento começa com ampla permissão para comer das árvores do jardim. Observe a generosidade antes de tratar da proibição.
 
@@ -164,7 +224,7 @@ Em 2:5, alguns intérpretes distinguem a vegetação do campo vinculada à chuva
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 2:18-20", "Gênesis 1:27", "Salmos 121:1-2", "1 Coríntios 7:7-8"],
-      body: `**Versículo 18 — [TEXTO BÍBLICO]:** Deus declara que não é bom que o homem esteja só e anuncia uma auxiliadora que lhe corresponda. A frase contrasta com as avaliações de bondade do capítulo 1 e prepara a formação da mulher.
+      body: `**Texto bíblico — Gênesis 2:18–20 (tradução livre de estudo)**\n\n**18** O SENHOR Deus disse: Não é bom que o ser humano esteja só. Farei para ele alguém que lhe corresponda e o auxilie.\n\n**19** O SENHOR Deus havia formado do solo todos os animais do campo e todas as aves do céu. Ele os trouxe ao ser humano para ver como os chamaria; e o nome que o ser humano desse a cada ser vivente, esse seria o seu nome.\n\n**20** O ser humano deu nomes aos animais domésticos, às aves do céu e a todos os animais do campo; mas não se encontrou para ele alguém que lhe correspondesse.\n\n**Versículo 18 — [TEXTO BÍBLICO]:** Deus declara que não é bom que o homem esteja só e anuncia uma auxiliadora que lhe corresponda. A frase contrasta com as avaliações de bondade do capítulo 1 e prepara a formação da mulher.
 
 **[OBSERVAÇÃO LINGUÍSTICA]** *Ezer kenegdo* comunica auxílio correspondente, alguém adequado a estar diante dele. *Ezer* também designa auxílio de Deus em outros textos (Salmos 121:1–2). A palavra, sozinha, não implica inferioridade nem resolve toda discussão sobre funções no casamento.
 
@@ -180,7 +240,7 @@ Em 2:5, alguns intérpretes distinguem a vegetação do campo vinculada à chuva
       kind: "analysis",
       confidence: "high",
       scriptureRefs: ["Gênesis 2:21-25", "Mateus 19:4-6", "Efésios 5:28-32"],
-      body: `**Versículo 21 — [TEXTO BÍBLICO]:** Deus faz o homem cair em profundo sono, toma uma de suas costelas e fecha o lugar. A ação decisiva é divina. O texto não informa qual costela, não ensina que homens tenham menos costelas e não descreve uma técnica médica.
+      body: `**Texto bíblico — Gênesis 2:21–25 (tradução livre de estudo)**\n\n**21** Então o SENHOR Deus fez o ser humano cair em profundo sono. Enquanto ele dormia, tomou uma de suas costelas e fechou o lugar com carne.\n\n**22** Da costela que havia tomado do ser humano, o SENHOR Deus formou uma mulher e a levou até ele.\n\n**23** Então o ser humano disse: Esta, sim, é osso dos meus ossos e carne da minha carne; ela será chamada mulher, porque do homem foi tomada.\n\n**24** Por isso, o homem deixa pai e mãe, une-se à sua mulher, e os dois se tornam uma só carne.\n\n**25** O homem e sua mulher estavam nus, mas não sentiam vergonha.\n\n**Versículo 21 — [TEXTO BÍBLICO]:** Deus faz o homem cair em profundo sono, toma uma de suas costelas e fecha o lugar. A ação decisiva é divina. O texto não informa qual costela, não ensina que homens tenham menos costelas e não descreve uma técnica médica.
 
 **Versículo 22 — [TEXTO BÍBLICO]:** Deus forma a mulher e a traz ao homem. O termo *tsela* pode designar lado ou costela; “costela” é a tradução tradicional nesse contexto. **[INTERPRETAÇÃO]** A imagem comunica parentesco e origem compartilhada, não uma hierarquia de valor.
 
