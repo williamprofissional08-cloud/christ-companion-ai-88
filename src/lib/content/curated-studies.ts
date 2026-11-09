@@ -1,3 +1,4 @@
+import type { StudyContent } from "../types";
 import { genesis2Study } from "./genesis-2-study";
 import { genesis3Study } from "./genesis-3-study";
 import { genesis1Study } from "./genesis-1-study";
