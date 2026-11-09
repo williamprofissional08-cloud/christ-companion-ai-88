@@ -207,6 +207,8 @@ Estas aplicações são respostas à mensagem do capítulo, não leis acrescenta
 
 **Resumo:** Gênesis 3 narra tentação, desobediência, vergonha, interrogatório, juízo, promessa e expulsão. O capítulo explica a ruptura, mas a história bíblica prossegue até a redenção e a nova criação.
 
-**Oração:** Senhor, livra-nos de distorcer tua palavra. Dá-nos coragem para confessar o pecado, reparar o mal e cuidar de quem sofre. Firma nossa esperança em Jesus Cristo, vencedor do pecado e da morte. Amém.`}
+**Oração:** Senhor, livra-nos de distorcer tua palavra. Dá-nos coragem para confessar o pecado, reparar o mal e cuidar de quem sofre. Firma nossa esperança em Jesus Cristo, vencedor do pecado e da morte. Amém.`}    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 3:1-24"], body: "**Serpente:** criatura que fala na narrativa e questiona a palavra divina; sua identificação com Satanás é explicitada em textos posteriores. **Descendência:** termo central no conflito de Gênesis 3:15. **Querubins:** seres celestiais associados à guarda do caminho da árvore da vida. **Éden:** jardim do qual o casal é expulso após a desobediência."
+    }
   ]
 };
