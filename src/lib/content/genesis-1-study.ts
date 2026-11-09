@@ -5,7 +5,7 @@ import type { StudyContent } from "../types";
  * e distinção entre o que o texto diz, o que interpretamos e como aplicamos.
  */
 export const genesis1Study: StudyContent = {
-  version: 3,
+  version: 4,
   depth: "deep",
   intro: "Gênesis 1 apresenta Deus como Criador de todas as coisas. O capítulo mostra como Deus dá origem, forma e ordem ao mundo por sua palavra. Também ensina que a criação é boa e que homens e mulheres recebem dignidade e responsabilidade diante de Deus.",
   historicalContext: "Gênesis abre o Pentateuco e apresenta as origens do mundo, da humanidade e da história do povo de Deus. O texto chegou a Israel em um ambiente antigo no qual povos vizinhos possuíam relatos sobre deuses ligados ao sol, à lua, ao mar e à fertilidade. Gênesis 1 apresenta uma mensagem diferente: existe um único Deus soberano; os astros, mares, animais e seres humanos não são deuses, mas criaturas. A tradição judaica e cristã associa o Pentateuco a Moisés, embora estudiosos debatam a história da composição e da transmissão dos livros. O capítulo não informa uma data moderna para a criação nem pretende responder a todas as perguntas científicas atuais.",
@@ -184,7 +184,7 @@ Essa organização ajuda a perceber a unidade do capítulo. É uma forma de resu
 
 **2** A terra estava sem forma e vazia; havia trevas sobre a face do abismo, e o Espírito de Deus pairava sobre as águas.
 
-**Explicação:**`
+**Explicação:**
 
 O capítulo começa com uma afirmação direta: Deus criou os céus e a terra. A expressão “céus e terra” é uma maneira bíblica de falar da totalidade da criação — tudo o que existe.
 
@@ -225,7 +225,7 @@ A expressão comunica a presença e a ação de Deus sobre a cena inicial. Muita
 
 **5** Deus chamou à luz Dia e às trevas chamou Noite. Houve tarde e manhã: primeiro dia.
 
-**Explicação:**`
+**Explicação:**
 
 Depois de apresentar a condição inicial da terra, o texto mostra Deus falando: “Haja luz”. E a luz aparece.
 
@@ -269,7 +269,7 @@ Gênesis apresenta a luz no primeiro dia e os luminares no quarto. O objetivo te
 
 **8** Deus chamou à expansão Céus. Houve tarde e manhã: segundo dia.
 
-**Explicação:**`
+**Explicação:**
 
 No segundo dia, Deus ordena que haja uma expansão para fazer separação entre águas e águas.
 
@@ -307,7 +307,7 @@ Deus prepara o ambiente para que a criação tenha ordem. O capítulo apresenta 
 
 **13** Houve tarde e manhã: terceiro dia.
 
-**Explicação:**`
+**Explicação:**
 
 No terceiro dia, Deus ordena que as águas se reúnam em um só lugar e que apareça a porção seca.
 
@@ -351,7 +351,7 @@ A criação é apresentada como organizada e generosa. A vida humana e animal de
 
 **19** Houve tarde e manhã: quarto dia.
 
-**Explicação:**`
+**Explicação:**
 
 No quarto dia, Deus estabelece os luminares nos céus. O texto menciona o luzeiro maior, o luzeiro menor e as estrelas.
 
@@ -388,7 +388,7 @@ O sol e a lua são importantes, mas não são deuses. Eles cumprem funções den
 
 **23** Houve tarde e manhã: quinto dia.
 
-**Explicação:**`
+**Explicação:**
 
 No quinto dia, Deus ordena que as águas se encham de seres vivos e que as aves voem sobre a terra, sob a expansão dos céus.
 
@@ -422,7 +422,7 @@ A vida não é apresentada como algo sem valor. Os seres vivos fazem parte da bo
 
 **28** Deus os abençoou e lhes disse: Sejam fecundos, multipliquem-se, encham a terra e cuidem dela; exerçam domínio sobre os peixes do mar, as aves dos céus e todos os animais que se movem sobre a terra.
 
-**Explicação:**`
+**Explicação:**
 
 O sexto dia apresenta os animais terrestres e, em seguida, a criação da humanidade. É um dos momentos centrais do capítulo.
 
@@ -468,7 +468,7 @@ Deus abençoa a humanidade e lhe confia a tarefa de frutificar, multiplicar-se, 
 
 **30** E a todos os animais da terra, às aves dos céus e aos seres que se movem sobre a terra, tudo o que tem vida, dou toda a vegetação verde como alimento. E assim aconteceu.
 
-**Explicação:**`
+**Explicação:**
 
 Depois de criar a humanidade, Deus apresenta as plantas e os frutos como alimento para os seres humanos e a vegetação como alimento para os animais.
 
@@ -494,7 +494,7 @@ A vida depende da provisão de Deus. Receber alimento com gratidão e usar os re
 
 **31** Deus viu tudo o que havia feito, e era muito bom. Houve tarde e manhã: sexto dia.
 
-**Explicação:**`
+**Explicação:**
 
 Ao terminar a obra do sexto dia, Deus contempla tudo o que havia feito e declara que era “muito bom”.
 
@@ -509,6 +509,122 @@ A criação material não é apresentada como má em si. O mundo, o corpo e a vi
 **O que aprendemos?**
 
 Devemos receber a criação com gratidão, respeitar a vida e reconhecer que o Criador é bom. Não devemos confundir a bondade original da criação com a realidade atual marcada pelo pecado e pela morte.`
+    },
+    {
+      id: "palavras-chave",
+      title: "13. Palavras-chave — observando o hebraico sem forçar o texto",
+      kind: "analysis",
+      confidence: "probable",
+      scriptureRefs: ["Gênesis 1:1-31","Salmos 33:6-9","João 1:1-3"],
+      body: `O estudo das palavras originais pode iluminar o texto, mas uma palavra nunca deve ser usada isoladamente para provar uma doutrina. O contexto da frase, do capítulo e do restante da Bíblia precisa orientar a explicação.
+
+**1. Bereshit — “no princípio” (1:1)**
+É a expressão hebraica que abre o livro. Ela situa o começo descrito pelo relato. A frase afirma que Deus é o Criador; não oferece, por si só, uma cronologia científica nem uma data de calendário.
+
+**2. Bara — “criou” (1:1, 21, 27)**
+O verbo é usado em Gênesis 1 para a ação criadora de Deus. É importante observar que o sujeito é Deus. A palavra destaca a ação divina, mas não devemos afirmar que cada ocorrência, sozinha, resolve todas as discussões filosóficas sobre o modo como a criação ocorreu.
+
+**3. Elohim — “Deus”**
+É a forma hebraica traduzida por Deus. Sua forma é morfologicamente plural, mas, em Gênesis 1, o verbo que a acompanha está no singular e o texto apresenta um único Criador. Portanto, a forma da palavra, isoladamente, não prova a doutrina da Trindade. A fé cristã formula a doutrina trinitária considerando o conjunto do testemunho bíblico.
+
+**4. Ruach Elohim — “Espírito de Deus” (1:2)**
+Ruach pode ter sentidos como espírito, vento ou sopro, conforme o contexto. A tradução “Espírito de Deus” é tradicional e amplamente adotada. O leitor deve reconhecer a opção de tradução e não construir uma doutrina inteira apenas a partir de uma possível nuance lexical.
+
+**5. Tohu va-bohu — “sem forma e vazia” (1:2)**
+A expressão descreve a condição inicial da terra na narrativa. O capítulo prossegue mostrando Deus organizando e preenchendo o cenário. O texto não afirma que Deus perdeu o controle, que houve uma rebelião anterior de Satanás ou que uma criação anterior foi destruída entre os versículos 1 e 2; a chamada teoria do intervalo não é declarada pela passagem.
+
+**6. Raqia — “expansão” ou “firmamento” (1:6-8)**
+É o termo associado àquilo que separa as águas e recebe o nome de céus. As traduções variam. Devemos explicar a linguagem do mundo antigo com cuidado, sem fingir que o texto utiliza categorias da astronomia moderna.
+
+**7. Yom — “dia”**
+A palavra aparece na narrativa dos dias da criação. Pode designar dia claro, período de 24 horas ou período em sentido mais amplo em diferentes contextos bíblicos. Em Gênesis 1, a numeração e a fórmula “tarde e manhã” são argumentos importantes para a leitura de dias comuns; outros cristãos entendem a estrutura de modo diferente. O debate deve ser apresentado honestamente.
+
+**8. Tselem e demut — “imagem” e “semelhança” (1:26-27)**
+As duas palavras ajudam a expressar a condição singular da humanidade diante de Deus. O contexto conecta essa dignidade à responsabilidade de governar a criação. Não significa que Deus tenha aparência física humana.
+
+**9. Tov meod — “muito bom” (1:31)**
+A avaliação final de Deus abrange a obra criada. O texto afirma a bondade da criação como obra de Deus; não afirma que toda ação humana posterior seja boa nem ignora a entrada do pecado narrada em Gênesis 3.
+
+**Regra de interpretação:** o significado de uma palavra deve ser estabelecido pelo uso, pela frase e pelo contexto. Evite transformar curiosidades do hebraico em revelações secretas ou provas que o próprio texto não oferece.`
+    },
+    {
+      id: "questoes-interpretativas",
+      title: "14. Questões interpretativas — o que o texto afirma e o que permanece debatido",
+      kind: "theology",
+      confidence: "debated",
+      scriptureRefs: ["Gênesis 1:1-31","Gênesis 2:1-4","Êxodo 20:8-11"],
+      body: `Uma leitura responsável não precisa esconder perguntas difíceis. Ela precisa separar o que está escrito das conclusões que leitores e tradições constroem a partir do texto.
+
+**Gênesis 1:1 e 1:2: como a frase inicial se relaciona com a condição descrita no versículo 2?**
+Há traduções que entendem o versículo 1 como uma afirmação independente: “No princípio Deus criou...”. Há também propostas que o leem como uma oração temporal ligada ao versículo 2. A discussão envolve gramática hebraica e interpretação do conjunto. Em qualquer leitura, o capítulo apresenta Deus como soberano Criador; não é correto tratar uma proposta como se não houvesse debate.
+
+**“Façamos” em Gênesis 1:26: com quem Deus está falando?**
+Entre as leituras cristãs estão a compreensão tradicional de conselho celestial e a leitura retrospectiva à luz da revelação trinitária. O plural não deve ser apresentado como prova gramatical isolada da Trindade. O versículo 27 volta à forma singular: Deus criou a humanidade. A doutrina cristã da Trindade é fundamentada no testemunho bíblico mais amplo, não em uma única forma verbal.
+
+**Os dias são necessariamente períodos de 24 horas?**
+A leitura de dias comuns destaca a sequência numerada e “tarde e manhã”. Leituras de períodos longos, dias analógicos ou estrutura literária consideram outros aspectos do texto e sua relação com Gênesis 2:4. Apresente os argumentos com honestidade e não ridicularize cristãos que sustentam uma leitura diferente.
+
+**O que é o firmamento?**
+A palavra traduzida como expansão ou firmamento pertence à descrição antiga do céu. O texto comunica que Deus estabeleceu ordem entre as águas. Não devemos converter cada expressão antiga em uma descrição técnica da atmosfera ou do espaço sideral.
+
+**Gênesis 1 ensina criação a partir do nada?**
+A doutrina da criação ex nihilo é ensinada na teologia cristã a partir do conjunto das Escrituras e de sua leitura canônica. Gênesis 1:1 é central nessa reflexão, mas a formulação teológica completa não deve depender de uma afirmação simplista sobre uma única palavra ou tradução.
+
+**O que não está no texto?**
+O capítulo não menciona uma guerra entre Deus e Satanás antes da criação, não descreve uma queda de anjos, não fornece idade da Terra em anos modernos e não identifica cada mecanismo físico da formação do universo. Não transforme silêncio do texto em certeza doutrinária.
+
+**Conclusão:** podemos ter convicções, mas precisamos nomear corretamente o grau de certeza. O texto explícito deve ter prioridade; interpretações devem ser identificadas como interpretações; questões debatidas devem ser apresentadas sem falsa unanimidade.`
+    },
+    {
+      id: "referencias-explicadas",
+      title: "15. Referências bíblicas — como outros textos iluminam Gênesis 1",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Salmos 33:6-9","Salmos 8:3-8","João 1:1-3","Colossenses 1:15-17","Hebreus 11:3","Êxodo 20:8-11","Tiago 3:9"],
+      body: `As referências paralelas não substituem Gênesis 1. Elas mostram como outras partes da Bíblia retomam seus temas.
+
+**Salmos 33:6-9 — a criação pela palavra**
+O salmo louva o poder da palavra do Senhor: ele fala, e acontece. Isso reforça o tema de Gênesis 1, em que a ordem divina é seguida pela realização. O salmo é poesia de louvor, não uma descrição técnica dos processos físicos.
+
+**Salmos 8:3-8 — dignidade e responsabilidade humanas**
+O salmista contempla os céus e pergunta pela humanidade. Embora pequena diante da grandeza do universo, ela recebe honra e responsabilidade sobre as obras de Deus. O texto ajuda a compreender a dignidade humana sem transformar domínio em licença para abuso.
+
+**Êxodo 20:8-11 — a semana da criação e o descanso**
+O mandamento do sábado relaciona o ritmo de seis dias de trabalho e um dia de descanso à criação. A passagem mostra a importância teológica e comunitária do padrão da semana para Israel.
+
+**João 1:1-3, 14 — o Verbo e Jesus**
+João começa com linguagem que remete ao princípio e afirma que todas as coisas vieram à existência por meio do Verbo. João 1:14 identifica o Verbo que se fez carne. Assim, a conexão com Jesus é explícita no Evangelho, não uma alegoria inventada para cada detalhe de Gênesis.
+
+**Colossenses 1:15-17 — Cristo e a criação**
+Paulo afirma que todas as coisas foram criadas por meio de Cristo e para Cristo, e que nele tudo subsiste. O texto amplia a compreensão cristã da relação entre Cristo e a criação.
+
+**Hebreus 11:3 — fé e criação**
+O autor afirma que os mundos foram formados pela palavra de Deus e que o visível não se originou simplesmente do que se vê. O foco do trecho é a fé que confia na palavra divina.
+
+**Tiago 3:9 — a dignidade de pessoas**
+Tiago critica o uso da língua para louvar a Deus e amaldiçoar pessoas feitas à semelhança divina. Essa referência mostra uma consequência ética da doutrina da imagem de Deus: a maneira como tratamos pessoas deve ser coerente com a dignidade que Deus lhes concedeu.
+
+**Como usar referências:** leia o contexto de cada passagem, observe a intenção do autor e explique a conexão. Não basta listar versículos como se todos dissessem exatamente a mesma coisa.`
+    },
+    {
+      id: "erros-interpretacao",
+      title: "16. Cuidados — erros de interpretação que devemos evitar",
+      kind: "application",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 1:1-31","Gênesis 2:1-3","Gênesis 3:1-24","João 1:1-3"],
+      body: `Ao ensinar Gênesis 1, alguns cuidados protegem o aluno de conclusões que vão além da passagem.
+
+- **Não afirmar que Elohim prova a Trindade por si só.** A forma plural do substantivo não resolve a doutrina; considere o testemunho bíblico completo.
+- **Não confundir o Espírito de Deus em Gênesis 1:2 com uma exposição completa da doutrina do Espírito Santo.** O tema deve ser desenvolvido a partir de outras passagens.
+- **Não afirmar que Provérbios 8 fala diretamente de Jesus sem explicar a personificação da Sabedoria e a leitura cristã posterior.** Uma conexão teológica exige argumento cuidadoso.
+- **Não transformar “haja luz” em uma promessa de que Deus resolverá imediatamente todo problema pessoal.** A aplicação precisa respeitar o assunto original.
+- **Não usar “imagem de Deus” para defender superioridade de um povo, sexo, classe ou indivíduo.** O texto atribui dignidade à humanidade, homem e mulher.
+- **Não tratar o domínio como autorização para crueldade ou exploração.** A humanidade continua sendo criatura e administradora responsável.
+- **Não declarar que Gênesis 1 resolve sozinho todas as questões científicas contemporâneas.** O capítulo tem propósito teológico e usa linguagem própria de seu contexto.
+- **Não afirmar que o capítulo ensina que o cristão nunca sofrerá.** Gênesis 3 e o restante da Bíblia mostram a realidade do pecado, do sofrimento e da esperança de redenção.
+- **Não apresentar uma interpretação debatida como se fosse a única posição cristã histórica.** Explique os argumentos e identifique a posição adotada.
+
+**Método seguro:** pergunte sempre: o que o versículo diz? O que o contexto confirma? O que estou inferindo? Que outras passagens realmente sustentam essa conclusão? Que aplicação respeita o sentido original?`
     },
     {
       id: "debate-dias",
