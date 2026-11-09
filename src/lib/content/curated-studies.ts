@@ -1,6 +1,7 @@
 import type { StudyContent } from "../types";
 import { genesis2Study } from "./genesis-2-study";
 import { genesis3Study } from "./genesis-3-study";
+import { genesis4Study } from "./genesis-4-study";
 import { genesis1Study } from "./genesis-1-study";
 
 /**
@@ -12,4 +13,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "genesis-1-criacao": genesis1Study,
   "biblia-genesis-cap-2": genesis2Study,
   "biblia-genesis-cap-3": genesis3Study,
+  "biblia-genesis-cap-4": genesis4Study,
 };
