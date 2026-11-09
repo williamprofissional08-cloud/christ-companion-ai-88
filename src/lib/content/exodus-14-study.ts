@@ -68,10 +68,7 @@ export const exodus14Study: StudyContent = {
     {
       "id": "exodo-14-1",
       "title": "1. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": [
-        "A perseguição de Faraó (14:5–9)",
-        "O rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração."
-      ],
+      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
       "kind": "observation",
       "confidence": "high",
       "scriptureRefs": [
@@ -81,10 +78,7 @@ export const exodus14Study: StudyContent = {
     {
       "id": "exodo-14-2",
       "title": "2. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": [
-        "A perseguição de Faraó (14:5–9)",
-        "O rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração."
-      ],
+      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -94,10 +88,7 @@ export const exodus14Study: StudyContent = {
     {
       "id": "exodo-14-3",
       "title": "3. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": [
-        "A perseguição de Faraó (14:5–9)",
-        "O rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração."
-      ],
+      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -107,10 +98,7 @@ export const exodus14Study: StudyContent = {
     {
       "id": "exodo-14-4",
       "title": "4. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": [
-        "A perseguição de Faraó (14:5–9)",
-        "O rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração."
-      ],
+      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -120,10 +108,7 @@ export const exodus14Study: StudyContent = {
     {
       "id": "exodo-14-5",
       "title": "5. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": [
-        "A perseguição de Faraó (14:5–9)",
-        "O rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração."
-      ],
+      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -133,10 +118,7 @@ export const exodus14Study: StudyContent = {
     {
       "id": "exodo-14-6",
       "title": "6. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": [
-        "A perseguição de Faraó (14:5–9)",
-        "O rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração."
-      ],
+      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -146,10 +128,7 @@ export const exodus14Study: StudyContent = {
     {
       "id": "exodo-14-7",
       "title": "7. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": [
-        "A perseguição de Faraó (14:5–9)",
-        "O rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração."
-      ],
+      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -159,10 +138,7 @@ export const exodus14Study: StudyContent = {
     {
       "id": "exodo-14-8",
       "title": "8. A ordem para acampar (14:1–4),Deus orienta Israel a acampar junto ao mar. A posição parece vulnerável e Faraó interpreta a situação como oportunidade para recapturar o povo.",
-      "body": [
-        "A perseguição de Faraó (14:5–9)",
-        "O rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração."
-      ],
+      "body": "A perseguição de Faraó (14:5–9)\n\nO rei mobiliza carros e tropas. A decisão mostra que a autorização de saída não significou mudança profunda de coração.",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
