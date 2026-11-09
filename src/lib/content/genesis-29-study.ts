@@ -313,6 +313,14 @@ Leia Gênesis 29 em continuidade com Gênesis 27–30. O engano de Labão pode s
       confidence: "high",
       scriptureRefs: ["Gênesis 29:1–35", "Gênesis 30:1–24", "Tiago 5:4"],
       body: "Não use a história para justificar fraude, exploração de trabalhadores ou quebra de acordos. Não apresente o engano de Labão como punição divina comprovada contra Jacó. Não trate poligamia e favoritismo como modelos para o casamento. Não reduza o valor de Lia ou Raquel à aparência ou à maternidade. Não conclua que infertilidade revela falta de fé ou rejeição de Deus. Não prometa que toda pessoa desprezada terá uma solução imediata idêntica à de Lia. Aplique o texto com atenção à dignidade, ao consentimento, à justiça, à responsabilidade e à graça de Deus."
+    },
+    {
+      id: "avaliacao-revisao",
+      title: "30. Revisão e avaliação do aprendizado",
+      kind: "assessment",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 29:1–35"],
+      body: "**Retome o texto:** (1) Como Jacó conhece Raquel? (2) Qual acordo faz com Labão? (3) Como Labão justifica a troca das noivas? (4) Que consequências a fraude produz? (5) Como o narrador descreve a situação de Lia?\n\n**Exercício:** compare Gênesis 29:15–30 com os princípios bíblicos de honestidade e justiça no trabalho. Examine os nomes dos filhos de Lia e explique o que suas falas revelam, sem reduzir sua dignidade à maternidade.\n\n**Critério de aprendizagem:** explicar o enredo, reconhecer exploração e favoritismo, compreender a função narrativa dos nascimentos e construir aplicação que proteja a dignidade de todas as pessoas."
     }
   ]
 };
