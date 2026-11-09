@@ -246,6 +246,8 @@ Leia o capítulo em continuidade com Gênesis 25:19–34 e 26:34–35. Antes do 
       confidence: "high",
       scriptureRefs: ["Gênesis 25:23", "Gênesis 27:1–46", "Efésios 4:25", "Colossenses 3:21"],
       body: "Não apresente a fraude de Rebeca e Jacó como modelo de fé. Não use a soberania de Deus para absolver a mentira ou o favoritismo. Não trate o sofrimento de Esaú como irrelevante e não justifique sua intenção homicida. Não use a bênção patriarcal como autorização para manipular heranças ou controlar familiares hoje. Não transforme a passagem em justificativa para violência ou coerção. A aplicação deve honrar a verdade, a dignidade dos familiares, a justiça e a proteção de pessoas ameaçadas."
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 27:1-46"], body: "1. Como Jacó obtém a bênção destinada a Esaú? 2. Qual é o papel de Rebeca no plano? 3. Como Isaque reage ao descobrir o engano? 4. Que consequências familiares aparecem? 5. Como a narrativa distingue a promessa de Deus das ações enganosas dos personagens? **Atividade:** trace as consequências do engano para cada integrante da família."
     }
   ]
 };
