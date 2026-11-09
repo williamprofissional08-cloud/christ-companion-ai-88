@@ -303,6 +303,8 @@ Leia Gênesis 28 em continuidade com Gênesis 25–27. A bênção pronunciada p
       confidence: "high",
       scriptureRefs: ["Gênesis 27:1–46", "Gênesis 28:1–22", "João 1:51", "2 Coríntios 9:6–8"],
       body: "Não use a promessa a Jacó para afirmar que todo cristão receberá riqueza, território ou ausência de sofrimento. Não transforme o voto e o dízimo de Jacó em cobrança financeira ou barganha com Deus. Não ensine que qualquer sonho tem autoridade divina. Não trate a pedra ou o local como amuleto. Não use a orientação matrimonial do capítulo para promover racismo ou superioridade étnica. Não apresente Jacó como exemplo moral perfeito: a narrativa mostra um homem em processo. A aplicação cristã deve considerar a conexão explícita com João 1:51, a centralidade de Cristo, a responsabilidade humana e os limites do que o texto afirma."
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 28:1-22"], body: "1. Por que Jacó deixa Berseba? 2. O que ele vê no sonho? 3. Como Deus reafirma a promessa feita a Abraão e Isaque? 4. Qual é a resposta de Jacó ao despertar? 5. O que Betel passa a representar na narrativa? **Atividade:** liste os elementos da promessa e a resposta de Jacó."
     }
   ]
 };

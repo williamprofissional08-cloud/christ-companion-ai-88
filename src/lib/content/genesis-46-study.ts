@@ -239,6 +239,14 @@ export const genesis46Study: StudyContent = {
       "scriptureRefs": [
         "Gênesis 46:31–34"
       ]
+    }    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 46:1-34"], body: "**Berseba:** lugar de memória patriarcal onde Jacó oferece sacrifícios. **Gósen:** região destinada à instalação da família no Egito. **Genealogia:** lista que preserva parentesco e identidade das tribos. **Sessenta e seis e setenta:** contagens com critérios diferentes dentro do próprio capítulo. **Promessa de retorno:** Deus afirma que fará Israel subir novamente."
+    }
+    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 46:1-34"], body: "1. Por que Jacó oferece sacrifícios em Berseba? 2. O que Deus promete durante a visão noturna? 3. Como a genealogia organiza os descendentes? 4. Como explicar as contagens de 66 e 70 em Gênesis 46? 5. Por que a ida ao Egito não significa abandono da promessa da terra? **Atividade:** desenhe a sequência Berseba–Egito–Gósen e anote as promessas de Deus."
+    }
+    ,{
+      id: "preparacao-mensagem", title: "Preparação de ensino ou mensagem bíblica", kind: "sermon", confidence: "high", scriptureRefs: ["Gênesis 46:1-34"], body: "**Tema:** Deus acompanha seu povo durante as transições. **Movimentos:** (1) adoração e palavra de Deus em Berseba (vv. 1-4); (2) descida e genealogia da família (vv. 5-27); (3) reencontro com José e chegada a Gósen (vv. 28-34). **Cuidado:** explicar as diferenças de contagem sem harmonização simplista. **Aplicação:** confiar na presença de Deus sem confundir etapas temporárias com o cumprimento final da promessa."
     }
   ]
 };

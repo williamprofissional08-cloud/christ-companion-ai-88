@@ -255,6 +255,11 @@ O altar em Siquém encerra o capítulo com adoração. Jacó reconhece o Deus qu
       confidence: "high",
       scriptureRefs: ["Gênesis 33:1–20"],
       body: "O capítulo apresenta um encontro marcado por humildade, acolhimento e emoção. Jacó oferece presentes, Esaú o recebe e os irmãos seguem em direções distintas. Jacó chega a Siquém, compra um terreno e ergue um altar. A narrativa destaca a graça inesperada, a responsabilidade com os vulneráveis e a adoração. Ela não fornece uma fórmula mecânica de reconciliação nem apaga o contexto do conflito. Seu testemunho convida à paz possível, à prudência e à gratidão a Deus."
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 33:1-20"], body: "1. Como Jacó se aproxima de Esaú? 2. Como Esaú reage? 3. O que o abraço e o choro demonstram? 4. Por que Jacó e Esaú seguem caminhos diferentes? 5. Como o capítulo descreve reconciliação sem apagar o passado? **Atividade:** identifique gestos concretos de humildade e acolhimento."
+    }
+    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 33:1-20"], body: "**Reconciliação:** restauração do relacionamento após conflito. **Presente:** gesto de Jacó para expressar respeito e buscar acolhimento. **Seir:** região associada à residência de Esaú."
     }
   ]
 };

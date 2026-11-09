@@ -109,6 +109,29 @@ Por fim, a trajetória de José aponta para uma providência que se tornará mai
     { id: "responsabilidade-prisao", title: "12. José recebe confiança no cárcere (39:22–23)", kind: "observation", confidence: "high", scriptureRefs: ["Gênesis 39:22–23"], body: "O responsável pela prisão entrega a José a supervisão dos demais presos e das atividades do local. Assim como Potifar, ele percebe a confiabilidade de José e deixa as tarefas sob seus cuidados. O narrador volta a relacionar o êxito de José à presença do Senhor. A repetição conecta a casa e a prisão: os cenários mudam, mas Deus continua com ele." },
     { id: "integridade-e-sofrimento", title: "13. Integridade não é garantia de vida sem aflição", kind: "pastoral", confidence: "high", scriptureRefs: ["Gênesis 39:8–23", "1 Pedro 2:19–23"], body: "José age com integridade, mas é acusado falsamente e preso. O capítulo impede uma teologia simplista na qual toda obediência produz recompensa imediata ou na qual todo sofrimento prova desobediência. A fé não deve ser medida apenas por prosperidade, cargo ou liberdade. A narrativa reconhece a dor sem declarar que a injustiça seja boa." },
     { id: "poder-e-vulnerabilidade", title: "14. Poder, assédio e proteção da dignidade", kind: "pastoral", confidence: "high", scriptureRefs: ["Gênesis 39:7–20"], body: "O episódio envolve pressão sexual, manipulação da verdade e desigualdade de poder. José é escravizado e depende das decisões da casa de Potifar; a esposa do oficial tem posição social superior à dele. O texto deve ser lido sem culpabilizar quem sofre assédio e sem transformar uma acusação falsa narrada na Escritura em suspeita automática contra denúncias atuais. Comunidades e líderes devem ouvir com seriedade, proteger pessoas em risco e apurar fatos com imparcialidade." },
-    { id: "providencia-e-capitulos-seguintes", title: "15. A providência que continuará a se revelar", kind: "canonical", confidence: "probable", scriptureRefs: ["Gênesis 39:21–23", "Gênesis 40–41"], body: "Gênesis 39 termina com José na prisão, e o capítulo seguinte começa a desenvolver os acontecimentos nesse ambiente. Ao ler a sequência, o leitor verá como a posição de José no cárcere se conecta a novas oportunidades de serviço. É possível reconhecer a unidade narrativa e a providência divina à luz do conjunto, mas não devemos antecipar detalhes que ainda não foram narrados neste capítulo." }
+    { id: "providencia-e-capitulos-seguintes", title: "15. A providência que continuará a se revelar", kind: "canonical", confidence: "probable", scriptureRefs: ["Gênesis 39:21–23", "Gênesis 40–41"], body: "Gênesis 39 termina com José na prisão, e o capítulo seguinte começa a desenvolver os acontecimentos nesse ambiente. Ao ler a sequência, o leitor verá como a posição de José no cárcere se conecta a novas oportunidades de serviço. É possível reconhecer a unidade narrativa e a providência divina à luz do conjunto, mas não devemos antecipar detalhes que ainda não foram narrados neste capítulo." }    ,{
+      id: "glossario-didatico",
+      title: "Glossário e conceitos importantes",
+      kind: "glossary",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 39:1-23"],
+      body: "**Casa de Potifar:** unidade doméstica e administrativa em que José recebe responsabilidades. **Favor:** prosperidade atribuída à presença do Senhor. **Integridade:** fidelidade de José diante da proposta da mulher de Potifar. **Falsa acusação:** denúncia que distorce os fatos e provoca sua prisão. **Providência:** ação de Deus na história, sem aprovação da injustiça sofrida por José."
+    }
+    ,{
+      id: "exercicio-aprendizagem",
+      title: "Exercícios de compreensão e interpretação",
+      kind: "exercise",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 39:1-23"],
+      body: "1. Como o texto descreve a presença do Senhor na vida de José? 2. Que responsabilidades Potifar confia a ele? 3. Como José explica sua recusa? 4. O que muda quando a acusação é apresentada? 5. Onde o texto afirma que Deus permanece com José na prisão? **Atividade:** organize o capítulo em casa, acusação e prisão, anotando evidências textuais."
+    }
+    ,{
+      id: "preparacao-mensagem",
+      title: "Preparação de ensino ou mensagem bíblica",
+      kind: "sermon",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 39:1-23"],
+      body: "**Tema:** fidelidade a Deus também em circunstâncias injustas. **Proposição:** José age com integridade, sofre uma acusação falsa e continua sob a presença do Senhor. **Movimentos:** (1) responsabilidade na casa de Potifar (vv. 1-6); (2) resistência à tentação (vv. 7-12); (3) acusação, prisão e presença de Deus (vv. 13-23). **Cuidado:** não prometer libertação imediata ou prosperidade material a toda pessoa fiel. **Aplicação:** manter integridade e buscar justiça."
+    }
   ]
 };

@@ -276,6 +276,14 @@ export const genesis50Study: StudyContent = {
         "Gênesis 50:26",
         "Josué 24:32"
       ]
+    }    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 50:1-26"], body: "**Embalsamamento:** prática funerária egípcia mencionada no sepultamento de Jacó e de José. **Macpela:** sepultura familiar em Canaã. **Providência:** ação soberana de Deus na história, sem aprovação moral do mal. **Perdão:** resposta de José que inclui consolo e sustento, sem apagar responsabilidade. **Êxodo:** livro seguinte, para o qual aponta a promessa sobre os ossos de José."
+    }
+    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 50:1-26"], body: "1. Como José honra o pedido de Jacó? 2. Por que os irmãos temem após a morte do pai? 3. O que José afirma em Gênesis 50:20? 4. Por que a providência não transforma o mal em bem moral? 5. Como a promessa sobre os ossos de José prepara Êxodo? **Atividade:** trace as conexões entre Gênesis 23, 50:24-26, Êxodo 13:19 e Josué 24:32."
+    }
+    ,{
+      id: "preparacao-mensagem", title: "Preparação de ensino ou mensagem bíblica", kind: "sermon", confidence: "high", scriptureRefs: ["Gênesis 50:1-26"], body: "**Tema:** Deus conduz a história para preservar vidas e cumprir sua promessa. **Movimentos:** (1) luto e sepultamento de Jacó (vv. 1-14); (2) medo dos irmãos e resposta de José (vv. 15-21); (3) morte de José e esperança do êxodo (vv. 22-26). **Cuidado:** não usar perdão para exigir que vítimas permaneçam em relações inseguras, nem dizer que Deus aprova a maldade. **Aplicação:** praticar misericórdia com responsabilidade e confiar na fidelidade de Deus."
     }
   ]
 };

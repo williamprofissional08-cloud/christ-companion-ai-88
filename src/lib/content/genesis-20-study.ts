@@ -342,6 +342,8 @@ Leia Gênesis 20 integralmente em sua Bíblia. Observe o diálogo entre Deus e A
       confidence: "high",
       scriptureRefs: ["Gênesis 20:1–18"],
       body: "Responda com base no texto bíblico:\n\n1. Para onde Abraão viaja?\n2. Como apresenta Sara?\n3. O que Abimeleque faz?\n4. Como Deus o adverte?\n5. Qual é a defesa apresentada pelo rei?\n6. O que Deus declara sobre a intervenção para impedir o pecado?\n7. Qual ordem Abimeleque recebe?\n8. Por que Abraão diz que teve medo?\n9. Qual era o parentesco entre Abraão e Sara?\n10. Por que a explicação não torna honesta a omissão?\n11. Que paralelo existe com Gênesis 12?\n12. Como Abimeleque restitui Sara?\n13. O que significa a fala sobre as mil peças de prata?\n14. Por que Abraão ora pelo rei?\n15. O que ocorre na casa de Abimeleque?\n16. Como o capítulo prepara Gênesis 21?\n17. O que aprendemos sobre soberania e responsabilidade?\n18. Como aplicar o texto sem justificar o engano?\n\n**Critérios:** fidelidade ao texto; atenção ao contexto; distinção entre descrição e aprovação; respeito às pessoas envolvidas; aplicação ética e coerente."
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 20:1-18"], body: "1. Por que Abraão apresenta Sara como irmã? 2. Como Deus intervém no sonho de Abimeleque? 3. Que diferença existe entre a intenção de Abimeleque e a conduta de Abraão? 4. Como a verdade é restabelecida? 5. O que o capítulo ensina sobre responsabilidade e proteção? **Atividade:** compare Gênesis 12 e 20."
     }
   ]
 };

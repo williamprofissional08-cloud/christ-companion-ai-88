@@ -235,6 +235,14 @@ export const genesis47Study: StudyContent = {
       "scriptureRefs": [
         "Gênesis 47:29–31"
       ]
+    }    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 47:1-31"], body: "**Gósen:** região onde a família de Jacó se estabelece. **Faraó:** governante que recebe os familiares de José. **Fome:** crise que estrutura a narrativa econômica do capítulo. **Mordomia e administração:** gestão dos recursos durante a crise. **Juramento:** compromisso de Jacó para ser sepultado com seus pais em Canaã."
+    }
+    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 47:1-31"], body: "1. Como José apresenta sua família a Faraó? 2. O que Jacó declara sobre sua vida? 3. Como José administra a crise da fome? 4. Que mudanças ocorrem na relação entre população, terra e Faraó? 5. Por que a promessa de sepultamento em Canaã continua importante? **Atividade:** diferencie as ações de José, as decisões de Faraó e os efeitos sobre a população."
+    }
+    ,{
+      id: "preparacao-mensagem", title: "Preparação de ensino ou mensagem bíblica", kind: "sermon", confidence: "high", scriptureRefs: ["Gênesis 47:1-31"], body: "**Tema:** a preservação da família acontece em meio a uma crise real. **Movimentos:** (1) a família diante de Faraó e a instalação em Gósen (vv. 1-12); (2) a administração da fome (vv. 13-26); (3) a permanência de Israel e o juramento de Jacó (vv. 27-31). **Cuidado:** não transformar a política econômica do texto em modelo universal nem ignorar seus efeitos sociais. **Aplicação:** avaliar liderança, responsabilidade pública e fidelidade às promessas."
     }
   ]
 };

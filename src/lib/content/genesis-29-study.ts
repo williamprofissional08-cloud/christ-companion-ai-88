@@ -313,6 +313,8 @@ Leia Gênesis 29 em continuidade com Gênesis 27–30. O engano de Labão pode s
       confidence: "high",
       scriptureRefs: ["Gênesis 29:1–35", "Gênesis 30:1–24", "Tiago 5:4"],
       body: "Não use a história para justificar fraude, exploração de trabalhadores ou quebra de acordos. Não apresente o engano de Labão como punição divina comprovada contra Jacó. Não trate poligamia e favoritismo como modelos para o casamento. Não reduza o valor de Lia ou Raquel à aparência ou à maternidade. Não conclua que infertilidade revela falta de fé ou rejeição de Deus. Não prometa que toda pessoa desprezada terá uma solução imediata idêntica à de Lia. Aplique o texto com atenção à dignidade, ao consentimento, à justiça, à responsabilidade e à graça de Deus."
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 29:1-35"], body: "1. Como Jacó conhece Raquel? 2. Que acordo faz com Labão? 3. Como Labão o engana? 4. Quais são as consequências da rivalidade entre Lia e Raquel? 5. O que o capítulo revela sobre relações familiares marcadas por favoritismo? **Atividade:** organize os casamentos e nascimentos na ordem narrada."
     }
   ]
 };

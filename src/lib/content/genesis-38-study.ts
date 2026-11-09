@@ -106,6 +106,29 @@ A aplicação para a comunidade cristã é concreta: cumprir promessas, proteger
     { id: "levirato-contexto", title: "12. O costume familiar e a legislação posterior", kind: "historical", confidence: "probable", scriptureRefs: ["Gênesis 38:8–11", "Deuteronômio 25:5–10", "Rute 4:1–12"], body: "A responsabilidade de Onã tem relação temática com a preservação da descendência do irmão falecido. Deuteronômio 25 apresenta posteriormente uma legislação sobre o casamento de cunhado, com rito e procedimento próprios. Rute 4 mostra outra situação de resgate familiar. Esses textos podem ser comparados, mas não devem ser tratados como se todos os detalhes fossem idênticos. Gênesis 38 não descreve um rito de Deuteronômio 25." },
     { id: "tamar-justica", title: "13. Tamar, vulnerabilidade e justiça", kind: "pastoral", confidence: "high", scriptureRefs: ["Gênesis 38:11, 14, 24–26"], body: "Tamar está sujeita às decisões de Judá e permanece sem que a promessa de Selá seja cumprida. Sua ação ocorre em uma situação de vulnerabilidade e risco. O narrador direciona atenção à omissão de Judá e à declaração de que Tamar foi mais justa do que ele. Uma leitura responsável não a culpa pela injustiça que sofreu, não romantiza a vulnerabilidade e não transforma sua estratégia em mandamento universal." },
     { id: "genealogia", title: "14. Perez na história da promessa", kind: "canonical", confidence: "high", scriptureRefs: ["Rute 4:18–22", "Mateus 1:1–3"], body: "Perez aparece na genealogia que conduz a Davi e, em Mateus, na genealogia de Jesus. A continuidade da linhagem passa por uma história familiar marcada por falhas. Isso demonstra a fidelidade de Deus em conduzir seu propósito, não aprovação de toda conduta humana descrita. A genealogia convida a reconhecer a graça sem apagar a responsabilidade e a dignidade das pessoas envolvidas." },
-    { id: "judá-transformacao", title: "15. A responsabilidade de Judá e seu desenvolvimento", kind: "canonical", confidence: "probable", scriptureRefs: ["Gênesis 38:24–26", "Gênesis 44:18–34"], body: "Em Gênesis 38, Judá admite que falhou com Tamar. Em Gênesis 44, ele se oferece para ficar no lugar de Benjamim, demonstrando uma mudança importante em sua disposição de assumir responsabilidade por um irmão. A relação entre os episódios é uma leitura do desenvolvimento do personagem, não uma declaração explícita do narrador de que o primeiro episódio causou diretamente o segundo." }
+    { id: "judá-transformacao", title: "15. A responsabilidade de Judá e seu desenvolvimento", kind: "canonical", confidence: "probable", scriptureRefs: ["Gênesis 38:24–26", "Gênesis 44:18–34"], body: "Em Gênesis 38, Judá admite que falhou com Tamar. Em Gênesis 44, ele se oferece para ficar no lugar de Benjamim, demonstrando uma mudança importante em sua disposição de assumir responsabilidade por um irmão. A relação entre os episódios é uma leitura do desenvolvimento do personagem, não uma declaração explícita do narrador de que o primeiro episódio causou diretamente o segundo." }    ,{
+      id: "glossario-didatico",
+      title: "Glossário e conceitos importantes",
+      kind: "glossary",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 38:1-30"],
+      body: "**Levirato:** prática familiar posteriormente regulamentada em Deuteronômio 25:5-10, ligada à preservação do nome e da descendência. **Selo, cordão e cajado:** objetos pessoais que identificam Judá. **Descendência:** continuidade familiar, importante na narrativa patriarcal. **Justiça:** tema quando Judá reconhece que Tamar foi mais justa do que ele na situação."
+    }
+    ,{
+      id: "exercicio-aprendizagem",
+      title: "Exercícios de compreensão e interpretação",
+      kind: "exercise",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 38:1-30"],
+      body: "1. Por que a história de Judá e Tamar aparece entre episódios de José? 2. Que responsabilidade familiar Judá negligencia? 3. Como Tamar preserva os objetos que identificam Judá? 4. O que Judá reconhece ao declarar que ela é mais justa? 5. Como o capítulo trata vulnerabilidade e responsabilidade? **Atividade:** compare Gênesis 38 com Deuteronômio 25:5-10, observando diferenças históricas."
+    }
+    ,{
+      id: "preparacao-mensagem",
+      title: "Preparação de ensino ou mensagem bíblica",
+      kind: "sermon",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 38:1-30"],
+      body: "**Tema:** reconhecer a própria responsabilidade exige justiça. **Proposição:** a narrativa expõe falhas de Judá e a vulnerabilidade de Tamar. **Movimentos:** (1) obrigação familiar negligenciada (vv. 1-11); (2) ação de Tamar e provas (vv. 12-23); (3) reconhecimento de Judá e nascimento dos gêmeos (vv. 24-30). **Cuidado:** não romantizar exploração nem atribuir a Tamar a culpa pela negligência de Judá. **Aplicação:** reconhecer erros e proteger vulneráveis."
+    }
   ]
 };

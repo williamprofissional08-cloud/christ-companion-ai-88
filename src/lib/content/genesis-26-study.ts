@@ -272,6 +272,8 @@ Leia Gênesis 26 observando os paralelos com Gênesis 12 e 20, mas também as di
       confidence: "high",
       scriptureRefs: ["Gênesis 26:7–11", "Gênesis 26:12–33", "Mateus 5:9", "Romanos 12:17–21"],
       body: "Não use a proteção de Deus para desculpar a mentira de Isaque. Não ensine que prosperidade financeira é prova universal de fé. Não transforme a retirada de Isaque em ordem para que pessoas permaneçam sob violência ou abandonem recursos de proteção. Não use os casamentos de Esaú para promover preconceito étnico. Aplique o texto com atenção ao contexto patriarcal, à história da promessa e aos princípios bíblicos de verdade, justiça, paz e dignidade humana. Onde a passagem não oferece detalhes, não invente."
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 26:1-35"], body: "1. Como Isaque reage à fome? 2. De que modo a promessa feita a Abraão é reafirmada? 3. Que repetição ocorre no episódio de Rebeca apresentada como irmã? 4. Como Isaque lida com os poços e conflitos? 5. O que o acordo com Abimeleque revela? **Atividade:** acompanhe os nomes dos poços e os conflitos correspondentes."
     }
   ]
 };
