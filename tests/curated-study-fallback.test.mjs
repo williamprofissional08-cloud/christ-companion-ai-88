@@ -9,7 +9,7 @@ const handlerSource = readFileSync(new URL("../src/lib/ai.functions.ts", import.
 test("Genesis 1 is registered and contains a structured, didactic study", () => {
   assert.match(curatedSource, /"genesis-1-criacao": genesis1Study/);
   assert.match(curatedSource, /from "\.\/genesis-1-study"/);
-  assert.match(genesis1Source, /version: 3/);
+  assert.match(genesis1Source, /version: 4/);
   assert.match(genesis1Source, /title: "1\. Introdução/);
   assert.match(genesis1Source, /title: "2\. Contexto histórico/);
   assert.match(genesis1Source, /title: "4\. Tópico 1/);
@@ -18,6 +18,14 @@ test("Genesis 1 is registered and contains a structured, didactic study", () => 
   assert.match(genesis1Source, /title: "18\. Oficina do pregador/);
   assert.equal((genesis1Source.match(/id: "topico-/g) ?? []).length, 9);
   assert.match(genesis1Source, /id: "leitura-biblica-completa"/);
+  assert.match(genesis1Source, /id: "palavras-chave"/);
+  assert.match(genesis1Source, /id: "questoes-interpretativas"/);
+  assert.match(genesis1Source, /id: "referencias-explicadas"/);
+  assert.match(genesis1Source, /id: "erros-interpretacao"/);
+  assert.equal(genesis1Source.includes("**Explicação:**`"), false, "Explanatory prose must remain inside each section template literal");
+  assert.match(genesis1Source, /Elohim/);
+  assert.match(genesis1Source, /não prova a doutrina da Trindade/);
+  assert.match(genesis1Source, /não menciona uma guerra entre Deus e Satanás/);
   for (let verse = 1; verse <= 31; verse += 1) {
     assert.match(genesis1Source, new RegExp(`\\*\\*${verse}\\*\\*`), `Genesis 1 verse ${verse} must be included`);
   }
