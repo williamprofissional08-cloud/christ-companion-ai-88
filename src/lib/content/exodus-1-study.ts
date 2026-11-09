@@ -2,7 +2,7 @@ import type { StudyContent } from "../types";
 
 /** Estudo curado de Êxodo 1 — O crescimento de Israel, a opressão no Egito e a resistência das parteiras. */
 export const exodus1Study: StudyContent = {
-  version: 1,
+  version: 2,
   depth: "deep",
   intro: `Êxodo 1 faz a ligação entre o final de Gênesis e o início da história de libertação de Israel. O capítulo começa recordando os nomes dos filhos de Jacó que desceram ao Egito com suas famílias. José e toda aquela geração morrem, mas os israelitas continuam a crescer. O narrador enfatiza a multiplicação do povo com uma sequência de expressões: frutificaram, aumentaram, multiplicaram-se e se fortaleceram. A família que havia chegado ao Egito em número limitado tornou-se numerosa, cumprindo a promessa de crescimento feita aos patriarcas.
 
@@ -104,7 +104,6 @@ Para a pregação, o capítulo pode ser organizado em quatro movimentos: a prome
   ],
   conclusion: "Êxodo 1 apresenta a passagem de uma família acolhida no Egito para um povo submetido à escravidão. A nova política do faraó nasce do medo e se transforma em exploração e tentativa de extermínio. Apesar disso, o povo continua a crescer, e duas parteiras demonstram que a autoridade do rei não pode exigir que se pratique o mal. O capítulo não minimiza o sofrimento de Israel, mas afirma que a opressão não encerra a promessa de Deus. A narrativa prepara o leitor para o nascimento de Moisés e para o agir libertador do Senhor.",
   prayer: "Senhor Deus, ajuda-nos a confiar em tua fidelidade mesmo em tempos de opressão e incerteza. Dá-nos o temor que é maior que o medo dos poderosos, coragem para proteger os vulneráveis e sabedoria para reconhecer quando uma autoridade exige o que é injusto. Livra-nos de tratar pessoas como ameaças ou instrumentos. Sustenta os que sofrem e conduz-nos a viver segundo tua justiça e misericórdia. Em nome de Jesus. Amém.",
-  version: 2,
   sections: [
   {
     "id": "leitura-biblica-completa",
