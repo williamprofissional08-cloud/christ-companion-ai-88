@@ -102,15 +102,14 @@ function AuthPage() {
           },
         });
         if (error) throw error;
-        // Supabase may return an empty identities array for an existing address.
-        if (data.user && data.user.identities?.length === 0) {
-          throw new Error("User already registered");
-        }
+        // When Supabase email obfuscation is enabled, an existing address can
+        // return a user with no identities. Keep the response indistinguishable
+        // from a normal confirmation-required signup to prevent account enumeration.
         if (data.session) {
           toast.success("Seu cadastro foi concluído com sucesso!");
         } else if (data.user) {
           setSent(true);
-          toast.success("Cadastro iniciado. Confirme seu e-mail para ativar a conta.");
+          toast.success("Se o cadastro puder ser realizado, você receberá as instruções por e-mail.");
         } else {
           throw new Error("Não recebemos a confirmação do cadastro. Tente novamente.");
         }
@@ -178,8 +177,8 @@ function AuthPage() {
 
         {sent ? (
           <p className="rounded-xl bg-muted p-4 text-sm text-muted-foreground">
-            Enviamos um e-mail de confirmação para <strong>{email}</strong>. Clique no link para
-            ativar sua conta e entrar.
+            Se este endereço puder receber um novo cadastro, você receberá um e-mail com as
+            instruções para ativar sua conta. Verifique também a caixa de spam.
           </p>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
