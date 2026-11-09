@@ -59,10 +59,7 @@ export const exodus13Study: StudyContent = {
     {
       "id": "exodo-13-1",
       "title": "1. Consagração dos primogênitos (13:1–2),Deus reivindica para si os primogênitos de Israel. A consagração é resposta à libertação e pertence à identidade do povo.",
-      "body": [
-        "A festa como ensino da memória (13:3–10)",
-        "Moisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas."
-      ],
+      "body": "A festa como ensino da memória (13:3–10)\n\nMoisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas.",
       "kind": "observation",
       "confidence": "high",
       "scriptureRefs": [
@@ -72,10 +69,7 @@ export const exodus13Study: StudyContent = {
     {
       "id": "exodo-13-2",
       "title": "2. Consagração dos primogênitos (13:1–2),Deus reivindica para si os primogênitos de Israel. A consagração é resposta à libertação e pertence à identidade do povo.",
-      "body": [
-        "A festa como ensino da memória (13:3–10)",
-        "Moisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas."
-      ],
+      "body": "A festa como ensino da memória (13:3–10)\n\nMoisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -85,10 +79,7 @@ export const exodus13Study: StudyContent = {
     {
       "id": "exodo-13-3",
       "title": "3. Consagração dos primogênitos (13:1–2),Deus reivindica para si os primogênitos de Israel. A consagração é resposta à libertação e pertence à identidade do povo.",
-      "body": [
-        "A festa como ensino da memória (13:3–10)",
-        "Moisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas."
-      ],
+      "body": "A festa como ensino da memória (13:3–10)\n\nMoisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -98,10 +89,7 @@ export const exodus13Study: StudyContent = {
     {
       "id": "exodo-13-4",
       "title": "4. Consagração dos primogênitos (13:1–2),Deus reivindica para si os primogênitos de Israel. A consagração é resposta à libertação e pertence à identidade do povo.",
-      "body": [
-        "A festa como ensino da memória (13:3–10)",
-        "Moisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas."
-      ],
+      "body": "A festa como ensino da memória (13:3–10)\n\nMoisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -111,10 +99,7 @@ export const exodus13Study: StudyContent = {
     {
       "id": "exodo-13-5",
       "title": "5. Consagração dos primogênitos (13:1–2),Deus reivindica para si os primogênitos de Israel. A consagração é resposta à libertação e pertence à identidade do povo.",
-      "body": [
-        "A festa como ensino da memória (13:3–10)",
-        "Moisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas."
-      ],
+      "body": "A festa como ensino da memória (13:3–10)\n\nMoisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -124,10 +109,7 @@ export const exodus13Study: StudyContent = {
     {
       "id": "exodo-13-6",
       "title": "6. Consagração dos primogênitos (13:1–2),Deus reivindica para si os primogênitos de Israel. A consagração é resposta à libertação e pertence à identidade do povo.",
-      "body": [
-        "A festa como ensino da memória (13:3–10)",
-        "Moisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas."
-      ],
+      "body": "A festa como ensino da memória (13:3–10)\n\nMoisés ordena que o povo se lembre do dia da saída e explique aos filhos o significado dos Pães sem Fermento. A memória bíblica é transmitida por palavras e práticas.",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
