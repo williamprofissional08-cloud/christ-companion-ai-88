@@ -50,6 +50,15 @@ import { genesis47Study } from "./genesis-47-study";
 import { genesis46Study } from "./genesis-46-study";
 import { genesis1Study } from "./genesis-1-study";
 import { exodus1Study } from "./exodus-1-study";
+import { exodus2Study } from "./exodus-2-10-studies";
+import { exodus3Study } from "./exodus-2-10-studies";
+import { exodus4Study } from "./exodus-2-10-studies";
+import { exodus5Study } from "./exodus-2-10-studies";
+import { exodus6Study } from "./exodus-2-10-studies";
+import { exodus7Study } from "./exodus-2-10-studies";
+import { exodus8Study } from "./exodus-2-10-studies";
+import { exodus9Study } from "./exodus-2-10-studies";
+import { exodus10Study } from "./exodus-2-10-studies";
 import { exodus2Study } from "./exodus-2-study";
 import { exodus3Study } from "./exodus-3-study";
 import { exodus4Study } from "./exodus-4-study";
@@ -117,6 +126,15 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-genesis-cap-47": genesis47Study,
   "biblia-genesis-cap-46": genesis46Study,
   "biblia-exodo-cap-1": exodus1Study,
+  "biblia-exodo-cap-2": exodus2Study,
+  "biblia-exodo-cap-3": exodus3Study,
+  "biblia-exodo-cap-4": exodus4Study,
+  "biblia-exodo-cap-5": exodus5Study,
+  "biblia-exodo-cap-6": exodus6Study,
+  "biblia-exodo-cap-7": exodus7Study,
+  "biblia-exodo-cap-8": exodus8Study,
+  "biblia-exodo-cap-9": exodus9Study,
+  "biblia-exodo-cap-10": exodus10Study,
   "biblia-exodo-cap-2": exodus2Study,
   "biblia-exodo-cap-3": exodus3Study,
   "biblia-exodo-cap-4": exodus4Study,
