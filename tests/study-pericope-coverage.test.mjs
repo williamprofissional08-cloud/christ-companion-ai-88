@@ -13,40 +13,36 @@ const curatedBatch = [
 ];
 
 async function readContent(path) {
-  return readFile(new URL(`../${path}`, import.meta.url), "utf8");
+  return readFile(new URL("../" + path, import.meta.url), "utf8");
 }
 
 function extractSectionReferences(source) {
-  const arrays = [...source.matchAll(/["']?scriptureRefs["']?\\s*:\\s*\\[([\\s\\S]*?)\\]/g)];
+  const arrays = [...source.matchAll(/["']?scriptureRefs["']?\s*:\s*\[([\s\S]*?)\]/g)];
   return arrays.flatMap(([, block]) =>
-    [...block.matchAll(/["'`]([^"'`]+)["'`]/g)].map(([, reference]) => reference.trim()),
+    [...block.matchAll(/["'\`]([^"'\`]+)["'\`]/g)].map(([, reference]) => reference.trim()),
   );
-}
-
-function escapeRegExp(value) {
-  return value.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&");
 }
 
 describe("estudos bíblicos curados: registro e cobertura das perícopes", () => {
   it("mantém Gênesis 1 registrado como referência curada", async () => {
     const registry = await readContent("src/lib/content/curated-studies.ts");
-    assert.match(registry, /["']genesis-1-criacao["']\\s*:\\s*genesis1Study/);
+    assert.match(registry, /["']genesis-1-criacao["']\s*:\s*genesis1Study/);
   });
 
   for (const study of curatedBatch) {
-    it(`${study.book} ${study.chapter} está registrado e cobre todos os versículos nas seções`, async () => {
-      const source = await readContent(`src/lib/content/${study.file}`);
+    it(study.book + " " + study.chapter + " está registrado e cobre todos os versículos nas seções", async () => {
+      const source = await readContent("src/lib/content/" + study.file);
       const registry = await readContent("src/lib/content/curated-studies.ts");
-      const fileBase = study.file.replace(/\\.ts$/, "");
+      const fileBase = study.file.replace(/\.ts$/, "");
 
       assert.match(
         registry,
-        new RegExp(`import\\s*\\{\\s*${study.exportName}\\s*\\}\\s*from\\s*["']\\./${fileBase}["']`),
+        new RegExp("import\\s*\\{\\s*" + study.exportName + "\\s*\\}\\s*from\\s*[\"']\\./" + fileBase + "[\"']"),
         "o arquivo do estudo precisa ser importado pelo catálogo curado",
       );
       assert.match(
         registry,
-        new RegExp(`["']${study.slug}["']\\s*:\\s*${study.exportName}`),
+        new RegExp("[\"']" + study.slug + "[\"']\\s*:\\s*" + study.exportName),
         "o estudo precisa estar associado ao slug canônico",
       );
 
@@ -54,31 +50,31 @@ describe("estudos bíblicos curados: registro e cobertura das perícopes", () =>
       assert.ok(references.length > 0, "o estudo precisa declarar referências nas seções");
 
       const chapterPattern = new RegExp(
-        `^${escapeRegExp(study.book)}\\s+${study.chapter}:\\s*(\\d+)(?:\\s*[–—-]\\s*(\\d+))?$`,
+        "^" + study.book + "\\s+" + study.chapter + ":\\s*(\\d+)(?:\\s*[–—-]\\s*(\\d+))?$",
         "u",
       );
       const covered = new Set();
       const chapterReferences = references.filter((reference) =>
-        reference.startsWith(`${study.book} ${study.chapter}:`),
+        reference.startsWith(study.book + " " + study.chapter + ":"),
       );
 
       assert.ok(chapterReferences.length > 0, "nenhuma perícope do próprio capítulo foi encontrada");
 
       for (const reference of chapterReferences) {
         const match = chapterPattern.exec(reference);
-        assert.ok(match, `referência do capítulo não reconhecida: ${reference}`);
+        assert.ok(match, "referência do capítulo não reconhecida: " + reference);
         const firstVerse = Number(match[1]);
         const lastVerse = Number(match[2] ?? match[1]);
 
-        assert.ok(firstVerse >= 1 && lastVerse >= firstVerse, `intervalo inválido: ${reference}`);
-        assert.ok(lastVerse <= study.verseCount, `referência ultrapassa o capítulo: ${reference}`);
+        assert.ok(firstVerse >= 1 && lastVerse >= firstVerse, "intervalo inválido: " + reference);
+        assert.ok(lastVerse <= study.verseCount, "referência ultrapassa o capítulo: " + reference);
 
         for (let verse = firstVerse; verse <= lastVerse; verse += 1) covered.add(verse);
       }
 
       const missing = Array.from({ length: study.verseCount }, (_, index) => index + 1)
         .filter((verse) => !covered.has(verse));
-      assert.deepEqual(missing, [], `versículos sem cobertura nas seções: ${missing.join(", ")}`);
+      assert.deepEqual(missing, [], "versículos sem cobertura nas seções: " + missing.join(", "));
     });
   }
 });
