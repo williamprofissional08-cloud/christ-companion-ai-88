@@ -299,7 +299,6 @@ Leia Gênesis 24 integralmente. Observe a preocupação de Abraão com a alianç
 
 **Cuidado pastoral:** não usar a mensagem para pressionar solteiros, casais ou famílias.`,
     },
-    },
     {
       id: "glossario",
       title: "27. Glossário de termos e personagens",
