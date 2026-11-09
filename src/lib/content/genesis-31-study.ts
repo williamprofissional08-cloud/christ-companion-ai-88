@@ -341,6 +341,10 @@ Ao ensinar, diferencie observação, contexto histórico, interpretação e apli
       kind: "summary",
       confidence: "high",
       body: "Senhor, ajuda-nos a confiar em tua presença quando enfrentamos injustiça e mudanças difíceis. Dá-nos coragem para reconhecer a exploração, sabedoria para agir com responsabilidade e humildade para corrigir palavras e atitudes precipitadas. Protege quem está vulnerável e ensina-nos a estabelecer limites sem vingança. Que a verdade, a justiça e a paz de Cristo orientem nossas relações. Amém."
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 31:1-55"], body: "1. Por que Jacó decide partir? 2. Como Deus o orienta? 3. Que acusações Labão apresenta? 4. Como os dois estabelecem um pacto? 5. O que o capítulo ensina sobre exploração, limites e testemunho? **Atividade:** compare as versões de Jacó e Labão e identifique os fatos narrados."
+    }    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 31:1-55"], body: "**Gileade:** região associada ao pacto entre Jacó e Labão. **Terafins:** objetos domésticos de culto ou representação religiosa, cuja função exata no episódio é debatida. **Pacto:** compromisso público que estabelece limites e testemunho entre as partes. **Mizpá:** nome associado ao memorial do acordo."
     }
   ]
 };
