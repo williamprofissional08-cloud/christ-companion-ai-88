@@ -272,6 +272,14 @@ Leia Gênesis 26 observando os paralelos com Gênesis 12 e 20, mas também as di
       confidence: "high",
       scriptureRefs: ["Gênesis 26:7–11", "Gênesis 26:12–33", "Mateus 5:9", "Romanos 12:17–21"],
       body: "Não use a proteção de Deus para desculpar a mentira de Isaque. Não ensine que prosperidade financeira é prova universal de fé. Não transforme a retirada de Isaque em ordem para que pessoas permaneçam sob violência ou abandonem recursos de proteção. Não use os casamentos de Esaú para promover preconceito étnico. Aplique o texto com atenção ao contexto patriarcal, à história da promessa e aos princípios bíblicos de verdade, justiça, paz e dignidade humana. Onde a passagem não oferece detalhes, não invente."
+    },
+    {
+      id: "avaliacao-revisao",
+      title: "26. Revisão e avaliação do aprendizado",
+      kind: "assessment",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 26:1–35"],
+      body: "**Retome o texto:** (1) Quais elementos da promessa feita a Abraão são reafirmados a Isaque? (2) Em que situação o medo leva Isaque a agir sem verdade? (3) Quais conflitos surgem em torno dos poços e como são nomeados? (4) O que o acordo com Abimeleque resolve? (5) Como o capítulo relaciona a bênção de Deus à responsabilidade humana?\n\n**Exercício:** escolha Gênesis 26:2–5, 7–11 ou 26:26–33. Separe observação, contexto, interpretação e aplicação. Escreva uma síntese que não transforme prosperidade em fórmula nem use a busca de paz para justificar injustiça.\n\n**Critério de aprendizagem:** explicar a continuidade da promessa, reconhecer a falha de Isaque, descrever a disputa pelos poços e aplicar o texto com verdade, prudência e justiça."
     }
   ]
 };
