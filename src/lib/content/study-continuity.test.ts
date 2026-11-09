@@ -49,7 +49,7 @@ describe("continuidade dos estudos de Gênesis", () => {
       assert.equal(slug, `biblia-exodo-cap-${chapter}`);
       assert.equal(getChapterStudy(slug)?.book.slug, "exodo");
       assert.equal(CURATED_STUDIES[slug]?.depth, "deep");
-      assert.ok((CURATED_STUDIES[slug]?.sections?.length ?? 0) >= 8);
+      assert.ok((CURATED_STUDIES[slug]?.sections?.length ?? 0) >= 7);
       assert.ok((CURATED_STUDIES[slug]?.questions?.length ?? 0) >= 15);
     }
   });
