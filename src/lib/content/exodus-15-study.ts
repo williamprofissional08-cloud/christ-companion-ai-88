@@ -68,10 +68,7 @@ export const exodus15Study: StudyContent = {
     {
       "id": "exodo-15-1",
       "title": "1. O Senhor é exaltado pela libertação (15:1–3),O cântico começa com louvor porque Deus lançou ao mar cavalo e cavaleiro. O Senhor é celebrado como força, salvação e guerreiro; a imagem pertence ao contexto da vitória sobre o exército opressor.",
-      "body": [
-        "A derrota do poder egípcio (15:4–10)",
-        "As águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia."
-      ],
+      "body": "A derrota do poder egípcio (15:4–10)\n\nAs águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia.",
       "kind": "observation",
       "confidence": "high",
       "scriptureRefs": [
@@ -81,10 +78,7 @@ export const exodus15Study: StudyContent = {
     {
       "id": "exodo-15-2",
       "title": "2. O Senhor é exaltado pela libertação (15:1–3),O cântico começa com louvor porque Deus lançou ao mar cavalo e cavaleiro. O Senhor é celebrado como força, salvação e guerreiro; a imagem pertence ao contexto da vitória sobre o exército opressor.",
-      "body": [
-        "A derrota do poder egípcio (15:4–10)",
-        "As águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia."
-      ],
+      "body": "A derrota do poder egípcio (15:4–10)\n\nAs águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -94,10 +88,7 @@ export const exodus15Study: StudyContent = {
     {
       "id": "exodo-15-3",
       "title": "3. O Senhor é exaltado pela libertação (15:1–3),O cântico começa com louvor porque Deus lançou ao mar cavalo e cavaleiro. O Senhor é celebrado como força, salvação e guerreiro; a imagem pertence ao contexto da vitória sobre o exército opressor.",
-      "body": [
-        "A derrota do poder egípcio (15:4–10)",
-        "As águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia."
-      ],
+      "body": "A derrota do poder egípcio (15:4–10)\n\nAs águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -107,10 +98,7 @@ export const exodus15Study: StudyContent = {
     {
       "id": "exodo-15-4",
       "title": "4. O Senhor é exaltado pela libertação (15:1–3),O cântico começa com louvor porque Deus lançou ao mar cavalo e cavaleiro. O Senhor é celebrado como força, salvação e guerreiro; a imagem pertence ao contexto da vitória sobre o exército opressor.",
-      "body": [
-        "A derrota do poder egípcio (15:4–10)",
-        "As águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia."
-      ],
+      "body": "A derrota do poder egípcio (15:4–10)\n\nAs águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -120,10 +108,7 @@ export const exodus15Study: StudyContent = {
     {
       "id": "exodo-15-5",
       "title": "5. O Senhor é exaltado pela libertação (15:1–3),O cântico começa com louvor porque Deus lançou ao mar cavalo e cavaleiro. O Senhor é celebrado como força, salvação e guerreiro; a imagem pertence ao contexto da vitória sobre o exército opressor.",
-      "body": [
-        "A derrota do poder egípcio (15:4–10)",
-        "As águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia."
-      ],
+      "body": "A derrota do poder egípcio (15:4–10)\n\nAs águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -133,10 +118,7 @@ export const exodus15Study: StudyContent = {
     {
       "id": "exodo-15-6",
       "title": "6. O Senhor é exaltado pela libertação (15:1–3),O cântico começa com louvor porque Deus lançou ao mar cavalo e cavaleiro. O Senhor é celebrado como força, salvação e guerreiro; a imagem pertence ao contexto da vitória sobre o exército opressor.",
-      "body": [
-        "A derrota do poder egípcio (15:4–10)",
-        "As águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia."
-      ],
+      "body": "A derrota do poder egípcio (15:4–10)\n\nAs águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -146,10 +128,7 @@ export const exodus15Study: StudyContent = {
     {
       "id": "exodo-15-7",
       "title": "7. O Senhor é exaltado pela libertação (15:1–3),O cântico começa com louvor porque Deus lançou ao mar cavalo e cavaleiro. O Senhor é celebrado como força, salvação e guerreiro; a imagem pertence ao contexto da vitória sobre o exército opressor.",
-      "body": [
-        "A derrota do poder egípcio (15:4–10)",
-        "As águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia."
-      ],
+      "body": "A derrota do poder egípcio (15:4–10)\n\nAs águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -159,10 +138,7 @@ export const exodus15Study: StudyContent = {
     {
       "id": "exodo-15-8",
       "title": "8. O Senhor é exaltado pela libertação (15:1–3),O cântico começa com louvor porque Deus lançou ao mar cavalo e cavaleiro. O Senhor é celebrado como força, salvação e guerreiro; a imagem pertence ao contexto da vitória sobre o exército opressor.",
-      "body": [
-        "A derrota do poder egípcio (15:4–10)",
-        "As águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia."
-      ],
+      "body": "A derrota do poder egípcio (15:4–10)\n\nAs águas cobrem os carros e os guerreiros. O poema usa imagens de profundidade e vento para celebrar a ação divina, sem funcionar como relatório técnico da travessia.",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
