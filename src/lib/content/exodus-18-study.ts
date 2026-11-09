@@ -2,174 +2,57 @@ import type { StudyContent } from "../types";
 
 /** Estudo bíblico aprofundado e curado de Êxodo 18. */
 export const exodus18Study: StudyContent = {
-  "version": 1,
-  "depth": "deep",
-  "intro": "Êxodo 18 relata a chegada de Jetro, sogro de Moisés, ao acampamento de Israel. Ele ouve o que Deus fez pelo povo, louva o Senhor e oferece sacrifícios. No dia seguinte, observa Moisés julgando sozinho as questões de todo o povo, desde a manhã até a tarde. Jetro alerta que o modelo é insustentável e aconselha Moisés a ensinar as ordenanças e estabelecer líderes capazes, tementes a Deus, confiáveis e contrários à corrupção. Moisés aceita o conselho e distribui responsabilidades, reservando para si os casos mais difíceis. O capítulo apresenta a importância de liderança compartilhada e justiça acessível.",
-  "historicalContext": "Jetro é sacerdote de Midiã e parente por casamento de Moisés. O capítulo apresenta uma perspectiva externa que ajuda Moisés a perceber limites organizacionais. A estrutura de chefes de mil, cem, cinquenta e dez descreve níveis de responsabilidade, não necessariamente um organograma universal obrigatório. A qualificação moral dos líderes é central: capacidade, temor de Deus, fidelidade e rejeição ao ganho desonesto.",
-  "keyPoints": [
-    {
-      "title": "1. Jetro chega com Zípora e os filhos (18:1–6)",
-      "text": "A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica."
-    },
-    {
-      "title": "2. Moisés conta os feitos do Senhor (18:7–12)",
-      "text": "Moisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor."
-    },
-    {
-      "title": "3. O peso de julgar sozinho (18:13–18)",
-      "text": "Jetro observa a rotina exaustiva e pergunta por que Moisés trabalha sozinho. Ele afirma que o modelo não é bom e acabará desgastando líder e povo."
-    },
-    {
-      "title": "4. Ensinar antes de delegar (18:19–20)",
-      "text": "Moisés deve representar o povo diante de Deus, ensinar os estatutos e mostrar o caminho. Delegar não significa abandonar a formação e a orientação."
-    },
-    {
-      "title": "5. Critérios para escolher líderes (18:21)",
-      "text": "Os líderes devem ser capazes, tementes a Deus, dignos de confiança e contrários ao ganho desonesto. Competência sem caráter não atende ao padrão do texto."
-    },
-    {
-      "title": "6. Responsabilidades distribuídas (18:22–26)",
-      "text": "Casos simples são julgados pelos líderes; os difíceis chegam a Moisés. A estrutura busca justiça e sustentabilidade, sem eliminar a responsabilidade de supervisão."
-    },
-    {
-      "title": "7. O conselho é recebido com humildade (18:24–27)",
-      "text": "Moisés ouve o sogro e coloca o plano em prática. Jetro retorna à sua terra, e a narrativa encerra com uma liderança mais organizada."
-    }
+  version: 2,
+  depth: "deep",
+  intro: "Êxodo 18 apresenta o reencontro de Moisés com sua família e a visita de Jetro, sacerdote de Midiã e seu sogro. Ao ouvir o testemunho da libertação, Jetro bendiz o Senhor e participa de uma refeição com Arão e os anciãos. No dia seguinte, observa Moisés julgando sozinho as questões de todo o povo. Seu conselho reorganiza a liderança: Moisés continua ensinando e representando o povo diante de Deus, mas escolhe líderes capazes, tementes a Deus, confiáveis e contrários ao ganho desonesto. A passagem ensina humildade, justiça acessível, caráter, formação e responsabilidade compartilhada.",
+  historicalContext: "O capítulo situa-se na jornada de Israel após a saída do Egito e antes da chegada ao Sinai. Jetro é identificado como sacerdote de Midiã e sogro de Moisés. A narrativa não esclarece todos os detalhes cronológicos da visita nem da separação temporária da família. A estrutura de chefes de mil, cem, cinquenta e dez descreve níveis de responsabilidade no contexto de Israel; não é um organograma universal obrigatório. Deuteronômio 1:9–18 retoma a organização e acrescenta ênfase à imparcialidade no julgamento.",
+  keyPoints: [
+    { title: "A família reencontra Moisés", text: "Jetro chega com Zípora e os filhos, e os nomes deles preservam memórias da experiência de Moisés." },
+    { title: "O testemunho conduz ao louvor", text: "Moisés relata a libertação e as tribulações; Jetro se alegra e bendiz o Senhor." },
+    { title: "A sobrecarga prejudica todos", text: "Julgar sozinho durante todo o dia desgasta Moisés e faz o povo esperar." },
+    { title: "Ensino e delegação caminham juntos", text: "Moisés continua ensinando e representando o povo diante de Deus, mas compartilha os julgamentos." },
+    { title: "Caráter e competência são indispensáveis", text: "Os líderes precisam ser capazes, tementes a Deus, confiáveis e contrários ao ganho desonesto." },
+    { title: "A justiça deve ser acessível", text: "Questões comuns são tratadas pelos líderes; casos difíceis são encaminhados a Moisés." },
+    { title: "Moisés demonstra humildade", text: "Ele escuta o conselho e o coloca em prática." }
   ],
-  "application": "Líderes não precisam concentrar todas as tarefas. A passagem valoriza escuta, conselho, formação, critérios éticos e distribuição responsável de trabalho. Não copie literalmente a hierarquia como única forma bíblica de governo; extraia os princípios e considere o contexto de Israel. Em igrejas e organizações, delegar exige transparência, prestação de contas e proteção contra favoritismo e corrupção.",
-  "crossReferences": [
-    "Deuteronômio 1:9–18",
-    "Números 11:14–17",
-    "Atos 6:1–7",
-    "Atos 20:28",
-    "1 Timóteo 3:1–13",
-    "Tito 1:5–9",
-    "1 Pedro 5:1–4"
-  ],
-  "questions": [
-    "Quem é Jetro e qual sua relação com Moisés?",
-    "Como Jetro reage ao relato da libertação?",
-    "O que ele observa na rotina de Moisés?",
-    "Por que julgar tudo sozinho era prejudicial?",
-    "Quais tarefas Moisés deveria continuar exercendo?",
-    "Quais qualidades os líderes precisavam demonstrar?",
-    "Como a delegação organiza os casos?",
-    "O que a atitude de Moisés ensina sobre receber conselhos?",
-    "Como Atos 6 apresenta um princípio semelhante de distribuição de responsabilidades?",
-    "Quais salvaguardas modernas ajudam a impedir abuso de autoridade?"
-  ],
-  "conclusion": "Êxodo 18 deve ser compreendido dentro da história da libertação e da formação de Israel. Sua mensagem central não deve ser separada do contexto da aliança, da ação de Deus e da resposta humana. Ao ensinar o capítulo, leia a passagem integralmente, explique sua estrutura, distinga o que o texto afirma das inferências e conduza a aplicação à luz do conjunto das Escrituras e de Cristo, sem alegorias inventadas.",
-  "prayer": "Senhor Deus, ajuda-nos a compreender Êxodo 18 com reverência, atenção ao contexto e fidelidade à tua Palavra. Dá-nos humildade para reconhecer o que o texto afirma e os limites do que podemos concluir. Forma em nós fé, obediência, justiça e amor ao próximo, tendo Cristo como centro da esperança revelada nas Escrituras. Amém.",
-  "sections": [
-    {
-      "id": "exodo-18-1",
-      "title": "1. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
-      "kind": "observation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18"
-      ]
-    },
-    {
-      "id": "exodo-18-2",
-      "title": "2. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18"
-      ]
-    },
-    {
-      "id": "exodo-18-3",
-      "title": "3. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18"
-      ]
-    },
-    {
-      "id": "exodo-18-4",
-      "title": "4. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18"
-      ]
-    },
-    {
-      "id": "exodo-18-5",
-      "title": "5. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18"
-      ]
-    },
-    {
-      "id": "exodo-18-6",
-      "title": "6. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18"
-      ]
-    },
-    {
-      "id": "exodo-18-7",
-      "title": "7. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
-      "kind": "application",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18"
-      ]
-    },
-    {
-      "id": "exodo-18-metodo",
-      "title": "8. Método de estudo e exegese",
-      "kind": "method",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18:1–40"
-      ],
-      "body": "Leia o capítulo em sua totalidade e delimite suas unidades narrativas ou discursivas. Observe repetições, personagens, verbos, mudanças de cenário e falas. Consulte o contexto imediato dos capítulos anteriores e seguintes. Registre primeiro o que o texto diz; depois investigue o contexto histórico e literário; em seguida formule a interpretação mais bem sustentada, identificando questões debatidas; por fim, construa uma aplicação coerente com o capítulo e com o conjunto da Bíblia. Não transforme detalhes incertos em fatos nem use uma aplicação moderna para substituir o sentido original."
-    },
-    {
-      "id": "exodo-18-pregacao",
-      "title": "9. Preparação de mensagem expositiva",
-      "kind": "sermon",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18"
-      ],
-      "body": "**Tema:** Jetro, conselho e organização da liderança. **Ideia central:** Êxodo 18 relata a chegada de Jetro, sogro de Moisés, ao acampamento de Israel. Ele ouve o que Deus fez pelo povo, louva o Senhor e oferece sacrifícios. No dia seguinte, observa Moisés julgando sozinho as questões de todo o povo, desde a manhã até a tarde. Jetr **Roteiro:** (1) Leia o contexto e delimite as unidades do capítulo; (2) explique cada movimento a partir dos versículos; (3) destaque o ensino teológico principal; (4) mostre as conexões bíblicas explícitas e a relação com Cristo sem alegorizar; (5) conclua com aplicações concretas, responsáveis e fiéis ao texto. **Cuidado pastoral:** não prometa o que a passagem não promete, não use o texto para manipular ou condenar pessoas e distinga descrição narrativa de aprovação divina."
-    },
-    {
-      "id": "exodo-18-glossario",
-      "title": "10. Glossário e conceitos importantes",
-      "kind": "glossary",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18"
-      ],
-      "body": "**Aliança:** compromisso relacional estabelecido por Deus com seu povo. **Êxodo:** saída de Israel do Egito, evento fundador da memória nacional. **Santo/santidade:** separado para Deus e coerente com seu caráter. **Memorial:** prática ou sinal que preserva a lembrança de um ato de Deus. **Mediação:** serviço de quem representa o povo diante de Deus ou transmite sua palavra. Os termos específicos deste capítulo devem ser explicados conforme seu contexto, sem atribuir sentidos técnicos que o texto não fornece."
-    },
-    {
-      "id": "exodo-18-avaliacao",
-      "title": "11. Revisão e avaliação do aprendizado",
-      "kind": "assessment",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 18"
-      ],
-      "body": "Responda às perguntas de revisão do estudo com base na leitura bíblica. Depois, escolha uma unidade do capítulo e escreva quatro itens: (1) observação — o que está explicitamente escrito; (2) contexto — como a unidade se conecta ao livro; (3) interpretação — qual sentido é sustentado pelo texto; (4) aplicação — como obedecer ao princípio sem repetir mecanicamente uma situação histórica única. Para preparar uma aula, apresente a ideia central em uma frase, organize o desenvolvimento em movimentos do próprio texto e indique referências cruzadas que realmente iluminem a passagem. Avalie se evitou especulação, alegorias e promessas não autorizadas pelo texto."
-    }
+  application: "Êxodo 18 valoriza escuta, formação, critérios éticos e distribuição responsável de trabalho. Delegar exige preparo, clareza de atribuições, supervisão e prestação de contas. A passagem não deve ser usada para impor uma hierarquia única a toda igreja, justificar autoritarismo ou explorar voluntários. O princípio central é cuidar do povo com justiça e reconhecer os limites humanos. Compare o modelo com o ensino de Jesus sobre liderança servidora em Marcos 10:42–45.",
+  crossReferences: ["Êxodo 2:16–22","Êxodo 4:20","Êxodo 17:1–16","Êxodo 19:1–6","Deuteronômio 1:9–18","Deuteronômio 16:18–20","Números 11:14–17","Atos 6:1–7","Marcos 10:42–45","1 Timóteo 3:1–13","Tito 1:5–9","1 Pedro 5:1–4"],
+  questions: ["Quem era Jetro e qual sua relação com Moisés?","Quem acompanhou Jetro?","O que os nomes Gérson e Eliézer recordam?","O que Moisés relata?","Como Jetro reage ao testemunho?","Quem participa da refeição?","O que Jetro observa na rotina de Moisés?","Por que o modelo era prejudicial?","Quais responsabilidades Moisés deveria manter?","Quais qualidades deveriam caracterizar os líderes?","Como os casos comuns e difíceis seriam encaminhados?","O que a atitude de Moisés ensina sobre receber conselhos?","Como Deuteronômio 1 retoma o episódio?","Em que sentido Atos 6 apresenta uma analogia?","Como Jesus transforma a compreensão de autoridade e serviço?"],
+  conclusion: "Êxodo 18 começa com o testemunho da libertação e o louvor de Jetro, mas também mostra que a vida do povo de Deus exige estruturas justas e sustentáveis. Moisés não abandona sua vocação de ensinar e representar o povo diante de Deus; aprende a compartilhar os julgamentos com líderes íntegros e capazes. O capítulo ensina que autoridade deve servir ao bem comum, que a justiça precisa ser acessível e que humildade inclui ouvir conselhos. À luz do Novo Testamento, Jesus rejeita o domínio e chama seus discípulos a servir.",
+  prayer: "Senhor Deus, obrigado porque tua Palavra nos ensina a reconhecer teus feitos e a cuidar do teu povo com justiça. Dá-nos humildade para ouvir conselhos sábios, coragem para reconhecer limites e discernimento para escolher pessoas íntegras e capazes. Livra-nos do orgulho, do favoritismo, da corrupção e do abuso de autoridade. Ensina-nos a servir como Jesus, com amor, responsabilidade e fidelidade. Amém.",
+  sections: [
+    { id: "exodo-18-leitura", title: "Leitura bíblica — Êxodo 18:1–27", kind: "scripture", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Leia o capítulo integralmente. Observe o reencontro familiar (vv. 1–6), o testemunho e o louvor (vv. 7–12), o conselho de Jetro (vv. 13–23) e sua implementação (vv. 24–27)." },
+    { id: "exodo-18-introducao", title: "1. Introdução — Um conselho que reorganiza a liderança", kind: "introduction", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Depois das narrativas de libertação e provisão, Êxodo 18 apresenta Jetro, sogro de Moisés. Ele ouve o testemunho da libertação, louva o Senhor e observa Moisés julgando sozinho. Seu conselho propõe ensino, delegação e critérios éticos. **Ideia central:** liderança fiel reconhece limites, forma pessoas íntegras e compartilha responsabilidades para que o povo receba cuidado e justiça." },
+    { id: "exodo-18-contexto", title: "2. Contexto histórico e literário — Antes do Sinai", kind: "context", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "O capítulo está entre o conflito com Amaleque (Êxodo 17) e a chegada ao Sinai (Êxodo 19). Jetro é sacerdote de Midiã e sogro de Moisés. O texto não esclarece todos os detalhes cronológicos da visita nem da separação temporária da família. Evite afirmar como certeza a localização exata do acampamento ou detalhes não registrados." },
+    { id: "exodo-18-estrutura", title: "3. Estrutura literária — Três movimentos", kind: "context", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "**vv. 1–12:** chegada de Jetro, reencontro, testemunho e louvor. **vv. 13–23:** observação da sobrecarga e conselho para reorganizar a justiça. **vv. 24–27:** Moisés aceita a orientação, escolhe líderes e distribui tarefas. A passagem liga adoração, memória da libertação e cuidado comunitário." },
+    { id: "exodo-18-jetro", title: "4. Jetro — Sacerdote de Midiã e sogro de Moisés (18:1)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "O narrador identifica Jetro como sacerdote de Midiã e sogro de Moisés. Em Êxodo 2:18 o sogro aparece associado ao nome Reuel; a relação entre esses nomes e possíveis títulos ou variantes é discutida. Não imponha uma explicação única. O ponto do capítulo é que Jetro ouve os feitos do Senhor e responde com reconhecimento e louvor." },
+    { id: "exodo-18-familia", title: "5. Zípora e os filhos — O reencontro familiar (18:2–6)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Jetro chega com Zípora e os dois filhos de Moisés. Êxodo 4:20 informa que Moisés partiu para o Egito com a família; Êxodo 18 registra o reencontro, mas não explica detalhadamente quando e por que houve separação. Não preencha as lacunas com conjecturas. A narrativa recorda que a missão pública de Moisés não apaga sua história familiar." },
+    { id: "exodo-18-nomes", title: "6. Gérson e Eliézer — Nomes que preservam memória (18:3–4)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Gérson é relacionado à condição de estrangeiro de Moisés; Eliézer, à confissão de que o Deus de seu pai foi seu auxílio e o livrou da espada de Faraó. Os nomes preservam memória de deslocamento e proteção. Respeite as explicações dadas pelo texto e não invente etimologias devocionais." },
+    { id: "exodo-18-testemunho", title: "7. Moisés relata os feitos do Senhor (18:7–8)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Moisés recebe Jetro e relata o que o Senhor fez a Faraó e aos egípcios, as dificuldades encontradas no caminho e o livramento. O testemunho não esconde as tribulações: libertação e sofrimento aparecem juntos. O centro do relato é a ação do Senhor, não a capacidade autônoma de Moisés." },
+    { id: "exodo-18-alegria", title: "8. Jetro se alegra com a libertação (18:9)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Jetro se alegra pelo bem que o Senhor fez a Israel. Sua reação não é competição nem inveja, mas reconhecimento do bem concedido ao povo. A comunidade pode aprender a celebrar a graça recebida por outros, sem transformar ministérios em disputa." },
+    { id: "exodo-18-louvor", title: "9. Jetro bendiz o Senhor (18:10–11)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Jetro bendiz o Senhor e reconhece que Deus libertou Israel do poder do Egito. A afirmação de que o Senhor é maior do que todos os deuses expressa sua superioridade sobre as potências do mundo antigo. O texto registra a confissão de Jetro naquele momento, mas não descreve toda a sua história religiosa anterior." },
+    { id: "exodo-18-sacrificio", title: "10. Sacrifício, adoração e comunhão (18:12)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Jetro oferece holocausto e sacrifícios a Deus; Arão e os anciãos participam da refeição diante de Deus. A cena reúne culto e comunhão. Não confunda automaticamente cada detalhe com as normas levíticas posteriores, ainda não apresentadas na narrativa." },
+    { id: "exodo-18-julgamento", title: "11. Moisés julga o povo durante todo o dia (18:13)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Moisés se assenta para julgar, e o povo permanece diante dele da manhã até a tarde. A demanda é extensa e concentrada em uma pessoa. O texto não critica a justiça nem o ensino, mas o modo exaustivo e centralizado de atender todas as questões." },
+    { id: "exodo-18-pergunta", title: "12. Jetro pergunta por que Moisés trabalha sozinho (18:14)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Jetro pergunta por que Moisés faz aquilo sozinho e por que o povo espera durante todo o dia. Ele observa uma prática e busca compreender sua razão. O diálogo permite que o problema seja explicitado sem transformar a crítica em ataque pessoal." },
+    { id: "exodo-18-resposta", title: "13. Moisés explica sua responsabilidade (18:15–16)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Moisés explica que o povo o procura para consultar a Deus; ele julga entre as partes e ensina os estatutos e as instruções divinas. Há duas dimensões: decidir disputas e ensinar. O conselho de Jetro preservará o ensino e a representação diante de Deus, compartilhando os julgamentos cotidianos." },
+    { id: "exodo-18-limite", title: "14. “Não é bom” — O limite do modelo (18:17–18)", kind: "interpretation", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Jetro declara que o procedimento não é bom e prevê desgaste para Moisés e para o povo. A tarefa é pesada demais para uma pessoa. Reconhecer limites não é necessariamente falta de zelo; pode ser condição para servir de maneira sustentável e justa." },
+    { id: "exodo-18-conselho", title: "15. Ensinar e representar o povo diante de Deus (18:19–20)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Jetro aconselha Moisés a continuar representando o povo diante de Deus, levando as causas a Ele, ensinando estatutos e mostrando o caminho. Delegar não significa abandonar a formação: as pessoas precisam conhecer os princípios que orientarão suas decisões." },
+    { id: "exodo-18-criterios", title: "16. Critérios dos líderes — Capacidade e caráter (18:21)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Os líderes devem ser capazes, tementes a Deus, confiáveis e contrários ao ganho desonesto. O texto une competência e integridade. Aptidão sem caráter não basta; boa intenção sem capacidade também não resolve. A autoridade é exercida diante de Deus e não pode ser corrompida por suborno." },
+    { id: "exodo-18-hierarquia", title: "17. Chefes de mil, cem, cinquenta e dez (18:21)", kind: "interpretation", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "A estrutura distribui responsabilidades em diferentes escalas. Os números descrevem unidades organizacionais; o texto não fornece um organograma moderno nem exige que toda comunidade atual copie literalmente essa hierarquia. O princípio é organizar o atendimento e evitar que todas as questões dependam de um único líder." },
+    { id: "exodo-18-justica", title: "18. Justiça acessível e casos difíceis (18:22)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Os líderes julgam as questões comuns; os casos difíceis são encaminhados a Moisés. A proposta aproxima a justiça das pessoas e cria uma via para questões complexas. Delegação não é abandono: pressupõe princípios comuns, limites, supervisão e responsabilidade." },
+    { id: "exodo-18-condicao", title: "19. “Se Deus assim ordenar” — Conselho sob discernimento (18:23)", kind: "interpretation", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Jetro condiciona o resultado à aprovação de Deus. O conselho humano não substitui a direção divina. O plano é avaliado por sua coerência e por seus frutos: sustentabilidade para o líder e atendimento adequado ao povo. Receber conselhos exige discernimento, não aceitação automática." },
+    { id: "exodo-18-aceitacao", title: "20. Moisés escuta e pratica o conselho (18:24)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Moisés ouve a voz do sogro e faz o que foi aconselhado. Sua autoridade não o torna imune à correção. Maturidade inclui avaliar observações legítimas e ajustar procedimentos quando necessário, sem aceitar conselhos sem exame." },
+    { id: "exodo-18-escolha", title: "21. Escolha dos líderes e distribuição das tarefas (18:25–26)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Moisés escolhe homens capazes e os coloca como chefes em diferentes níveis. Eles julgam continuamente, encaminhando a Moisés os casos difíceis. A delegação envolve seleção, atribuições e critérios de encaminhamento; não basta pedir ajuda de modo indefinido. O texto não descreve eleições ou mandatos." },
+    { id: "exodo-18-partida", title: "22. Jetro retorna à sua terra (18:27)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Moisés se despede de Jetro, que retorna à sua terra. A narrativa encerra a visita sem detalhar rota, duração ou acontecimentos posteriores. A contribuição de Jetro permanece: sua observação foi ouvida e aplicada para o bem da comunidade." },
+    { id: "exodo-18-teologia", title: "23. Temas teológicos centrais", kind: "interpretation", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "**Deus libertador:** o testemunho aponta para a ação do Senhor. **Adoração e comunhão:** o culto reúne Jetro, Arão e os anciãos. **Justiça comunitária:** o povo precisa de decisões acessíveis. **Liderança limitada:** nenhuma pessoa deve carregar tudo sozinha. **Caráter e competência:** autoridade exige integridade. **Humildade:** Moisés aceita aprender. Não transforme o capítulo em fórmula empresarial ou estrutura institucional obrigatória." },
+    { id: "exodo-18-glossario", title: "24. Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "**Sacerdote:** pessoa que exerce funções relacionadas ao culto. **Estatutos e instruções:** orientações que Moisés deveria ensinar. **Julgar:** decidir questões e disputas segundo princípios recebidos. **Ganho desonesto:** vantagem ilícita que corrompe a justiça. **Delegação:** distribuição responsável de tarefas. **Prestação de contas:** mecanismo de responsabilidade útil à aplicação contemporânea, embora não seja termo técnico do texto." },
+    { id: "exodo-18-referencias", title: "25. Referências cruzadas — Liderança e cuidado", kind: "references", confidence: "high", scriptureRefs: ["Deuteronômio 1:9–18","Números 11:14–17","Atos 6:1–7","1 Timóteo 3:1–13","Tito 1:5–9","1 Pedro 5:1–4"], body: "**Deuteronômio 1:9–18:** Moisés relembra a organização e destaca imparcialidade. **Números 11:14–17:** Deus orienta o compartilhamento do peso da liderança. **Atos 6:1–7:** a comunidade organiza o serviço diante de uma necessidade; analogia de princípio, não estrutura idêntica. **1 Timóteo 3 e Tito 1:** qualificações para líderes da igreja. **1 Pedro 5:1–4:** cuidado sem domínio abusivo." },
+    { id: "exodo-18-cristo", title: "26. Conexão com Cristo — Autoridade que serve", kind: "christ_connection", confidence: "high", scriptureRefs: ["Êxodo 18:19–23","Marcos 10:42–45","João 10:11–16","1 Pedro 5:1–4"], body: "Êxodo 18 não contém profecia direta sobre o Messias. Sua contribuição canônica está nos princípios de cuidado, justiça e autoridade responsável. Jesus contrasta o domínio das autoridades com o serviço e declara que veio para servir (Marcos 10:42–45). Em João 10, apresenta-se como o bom pastor. 1 Pedro 5:1–4 orienta líderes a cuidar sem dominar. Não afirme que Jetro seja figura profética de Cristo nem que cada nível de chefia represente uma estrutura eclesiástica." },
+    { id: "exodo-18-aplicacao", title: "27. Aplicações para a vida, igreja e liderança", kind: "application", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "1. Reconheça limites: zelo não exige assumir todas as tarefas. 2. Escute conselhos e examine-os. 3. Ensine antes de delegar. 4. Escolha por caráter e competência, não por amizade ou favoritismo. 5. Defina atribuições e limites. 6. Proteja a justiça contra suborno e parcialidade. 7. Cuide de quem serve. 8. Mantenha supervisão e prestação de contas. 9. Não absolutize o modelo histórico; aplique os princípios com discernimento." },
+    { id: "exodo-18-cuidados", title: "28. Cuidados interpretativos e pastorais", kind: "caution", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Não apresente a hierarquia como estrutura obrigatória para toda igreja. Não use o capítulo para justificar autoritarismo, exploração de voluntários ou transferência de tarefas sem preparo. Não conclua que toda sugestão externa deve ser aceita automaticamente. Não invente detalhes sobre a identidade de Jetro, a separação familiar, o processo de escolha ou a cronologia. Diferencie descrição histórica de aplicação contemporânea." },
+    { id: "exodo-18-resumo", title: "29. Resumo para revisão", kind: "summary", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Jetro chega com Zípora e os filhos de Moisés. Ao ouvir o relato da libertação, alegra-se, bendiz o Senhor e participa de uma refeição com Arão e os anciãos. Depois observa Moisés julgando sozinho. Aconselha-o a continuar ensinando e representando o povo diante de Deus, mas escolher líderes capazes, tementes a Deus, confiáveis e contrários ao ganho desonesto. Os líderes cuidariam das questões comuns, e os casos difíceis seriam encaminhados a Moisés. Moisés aceita e implementa a proposta. **Mensagem central:** liderança fiel une humildade, justiça, caráter, ensino e responsabilidade compartilhada." },
+    { id: "exodo-18-exercicios", title: "30. Exercícios de fixação e aprofundamento", kind: "exercise", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "1. Identifique quem chega ao acampamento e quem o acompanha. 2. Quais acontecimentos Moisés relata? 3. Como Jetro reage? 4. O que observa na rotina de Moisés? 5. Quais responsabilidades Moisés deveria manter? 6. Explique as qualidades exigidas dos líderes. 7. Como os casos comuns e difíceis seriam tratados? 8. Compare Êxodo 18 com Deuteronômio 1:9–18. 9. Compare o princípio com Atos 6:1–7 sem igualar os contextos. 10. Proponha uma forma de compartilhar responsabilidades com critérios éticos e prestação de contas." },
+    { id: "exodo-18-pregacao", title: "31. Oficina do pregador — Mensagem expositiva", kind: "sermon", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "**Tema:** Liderança que serve, ensina e compartilha responsabilidades. **Proposição:** Deus forma seu povo para viver em justiça; por isso, líderes reconhecem limites, formam pessoas íntegras e distribuem responsabilidades. **I. O testemunho conduz ao louvor (vv. 1–12). II. A concentração de tarefas prejudica líder e povo (vv. 13–18). III. Liderança exige ensino e caráter (vv. 19–21). IV. Delegação responsável aproxima a justiça (vv. 22–27). **Conexão com Cristo:** Marcos 10:42–45 e 1 Pedro 5:1–4. **Aplicação:** avalie sobrecarga, critérios de escolha, transparência e cuidado mútuo. Não transforme o sermão em palestra empresarial nem imponha uma estrutura única." },
+    { id: "exodo-18-oracao", title: "32. Oração final", kind: "prayer", confidence: "high", scriptureRefs: ["Êxodo 18:1–27"], body: "Senhor Deus, obrigado porque tua Palavra nos ensina a reconhecer teus feitos e a cuidar do teu povo com justiça. Dá-nos humildade para ouvir conselhos sábios, coragem para reconhecer limites e discernimento para escolher pessoas íntegras e capazes. Livra-nos do orgulho, do favoritismo, da corrupção e do abuso de autoridade. Ensina-nos a servir como Jesus, com amor, responsabilidade e fidelidade. Amém." }
   ]
 };
