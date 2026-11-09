@@ -64,10 +64,7 @@ export const exodus18Study: StudyContent = {
     {
       "id": "exodo-18-1",
       "title": "1. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": [
-        "Moisés conta os feitos do Senhor (18:7–12)",
-        "Moisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor."
-      ],
+      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
       "kind": "observation",
       "confidence": "high",
       "scriptureRefs": [
@@ -77,10 +74,7 @@ export const exodus18Study: StudyContent = {
     {
       "id": "exodo-18-2",
       "title": "2. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": [
-        "Moisés conta os feitos do Senhor (18:7–12)",
-        "Moisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor."
-      ],
+      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -90,10 +84,7 @@ export const exodus18Study: StudyContent = {
     {
       "id": "exodo-18-3",
       "title": "3. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": [
-        "Moisés conta os feitos do Senhor (18:7–12)",
-        "Moisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor."
-      ],
+      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -103,10 +94,7 @@ export const exodus18Study: StudyContent = {
     {
       "id": "exodo-18-4",
       "title": "4. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": [
-        "Moisés conta os feitos do Senhor (18:7–12)",
-        "Moisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor."
-      ],
+      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -116,10 +104,7 @@ export const exodus18Study: StudyContent = {
     {
       "id": "exodo-18-5",
       "title": "5. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": [
-        "Moisés conta os feitos do Senhor (18:7–12)",
-        "Moisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor."
-      ],
+      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -129,10 +114,7 @@ export const exodus18Study: StudyContent = {
     {
       "id": "exodo-18-6",
       "title": "6. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": [
-        "Moisés conta os feitos do Senhor (18:7–12)",
-        "Moisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor."
-      ],
+      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -142,10 +124,7 @@ export const exodus18Study: StudyContent = {
     {
       "id": "exodo-18-7",
       "title": "7. Jetro chega com Zípora e os filhos (18:1–6),A família de Moisés reencontra-se com ele no deserto. O texto registra os nomes dos filhos e a história familiar, mostrando que a missão pública não apaga a dimensão doméstica.",
-      "body": [
-        "Moisés conta os feitos do Senhor (18:7–12)",
-        "Moisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor."
-      ],
+      "body": "Moisés conta os feitos do Senhor (18:7–12)\n\nMoisés relata a libertação e as dificuldades. Jetro se alegra, bendiz o Senhor e reconhece sua grandeza. O testemunho conduz ao louvor.",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
