@@ -26,4 +26,12 @@ describe("continuidade dos estudos de Gênesis", () => {
     assert.equal(CURATED_STUDIES[slug]?.depth, "deep");
     assert.equal(CURATED_STUDIES[slug]?.sections?.length, 15);
   });
+  test("Gênesis 44 possui estudo profundo curado no endereço canônico", () => {
+    const slug = getChapterStudySlug("genesis", 44);
+    assert.equal(slug, "biblia-genesis-cap-44");
+    assert.equal(getStudy(slug)?.depth, "deep");
+    assert.equal(getChapterStudy(slug)?.chapter, 44);
+    assert.equal(CURATED_STUDIES[slug]?.depth, "deep");
+    assert.equal(CURATED_STUDIES[slug]?.sections?.length, 12);
+  });
 });
