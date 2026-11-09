@@ -195,6 +195,8 @@ export const genesis8Study: StudyContent = {
       kind: "reflection",
       confidence: "probable",
       body: "**Medite:** Em que situação preciso aprender a esperar sem desistir? Tenho confundido prudência com falta de fé? Minha primeira resposta às misericórdias recebidas é gratidão e adoração? Tenho usado promessas bíblicas fora de seu contexto? Como posso cuidar melhor das pessoas e da criação que Deus sustenta?\n\n**Resumo:** Deus se lembra de Noé, faz as águas recuarem, conduz a observação e a saída da arca, recebe o altar de Noé e promete a continuidade dos ciclos da terra.\n\n**Oração:** Senhor, obrigado por tua fidelidade. Ensina-nos a esperar com paciência, obedecer com prudência e responder às tuas misericórdias com adoração. Dá-nos sabedoria para interpretar tuas promessas no contexto e responsabilidade para cuidar da vida. Que nossa esperança esteja em Jesus Cristo. Amém."
+    }    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 8:1-22"], body: "**Arca:** embarcação na qual Noé e sua família são preservados. **Lembrar-se:** linguagem bíblica para a ação fiel de Deus, não indicação de esquecimento literal. **Altar:** lugar onde Noé oferece sacrifícios após sair da arca. **Aroma agradável:** expressão cultual que descreve a aceitação da oferta. **Estações:** continuidade dos ciclos da criação após o dilúvio."
     }
   ]
 };
