@@ -72,10 +72,7 @@ export const exodus20Study: StudyContent = {
     {
       "id": "exodo-20-1",
       "title": "1. A graça antes dos mandamentos (20:1–2),Deus se identifica como aquele que libertou Israel do Egito. A lei é dada a um povo já resgatado; não é apresentada como preço para comprar a libertação.",
-      "body": [
-        "A exclusividade da adoração (20:3)",
-        "Israel não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo."
-      ],
+      "body": "A exclusividade da adoração (20:3)\n\nIsrael não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo.",
       "kind": "observation",
       "confidence": "high",
       "scriptureRefs": [
@@ -85,10 +82,7 @@ export const exodus20Study: StudyContent = {
     {
       "id": "exodo-20-2",
       "title": "2. A graça antes dos mandamentos (20:1–2),Deus se identifica como aquele que libertou Israel do Egito. A lei é dada a um povo já resgatado; não é apresentada como preço para comprar a libertação.",
-      "body": [
-        "A exclusividade da adoração (20:3)",
-        "Israel não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo."
-      ],
+      "body": "A exclusividade da adoração (20:3)\n\nIsrael não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -98,10 +92,7 @@ export const exodus20Study: StudyContent = {
     {
       "id": "exodo-20-3",
       "title": "3. A graça antes dos mandamentos (20:1–2),Deus se identifica como aquele que libertou Israel do Egito. A lei é dada a um povo já resgatado; não é apresentada como preço para comprar a libertação.",
-      "body": [
-        "A exclusividade da adoração (20:3)",
-        "Israel não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo."
-      ],
+      "body": "A exclusividade da adoração (20:3)\n\nIsrael não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -111,10 +102,7 @@ export const exodus20Study: StudyContent = {
     {
       "id": "exodo-20-4",
       "title": "4. A graça antes dos mandamentos (20:1–2),Deus se identifica como aquele que libertou Israel do Egito. A lei é dada a um povo já resgatado; não é apresentada como preço para comprar a libertação.",
-      "body": [
-        "A exclusividade da adoração (20:3)",
-        "Israel não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo."
-      ],
+      "body": "A exclusividade da adoração (20:3)\n\nIsrael não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -124,10 +112,7 @@ export const exodus20Study: StudyContent = {
     {
       "id": "exodo-20-5",
       "title": "5. A graça antes dos mandamentos (20:1–2),Deus se identifica como aquele que libertou Israel do Egito. A lei é dada a um povo já resgatado; não é apresentada como preço para comprar a libertação.",
-      "body": [
-        "A exclusividade da adoração (20:3)",
-        "Israel não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo."
-      ],
+      "body": "A exclusividade da adoração (20:3)\n\nIsrael não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -137,10 +122,7 @@ export const exodus20Study: StudyContent = {
     {
       "id": "exodo-20-6",
       "title": "6. A graça antes dos mandamentos (20:1–2),Deus se identifica como aquele que libertou Israel do Egito. A lei é dada a um povo já resgatado; não é apresentada como preço para comprar a libertação.",
-      "body": [
-        "A exclusividade da adoração (20:3)",
-        "Israel não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo."
-      ],
+      "body": "A exclusividade da adoração (20:3)\n\nIsrael não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -150,10 +132,7 @@ export const exodus20Study: StudyContent = {
     {
       "id": "exodo-20-7",
       "title": "7. A graça antes dos mandamentos (20:1–2),Deus se identifica como aquele que libertou Israel do Egito. A lei é dada a um povo já resgatado; não é apresentada como preço para comprar a libertação.",
-      "body": [
-        "A exclusividade da adoração (20:3)",
-        "Israel não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo."
-      ],
+      "body": "A exclusividade da adoração (20:3)\n\nIsrael não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -163,10 +142,7 @@ export const exodus20Study: StudyContent = {
     {
       "id": "exodo-20-8",
       "title": "8. A graça antes dos mandamentos (20:1–2),Deus se identifica como aquele que libertou Israel do Egito. A lei é dada a um povo já resgatado; não é apresentada como preço para comprar a libertação.",
-      "body": [
-        "A exclusividade da adoração (20:3)",
-        "Israel não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo."
-      ],
+      "body": "A exclusividade da adoração (20:3)\n\nIsrael não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -176,10 +152,7 @@ export const exodus20Study: StudyContent = {
     {
       "id": "exodo-20-9",
       "title": "9. A graça antes dos mandamentos (20:1–2),Deus se identifica como aquele que libertou Israel do Egito. A lei é dada a um povo já resgatado; não é apresentada como preço para comprar a libertação.",
-      "body": [
-        "A exclusividade da adoração (20:3)",
-        "Israel não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo."
-      ],
+      "body": "A exclusividade da adoração (20:3)\n\nIsrael não deve ter outros deuses diante do Senhor. A aliança exige lealdade exclusiva, em contraste com a pluralidade religiosa do ambiente antigo.",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
