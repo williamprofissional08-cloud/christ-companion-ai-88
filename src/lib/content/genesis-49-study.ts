@@ -268,6 +268,14 @@ export const genesis49Study: StudyContent = {
       "scriptureRefs": [
         "Gênesis 49:33"
       ]
+    }    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 49:1-33"], body: "**Bênção patriarcal:** pronunciamento de Jacó sobre seus filhos e suas descendências. **Oráculo poético:** linguagem de poesia, imagens e antecipações sobre as tribos. **Cetro:** imagem de autoridade associada à fala sobre Judá. **Porção dobrada:** expressão associada à posição de José na história familiar, a ser tratada à luz do conjunto bíblico. **Macpela:** caverna familiar onde Jacó pede para ser sepultado."
+    }
+    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 49:1-33"], body: "1. Por que Jacó reúne seus filhos? 2. Como as palavras dirigidas a Rúben, Simeão e Levi diferem das dirigidas a Judá e José? 3. Que imagens poéticas aparecem? 4. O que o texto afirma sobre o sepultamento? 5. Por que não devemos tratar cada frase poética como previsão detalhada sem contexto? **Atividade:** organize as falas por filho, imagem e referência."
+    }
+    ,{
+      id: "preparacao-mensagem", title: "Preparação de ensino ou mensagem bíblica", kind: "sermon", confidence: "high", scriptureRefs: ["Gênesis 49:1-33"], body: "**Tema:** a história da família é apresentada diante da promessa de Deus. **Movimentos:** (1) convocação e palavras aos filhos (vv. 1-7); (2) destaque de Judá e José (vv. 8-28); (3) pedido de sepultamento em Macpela e morte de Jacó (vv. 29-33). **Cuidado:** respeitar o gênero poético e não inventar cumprimentos além do que o texto e o cânon sustentam. **Aplicação:** considerar como escolhas e caráter repercutem nas gerações."
     }
   ]
 };
