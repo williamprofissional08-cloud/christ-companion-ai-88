@@ -29,6 +29,7 @@ import { genesis28Study } from "./genesis-28-study";
 import { genesis29Study } from "./genesis-29-study";
 import { genesis30Study } from "./genesis-30-study";
 import { genesis31Study } from "./genesis-31-study";
+import { genesis32Study } from "./genesis-32-study";
 import { genesis1Study } from "./genesis-1-study";
 
 /**
@@ -68,4 +69,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-genesis-cap-29": genesis29Study,
   "biblia-genesis-cap-30": genesis30Study,
   "biblia-genesis-cap-31": genesis31Study,
+  "biblia-genesis-cap-32": genesis32Study,
 };
