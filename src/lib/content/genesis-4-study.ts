@@ -200,8 +200,6 @@ export const genesis4Study: StudyContent = {
       "kind": "reflection",
       "confidence": "probable",
       "body": "**Medite:** Tenho permitido que ressentimento ou inveja cresçam sem tratá-los? Tenho sido indiferente à dor de alguém? Uso meus talentos para servir ou para alimentar orgulho? Minha resposta ao conflito procura justiça ou vingança?\n\n**Resumo do capítulo:** Caim e Abel apresentam ofertas; Deus adverte Caim; Abel é morto; Deus confronta e sentencia o homicida, mas limita a vingança; a linhagem de Caim desenvolve atividades culturais e registra a violência de Lameque; Sete nasce e o capítulo termina com a invocação do nome do SENHOR.\n\n**Oração:** Senhor Deus, examina nosso coração e livra-nos do ódio, da inveja e da vingança. Ensina-nos a assumir responsabilidade pelo próximo, defender a vida, agir com justiça e usar nossos dons para o bem. Que nossa fé em Jesus Cristo produza amor verdadeiro, em atitudes e em verdade. Amém."
-    }    ,{
-      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 4:1-26"], body: "**Oferta:** presente apresentado a Deus; o texto não explica que a diferença entre as ofertas seja simplesmente vegetal contra animal. **Pecado à porta:** imagem de ameaça que deseja dominar Caim. **Sinal de Caim:** marca protetora cuja forma não é descrita. **Node:** região para onde Caim vai; sua localização exata não é identificada. **Invocar o nome do Senhor:** expressão de culto e dependência de Deus."
     }
   ]
 };
