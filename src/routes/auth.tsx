@@ -77,7 +77,12 @@ function AuthPage() {
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    const normalizedEmail = email.trim().toLowerCase();
+    if (mode === "signup" && !name.trim()) {
+      toast.error("Informe seu nome para criar a conta.");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
       toast.error("Informe um e-mail válido.");
       return;
     }
@@ -89,7 +94,7 @@ function AuthPage() {
     try {
       if (mode === "signup") {
         const { data, error } = await supabase.auth.signUp({
-          email,
+          email: normalizedEmail,
           password,
           options: {
             emailRedirectTo: `${window.location.origin}/auth-callback`,
@@ -97,14 +102,20 @@ function AuthPage() {
           },
         });
         if (error) throw error;
+        // Supabase may return an empty identities array for an existing address.
+        if (data.user && data.user.identities?.length === 0) {
+          throw new Error("User already registered");
+        }
         if (data.session) {
           toast.success("Seu cadastro foi concluído com sucesso!");
-        } else {
+        } else if (data.user) {
           setSent(true);
-          toast.success("Confirme seu e-mail para ativar a conta.");
+          toast.success("Cadastro iniciado. Confirme seu e-mail para ativar a conta.");
+        } else {
+          throw new Error("Não recebemos a confirmação do cadastro. Tente novamente.");
         }
       } else {
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        const { error } = await supabase.auth.signInWithPassword({ email: normalizedEmail, password });
         if (error) throw error;
       }
     } catch (error) {
@@ -136,7 +147,7 @@ function AuthPage() {
       toast.error("Informe seu e-mail primeiro.");
       return;
     }
-    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+    const { error } = await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
       redirectTo: `${window.location.origin}/reset-password`,
     });
     if (error) toast.error(friendlyAuthError(error));
