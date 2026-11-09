@@ -22,7 +22,7 @@ test("Genesis 1 is registered and contains a structured, didactic study", () => 
   assert.match(genesis1Source, /id: "questoes-interpretativas"/);
   assert.match(genesis1Source, /id: "referencias-explicadas"/);
   assert.match(genesis1Source, /id: "erros-interpretacao"/);
-  assert.doesNotMatch(genesis1Source, /\\*\\*Explicação:\\*\\*\`/, "Explanatory prose must remain inside each section template literal");
+  assert.equal(genesis1Source.includes("**Explicação:**`"), false, "Explanatory prose must remain inside each section template literal");
   assert.match(genesis1Source, /Elohim/);
   assert.match(genesis1Source, /não prova a doutrina da Trindade/);
   assert.match(genesis1Source, /não menciona uma guerra entre Deus e Satanás/);
