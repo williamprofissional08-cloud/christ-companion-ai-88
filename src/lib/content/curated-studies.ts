@@ -37,6 +37,10 @@ import { genesis36Study } from "./genesis-36-study";
 import { genesis37Study } from "./genesis-37-study";
 import { genesis38Study } from "./genesis-38-study";
 import { genesis39Study } from "./genesis-39-study";
+import { genesis40Study } from "./genesis-40-study";
+import { genesis41Study } from "./genesis-41-study";
+import { genesis42Study } from "./genesis-42-study";
+import { genesis43Study } from "./genesis-43-study";
 import { genesis1Study } from "./genesis-1-study";
 
 /**
@@ -84,4 +88,8 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-genesis-cap-37": genesis37Study,
   "biblia-genesis-cap-38": genesis38Study,
   "biblia-genesis-cap-39": genesis39Study,
+  "biblia-genesis-cap-40": genesis40Study,
+  "biblia-genesis-cap-41": genesis41Study,
+  "biblia-genesis-cap-42": genesis42Study,
+  "biblia-genesis-cap-43": genesis43Study,
 };
