@@ -322,6 +322,10 @@ A mensagem deve ser ensinada com compaixão, honestidade e atenção ao contexto
       kind: "summary",
       confidence: "high",
       body: "Senhor, dá-nos sabedoria para compreender tua Palavra sem distorcê-la. Ensina-nos a acolher quem sofre, rejeitar rivalidades e injustiças e agir com honestidade em nossas relações. Que não usemos a Bíblia para impor culpa ou prometer aquilo que ela não promete. Ajuda-nos a confiar em tua providência e a refletir o caráter de Cristo em nossa família, trabalho e comunidade. Amém."
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 30:1-43"], body: "1. Como a rivalidade entre Lia e Raquel afeta a família? 2. O que o episódio das mandrágoras revela sobre crenças e disputas? 3. Como o texto atribui a Deus o nascimento de José? 4. Qual acordo Jacó faz com Labão? 5. Por que não devemos apresentar as varas como explicação científica comprovada? **Atividade:** diferencie descrição narrativa, crença cultural e interpretação."
+    }    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 30:1-43"], body: "**Mandrágoras:** plantas às quais se atribuía popularmente relação com fertilidade; o texto não comprova tal efeito. **Bila e Zilpa:** servas de Raquel e Lia, respectivamente, envolvidas na formação da família. **Rebanho:** principal bem econômico na negociação entre Jacó e Labão. **Salário:** pagamento negociado por Jacó."
     }
   ]
 };
