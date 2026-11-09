@@ -67,10 +67,39 @@ O texto bíblico deve ser consultado pelo leitor em sua tradução licenciada; n
     for attempt in range(3):
         try:
             with urllib.request.urlopen(req, timeout=240) as response:
-                result = json.loads(response.read().decode("utf-8"))
-            raw = result["choices"][0]["message"]["content"].strip()
-            raw = re.sub(r"^\s*```(?:json)?\s*", "", raw)
-            raw = re.sub(r"\s*```\s*$", "", raw)
+                response_body = response.read().decode("utf-8", "replace")
+            result = json.loads(response_body)
+            choices = result.get("choices") or []
+            if not choices:
+                raise ValueError(
+                    "API não retornou choices; "
+                    f"model={result.get('model')!r}, id={result.get('id')!r}, "
+                    f"resposta={response_body[:700]!r}"
+                )
+            choice = choices[0]
+            message = choice.get("message") or {}
+            raw_content = message.get("content")
+            if isinstance(raw_content, list):
+                raw = "".join(
+                    part.get("text", "") if isinstance(part, dict) else str(part)
+                    for part in raw_content
+                ).strip()
+            elif isinstance(raw_content, str):
+                raw = raw_content.strip()
+            else:
+                raw = ""
+            if not raw:
+                refusal = message.get("refusal")
+                usage = result.get("usage")
+                raise ValueError(
+                    "GitHub Models retornou conteúdo vazio; "
+                    f"finish_reason={choice.get('finish_reason')!r}, "
+                    f"refusal={refusal!r}, usage={usage!r}, "
+                    f"response_id={result.get('id')!r}, "
+                    f"response_excerpt={response_body[:900]!r}"
+                )
+            raw = re.sub(r"^\\s*```(?:json)?\\s*", "", raw)
+            raw = re.sub(r"\\s*```\\s*$", "", raw)
             data = json.loads(raw)
             validate_study(data, chapter)
             return data
@@ -78,14 +107,18 @@ O texto bíblico deve ser consultado pelo leitor em sua tradução licenciada; n
             detail = exc.read().decode("utf-8", "replace")[:1200]
             if exc.code in (401, 403):
                 raise SystemExit(f"GitHub Models sem acesso (HTTP {exc.code}): {detail}")
-            if exc.code not in (429, 500, 502, 503, 504) or attempt == 2:
+            if exc.code not in (408, 429, 500, 502, 503, 504) or attempt == 2:
                 raise SystemExit(f"GitHub Models HTTP {exc.code}: {detail}")
             time.sleep(15 * (attempt + 1))
         except (KeyError, IndexError, json.JSONDecodeError, TypeError, ValueError) as exc:
             if attempt == 2:
                 raise SystemExit(f"Resposta inválida para Gênesis {chapter}: {exc}")
-            time.sleep(5)
-    raise SystemExit(f"Falha ao gerar Gênesis {chapter}.")
+            print(
+                f"Tentativa {attempt + 1}/3 sem resposta JSON utilizável "
+                f"para Gênesis {chapter}: {exc}",
+                flush=True,
+            )
+            time.sleep(5 * (attempt + 1))
 
 def validate_study(data: dict, chapter: int):
     required = ["intro", "historicalContext", "keyPoints", "application", "crossReferences", "questions", "conclusion", "prayer", "sections"]
