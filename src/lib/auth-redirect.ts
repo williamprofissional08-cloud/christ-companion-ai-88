@@ -32,15 +32,26 @@ export function takeRedirect(): string {
 export function friendlyAuthError(error: unknown): string {
   const raw = error instanceof Error ? error.message : String(error ?? "");
   const message = raw.toLowerCase();
-  if (message.includes("invalid login credentials")) return "Este e-mail ou senha está incorreto.";
+
+  if (message.includes("invalid login credentials"))
+    return "Este e-mail ou senha está incorreto.";
   if (message.includes("email not confirmed"))
-    return "Confirme seu e-mail antes de entrar. Verifique sua caixa de entrada.";
-  if (message.includes("already registered") || message.includes("already exists"))
-    return "Esta conta já existe. Tente entrar com e-mail e senha ou com o Google.";
-  if (message.includes("password")) return "Sua senha precisa ter pelo menos 6 caracteres.";
-  if (message.includes("rate limit") || message.includes("too many"))
-    return "Muitas tentativas em pouco tempo. Aguarde um instante e tente novamente.";
+    return "Confirme seu e-mail antes de entrar. Verifique também a caixa de spam.";
+  if (message.includes("already registered") || message.includes("already exists") || message.includes("user already registered"))
+    return "Este e-mail já possui uma conta. Entre com sua senha ou use a recuperação de acesso.";
+  if (message.includes("password") && (message.includes("at least") || message.includes("short") || message.includes("weak") || message.includes("characters")))
+    return "A senha não atende aos requisitos de segurança do cadastro. Verifique o tamanho mínimo e tente outra senha.";
+  if (message.includes("email") && (message.includes("invalid") || message.includes("format")))
+    return "O endereço de e-mail informado não é válido.";
+  if (message.includes("redirect") && (message.includes("allow") || message.includes("url")))
+    return "O endereço de retorno do cadastro não está autorizado nas configurações de autenticação. Entre em contato com o suporte.";
+  if (message.includes("rate limit") || message.includes("too many") || message.includes("over_email_send_rate_limit"))
+    return "Muitas tentativas em pouco tempo. Aguarde alguns minutos e tente novamente.";
+  if (message.includes("failed to fetch") || message.includes("network") || message.includes("fetch"))
+    return "Não foi possível conectar ao serviço de cadastro. Verifique sua internet e tente novamente.";
   if (message.includes("access_denied") || message.includes("cancel"))
     return "Login cancelado. Você pode tentar novamente quando quiser.";
-  return "Não foi possível concluir o login. Tente novamente.";
+
+  // Preserve the service message instead of incorrectly blaming the password.
+  return raw.trim() || "Não foi possível concluir o cadastro. Tente novamente.";
 }
