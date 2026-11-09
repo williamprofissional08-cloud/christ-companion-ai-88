@@ -31,16 +31,16 @@ Leia Gênesis 15 integralmente em sua Bíblia. Este estudo acompanha o texto e n
   ],
   application: "A fé de Abrão não é apresentada como ausência de perguntas ou como otimismo autossuficiente. Ele leva sua inquietação a Deus, escuta a palavra divina e confia. A passagem convida o leitor a distinguir confiança de presunção: Abrão não inventa uma promessa, mas responde àquilo que Deus lhe disse. O capítulo também ensina que a promessa divina não elimina imediatamente a espera nem significa ausência de sofrimento para as gerações seguintes. A revelação inclui aflição, julgamento e libertação. Na leitura cristã, Gênesis 15:6 deve ser estudado em diálogo com Romanos 4, Gálatas 3 e Hebreus 11, sem reduzir a fé a uma obra meritória ou transformar a justificação em recompensa por desempenho humano. A aplicação pastoral deve respeitar o contexto da aliança com Abrão e não prometer prosperidade material, descendência ou território a cada leitor individual.",
   crossReferences: [
-    { reference: "Gênesis 12:1–3", note: "Chamado de Abrão e promessa de bênção às famílias da terra." },
-    { reference: "Gênesis 13:14–17", note: "Promessa da terra e de descendência numerosa." },
-    { reference: "Gênesis 17:1–8", note: "A aliança é reafirmada e desenvolvida." },
-    { reference: "Êxodo 1:8–14; 12:40–41", note: "A opressão e a saída do Egito no desenvolvimento da narrativa bíblica." },
-    { reference: "Êxodo 3:7–10", note: "Deus vê a aflição e anuncia libertação." },
-    { reference: "Salmos 105:8–11, 42–45", note: "Memória da aliança e da promessa aos patriarcas." },
-    { reference: "Romanos 4:1–25", note: "Paulo utiliza a fé de Abraão em sua argumentação sobre justiça e promessa." },
-    { reference: "Gálatas 3:6–18", note: "A promessa a Abraão e a relação entre fé, bênção e herança." },
-    { reference: "Hebreus 11:8–12, 17–19", note: "A fé de Abraão em meio à espera e às provações." },
-    { reference: "Tiago 2:21–24", note: "A fé de Abraão é discutida em relação às obras que a demonstram." }
+    "Gênesis 12:1–3 — Chamado de Abrão e promessa de bênção às famílias da terra.",
+    "Gênesis 13:14–17 — Promessa da terra e de descendência numerosa.",
+    "Gênesis 17:1–8 — A aliança é reafirmada e desenvolvida.",
+    "Êxodo 1:8–14; 12:40–41 — A opressão e a saída do Egito no desenvolvimento da narrativa bíblica.",
+    "Êxodo 3:7–10 — Deus vê a aflição e anuncia libertação.",
+    "Salmos 105:8–11, 42–45 — Memória da aliança e da promessa aos patriarcas.",
+    "Romanos 4:1–25 — Paulo utiliza a fé de Abraão em sua argumentação sobre justiça e promessa.",
+    "Gálatas 3:6–18 — A promessa a Abraão e a relação entre fé, bênção e herança.",
+    "Hebreus 11:8–12, 17–19 — A fé de Abraão em meio à espera e às provações.",
+    "Tiago 2:21–24 — A fé de Abraão é discutida em relação às obras que a demonstram."
   ],
   questions: [
     "O que significa, no contexto imediato, Deus apresentar-se como escudo e recompensa de Abrão?",
