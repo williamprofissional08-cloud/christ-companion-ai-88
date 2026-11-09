@@ -2,160 +2,64 @@ import type { StudyContent } from "../types";
 
 /** Estudo bíblico aprofundado e curado de Êxodo 17. */
 export const exodus17Study: StudyContent = {
-  "version": 1,
-  "depth": "deep",
-  "intro": "Êxodo 17 apresenta duas crises durante a jornada. Em Refidim, o povo não encontra água e contende com Moisés, chegando a questionar se o Senhor está no meio deles. Deus manda Moisés ferir a rocha em Horebe, e dela sai água. O lugar recebe nomes que lembram a contenda e a tentação. Em seguida, Amaleque ataca Israel. Josué conduz os homens à batalha, enquanto Moisés permanece no alto com a vara de Deus; Arão e Hur sustentam suas mãos. Israel vence, e Moisés ergue um altar chamado O Senhor é minha bandeira.",
-  "historicalContext": "Refidim e Horebe integram o itinerário do deserto, embora a localização arqueológica exata seja debatida. A água da rocha torna-se imagem importante em textos posteriores. A batalha contra Amaleque é a primeira guerra narrada após a saída do Egito. O texto associa liderança, intercessão, cooperação e memória. A ordem de registrar o conflito e transmiti-lo a Josué prepara a continuidade da história.",
-  "keyPoints": [
-    {
-      "title": "1. A falta de água e a contenda (17:1–3)",
-      "text": "A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais."
-    },
-    {
-      "title": "2. Moisés clama e Deus dá instruções (17:4–6)",
-      "text": "Moisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto."
-    },
-    {
-      "title": "3. Massá e Meribá (17:7)",
-      "text": "Os nomes registram a prova e a contenda. O episódio passa a ser lembrado como advertência contra endurecer o coração e exigir que Deus prove sua presença."
-    },
-    {
-      "title": "4. O ataque de Amaleque (17:8–9)",
-      "text": "Amaleque ataca Israel em Refidim. Josué é encarregado de escolher homens e combater, enquanto Moisés sobe ao monte com a vara."
-    },
-    {
-      "title": "5. Mãos erguidas e cooperação (17:10–13)",
-      "text": "Quando Moisés mantém as mãos erguidas, Israel prevalece; quando se cansam, Arão e Hur o sustentam. A vitória envolve ação militar, intercessão e apoio comunitário."
-    },
-    {
-      "title": "6. O memorial e a esperança de justiça (17:14–16)",
-      "text": "Deus ordena que o acontecimento seja registrado e transmitido a Josué. Moisés constrói um altar e declara o Senhor como sua bandeira. A memória da agressão permanece diante de Deus."
-    }
+  version: 2,
+  depth: "deep",
+  intro: "Êxodo 17 reúne duas crises na caminhada de Israel pelo deserto. Em Refidim, a falta de água provoca contenda e a pergunta sobre a presença do Senhor. Deus orienta Moisés e faz sair água da rocha em Horebe. Depois, Amaleque ataca Israel; Josué conduz o combate, enquanto Moisés permanece no alto com a vara de Deus e recebe o apoio de Arão e Hur. O capítulo termina com um memorial e um altar chamado O Senhor é minha bandeira. A narrativa ensina sobre provisão, confiança, liderança, cooperação e memória.",
+  historicalContext: "O capítulo situa-se depois da saída do Egito e antes da chegada ao Sinai, na sequência de Êxodo 15–19. Israel atravessa regiões desérticas, onde água é uma necessidade concreta. Refidim é o cenário dos dois episódios, e a provisão é relacionada a Horebe; a localização arqueológica exata desses lugares e o traçado da rota do êxodo são debatidos. Amaleque aparece como grupo agressor. Deuteronômio 25:17–19 retoma o ataque e destaca a vulnerabilidade dos cansados e dos que ficavam para trás. A narrativa prepara temas posteriores: memória da provisão, responsabilidade de Josué, liderança compartilhada e conflito com Amaleque.",
+  keyPoints: [
+    { title: "A necessidade e a crise de confiança", text: "A falta de água ameaça a comunidade. A pergunta sobre a presença do Senhor mostra que a necessidade material também se torna uma crise de confiança." },
+    { title: "Deus responde ao clamor", text: "Moisés apresenta sua angústia, e Deus dá instruções específicas, prometendo estar diante dele na rocha em Horebe." },
+    { title: "Massá e Meribá preservam a memória", text: "Os nomes registram a prova e a contenda e serão retomados como advertência contra o endurecimento do coração." },
+    { title: "Josué assume uma tarefa", text: "A resposta ao ataque inclui organização e ação: Josué escolhe homens e conduz o combate." },
+    { title: "A vitória envolve cooperação", text: "Arão e Hur sustentam as mãos cansadas de Moisés. A narrativa mostra serviço compartilhado, não liderança autossuficiente." },
+    { title: "O memorial aponta para o Senhor", text: "O acontecimento é registrado e transmitido a Josué. O altar confessa o Senhor como bandeira de Israel." }
   ],
-  "application": "A passagem ensina que a comunidade precisa de provisão, liderança responsável e cooperação. Não transforme as mãos de Moisés numa fórmula para obter vitórias nem use o texto para justificar agressões religiosas. Reconheça que a narrativa trata de um conflito específico na história de Israel e aplique o princípio de sustentar uns aos outros em serviço e oração.",
-  "crossReferences": [
-    "Números 20:1–13",
-    "Deuteronômio 25:17–19",
-    "Salmo 95:7–11",
-    "1 Samuel 15:2–3",
-    "Salmo 121:1–2",
-    "1 Coríntios 10:4",
-    "Hebreus 3:7–12"
+  application: "O capítulo convida a apresentar necessidades reais a Deus sem negar o sofrimento. Ensina também que líderes precisam de apoio e que a comunidade participa do cuidado mútuo. Não use as mãos erguidas de Moisés como técnica para garantir vitórias, não transforme a batalha antiga em autorização para violência religiosa e não conclua que todo sofrimento decorre de falta de fé. Aplique os princípios de confiança, oração, responsabilidade, cooperação, memória e justiça, respeitando o lugar do episódio na história de Israel.",
+  crossReferences: ["Êxodo 15:22–27", "Êxodo 16:1–36", "Números 20:1–13", "Deuteronômio 25:17–19", "Salmo 78:15–20", "Salmo 95:7–11", "1 Samuel 15:1–9", "João 4:10–14", "João 7:37–39", "1 Coríntios 10:1–4", "Hebreus 3:7–12"],
+  questions: [
+    "Por que a falta de água em Refidim era uma ameaça concreta?",
+    "O que revela a pergunta sobre a presença do Senhor?",
+    "Como Moisés reage à ameaça e o que faz primeiro?",
+    "Quais instruções Deus dá em Êxodo 17:5–6?",
+    "Por que Massá e Meribá se tornam nomes de memória?",
+    "O que Deuteronômio 25:17–19 acrescenta sobre o ataque de Amaleque?",
+    "Qual é a função de Josué no episódio?",
+    "Por que a vara não deve ser tratada como objeto mágico?",
+    "Como Arão e Hur participam da batalha?",
+    "A vitória é atribuída apenas a Moisés? Explique.",
+    "O que significa o nome O Senhor é minha bandeira?",
+    "Como aplicar os princípios sem reproduzir mecanicamente a situação histórica?"
   ],
-  "questions": [
-    "Qual é a crise inicial em Refidim?",
-    "O que revela a pergunta sobre a presença de Deus?",
-    "Quais instruções Deus dá a Moisés?",
-    "O que significam os nomes Massá e Meribá?",
-    "Quem lidera o combate contra Amaleque?",
-    "Qual é o papel de Arão e Hur?",
-    "Por que a vitória não deve ser atribuída a um gesto mágico?",
-    "O que deve ser registrado e transmitido a Josué?",
-    "Como o episódio é retomado em Deuteronômio 25?",
-    "Quais limites devemos respeitar ao aplicar uma narrativa de guerra?"
-  ],
-  "conclusion": "Êxodo 17 deve ser compreendido dentro da história da libertação e da formação de Israel. Sua mensagem central não deve ser separada do contexto da aliança, da ação de Deus e da resposta humana. Ao ensinar o capítulo, leia a passagem integralmente, explique sua estrutura, distinga o que o texto afirma das inferências e conduza a aplicação à luz do conjunto das Escrituras e de Cristo, sem alegorias inventadas.",
-  "prayer": "Senhor Deus, ajuda-nos a compreender Êxodo 17 com reverência, atenção ao contexto e fidelidade à tua Palavra. Dá-nos humildade para reconhecer o que o texto afirma e os limites do que podemos concluir. Forma em nós fé, obediência, justiça e amor ao próximo, tendo Cristo como centro da esperança revelada nas Escrituras. Amém.",
-  "sections": [
-    {
-      "id": "exodo-17-1",
-      "title": "1. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
-      "kind": "observation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 17"
-      ]
-    },
-    {
-      "id": "exodo-17-2",
-      "title": "2. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 17"
-      ]
-    },
-    {
-      "id": "exodo-17-3",
-      "title": "3. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 17"
-      ]
-    },
-    {
-      "id": "exodo-17-4",
-      "title": "4. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 17"
-      ]
-    },
-    {
-      "id": "exodo-17-5",
-      "title": "5. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
-      "kind": "interpretation",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 17"
-      ]
-    },
-    {
-      "id": "exodo-17-6",
-      "title": "6. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
-      "kind": "application",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 17"
-      ]
-    },
-    {
-      "id": "exodo-17-metodo",
-      "title": "7. Método de estudo e exegese",
-      "kind": "method",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 17:1–40"
-      ],
-      "body": "Leia o capítulo em sua totalidade e delimite suas unidades narrativas ou discursivas. Observe repetições, personagens, verbos, mudanças de cenário e falas. Consulte o contexto imediato dos capítulos anteriores e seguintes. Registre primeiro o que o texto diz; depois investigue o contexto histórico e literário; em seguida formule a interpretação mais bem sustentada, identificando questões debatidas; por fim, construa uma aplicação coerente com o capítulo e com o conjunto da Bíblia. Não transforme detalhes incertos em fatos nem use uma aplicação moderna para substituir o sentido original."
-    },
-    {
-      "id": "exodo-17-pregacao",
-      "title": "8. Preparação de mensagem expositiva",
-      "kind": "sermon",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 17"
-      ],
-      "body": "**Tema:** Água da rocha e a batalha contra Amaleque. **Ideia central:** Êxodo 17 apresenta duas crises durante a jornada. Em Refidim, o povo não encontra água e contende com Moisés, chegando a questionar se o Senhor está no meio deles. Deus manda Moisés ferir a rocha em Horebe, e dela sai água. O lugar recebe nomes que lembram a c **Roteiro:** (1) Leia o contexto e delimite as unidades do capítulo; (2) explique cada movimento a partir dos versículos; (3) destaque o ensino teológico principal; (4) mostre as conexões bíblicas explícitas e a relação com Cristo sem alegorizar; (5) conclua com aplicações concretas, responsáveis e fiéis ao texto. **Cuidado pastoral:** não prometa o que a passagem não promete, não use o texto para manipular ou condenar pessoas e distinga descrição narrativa de aprovação divina."
-    },
-    {
-      "id": "exodo-17-glossario",
-      "title": "9. Glossário e conceitos importantes",
-      "kind": "glossary",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 17"
-      ],
-      "body": "**Aliança:** compromisso relacional estabelecido por Deus com seu povo. **Êxodo:** saída de Israel do Egito, evento fundador da memória nacional. **Santo/santidade:** separado para Deus e coerente com seu caráter. **Memorial:** prática ou sinal que preserva a lembrança de um ato de Deus. **Mediação:** serviço de quem representa o povo diante de Deus ou transmite sua palavra. Os termos específicos deste capítulo devem ser explicados conforme seu contexto, sem atribuir sentidos técnicos que o texto não fornece."
-    },
-    {
-      "id": "exodo-17-avaliacao",
-      "title": "10. Revisão e avaliação do aprendizado",
-      "kind": "assessment",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Êxodo 17"
-      ],
-      "body": "Responda às perguntas de revisão do estudo com base na leitura bíblica. Depois, escolha uma unidade do capítulo e escreva quatro itens: (1) observação — o que está explicitamente escrito; (2) contexto — como a unidade se conecta ao livro; (3) interpretação — qual sentido é sustentado pelo texto; (4) aplicação — como obedecer ao princípio sem repetir mecanicamente uma situação histórica única. Para preparar uma aula, apresente a ideia central em uma frase, organize o desenvolvimento em movimentos do próprio texto e indique referências cruzadas que realmente iluminem a passagem. Avalie se evitou especulação, alegorias e promessas não autorizadas pelo texto."
-    }
+  conclusion: "Êxodo 17 apresenta duas crises distintas, unidas pela necessidade de depender do Senhor durante a jornada. Na primeira, Deus provê água e confronta a desconfiança; na segunda, Israel enfrenta um ataque e aprende que liderança, ação e apoio mútuo caminham juntos. Os nomes dos lugares, o registro escrito e o altar preservam a memória. O capítulo deve ser ensinado em seu contexto histórico e canônico: a rocha é retomada por Paulo em 1 Coríntios 10:4, e a imagem da água viva aparece no ensino de Jesus em João 4 e 7. Essas conexões não autorizam alegorias arbitrárias. A mensagem conduz à confiança em Deus, à responsabilidade comunitária e à leitura de Cristo à luz do conjunto das Escrituras.",
+  prayer: "Senhor Deus, ensina-nos a ler tua Palavra com humildade, atenção e fidelidade. Ajuda-nos a apresentar nossas necessidades sem endurecer o coração, a confiar em tua presença e a servir com responsabilidade. Dá-nos disposição para apoiar quem carrega responsabilidades difíceis e sabedoria para distinguir o sentido histórico do texto de nossas aplicações atuais. Que nossa esperança esteja em ti e que conheçamos mais profundamente Jesus Cristo. Amém.",
+  sections: [
+    { id: "exodo-17-leitura", title: "Leitura bíblica e delimitação — Êxodo 17:1–16", kind: "scripture", confidence: "high", scriptureRefs: ["Êxodo 17:1–16"], body: "Leia o capítulo inteiro em sua Bíblia. Ele possui 16 versículos e duas unidades principais: a água em Refidim (vv. 1–7) e o ataque de Amaleque (vv. 8–16). Observe personagens, falas, ordens, mudanças de cenário e os nomes dados aos memoriais. Este estudo comenta a passagem e não substitui a leitura na tradução bíblica de sua preferência." },
+    { id: "exodo-17-introducao", title: "1. Introdução — Duas crises no caminho da promessa", kind: "introduction", confidence: "high", scriptureRefs: ["Êxodo 17:1–16", "Êxodo 15:22–27", "Êxodo 16:1–36"], body: "Israel já havia experimentado a libertação do Egito, a passagem pelo mar e a provisão de água e alimento. Mesmo assim, a caminhada continua marcada por necessidades. Primeiro há sede; depois, um ataque.\n\nA narrativa não esconde a tensão: a libertação não encerrou a formação do povo. Israel precisa aprender a confiar no Senhor no presente, agir com responsabilidade e preservar a memória do que aconteceu.\n\n**Ideia central:** no caminho pelo deserto, o Senhor provê e sustenta seu povo, enquanto o forma para responder com confiança, obediência, coragem e cooperação.\n\nAo estudar, identifique primeiro o que o texto afirma; depois considere o contexto; em seguida formule a interpretação; por fim, construa aplicações coerentes com o sentido original." },
+    { id: "exodo-17-contexto", title: "2. Contexto histórico — Israel entre o Egito e o Sinai", kind: "context", confidence: "probable", scriptureRefs: ["Êxodo 13:17–22", "Êxodo 15:22–27", "Êxodo 16:1–36", "Êxodo 19:1–2"], body: "Êxodo 17 integra a seção que descreve a caminhada após a saída do Egito e antes da chegada ao Sinai. Os capítulos anteriores registram dificuldades com água e alimento; agora surgem a contenda em Refidim e o ataque de Amaleque.\n\n**Refidim e Horebe:** o texto relaciona os lugares aos episódios, mas não fornece coordenadas modernas. A localização precisa e a rota do êxodo são debatidas.\n\n**Amaleque:** Deuteronômio 25:17–19 retoma a agressão e destaca os cansados e os que ficavam para trás. Isso ajuda a compreender a gravidade do ataque.\n\nNão apresente hipóteses geográficas como certezas nem projete mapas modernos sobre uma narrativa que não oferece esses dados." },
+    { id: "exodo-17-estrutura", title: "3. Estrutura literária — Duas cenas e seus desfechos", kind: "context", confidence: "high", scriptureRefs: ["Êxodo 17:1–16"], body: "**Unidade 1 — Água em Refidim (vv. 1–7):** falta água; o povo contende; Moisés clama; Deus dá instruções; o lugar recebe os nomes Massá e Meribá.\n\n**Unidade 2 — Amaleque ataca (vv. 8–16):** Josué recebe a missão; Moisés sobe ao monte; Arão e Hur sustentam suas mãos; Josué vence; Deus ordena o registro; Moisés ergue um altar.\n\nA divisão considera mudanças de cenário, personagens e conflito. Os episódios são relacionados pela jornada, mas não devem ser confundidos." },
+    { id: "exodo-17-refidim", title: "4. A chegada a Refidim e a ausência de água (17:1)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:1", "Êxodo 16:1", "Números 33:12–14"], body: "O povo acampa em Refidim e não encontra água para beber. A necessidade é concreta: em ambiente desértico, água é condição de sobrevivência para pessoas e rebanhos.\n\nA frase de que Israel partiu conforme a ordem do Senhor coloca a jornada sob direção divina, mas não significa que cada dificuldade seja apresentada como punição por um pecado específico. O narrador não afirma isso.\n\n**Observação:** há uma comunidade em deslocamento e uma crise de abastecimento. **Interpretação:** a situação revela a fragilidade humana e a necessidade de depender de Deus. **Aplicação:** fé não exige negar problemas reais; a comunidade deve reconhecê-los e buscar respostas responsáveis." },
+    { id: "exodo-17-contenda", title: "5. A contenda e a pergunta sobre a presença de Deus (17:2–3)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:2–3", "Êxodo 16:2–3", "Salmo 78:17–20"], body: "O povo exige água, e Moisés pergunta por que contendem com ele e põem o Senhor à prova. A discussão ultrapassa a reclamação dirigida a um líder: a narrativa mostra uma crise de confiança em Deus.\n\nA pergunta sobre se o Senhor está no meio deles é o centro teológico do episódio. A falta de água é interpretada como possível abandono, apesar das experiências anteriores de libertação e provisão.\n\nNão use o texto para condenar todo lamento ou expressão de sofrimento. A Bíblia registra lamentos sinceros. O problema específico é transformar a necessidade em contenda e exigir que Deus prove sua presença nos termos impostos pelo povo." },
+    { id: "exodo-17-clamor", title: "6. Moisés clama diante da ameaça (17:4)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:4", "Números 20:2–6"], body: "Moisés clama ao Senhor e expõe o perigo: o povo está perto de apedrejá-lo. O líder está sob pressão e diante de uma crise que pode se tornar violência. Em vez de responder apenas com confronto, leva a situação a Deus e busca direção.\n\nO clamor não é fuga da responsabilidade. É reconhecimento de que a situação ultrapassa sua capacidade de resolver sozinho.\n\n**Aplicação pastoral:** líderes também enfrentam cansaço e ameaças. Comunidades saudáveis não devem normalizar intimidação ou violência; precisam buscar diálogo, justiça e proteção." },
+    { id: "exodo-17-instrucoes", title: "7. A instrução divina: anciãos, vara e rocha (17:5–6)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:5–6", "Êxodo 4:2–5", "Êxodo 7:20"], body: "Deus manda Moisés passar adiante do povo, levar anciãos e tomar a vara usada nos sinais anteriores. O Senhor declara que estará diante dele sobre a rocha em Horebe; Moisés deverá feri-la, e dela sairá água.\n\n**Anciãos:** testemunham a ação, que não é apresentada como experiência secreta. **Vara:** aparece dentro da missão dada por Deus; não possui poder independente nem é amuleto. **Rocha:** é o meio indicado na narrativa, não uma fonte autônoma de poder.\n\nO resultado é provisão para a necessidade concreta do povo. O texto atribui a ação decisiva ao Senhor." },
+    { id: "exodo-17-massa-meriba", title: "8. Massá e Meribá — nomes que preservam a crise (17:7)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:7", "Deuteronômio 6:16", "Salmo 95:8–9"], body: "Moisés dá ao lugar os nomes Massá e Meribá. O próprio versículo relaciona os nomes à prova e à contenda do povo. Meribá está associada à disputa; Massá, à ideia de prova ou teste.\n\nEsses nomes transformam o episódio em memória pública. Salmo 95 retoma Massá e Meribá como advertência para ouvir a voz do Senhor e não endurecer o coração.\n\n**Ensinamento:** a memória comunitária pode conservar tanto a lembrança da provisão divina quanto o reconhecimento dos próprios erros." },
+    { id: "exodo-17-amaleque", title: "9. Amaleque ataca Israel (17:8)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:8", "Deuteronômio 25:17–19", "Gênesis 36:12"], body: "Amaleque vem lutar contra Israel em Refidim. O relato descreve uma agressão concreta contra um povo em deslocamento. Deuteronômio 25:17–19 retoma o acontecimento e destaca que os cansados e os que estavam atrás foram atingidos.\n\nGênesis 36:12 relaciona Amaleque à descendência de Esaú. Essa genealogia situa o grupo na narrativa bíblica, mas não deve ser usada para atribuir culpa coletiva a povos ou pessoas atuais.\n\n**Cuidado:** o episódio pertence à história específica de Israel. Não autoriza hostilidade étnica, perseguição ou violência religiosa no presente." },
+    { id: "exodo-17-josue", title: "10. Josué recebe a missão de organizar o combate (17:9–10)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:9–10", "Êxodo 24:13", "Josué 1:1–9"], body: "Moisés chama Josué e ordena que escolha homens para lutar contra Amaleque. Enquanto isso, Moisés subirá ao monte com a vara de Deus. É uma aparição importante de Josué na narrativa de Êxodo e antecipa sua responsabilidade futura.\n\nO capítulo não informa quantos homens foram escolhidos nem descreve armas ou estratégia. Não complete essas lacunas com imaginação.\n\nA confiança em Deus não elimina a necessidade de tomar decisões, organizar pessoas e agir diante do perigo. O texto apresenta oração e ação responsável no mesmo episódio." },
+    { id: "exodo-17-maos", title: "11. As mãos erguidas e o avanço da batalha (17:11)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:11", "Salmo 28:2", "1 Timóteo 2:8"], body: "Quando Moisés mantém a mão levantada, Israel prevalece; quando a abaixa, Amaleque prevalece. O narrador relaciona o gesto ao resultado da batalha, mas não explica todos os detalhes do sinal.\n\nNa Bíblia, mãos levantadas aparecem em contextos de oração, súplica e bênção. Essa associação é plausível no conjunto bíblico, mas não deve ser apresentada como definição explícita do narrador neste versículo.\n\nO texto não ensina uma técnica ritual para vencer batalhas. A mão de Moisés não é fonte autônoma de poder; a vitória está sob a ação do Senhor." },
+    { id: "exodo-17-apoio", title: "12. Arão e Hur sustentam Moisés (17:12)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:12", "Êxodo 4:14–16", "Êxodo 24:14"], body: "As mãos de Moisés ficam cansadas. Arão e Hur colocam uma pedra para que ele se sente e sustentam suas mãos, um de cada lado, até o pôr do sol. O apoio é físico, concreto e perseverante.\n\nArão já havia sido apresentado como irmão e porta-voz de Moisés. Hur aparece como colaborador, mas o capítulo não fornece sua biografia. Não afirme detalhes além do que as fontes bíblicas permitem.\n\n**Ensinamento:** responsabilidade espiritual não é isolamento. Quem lidera também precisa de descanso, suporte e companhia. Os companheiros não tomam o lugar de Moisés; ajudam-no a cumprir sua tarefa." },
+    { id: "exodo-17-vitoria", title: "13. Josué derrota Amaleque (17:13)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:13", "Deuteronômio 25:17–19"], body: "O versículo informa que Josué derrota Amaleque e seu povo ao fio da espada. O narrador resume o resultado sem fornecer números, duração exata ou detalhes estratégicos.\n\nJosué conduz a ação no campo, mas o relato não separa sua atuação da dependência do Senhor e do apoio de Moisés, Arão e Hur.\n\nReconhecer o contexto de guerra do antigo Israel não significa transformar a passagem em modelo de expansão religiosa ou violência contemporânea. É um conflito histórico dentro da trajetória de Israel." },
+    { id: "exodo-17-memorial", title: "14. O registro escrito e a transmissão a Josué (17:14)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:14", "Deuteronômio 25:17–19", "Josué 1:7–8"], body: "Deus ordena que Moisés escreva o acontecimento em um livro como memorial e o transmita a Josué. O registro tem função de memória e formação: a geração seguinte deverá conhecer o que ocorreu.\n\nA ordem de transmitir a Josué é significativa porque ele havia conduzido o combate. O episódio participa da preparação de sua futura liderança.\n\nA declaração sobre apagar a memória de Amaleque pertence ao juízo divino no contexto da história de Israel. Não deve ser convertida em licença para apagar a memória, perseguir descendentes ou atacar povos atuais." },
+    { id: "exodo-17-altar", title: "15. O altar: O Senhor é minha bandeira (17:15)", kind: "exegesis", confidence: "high", scriptureRefs: ["Êxodo 17:15", "Gênesis 22:14", "Juízes 6:24"], body: "Moisés constrói um altar e o chama YHWH-Nissi, geralmente traduzido como “O Senhor é minha bandeira” ou “O Senhor é meu estandarte”. A imagem comunica pertencimento, identidade e confiança.\n\nNo mundo antigo, estandartes podiam identificar e reunir grupos. Aqui, porém, a referência central é o próprio Senhor, não um artefato que garantiria vitória. O altar funciona como memorial de adoração e reconhecimento.\n\n**Aplicação:** símbolos, bandeiras e líderes não devem ocupar o lugar de Deus. A confiança e a glória pertencem ao Senhor." },
+    { id: "exodo-17-verso-16", title: "16. A declaração final e sua dificuldade textual (17:16)", kind: "interpretation", confidence: "debated", scriptureRefs: ["Êxodo 17:16", "Deuteronômio 25:17–19"], body: "O versículo final contém uma expressão hebraica difícil, cuja formulação varia entre traduções. A expressão envolve termos associados a mão, trono ou estandarte do Senhor, conforme as decisões de tradução e interpretação. Algumas versões comunicam a ideia de guerra do Senhor contra Amaleque de geração em geração.\n\nO ponto seguro é que o narrador encerra o episódio afirmando a seriedade duradoura do conflito na memória de Israel. Não esconda a dificuldade textual nem construa uma doutrina detalhada sobre uma tradução controversa sem consultar o hebraico e comentários confiáveis." },
+    { id: "exodo-17-teologia", title: "17. Temas teológicos centrais", kind: "interpretation", confidence: "high", scriptureRefs: ["Êxodo 17:1–16"], body: "**Presença:** a falta de água se transforma em pergunta sobre a presença do Senhor.\n\n**Provisão:** Deus atende à necessidade concreta do povo.\n\n**Memória:** Massá e Meribá preservam a lembrança da contenda; o registro e o altar conservam a memória do conflito.\n\n**Liderança compartilhada:** Moisés, Josué, Arão e Hur participam de maneiras diferentes.\n\n**Dependência e ação:** há clamor, instrução, organização e combate.\n\n**Justiça:** a memória posterior do ataque destaca a vulnerabilidade dos cansados. Esses temas surgem da narrativa e não exigem símbolos secretos." },
+    { id: "exodo-17-glossario", title: "18. Glossário e conceitos importantes", kind: "glossary", confidence: "probable", scriptureRefs: ["Êxodo 17:1–16"], body: "**Refidim:** local do acampamento de Israel no episódio; localização exata debatida.\n\n**Horebe:** nome associado ao monte/região de acontecimentos importantes da jornada.\n\n**Massá:** nome relacionado à prova ou teste.\n\n**Meribá:** nome relacionado à contenda.\n\n**Anciãos:** representantes experientes da comunidade.\n\n**Amaleque:** grupo que ataca Israel durante a jornada.\n\n**Estandarte:** bandeira ou sinal que identifica e reúne um grupo.\n\n**Memorial:** registro ou sinal que preserva a lembrança de um acontecimento.\n\n**Exegese:** estudo cuidadoso do texto em sua língua, contexto, gênero e lugar no conjunto das Escrituras." },
+    { id: "exodo-17-debates", title: "19. Questões interpretativas e limites do que sabemos", kind: "interpretation", confidence: "debated", scriptureRefs: ["Êxodo 17:1–16", "Números 20:1–13"], body: "**Localização:** Refidim e Horebe são situados na narrativa, mas a identificação arqueológica precisa é debatida.\n\n**Relação com Números 20:** os episódios compartilham o tema da água e da rocha, mas estão em contextos diferentes e não devem ser fundidos.\n\n**Mãos erguidas:** o texto relaciona o gesto ao resultado da batalha, mas não explica todos os detalhes; a leitura como oração deve ser qualificada.\n\n**Hur:** é identificado como colaborador de Arão, sem biografia detalhada neste capítulo.\n\n**Versículo 16:** sua formulação é difícil e as traduções divergem.\n\n**Aplicação da guerra:** o episódio não autoriza violência religiosa ou hostilidade étnica hoje." },
+    { id: "exodo-17-referencias", title: "20. Referências cruzadas — A memória de Refidim e Amaleque", kind: "references", confidence: "high", scriptureRefs: ["Êxodo 15:22–27", "Êxodo 16:1–36", "Números 20:1–13", "Deuteronômio 25:17–19", "Salmo 78:15–20", "Salmo 95:7–11"], body: "**Êxodo 15:22–27:** uma crise anterior relacionada à água.\n\n**Êxodo 16:1–36:** a necessidade de alimento e a formação do povo.\n\n**Números 20:1–13:** outra crise de água, em contexto posterior; compare sem confundir os episódios.\n\n**Deuteronômio 25:17–19:** recorda o ataque de Amaleque e destaca os vulneráveis.\n\n**Salmo 78:15–20:** relembra a água providenciada no deserto.\n\n**Salmo 95:7–11:** retoma Massá e Meribá como advertência contra endurecer o coração." },
+    { id: "exodo-17-cristo", title: "21. Conexão com Cristo — A rocha e a água viva", kind: "christ_connection", confidence: "high", scriptureRefs: ["Êxodo 17:1–7", "1 Coríntios 10:1–4", "João 4:10–14", "João 7:37–39"], body: "A conexão explícita entre a rocha do deserto e Cristo aparece em 1 Coríntios 10:1–4. Paulo relembra experiências de Israel e utiliza a linguagem da rocha espiritual, identificando-a em sua argumentação com Cristo. Ele aplica a memória do deserto como advertência à comunidade cristã.\n\nEm João 4:10–14, Jesus fala da água viva à mulher samaritana; em João 7:37–39, o Evangelho relaciona a imagem da água ao Espírito, no contexto da glorificação de Jesus.\n\n**Leitura responsável:** Êxodo 17 relata originalmente a provisão de água para Israel. A conexão cristológica é estabelecida pelo Novo Testamento; não é necessário inventar significados secretos para cada detalhe da rocha, da vara ou do gesto de Moisés." },
+    { id: "exodo-17-aplicacoes", title: "22. Aplicações para a vida e para a comunidade", kind: "application", confidence: "high", scriptureRefs: ["Êxodo 17:1–16", "Gálatas 6:2", "Hebreus 3:7–12"], body: "1. **Apresente necessidades reais:** a fé não exige fingir que não há sede, cansaço ou dificuldade.\n\n2. **Examine a reação:** uma necessidade legítima pode ser expressa de modo destrutivo; a narrativa chama atenção para a contenda e a exigência de provas.\n\n3. **Lembre-se da fidelidade:** a memória dos atos de Deus ajuda a enfrentar novas crises.\n\n4. **Una oração e responsabilidade:** buscar a Deus não elimina a necessidade de organizar, agir e servir.\n\n5. **Sustente quem está cansado:** Arão e Hur oferecem apoio concreto.\n\n6. **Valorize a cooperação:** pessoas diferentes servem de formas complementares.\n\n7. **Proteja os vulneráveis:** Deuteronômio 25 destaca a injustiça de atacar os cansados.\n\n8. **Evite aplicações violentas:** o conflito histórico não legitima perseguição atual." },
+    { id: "exodo-17-cuidados", title: "23. Cuidados exegéticos e pastorais", kind: "caution", confidence: "high", scriptureRefs: ["Êxodo 17:1–16"], body: "- Não trate a falta de água como prova automática de falta de fé ou punição declarada pelo texto.\n- Não use a narrativa para silenciar pessoas em sofrimento.\n- Não transforme vara, rocha ou mãos erguidas em objetos ou técnicas mágicas.\n- Não prometa vitórias automáticas.\n- Não confunda Êxodo 17 com Números 20.\n- Não apresente a localização de Refidim e Horebe como definitivamente estabelecida.\n- Não invente biografia de Hur nem detalhes da batalha.\n- Não use Amaleque para justificar hostilidade contra povos atuais.\n- Reconheça a dificuldade textual de Êxodo 17:16.\n- Diferencie sentido histórico, interpretação canônica e aplicação pastoral." },
+    { id: "exodo-17-resumo", title: "24. Resumo para revisão", kind: "summary", confidence: "high", scriptureRefs: ["Êxodo 17:1–16"], body: "Israel chega a Refidim e enfrenta falta de água. O povo contende com Moisés e questiona se o Senhor está no meio deles. Moisés clama, e Deus ordena que leve os anciãos e a vara até a rocha em Horebe; a água sai para o povo. O lugar é chamado Massá e Meribá. Depois, Amaleque ataca. Josué conduz os homens ao combate, enquanto Moisés sobe ao monte. Quando Moisés se cansa, Arão e Hur sustentam suas mãos. Josué derrota Amaleque. Deus ordena que o acontecimento seja registrado e transmitido a Josué; Moisés constrói um altar chamado O Senhor é minha bandeira.\n\n**Ideia central:** o Senhor sustenta seu povo e o forma para confiar, agir com responsabilidade, cooperar e preservar a memória de seus atos." },
+    { id: "exodo-17-exercicios", title: "25. Exercícios de fixação e aprofundamento", kind: "exercise", confidence: "high", scriptureRefs: ["Êxodo 17:1–16", "Deuteronômio 25:17–19", "1 Coríntios 10:1–4"], body: "**1 — Estrutura:** divida o capítulo em duas unidades e indique os versículos.\n\n**2 — Observação:** liste as falas e ações de Deus, Moisés, povo, Josué, Arão e Hur.\n\n**3 — Contexto:** compare Êxodo 17:1–7 com Êxodo 16.\n\n**4 — Interpretação:** explique por que Massá e Meribá se tornam nomes de memória.\n\n**5 — Referência cruzada:** mostre o que Deuteronômio 25:17–19 acrescenta sobre Amaleque.\n\n**6 — Liderança:** descreva a contribuição de Josué, Moisés, Arão e Hur.\n\n**7 — Cristo:** compare Êxodo 17 com 1 Coríntios 10:1–4 e João 7:37–39, distinguindo o episódio original da leitura do Novo Testamento.\n\n**8 — Aplicação:** escreva uma orientação sobre apoiar pessoas cansadas sem prometer vitória automática.\n\n**9 — Síntese:** resuma a mensagem do capítulo em até cinco linhas." },
+    { id: "exodo-17-oficina", title: "26. Oficina do pregador — Preparando uma mensagem expositiva", kind: "sermon", confidence: "high", scriptureRefs: ["Êxodo 17:1–16"], body: "**Tema:** O Senhor sustenta seu povo no deserto e na batalha.\n\n**Proposição:** Deus provê e forma uma comunidade que precisa confiar, agir com responsabilidade e sustentar uns aos outros.\n\n**Esboço:**\n1. **A crise revela a pergunta sobre a presença de Deus (vv. 1–3):** explique a falta de água e a reação do povo.\n2. **O Senhor responde e preserva a memória (vv. 4–7):** apresente o clamor, a instrução e os nomes Massá e Meribá.\n3. **A agressão exige ação organizada (vv. 8–10):** mostre a tarefa de Josué e a posição de Moisés.\n4. **A cooperação sustenta a tarefa (vv. 11–13):** destaque o apoio de Arão e Hur.\n5. **A memória aponta para o Senhor (vv. 14–16):** explique o registro, o altar e a dificuldade textual do último versículo.\n\n**Conexão canônica:** use 1 Coríntios 10:1–4 e João 4:10–14 com atenção ao modo como o Novo Testamento retoma a imagem da água.\n\n**Cuidado pastoral:** não prometa vitórias automáticas, não culpabilize pessoas em sofrimento e não use o episódio para justificar violência atual." },
+    { id: "exodo-17-oracao", title: "27. Oração final", kind: "prayer", confidence: "high", scriptureRefs: ["Êxodo 17:1–16"], body: "Senhor Deus, obrigado porque tua Palavra nos ensina a confiar em ti durante a caminhada. Dá-nos humildade para apresentar nossas necessidades sem endurecer o coração, coragem para agir com responsabilidade e amor para sustentar quem está cansado. Livra-nos da superstição, da violência e de aplicações que distorcem as Escrituras. Ensina-nos a preservar a memória de tua fidelidade e a conhecer mais profundamente Jesus Cristo. Amém." }
   ]
 };
