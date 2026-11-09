@@ -158,6 +158,8 @@ export const genesis6Study: StudyContent = {
       kind: "reflection",
       confidence: "probable",
       body: "**Medite:** Tenho me acostumado com atitudes violentas ou injustas? O que meus pensamentos e escolhas revelam sobre meu coração? Dependo da graça de Deus ou confio em mérito próprio? Minha obediência é constante mesmo quando exige perseverança? Tenho humildade para reconhecer quando uma passagem bíblica é debatida?\n\n**Resumo do capítulo:** Gênesis 6 descreve a maldade e a violência que corromperam a terra, anuncia o juízo divino, destaca que Noé encontrou graça e apresenta as instruções para a arca e a preservação da vida.\n\n**Oração:** Senhor, dá-nos um coração que ame a justiça e rejeite a violência. Ensina-nos a depender da tua graça, andar contigo e obedecer à tua Palavra. Dá-nos humildade para estudar com responsabilidade e coragem para viver o que aprendemos. Que nossa esperança esteja em Jesus Cristo. Amém.",
+    }    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 6:1-22"], body: "**Filhos de Deus:** expressão cuja identificação é debatida entre intérpretes. **Nephilim:** termo antigo cuja identificação exata é discutida; evitar afirmações dogmáticas além do texto. **Corrupção:** descrição da violência e perversidade que enchem a terra. **Aliança:** compromisso que Deus estabelece com Noé. **Arca:** embarcação construída segundo as instruções recebidas."
     }
   ]
 };
