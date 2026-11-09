@@ -134,6 +134,13 @@ export const getStudyContent = createServerFn({ method: "POST" })
     }
 
     if (managedData?.status === "archived") throw new Error("Este estudo foi arquivado.");
+
+    // Conteúdo curado e revisado é a fonte canônica dos estudos capítulo a capítulo.
+    // Registros publicados antigos em managed_content não podem sobrescrever esses estudos
+    // com versões resumidas ou desatualizadas; conteúdo gerenciado continua valendo para
+    // estudos que ainda não possuem uma versão curada local.
+    if (curated) return curated;
+
     const published = managedData?.status === "published";
     if (published && managedData?.content) return managedData.content as unknown as StudyContent;
     const metadata = published && managedData?.metadata && typeof managedData.metadata === "object"
