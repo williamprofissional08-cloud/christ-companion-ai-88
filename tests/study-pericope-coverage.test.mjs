@@ -18,8 +18,10 @@ async function readContent(path) {
 
 function extractSectionReferences(source) {
   const arrays = [...source.matchAll(/["']?scriptureRefs["']?\s*:\s*\[([\s\S]*?)\]/g)];
-  return arrays.flatMap(([, block]) =>
-    [...block.matchAll(/["'\`]([^"'\`]+)["'\`]/g)].map(([, reference]) => reference.trim()),
+  return arrays.flatMap(([, section]) =>
+    [...section.matchAll(/["'`]([^"'`]+)["'`]/g)].flatMap(([, reference]) =>
+      reference.split(";").map((part) => part.trim()).filter(Boolean),
+    ),
   );
 }
 
