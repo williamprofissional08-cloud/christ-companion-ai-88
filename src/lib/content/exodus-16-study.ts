@@ -65,10 +65,7 @@ export const exodus16Study: StudyContent = {
     {
       "id": "exodo-16-1",
       "title": "1. A murmuração no deserto (16:1–3),O povo reclama por comida e idealiza a vida no Egito. A memória da escravidão é seletiva: lembra alimento, mas omite opressão e sofrimento.",
-      "body": [
-        "A promessa de pão do céu (16:4–8)",
-        "Deus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor."
-      ],
+      "body": "A promessa de pão do céu (16:4–8)\n\nDeus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor.",
       "kind": "observation",
       "confidence": "high",
       "scriptureRefs": [
@@ -78,10 +75,7 @@ export const exodus16Study: StudyContent = {
     {
       "id": "exodo-16-2",
       "title": "2. A murmuração no deserto (16:1–3),O povo reclama por comida e idealiza a vida no Egito. A memória da escravidão é seletiva: lembra alimento, mas omite opressão e sofrimento.",
-      "body": [
-        "A promessa de pão do céu (16:4–8)",
-        "Deus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor."
-      ],
+      "body": "A promessa de pão do céu (16:4–8)\n\nDeus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -91,10 +85,7 @@ export const exodus16Study: StudyContent = {
     {
       "id": "exodo-16-3",
       "title": "3. A murmuração no deserto (16:1–3),O povo reclama por comida e idealiza a vida no Egito. A memória da escravidão é seletiva: lembra alimento, mas omite opressão e sofrimento.",
-      "body": [
-        "A promessa de pão do céu (16:4–8)",
-        "Deus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor."
-      ],
+      "body": "A promessa de pão do céu (16:4–8)\n\nDeus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -104,10 +95,7 @@ export const exodus16Study: StudyContent = {
     {
       "id": "exodo-16-4",
       "title": "4. A murmuração no deserto (16:1–3),O povo reclama por comida e idealiza a vida no Egito. A memória da escravidão é seletiva: lembra alimento, mas omite opressão e sofrimento.",
-      "body": [
-        "A promessa de pão do céu (16:4–8)",
-        "Deus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor."
-      ],
+      "body": "A promessa de pão do céu (16:4–8)\n\nDeus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -117,10 +105,7 @@ export const exodus16Study: StudyContent = {
     {
       "id": "exodo-16-5",
       "title": "5. A murmuração no deserto (16:1–3),O povo reclama por comida e idealiza a vida no Egito. A memória da escravidão é seletiva: lembra alimento, mas omite opressão e sofrimento.",
-      "body": [
-        "A promessa de pão do céu (16:4–8)",
-        "Deus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor."
-      ],
+      "body": "A promessa de pão do céu (16:4–8)\n\nDeus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -130,10 +115,7 @@ export const exodus16Study: StudyContent = {
     {
       "id": "exodo-16-6",
       "title": "6. A murmuração no deserto (16:1–3),O povo reclama por comida e idealiza a vida no Egito. A memória da escravidão é seletiva: lembra alimento, mas omite opressão e sofrimento.",
-      "body": [
-        "A promessa de pão do céu (16:4–8)",
-        "Deus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor."
-      ],
+      "body": "A promessa de pão do céu (16:4–8)\n\nDeus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -143,10 +125,7 @@ export const exodus16Study: StudyContent = {
     {
       "id": "exodo-16-7",
       "title": "7. A murmuração no deserto (16:1–3),O povo reclama por comida e idealiza a vida no Egito. A memória da escravidão é seletiva: lembra alimento, mas omite opressão e sofrimento.",
-      "body": [
-        "A promessa de pão do céu (16:4–8)",
-        "Deus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor."
-      ],
+      "body": "A promessa de pão do céu (16:4–8)\n\nDeus anuncia provisão diária e usa a coleta como prova de confiança e obediência. Moisés e Arão esclarecem que a murmuração, em última análise, é dirigida contra o Senhor.",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
