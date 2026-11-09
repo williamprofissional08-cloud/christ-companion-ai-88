@@ -64,10 +64,7 @@ export const exodus19Study: StudyContent = {
     {
       "id": "exodo-19-1",
       "title": "1. A chegada ao Sinai (19:1–2),Israel acampa diante do monte. O local se torna o cenário da formação da identidade nacional e da aliança.",
-      "body": [
-        "A memória da graça que precede a aliança (19:3–4)",
-        "Deus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança."
-      ],
+      "body": "A memória da graça que precede a aliança (19:3–4)\n\nDeus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança.",
       "kind": "observation",
       "confidence": "high",
       "scriptureRefs": [
@@ -77,10 +74,7 @@ export const exodus19Study: StudyContent = {
     {
       "id": "exodo-19-2",
       "title": "2. A chegada ao Sinai (19:1–2),Israel acampa diante do monte. O local se torna o cenário da formação da identidade nacional e da aliança.",
-      "body": [
-        "A memória da graça que precede a aliança (19:3–4)",
-        "Deus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança."
-      ],
+      "body": "A memória da graça que precede a aliança (19:3–4)\n\nDeus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -90,10 +84,7 @@ export const exodus19Study: StudyContent = {
     {
       "id": "exodo-19-3",
       "title": "3. A chegada ao Sinai (19:1–2),Israel acampa diante do monte. O local se torna o cenário da formação da identidade nacional e da aliança.",
-      "body": [
-        "A memória da graça que precede a aliança (19:3–4)",
-        "Deus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança."
-      ],
+      "body": "A memória da graça que precede a aliança (19:3–4)\n\nDeus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -103,10 +94,7 @@ export const exodus19Study: StudyContent = {
     {
       "id": "exodo-19-4",
       "title": "4. A chegada ao Sinai (19:1–2),Israel acampa diante do monte. O local se torna o cenário da formação da identidade nacional e da aliança.",
-      "body": [
-        "A memória da graça que precede a aliança (19:3–4)",
-        "Deus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança."
-      ],
+      "body": "A memória da graça que precede a aliança (19:3–4)\n\nDeus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -116,10 +104,7 @@ export const exodus19Study: StudyContent = {
     {
       "id": "exodo-19-5",
       "title": "5. A chegada ao Sinai (19:1–2),Israel acampa diante do monte. O local se torna o cenário da formação da identidade nacional e da aliança.",
-      "body": [
-        "A memória da graça que precede a aliança (19:3–4)",
-        "Deus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança."
-      ],
+      "body": "A memória da graça que precede a aliança (19:3–4)\n\nDeus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -129,10 +114,7 @@ export const exodus19Study: StudyContent = {
     {
       "id": "exodo-19-6",
       "title": "6. A chegada ao Sinai (19:1–2),Israel acampa diante do monte. O local se torna o cenário da formação da identidade nacional e da aliança.",
-      "body": [
-        "A memória da graça que precede a aliança (19:3–4)",
-        "Deus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança."
-      ],
+      "body": "A memória da graça que precede a aliança (19:3–4)\n\nDeus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -142,10 +124,7 @@ export const exodus19Study: StudyContent = {
     {
       "id": "exodo-19-7",
       "title": "7. A chegada ao Sinai (19:1–2),Israel acampa diante do monte. O local se torna o cenário da formação da identidade nacional e da aliança.",
-      "body": [
-        "A memória da graça que precede a aliança (19:3–4)",
-        "Deus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança."
-      ],
+      "body": "A memória da graça que precede a aliança (19:3–4)\n\nDeus recorda a libertação e compara seu cuidado ao de uma águia que leva os filhotes. A iniciativa divina vem antes das exigências da aliança.",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
