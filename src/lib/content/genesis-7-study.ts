@@ -160,6 +160,11 @@ export const genesis7Study: StudyContent = {
       confidence: "high",
       scriptureRefs: ["Gênesis 7:1-24"],
       body: "Responda com suas próprias palavras, consultando o texto bíblico:\n\n1. Resuma a sequência de Gênesis 7 em cinco etapas.\n2. Explique a relação entre graça e obediência na história de Noé.\n3. Diferencie os sete dias, os quarenta dias de chuva e os cento e cinquenta dias de prevalência das águas.\n4. Explique a importância de o Senhor fechar a porta da arca.\n5. O que a imagem das fontes do abismo e das comportas dos céus comunica no contexto do relato?\n6. Apresente, com respeito, as duas principais posições sobre a extensão do dilúvio e os limites de cada conclusão.\n7. Como Mateus 24 e Hebreus 11 utilizam a história de Noé?\n8. Prepare uma frase que resuma a mensagem central do capítulo sem acrescentar especulações.\n\n**Critério de avaliação:** uma boa resposta identifica o que o texto afirma, explica o contexto, reconhece questões debatidas e evita transformar opinião pessoal em afirmação bíblica.",
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 7:1-24"], body: "1. Como Noé responde às instruções de Deus? 2. O que o capítulo informa sobre a entrada na arca? 3. Como são descritas as águas e a duração do dilúvio? 4. Qual a função da repetição de que Noé fez conforme Deus ordenara? 5. O que o texto afirma sobre a destruição da vida fora da arca? **Atividade:** construa uma sequência dos acontecimentos com as referências dos versículos."
+    }
+    ,{
+      id: "preparacao-mensagem", title: "Preparação de ensino ou mensagem bíblica", kind: "sermon", confidence: "high", scriptureRefs: ["Gênesis 7:1-24"], body: "**Tema:** Deus julga a violência e preserva a vida segundo sua palavra. **Movimentos:** (1) entrada na arca e obediência (vv. 1-10); (2) início do dilúvio (vv. 11-16); (3) águas, juízo e preservação (vv. 17-24). **Cuidado:** não usar o relato para afirmar que toda catástrofe atual é juízo específico contra determinadas pessoas. **Aplicação:** levar a sério a justiça de Deus e responder com obediência."
     }
   ]
 };
