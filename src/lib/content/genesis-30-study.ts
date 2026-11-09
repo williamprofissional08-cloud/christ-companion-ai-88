@@ -322,6 +322,38 @@ A mensagem deve ser ensinada com compaixão, honestidade e atenção ao contexto
       kind: "summary",
       confidence: "high",
       body: "Senhor, dá-nos sabedoria para compreender tua Palavra sem distorcê-la. Ensina-nos a acolher quem sofre, rejeitar rivalidades e injustiças e agir com honestidade em nossas relações. Que não usemos a Bíblia para impor culpa ou prometer aquilo que ela não promete. Ajuda-nos a confiar em tua providência e a refletir o caráter de Cristo em nossa família, trabalho e comunidade. Amém."
+    },
+    {
+      id: "metodo-exegese",
+      title: "25. Método de estudo e exegese de Gênesis 30",
+      kind: "method",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 30:1–43"],
+      body: "Divida o capítulo em quatro movimentos: disputa por filhos e nascimento dos filhos de Bila e Zilpa (vv. 1–13); mandrágoras e nascimentos de Issacar, Zebulom e Diná (vv. 14–21); nascimento de José (vv. 22–24); negociação dos rebanhos (vv. 25–43). Observe quem fala, quem decide e quem sofre as consequências. Compare as explicações dos nomes com o que o narrador afirma sobre a ação de Deus. Investigue o contexto das servas, das mandrágoras e da remuneração pastoril sem transformar costumes antigos em mandamentos. Separe observação textual, contexto histórico, interpretação, questões debatidas e aplicação. Leia Gênesis 31:4–13 para acompanhar a interpretação posterior de Jacó, sem inventar explicação científica que Gênesis 30 não fornece."
+    },
+    {
+      id: "preparacao-mensagem",
+      title: "26. Preparação de mensagem expositiva",
+      kind: "sermon",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 30:1–43","Gênesis 31:4–13"],
+      body: "**Tema:** Deus conduz sua promessa em meio a relações humanas quebradas.\n\n**Proposição:** A providência de Deus acompanha uma família marcada por rivalidade e exploração, mas não transforma práticas injustas em modelos.\n\n**Estrutura:** (1) A dor e a competição revelam uma família ferida (vv. 1–13); (2) crenças populares e barganhas não controlam a ação de Deus (vv. 14–24); (3) o trabalho exige acordos claros e justiça (vv. 25–36); (4) a prosperidade narrada não é fórmula universal (vv. 37–43).\n\n**Cuidados:** não culpe pessoas que enfrentam infertilidade; não prometa gravidez; não justifique poligamia ou uso de servas; não apresente mandrágoras como tratamento comprovado; não ensine as varas como técnica genética; não use o crescimento dos rebanhos como garantia de riqueza.\n\n**Conclusão cristocêntrica:** os filhos de Jacó integram a formação de Israel, povo da história em que Jesus viria. A continuidade da promessa demonstra a fidelidade de Deus, não a aprovação de toda conduta dos personagens."
+    },
+    {
+      id: "glossario-termos",
+      title: "27. Glossário de termos, pessoas e conceitos",
+      kind: "glossary",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 30:1–43"],
+      body: "**Bila:** serva de Raquel, entregue a Jacó no contexto da disputa por descendência. **Zilpa:** serva de Lia. **Dã e Naftali:** filhos de Jacó por meio de Bila. **Gade e Aser:** filhos por meio de Zilpa. **Issacar e Zebulom:** filhos de Lia. **Diná:** filha de Lia. **José:** filho de Raquel, cujo nascimento prepara os capítulos seguintes. **Mandrágoras:** plantas conhecidas no mundo antigo e associadas em crenças populares à fertilidade; o texto não comprova sua eficácia. **Rebanho:** conjunto de animais que constituía riqueza e remuneração no contexto pastoril. **Pelagem malhada ou salpicada:** padrões usados para definir os animais que caberiam a Jacó no acordo."
+    },
+    {
+      id: "avaliacao-revisao",
+      title: "28. Revisão e avaliação do aprendizado",
+      kind: "assessment",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 30:1–43"],
+      body: "**Retome o texto:** (1) Por que Raquel estava angustiada? (2) Quais filhos nasceram de Bila e Zilpa? (3) O que as mandrágoras revelam sobre a relação das irmãs? (4) O que o narrador afirma sobre a ação de Deus em favor de Lia e Raquel? (5) Por que José é importante? (6) Como Jacó negocia sua remuneração? (7) O que o texto afirma — e não afirma — sobre as varas descascadas?\n\n**Exercício:** escolha Gênesis 30:1–13, 14–24 ou 25–43. Registre o que o narrador afirma, o que as personagens dizem, o contexto histórico e uma aplicação responsável. Compare a seção final com Gênesis 31:4–13.\n\n**Critério de aprendizagem:** distinguir descrição de aprovação, explicar os movimentos do capítulo, reconhecer limites das conclusões sobre mandrágoras e reprodução animal e formular aplicações compassivas e justas."
     }
   ]
 };
