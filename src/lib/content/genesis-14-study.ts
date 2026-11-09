@@ -32,7 +32,7 @@ export const genesis14Study: StudyContent = {
     "Hebreus 7:1–28",
     "Deuteronômio 20:1–4",
     "1 Samuel 30:1–20",
-    "Provérbios 救",
+    "Provérbios 10:9",
     "Mateus 5:9",
     "Lucas 19:8",
     "1 Timóteo 6:6–10"
