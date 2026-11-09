@@ -99,6 +99,29 @@ Para a comunidade cristã, o capítulo ensina a usar capacidades com humildade, 
     { id: "esquecimento", title: "12. O copeiro se esquece de José (40:23)", kind: "pastoral", confidence: "high", scriptureRefs: ["Gênesis 40:23"], body: "Apesar de ter sido ajudado, o copeiro não se lembra de José e não fala dele a Faraó. O capítulo termina sem libertação. A demora não é explicada em todos os seus aspectos, mas a continuação mostrará que José ainda permanecerá preso por um período. A narrativa permite reconhecer a dor do esquecimento sem afirmar que Deus o abandonou." },
     { id: "sonhos-e-discernimento", title: "13. Sonhos, revelação e prudência", kind: "theological", confidence: "high", scriptureRefs: ["Gênesis 40:8", "Deuteronômio 18:9–14", "Daniel 2:27–30"], body: "José atribui a interpretação a Deus. Esse relato não autoriza a prática de adivinhação nem a pretensão de decifrar automaticamente sonhos contemporâneos. A Escritura distingue a revelação de Deus de técnicas humanas de controle do futuro. Aplicações atuais devem ser prudentes, submetidas ao ensino bíblico e livres de manipulação espiritual." },
     { id: "espera", title: "14. A espera não significa abandono", kind: "pastoral", confidence: "probable", scriptureRefs: ["Gênesis 39:21–23", "Gênesis 40:14–15, 23", "Salmo 105:17–19"], body: "José pede ajuda, mas é esquecido. A narrativa não apresenta a espera como algo fácil nem promete que toda injustiça será resolvida rapidamente. A fidelidade de Deus deve ser compreendida pelo conjunto da história e pelo caráter revelado nas Escrituras, não por prazos que o texto não estabelece." },
-    { id: "ponte-cap41", title: "15. O capítulo prepara a chegada de Faraó", kind: "canonical", confidence: "high", scriptureRefs: ["Gênesis 40:23", "Gênesis 41:1–14"], body: "O esquecimento do copeiro cria a situação que será revertida quando Faraó tiver sonhos. O homem que não falou de José antes será o elo que permitirá sua apresentação ao rei. Essa ligação faz parte da construção narrativa; não deve ser convertida em promessa automática de promoção para toda pessoa que espera." }
+    { id: "ponte-cap41", title: "15. O capítulo prepara a chegada de Faraó", kind: "canonical", confidence: "high", scriptureRefs: ["Gênesis 40:23", "Gênesis 41:1–14"], body: "O esquecimento do copeiro cria a situação que será revertida quando Faraó tiver sonhos. O homem que não falou de José antes será o elo que permitirá sua apresentação ao rei. Essa ligação faz parte da construção narrativa; não deve ser convertida em promessa automática de promoção para toda pessoa que espera." }    ,{
+      id: "glossario-didatico",
+      title: "Glossário e conceitos importantes",
+      kind: "glossary",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 40:1-23"],
+      body: "**Copeiro:** oficial responsável pela bebida do rei, função de confiança na corte. **Padeiro:** oficial ligado à preparação dos alimentos reais. **Interpretação de sonhos:** José declara que a interpretação pertence a Deus. **Três dias:** período que aparece nos sonhos e em seu cumprimento. **Esquecimento:** o copeiro não se lembra de José após ser restaurado."
+    }
+    ,{
+      id: "exercicio-aprendizagem",
+      title: "Exercícios de compreensão e interpretação",
+      kind: "exercise",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 40:1-23"],
+      body: "1. Por que o copeiro e o padeiro foram presos? 2. Como José reage à tristeza deles? 3. A quem José atribui a interpretação? 4. O que ocorre com cada oficial depois de três dias? 5. Qual o efeito narrativo do esquecimento do copeiro? **Atividade:** faça uma tabela com sonho, interpretação, cumprimento e versículos, sem acrescentar símbolos não explicados pelo texto."
+    }
+    ,{
+      id: "preparacao-mensagem",
+      title: "Preparação de ensino ou mensagem bíblica",
+      kind: "sermon",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 40:1-23"],
+      body: "**Tema:** servir com fidelidade enquanto a resposta ainda não chega. **Proposição:** mesmo preso e esquecido, José reconhece que a interpretação pertence a Deus e serve os outros. **Movimentos:** (1) prisão e sonhos (vv. 1-8); (2) interpretações (vv. 9-19); (3) cumprimento e esquecimento (vv. 20-23). **Cuidado:** não transformar o episódio em método universal de interpretação de sonhos. **Aplicação:** usar dons com humildade e perseverar sem promessas fáceis."
+    }
   ]
 };
