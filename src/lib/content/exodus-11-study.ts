@@ -54,10 +54,7 @@ export const exodus11Study: StudyContent = {
     {
       "id": "exodo-11-1",
       "title": "1. A palavra final antes da Páscoa (11:1–3),Deus anuncia mais uma praga e comunica que, depois dela, Faraó deixará o povo partir. O favor concedido a Israel entre os egípcios e a consideração por Moisés mostram a inversão da condição de escravidão.",
-      "body": [
-        "O anúncio da morte dos primogênitos (11:4–6)",
-        "A declaração alcança desde o primogênito de Faraó até o da serva e os animais. O grande clamor contrasta com a segurança anunciada para Israel. O texto descreve um juízo coletivo e severo, que deve ser interpretado no contexto da narrativa de opressão e das repetidas recusas de Faraó."
-      ],
+      "body": "O anúncio da morte dos primogênitos (11:4–6)\n\nA declaração alcança desde o primogênito de Faraó até o da serva e os animais. O grande clamor contrasta com a segurança anunciada para Israel. O texto descreve um juízo coletivo e severo, que deve ser interpretado no contexto da narrativa de opressão e das repetidas recusas de Faraó.",
       "kind": "observation",
       "confidence": "high",
       "scriptureRefs": [
@@ -67,10 +64,7 @@ export const exodus11Study: StudyContent = {
     {
       "id": "exodo-11-2",
       "title": "2. A palavra final antes da Páscoa (11:1–3),Deus anuncia mais uma praga e comunica que, depois dela, Faraó deixará o povo partir. O favor concedido a Israel entre os egípcios e a consideração por Moisés mostram a inversão da condição de escravidão.",
-      "body": [
-        "O anúncio da morte dos primogênitos (11:4–6)",
-        "A declaração alcança desde o primogênito de Faraó até o da serva e os animais. O grande clamor contrasta com a segurança anunciada para Israel. O texto descreve um juízo coletivo e severo, que deve ser interpretado no contexto da narrativa de opressão e das repetidas recusas de Faraó."
-      ],
+      "body": "O anúncio da morte dos primogênitos (11:4–6)\n\nA declaração alcança desde o primogênito de Faraó até o da serva e os animais. O grande clamor contrasta com a segurança anunciada para Israel. O texto descreve um juízo coletivo e severo, que deve ser interpretado no contexto da narrativa de opressão e das repetidas recusas de Faraó.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -80,10 +74,7 @@ export const exodus11Study: StudyContent = {
     {
       "id": "exodo-11-3",
       "title": "3. A palavra final antes da Páscoa (11:1–3),Deus anuncia mais uma praga e comunica que, depois dela, Faraó deixará o povo partir. O favor concedido a Israel entre os egípcios e a consideração por Moisés mostram a inversão da condição de escravidão.",
-      "body": [
-        "O anúncio da morte dos primogênitos (11:4–6)",
-        "A declaração alcança desde o primogênito de Faraó até o da serva e os animais. O grande clamor contrasta com a segurança anunciada para Israel. O texto descreve um juízo coletivo e severo, que deve ser interpretado no contexto da narrativa de opressão e das repetidas recusas de Faraó."
-      ],
+      "body": "O anúncio da morte dos primogênitos (11:4–6)\n\nA declaração alcança desde o primogênito de Faraó até o da serva e os animais. O grande clamor contrasta com a segurança anunciada para Israel. O texto descreve um juízo coletivo e severo, que deve ser interpretado no contexto da narrativa de opressão e das repetidas recusas de Faraó.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -93,10 +84,7 @@ export const exodus11Study: StudyContent = {
     {
       "id": "exodo-11-4",
       "title": "4. A palavra final antes da Páscoa (11:1–3),Deus anuncia mais uma praga e comunica que, depois dela, Faraó deixará o povo partir. O favor concedido a Israel entre os egípcios e a consideração por Moisés mostram a inversão da condição de escravidão.",
-      "body": [
-        "O anúncio da morte dos primogênitos (11:4–6)",
-        "A declaração alcança desde o primogênito de Faraó até o da serva e os animais. O grande clamor contrasta com a segurança anunciada para Israel. O texto descreve um juízo coletivo e severo, que deve ser interpretado no contexto da narrativa de opressão e das repetidas recusas de Faraó."
-      ],
+      "body": "O anúncio da morte dos primogênitos (11:4–6)\n\nA declaração alcança desde o primogênito de Faraó até o da serva e os animais. O grande clamor contrasta com a segurança anunciada para Israel. O texto descreve um juízo coletivo e severo, que deve ser interpretado no contexto da narrativa de opressão e das repetidas recusas de Faraó.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -106,10 +94,7 @@ export const exodus11Study: StudyContent = {
     {
       "id": "exodo-11-5",
       "title": "5. A palavra final antes da Páscoa (11:1–3),Deus anuncia mais uma praga e comunica que, depois dela, Faraó deixará o povo partir. O favor concedido a Israel entre os egípcios e a consideração por Moisés mostram a inversão da condição de escravidão.",
-      "body": [
-        "O anúncio da morte dos primogênitos (11:4–6)",
-        "A declaração alcança desde o primogênito de Faraó até o da serva e os animais. O grande clamor contrasta com a segurança anunciada para Israel. O texto descreve um juízo coletivo e severo, que deve ser interpretado no contexto da narrativa de opressão e das repetidas recusas de Faraó."
-      ],
+      "body": "O anúncio da morte dos primogênitos (11:4–6)\n\nA declaração alcança desde o primogênito de Faraó até o da serva e os animais. O grande clamor contrasta com a segurança anunciada para Israel. O texto descreve um juízo coletivo e severo, que deve ser interpretado no contexto da narrativa de opressão e das repetidas recusas de Faraó.",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
