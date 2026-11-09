@@ -940,6 +940,39 @@ export type Database = {
           },
         ]
       }
+      managed_content: {
+        Row: {
+          id: string
+          kind: string
+          slug: string
+          metadata: Json
+          content: Json | null
+          status: Database["public"]["Enums"]["content_status"]
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          kind: string
+          slug: string
+          metadata?: Json
+          content?: Json | null
+          status?: Database["public"]["Enums"]["content_status"]
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          kind?: string
+          slug?: string
+          metadata?: Json
+          content?: Json | null
+          status?: Database["public"]["Enums"]["content_status"]
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       lesson_media: {
         Row: {
           created_at: string
@@ -1624,6 +1657,11 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      admin_question_has_answers: { Args: { _question_id: string }; Returns: boolean }
+      consume_ai_rate_limit: {
+        Args: { p_endpoint: string }
+        Returns: { allowed: boolean; retry_after_seconds: number }[]
+      }
       has_premium: { Args: { _user_id: string }; Returns: boolean }
       has_role: {
         Args: {
