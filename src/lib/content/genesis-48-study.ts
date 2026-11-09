@@ -238,6 +238,14 @@ export const genesis48Study: StudyContent = {
       "scriptureRefs": [
         "Gênesis 48:22"
       ]
+    }    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 48:1-22"], body: "**Adoção/filiação:** Jacó recebe Efraim e Manassés como seus, conferindo-lhes lugar entre as tribos. **Primogenitura:** posição tradicional do filho mais velho, que não determina automaticamente a ordem da bênção. **Mão direita e esquerda:** gestos simbólicos da bênção patriarcal. **Bênção:** pronunciamento que invoca a fidelidade de Deus sobre as gerações. **Promessa da terra:** herança reafirmada por Jacó."
+    }
+    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 48:1-22"], body: "1. Por que José leva seus filhos até Jacó? 2. Como Jacó incorpora Efraim e Manassés à família? 3. Por que cruza as mãos? 4. Como José reage à ordem da bênção? 5. Que promessas Jacó recorda? **Atividade:** compare a bênção de Efraim e Manassés com a história de primogenitura em Gênesis."
+    }
+    ,{
+      id: "preparacao-mensagem", title: "Preparação de ensino ou mensagem bíblica", kind: "sermon", confidence: "high", scriptureRefs: ["Gênesis 48:1-22"], body: "**Tema:** a bênção de Deus não está presa às expectativas humanas. **Movimentos:** (1) Jacó recorda a promessa de Deus (vv. 1-7); (2) recebe Efraim e Manassés (vv. 8-16); (3) abençoa o mais novo antes do mais velho (vv. 17-20); (4) reafirma a esperança da família (vv. 21-22). **Cuidado:** não transformar a inversão da ordem em fórmula para todas as famílias. **Aplicação:** transmitir a fé e reconhecer a liberdade de Deus."
     }
   ]
 };
