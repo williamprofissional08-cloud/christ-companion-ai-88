@@ -60,10 +60,7 @@ export const exodus17Study: StudyContent = {
     {
       "id": "exodo-17-1",
       "title": "1. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": [
-        "Moisés clama e Deus dá instruções (17:4–6)",
-        "Moisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto."
-      ],
+      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
       "kind": "observation",
       "confidence": "high",
       "scriptureRefs": [
@@ -73,10 +70,7 @@ export const exodus17Study: StudyContent = {
     {
       "id": "exodo-17-2",
       "title": "2. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": [
-        "Moisés clama e Deus dá instruções (17:4–6)",
-        "Moisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto."
-      ],
+      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -86,10 +80,7 @@ export const exodus17Study: StudyContent = {
     {
       "id": "exodo-17-3",
       "title": "3. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": [
-        "Moisés clama e Deus dá instruções (17:4–6)",
-        "Moisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto."
-      ],
+      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -99,10 +90,7 @@ export const exodus17Study: StudyContent = {
     {
       "id": "exodo-17-4",
       "title": "4. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": [
-        "Moisés clama e Deus dá instruções (17:4–6)",
-        "Moisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto."
-      ],
+      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -112,10 +100,7 @@ export const exodus17Study: StudyContent = {
     {
       "id": "exodo-17-5",
       "title": "5. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": [
-        "Moisés clama e Deus dá instruções (17:4–6)",
-        "Moisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto."
-      ],
+      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
       "kind": "interpretation",
       "confidence": "high",
       "scriptureRefs": [
@@ -125,10 +110,7 @@ export const exodus17Study: StudyContent = {
     {
       "id": "exodo-17-6",
       "title": "6. A falta de água e a contenda (17:1–3),A sede provoca reclamação intensa, e o povo responsabiliza Moisés. A pergunta 'está o Senhor no meio de nós?' revela a tensão entre a experiência presente e a memória dos sinais.",
-      "body": [
-        "Moisés clama e Deus dá instruções (17:4–6)",
-        "Moisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto."
-      ],
+      "body": "Moisés clama e Deus dá instruções (17:4–6)\n\nMoisés teme ser apedrejado e clama ao Senhor. Deus manda levar os anciãos e a vara, prometendo estar diante dele na rocha. A água é provisão divina, não poder autônomo do objeto.",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
