@@ -30,6 +30,78 @@ export const genesis1Study: StudyContent = {
   prayer: "Senhor Deus, Criador dos céus e da terra, ajuda-me a compreender tua Palavra com atenção e humildade. Ensina-me a reconhecer teu poder, valorizar cada pessoa como tua imagem e cuidar da criação com responsabilidade. Que eu conheça mais a ti e a Jesus Cristo, por meio de quem todas as coisas foram feitas. Amém.",
   sections: [
     {
+      id: "leitura-biblica-completa",
+      title: "Leitura bíblica — Gênesis 1:1-31, versículo por versículo",
+      kind: "scripture",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 1:1-31"],
+      body: `**Texto de estudo em tradução livre para linguagem atual, elaborado a partir do texto hebraico.** Não é uma edição oficial de Almeida nem substitui a leitura na tradução bíblica utilizada pelo aluno. A numeração acompanha Gênesis 1.
+
+**1** No princípio, Deus criou os céus e a terra.
+
+**2** A terra estava sem forma e vazia; havia trevas sobre a face do abismo, e o Espírito de Deus pairava sobre as águas.
+
+**3** Deus disse: Haja luz. E houve luz.
+
+**4** Deus viu que a luz era boa e separou a luz das trevas.
+
+**5** Deus chamou à luz Dia e às trevas chamou Noite. Houve tarde e manhã: primeiro dia.
+
+**6** Deus disse: Haja uma expansão entre as águas, para separar águas de águas.
+
+**7** Deus fez a expansão e separou as águas que estavam abaixo dela das águas que estavam acima dela. E assim aconteceu.
+
+**8** Deus chamou à expansão Céus. Houve tarde e manhã: segundo dia.
+
+**9** Deus disse: Ajuntem-se num só lugar as águas que estão debaixo dos céus, e apareça a porção seca. E assim aconteceu.
+
+**10** Deus chamou à porção seca Terra e ao ajuntamento das águas Mares. Deus viu que isso era bom.
+
+**11** Deus disse: Produza a terra vegetação: plantas que deem sementes e árvores frutíferas que produzam fruto com sementes, cada uma segundo sua espécie. E assim aconteceu.
+
+**12** A terra produziu vegetação: plantas que davam sementes segundo suas espécies e árvores que produziam frutos com sementes, cada uma segundo sua espécie. Deus viu que isso era bom.
+
+**13** Houve tarde e manhã: terceiro dia.
+
+**14** Deus disse: Haja luminares na expansão dos céus para separar o dia da noite; que sirvam para marcar tempos determinados, dias e anos.
+
+**15** Que sejam luminares na expansão dos céus para iluminar a terra. E assim aconteceu.
+
+**16** Deus fez os dois grandes luminares: o maior para governar o dia e o menor para governar a noite; fez também as estrelas.
+
+**17** Deus os colocou na expansão dos céus para iluminar a terra,
+
+**18** para governar o dia e a noite e separar a luz das trevas. Deus viu que isso era bom.
+
+**19** Houve tarde e manhã: quarto dia.
+
+**20** Deus disse: Encham-se as águas de seres vivos, e voem as aves sobre a terra, sob a expansão dos céus.
+
+**21** Deus criou os grandes animais marinhos e todos os seres vivos que se movem nas águas, segundo suas espécies, e todas as aves, segundo suas espécies. Deus viu que isso era bom.
+
+**22** Deus os abençoou, dizendo: Sejam fecundos, multipliquem-se e encham as águas dos mares; e multipliquem-se as aves na terra.
+
+**23** Houve tarde e manhã: quinto dia.
+
+**24** Deus disse: Produza a terra seres vivos segundo suas espécies: animais domésticos, animais que rastejam e animais selvagens, cada um segundo sua espécie. E assim aconteceu.
+
+**25** Deus fez os animais selvagens segundo suas espécies, os animais domésticos segundo suas espécies e todos os animais que rastejam sobre a terra segundo suas espécies. Deus viu que isso era bom.
+
+**26** Deus disse: Façamos a humanidade à nossa imagem, conforme a nossa semelhança; que tenha responsabilidade sobre os peixes do mar, as aves dos céus, os animais domésticos, toda a terra e os animais que nela se movem.
+
+**27** Deus criou a humanidade à sua imagem; à imagem de Deus a criou; homem e mulher os criou.
+
+**28** Deus os abençoou e lhes disse: Sejam fecundos, multipliquem-se, encham a terra e cuidem dela; exerçam domínio sobre os peixes do mar, as aves dos céus e todos os animais que se movem sobre a terra.
+
+**29** Deus disse: Dou a vocês todas as plantas que produzem sementes sobre a terra e todas as árvores que dão frutos com sementes; isso servirá de alimento para vocês.
+
+**30** E a todos os animais da terra, às aves dos céus e aos seres que se movem sobre a terra, tudo o que tem vida, dou toda a vegetação verde como alimento. E assim aconteceu.
+
+**31** Deus viu tudo o que havia feito, e era muito bom. Houve tarde e manhã: sexto dia.
+
+**Orientação:** leia também o capítulo diretamente em sua Bíblia. Compare a tradução que você utiliza com esta versão de estudo e observe palavras ou expressões diferentes. As explicações seguintes comentam o texto, mas não substituem a Escritura.`
+    },
+    {
       id: "introducao",
       title: "1. Introdução — O começo de todas as coisas",
       kind: "introduction",
