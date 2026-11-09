@@ -155,6 +155,8 @@ export const genesis5Study: StudyContent = {
       kind: "reflection",
       confidence: "probable",
       body: "**Medite:** Tenho tratado as pessoas como portadoras de dignidade diante de Deus? Estou vivendo apenas contando dias ou caminhando com o Senhor? Minha fé é constante também nas tarefas comuns? Tenho ensinado a Bíblia com honestidade, reconhecendo o que o texto não explica?\n\n**Resumo do capítulo:** Gênesis 5 retoma a criação à imagem de Deus, acompanha a linhagem de Adão por Sete, repete a realidade da morte, destaca Enoque por andar com Deus e apresenta Noé como sinal de esperança de consolo diante do trabalho penoso.\n\n**Oração:** Senhor Deus, ajuda-nos a viver com consciência de que nossos dias estão em tuas mãos. Ensina-nos a respeitar cada pessoa, a caminhar contigo com fidelidade e a ensinar tua Palavra sem distorções. Que nossa esperança diante da morte esteja na ressurreição de Jesus Cristo. Amém."
+    }    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 5:1-32"], body: "**Genealogia:** registro de descendência que conecta gerações. **Imagem e semelhança:** linguagem que retoma a dignidade humana de Gênesis 1. **Enoque:** personagem que anda com Deus e é tomado por Deus segundo a narrativa. **Matusalém:** nome associado à maior idade registrada na genealogia. **Noé:** personagem cujo nascimento encerra a lista e prepara a narrativa seguinte."
     }
   ]
 };
