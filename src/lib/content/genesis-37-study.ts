@@ -106,6 +106,29 @@ Na leitura cristã, a história de José pode ser relacionada ao tema bíblico m
     { id: "engano-jaco", title: "12. A túnica manchada e a mentira (37:31–33)", kind: "observation", confidence: "high", scriptureRefs: ["Gênesis 37:31–33"], body: "Os irmãos matam um bode, molham a túnica de José no sangue e a enviam ao pai, perguntando se a reconhece. Eles não afirmam diretamente que José morreu; deixam Jacó chegar à conclusão de que um animal o devorou. A omissão calculada faz parte do engano. A túnica, antes sinal de favoritismo, torna-se instrumento de fraude." },
     { id: "luto", title: "13. O luto de Jacó (37:34–35)", kind: "pastoral", confidence: "high", scriptureRefs: ["Gênesis 37:34–35"], body: "Jacó rasga suas vestes, veste pano de saco e lamenta profundamente o filho. Seus familiares tentam consolá-lo, mas ele recusa o consolo e afirma que descerá enlutado à sepultura. A narrativa dá espaço à dor sem censurar o choro. Não devemos usar o texto para exigir que pessoas enlutadas escondam a tristeza ou aceitem explicações fáceis." },
     { id: "potifar", title: "14. José é levado ao Egito (37:36)", kind: "observation", confidence: "high", scriptureRefs: ["Gênesis 37:36"], body: "Os midianitas vendem José no Egito a Potifar, oficial de Faraó e comandante da guarda. O capítulo termina sem revelar a saída da crise. A narrativa deixa o leitor diante de uma injustiça aparentemente sem reparação, preparando os acontecimentos dos capítulos 39–50." },
-    { id: "providencia", title: "15. Providência divina e responsabilidade humana", kind: "canonical", confidence: "high", scriptureRefs: ["Gênesis 45:5–8", "Gênesis 50:20"], body: "Gênesis 37 ainda não explica todo o propósito da trajetória de José. Mais tarde, José dirá que Deus o enviou adiante para preservar vidas e reconhecerá que os irmãos intentaram o mal, enquanto Deus conduziu a história para um resultado de bem. A afirmação posterior não absolve os irmãos, não chama a violência de boa e não transforma sofrimento em algo que deva ser desejado. Providência e responsabilidade humana permanecem juntas." }
+    { id: "providencia", title: "15. Providência divina e responsabilidade humana", kind: "canonical", confidence: "high", scriptureRefs: ["Gênesis 45:5–8", "Gênesis 50:20"], body: "Gênesis 37 ainda não explica todo o propósito da trajetória de José. Mais tarde, José dirá que Deus o enviou adiante para preservar vidas e reconhecerá que os irmãos intentaram o mal, enquanto Deus conduziu a história para um resultado de bem. A afirmação posterior não absolve os irmãos, não chama a violência de boa e não transforma sofrimento em algo que deva ser desejado. Providência e responsabilidade humana permanecem juntas." }    ,{
+      id: "glossario-didatico",
+      title: "Glossário e conceitos importantes",
+      kind: "glossary",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 37:1-36"],
+      body: "**Sonho:** elemento narrativo que antecipa conflitos e acontecimentos na história de José. **Túnica especial:** sinal visível do favoritismo de Jacó. **Cisterna:** reservatório usado para abandonar José. **Midiанitas e ismaelitas:** grupos nomeados na narrativa da venda; preserve a terminologia do texto ao comparar traduções."
+    }
+    ,{
+      id: "exercicio-aprendizagem",
+      title: "Exercícios de compreensão e interpretação",
+      kind: "exercise",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 37:1-36"],
+      body: "1. Quais atitudes de Jacó intensificam a tensão? 2. Como os sonhos são recebidos? 3. Organize a progressão entre inveja, conspiração, cisterna e venda. 4. Diferencie a intenção dos irmãos do conhecimento que o leitor possui. 5. O capítulo afirma que Deus aprovou a violência? Justifique. **Atividade:** construa uma linha do tempo e identifique o que cada personagem sabe."
+    }
+    ,{
+      id: "preparacao-mensagem",
+      title: "Preparação de ensino ou mensagem bíblica",
+      kind: "sermon",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 37:1-36"],
+      body: "**Tema:** a violência familiar não apaga a história que Deus conduz. **Proposição:** o capítulo expõe favoritismo, inveja e traição, preparando o desenvolvimento da história de José. **Movimentos:** (1) favoritismo e sonhos (vv. 1-11); (2) conspiração e venda (vv. 12-28); (3) mentira e luto (vv. 29-36). **Cuidado:** não chamar o sofrimento de bom nem usar providência para desculpar agressores. **Aplicação:** rejeitar favoritismo, enfrentar a inveja e proteger vulneráveis."
+    }
   ]
 };
