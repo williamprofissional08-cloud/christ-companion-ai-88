@@ -86,4 +86,25 @@ describe("continuidade dos estudos de Gênesis", () => {
     }
   });
 
+  test("Êxodo 11 a 20 possuem estudos profundos completos e registrados no catálogo canônico", () => {
+    for (let chapter = 11; chapter <= 20; chapter += 1) {
+      const slug = getChapterStudySlug("exodo", chapter);
+      const study = CURATED_STUDIES[slug];
+      assert.equal(slug, `biblia-exodo-cap-${chapter}`);
+      assert.equal(getChapterStudy(slug)?.book.slug, "exodo");
+      assert.equal(getChapterStudy(slug)?.chapter, chapter);
+      assert.equal(study?.depth, "deep");
+      assert.ok((study?.sections?.length ?? 0) >= 9, `Êxodo ${chapter} precisa de pelo menos 9 seções didáticas`);
+      assert.ok((study?.questions?.length ?? 0) >= 10, `Êxodo ${chapter} precisa de pelo menos 10 perguntas`);
+      assert.ok(study?.sections?.some((section) => /método de estudo e exegese/i.test(section.title)));
+      assert.ok(study?.sections?.some((section) => /preparação de mensagem/i.test(section.title)));
+      assert.ok(study?.sections?.some((section) => /glossário/i.test(section.title)));
+      assert.ok(study?.sections?.some((section) => /revisão e avaliação/i.test(section.title)));
+      assert.ok((study?.crossReferences?.length ?? 0) >= 5);
+      assert.ok(Boolean(study?.application?.trim()));
+      assert.ok(Boolean(study?.conclusion?.trim()));
+      assert.ok(Boolean(study?.prayer?.trim()));
+    }
+  });
+
 });
