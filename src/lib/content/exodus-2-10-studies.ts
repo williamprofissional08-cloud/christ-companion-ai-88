@@ -117,3 +117,38 @@ prayer:"Senhor, ajuda-nos a transmitir fielmente tuas obras às próximas geraç
 sections:[{"id":"exodo-10-secao-1","title":"Contexto e observação do texto","body":"Deus explica que os sinais serão contados aos filhos e netos para que as gerações conheçam quem é o Senhor. A memória do êxodo forma a identidade de Israel. A referência ao endurecimento de Faraó deve ser lida junto às decisões repetidas do rei de resistir; a tensão entre soberania divina e responsabilidade humana permanece no relato.","kind":"observation","confidence":"high","scriptureRefs":["Êxodo 10:1-29"]},{"id":"exodo-10-secao-2","title":"Desenvolvimento narrativo","body":"Os gafanhotos devoram o que restou após o granizo. Os servos de Faraó percebem que o Egito está arruinado e pedem que o povo seja liberado. O rei pergunta quem irá; Moisés responde que todos: jovens, idosos, filhos, filhas, rebanhos e gado. Faraó tenta limitar a saída aos homens, preservando controle sobre a comunidade.","kind":"context","confidence":"high","scriptureRefs":["Êxodo 10:1-29"]},{"id":"exodo-10-secao-3","title":"Interpretação teológica","body":"O vento oriental traz os gafanhotos, que cobrem a terra e consomem a vegetação. A praga ameaça a segurança alimentar e a economia do Egito. Faraó confessa que pecou e pede perdão; Moisés intercede, o vento muda e os gafanhotos são lançados ao mar. Quando o alívio chega, o rei volta a endurecer.","kind":"theology","confidence":"high","scriptureRefs":["Êxodo 10:1-29"]},{"id":"exodo-10-secao-4","title":"Questões difíceis e limites do texto","body":"A nona praga traz escuridão densa por três dias. Os egípcios não conseguem ver uns aos outros nem sair de seus lugares, enquanto os israelitas têm luz em suas habitações. O texto não identifica causa física, portanto não se deve transformar hipóteses modernas em afirmações bíblicas. A oposição entre escuridão e luz revela a incapacidade do poder egípcio de controlar o juízo.","kind":"interpretation","confidence":"high","scriptureRefs":["Êxodo 10:1-29"]},{"id":"exodo-10-secao-5","title":"Síntese e ligação com o capítulo seguinte","body":"Faraó permite que o povo vá, mas exige que os rebanhos fiquem. Moisés responde que os animais também são necessários para o culto e que ainda não sabem quais ofertas serão exigidas. Faraó ameaça Moisés e proíbe que volte. A liberdade não pode ser reduzida a uma concessão que retém pessoas ou recursos necessários à obediência.","kind":"synthesis","confidence":"high","scriptureRefs":["Êxodo 10:1-29"]}]
 };
 
+
+const studies: [number, StudyContent][] = [
+  [2, exodus2Study], [3, exodus3Study], [4, exodus4Study],
+  [5, exodus5Study], [6, exodus6Study], [7, exodus7Study],
+  [8, exodus8Study], [9, exodus9Study], [10, exodus10Study],
+];
+for (const [chapter, study] of studies) {
+  study.sections = [
+    ...(study.sections ?? []),
+    {
+      id: `exodo-${chapter}-sintese-teologica`,
+      title: "Leitura teológica: promessa, conflito e fidelidade",
+      kind: "theology",
+      confidence: "high",
+      scriptureRefs: [`Êxodo ${chapter}:1-${chapter === 2 ? 25 : chapter === 3 ? 22 : chapter === 4 ? 31 : chapter === 5 ? 23 : chapter === 6 ? 30 : chapter === 7 ? 25 : chapter === 8 ? 32 : chapter === 9 ? 35 : 29}`],
+      body: `A leitura deste capítulo deve manter juntos o contexto imediato e a continuidade da história do êxodo. A iniciativa pertence ao Senhor, mas as personagens humanas continuam responsáveis por suas escolhas. Não se deve transformar uma observação narrativa em regra universal sem apoio do restante das Escrituras. A promessa divina não apaga a realidade do sofrimento, e a soberania de Deus não torna irrelevantes a justiça, a obediência e a compaixão. Ao ensinar, identifique claramente o que o texto afirma, o que é interpretação e o que é aplicação contemporânea.`
+    },
+    {
+      id: `exodo-${chapter}-oficina-pregador`,
+      title: "Oficina do pregador: estrutura para ensinar o capítulo",
+      kind: "application",
+      confidence: "high",
+      scriptureRefs: [`Êxodo ${chapter}:1-${chapter === 2 ? 25 : chapter === 3 ? 22 : chapter === 4 ? 31 : chapter === 5 ? 23 : chapter === 6 ? 30 : chapter === 7 ? 25 : chapter === 8 ? 32 : chapter === 9 ? 35 : 29}`],
+      body: `**Objetivo:** conduzir o aluno a explicar a mensagem central do capítulo com base no texto, sem depender de frases prontas. **Abertura:** situe o episódio no desenvolvimento do êxodo e relembre o que aconteceu no capítulo anterior. **Exposição:** leia a passagem em blocos, explique os acontecimentos na ordem em que aparecem e destaque as palavras repetidas. **Interpretação:** apresente a relação entre o episódio, a aliança e a revelação do Senhor; sinalize os pontos debatidos em vez de escondê-los. **Aplicação:** extraia princípios que respeitem o contexto original e evite promessas que o capítulo não faz. **Conclusão:** retome a ideia central: ${study.conclusion}`
+    }
+  ];
+  study.questions = [
+    ...(study.questions ?? []),
+    "Quais afirmações deste estudo vêm diretamente do texto bíblico e quais são sínteses interpretativas?",
+    "Que detalhes históricos ou linguísticos permanecem incertos e como essa incerteza deve ser comunicada?",
+    "Como o capítulo se conecta ao que veio antes e prepara o que vem depois?",
+    "Que aplicação respeita o contexto original sem transformar o episódio em promessa universal?",
+    "Como você explicaria a ideia central deste capítulo em três minutos, citando os versículos que a sustentam?"
+  ];
+}
