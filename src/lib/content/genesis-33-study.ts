@@ -140,7 +140,7 @@ O altar em Siquém encerra o capítulo com adoração. Jacó reconhece o Deus qu
       id: "rosto",
       title: "8. Ver o rosto de Esaú como ver o rosto de Deus (33:10)",
       kind: "theology",
-      confidence: "medium",
+      confidence: "probable",
       scriptureRefs: ["Gênesis 32:30", "Gênesis 33:10"],
       body: "Jacó insiste para que Esaú aceite o presente e diz que ver o rosto do irmão foi como ver o rosto de Deus, pois Esaú o recebeu favoravelmente. A frase deve ser lida no contexto da linguagem de favor e acolhimento. Há uma conexão literária interessante com Peniel, onde Jacó afirmou ter visto Deus face a face. Ainda assim, não significa que Esaú seja divino ou que Jacó confunda o irmão com Deus. A comparação expressa a intensidade de sua gratidão por ter sido recebido em vez de atacado."
     },
@@ -236,7 +236,7 @@ O altar em Siquém encerra o capítulo com adoração. Jacó reconhece o Deus qu
       id: "cristologia",
       title: "20. A reconciliação à luz do evangelho",
       kind: "theology",
-      confidence: "medium",
+      confidence: "probable",
       scriptureRefs: ["Romanos 5:1–11", "2 Coríntios 5:18–21", "Efésios 2:13–18"],
       body: "Gênesis 33 não é uma profecia direta sobre Jesus, mas seu tema de reconciliação pode ser relacionado, dentro do cânon, ao evangelho. O Novo Testamento ensina que Deus reconcilia consigo os que estavam afastados por meio de Cristo e chama os reconciliados a uma vida de paz. A comparação deve preservar as diferenças: Esaú não é Cristo, Jacó não representa automaticamente cada pecador em todos os detalhes, e a narrativa patriarcal possui seu próprio contexto histórico."
     },
