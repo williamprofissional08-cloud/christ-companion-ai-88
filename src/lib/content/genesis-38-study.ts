@@ -52,7 +52,7 @@ A aplicação para a comunidade cristã é concreta: cumprir promessas, proteger
     "Rute 4:1–12 — A responsabilidade familiar e a preservação do nome do falecido.",
     "Rute 4:18–22 — A genealogia de Perez até Davi.",
     "2 Samuel 11–12 — O confronto profético de Natã com Davi e a exposição da responsabilidade de quem tem poder.",
-    "Provérbios  지  21:3 — A prática da justiça e do juízo como mais aceitável ao Senhor do que sacrifícios.",
+    "Provérbios 21:3 — A prática da justiça e do juízo como mais aceitável ao Senhor do que sacrifícios.",
     "Miqueias 6:8 — Praticar a justiça, amar a misericórdia e andar humildemente com Deus.",
     "Mateus 1:1–3 — Perez e Tamar na genealogia de Jesus.",
     "Lucas 3:23–34 — A genealogia de Jesus e a linhagem de Judá.",
