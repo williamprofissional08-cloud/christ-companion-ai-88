@@ -86,6 +86,7 @@ import { exodus34Study } from "./exodus-34-study";
 import { exodus35Study } from "./exodus-35-study";
 import { exodus36Study } from "./exodus-36-study";
 import { exodus37Study } from "./exodus-37-study";
+import { exodus38Study } from "./exodus-38-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -180,4 +181,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-exodo-cap-35": exodus35Study,
   "biblia-exodo-cap-36": exodus36Study,
   "biblia-exodo-cap-37": exodus37Study,
+  "biblia-exodo-cap-38": exodus38Study,
 };
