@@ -86,4 +86,26 @@ describe("continuidade dos estudos de Gênesis", () => {
     }
   });
 
+  test("Gênesis 21 a 30 possuem estudos profundos completos no catálogo canônico", () => {
+    for (let chapter = 21; chapter <= 30; chapter += 1) {
+      const slug = getChapterStudySlug("genesis", chapter);
+      const study = CURATED_STUDIES[slug];
+      assert.equal(slug, `biblia-genesis-cap-${chapter}`);
+      assert.equal(getChapterStudy(slug)?.book.slug, "genesis");
+      assert.equal(getChapterStudy(slug)?.chapter, chapter);
+      assert.equal(getStudy(slug)?.depth, "deep");
+      assert.equal(study?.depth, "deep");
+      assert.ok((study?.sections?.length ?? 0) >= 20, `Gênesis ${chapter} precisa de pelo menos 20 seções didáticas`);
+      assert.ok((study?.questions?.length ?? 0) >= 12, `Gênesis ${chapter} precisa de pelo menos 12 perguntas`);
+      assert.ok(study?.sections?.some((section) => /m[eé]todo/i.test(section.title)), `Gênesis ${chapter} precisa de método de estudo`);
+      assert.ok(study?.sections?.some((section) => /prepara[cç][aã]o de (aula|mensagem)/i.test(section.title)), `Gênesis ${chapter} precisa de preparação de aula ou mensagem`);
+      assert.ok(study?.sections?.some((section) => /gloss[aá]rio/i.test(section.title)), `Gênesis ${chapter} precisa de glossário`);
+      assert.ok(study?.sections?.some((section) => /(avalia[cç][aã]o|revis[aã]o)/i.test(section.title)), `Gênesis ${chapter} precisa de revisão e avaliação`);
+      assert.ok((study?.crossReferences?.length ?? 0) >= 5);
+      assert.ok(Boolean(study?.application?.trim()));
+      assert.ok(Boolean(study?.conclusion?.trim()));
+      assert.ok(Boolean(study?.prayer?.trim()));
+    }
+  });
+
 });
