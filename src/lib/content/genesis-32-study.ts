@@ -307,6 +307,11 @@ O capítulo ensina dependência, humildade e responsabilidade, não uma fórmula
       kind: "summary",
       confidence: "high",
       body: "Deus de Abraão, Isaque e Jacó, ensina-nos a confiar em tua promessa sem tentar controlar teus caminhos. Dá-nos coragem para enfrentar o passado, humildade para reconhecer nossos limites e sabedoria para buscar a paz com responsabilidade. Confronta em nós a manipulação, o orgulho e a autossuficiência. Que a nova vida que recebemos em Cristo produza verdade, justiça, compaixão e reconciliação. Amém."
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 32:1-32"], body: "1. Como Jacó se prepara para encontrar Esaú? 2. O que revela sua oração? 3. Como ele organiza os presentes? 4. O que acontece durante a luta noturna? 5. O que a mudança do nome para Israel significa na narrativa? **Atividade:** compare o medo de Jacó no início com sua atitude depois do encontro com Deus."
+    }
+    ,{
+      id: "glossario-didatico", title: "Glossário e conceitos importantes", kind: "glossary", confidence: "high", scriptureRefs: ["Gênesis 32:1-32"], body: "**Peniel/Penuel:** nome associado ao encontro de Jacó com Deus. **Israel:** nome dado a Jacó na narrativa. **Primogenitura:** tema familiar retomado no conflito entre Jacó e Esaú."
     }
   ]
 };
