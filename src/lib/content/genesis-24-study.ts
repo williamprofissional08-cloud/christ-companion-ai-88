@@ -287,7 +287,7 @@ Leia Gênesis 24 integralmente. Observe a preocupação de Abraão com a alianç
       kind: "application",
       confidence: "high",
       scriptureRefs: ["Gênesis 24:1–67"],
-      body: "**Tema:** A fidelidade de Deus e o discernimento responsável.
+      body: `**Tema:** A fidelidade de Deus e o discernimento responsável.
 
 **Ideia central:** Deus conduz a continuidade da promessa, enquanto seus servos agem com oração, responsabilidade, hospitalidade e respeito às decisões humanas.
 
@@ -297,7 +297,8 @@ Leia Gênesis 24 integralmente. Observe a preocupação de Abraão com a alianç
 
 **Aplicação:** buscar sabedoria, tratar pessoas com dignidade e reconhecer a direção de Deus sem manipulação.
 
-**Cuidado pastoral:** não usar a mensagem para pressionar solteiros, casais ou famílias.",
+**Cuidado pastoral:** não usar a mensagem para pressionar solteiros, casais ou famílias.`,
+    },
     },
     {
       id: "glossario",
