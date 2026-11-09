@@ -32,6 +32,7 @@ import { Route as AuthenticatedPlanosRouteImport } from './routes/_authenticated
 import { Route as AuthenticatedTrilhasRouteImport } from './routes/_authenticated/trilhas'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin.index'
+import { Route as AuthenticatedAdminConteudoRouteImport } from './routes/_authenticated/admin.conteudo'
 import { Route as AuthenticatedAssistenteIndexRouteImport } from './routes/_authenticated/assistente.index'
 import { Route as AuthenticatedAssistenteThreadIdRouteImport } from './routes/_authenticated/assistente.$threadId'
 import { Route as AuthenticatedEscolaIndexRouteImport } from './routes/_authenticated/escola.index'
@@ -47,7 +48,6 @@ import { Route as ApiEscolaProfessorTtsRouteImport } from './routes/api/escola/p
 import { Route as AuthenticatedAdminAulasLessonIdRouteImport } from './routes/_authenticated/admin.aulas.$lessonId'
 import { Route as AuthenticatedAdminCursosIndexRouteImport } from './routes/_authenticated/admin.cursos.index'
 import { Route as AuthenticatedAdminCursosIdRouteImport } from './routes/_authenticated/admin.cursos.$id'
-import { Route as AuthenticatedAdminConteudoRouteImport } from './routes/_authenticated/admin.conteudo'
 import { Route as AuthenticatedEscolaSlugIndexRouteImport } from './routes/_authenticated/escola.$slug.index'
 import { Route as AuthenticatedEscolaSlugAulaLessonSlugRouteImport } from './routes/_authenticated/escola.$slug.aula.$lessonSlug'
 
@@ -167,6 +167,12 @@ const AuthenticatedAdminIndexRoute = AuthenticatedAdminIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AuthenticatedAdminRoute,
 } as any)
+const AuthenticatedAdminConteudoRoute =
+  AuthenticatedAdminConteudoRouteImport.update({
+    id: '/conteudo',
+    path: '/conteudo',
+    getParentRoute: () => AuthenticatedAdminRoute,
+  } as any)
 const AuthenticatedAssistenteIndexRoute =
   AuthenticatedAssistenteIndexRouteImport.update({
     id: '/',
@@ -253,12 +259,6 @@ const AuthenticatedAdminCursosIdRoute =
     path: '/cursos/$id',
     getParentRoute: () => AuthenticatedAdminRoute,
   } as any)
-const AuthenticatedAdminConteudoRoute =
-  AuthenticatedAdminConteudoRouteImport.update({
-    id: '/conteudo',
-    path: '/conteudo',
-    getParentRoute: () => AuthenticatedAdminRoute,
-  } as any)
 const AuthenticatedEscolaSlugIndexRoute =
   AuthenticatedEscolaSlugIndexRouteImport.update({
     id: '/',
@@ -294,6 +294,7 @@ export interface FileRoutesByFullPath {
   '/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/trilhas': typeof AuthenticatedTrilhasRouteWithChildren
   '/api/chat': typeof ApiChatRoute
+  '/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/escola/$slug': typeof AuthenticatedEscolaSlugRouteWithChildren
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
@@ -310,7 +311,6 @@ export interface FileRoutesByFullPath {
   '/admin/aulas/$lessonId': typeof AuthenticatedAdminAulasLessonIdRoute
   '/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
   '/admin/cursos/': typeof AuthenticatedAdminCursosIndexRoute
-  '/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/escola/$slug/': typeof AuthenticatedEscolaSlugIndexRoute
   '/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
@@ -330,6 +330,7 @@ export interface FileRoutesByTo {
   '/onboarding': typeof AuthenticatedOnboardingRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/api/chat': typeof ApiChatRoute
+  '/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
   '/planos/$slug': typeof AuthenticatedPlanosSlugRoute
@@ -345,7 +346,6 @@ export interface FileRoutesByTo {
   '/admin/aulas/$lessonId': typeof AuthenticatedAdminAulasLessonIdRoute
   '/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
   '/admin/cursos': typeof AuthenticatedAdminCursosIndexRoute
-  '/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/escola/$slug': typeof AuthenticatedEscolaSlugIndexRoute
   '/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
@@ -373,6 +373,7 @@ export interface FileRoutesById {
   '/_authenticated/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/_authenticated/trilhas': typeof AuthenticatedTrilhasRouteWithChildren
   '/api/chat': typeof ApiChatRoute
+  '/_authenticated/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/_authenticated/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/_authenticated/escola/$slug': typeof AuthenticatedEscolaSlugRouteWithChildren
   '/_authenticated/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
@@ -389,7 +390,6 @@ export interface FileRoutesById {
   '/_authenticated/admin/aulas/$lessonId': typeof AuthenticatedAdminAulasLessonIdRoute
   '/_authenticated/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
   '/_authenticated/admin/cursos/': typeof AuthenticatedAdminCursosIndexRoute
-  '/_authenticated/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/_authenticated/escola/$slug/': typeof AuthenticatedEscolaSlugIndexRoute
   '/_authenticated/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
@@ -417,6 +417,7 @@ export interface FileRouteTypes {
     | '/planos'
     | '/trilhas'
     | '/api/chat'
+    | '/admin/conteudo'
     | '/assistente/$threadId'
     | '/escola/$slug'
     | '/estudos/$slug'
@@ -433,7 +434,6 @@ export interface FileRouteTypes {
     | '/admin/aulas/$lessonId'
     | '/admin/cursos/$id'
     | '/admin/cursos/'
-    | '/admin/conteudo'
     | '/escola/$slug/'
     | '/escola/$slug/aula/$lessonSlug'
   fileRoutesByTo: FileRoutesByTo
@@ -453,6 +453,7 @@ export interface FileRouteTypes {
     | '/onboarding'
     | '/pesquisa'
     | '/api/chat'
+    | '/admin/conteudo'
     | '/assistente/$threadId'
     | '/estudos/$slug'
     | '/planos/$slug'
@@ -494,6 +495,7 @@ export interface FileRouteTypes {
     | '/_authenticated/planos'
     | '/_authenticated/trilhas'
     | '/api/chat'
+    | '/_authenticated/admin/conteudo'
     | '/_authenticated/assistente/$threadId'
     | '/_authenticated/escola/$slug'
     | '/_authenticated/estudos/$slug'
@@ -688,6 +690,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminIndexRouteImport
       parentRoute: typeof AuthenticatedAdminRoute
     }
+    '/_authenticated/admin/conteudo': {
+      id: '/_authenticated/admin/conteudo'
+      path: '/conteudo'
+      fullPath: '/admin/conteudo'
+      preLoaderRoute: typeof AuthenticatedAdminConteudoRouteImport
+      parentRoute: typeof AuthenticatedAdminRoute
+    }
     '/_authenticated/assistente/': {
       id: '/_authenticated/assistente/'
       path: '/'
@@ -793,13 +802,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminCursosIdRouteImport
       parentRoute: typeof AuthenticatedAdminRoute
     }
-    '/_authenticated/admin/conteudo': {
-      id: '/_authenticated/admin/conteudo'
-      path: '/conteudo'
-      fullPath: '/admin/conteudo'
-      preLoaderRoute: typeof AuthenticatedAdminConteudoRouteImport
-      parentRoute: typeof AuthenticatedAdminRoute
-    }
     '/_authenticated/escola/$slug/': {
       id: '/_authenticated/escola/$slug/'
       path: '/'
@@ -818,19 +820,19 @@ declare module '@tanstack/react-router' {
 }
 
 interface AuthenticatedAdminRouteChildren {
+  AuthenticatedAdminConteudoRoute: typeof AuthenticatedAdminConteudoRoute
   AuthenticatedAdminIndexRoute: typeof AuthenticatedAdminIndexRoute
   AuthenticatedAdminAulasLessonIdRoute: typeof AuthenticatedAdminAulasLessonIdRoute
   AuthenticatedAdminCursosIdRoute: typeof AuthenticatedAdminCursosIdRoute
   AuthenticatedAdminCursosIndexRoute: typeof AuthenticatedAdminCursosIndexRoute
-  AuthenticatedAdminConteudoRoute: typeof AuthenticatedAdminConteudoRoute
 }
 
 const AuthenticatedAdminRouteChildren: AuthenticatedAdminRouteChildren = {
+  AuthenticatedAdminConteudoRoute: AuthenticatedAdminConteudoRoute,
   AuthenticatedAdminIndexRoute: AuthenticatedAdminIndexRoute,
   AuthenticatedAdminAulasLessonIdRoute: AuthenticatedAdminAulasLessonIdRoute,
   AuthenticatedAdminCursosIdRoute: AuthenticatedAdminCursosIdRoute,
   AuthenticatedAdminCursosIndexRoute: AuthenticatedAdminCursosIndexRoute,
-  AuthenticatedAdminConteudoRoute: AuthenticatedAdminConteudoRoute,
 }
 
 const AuthenticatedAdminRouteWithChildren =
