@@ -362,6 +362,8 @@ Leia Gênesis 18 integralmente em sua Bíblia. Este estudo acompanha o texto e n
       confidence: "high",
       scriptureRefs: ["Gênesis 18:1–33"],
       body: "Responda com base no texto bíblico:\n\n1. Onde Abraão estava quando recebeu os visitantes?\n2. Como o narrador apresenta a visita?\n3. Quais gestos demonstram hospitalidade?\n4. Qual promessa Sara ouviu?\n5. Por que ela riu?\n6. O que significa “nada é difícil para o Senhor” no contexto?\n7. Por que Deus revela a Abraão o que fará?\n8. O que o clamor contra Sodoma indica?\n9. Como entender a linguagem de Deus descer para ver?\n10. Qual é a preocupação de Abraão sobre o justo e o ímpio?\n11. O que a expressão juiz de toda a terra revela?\n12. Como a intercessão progride de cinquenta até dez?\n13. O texto afirma que havia dez justos?\n14. Como Ezequiel 16 amplia a descrição do pecado de Sodoma?\n15. O que aprendemos sobre oração intercessória?\n16. Como ensinar o capítulo sem especulações sobre a Trindade?\n17. Elabore um esboço expositivo com aplicações responsáveis.\n\n**Critérios:** fidelidade ao texto; contexto histórico; distinção entre fato e interpretação; uso responsável das referências; aplicação coerente."
+    }    ,{
+      id: "exercicio-aprendizagem", title: "Exercícios de compreensão e interpretação", kind: "exercise", confidence: "high", scriptureRefs: ["Gênesis 18:1-33"], body: "1. Quem visita Abraão junto aos carvalhos de Manre? 2. Como Sara reage ao anúncio do nascimento? 3. O que a pergunta sobre algo difícil demais para o Senhor ensina? 4. Por que Abraão intercede por Sodoma? 5. Como a intercessão demonstra preocupação com justiça? **Atividade:** acompanhe a progressão dos números na intercessão."
     }
   ]
 };
