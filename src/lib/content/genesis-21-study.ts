@@ -131,7 +131,7 @@ Leia Gênesis 21 integralmente em sua Bíblia. Observe a repetição de express�
       id: "desmame",
       title: "7. A festa do desmame (21:8)",
       kind: "historical",
-      confidence: "medium",
+      confidence: "probable",
       scriptureRefs: ["Gênesis 21:8", "1 Samuel 1:22–24"],
       body: "Isaque cresce e é desmamado, e Abraão prepara uma grande festa. O desmame marcava uma etapa relevante na vida de uma criança no mundo antigo. O texto não informa a idade de Isaque, e as práticas variavam; não é seguro transformar a referência em cronologia exata. A festa cria o cenário público no qual a tensão entre os filhos de Abraão se torna evidente."
     },
@@ -275,7 +275,7 @@ Leia Gênesis 21 integralmente em sua Bíblia. Observe a repetição de express�
       id: "terra",
       title: "25. Abraão permanece na terra dos filisteus (21:34)",
       kind: "historical",
-      confidence: "medium",
+      confidence: "probable",
       scriptureRefs: ["Gênesis 21:34", "Gênesis 26:1"],
       body: "O capítulo termina informando que Abraão peregrinou por muito tempo na terra dos filisteus. A designação geográfica e étnica deve ser entendida dentro da forma como Gênesis organiza as tradições patriarcais; debates sobre a cronologia arqueológica dos filisteus exigem fontes especializadas e não podem ser resolvidos apenas por este versículo. A conclusão mantém o tema da vida peregrina de Abraão."
     },
