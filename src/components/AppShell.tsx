@@ -63,9 +63,10 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
     refetchOnMount: "always",
     retry: 2,
   });
-  const items = isAdmin
-    ? [...NAV, { to: "/admin" as const, label: "Painel administrativo", icon: ShieldCheck }]
-    : NAV;
+  // Keep the admin entry discoverable. The /admin route and every admin
+  // server function enforce the role on the server; hiding this link here
+  // made a transient permission-query failure look like a deleted panel.
+  const items = [...NAV, { to: "/admin" as const, label: "Painel administrativo", icon: ShieldCheck }];
 
   return (
     <nav className="flex flex-col gap-1">
