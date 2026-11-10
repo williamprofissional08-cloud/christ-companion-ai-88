@@ -6,6 +6,7 @@ import { ExportCard } from "@/components/ExportCard";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getDevotional } from "@/lib/ai.functions";
+import { fallbackDevotional } from "@/lib/content/fallback-devotional";
 import { todayISO } from "@/lib/types";
 
 export const Route = createFileRoute("/_authenticated/devocional")({
