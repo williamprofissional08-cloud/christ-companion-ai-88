@@ -40,10 +40,10 @@ function AdminDashboard() {
 
 
   const overviewCards = [
-    { label: "Usuários ativos hoje", value: stats?.activeMembersToday, to: "/admin/alunos" },
-    { label: "Novos usuários na semana", value: stats?.newMembers7Days, to: "/admin/alunos" },
-    { label: "Posts pendentes", value: stats?.pendingPosts, to: "/comunidade" },
-    { label: "Livros para aprovar", value: stats?.pendingBooks, to: "/comunidade" },
+    { label: "Usuários ativos hoje", value: stats?.activeMembersToday, to: "/admin/alunos" as const },
+    { label: "Novos usuários na semana", value: stats?.newMembers7Days, to: "/admin/alunos" as const },
+    { label: "Posts pendentes", value: stats?.pendingPosts, to: "/comunidade" as const },
+    { label: "Livros para aprovar", value: stats?.pendingBooks, to: "/comunidade" as const },
   ];
   const cards = [
     { label: "Total de cursos", value: stats?.courses },
@@ -53,6 +53,7 @@ function AdminDashboard() {
     { label: "Total de aulas", value: stats?.lessons },
     { label: "Conteúdos gratuitos", value: stats?.freeLessons },
     { label: "Conteúdos premium", value: stats?.premiumLessons },
+    { label: "Usuários com progresso", value: stats?.usersWithProgress },
   ];
   const memberCards = [
     { label: "Contas cadastradas", value: stats?.totalMembers },
