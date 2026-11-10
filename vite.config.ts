@@ -10,9 +10,9 @@ import { loadEnv } from "vite";
 const publicEnv = loadEnv(process.env["NODE_ENV"] ?? "production", process.cwd(), "VITE_");
 // Public (non-secret) values bound to this project's backend; used only when the build lacks them.
 const publicBackendUrl =
-  publicEnv["VITE_SUPABASE_URL"] || "https://hbpbnbsxtzrwisyiixlw.supabase.co";
+  publicEnv["VITE_SUPABASE_URL"] || "https://uluumebztnrgpyzohqrv.supabase.co";
 const publicBackendKey =
-  publicEnv["VITE_SUPABASE_PUBLISHABLE_KEY"] || "sb_publishable_GakKaDzexpGcS5q4KMgwVA_WXDv1xYm";
+  publicEnv["VITE_SUPABASE_PUBLISHABLE_KEY"] || "sb_publishable_R-b9hG7BURmJCmtVG0393w_4AMoonvq";
 // Expose to Vite's env loader too, so bracket access (import.meta.env['VITE_…']) resolves.
 process.env["VITE_SUPABASE_URL"] ||= publicBackendUrl;
 process.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ||= publicBackendKey;
