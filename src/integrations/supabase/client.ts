@@ -32,6 +32,23 @@ function createSupabaseFetch(supabaseKey: string): typeof fetch {
  * Supabase project after a project/backend change. Supabase then rejects every
  * authenticated request with bad_jwt. Discard only that stale local session.
  */
+let projectKeyIdsPromise: Promise<Set<string> | null> | undefined;
+
+async function getProjectKeyIds(supabaseUrl: string): Promise<Set<string> | null> {
+  if (!projectKeyIdsPromise) {
+    const jwksUrl = `${supabaseUrl.replace(/\\/+$/, '')}/.well-known/jwks.json`;
+    projectKeyIdsPromise = fetch(jwksUrl)
+      .then(async (response) => {
+        if (!response.ok) return null;
+        const jwks = await response.json() as { keys?: Array<{ kid?: unknown }> };
+        if (!Array.isArray(jwks.keys)) return null;
+        return new Set(jwks.keys.flatMap((key) => typeof key.kid === 'string' ? [key.kid] : []));
+      })
+      .catch(() => null);
+  }
+  return projectKeyIdsPromise;
+}
+
 function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): Storage {
   const expectedIssuer = supabaseUrl.replace(/\/+$/, '') + '/auth/v1';
 
@@ -49,14 +66,25 @@ function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): S
         const session = JSON.parse(value) as { access_token?: unknown };
         if (typeof session.access_token !== 'string') return value;
 
-        const payloadPart = session.access_token.split('.')[1];
-        if (!payloadPart) return value;
-        const normalized = payloadPart.replace(/-/g, '+').replace(/_/g, '/');
-        const payload = JSON.parse(atob(normalized.padEnd(Math.ceil(normalized.length / 4) * 4, '='))) as { iss?: unknown };
+        const [headerPart, payloadPart] = session.access_token.split('.');
+        if (!headerPart || !payloadPart) return value;
+        const decode = (part: string) => JSON.parse(
+          atob(part.replace(/-/g, '+').replace(/_/g, '/').padEnd(Math.ceil(part.length / 4) * 4, '=')),
+        ) as Record<string, unknown>;
+        const header = decode(headerPart);
+        const payload = decode(payloadPart);
 
         if (typeof payload.iss === 'string' && payload.iss !== expectedIssuer) {
           storage.removeItem(key);
           return null;
+        }
+
+        if (header.alg === 'ES256' && typeof header.kid === 'string') {
+          const keyIds = await getProjectKeyIds(supabaseUrl);
+          if (keyIds && !keyIds.has(header.kid)) {
+            storage.removeItem(key);
+            return null;
+          }
         }
       } catch {
         // Leave malformed/opaque values to supabase-js; do not erase user data.
