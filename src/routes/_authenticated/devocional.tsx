@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
@@ -7,6 +8,7 @@ import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getDevotional } from "@/lib/ai.functions";
 import { loadDevotionalSafely } from "@/lib/devotional-loader";
+import { fallbackDevotional, devotionalLibrarySize } from "@/lib/content/fallback-devotional";
 import { todayISO } from "@/lib/types";
 
 export const Route = createFileRoute("/_authenticated/devocional")({
@@ -28,6 +30,7 @@ export const Route = createFileRoute("/_authenticated/devocional")({
 
 function DevocionalPage() {
   const day = todayISO();
+  const [draw, setDraw] = useState(0);
   const fn = useServerFn(getDevotional);
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["devotional", day],
@@ -61,24 +64,29 @@ function DevocionalPage() {
   }
 
 
+  const displayedData = draw === 0 ? data : fallbackDevotional(day, draw);
   const blocks = [
-    { label: "Reflexão", text: data.reflection },
-    { label: "Aplicação prática", text: data.application },
-    { label: "Oração", text: data.prayer },
-    { label: "Desafio de hoje", text: data.challenge },
-    { label: "Pergunta para reflexão", text: data.question },
-    { label: "Leitura sugerida", text: data.readingSuggestion },
+    { label: "Reflexão", text: displayedData.reflection },
+    { label: "Aplicação prática", text: displayedData.application },
+    { label: "Oração", text: displayedData.prayer },
+    { label: "Desafio de hoje", text: displayedData.challenge },
+    { label: "Pergunta para reflexão", text: displayedData.question },
+    { label: "Leitura sugerida", text: displayedData.readingSuggestion },
   ];
 
   return (
-    <AppShell title="Devocional de hoje" subtitle={data.theme}>
-      <ExportCard filename={`devocional-${day}`} title={`Devocional — ${data.theme}`}>
+    <AppShell title="Devocional de hoje" subtitle={displayedData.theme}>
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border/50 p-4">
+        <div><p className="text-sm font-medium">Biblioteca bíblica</p><p className="text-xs text-muted-foreground">{devotionalLibrarySize().toLocaleString("pt-BR")} combinações de leitura e reflexão</p></div>
+        <button type="button" onClick={() => setDraw((current) => current + 1)} className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90">Sortear outro devocional</button>
+      </div>
+      <ExportCard filename={`devocional-${day}-${draw}`} title={`Devocional — ${displayedData.theme}`}>
       <Card className="animate-rise border-border/50 p-6 shadow-soft">
         <p className="text-xs font-semibold tracking-wide text-primary uppercase">Versículo</p>
         <blockquote className="mt-3 font-display text-xl leading-relaxed">
-          “{data.verse.text}”
+          “{displayedData.verse.text}”
         </blockquote>
-        <p className="mt-2 text-sm font-medium text-muted-foreground">{data.verse.reference}</p>
+        <p className="mt-2 text-sm font-medium text-muted-foreground">{displayedData.verse.reference}</p>
       </Card>
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
