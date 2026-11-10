@@ -41,7 +41,7 @@ function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): S
     key: (index: number) => storage.key(index),
     setItem: (key: string, value: string) => storage.setItem(key, value),
     removeItem: (key: string) => storage.removeItem(key),
-    getItem(key: string) {
+    async getItem(key: string) {
       const value = storage.getItem(key);
       if (!value) return value;
 
@@ -49,14 +49,27 @@ function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): S
         const session = JSON.parse(value) as { access_token?: unknown };
         if (typeof session.access_token !== 'string') return value;
 
-        const payloadPart = session.access_token.split('.')[1];
-        if (!payloadPart) return value;
-        const normalized = payloadPart.replace(/-/g, '+').replace(/_/g, '/');
-        const payload = JSON.parse(atob(normalized.padEnd(Math.ceil(normalized.length / 4) * 4, '='))) as { iss?: unknown };
+        const [headerPart, payloadPart] = session.access_token.split('.');
+        if (!headerPart || !payloadPart) return value;
+        const decode = (part: string) => JSON.parse(
+          atob(part.replace(/-/g, '+').replace(/_/g, '/').padEnd(Math.ceil(part.length / 4) * 4, '=')),
+        ) as Record<string, unknown>;
+        const header = decode(headerPart);
+        const payload = decode(payloadPart);
 
         if (typeof payload.iss === 'string' && payload.iss !== expectedIssuer) {
           storage.removeItem(key);
           return null;
+        }
+
+        // A token may have the correct issuer but still reference a signing key
+        // that was rotated out. Auth rejects those sessions with bad_jwt.
+        if (header.alg === 'ES256' && typeof header.kid === 'string') {
+          const keyIds = await getProjectKeyIds();
+          if (keyIds && !keyIds.has(header.kid)) {
+            storage.removeItem(key);
+            return null;
+          }
         }
       } catch {
         // Leave malformed/opaque values to supabase-js; do not erase user data.
