@@ -49,16 +49,13 @@ async function getProjectKeyIds(supabaseUrl: string): Promise<Set<string> | null
   return projectKeyIdsPromise;
 }
 
-function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): Storage {
+function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): Pick<Storage, 'setItem' | 'removeItem'> & { getItem(key: string): Promise<string | null> } {
   const expectedIssuer = supabaseUrl.replace(/\/+$/, '') + '/auth/v1';
 
   return {
-    get length() { return storage.length; },
-    clear: () => storage.clear(),
-    key: (index: number) => storage.key(index),
     setItem: (key: string, value: string) => storage.setItem(key, value),
     removeItem: (key: string) => storage.removeItem(key),
-    getItem(key: string) {
+    async getItem(key: string) {
       const value = storage.getItem(key);
       if (!value) return value;
 
