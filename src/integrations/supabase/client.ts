@@ -33,7 +33,7 @@ function createSupabaseFetch(supabaseKey: string): typeof fetch {
  * authenticated request with bad_jwt. Discard only that stale local session.
  */
 function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): Storage {
-  const expectedIssuer = `${supabaseUrl.replace(/\\/+$/, '')}/auth/v1`;
+  const expectedIssuer = supabaseUrl.replace(/\/+$/, '') + '/auth/v1';
 
   return {
     get length() { return storage.length; },
