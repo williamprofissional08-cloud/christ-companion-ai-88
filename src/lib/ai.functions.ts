@@ -128,7 +128,7 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
     } : legacyPlan;
     if (!plan) throw new Error("Plano não encontrado");
     if (data.day > plan.days) throw new Error("Dia fora da duração deste plano");
-    const cacheKey = published ? `${data.slug}:${data.day}:v${new Date(managed.data!.updated_at).getTime()}` : `${data.slug}:${data.day}`;
+    const cacheKey = published ? `${data.slug}:${data.day}:v${new Date(managedData.updated_at ?? 0).getTime()}` : `${data.slug}:${data.day}`;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
