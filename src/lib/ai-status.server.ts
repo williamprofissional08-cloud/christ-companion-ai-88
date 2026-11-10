@@ -1,103 +1,130 @@
-import { CHAT_MODEL } from "./ai-gateway.server";
+import type { SupabaseClient } from "@supabase/supabase-js";
 
 export type AiStatus = {
   ok: boolean;
   status: number | null;
-  /** Estado resumido: "ok" | "sem_creditos" | "chave" | "bloqueado" | "limite" | "erro" */
   state: "ok" | "sem_creditos" | "chave" | "bloqueado" | "limite" | "erro";
   message: string;
   checkedAt: string;
 };
 
-/** Faz uma chamada mínima ao provedor de IA para saber se há saldo/chave válida. */
-export async function checkAiGatewayStatus(): Promise<AiStatus> {
+type ProviderError = {
+  error?: { message?: string; status?: string };
+  message?: string;
+};
+
+function readProviderMessage(value: unknown): string | null {
+  if (!value || typeof value !== "object") return null;
+  const payload = value as ProviderError;
+  const message = payload.error?.message ?? payload.message;
+  if (typeof message !== "string") return null;
+  return message.replace(/\s+/g, " ").trim().slice(0, 240);
+}
+
+/**
+ * Testa o mesmo caminho usado pelo Assistente IA e pelo Professor IA:
+ * Supabase Edge Function -> Gemini. Não consulta nem depende dos créditos Lovable.
+ */
+export async function checkAiGatewayStatus(supabase: SupabaseClient): Promise<AiStatus> {
   const checkedAt = new Date().toISOString();
-  const key = process.env["LOVABLE_API_KEY"];
-  if (!key) {
-    return {
-      ok: false,
-      status: null,
-      state: "chave",
-      message: "A chave de IA do aplicativo não está configurada.",
-      checkedAt,
-    };
-  }
 
   try {
-    const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${key}`,
-        "Lovable-API-Key": key,
+    const { error } = await supabase.functions.invoke("gemini-ai", {
+      body: {
+        model: "gemini-2.5-flash",
+        messages: [{ role: "user", content: "Responda somente: OK" }],
+        max_tokens: 8,
+        stream: false,
       },
-      body: JSON.stringify({
-        model: CHAT_MODEL,
-        messages: [{ role: "user", content: "ok" }],
-        max_completion_tokens: 1,
-      }),
     });
 
-    if (res.ok) {
+    if (!error) {
       return {
         ok: true,
-        status: res.status,
+        status: 200,
         state: "ok",
-        message: "IA disponível. Assistente e Professor IA estão funcionando.",
+        message: "Gemini disponível. Assistente IA e Professor IA podem utilizar o serviço.",
         checkedAt,
       };
     }
 
-    if (res.status === 402) {
-      return {
-        ok: false,
-        status: 402,
-        state: "sem_creditos",
-        message:
-          "Sem créditos de IA. Adicione créditos no workspace do Lovable para o Assistente e o Professor IA voltarem a responder.",
-        checkedAt,
-      };
+    const response =
+      typeof error === "object" && "context" in error && error.context instanceof Response
+        ? error.context
+        : null;
+    const status = response?.status ?? null;
+    let providerMessage: string | null = null;
+
+    if (response) {
+      try {
+        providerMessage = readProviderMessage(await response.clone().json());
+      } catch {
+        try {
+          providerMessage = (await response.clone().text()).replace(/\s+/g, " ").trim().slice(0, 240);
+        } catch {
+          providerMessage = null;
+        }
+      }
     }
-    if (res.status === 401) {
+
+    if (status === 401) {
       return {
         ok: false,
-        status: 401,
+        status,
         state: "chave",
-        message: "A chave de IA foi recusada. É preciso gerar uma nova chave.",
+        message: "A autenticação da chamada ao Gemini falhou. Verifique a sessão do aplicativo e a proteção JWT da função.",
         checkedAt,
       };
     }
-    if (res.status === 403) {
+    if (status === 402) {
       return {
         ok: false,
-        status: 403,
+        status,
+        state: "sem_creditos",
+        message: "O provedor recusou a chamada por cobrança ou saldo. Isso não é um aviso de créditos Lovable.",
+        checkedAt,
+      };
+    }
+    if (status === 403) {
+      return {
+        ok: false,
+        status,
         state: "bloqueado",
-        message: "O uso de IA está desativado ou limitado nas configurações do workspace.",
+        message: providerMessage
+          ? `O Google Gemini recusou o acesso: ${providerMessage}`
+          : "O Google Gemini recusou o acesso. Verifique a chave e as permissões no Google AI Studio.",
         checkedAt,
       };
     }
-    if (res.status === 429) {
+    if (status === 429) {
       return {
         ok: false,
-        status: 429,
+        status,
         state: "limite",
-        message: "Muitas chamadas em sequência. Aguarde alguns instantes e teste novamente.",
+        message: providerMessage
+          ? `A cota ou o limite de requisições do Gemini foi atingido: ${providerMessage}`
+          : "A cota gratuita ou o limite de requisições do Gemini foi atingido. Aguarde e tente novamente.",
         checkedAt,
       };
     }
+
     return {
       ok: false,
-      status: res.status,
+      status,
       state: "erro",
-      message: `O provedor de IA respondeu com erro ${res.status}.`,
+      message: status
+        ? `O Gemini respondeu com erro HTTP ${status}${providerMessage ? `: ${providerMessage}` : "."}`
+        : `Não foi possível confirmar a resposta do Gemini: ${error.message}`,
       checkedAt,
     };
-  } catch {
+  } catch (error) {
     return {
       ok: false,
       status: null,
       state: "erro",
-      message: "Não foi possível falar com o provedor de IA agora.",
+      message: error instanceof Error
+        ? `Falha ao testar a função Gemini no Supabase: ${error.message.slice(0, 200)}`
+        : "Não foi possível conectar à função Gemini no Supabase.",
       checkedAt,
     };
   }
