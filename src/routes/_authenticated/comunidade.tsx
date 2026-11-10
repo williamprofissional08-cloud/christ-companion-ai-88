@@ -180,16 +180,22 @@ function ComunidadePage() {
 
   return <AppShell title="Comunidade" subtitle="Crescendo juntos no conhecimento de Deus.">
     <div className="mx-auto max-w-4xl space-y-5">
-      <section className="relative overflow-hidden rounded-3xl border border-primary/15 bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-100 p-5 text-slate-900 shadow-sm dark:from-slate-900 dark:via-blue-950 dark:to-slate-900 dark:text-white sm:p-7">
-        <div className="absolute -right-8 -top-10 size-48 rounded-full bg-blue-300/25 blur-3xl" />
-        <div className="relative flex items-start justify-between gap-4">
-          <div><span className="mb-2 inline-flex items-center gap-2 rounded-full bg-white/75 px-3 py-1 text-xs font-semibold text-blue-900 dark:bg-white/10 dark:text-blue-100"><UsersRound className="size-3.5" />Comunhão e crescimento</span>
-            <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Comunidade</h2>
-            <p className="mt-2 max-w-xl text-sm text-slate-700 dark:text-blue-100 sm:text-base">Um lugar para aprender a Palavra, orar uns pelos outros e compartilhar aquilo que nos aproxima de Cristo.</p>
-          </div><BookOpen className="hidden size-10 text-blue-900 sm:block dark:text-blue-100" />
-        </div>
-        <div className="relative mt-5 rounded-2xl border border-white/70 bg-white/65 p-4 dark:border-white/10 dark:bg-white/10">
-          <p className="font-display text-lg italic">“Onde estiverem dois ou três reunidos em meu nome, ali estou no meio deles.”</p><p className="mt-1 text-xs font-semibold text-blue-800 dark:text-blue-200">Mateus 18:20</p>
+      <section className="community-hero relative isolate overflow-hidden rounded-[1.75rem] border border-white/20 p-5 text-white shadow-xl sm:rounded-[2rem] sm:p-8 lg:p-9">
+        <div className="pointer-events-none absolute -right-16 -top-20 size-64 rounded-full bg-sky-300/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-12 size-64 rounded-full bg-amber-300/20 blur-3xl" />
+        <div className="relative flex min-h-[220px] flex-col justify-between gap-7 sm:min-h-[260px]">
+          <div className="max-w-2xl">
+            <span className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/15 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-sm backdrop-blur-md"><UsersRound className="size-3.5" /> Comunhão e crescimento</span>
+            <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight drop-shadow sm:text-4xl lg:text-5xl">Caminhando juntos na fé.</h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/90 drop-shadow-sm sm:text-base">Um espaço para aprender a Palavra, compartilhar experiências, fortalecer amizades e orar uns pelos outros em Cristo.</p>
+          </div>
+          <div className="flex items-end justify-between gap-3">
+            <div className="max-w-xl rounded-2xl border border-white/25 bg-slate-950/30 p-3.5 shadow-lg backdrop-blur-md sm:p-4">
+              <p className="font-display text-base italic leading-relaxed sm:text-lg">“Onde estiverem dois ou três reunidos em meu nome, ali estou no meio deles.”</p>
+              <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-amber-200">Mateus 18:20</p>
+            </div>
+            <div className="hidden rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-md sm:block"><BookOpen className="size-8 text-amber-200" /></div>
+          </div>
         </div>
       </section>
 
@@ -207,11 +213,11 @@ function ComunidadePage() {
           {tab !== "arquivos" && <>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
-                { icon: CircleHelp, title: "Perguntas bíblicas", sub: "Tire dúvidas com respeito", cat: "pergunta" as Category },
-                { icon: MessagesSquare, title: "Debates da fé", sub: "Examine as Escrituras", cat: "debate" as Category },
-                { icon: BookMarked, title: "Estudos", sub: "Compartilhe aprendizados", cat: "estudo" as Category },
-                { icon: HandHeart, title: "Testemunhos e oração", sub: "Edifique e interceda", cat: "testemunho" as Category },
-              ].map((item) => <button key={item.title} type="button" onClick={() => { setCategory(item.cat); setComposer(true); }} className="rounded-2xl border border-border/70 bg-card p-3 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"><item.icon className="mb-2 size-6 text-primary" /><span className="block text-sm font-semibold">{item.title}</span><span className="mt-1 block text-xs text-muted-foreground">{item.sub}</span></button>)}
+                { icon: CircleHelp, title: "Perguntas bíblicas", sub: "Tire dúvidas com respeito", cat: "pergunta" as Category, tone: "from-sky-500/15 via-cyan-500/10 to-blue-500/5", iconTone: "bg-sky-500/15 text-sky-700 dark:text-sky-300" },
+                { icon: MessagesSquare, title: "Debates da fé", sub: "Examine as Escrituras", cat: "debate" as Category, tone: "from-violet-500/15 via-indigo-500/10 to-blue-500/5", iconTone: "bg-violet-500/15 text-violet-700 dark:text-violet-300" },
+                { icon: BookMarked, title: "Estudos", sub: "Compartilhe aprendizados", cat: "estudo" as Category, tone: "from-amber-500/20 via-yellow-500/10 to-orange-500/5", iconTone: "bg-amber-500/20 text-amber-700 dark:text-amber-300" },
+                { icon: HandHeart, title: "Testemunhos e oração", sub: "Edifique e interceda", cat: "testemunho" as Category, tone: "from-rose-500/15 via-pink-500/10 to-orange-500/5", iconTone: "bg-rose-500/15 text-rose-700 dark:text-rose-300" },
+              ].map((item) => <button key={item.title} type="button" onClick={() => { setCategory(item.cat); setComposer(true); }} className={`community-category-card group relative isolate min-h-[126px] overflow-hidden rounded-2xl border border-border/70 bg-gradient-to-br ${item.tone} p-3.5 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg active:scale-[.98] sm:min-h-[145px] sm:p-4`}><span className={`mb-3 flex size-10 items-center justify-center rounded-xl shadow-sm transition-transform duration-300 group-hover:scale-110 ${item.iconTone}`}><item.icon className="size-5" /></span><span className="block text-sm font-bold leading-snug sm:text-base">{item.title}</span><span className="mt-1.5 block text-[11px] leading-relaxed text-muted-foreground sm:text-xs">{item.sub}</span><span className="pointer-events-none absolute -bottom-8 -right-6 -z-10 size-24 rounded-full bg-white/30 blur-2xl transition-transform duration-500 group-hover:scale-150 dark:bg-white/5" /></button>)}
             </div>
 
             <Card className="border-primary/15 bg-gradient-to-r from-blue-950 to-blue-800 p-4 text-white shadow-sm sm:p-5">
