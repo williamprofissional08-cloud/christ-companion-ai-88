@@ -39,3 +39,69 @@ create index if not exists idx_sermon_messages_course_id
 
 create index if not exists idx_user_subscriptions_plan_id
   on public.user_subscriptions (plan_id);
+
+
+-- Cache auth.uid() once per statement in ownership policies instead of
+-- recalculating it for every row. Ownership and write checks remain unchanged.
+
+drop policy if exists "own certificates" on public.certificates;
+create policy "own certificates"
+  on public.certificates
+  for select
+  to authenticated
+  using ((select auth.uid()) = user_id);
+
+drop policy if exists "own course progress" on public.course_progress;
+create policy "own course progress"
+  on public.course_progress
+  for all
+  to authenticated
+  using ((select auth.uid()) = user_id)
+  with check ((select auth.uid()) = user_id);
+
+drop policy if exists "own exercise submissions" on public.exercise_submissions;
+create policy "own exercise submissions"
+  on public.exercise_submissions
+  for all
+  to authenticated
+  using ((select auth.uid()) = user_id)
+  with check ((select auth.uid()) = user_id);
+
+drop policy if exists "own lesson answers" on public.lesson_answers;
+create policy "own lesson answers"
+  on public.lesson_answers
+  for all
+  to authenticated
+  using ((select auth.uid()) = user_id)
+  with check ((select auth.uid()) = user_id);
+
+drop policy if exists "own lesson progress" on public.lesson_progress;
+create policy "own lesson progress"
+  on public.lesson_progress
+  for all
+  to authenticated
+  using ((select auth.uid()) = user_id)
+  with check ((select auth.uid()) = user_id);
+
+drop policy if exists "own lesson reflections" on public.lesson_reflections;
+create policy "own lesson reflections"
+  on public.lesson_reflections
+  for all
+  to authenticated
+  using ((select auth.uid()) = user_id)
+  with check ((select auth.uid()) = user_id);
+
+drop policy if exists "own sermon messages" on public.sermon_messages;
+create policy "own sermon messages"
+  on public.sermon_messages
+  for all
+  to authenticated
+  using ((select auth.uid()) = user_id)
+  with check ((select auth.uid()) = user_id);
+
+drop policy if exists "own subscription" on public.user_subscriptions;
+create policy "own subscription"
+  on public.user_subscriptions
+  for select
+  to authenticated
+  using ((select auth.uid()) = user_id);
