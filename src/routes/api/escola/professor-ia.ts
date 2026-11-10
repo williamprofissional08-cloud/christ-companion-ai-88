@@ -1,9 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
-import {
-  aiErrorMessage,
-  aiResponsesModel,
-} from "@/lib/ai-gateway.server";
+import { aiErrorMessage, aiResponsesModel } from "@/lib/ai-gateway.server";
 import { readLimitedJson } from "@/lib/request-body.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
 import { enforceAiRateLimit } from "@/lib/ai-rate-limit.server";
