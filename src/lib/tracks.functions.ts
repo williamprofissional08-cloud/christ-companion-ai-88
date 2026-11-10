@@ -7,12 +7,13 @@ export const getTrackProgress = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ slug: z.string().max(80) }).parse(input))
   .handler(async ({ data, context }) => {
-    const { data: row } = await context.supabase
+    const { data: row, error } = await context.supabase
       .from("track_progress")
       .select("*")
       .eq("user_id", context.userId)
       .eq("track_slug", data.slug)
       .maybeSingle();
+    if (error) throw new Error(error.message);
     return row;
   });
 
@@ -48,6 +49,7 @@ export const saveTrackStep = createServerFn({ method: "POST" })
       .eq("user_id", userId)
       .eq("track_slug", data.slug)
       .maybeSingle();
+    if (existing.error) throw new Error(existing.error.message);
     const steps = new Set<number>(existing.data?.completed_steps ?? []);
     if (data.done) steps.add(data.step);
     else steps.delete(data.step);
