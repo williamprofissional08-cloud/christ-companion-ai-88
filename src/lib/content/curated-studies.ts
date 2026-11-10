@@ -104,6 +104,7 @@ import { leviticus12Study } from "./leviticus-12-study";
 import { leviticus13Study } from "./leviticus-13-study";
 import { leviticus14Study } from "./leviticus-14-study";
 import { leviticus15Study } from "./leviticus-15-study";
+import { leviticus16Study } from "./leviticus-16-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -216,4 +217,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-levitico-cap-13": leviticus13Study,
   "biblia-levitico-cap-14": leviticus14Study,
   "biblia-levitico-cap-15": leviticus15Study,
+  "biblia-levitico-cap-16": leviticus16Study,
 };
