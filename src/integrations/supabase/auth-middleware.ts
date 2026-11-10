@@ -37,10 +37,43 @@ export const requireSupabaseAuth = createMiddleware({ type: 'function' })
     // TanStack Start server functions do not inherit the Supabase browser session
     // automatically. Forward the current access token explicitly; the server
     // middleware below verifies its signature and claims before using it.
-    const { data, error } = await browserSupabase.auth.getSession()
-    const accessToken = data.session?.access_token
+    let { data, error } = await browserSupabase.auth.getSession()
+    let accessToken = data.session?.access_token
+
     if (error || !accessToken) {
-      throw new Error('Unauthorized: Sessão ausente ou expirada. Entre novamente.')
+      throw new Error('Sua sessão expirou. Entre novamente para carregar o devocional.')
+    }
+
+    // A browser session can survive a backend/project switch in the Lovable
+    // container. Never forward a JWT issued by a different Supabase project.
+    const configuredSupabaseUrl = import.meta.env['VITE_SUPABASE_URL']
+    const expectedIssuer = typeof configuredSupabaseUrl === 'string' && configuredSupabaseUrl
+      ? configuredSupabaseUrl.replace(/\/+$/, '') + '/auth/v1'
+      : null
+    const getIssuer = (jwt: string): string | null => {
+      try {
+        const payload = jwt.split('.')[1]
+        if (!payload) return null
+        const normalized = payload.replace(/-/g, '+').replace(/_/g, '/')
+        const decoded = atob(normalized.padEnd(Math.ceil(normalized.length / 4) * 4, '='))
+        const claims = JSON.parse(decoded) as { iss?: unknown }
+        return typeof claims.iss === 'string' ? claims.iss : null
+      } catch {
+        return null
+      }
+    }
+
+    if (expectedIssuer && getIssuer(accessToken) !== expectedIssuer) {
+      // Try to rotate a stale token using this project's refresh token first.
+      const refreshed = await browserSupabase.auth.refreshSession()
+      data = refreshed.data
+      error = refreshed.error
+      accessToken = data.session?.access_token
+
+      if (error || !accessToken || getIssuer(accessToken) !== expectedIssuer) {
+        await browserSupabase.auth.signOut({ scope: 'local' })
+        throw new Error('Sua sessão pertence a uma versão antiga do aplicativo. Entre novamente para continuar.')
+      }
     }
 
     return next({
