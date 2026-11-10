@@ -49,6 +49,57 @@ function ConfiguracoesPage() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const [signingOut, setSigningOut] = useState(false);
+  const [newEmail, setNewEmail] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmNewPassword, setConfirmNewPassword] = useState("");
+  const [updatingEmail, setUpdatingEmail] = useState(false);
+  const [updatingPassword, setUpdatingPassword] = useState(false);
+
+  async function updateAccountEmail() {
+    const normalized = newEmail.trim().toLowerCase();
+    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(normalized)) {
+      toast.error("Informe um e-mail válido.");
+      return;
+    }
+    if (normalized === user?.email?.toLowerCase()) {
+      toast.error("Este já é o e-mail atual da conta.");
+      return;
+    }
+    setUpdatingEmail(true);
+    try {
+      const { error } = await supabase.auth.updateUser({ email: normalized });
+      if (error) throw error;
+      toast.success("Solicitação enviada. Confirme a alteração pelo link enviado ao e-mail.");
+      setNewEmail("");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Não foi possível atualizar o e-mail.");
+    } finally {
+      setUpdatingEmail(false);
+    }
+  }
+
+  async function updateAccountPassword() {
+    if (newPassword.length < 6) {
+      toast.error("A nova senha precisa ter pelo menos 6 caracteres.");
+      return;
+    }
+    if (newPassword !== confirmNewPassword) {
+      toast.error("As senhas não conferem.");
+      return;
+    }
+    setUpdatingPassword(true);
+    try {
+      const { error } = await supabase.auth.updateUser({ password: newPassword });
+      if (error) throw error;
+      toast.success("Senha atualizada com sucesso.");
+      setNewPassword("");
+      setConfirmNewPassword("");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Não foi possível atualizar a senha.");
+    } finally {
+      setUpdatingPassword(false);
+    }
+  }
 
   async function switchAccount() {
     setSigningOut(true);
@@ -348,6 +399,25 @@ function ConfiguracoesPage() {
           <p className="mt-1 text-xs text-muted-foreground">
             Para usar outra conta neste dispositivo, encerre a sessão atual e entre novamente com outro e-mail.
           </p>
+          <div className="mt-5 grid gap-5 border-t pt-5">
+            <form className="space-y-3" onSubmit={(event) => { event.preventDefault(); void updateAccountEmail(); }}>
+              <div>
+                <Label htmlFor="account-new-email">Alterar e-mail</Label>
+                <p className="mt-1 text-xs text-muted-foreground">A alteração só será concluída depois da confirmação solicitada pelo Supabase.</p>
+              </div>
+              <Input id="account-new-email" type="email" autoComplete="email" value={newEmail} onChange={(event) => setNewEmail(event.target.value)} placeholder="novo@email.com" />
+              <Button type="submit" size="sm" variant="outline" disabled={updatingEmail || !newEmail.trim()}>{updatingEmail ? "Enviando..." : "Solicitar alteração de e-mail"}</Button>
+            </form>
+            <form className="space-y-3" onSubmit={(event) => { event.preventDefault(); void updateAccountPassword(); }}>
+              <div>
+                <Label htmlFor="account-new-password">Alterar senha</Label>
+                <p className="mt-1 text-xs text-muted-foreground">Use pelo menos 6 caracteres e confirme a nova senha.</p>
+              </div>
+              <Input id="account-new-password" type="password" minLength={6} autoComplete="new-password" value={newPassword} onChange={(event) => setNewPassword(event.target.value)} placeholder="Nova senha" />
+              <Input id="account-confirm-password" type="password" minLength={6} autoComplete="new-password" value={confirmNewPassword} onChange={(event) => setConfirmNewPassword(event.target.value)} placeholder="Confirme a nova senha" />
+              <Button type="submit" size="sm" variant="outline" disabled={updatingPassword || !newPassword || !confirmNewPassword}>{updatingPassword ? "Atualizando..." : "Atualizar senha"}</Button>
+            </form>
+          </div>
           <Button
             type="button"
             variant="outline"
