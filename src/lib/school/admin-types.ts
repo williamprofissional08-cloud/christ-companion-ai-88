@@ -64,6 +64,14 @@ export type AdminStats = {
   freeLessons: number;
   premiumLessons: number;
   usersWithProgress: number;
+  totalMembers: number;
+  newMembersToday: number;
+  newMembers7Days: number;
+  newMembers30Days: number;
+  activeMembersToday: number;
+  activeMembers7Days: number;
+  activeMembers30Days: number;
+  membersNeverActive: number;
 };
 
 /** Aula publicada exibida ao aluno. */

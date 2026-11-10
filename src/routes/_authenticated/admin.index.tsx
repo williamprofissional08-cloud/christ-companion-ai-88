@@ -47,7 +47,17 @@ function AdminDashboard() {
     { label: "Total de aulas", value: stats?.lessons },
     { label: "Conteúdos gratuitos", value: stats?.freeLessons },
     { label: "Conteúdos premium", value: stats?.premiumLessons },
-    { label: "Usuários com progresso", value: stats?.usersWithProgress },
+  ];
+  const memberCards = [
+    { label: "Contas cadastradas", value: stats?.totalMembers },
+    { label: "Novos cadastros hoje", value: stats?.newMembersToday },
+    { label: "Novos cadastros (7 dias)", value: stats?.newMembers7Days },
+    { label: "Novos cadastros (30 dias)", value: stats?.newMembers30Days },
+    { label: "Ativos hoje", value: stats?.activeMembersToday },
+    { label: "Ativos (7 dias)", value: stats?.activeMembers7Days },
+    { label: "Ativos (30 dias)", value: stats?.activeMembers30Days },
+    { label: "Nunca acessaram", value: stats?.membersNeverActive },
+    { label: "Com progresso em cursos", value: stats?.usersWithProgress },
   ];
 
   return (
@@ -63,6 +73,18 @@ function AdminDashboard() {
           </div>
           <Badge variant="outline">Acesso restrito a administradores</Badge>
         </Card>
+
+        <section className="space-y-3">
+          <div><h2 className="font-display text-base font-semibold">Usuários e crescimento</h2><p className="text-xs text-muted-foreground">Contas registradas e atividade recente. Os totais consideram os perfis existentes no aplicativo.</p></div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+            {memberCards.map((card) => (
+              <Card key={card.label} className="p-4">
+                <p className="text-xs text-muted-foreground">{card.label}</p>
+                <p className="mt-1 font-display text-2xl font-semibold">{isLoading ? "—" : (card.value ?? 0).toLocaleString("pt-BR")}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
 
         <section className="space-y-3">
           <div><h2 className="font-display text-base font-semibold">Visão geral</h2><p className="text-xs text-muted-foreground">Indicadores do conteúdo cadastrado no aplicativo</p></div>
