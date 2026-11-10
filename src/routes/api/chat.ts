@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
 import { aiErrorMessage, aiResponsesModel, BIBLICAL_SYSTEM_PROMPT } from "@/lib/ai-gateway.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
-import { enforceAiRateLimit } from "@/lib/ai-rate-limit.server";
 import { readLimitedJson } from "@/lib/request-body.server";
 
 type Body = { messages?: unknown; threadId?: unknown };
@@ -19,9 +18,6 @@ export const Route = createFileRoute("/api/chat")({
         try {
           const auth = await authenticateRequest(request);
           if (!auth) return new Response("Unauthorized", { status: 401 });
-          const rateLimitResponse = await enforceAiRateLimit(auth.supabase, "chat");
-          if (rateLimitResponse) return rateLimitResponse;
-
           const parsed = await readLimitedJson(request, MAX_CHAT_BODY_BYTES);
           if (!parsed.ok) return parsed.response;
 
