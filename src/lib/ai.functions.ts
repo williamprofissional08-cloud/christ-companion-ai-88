@@ -21,6 +21,22 @@ export const getDevotional = createServerFn({ method: "POST" })
       .eq("user_id", context.userId)
       .maybeSingle();
 
+    // Load each member's recent history so the generator can actively avoid repeating
+    // the same Bible book/chapter, primary passage, or theme in consecutive days.
+    const recentResult = await context.supabase
+      .from("devotionals")
+      .select("content")
+      .eq("user_id", context.userId)
+      .lt("day", data.day)
+      .order("day", { ascending: false })
+      .limit(14);
+    const recentDevotionals = (recentResult.data || []).flatMap((row) => {
+      const saved = row.content as unknown as Partial<DevotionalContent> | null;
+      const theme = typeof saved?.theme === "string" ? saved.theme : "";
+      const reference = typeof saved?.verse?.reference === "string" ? saved.verse.reference : "";
+      return theme || reference ? [{ theme, reference }] : [];
+    });
+
     const { generateDevotional } = await import("./ai-content.server");
     const prefs = settings.data
       ? {
@@ -33,7 +49,7 @@ export const getDevotional = createServerFn({ method: "POST" })
 
     let content: DevotionalContent;
     try {
-      content = await generateDevotional(data.day, prefs);
+      content = await generateDevotional(data.day, prefs, recentDevotionals);
     } catch (aiError) {
       // IA indisponível (ex.: créditos esgotados): entrega devocional de reserva
       // em vez de deixar a tela sem conteúdo. Não é salvo no banco.

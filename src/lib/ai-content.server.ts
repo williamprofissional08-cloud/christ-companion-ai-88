@@ -104,12 +104,23 @@ async function generateJson<T>(prompt: string, requiredRefFields: string[] = [])
   return parsed;
 }
 
-export function generateDevotional(day: string, prefs?: GenerationPreferences) {
+export function generateDevotional(
+  day: string,
+  prefs?: GenerationPreferences,
+  recentDevotionals: Array<{ theme: string; reference: string }> = [],
+) {
+  const recentHistory = recentDevotionals.length
+    ? recentDevotionals.map((item) => `- Tema: "${item.theme}"; passagem principal: ${item.reference}`).join("\\n")
+    : "- Nenhum histórico recente disponível.";
   return generateJson<DevotionalContent>(
-    `Crie o devocional cristão do dia ${day} em português do Brasil.
+    `Crie um devocional cristão novo para o dia ${day}, em português do Brasil.
+HISTÓRICO RECENTE — NÃO REPITA:
+${recentHistory}
+Regra obrigatória de variedade: não reutilize o mesmo livro bíblico + capítulo, a mesma passagem principal, o mesmo tema central nem apenas troque palavras de um devocional recente. Evite também escolher um texto que seja apenas uma continuação imediata da mesma passagem. Considere os últimos 14 dias como janela de bloqueio; depois desse período, uma passagem pode voltar a ser usada ocasionalmente, desde que o enfoque e a aplicação sejam realmente diferentes.
+Alterne deliberadamente entre livros e gêneros bíblicos (Evangelhos, Lei, históricos, poesia/sabedoria, profetas, cartas), personagens, contextos e temas. Escolha uma passagem adequada e pouco recente, com contexto interpretado corretamente; não escolha sempre Mateus ou Salmos. Cada dia deve trazer uma abordagem bíblica distinta e substancial, não um texto genérico reciclado.
 Responda em JSON com as chaves:
-{"theme":"tema curto","verse":{"reference":"Livro capítulo:versículo","text":"texto do versículo (tradução em domínio público, estilo Almeida)"},"reflection":"3 a 5 parágrafos curtos","application":"aplicação prática concreta para hoje","prayer":"oração em primeira pessoa","challenge":"desafio espiritual do dia, uma frase","question":"pergunta para reflexão","motivational":"frase motivacional baseada na Bíblia com referência","readingSuggestion":"sugestão de leitura, ex.: Salmos 34:1-10"}
-Use apenas ensino fiel às Escrituras e cite referências completas dentro dos textos.${preferencesPrompt(prefs)}`,
+{"theme":"tema curto e específico","verse":{"reference":"Livro capítulo:versículo","text":"texto do versículo (tradução em domínio público, estilo Almeida)"},"reflection":"3 a 5 parágrafos curtos explicando o contexto e a mensagem do texto","application":"aplicação prática concreta para hoje","prayer":"oração em primeira pessoa coerente com a passagem","challenge":"desafio espiritual do dia, uma frase","question":"pergunta específica para reflexão","motivational":"frase fundamentada na passagem com referência","readingSuggestion":"sugestão complementar de leitura diferente da passagem principal"}
+Use apenas ensino fiel às Escrituras, cite referências completas e diferencie o sentido original do texto da aplicação atual. Não invente citações bíblicas.${preferencesPrompt(prefs)}`,
     ["reflection", "application", "prayer", "challenge", "motivational", "readingSuggestion"],
   );
 }
