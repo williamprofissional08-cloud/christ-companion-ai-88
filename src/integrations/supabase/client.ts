@@ -32,6 +32,23 @@ function createSupabaseFetch(supabaseKey: string): typeof fetch {
  * Supabase project after a project/backend change. Supabase then rejects every
  * authenticated request with bad_jwt. Discard only that stale local session.
  */
+let projectKeyIdsPromise: Promise<Set<string> | null> | undefined;
+
+async function getProjectKeyIds(supabaseUrl: string): Promise<Set<string> | null> {
+  if (!projectKeyIdsPromise) {
+    const jwksUrl = `${supabaseUrl.replace(/\\/+$/, '')}/.well-known/jwks.json`;
+    projectKeyIdsPromise = fetch(jwksUrl)
+      .then(async (response) => {
+        if (!response.ok) return null;
+        const jwks = await response.json() as { keys?: Array<{ kid?: unknown }> };
+        if (!Array.isArray(jwks.keys)) return null;
+        return new Set(jwks.keys.flatMap((key) => typeof key.kid === 'string' ? [key.kid] : []));
+      })
+      .catch(() => null);
+  }
+  return projectKeyIdsPromise;
+}
+
 function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): Storage {
   const expectedIssuer = supabaseUrl.replace(/\/+$/, '') + '/auth/v1';
 
@@ -65,7 +82,7 @@ function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): S
         // A token may have the correct issuer but still reference a signing key
         // that was rotated out. Auth rejects those sessions with bad_jwt.
         if (header.alg === 'ES256' && typeof header.kid === 'string') {
-          const keyIds = await getProjectKeyIds();
+          const keyIds = await getProjectKeyIds(supabaseUrl);
           if (keyIds && !keyIds.has(header.kid)) {
             storage.removeItem(key);
             return null;
