@@ -51,7 +51,7 @@ test("devotional pipeline always has a local fallback for backend and AI failure
     handlerSource.indexOf("export const getPlanDayContent"),
   );
 
-  assert.match(devotional, /const fallbackDevotional = await import\("\.\/content\/fallback-devotional"\)/);
+  assert.match(devotional, /const \{ fallbackDevotional \} = await import\("\.\/content\/fallback-devotional"\)/);
   assert.match(devotional, /catch \(error\)[\s\S]*return fallbackDevotional\(data\.day\)/);
   assert.match(devotional, /catch \(aiError\)[\s\S]*return fallbackDevotional\(data\.day\)/);
 });
