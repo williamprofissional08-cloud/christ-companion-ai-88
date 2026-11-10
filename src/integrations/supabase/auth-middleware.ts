@@ -48,7 +48,7 @@ export const requireSupabaseAuth = createMiddleware({ type: 'function' })
     // container. Never forward a JWT issued by a different Supabase project.
     const configuredSupabaseUrl = import.meta.env['VITE_SUPABASE_URL']
     const expectedIssuer = typeof configuredSupabaseUrl === 'string' && configuredSupabaseUrl
-      ? configuredSupabaseUrl.replace(/\\/+$/, '') + '/auth/v1'
+      ? configuredSupabaseUrl.replace(/\/+$/, '') + '/auth/v1'
       : null
     const getIssuer = (jwt: string): string | null => {
       try {
