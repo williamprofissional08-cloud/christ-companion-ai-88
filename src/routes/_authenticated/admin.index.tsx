@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowRight, BookOpen, CreditCard, GraduationCap, RefreshCw, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { ArrowRight, BookOpen, GraduationCap, RefreshCw, ShieldCheck, Sparkles, Users } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -110,12 +110,8 @@ function AdminDashboard() {
         </Card>
 
           <Card className="flex flex-wrap items-center justify-between gap-3 p-5">
-            <div><h2 className="flex items-center gap-2 font-display text-lg font-semibold"><Users className="size-5 text-primary" /> Alunos e membros</h2><p className="text-sm text-muted-foreground">Consulte contas, cadastro, último acesso e nível de assinatura.</p></div>
+            <div><h2 className="flex items-center gap-2 font-display text-lg font-semibold"><Users className="size-5 text-primary" /> Alunos e membros</h2><p className="text-sm text-muted-foreground">Consulte contas, cadastro e atividade dos membros.</p></div>
             <Button asChild><Link to="/admin/alunos">Ver membros <ArrowRight className="ml-1 size-4" /></Link></Button>
-          </Card>
-          <Card className="flex flex-wrap items-center justify-between gap-3 p-5">
-            <div><h2 className="flex items-center gap-2 font-display text-lg font-semibold"><CreditCard className="size-5 text-primary" /> Assinaturas e planos</h2><p className="text-sm text-muted-foreground">Acompanhe planos, status e vencimentos. Preparado para futura integração de pagamentos.</p></div>
-            <Button asChild><Link to="/admin/assinaturas">Ver assinaturas <ArrowRight className="ml-1 size-4" /></Link></Button>
           </Card>
           </div>
         </section>
