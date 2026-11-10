@@ -114,13 +114,9 @@ export const requireSupabaseAuth = createMiddleware({ type: 'function' })
       throw new Error('Unauthorized: Only Bearer tokens are supported');
     }
 
-    const token = authHeader.replace('Bearer ', '');
+    const token = authHeader.slice('Bearer '.length).trim();
     if (!token) {
       throw new Error('Unauthorized: No token provided');
-    }
-
-    if (token.split('.').length !== 3) {
-      throw new Error('Unauthorized: Invalid token');
     }
 
     const supabase = createClient<Database>(
@@ -129,9 +125,6 @@ export const requireSupabaseAuth = createMiddleware({ type: 'function' })
       {
         global: {
           fetch: createSupabaseFetch(SUPABASE_PUBLISHABLE_KEY!),
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
         },
         auth: {
           storage: undefined,
@@ -141,20 +134,20 @@ export const requireSupabaseAuth = createMiddleware({ type: 'function' })
       }
     );
 
-    const { data, error } = await supabase.auth.getClaims(token);
-    if (error || !data?.claims) {
-      throw new Error('Unauthorized: Invalid token');
-    }
-
-    if (!data.claims.sub) {
-      throw new Error('Unauthorized: No user ID found in token');
+    // Validate the forwarded access token against the same Auth project used
+    // by this server client. getUser() asks Supabase Auth to validate the JWT,
+    // avoiding local JWKS/signing-key assumptions from getClaims().
+    const { data, error } = await supabase.auth.getUser(token);
+    if (error || !data.user) {
+      console.error('[Supabase auth] Access-token validation failed:', error?.message ?? 'User not found');
+      throw new Error('Unauthorized: A sessão não foi aceita pelo projeto Supabase configurado no servidor. Entre novamente; se persistir, verifique se SUPABASE_URL e VITE_SUPABASE_URL apontam para o mesmo projeto.');
     }
 
     return next({
       context: {
         supabase,
-        userId: data.claims.sub,
-        claims: data.claims,
+        userId: data.user.id,
+        claims: { sub: data.user.id },
       },
     });
   },
