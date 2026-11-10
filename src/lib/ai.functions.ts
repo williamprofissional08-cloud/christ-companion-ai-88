@@ -7,65 +7,81 @@ export const getDevotional = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ day: z.string().max(10) }).parse(input))
   .handler(async ({ data, context }): Promise<DevotionalContent> => {
-    const existing = await context.supabase
-      .from("devotionals")
-      .select("content")
-      .eq("user_id", context.userId)
-      .eq("day", data.day)
-      .maybeSingle();
-    if (existing.data?.content) return existing.data.content as unknown as DevotionalContent;
+    const { fallbackDevotional } = await import("./content/fallback-devotional");
 
-    const settings = await context.supabase
-      .from("user_settings")
-      .select("reading_minutes, challenge_type, interests, daily_goal")
-      .eq("user_id", context.userId)
-      .maybeSingle();
-
-    // Load each member's recent history so the generator can actively avoid repeating
-    // the same Bible book/chapter, primary passage, or theme in consecutive days.
-    const recentResult = await context.supabase
-      .from("devotionals")
-      .select("content")
-      .eq("user_id", context.userId)
-      .lt("day", data.day)
-      .order("day", { ascending: false })
-      .limit(14);
-    const recentDevotionals = (recentResult.data || []).flatMap((row) => {
-      const saved = row.content as unknown as Partial<DevotionalContent> | null;
-      const theme = typeof saved?.theme === "string" ? saved.theme : "";
-      const reference = typeof saved?.verse?.reference === "string" ? saved.verse.reference : "";
-      return theme || reference ? [{ theme, reference }] : [];
-    });
-
-    const { generateDevotional } = await import("./ai-content.server");
-    const prefs = settings.data
-      ? {
-          readingMinutes: settings.data.reading_minutes,
-          challengeType: settings.data.challenge_type,
-          interests: settings.data.interests,
-          dailyGoal: settings.data.daily_goal,
-        }
-      : undefined;
-
-    let content: DevotionalContent;
     try {
-      content = await generateDevotional(data.day, prefs, recentDevotionals);
-    } catch (aiError) {
-      // IA indisponível (ex.: créditos esgotados): entrega devocional de reserva
-      // em vez de deixar a tela sem conteúdo. Não é salvo no banco.
-      console.error("devotional AI unavailable", (aiError as Error).message);
-      const { fallbackDevotional } = await import("./content/fallback-devotional");
+      const existing = await context.supabase
+        .from("devotionals")
+        .select("content")
+        .eq("user_id", context.userId)
+        .eq("day", data.day)
+        .maybeSingle();
+      if (existing.data?.content) return existing.data.content as unknown as DevotionalContent;
+      if (existing.error) {
+        console.error("devotional lookup failed; using generated or fallback content", existing.error.message);
+      }
+
+      const settings = await context.supabase
+        .from("user_settings")
+        .select("reading_minutes, challenge_type, interests, daily_goal")
+        .eq("user_id", context.userId)
+        .maybeSingle();
+      if (settings.error) {
+        console.error("devotional settings lookup failed", settings.error.message);
+      }
+
+      // Load recent history when available; a history failure must not block today's reading.
+      let recentDevotionals: Array<{ theme: string; reference: string }> = [];
+      try {
+        const recentResult = await context.supabase
+          .from("devotionals")
+          .select("content")
+          .eq("user_id", context.userId)
+          .lt("day", data.day)
+          .order("day", { ascending: false })
+          .limit(14);
+        if (recentResult.error) throw recentResult.error;
+        recentDevotionals = (recentResult.data || []).flatMap((row) => {
+          const saved = row.content as unknown as Partial<DevotionalContent> | null;
+          const theme = typeof saved?.theme === "string" ? saved.theme : "";
+          const reference = typeof saved?.verse?.reference === "string" ? saved.verse.reference : "";
+          return theme || reference ? [{ theme, reference }] : [];
+        });
+      } catch (historyError) {
+        console.error("devotional history unavailable", historyError);
+      }
+
+      const { generateDevotional } = await import("./ai-content.server");
+      const prefs = settings.data
+        ? {
+            readingMinutes: settings.data.reading_minutes,
+            challengeType: settings.data.challenge_type,
+            interests: settings.data.interests,
+            dailyGoal: settings.data.daily_goal,
+          }
+        : undefined;
+
+      let content: DevotionalContent;
+      try {
+        content = await generateDevotional(data.day, prefs, recentDevotionals);
+      } catch (aiError) {
+        console.error("devotional AI unavailable", (aiError as Error).message);
+        return fallbackDevotional(data.day);
+      }
+
+      const { error } = await context.supabase
+        .from("devotionals")
+        .upsert(
+          { user_id: context.userId, day: data.day, content: content as never },
+          { onConflict: "user_id,day" },
+        );
+      if (error) console.error("devotional save failed", error.message);
+      return content;
+    } catch (error) {
+      // Database/network failures must not leave the home page or devotional route empty.
+      console.error("devotional generation pipeline failed; using local fallback", error);
       return fallbackDevotional(data.day);
     }
-
-    const { error } = await context.supabase
-      .from("devotionals")
-      .upsert(
-        { user_id: context.userId, day: data.day, content: content as never },
-        { onConflict: "user_id,day" },
-      );
-    if (error) console.error("devotional save failed", error.message);
-    return content;
   });
 
 
