@@ -164,16 +164,18 @@ export function StudyReader({
       window.requestAnimationFrame(measure);
     };
     const flush = () => onCheckpoint?.({ ...checkpointRef.current });
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "hidden") flush();
+    };
     measure();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("pagehide", flush);
-    document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "hidden") flush();
-    });
+    document.addEventListener("visibilitychange", onVisibilityChange);
     const timer = window.setInterval(flush, 10000);
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("pagehide", flush);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
       if (saveTimer !== undefined) window.clearTimeout(saveTimer);
       window.clearInterval(timer);
       flush();
