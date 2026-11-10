@@ -1,10 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
-import {
-  aiErrorMessage,
-  aiResponsesModel,
-  RESPONSES_PROVIDER_OPTIONS,
-} from "@/lib/ai-gateway.server";
+import { aiErrorMessage, aiResponsesModel } from "@/lib/ai-gateway.server";
 import { readLimitedJson } from "@/lib/request-body.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
 import { enforceAiRateLimit } from "@/lib/ai-rate-limit.server";
@@ -94,10 +90,9 @@ export const Route = createFileRoute("/api/escola/professor-ia")({
           if (!context) return new Response("Aula não disponível", { status: 404 });
 
           const result = streamText({
-            model: aiResponsesModel(),
+            model: aiResponsesModel((request.headers.get("authorization") ?? "").slice(7)),
             system: buildProfessorSystemPrompt(context),
             messages: await convertToModelMessages(messages),
-            providerOptions: RESPONSES_PROVIDER_OPTIONS,
             maxRetries: 2,
             onError: ({ error }) => {
               console.error("professor-ia stream error", error);

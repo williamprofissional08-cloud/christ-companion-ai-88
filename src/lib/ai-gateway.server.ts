@@ -1,50 +1,39 @@
 import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
-import { createOpenAI } from "@ai-sdk/openai";
 import type { LanguageModel } from "ai";
 
-/** Provider do Lovable AI Gateway (uso exclusivo no servidor). */
-export function createLovableAiGatewayProvider(apiKey: string) {
-  return createOpenAICompatible({
-    name: "lovable",
-    baseURL: "https://ai.gateway.lovable.dev/v1",
-    headers: { "Lovable-API-Key": apiKey },
-  });
-}
-
+/** Provider legado mantido apenas para geração de outros conteúdos do app. */
 export function aiGateway() {
   const key = process.env["LOVABLE_API_KEY"];
   if (!key) throw new Error("Missing LOVABLE_API_KEY");
-  return createLovableAiGatewayProvider(key);
-}
-
-/** Modelo de chat via Responses API, exigida pelos modelos OpenAI atuais. */
-export function aiResponsesModel() {
-  const key = process.env["LOVABLE_API_KEY"];
-  if (!key) throw new Error("Missing LOVABLE_API_KEY");
-  const provider = createOpenAI({
+  return createOpenAICompatible({
+    name: "lovable",
     baseURL: "https://ai.gateway.lovable.dev/v1",
-    apiKey: key,
-    headers: {
-      "Lovable-API-Key": key,
-      "X-Lovable-AIG-SDK": "vercel-ai-sdk",
-    },
+    headers: { "Lovable-API-Key": key },
   });
-  // The OpenAI provider and core SDK currently resolve distinct compatible
-  // v4 provider declarations; bridge their TypeScript-only structural mismatch.
-  return provider.responses(CHAT_MODEL) as unknown as LanguageModel;
 }
 
 export const CHAT_MODEL = "openai/gpt-5.6-sol";
 export const PROVIDER_OPTIONS = { lovable: { reasoningEffort: "none" } } as const;
-export const RESPONSES_PROVIDER_OPTIONS = {
-  openai: {
-    forceReasoning: true,
-    reasoningEffort: "medium",
-    reasoningSummary: "auto",
-    store: false,
-    include: ["reasoning.encrypted_content"],
-  },
-};
+
+/** Proxy seguro para o Gemini executado como Supabase Edge Function. */
+export function aiResponsesModel(accessToken: string) {
+  const supabaseUrl = process.env["SUPABASE_URL"];
+  const publishableKey = process.env["SUPABASE_PUBLISHABLE_KEY"];
+  if (!supabaseUrl || !publishableKey) {
+    throw new Error("Configuração do Supabase indisponível para o serviço Gemini.");
+  }
+  const provider = createOpenAICompatible({
+    name: "gemini",
+    baseURL: `${supabaseUrl.replace(/\/$/, "")}/functions/v1/gemini-ai/v1`,
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+      apikey: publishableKey,
+    },
+  });
+  return provider("gemini-2.5-flash") as unknown as LanguageModel;
+}
+
+export const RESPONSES_PROVIDER_OPTIONS = {};
 
 /**
  * Traduz falhas do AI Gateway em mensagem amigável (sem stack trace nem chaves).
@@ -54,13 +43,13 @@ export function aiErrorMessage(error: unknown): string {
   const status = (error as { statusCode?: number; status?: number })?.statusCode
     ?? (error as { status?: number })?.status;
   if (status === 402) {
-    return "Os créditos de IA do aplicativo acabaram. O responsável pelo app precisa adicionar créditos de IA no Lovable para que o Assistente e o Professor IA voltem a responder. (Você não é cobrado por usar a IA.)";
+    return "O serviço de IA recusou a solicitação por limite de cobrança. Nenhum serviço pago alternativo será acionado.";
   }
   if (status === 429) {
-    return "Muitas perguntas ao mesmo tempo. Aguarde alguns instantes e tente novamente.";
+    return "O limite gratuito do Gemini foi atingido ou há muitas solicitações. Aguarde a renovação da cota e tente novamente. O app não mudará para um serviço pago.";
   }
   if (status === 403) {
-    return "O uso de IA está bloqueado nas configurações do workspace do app. O responsável precisa reativar a IA ou revisar o limite de créditos.";
+    return "O Gemini recusou o acesso. Verifique a chave e as permissões da API no Google AI Studio.";
   }
   if (status === 401) {
     return "A configuração da chave de IA do app está inválida. É necessário reconfigurar a chave do serviço de IA.";

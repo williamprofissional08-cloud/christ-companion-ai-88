@@ -1,11 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
-import {
-  aiErrorMessage,
-  aiResponsesModel,
-  BIBLICAL_SYSTEM_PROMPT,
-  RESPONSES_PROVIDER_OPTIONS,
-} from "@/lib/ai-gateway.server";
+import { aiErrorMessage, aiResponsesModel, BIBLICAL_SYSTEM_PROMPT } from "@/lib/ai-gateway.server";
 import { authenticateRequest } from "@/lib/request-auth.server";
 import { enforceAiRateLimit } from "@/lib/ai-rate-limit.server";
 import { readLimitedJson } from "@/lib/request-body.server";
@@ -134,10 +129,9 @@ export const Route = createFileRoute("/api/chat")({
             .eq("user_id", auth.userId);
 
           const result = streamText({
-            model: aiResponsesModel(),
+            model: aiResponsesModel((request.headers.get("authorization") ?? "").slice(7)),
             system: BIBLICAL_SYSTEM_PROMPT,
             messages: await convertToModelMessages(uiMessages),
-            providerOptions: RESPONSES_PROVIDER_OPTIONS,
             maxRetries: 2,
             onError: ({ error }) => {
               console.error("chat stream error", error);
