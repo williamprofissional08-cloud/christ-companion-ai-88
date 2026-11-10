@@ -52,10 +52,7 @@ jobs:
           src/routes/api/chat.ts
           src/routes/api/escola/professor-ia.ts
           src/routes/api/escola/professor-tts.ts
-          supabase/functions/gemini-ai/index.ts
-          supabase/migrations/20261110150000_restore_track_progress.sql
           tests/ai-rate-limit.test.mjs
-          tests/track-progress-migration.test.mjs
 
       - name: Build production app
         run: npm run build
