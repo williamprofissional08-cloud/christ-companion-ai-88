@@ -30,7 +30,7 @@ export function ProfileEditor() {
     },
   });
 
-  useEffect(() => { setName(profile.data?.display_name ?? String(user?.user_metadata?.full_name ?? "")); }, [profile.data, user]);
+  useEffect(() => { setName(profile.data?.display_name ?? String(user?.user_metadata?.["full_name"] ?? "")); }, [profile.data, user]);
 
   async function saveName() {
     if (!user) return;
