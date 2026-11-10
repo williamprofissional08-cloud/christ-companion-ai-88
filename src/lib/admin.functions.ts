@@ -26,6 +26,7 @@ export const getAdminStats = createServerFn({ method: "GET" })
       courses, modules, lessons, progress,
       totalMembers, newToday, new7Days, new30Days,
       activeToday, active7Days, active30Days, neverActive,
+      pendingPosts, pendingBooks,
     ] = await Promise.all([
       context.supabase.from("courses").select("status"),
       context.supabase.from("course_modules").select("id"),
@@ -39,9 +40,11 @@ export const getAdminStats = createServerFn({ method: "GET" })
       context.supabase.from("profiles").select("id", { count: "exact", head: true }).gte("last_seen_at", sevenDaysAgo),
       context.supabase.from("profiles").select("id", { count: "exact", head: true }).gte("last_seen_at", thirtyDaysAgo),
       context.supabase.from("profiles").select("id", { count: "exact", head: true }).is("last_seen_at", null),
+      context.supabase.from("community_posts").select("id", { count: "exact", head: true }).eq("status", "pending"),
+      context.supabase.from("community_resources").select("id", { count: "exact", head: true }).eq("status", "pending"),
     ]);
 
-    const queries = [courses, modules, lessons, progress, totalMembers, newToday, new7Days, new30Days, activeToday, active7Days, active30Days, neverActive];
+    const queries = [courses, modules, lessons, progress, totalMembers, newToday, new7Days, new30Days, activeToday, active7Days, active30Days, neverActive, pendingPosts, pendingBooks];
     const failed = queries.find((result) => result.error);
     if (failed?.error) throw new Error(`Não foi possível carregar as estatísticas administrativas: ${failed.error.message}`);
 
@@ -64,6 +67,8 @@ export const getAdminStats = createServerFn({ method: "GET" })
       activeMembers7Days: active7Days.count ?? 0,
       activeMembers30Days: active30Days.count ?? 0,
       membersNeverActive: neverActive.count ?? 0,
+      pendingPosts: pendingPosts.count ?? 0,
+      pendingBooks: pendingBooks.count ?? 0,
     };
   });
 
