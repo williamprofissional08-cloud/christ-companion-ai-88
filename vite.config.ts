@@ -5,17 +5,18 @@
 //     React/TanStack dedupe, error logger plugins, and sandbox detection (port/host/strictPort).
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-import { loadEnv } from "vite";
 
-const publicEnv = loadEnv(process.env["NODE_ENV"] ?? "production", process.cwd(), "VITE_");
-// Public (non-secret) values bound to this project's backend; used only when the build lacks them.
-const publicBackendUrl =
-  publicEnv["VITE_SUPABASE_URL"] || "https://uluumebztnrgpyzohqrv.supabase.co";
-const publicBackendKey =
-  publicEnv["VITE_SUPABASE_PUBLISHABLE_KEY"] || "sb_publishable_R-b9hG7BURmJCmtVG0393w_4AMoonvq";
-// Expose to Vite's env loader too, so bracket access (import.meta.env['VITE_…']) resolves.
-process.env["VITE_SUPABASE_URL"] ||= publicBackendUrl;
-process.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ||= publicBackendKey;
+// The existing production users and content live in this Supabase project.
+// Keep browser and SSR pointed at the same backend to prevent function calls
+// (including gemini-ai) from being sent to a different Supabase project.
+const publicBackendUrl = "https://uluumebztnrgpyzohqrv.supabase.co";
+const publicBackendKey = "sb_publishable_R-b9hG7BURmJCmtVG0393w_4AMoonvq";
+
+// Force the same public project reference in both Vite's browser bundle and SSR.
+process.env["VITE_SUPABASE_URL"] = publicBackendUrl;
+process.env["VITE_SUPABASE_PUBLISHABLE_KEY"] = publicBackendKey;
+process.env["SUPABASE_URL"] = publicBackendUrl;
+process.env["SUPABASE_PUBLISHABLE_KEY"] = publicBackendKey;
 
 const publicDefines = {
   "import.meta.env.VITE_SUPABASE_URL": JSON.stringify(publicBackendUrl),
@@ -24,14 +25,12 @@ const publicDefines = {
 
 export default defineConfig({
   // Keep Lovable's explicit VITE_* replacement enabled for browser bundles.
-  // The generated browser client reads these public values at runtime.
   envDefine: true,
   vite: {
     define: publicDefines,
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
     server: { entry: "server" },
   },
 });
