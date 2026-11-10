@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { getPublishedManagedCatalog } from "@/lib/admin.functions";
 import { BIBLE_BOOKS, BIBLE_CHAPTER_TOTAL, getChapterStudySlug } from "@/lib/content/bible-books";
 import { deduplicateStudies, STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
+import { CURATED_STUDIES } from "@/lib/content/curated-studies";
 
 export const Route = createFileRoute("/_authenticated/estudos/")({
   head: () => ({
@@ -68,6 +69,16 @@ function EstudosPage() {
     return matchesCategory && matchesQuery;
   });
 
+  const availableChapterStudies = BIBLE_BOOKS.flatMap((book) =>
+    Array.from({ length: book.chapters }, (_, index) => index + 1)
+      .map((chapter) => ({
+        book,
+        chapter,
+        slug: getChapterStudySlug(book.slug, chapter),
+      }))
+      .filter((item) => Boolean(CURATED_STUDIES[item.slug])),
+  );
+
   const books = BIBLE_BOOKS.filter(
     (book) =>
       !normalizedQuery ||
@@ -100,6 +111,39 @@ function EstudosPage() {
           </Button>
         ))}
       </div>
+
+      <section className="mt-8 space-y-4">
+        <div>
+          <h2 className="font-display text-xl font-semibold">
+            Estudos completos disponíveis
+          </h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {availableChapterStudies.length} estudos revisados e disponíveis para leitura agora.
+            Os capítulos ainda em preparação continuam identificados na Jornada Bíblica.
+          </p>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          {availableChapterStudies.map(({ book, chapter, slug }) => (
+            <Card key={slug} className="border-primary/20 p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+                {book.testament} · Estudo revisado
+              </p>
+              <h3 className="mt-1 font-semibold">{book.name} {chapter}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Estudo completo com exposição bíblica, contexto, interpretação e aplicação.
+              </p>
+              <Button asChild variant="hero" size="sm" className="mt-3">
+                <Link to="/estudos/$slug" params={{ slug }}>
+                  Abrir estudo
+                </Link>
+              </Button>
+            </Card>
+          ))}
+          {availableChapterStudies.length === 0 ? (
+            <p className="text-sm text-muted-foreground">Os estudos revisados aparecerão aqui.</p>
+          ) : null}
+        </div>
+      </section>
 
       <section className="mt-8 space-y-4">
         <div>
