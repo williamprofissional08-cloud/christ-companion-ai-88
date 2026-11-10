@@ -79,8 +79,9 @@ function EstudoDetalhe() {
 
   const content = useQuery({
     queryKey: ["study", slug],
-    queryFn: () => contentFn({ data: { slug } }),
+    queryFn: async () => CURATED_STUDIES[slug] ?? await contentFn({ data: { slug } }),
     staleTime: Infinity,
+    retry: false,
     enabled: Boolean(study),
   });
 

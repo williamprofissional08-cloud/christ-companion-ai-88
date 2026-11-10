@@ -12,6 +12,7 @@ import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getDashboard, getWeeklySummary, toggleHabit } from "@/lib/app.functions";
 import { getDevotional } from "@/lib/ai.functions";
+import { fallbackDevotional } from "@/lib/content/fallback-devotional";
 import { HABIT_ITEMS, todayISO } from "@/lib/types";
 
 

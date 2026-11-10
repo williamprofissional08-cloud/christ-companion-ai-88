@@ -25,6 +25,7 @@ import {
 import { requestNotificationPermission, sendTestReminder } from "@/hooks/use-reminders";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
+import { ProfileEditor } from "@/components/settings/ProfileEditor";
 
 
 export const Route = createFileRoute("/_authenticated/configuracoes")({
@@ -194,6 +195,7 @@ function ConfiguracoesPage() {
   return (
     <AppShell title="Configurações" subtitle="Sua rotina, seus lembretes, seu ritmo">
       <div className="space-y-4">
+        <ProfileEditor />
         <Card className="border-border/50 p-6 shadow-soft">
           <h2 className="font-display text-lg font-semibold">Lembretes</h2>
           <p className="text-sm text-muted-foreground">
