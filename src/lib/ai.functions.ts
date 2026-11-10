@@ -94,16 +94,31 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
     const { getPlan } = await import("./content/plans");
     const legacyPlan = getPlan(data.slug);
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-    const managed = await supabaseAdmin.from("managed_content")
-      .select("metadata, updated_at, status")
-      .eq("kind", "prayer_plan")
-      .eq("slug", data.slug)
-      .maybeSingle();
-    if (managed.error) throw new Error(managed.error.message);
-    if (managed.data?.status === "archived") throw new Error("Este plano foi arquivado.");
-    const published = managed.data?.status === "published";
-    const metadata = published && managed.data?.metadata && typeof managed.data.metadata === "object"
-      ? managed.data.metadata as Record<string, unknown> : {};
+
+    // The recovered production schema may not include the optional admin-managed
+    // catalog yet. Built-in plans remain available when that table is absent or
+    // temporarily unreachable; only an explicit archived record blocks access.
+    let managedData: {
+      metadata: unknown;
+      updated_at: string | null;
+      status: string | null;
+    } | null = null;
+    try {
+      const managed = await supabaseAdmin.from("managed_content")
+        .select("metadata, updated_at, status")
+        .eq("kind", "prayer_plan")
+        .eq("slug", data.slug)
+        .maybeSingle();
+      if (managed.error) throw managed.error;
+      managedData = managed.data;
+    } catch (error) {
+      console.error("managed prayer plan lookup failed; using built-in plan", error);
+    }
+
+    if (managedData?.status === "archived") throw new Error("Este plano foi arquivado.");
+    const published = managedData?.status === "published";
+    const metadata = published && managedData?.metadata && typeof managedData.metadata === "object"
+      ? managedData.metadata as Record<string, unknown> : {};
     const plan = published ? {
       slug: data.slug,
       title: String(metadata["title"] ?? legacyPlan?.title ?? data.slug),
@@ -113,7 +128,7 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
     } : legacyPlan;
     if (!plan) throw new Error("Plano não encontrado");
     if (data.day > plan.days) throw new Error("Dia fora da duração deste plano");
-    const cacheKey = published ? `${data.slug}:${data.day}:v${new Date(managed.data!.updated_at).getTime()}` : `${data.slug}:${data.day}`;
+    const cacheKey = published ? `${data.slug}:${data.day}:v${new Date(managedData?.updated_at ?? 0).getTime()}` : `${data.slug}:${data.day}`;
     const cached = await context.supabase
       .from("generated_content")
       .select("content")
