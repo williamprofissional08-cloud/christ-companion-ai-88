@@ -57,7 +57,7 @@ function ConfiguracoesPage() {
 
   async function updateAccountEmail() {
     const normalized = newEmail.trim().toLowerCase();
-    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(normalized)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized)) {
       toast.error("Informe um e-mail válido.");
       return;
     }
