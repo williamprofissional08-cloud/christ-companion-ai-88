@@ -7,7 +7,7 @@ Auditoria somente leitura do projeto Supabase `uluumebztnrgpyzohqrv` e do reposi
 ## Divergência confirmada
 
 - O repositório contém **29 arquivos SQL** em `supabase/migrations/`.
-- O histórico retornado pelo Supabase contém **14 migrações**, todas com versões `20261110...` e nomes de bootstrap/restauração da estrutura básica e comunidade.
+- O histórico retornado pelo Supabase contém **14 migrações**: `20261110062028`, `20261110062313`, `20261110062328`, `20261110093720`, `20261110093905`, `20261110095325`, `20261110095329`, `20261110095338`, `20261110095341`, `20261110095343`, `20261110095358`, `20261110095416`, `20261110100105` e `20261110100311`. Todas são posteriores às versões `20261107...`/`20261108...` do repositório; portanto, não se deve executar `db push` sem reconciliação explícita da ordem e do estado.
 - O schema conectado contém **17 tabelas públicas**; o código TypeScript gerado referencia várias tabelas adicionais de cursos e Bíblia (por exemplo, `book_chapters`, `book_introductions`, `certificates`).
 - `auth.users` e `auth.identities` retornaram contagem zero na consulta anterior. Isso não corresponde ao histórico operacional relatado para o aplicativo e precisa ser confirmado no projeto/ambiente correto antes de qualquer operação.
 - O schema contém os schemas gerenciados `auth` e `storage`; a contagem de tabelas públicas não inclui essas tabelas internas.
@@ -28,7 +28,7 @@ As funções `public.has_role(uuid, app_role)` e `public.is_admin()` existem com
 
 1. Confirmar que o projeto Supabase conectado é o projeto de produção esperado e que a contagem zero de usuários é real, sem expor credenciais.
 2. Fazer backup abrangente e verificável, incluindo dados de Auth, Storage (objetos e metadados), schemas, dados, funções, triggers, políticas e secrets por meio de um procedimento seguro; testar restauração em projeto isolado.
-3. Comparar uma a uma as 29 migrações do repositório com o histórico do banco e construir um plano de reconciliação idempotente, sem reaplicar cegamente migrações antigas.
+3. Comparar uma a uma as migrações do repositório com o histórico do banco e construir um plano de reconciliação idempotente, sem reaplicar cegamente migrações antigas. A branch desta auditoria removeu o arquivo `20261108000200_fix_ai_rate_limit_rpc_signature.sql`, que colidia no mesmo identificador temporal com `20261108000200_harden_ai_rate_limit_policy.sql`; a versão de hardening foi mantida como fonte única. Essa correção é apenas no Git, não foi aplicada ao banco.
 4. Restaurar primeiro o schema e a função de rate limit ausentes somente após backup/restore testado e confirmação de ambiente; preservar usuários, progresso e conteúdo.
 5. Rodar CI completo: `npm ci`, lint, Prettier, build, TypeScript e testes.
 
@@ -41,4 +41,4 @@ O workflow `.github/workflows/validate.yml` executa lint, formatação dos arqui
 - Branch: `codex/security-audit-hardening-2026-11-10`
 - Mudanças no Supabase: nenhuma.
 - Deploy/merge: nenhum.
-- Correção funcional aplicada: nenhuma ainda; o bloqueio do banco precisa ser resolvido com segurança antes.
+- Correção no Git: removida a migração duplicada `20261108000200_fix_ai_rate_limit_rpc_signature.sql`; mantida a versão hardened com o mesmo timestamp. Nenhuma correção de runtime foi validada ainda; o bloqueio do banco precisa ser resolvido com segurança antes.
