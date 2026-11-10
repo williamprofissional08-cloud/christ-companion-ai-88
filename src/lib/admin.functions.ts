@@ -522,7 +522,27 @@ export const adminDeleteLessonMedia = createServerFn({ method: "POST" })
     return { ok: true };
   });
 
+/** Membros do aplicativo, sem dependência de planos ou assinaturas. */
+export type AdminMember = {
+  id: string;
+  display_name: string | null;
+  email: string | null;
+  created_at: string;
+  last_seen_at: string | null;
+};
 
+export const adminListMembers = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .handler(async ({ context }): Promise<AdminMember[]> => {
+    await assertAdmin(context.supabase, context.userId);
+    const { data, error } = await context.supabase
+      .from("profiles")
+      .select("id, display_name, email, created_at, last_seen_at")
+      .order("created_at", { ascending: false })
+      .limit(500);
+    if (error) throw new Error(error.message);
+    return data ?? [];
+  });
 type ManagedContentKind = "study" | "prayer_plan";
 type ManagedContentStatus = "draft" | "published" | "archived";
 type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue | undefined };
