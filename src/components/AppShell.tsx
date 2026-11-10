@@ -22,7 +22,7 @@ import {
   Target,
   UsersRound,
 } from "lucide-react";
-import { useEffect, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
@@ -102,15 +102,6 @@ export function AppShell({
   const fetchSettings = useServerFn(getSettings);
   const { data: settings } = useQuery({ queryKey: ["settings"], queryFn: () => fetchSettings() });
   useReminders(settings);
-
-  useEffect(() => {
-    if (!settings) return;
-    const incomplete =
-      !settings.onboarding_completed ||
-      (settings.interests?.length ?? 0) === 0 ||
-      !settings.daily_goal?.trim();
-    if (incomplete) navigate({ to: "/onboarding", replace: true });
-  }, [settings, navigate]);
 
 
   async function signOut() {
