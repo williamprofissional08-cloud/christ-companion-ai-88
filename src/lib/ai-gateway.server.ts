@@ -1,6 +1,20 @@
 import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
 import type { LanguageModel } from "ai";
 
+/** Provider legado mantido apenas para geração de outros conteúdos do app. */
+export function aiGateway() {
+  const key = process.env["LOVABLE_API_KEY"];
+  if (!key) throw new Error("Missing LOVABLE_API_KEY");
+  return createOpenAICompatible({
+    name: "lovable",
+    baseURL: "https://ai.gateway.lovable.dev/v1",
+    headers: { "Lovable-API-Key": key },
+  });
+}
+
+export const CHAT_MODEL = "openai/gpt-5.6-sol";
+export const PROVIDER_OPTIONS = { lovable: { reasoningEffort: "none" } } as const;
+
 /** Proxy seguro para o Gemini executado como Supabase Edge Function. */
 export function aiResponsesModel(accessToken: string) {
   const supabaseUrl = process.env["SUPABASE_URL"];
