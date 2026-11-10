@@ -16,6 +16,7 @@ import {
   Route as RouteIcon,
   Search,
   Settings,
+  ShieldCheck,
   Star,
   Sun,
   Target,
@@ -26,6 +27,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { getSettings } from "@/lib/settings.functions";
+import { amIAdmin } from "@/lib/admin.functions";
 import { useReminders } from "@/hooks/use-reminders";
 import { useTheme } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
@@ -52,9 +54,19 @@ const NAV = [
 ] as const;
 
 function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
+  const checkAdmin = useServerFn(amIAdmin);
+  const { data: isAdmin } = useQuery({
+    queryKey: ["am-i-admin"],
+    queryFn: () => checkAdmin(),
+    staleTime: 60_000,
+  });
+  const items = isAdmin
+    ? [...NAV, { to: "/admin" as const, label: "Painel administrativo", icon: ShieldCheck }]
+    : NAV;
+
   return (
     <nav className="flex flex-col gap-1">
-      {NAV.map((item) => (
+      {items.map((item) => (
         <Link
           key={item.to}
           to={item.to}

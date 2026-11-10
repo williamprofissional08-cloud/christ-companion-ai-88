@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowRight, ExternalLink, RefreshCw, Sparkles } from "lucide-react";
+import { ArrowRight, BookOpen, ExternalLink, GraduationCap, RefreshCw, ShieldCheck, Sparkles } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -53,7 +53,20 @@ function AdminDashboard() {
   return (
     <AppShell title="Painel Administrativo" subtitle="Escola Bíblica — gestão de conteúdo">
       <div className="space-y-5">
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <Card className="flex flex-col gap-3 border-primary/20 bg-primary/5 p-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-3">
+            <div className="rounded-xl bg-primary/10 p-2 text-primary"><ShieldCheck className="size-5" /></div>
+            <div>
+              <h2 className="font-display text-lg font-semibold">Central de administração</h2>
+              <p className="text-sm text-muted-foreground">Gerencie a Escola Bíblica, os estudos e os conteúdos do Caminho Divino em um só lugar.</p>
+            </div>
+          </div>
+          <Badge variant="outline">Acesso restrito a administradores</Badge>
+        </Card>
+
+        <section className="space-y-3">
+          <div><h2 className="font-display text-base font-semibold">Visão geral</h2><p className="text-xs text-muted-foreground">Indicadores do conteúdo cadastrado no aplicativo</p></div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {cards.map((card) => (
             <Card key={card.label} className="p-4">
               <p className="text-xs text-muted-foreground">{card.label}</p>
@@ -62,11 +75,15 @@ function AdminDashboard() {
               </p>
             </Card>
           ))}
-        </div>
+          </div>
+        </section>
 
+        <section className="space-y-3">
+          <div><h2 className="font-display text-base font-semibold">Gestão do aplicativo</h2><p className="text-xs text-muted-foreground">Acesse as ferramentas administrativas disponíveis</p></div>
+          <div className="grid gap-3 sm:grid-cols-2">
         <Card className="flex flex-wrap items-center justify-between gap-3 p-5">
           <div>
-            <h2 className="font-display text-lg font-semibold">Cursos</h2>
+            <h2 className="flex items-center gap-2 font-display text-lg font-semibold"><GraduationCap className="size-5 text-primary" /> Cursos, módulos e aulas</h2>
             <p className="text-sm text-muted-foreground">
               Criar, editar, publicar, arquivar e organizar cursos, módulos e aulas.
             </p>
@@ -80,7 +97,7 @@ function AdminDashboard() {
 
         <Card className="flex flex-wrap items-center justify-between gap-3 p-5">
           <div>
-            <h2 className="font-display text-lg font-semibold">Estudos e planos de oração</h2>
+            <h2 className="flex items-center gap-2 font-display text-lg font-semibold"><BookOpen className="size-5 text-primary" /> Estudos e planos de oração</h2>
             <p className="text-sm text-muted-foreground">
               Editar títulos, referências, categorias, resumos, conteúdo dos estudos e publicar versões revisadas.
             </p>
@@ -91,6 +108,9 @@ function AdminDashboard() {
             </Link>
           </Button>
         </Card>
+
+          </div>
+        </section>
 
         <Card className="space-y-3 p-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
