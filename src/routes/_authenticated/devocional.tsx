@@ -6,7 +6,7 @@ import { ExportCard } from "@/components/ExportCard";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getDevotional } from "@/lib/ai.functions";
-import { fallbackDevotional } from "@/lib/content/fallback-devotional";
+import { loadDevotionalSafely } from "@/lib/devotional-loader";
 import { todayISO } from "@/lib/types";
 
 export const Route = createFileRoute("/_authenticated/devocional")({
@@ -31,7 +31,8 @@ function DevocionalPage() {
   const fn = useServerFn(getDevotional);
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["devotional", day],
-    queryFn: () => fn({ data: { day } }),
+    queryFn: () => loadDevotionalSafely(day, () => fn({ data: { day } })),
+    retry: false,
     staleTime: Infinity,
   });
 
