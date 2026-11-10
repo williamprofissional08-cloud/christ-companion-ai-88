@@ -30,6 +30,7 @@ import { getSettings } from "@/lib/settings.functions";
 import { amIAdmin } from "@/lib/admin.functions";
 import { useReminders } from "@/hooks/use-reminders";
 import { useTheme } from "@/hooks/use-auth";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logo from "@/assets/logo.png";
@@ -114,8 +115,12 @@ export function AppShell({
 
   async function signOut() {
     await queryClient.cancelQueries();
+    const { error } = await supabase.auth.signOut({ scope: "local" });
+    if (error) {
+      toast.error("Não foi possível encerrar sua sessão. Tente novamente.");
+      return;
+    }
     queryClient.clear();
-    await supabase.auth.signOut();
     navigate({ to: "/auth", replace: true });
   }
 

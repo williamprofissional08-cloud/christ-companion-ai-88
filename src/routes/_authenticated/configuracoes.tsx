@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
+import { useNavigate } from "@tanstack/react-router";
 import { BellRing, Send } from "lucide-react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
@@ -22,6 +23,8 @@ import {
   TIMEZONE_OPTIONS,
 } from "@/lib/types";
 import { requestNotificationPermission, sendTestReminder } from "@/hooks/use-reminders";
+import { useAuth } from "@/hooks/use-auth";
+import { supabase } from "@/integrations/supabase/client";
 
 
 export const Route = createFileRoute("/_authenticated/configuracoes")({
@@ -43,6 +46,24 @@ export const Route = createFileRoute("/_authenticated/configuracoes")({
 
 function ConfiguracoesPage() {
   const queryClient = useQueryClient();
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const [signingOut, setSigningOut] = useState(false);
+
+  async function switchAccount() {
+    setSigningOut(true);
+    try {
+      await queryClient.cancelQueries();
+      const { error } = await supabase.auth.signOut({ scope: "local" });
+      if (error) throw error;
+      queryClient.clear();
+      navigate({ to: "/auth", replace: true });
+    } catch {
+      toast.error("Não foi possível encerrar sua sessão. Tente novamente.");
+    } finally {
+      setSigningOut(false);
+    }
+  }
   const fetchSettings = useServerFn(getSettings);
   const persist = useServerFn(saveSettings);
   const { data, isLoading } = useQuery({
@@ -318,6 +339,25 @@ function ConfiguracoesPage() {
         <Button onClick={() => mutation.mutate(undefined)} disabled={mutation.isPending}>
           {mutation.isPending ? "Salvando..." : "Salvar configurações"}
         </Button>
+
+        <Card className="border-border/50 p-6 shadow-soft">
+          <h2 className="font-display text-lg font-semibold">Conta e acesso</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Conta conectada: <span className="font-medium text-foreground">{user?.email ?? "E-mail indisponível"}</span>
+          </p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            Para usar outra conta neste dispositivo, encerre a sessão atual e entre novamente com outro e-mail.
+          </p>
+          <Button
+            type="button"
+            variant="outline"
+            className="mt-4"
+            onClick={switchAccount}
+            disabled={signingOut}
+          >
+            {signingOut ? "Saindo..." : "Sair e trocar de conta"}
+          </Button>
+        </Card>
       </div>
     </AppShell>
   );
