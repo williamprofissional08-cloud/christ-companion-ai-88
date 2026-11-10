@@ -13,10 +13,19 @@ export const Route = createFileRoute("/_authenticated/admin")({
 
 function AdminLayout() {
   const checkAdmin = useServerFn(amIAdmin);
-  const { data: isAdmin, isLoading } = useQuery({
+  const {
+    data: isAdmin,
+    isLoading,
+    isError,
+    error,
+    refetch,
+    isFetching,
+  } = useQuery({
     queryKey: ["am-i-admin"],
     queryFn: () => checkAdmin(),
-    staleTime: 60_000,
+    staleTime: 0,
+    refetchOnMount: "always",
+    retry: 2,
   });
 
   if (isLoading) {
@@ -27,13 +36,36 @@ function AdminLayout() {
     );
   }
 
-  if (!isAdmin) {
+  if (isError) {
+    return (
+      <AppShell title="Falha na verificação" subtitle="Não foi possível confirmar sua permissão">
+        <Card className="flex flex-col items-start gap-3 p-6">
+          <ShieldAlert className="size-6 text-destructive" aria-hidden />
+          <p className="text-sm text-muted-foreground">
+            O sistema não conseguiu consultar sua permissão administrativa. Isso não significa que
+            sua conta perdeu o acesso.
+          </p>
+          <p className="text-sm text-destructive">
+            {error instanceof Error ? error.message : "Erro desconhecido ao verificar permissões."}
+          </p>
+          <Button size="sm" onClick={() => void refetch()} disabled={isFetching}>
+            {isFetching ? "Verificando…" : "Tentar novamente"}
+          </Button>
+          <Button asChild size="sm" variant="outline">
+            <Link to="/inicio">Voltar ao início</Link>
+          </Button>
+        </Card>
+      </AppShell>
+    );
+  }
+
+  if (isAdmin !== true) {
     return (
       <AppShell title="Área restrita" subtitle="Acesso permitido apenas a administradores">
         <Card className="flex flex-col items-start gap-3 p-6">
           <ShieldAlert className="size-6 text-destructive" aria-hidden />
           <p className="text-sm text-muted-foreground">
-            Você não tem permissão para acessar o painel administrativo.
+            Sua conta autenticada não possui a função de administrador.
           </p>
           <Button asChild size="sm">
             <Link to="/inicio">Voltar ao início</Link>

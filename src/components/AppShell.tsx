@@ -59,7 +59,9 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   const { data: isAdmin } = useQuery({
     queryKey: ["am-i-admin"],
     queryFn: () => checkAdmin(),
-    staleTime: 60_000,
+    staleTime: 0,
+    refetchOnMount: "always",
+    retry: 2,
   });
   const items = isAdmin
     ? [...NAV, { to: "/admin" as const, label: "Painel administrativo", icon: ShieldCheck }]
