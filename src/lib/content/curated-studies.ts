@@ -121,6 +121,7 @@ import { numbers2Study } from "./numbers-2-study";
 import { numbers3Study } from "./numbers-3-study";
 import { numbers4Study } from "./numbers-4-study";
 import { numbers5Study } from "./numbers-5-study";
+import { numbers6Study } from "./numbers-6-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -250,4 +251,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-numeros-cap-3": numbers3Study,
   "biblia-numeros-cap-4": numbers4Study,
   "biblia-numeros-cap-5": numbers5Study,
+  "biblia-numeros-cap-6": numbers6Study,
 };
