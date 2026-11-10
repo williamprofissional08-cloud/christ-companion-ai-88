@@ -24,7 +24,7 @@ export function aiResponsesModel(accessToken: string) {
   }
   const provider = createOpenAICompatible({
     name: "gemini",
-    baseURL: `${supabaseUrl.replace(/\\/$/, "")}/functions/v1/gemini-ai/v1`,
+    baseURL: `${supabaseUrl.replace(/\/$/, "")}/functions/v1/gemini-ai/v1`,
     headers: {
       Authorization: `Bearer ${accessToken}`,
       apikey: publishableKey,
