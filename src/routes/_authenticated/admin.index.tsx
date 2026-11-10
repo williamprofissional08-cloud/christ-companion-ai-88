@@ -39,6 +39,12 @@ function AdminDashboard() {
   });
 
 
+  const overviewCards = [
+    { label: "Usuários ativos hoje", value: stats?.activeMembersToday, to: "/admin/alunos" },
+    { label: "Novos usuários na semana", value: stats?.newMembers7Days, to: "/admin/alunos" },
+    { label: "Posts pendentes", value: stats?.pendingPosts, to: "/comunidade" },
+    { label: "Livros para aprovar", value: stats?.pendingBooks, to: "/comunidade" },
+  ];
   const cards = [
     { label: "Total de cursos", value: stats?.courses },
     { label: "Cursos publicados", value: stats?.coursesPublished },
@@ -74,6 +80,26 @@ function AdminDashboard() {
           <Badge variant="outline">Acesso restrito a administradores</Badge>
         </Card>
 
+        {(stats?.pendingPosts ?? 0) + (stats?.pendingBooks ?? 0) > 0 && (
+          <Link to="/comunidade" className="block rounded-xl border border-destructive/20 bg-destructive/5 p-4 transition-colors hover:bg-destructive/10">
+            <p className="font-semibold text-destructive">Aprovações pendentes: {stats?.pendingPosts ?? 0} posts e {stats?.pendingBooks ?? 0} livros aguardando revisão</p>
+            <p className="mt-1 text-xs text-muted-foreground">Abrir fila de moderação <ArrowRight className="inline size-3" /></p>
+          </Link>
+        )}
+        <section className="space-y-3">
+          <div><h2 className="font-display text-base font-semibold">Visão geral</h2><p className="text-xs text-muted-foreground">Métricas de atividade e aprovação de conteúdos</p></div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {overviewCards.map((card) => (
+              <Link key={card.label} to={card.to} className="block min-w-0">
+                <Card className="h-full p-4 transition-shadow hover:shadow-md">
+                  <p className="text-xs text-muted-foreground">{card.label}</p>
+                  <p className="mt-1 font-display text-2xl font-semibold">{isLoading ? "—" : (card.value ?? 0).toLocaleString("pt-BR")}</p>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="space-y-3">
           <div><h2 className="font-display text-base font-semibold">Usuários e crescimento</h2><p className="text-xs text-muted-foreground">Contas registradas e atividade recente. Os totais consideram os perfis existentes no aplicativo.</p></div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
@@ -97,6 +123,16 @@ function AdminDashboard() {
               </p>
             </Card>
           ))}
+          </div>
+        </section>
+
+        <section className="space-y-3">
+          <div><h2 className="font-display text-base font-semibold">Ações rápidas</h2><p className="text-xs text-muted-foreground">Atalhos para ferramentas administrativas já disponíveis</p></div>
+          <div className="grid grid-cols-2 gap-3">
+            <Button asChild className="h-auto min-h-16 whitespace-normal py-3"><Link to="/admin/cursos">+ Criar curso</Link></Button>
+            <Button asChild variant="outline" className="h-auto min-h-16 whitespace-normal py-3"><Link to="/comunidade">Moderar comunidade</Link></Button>
+            <Button asChild variant="outline" className="h-auto min-h-16 whitespace-normal py-3"><Link to="/admin/conteudo">Gerenciar estudos</Link></Button>
+            <Button asChild variant="outline" className="h-auto min-h-16 whitespace-normal py-3"><Link to="/admin/alunos">Gerenciar usuários</Link></Button>
           </div>
         </section>
 
@@ -131,6 +167,10 @@ function AdminDashboard() {
           </Button>
         </Card>
 
+          <Card className="flex flex-wrap items-center justify-between gap-3 p-5">
+            <div><h2 className="flex items-center gap-2 font-display text-lg font-semibold"><Users className="size-5 text-primary" /> Comunidade</h2><p className="text-sm text-muted-foreground">Moderar primeiras publicações e livros indicados pela comunidade.</p></div>
+            <Button asChild><Link to="/comunidade">Abrir moderação <ArrowRight className="ml-1 size-4" /></Link></Button>
+          </Card>
           <Card className="flex flex-wrap items-center justify-between gap-3 p-5">
             <div><h2 className="flex items-center gap-2 font-display text-lg font-semibold"><Users className="size-5 text-primary" /> Alunos e membros</h2><p className="text-sm text-muted-foreground">Consulte contas, cadastro e atividade dos membros.</p></div>
             <Button asChild><Link to="/admin/alunos">Ver membros <ArrowRight className="ml-1 size-4" /></Link></Button>
