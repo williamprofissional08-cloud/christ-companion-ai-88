@@ -1,5 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -29,6 +30,7 @@ export const Route = createFileRoute("/reset-password")({
 function ResetPassword() {
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
   async function submit(event: React.FormEvent) {
@@ -51,20 +53,29 @@ function ResetPassword() {
       <Card className="w-full max-w-md p-7 shadow-soft">
         <h1 className="font-display text-2xl font-semibold">Nova senha</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Escolha uma senha com pelo menos 6 caracteres.
+          Escolha uma senha com pelo menos 6 caracteres. Pode usar somente números ou letras minúsculas; não exigimos maiúsculas nem símbolos.
         </p>
         <form onSubmit={submit} className="mt-6 flex flex-col gap-4">
           <div className="grid gap-2">
             <Label htmlFor="new-password">Senha</Label>
-            <Input
-              id="new-password"
-              type="password"
-              required
-              minLength={6}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              autoComplete="new-password"
-            />
+            <div className="relative">
+              <Input
+                id="new-password"
+                type={showPassword ? "text" : "password"}
+                required
+                minLength={6}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                autoComplete="new-password"
+                autoCapitalize="none"
+                autoCorrect="off"
+                spellCheck={false}
+                className="pr-12"
+              />
+              <button type="button" onClick={() => setShowPassword((value) => !value)} className="absolute inset-y-0 right-3 flex items-center text-muted-foreground" aria-label={showPassword ? "Ocultar senha" : "Mostrar senha"}>
+                {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+              </button>
+            </div>
           </div>
           <Button type="submit" variant="hero" size="lg" disabled={loading}>
             {loading ? "Salvando..." : "Salvar nova senha"}
