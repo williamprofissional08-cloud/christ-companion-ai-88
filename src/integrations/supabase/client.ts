@@ -36,7 +36,7 @@ let projectKeyIdsPromise: Promise<Set<string> | null> | undefined;
 
 async function getProjectKeyIds(supabaseUrl: string): Promise<Set<string> | null> {
   if (!projectKeyIdsPromise) {
-    const jwksUrl = `${supabaseUrl.replace(/\\/+$/, '')}/.well-known/jwks.json`;
+    const jwksUrl = `${supabaseUrl.replace(/\/+$/, '')}/.well-known/jwks.json`;
     projectKeyIdsPromise = fetch(jwksUrl)
       .then(async (response) => {
         if (!response.ok) return null;
