@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      ai_rate_limits: {
+        Row: {
+          endpoint: string
+          request_count: number
+          user_id: string
+          window_start: string
+        }
+        Insert: {
+          endpoint: string
+          request_count: number
+          user_id: string
+          window_start: string
+        }
+        Update: {
+          endpoint?: string
+          request_count?: number
+          user_id?: string
+          window_start?: string
+        }
+        Relationships: []
+      }
       book_chapters: {
         Row: {
           chapter_number: number
@@ -940,39 +961,6 @@ export type Database = {
           },
         ]
       }
-      managed_content: {
-        Row: {
-          id: string
-          kind: string
-          slug: string
-          metadata: Json
-          content: Json | null
-          status: Database["public"]["Enums"]["content_status"]
-          created_at: string
-          updated_at: string
-        }
-        Insert: {
-          id?: string
-          kind: string
-          slug: string
-          metadata?: Json
-          content?: Json | null
-          status?: Database["public"]["Enums"]["content_status"]
-          created_at?: string
-          updated_at?: string
-        }
-        Update: {
-          id?: string
-          kind?: string
-          slug?: string
-          metadata?: Json
-          content?: Json | null
-          status?: Database["public"]["Enums"]["content_status"]
-          created_at?: string
-          updated_at?: string
-        }
-        Relationships: []
-      }
       lesson_media: {
         Row: {
           created_at: string
@@ -1285,6 +1273,39 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      managed_content: {
+        Row: {
+          content: Json | null
+          created_at: string
+          id: string
+          kind: string
+          metadata: Json
+          slug: string
+          status: Database["public"]["Enums"]["content_status"]
+          updated_at: string
+        }
+        Insert: {
+          content?: Json | null
+          created_at?: string
+          id?: string
+          kind: string
+          metadata?: Json
+          slug: string
+          status?: Database["public"]["Enums"]["content_status"]
+          updated_at?: string
+        }
+        Update: {
+          content?: Json | null
+          created_at?: string
+          id?: string
+          kind?: string
+          metadata?: Json
+          slug?: string
+          status?: Database["public"]["Enums"]["content_status"]
+          updated_at?: string
+        }
+        Relationships: []
       }
       plan_progress: {
         Row: {
@@ -1657,10 +1678,16 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      admin_question_has_answers: { Args: { _question_id: string }; Returns: boolean }
+      admin_question_has_answers: {
+        Args: { _question_id: string }
+        Returns: boolean
+      }
       consume_ai_rate_limit: {
         Args: { p_endpoint: string }
-        Returns: { allowed: boolean; retry_after_seconds: number }[]
+        Returns: {
+          allowed: boolean
+          retry_after_seconds: number
+        }[]
       }
       has_premium: { Args: { _user_id: string }; Returns: boolean }
       has_role: {
