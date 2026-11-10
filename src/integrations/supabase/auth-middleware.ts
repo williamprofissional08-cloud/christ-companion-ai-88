@@ -10,7 +10,7 @@ function isNewSupabaseApiKey(value: string): boolean {
   return value.startsWith('sb_publishable_') || value.startsWith('sb_secret_');
 }
 
-function createSupabaseFetch(supabaseKey: string): typeof fetch {
+function createSupabaseFetch(supabaseKey: string, accessToken: string): typeof fetch {
   return (input, init) => {
     const headers = new Headers(
       typeof Request !== 'undefined' && input instanceof Request ? input.headers : undefined,
@@ -26,6 +26,9 @@ function createSupabaseFetch(supabaseKey: string): typeof fetch {
     }
 
     headers.set('apikey', supabaseKey);
+    // Keep the verified user identity on every PostgREST request. getUser(token)
+    // validates the JWT but does not persist it as the client's active session.
+    headers.set('Authorization', `Bearer ${accessToken}`);
     return fetch(input, { ...init, headers });
   };
 }
@@ -124,7 +127,7 @@ export const requireSupabaseAuth = createMiddleware({ type: 'function' })
       SUPABASE_PUBLISHABLE_KEY!,
       {
         global: {
-          fetch: createSupabaseFetch(SUPABASE_PUBLISHABLE_KEY!),
+          fetch: createSupabaseFetch(SUPABASE_PUBLISHABLE_KEY!, token),
         },
         auth: {
           storage: undefined,
