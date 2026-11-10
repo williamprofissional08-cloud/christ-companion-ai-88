@@ -33,6 +33,7 @@ function ComunidadePage() {
   const [user, setUser] = useState<User | null>(null);
   const [admin, setAdmin] = useState(false);
   const [posts, setPosts] = useState<Post[]>([]);
+  const [pendingPosts, setPendingPosts] = useState<Post[]>([]);
   const [resources, setResources] = useState<Resource[]>([]);
   const [pending, setPending] = useState<Resource[]>([]);
   const [profiles, setProfiles] = useState<Record<string, Profile>>({});
@@ -81,15 +82,19 @@ function ComunidadePage() {
     }
     setLikes(counts);
     const isAdmin = Boolean(a.data && !a.error); setAdmin(isAdmin);
-    const ids = [...new Set(rows.map((row) => row.user_id))];
+    const ids = [...new Set([...rows, ...((r.data || []) as Resource[])].map((row) => row.user_id))];
     if (ids.length) {
       const { data } = await db.from("community_member_profiles").select("id,display_name").in("id", ids);
       setProfiles(Object.fromEntries(((data || []) as Profile[]).map((x) => [x.id, x])));
     }
     if (isAdmin) {
-      const { data } = await db.from("community_resources").select("*").eq("status", "pending").order("created_at");
-      setPending((data || []) as Resource[]);
-    } else setPending([]);
+      const [{ data: pendingResources }, { data: postsAwaitingReview }] = await Promise.all([
+        db.from("community_resources").select("*").eq("status", "pending").order("created_at"),
+        db.from("community_posts").select("*").eq("status", "pending").order("created_at"),
+      ]);
+      setPending((pendingResources || []) as Resource[]);
+      setPendingPosts((postsAwaitingReview || []) as Post[]);
+    } else { setPending([]); setPendingPosts([]); }
     setLoading(false);
   }, []);
 
@@ -170,6 +175,14 @@ function ComunidadePage() {
     setBookTitle(""); setAuthor(""); setDescription(""); setPdf(null); setRights(false); setCourseCandidate(false); setLibraryForm(false); await reload(user);
   }
 
+  async function moderatePost(post: Post, approved: boolean) {
+    if (!user || !admin) return;
+    const { error } = await db.from("community_posts").update({ status: approved ? "published" : "hidden" }).eq("id", post.id);
+    if (error) { toast.error("Não foi possível moderar a publicação."); return; }
+    toast.success(approved ? "Publicação aprovada e visível na comunidade." : "Publicação recusada.");
+    await reload(user);
+  }
+
   async function moderate(resource: Resource, status: "approved" | "rejected") {
     if (!user) return;
     const { error } = await db.from("community_resources").update({ status, moderation_note: notes[resource.id]?.trim() || null, reviewed_by: user.id, reviewed_at: new Date().toISOString() }).eq("id", resource.id);
@@ -248,6 +261,7 @@ function ComunidadePage() {
               <div className="flex flex-wrap justify-end gap-2"><Button type="button" variant="outline" onClick={() => setLibraryForm(false)}>Cancelar</Button><Button type="submit" disabled={busy || !rights || !pdf} className="gap-2">{busy ? <Loader2 className="size-4 animate-spin" /> : <Upload className="size-4" />}Enviar para análise</Button></div>
             </form></Card>}
             {loading ? <div className="flex justify-center py-10"><Loader2 className="size-7 animate-spin text-primary" /></div> : resources.length === 0 ? <Card className="p-8 text-center"><BookOpen className="mx-auto size-9 text-muted-foreground" /><h3 className="mt-3 font-semibold">A biblioteca está começando</h3><p className="mt-1 text-sm text-muted-foreground">Os materiais aprovados pela equipe aparecerão aqui.</p></Card> : resources.map((r) => <Card key={r.id} className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center"><div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-red-500/10 text-red-600"><FileText className="size-6" /></div><div className="min-w-0 flex-1"><h3 className="font-semibold">{r.title}</h3><p className="text-xs text-muted-foreground">{r.author} • {sizeLabel(Number(r.file_size))} • Indicado por {profiles[r.user_id]?.display_name || "Membro da comunidade"}</p><p className="mt-1 text-sm text-muted-foreground">{r.description}</p><p className="text-xs text-muted-foreground">{r.file_name}</p><span className="mt-2 inline-block rounded-full bg-secondary px-2 py-1 text-[10px] font-medium">{resourceCategories.find((x) => x.value === r.category)?.label || "Material bíblico"}</span></div><Button variant="outline" className="gap-2" onClick={() => void download(r)}><Download className="size-4" />Abrir PDF</Button></Card>)}
+            {admin && <section className="space-y-3 border-t border-border pt-5"><div className="flex items-center gap-2"><ShieldCheck className="size-5 text-primary" /><h3 className="font-semibold">Moderação de primeiras publicações</h3><span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">{pendingPosts.length} pendente(s)</span></div>{pendingPosts.length === 0 ? <p className="text-sm text-muted-foreground">Não há publicações aguardando análise.</p> : pendingPosts.map((post) => <Card key={post.id} className="space-y-3 p-4"><div><h4 className="font-semibold">{post.title}</h4><p className="mt-1 whitespace-pre-wrap text-sm text-muted-foreground">{post.body}</p><p className="mt-2 text-xs text-muted-foreground">{labels[post.category]} • {age(post.created_at)}</p></div><div className="flex flex-wrap gap-2"><Button size="sm" onClick={() => void moderatePost(post, true)}><Check className="mr-1 size-4" />Aprovar</Button><Button size="sm" variant="outline" onClick={() => void moderatePost(post, false)}><X className="mr-1 size-4" />Reprovar</Button></div></Card>)}</section>}
             {admin && <section className="space-y-3 border-t border-border pt-5"><div className="flex items-center gap-2"><ShieldCheck className="size-5 text-primary" /><h3 className="font-semibold">Moderação da biblioteca</h3><span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">{pending.length} pendente(s)</span></div>{pending.length === 0 ? <p className="text-sm text-muted-foreground">Não há materiais aguardando análise.</p> : pending.map((r) => <Card key={r.id} className="space-y-3 p-4"><div><h4 className="font-semibold">{r.title}</h4><p className="text-xs text-muted-foreground">{r.author} • {r.file_name} • {sizeLabel(Number(r.file_size))}</p><p className="mt-2 text-sm">{r.description}</p>{r.course_candidate && <span className="mt-2 inline-flex rounded-full bg-primary/10 px-2 py-1 text-[10px] font-medium text-primary">Sugerido para futuro curso</span>}</div><Input value={notes[r.id] || ""} onChange={(e) => setNotes((old) => ({ ...old, [r.id]: e.target.value }))} placeholder="Observação da equipe (opcional)" /><div className="flex flex-wrap gap-2"><Button size="sm" onClick={() => void moderate(r, "approved")} className="gap-1"><Check className="size-4" />Aprovar</Button><Button size="sm" variant="outline" onClick={() => void moderate(r, "rejected")} className="gap-1"><X className="size-4" />Recusar</Button><Button size="sm" variant="ghost" onClick={() => void download(r)} className="gap-1"><Download className="size-4" />Analisar PDF</Button></div></Card>)}</section>}
           </div>}
         </TabsContent>
