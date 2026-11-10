@@ -43,3 +43,24 @@ test("study loader returns curated content when managed content lookup fails", (
   assert.match(loader, /catch \(error\)[\s\S]*if \(curated\) return curated/);
   assert.match(loader, /CURATED_STUDIES\[data\.slug\]/);
 });
+
+
+test("devotional pipeline always has a local fallback for backend and AI failures", () => {
+  const devotional = handlerSource.slice(
+    handlerSource.indexOf("export const getDevotional"),
+    handlerSource.indexOf("export const getPlanDayContent"),
+  );
+
+  assert.match(devotional, /const fallbackDevotional = await import\("\.\/content\/fallback-devotional"\)/);
+  assert.match(devotional, /catch \(error\)[\s\S]*return fallbackDevotional\(data\.day\)/);
+  assert.match(devotional, /catch \(aiError\)[\s\S]*return fallbackDevotional\(data\.day\)/);
+});
+
+test("reviewed local chapter studies cannot be hidden by archived managed catalog rows", () => {
+  const detailRoute = readFileSync(
+    new URL("../src/routes/_authenticated/estudos.$slug.tsx", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(detailRoute, /CURATED_STUDIES\[slug\] \? legacyStudy : managedStudy\?\.status === "archived"/);
+});
