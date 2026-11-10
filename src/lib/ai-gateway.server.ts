@@ -33,7 +33,6 @@ export function aiResponsesModel(accessToken: string) {
   return provider("gemini-2.5-flash") as unknown as LanguageModel;
 }
 
-export const CHAT_MODEL = "gemini-2.5-flash";
 export const RESPONSES_PROVIDER_OPTIONS = {};
 
 /**
