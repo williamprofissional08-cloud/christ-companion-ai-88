@@ -71,14 +71,14 @@ function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): P
         const header = decode(headerPart);
         const payload = decode(payloadPart);
 
-        if (typeof payload.iss === 'string' && payload.iss !== expectedIssuer) {
+        if (typeof payload['iss'] === 'string' && payload['iss'] !== expectedIssuer) {
           storage.removeItem(key);
           return null;
         }
 
-        if (header.alg === 'ES256' && typeof header.kid === 'string') {
+        if (header['alg'] === 'ES256' && typeof header['kid'] === 'string') {
           const keyIds = await getProjectKeyIds(supabaseUrl);
-          if (keyIds && !keyIds.has(header.kid)) {
+          if (keyIds && !keyIds.has(header['kid'])) {
             storage.removeItem(key);
             return null;
           }
