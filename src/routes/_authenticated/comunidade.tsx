@@ -71,9 +71,10 @@ function ComunidadePage() {
     setPosts(rows); setResources((r.data || []) as Resource[]);
     const counts: Record<string, { count: number; mine: boolean }> = {};
     for (const item of (l.data || []) as { post_id: string; user_id: string }[]) {
-      counts[item.post_id] ||= { count: 0, mine: false };
-      counts[item.post_id].count++;
-      if (item.user_id === current.id) counts[item.post_id].mine = true;
+      const currentCount = counts[item.post_id] ?? { count: 0, mine: false };
+      currentCount.count += 1;
+      if (item.user_id === current.id) currentCount.mine = true;
+      counts[item.post_id] = currentCount;
     }
     setLikes(counts);
     const isAdmin = Boolean(a.data && !a.error); setAdmin(isAdmin);
@@ -175,7 +176,7 @@ function ComunidadePage() {
     window.open(data.signedUrl, "_blank", "noopener,noreferrer");
   }
 
-  const name = user?.user_metadata?.display_name || user?.user_metadata?.full_name || user?.email?.split("@")[0] || "Membro";
+  const name = user?.user_metadata?.["display_name"] || user?.user_metadata?.["full_name"] || user?.email?.split("@")[0] || "Membro";
 
   return <AppShell title="Comunidade" subtitle="Crescendo juntos no conhecimento de Deus.">
     <div className="mx-auto max-w-4xl space-y-5">
