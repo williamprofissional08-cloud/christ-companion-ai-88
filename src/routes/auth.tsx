@@ -61,13 +61,32 @@ function AuthPage() {
     let active = true;
     const go = () => navigate({ to: takeRedirect(), replace: true });
 
-    supabase.auth.getSession().then(({ data }) => {
-      if (!active) return;
-      if (data.session) go();
-      else setChecking(false);
-    });
-    const { data: sub } = supabase.auth.onAuthStateChange((_e, session) => {
-      if (session) go();
+    // Never trust a persisted session until Supabase validates the user.
+    // After signing-key rotation, an old JWT can remain in localStorage and
+    // make the protected route bounce back to this page forever.
+    void (async () => {
+      try {
+        const { data, error } = await supabase.auth.getUser();
+        if (!active) return;
+        if (!error && data.user) {
+          go();
+          return;
+        }
+
+        // Clear only this browser's invalid session; do not revoke other devices.
+        const { data: stored } = await supabase.auth.getSession();
+        if (stored.session) {
+          await supabase.auth.signOut({ scope: "local" });
+        }
+      } catch {
+        // Keep the login form available if session validation is temporarily unavailable.
+      } finally {
+        if (active) setChecking(false);
+      }
+    })();
+
+    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
+      if (session && event === "SIGNED_IN") go();
     });
     return () => {
       active = false;
