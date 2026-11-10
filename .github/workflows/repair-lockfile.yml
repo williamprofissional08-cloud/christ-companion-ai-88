@@ -1,0 +1,62 @@
+name: Repair dependency lockfile
+
+"on":
+  push:
+    branches:
+      - fix/supabase-project-gemini-404
+      - content/numeros-15-exposicao-versiculo-por-versiculo
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lockfile-repair-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  repair-and-validate:
+    name: Regenerate lockfile and validate project
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref }}
+          persist-credentials: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - name: Regenerate package lock from package.json
+        run: npm install --package-lock-only --no-audit --no-fund
+
+      - name: Verify clean reproducible install
+        run: npm ci --no-audit --no-fund
+
+      - name: Run ESLint
+        run: npm run lint -- --rule 'prettier/prettier: off'
+
+      - name: Build production app
+        run: npm run build
+
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      - name: Run automated tests
+        run: npm test
+
+      - name: Commit validated lockfile
+        run: |
+          if git diff --quiet -- package-lock.json; then
+            echo "Lockfile already synchronized; no commit needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "fix: synchronize npm lockfile"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
