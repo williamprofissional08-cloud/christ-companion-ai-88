@@ -17,12 +17,34 @@ export const getAdminStats = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .handler(async ({ context }): Promise<AdminStats> => {
     await assertAdmin(context.supabase, context.userId);
-    const [courses, modules, lessons, progress] = await Promise.all([
+    const now = new Date();
+    const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate()).toISOString();
+    const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString();
+    const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000).toISOString();
+
+    const [
+      courses, modules, lessons, progress,
+      totalMembers, newToday, new7Days, new30Days,
+      activeToday, active7Days, active30Days, neverActive,
+    ] = await Promise.all([
       context.supabase.from("courses").select("status"),
       context.supabase.from("course_modules").select("id"),
       context.supabase.from("lessons").select("tier"),
       context.supabase.from("course_progress").select("user_id"),
+      context.supabase.from("profiles").select("id", { count: "exact", head: true }),
+      context.supabase.from("profiles").select("id", { count: "exact", head: true }).gte("created_at", startOfToday),
+      context.supabase.from("profiles").select("id", { count: "exact", head: true }).gte("created_at", sevenDaysAgo),
+      context.supabase.from("profiles").select("id", { count: "exact", head: true }).gte("created_at", thirtyDaysAgo),
+      context.supabase.from("profiles").select("id", { count: "exact", head: true }).gte("last_seen_at", startOfToday),
+      context.supabase.from("profiles").select("id", { count: "exact", head: true }).gte("last_seen_at", sevenDaysAgo),
+      context.supabase.from("profiles").select("id", { count: "exact", head: true }).gte("last_seen_at", thirtyDaysAgo),
+      context.supabase.from("profiles").select("id", { count: "exact", head: true }).is("last_seen_at", null),
     ]);
+
+    const queries = [courses, modules, lessons, progress, totalMembers, newToday, new7Days, new30Days, activeToday, active7Days, active30Days, neverActive];
+    const failed = queries.find((result) => result.error);
+    if (failed?.error) throw new Error(`Não foi possível carregar as estatísticas administrativas: ${failed.error.message}`);
+
     const courseRows = courses.data ?? [];
     const lessonRows = lessons.data ?? [];
     return {
@@ -34,6 +56,14 @@ export const getAdminStats = createServerFn({ method: "GET" })
       freeLessons: lessonRows.filter((l) => l.tier === "free").length,
       premiumLessons: lessonRows.filter((l) => l.tier === "premium").length,
       usersWithProgress: new Set((progress.data ?? []).map((p) => p.user_id)).size,
+      totalMembers: totalMembers.count ?? 0,
+      newMembersToday: newToday.count ?? 0,
+      newMembers7Days: new7Days.count ?? 0,
+      newMembers30Days: new30Days.count ?? 0,
+      activeMembersToday: activeToday.count ?? 0,
+      activeMembers7Days: active7Days.count ?? 0,
+      activeMembers30Days: active30Days.count ?? 0,
+      membersNeverActive: neverActive.count ?? 0,
     };
   });
 
