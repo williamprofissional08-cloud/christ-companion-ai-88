@@ -1678,6 +1678,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      admin_question_has_answers: {
+        Args: { _question_id: string }
+        Returns: boolean
+      }
       consume_ai_rate_limit: {
         Args: { p_endpoint: string }
         Returns: {
