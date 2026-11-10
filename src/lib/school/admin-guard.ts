@@ -13,7 +13,12 @@ export async function isAdminUser(
     _user_id: userId,
     _role: "admin",
   });
-  if (error) return false;
+
+  // Falha de infraestrutura/autenticação não pode ser confundida com ausência de papel.
+  if (error) {
+    throw new Error(`Não foi possível verificar a permissão administrativa: ${error.message}`);
+  }
+
   return Boolean(data);
 }
 
