@@ -25,6 +25,7 @@ import {
 import { requestNotificationPermission, sendTestReminder } from "@/hooks/use-reminders";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
+import { ProfileEditor } from "@/components/settings/ProfileEditor";
 
 
 export const Route = createFileRoute("/_authenticated/configuracoes")({
