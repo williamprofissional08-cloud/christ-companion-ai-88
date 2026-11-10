@@ -10,9 +10,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
+import { validateCommunityPdf } from "@/lib/community-pdf-validation";
 
 const db = supabase as unknown as SupabaseClient;
-const MAX_PDF_SIZE = 15 * 1024 * 1024;
 type Category = "pergunta" | "debate" | "estudo" | "testemunho" | "oracao" | "reflexao";
 type Post = { id: string; user_id: string; category: Category; title: string; body: string; scripture_reference: string | null; created_at: string };
 type Resource = { id: string; user_id: string; title: string; author: string; description: string; category: string; storage_path: string; file_name: string; file_size: number; status: "pending" | "approved" | "rejected"; course_candidate?: boolean; created_at: string };
@@ -162,8 +162,8 @@ function ComunidadePage() {
 
   async function submitPdf(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); if (!user || !pdf) return;
-    if (pdf.type !== "application/pdf" && !pdf.name.toLowerCase().endsWith(".pdf")) { toast.error("Envie somente arquivos PDF."); return; }
-    if (pdf.size > MAX_PDF_SIZE) { toast.error("O PDF deve ter no máximo 15 MB."); return; }
+    const validation = await validateCommunityPdf(pdf);
+    if (!validation.valid) { toast.error(validation.message); return; }
     if (!rights) { toast.error("Confirme que possui autorização para compartilhar o material."); return; }
     setBusy(true);
     const path = `${user.id}/${crypto.randomUUID()}.pdf`;
