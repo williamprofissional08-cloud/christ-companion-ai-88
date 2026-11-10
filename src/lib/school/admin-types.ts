@@ -72,6 +72,8 @@ export type AdminStats = {
   activeMembers7Days: number;
   activeMembers30Days: number;
   membersNeverActive: number;
+  pendingPosts: number;
+  pendingBooks: number;
 };
 
 /** Aula publicada exibida ao aluno. */

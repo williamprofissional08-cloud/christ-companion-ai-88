@@ -22,10 +22,28 @@ export const getAdminStats = createServerFn({ method: "GET" })
     const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000).toISOString();
 
+    // These community tables exist in the live app/migrations but are not yet
+    // represented in the generated Supabase Database type. Keep the narrow
+    // runtime query shape explicit instead of weakening the whole client.
+    const communityDb = context.supabase as unknown as {
+      from: (table: "community_posts" | "community_resources") => {
+        select: (
+          columns: "id",
+          options: { count: "exact"; head: true },
+        ) => {
+          eq: (column: "status", value: "pending") => Promise<{
+            count: number | null;
+            error: { message: string } | null;
+          }>;
+        };
+      };
+    };
+
     const [
       courses, modules, lessons, progress,
       totalMembers, newToday, new7Days, new30Days,
       activeToday, active7Days, active30Days, neverActive,
+      pendingPosts, pendingBooks,
     ] = await Promise.all([
       context.supabase.from("courses").select("status"),
       context.supabase.from("course_modules").select("id"),
@@ -39,9 +57,11 @@ export const getAdminStats = createServerFn({ method: "GET" })
       context.supabase.from("profiles").select("id", { count: "exact", head: true }).gte("last_seen_at", sevenDaysAgo),
       context.supabase.from("profiles").select("id", { count: "exact", head: true }).gte("last_seen_at", thirtyDaysAgo),
       context.supabase.from("profiles").select("id", { count: "exact", head: true }).is("last_seen_at", null),
+      communityDb.from("community_posts").select("id", { count: "exact", head: true }).eq("status", "pending"),
+      communityDb.from("community_resources").select("id", { count: "exact", head: true }).eq("status", "pending"),
     ]);
 
-    const queries = [courses, modules, lessons, progress, totalMembers, newToday, new7Days, new30Days, activeToday, active7Days, active30Days, neverActive];
+    const queries = [courses, modules, lessons, progress, totalMembers, newToday, new7Days, new30Days, activeToday, active7Days, active30Days, neverActive, pendingPosts, pendingBooks];
     const failed = queries.find((result) => result.error);
     if (failed?.error) throw new Error(`Não foi possível carregar as estatísticas administrativas: ${failed.error.message}`);
 
@@ -64,6 +84,8 @@ export const getAdminStats = createServerFn({ method: "GET" })
       activeMembers7Days: active7Days.count ?? 0,
       activeMembers30Days: active30Days.count ?? 0,
       membersNeverActive: neverActive.count ?? 0,
+      pendingPosts: pendingPosts.count ?? 0,
+      pendingBooks: pendingBooks.count ?? 0,
     };
   });
 
