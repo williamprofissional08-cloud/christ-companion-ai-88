@@ -12,9 +12,6 @@ create table if not exists public.track_progress (
   constraint track_progress_user_track_unique unique (user_id, track_slug)
 );
 
-create unique index if not exists track_progress_user_track_unique_idx
-  on public.track_progress (user_id, track_slug);
-
 alter table public.track_progress enable row level security;
 
 drop policy if exists "own track_progress" on public.track_progress;
