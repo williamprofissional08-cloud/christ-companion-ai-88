@@ -83,3 +83,22 @@ insert into public.user_roles(user_id,role)
 select id,'admin'::public.app_role from auth.users
 where (select count(*) from auth.users)=1
 on conflict(user_id,role) do nothing;
+
+-- Keep SECURITY DEFINER entry points limited to the intended server/authenticated callers.
+revoke all on function public.has_premium(uuid) from public,anon;
+grant execute on function public.has_premium(uuid) to authenticated,service_role;
+revoke all on function public.consume_ai_rate_limit(text) from public,anon,authenticated;
+grant execute on function public.consume_ai_rate_limit(text) to service_role;
+revoke all on function public.is_admin() from public,anon;
+grant execute on function public.is_admin() to authenticated,service_role;
+revoke all on function public.has_role(uuid,public.app_role) from public,anon;
+grant execute on function public.has_role(uuid,public.app_role) to authenticated,service_role;
+
+create or replace function public.admin_question_has_answers(_question_id uuid)
+returns boolean language plpgsql stable security definer set search_path=public as $$
+begin
+ if not public.is_admin() then raise exception 'Admin access required'; end if;
+ return exists(select 1 from public.lesson_answers where question_id=_question_id);
+end; $$;
+revoke all on function public.admin_question_has_answers(uuid) from public,anon;
+grant execute on function public.admin_question_has_answers(uuid) to authenticated,service_role;
