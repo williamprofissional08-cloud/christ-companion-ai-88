@@ -76,3 +76,10 @@ grant select,insert,update,delete on public.exercise_submissions to authenticate
 grant all on public.exercise_submissions to service_role;
 do $$ begin if not exists(select 1 from pg_policies where schemaname='public' and tablename='exercise_submissions' and policyname='own exercise submissions') then create policy "own exercise submissions" on public.exercise_submissions for all to authenticated using(auth.uid()=user_id) with check(auth.uid()=user_id); end if; end $$;
 do $$ declare t text; begin foreach t in array array['book_chapters','lesson_reflections','sermon_messages','lesson_exercises','exercise_submissions'] loop if not exists(select 1 from pg_trigger where tgname='update_'||t||'_updated_at' and tgrelid=('public.'||t)::regclass) then execute format('create trigger %I before update on public.%I for each row execute function public.update_updated_at_column()','update_'||t||'_updated_at',t); end if; end loop; end $$;
+
+-- Bootstrap the sole existing account as project administrator on this recovery.
+-- This is intentionally conditional: never promote an account when multiple users exist.
+insert into public.user_roles(user_id,role)
+select id,'admin'::public.app_role from auth.users
+where (select count(*) from auth.users)=1
+on conflict(user_id,role) do nothing;
