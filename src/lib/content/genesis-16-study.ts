@@ -5,7 +5,7 @@ import type { StudyContent } from "../types";
  * Distingue o relato bíblico, contexto histórico, interpretação e aplicação.
  */
 export const genesis16Study: StudyContent = {
-  version: 4,
+  version: 1,
   depth: "deep",
   intro: `Gênesis 16 narra uma crise familiar que nasce da longa espera pelo cumprimento da promessa de descendência feita a Abrão. Sarai, ainda sem filhos, propõe que Abrão tenha um filho por meio de Hagar, sua serva egípcia. Abrão aceita a proposta. Depois que Hagar concebe, surgem desprezo, conflito e sofrimento. Sarai trata Hagar duramente, e ela foge para o deserto. Ali, o Anjo do Senhor a encontra junto a uma fonte, chama-a pelo nome, pergunta de onde vem e para onde vai, e anuncia que sua descendência será numerosa. Hagar recebe a ordem de voltar e se submeter à situação, ouve a promessa sobre seu filho e o nomeia Ismael, porque o Senhor ouviu sua aflição. O capítulo termina com o nascimento de Ismael e a idade de Abrão.
 
@@ -71,48 +71,6 @@ Leia Gênesis 16 integralmente em sua Bíblia. Este estudo acompanha o texto e n
   conclusion: "Gênesis 16 mostra o custo de tentar resolver a promessa por caminhos humanos que desconsideram a dignidade de outra pessoa. Sarai e Abrão agem dentro de uma estrutura de poder, mas Hagar é quem sofre diretamente as consequências. No deserto, Deus a encontra, ouve sua aflição e anuncia o futuro de Ismael. O capítulo não encerra todas as tensões familiares; prepara o leitor para os acontecimentos de Gênesis 17 e 21. Sua mensagem deve ser recebida com atenção ao contexto: Deus é fiel, vê quem sofre e não aprova que a promessa seja usada como desculpa para injustiça.",
   prayer: "Senhor Deus, dá-nos paciência para esperar tua direção sem tentar cumprir teus propósitos por caminhos injustos. Perdoa-nos quando usamos nossa posição para ferir ou diminuir outras pessoas. Ensina-nos a reconhecer a dignidade dos vulneráveis e a agir com justiça, misericórdia e responsabilidade. Ajuda-nos a perceber que tu vês e ouves os aflitos. Dá-nos sabedoria para interpretar tua Palavra com fidelidade e aplicar seus ensinamentos sem justificar violência ou opressão. Em nome de Jesus. Amém.",
   sections: [
-    {
-      id: "leitura-biblica-completa",
-      title: "Leitura bíblica — Gênesis 16:1-16, versículo por versículo",
-      kind: "scripture",
-      confidence: "high",
-      scriptureRefs: ["Gênesis 16:1-16"],
-      body: `**Texto de estudo em tradução livre para linguagem atual, elaborado para acompanhar o sentido do texto hebraico.** Não é uma edição oficial de Almeida nem substitui a leitura na tradução bíblica utilizada pelo aluno. A numeração acompanha Gênesis 16.
-
-**1** Sarai, mulher de Abrão, não lhe havia dado filhos. Ela tinha uma serva egípcia chamada Hagar.
-
-**2** Sarai disse a Abrão: O Senhor não permitiu que eu tivesse filhos. Peço que te unas à minha serva; talvez eu possa formar uma família por meio dela. Abrão concordou com a proposta de Sarai.
-
-**3** Depois de Abrão morar dez anos na terra de Canaã, Sarai, sua mulher, tomou Hagar, a egípcia, sua serva, e a entregou a Abrão como mulher.
-
-**4** Abrão se uniu a Hagar, e ela concebeu. Quando percebeu que estava grávida, Hagar passou a olhar para sua senhora com desprezo.
-
-**5** Sarai disse a Abrão: A responsabilidade por essa injustiça que estou sofrendo é tua. Coloquei minha serva em teus braços, mas, quando ela percebeu que estava grávida, passou a me desprezar. Que o Senhor julgue entre mim e ti.
-
-**6** Abrão respondeu a Sarai: Tua serva está sob tua autoridade; faze com ela o que considerares adequado. Sarai passou a tratar Hagar com dureza, e Hagar fugiu de sua presença.
-
-**7** O Anjo do Senhor encontrou Hagar junto a uma fonte de água no deserto, perto do caminho de Sur.
-
-**8** Ele perguntou: Hagar, serva de Sarai, de onde vens e para onde vais? Ela respondeu: Estou fugindo de Sarai, minha senhora.
-
-**9** O Anjo do Senhor lhe disse: Volta para tua senhora e coloca-te sob sua autoridade.
-
-**10** O Anjo do Senhor acrescentou: Multiplicarei tanto tua descendência que ela será numerosa demais para ser contada.
-
-**11** O Anjo do Senhor também lhe disse: Estás grávida e darás à luz um filho. Darás a ele o nome Ismael, porque o Senhor ouviu tua aflição.
-
-**12** Ele será como um jumento selvagem entre os homens; sua mão estará contra todos, e a mão de todos contra ele. Viverá em oposição aos seus irmãos.
-
-**13** Hagar deu ao Senhor, que lhe falava, um nome que expressava sua admiração: Tu és o Deus que me vê. Ela disse: Será que realmente vi aquele que me vê?
-
-**14** Por isso, aquele poço foi chamado Beer-Laai-Roi. Ele fica entre Cades e Berede.
-
-**15** Hagar deu à luz um filho a Abrão, e Abrão deu ao filho o nome Ismael.
-
-**16** Abrão tinha oitenta e seis anos quando Hagar lhe deu Ismael.
-
-**Orientação:** leia também Gênesis 16 diretamente em sua Bíblia. Compare esta redação de estudo com a tradução que você utiliza. Algumas expressões, especialmente nos versículos 5, 9, 12 e 13, apresentam diferenças entre traduções; as explicações seguintes tratarão desses pontos com cuidado. Esta versão de estudo não substitui a Escritura.`
-    },
     {
       id: "estrutura",
       title: "1. Estrutura literária e lugar do capítulo na narrativa",
