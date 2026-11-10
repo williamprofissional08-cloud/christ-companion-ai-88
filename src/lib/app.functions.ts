@@ -19,6 +19,9 @@ export const getDashboard = createServerFn({ method: "GET" })
       supabase.from("journal_entries").select("*").eq("user_id", userId).order("created_at", { ascending: false }).limit(5),
       supabase.from("habit_days").select("day, habits").eq("user_id", userId).order("day", { ascending: false }).limit(30),
     ]);
+    for (const result of [devotional, habits, goals, plans, journal, streakRows]) {
+      if (result.error) throw new Error("Não foi possível carregar os dados do painel.");
+    }
     return {
       devotional: (devotional.data?.content ?? null) as DevotionalContent | null,
       habits: (habits.data?.habits ?? {}) as Record<string, boolean>,
@@ -42,6 +45,7 @@ export const toggleHabit = createServerFn({ method: "POST" })
       .eq("user_id", userId)
       .eq("day", data.day)
       .maybeSingle();
+    if (existing.error) throw new Error("Não foi possível recuperar os hábitos salvos.");
     const habits = { ...((existing.data?.habits ?? {}) as Record<string, boolean>), [data.key]: data.value };
     const { error } = await supabase
       .from("habit_days")
@@ -232,12 +236,13 @@ export const getPlanProgress = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => z.object({ slug: z.string().max(80) }).parse(input))
   .handler(async ({ data, context }) => {
-    const { data: row } = await context.supabase
+    const { data: row, error } = await context.supabase
       .from("plan_progress")
       .select("*")
       .eq("user_id", context.userId)
       .eq("plan_slug", data.slug)
       .maybeSingle();
+    if (error) throw new Error("Não foi possível recuperar o progresso do plano.");
     return row;
   });
 
@@ -261,6 +266,7 @@ export const savePlanDay = createServerFn({ method: "POST" })
       .eq("user_id", userId)
       .eq("plan_slug", data.slug)
       .maybeSingle();
+    if (existing.error) throw new Error("Não foi possível recuperar o progresso salvo do plano.");
     const current = new Set<number>(existing.data?.completed_days ?? []);
     if (data.done) current.add(data.day);
     else current.delete(data.day);
@@ -307,6 +313,9 @@ export const getWeeklySummary = createServerFn({ method: "GET" })
         .select("track_slug, completed_steps, updated_at")
         .eq("user_id", userId),
     ]);
+    for (const result of [habitRows, journalRows, goals, trackRows]) {
+      if (result.error) throw new Error("Não foi possível carregar o resumo semanal completo.");
+    }
 
     const byDay = new Map<string, Record<string, boolean>>();
     for (const row of habitRows.data ?? [])
