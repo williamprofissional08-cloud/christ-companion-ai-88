@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
-import { BookOpen, GraduationCap, ArrowRight, ShieldCheck } from "lucide-react";
+import { BookOpen, GraduationCap, ArrowRight } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -28,6 +28,7 @@ function EscolaPage() {
     queryFn: () => fetchCatalog(),
     staleTime: 30_000,
   });
+  const courses = catalog.data ?? [];
   const admin = useQuery({
     queryKey: ["am-i-admin"],
     queryFn: () => checkAdmin(),
@@ -60,7 +61,7 @@ function EscolaPage() {
             </p>
             <Button variant="outline" size="sm" onClick={() => catalog.refetch()}>Tentar novamente</Button>
           </Card>
-        ) : (catalog.data ?? []).length === 0 ? (
+        ) : courses.length === 0 ? (
           <Card className="mx-auto flex max-w-2xl flex-col items-center gap-4 px-6 py-10 text-center">
             <div className="rounded-full bg-primary/10 p-4">
               <BookOpen className="size-8 text-primary" aria-hidden />
@@ -82,14 +83,14 @@ function EscolaPage() {
             <div className="flex items-center justify-between gap-3">
               <div>
                 <h2 className="font-display text-base font-semibold">Cursos disponíveis</h2>
-                <p className="text-xs text-muted-foreground">{catalog.data.length} curso(s) publicado(s)</p>
+                <p className="text-xs text-muted-foreground">{courses.length} curso(s) publicado(s)</p>
               </div>
               {admin.data ? (
                 <Button asChild size="sm" variant="outline"><Link to="/admin/cursos">Administrar</Link></Button>
               ) : null}
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
-              {catalog.data.map((course) => (
+              {courses.map((course) => (
                 <Link key={course.id} to="/escola/$slug" params={{ slug: course.slug }} className="block">
                   <Card className="h-full space-y-3 p-5 transition-shadow hover:shadow-md">
                     <div className="flex flex-wrap items-center gap-2">
