@@ -8,12 +8,12 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { loadEnv } from "vite";
 
 const publicEnv = loadEnv(process.env["NODE_ENV"] ?? "production", process.cwd(), "VITE_");
-// Public (non-secret) values bound to this project's backend; used only when the build lacks them.
+// Public (non-secret) fallback values for the existing production Supabase project.
+// Explicit VITE_* environment values still take precedence when supplied by the host.
 const publicBackendUrl =
-  publicEnv["VITE_SUPABASE_URL"] || "https://hbpbnbsxtzrwisyiixlw.supabase.co";
+  publicEnv["VITE_SUPABASE_URL"] || "https://uluumebztnrgpyzohqrv.supabase.co";
 const publicBackendKey =
-  publicEnv["VITE_SUPABASE_PUBLISHABLE_KEY"] || "sb_publishable_GakKaDzexpGcS5q4KMgwVA_WXDv1xYm";
-// Expose to Vite's env loader too, so bracket access (import.meta.env['VITE_…']) resolves.
+  publicEnv["VITE_SUPABASE_PUBLISHABLE_KEY"] || "sb_publishable_R-b9hG7BURmJCmtVG0393w_4AMoonvq";
 process.env["VITE_SUPABASE_URL"] ||= publicBackendUrl;
 process.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ||= publicBackendKey;
 
@@ -23,15 +23,11 @@ const publicDefines = {
 };
 
 export default defineConfig({
-  // Keep Lovable's explicit VITE_* replacement enabled for browser bundles.
-  // The generated browser client reads these public values at runtime.
   envDefine: true,
   vite: {
     define: publicDefines,
   },
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
     server: { entry: "server" },
   },
 });
