@@ -46,7 +46,10 @@ export const requireSupabaseAuth = createMiddleware({ type: 'function' })
 
     // A browser session can survive a backend/project switch in the Lovable
     // container. Never forward a JWT issued by a different Supabase project.
-    const expectedIssuer = (import.meta.env['VITE_SUPABASE_URL'] || '').replace(/\\/+$/, '') + '/auth/v1'
+    const configuredSupabaseUrl = import.meta.env['VITE_SUPABASE_URL']
+    const expectedIssuer = typeof configuredSupabaseUrl === 'string' && configuredSupabaseUrl
+      ? configuredSupabaseUrl.replace(/\\/+$/, '') + '/auth/v1'
+      : null
     const getIssuer = (jwt: string): string | null => {
       try {
         const payload = jwt.split('.')[1]
