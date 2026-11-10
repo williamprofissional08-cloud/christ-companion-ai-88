@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { friendlyAuthError, takeRedirect } from "@/lib/auth-redirect";
+import { friendlyAuthError } from "@/lib/auth-redirect";
 
 export const Route = createFileRoute("/auth-callback")({
   ssr: false,
@@ -39,7 +39,7 @@ function AuthCallback() {
       if (done) return;
       done = true;
       // `replace` remove os parâmetros do OAuth da URL final.
-      navigate({ to: takeRedirect(), replace: true });
+      navigate({ to: "/inicio", replace: true });
     };
 
     const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
