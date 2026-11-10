@@ -108,7 +108,7 @@ export function AppShell({
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="app-ambient min-h-screen bg-background">
       <aside className="fixed inset-y-0 left-0 hidden w-64 flex-col border-r border-sidebar-border bg-sidebar px-4 py-6 lg:flex">
         <Link to="/inicio" className="mb-8 flex items-center gap-3 px-2">
           <img src={logo} alt="" width={40} height={40} className="size-10" />
