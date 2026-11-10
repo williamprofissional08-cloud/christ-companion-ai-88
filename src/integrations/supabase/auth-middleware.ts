@@ -30,7 +30,26 @@ function createSupabaseFetch(supabaseKey: string): typeof fetch {
   };
 }
 
-export const requireSupabaseAuth = createMiddleware({ type: 'function' }).server(
+import { supabase as browserSupabase } from './client'
+
+export const requireSupabaseAuth = createMiddleware({ type: 'function' })
+  .client(async ({ next }) => {
+    // TanStack Start server functions do not inherit the Supabase browser session
+    // automatically. Forward the current access token explicitly; the server
+    // middleware below verifies its signature and claims before using it.
+    const { data, error } = await browserSupabase.auth.getSession()
+    const accessToken = data.session?.access_token
+    if (error || !accessToken) {
+      throw new Error('Unauthorized: Sessão ausente ou expirada. Entre novamente.')
+    }
+
+    return next({
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    })
+  })
+  .server(
   async ({ next }) => {
     
     const SUPABASE_URL = process.env['SUPABASE_URL'];
