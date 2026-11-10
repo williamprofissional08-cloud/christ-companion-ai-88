@@ -9,20 +9,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import logo from "@/assets/logo.png";
-import {
-  friendlyAuthError,
-  rememberRedirect,
-  sanitizeRedirect,
-  takeRedirect,
-} from "@/lib/auth-redirect";
+import { friendlyAuthError } from "@/lib/auth-redirect";
 
 export const Route = createFileRoute("/auth")({
   ssr: false,
-  validateSearch: (search: Record<string, unknown>): { redirect?: string } => {
-    const safe = sanitizeRedirect(search['redirect']);
-    return safe ? { redirect: safe } : {};
-  },
-
   head: () => ({
     meta: [
       { property: "og:type", content: "website" },
@@ -44,7 +34,6 @@ export const Route = createFileRoute("/auth")({
 
 function AuthPage() {
   const navigate = useNavigate();
-  const { redirect } = Route.useSearch();
   const [mode, setMode] = useState<"login" | "signup">("login");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -55,14 +44,9 @@ function AuthPage() {
   const [checking, setChecking] = useState(true);
   const [sent, setSent] = useState(false);
 
-  // Guarda o destino pretendido para usar depois do login (inclusive via Google).
-  useEffect(() => {
-    rememberRedirect(redirect ?? null);
-  }, [redirect]);
-
   useEffect(() => {
     let active = true;
-    const go = () => navigate({ to: takeRedirect(), replace: true });
+    const go = () => navigate({ to: "/inicio", replace: true });
 
     // Never trust a persisted session until Supabase validates the user.
     // After signing-key rotation, an old JWT can remain in localStorage and
@@ -161,7 +145,7 @@ function AuthPage() {
         return;
       }
       if (result.redirected) return;
-      navigate({ to: takeRedirect(), replace: true });
+      navigate({ to: "/inicio", replace: true });
     } catch (error) {
       toast.error(friendlyAuthError(error));
     }

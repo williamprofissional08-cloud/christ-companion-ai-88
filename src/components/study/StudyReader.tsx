@@ -135,32 +135,50 @@ export function StudyReader({
 
   useEffect(() => {
     let pending = false;
+    let saveTimer: number | undefined;
+    const persistSoon = () => {
+      if (saveTimer !== undefined) window.clearTimeout(saveTimer);
+      // Persist shortly after the reader stops scrolling, not only every 15 seconds.
+      saveTimer = window.setTimeout(() => onCheckpoint?.({ ...checkpointRef.current }), 900);
+    };
     const measure = () => {
       pending = false;
       const doc = document.documentElement;
       const scrollable = doc.scrollHeight - window.innerHeight;
       const nextPercent = scrollable > 0 ? Math.round((window.scrollY / scrollable) * 100) : 100;
       const bounded = Math.max(checkpointRef.current.readPercent, Math.min(100, Math.max(0, nextPercent)));
+      const previousPercent = checkpointRef.current.readPercent;
       setReadPercent(bounded);
       checkpointRef.current.readPercent = bounded;
       let visibleIndex = -1;
       sectionRefs.current.forEach((node, index) => {
         if (node && node.getBoundingClientRect().top <= 180) visibleIndex = index;
       });
+      const previousSection = checkpointRef.current.lastSectionIndex;
       if (visibleIndex >= 0) checkpointRef.current.lastSectionIndex = visibleIndex;
+      if (bounded !== previousPercent || checkpointRef.current.lastSectionIndex !== previousSection) persistSoon();
     };
     const onScroll = () => {
       if (pending) return;
       pending = true;
       window.requestAnimationFrame(measure);
     };
+    const flush = () => onCheckpoint?.({ ...checkpointRef.current });
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "hidden") flush();
+    };
     measure();
     window.addEventListener("scroll", onScroll, { passive: true });
-    const timer = window.setInterval(() => onCheckpoint?.(checkpointRef.current), 15000);
+    window.addEventListener("pagehide", flush);
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    const timer = window.setInterval(flush, 10000);
     return () => {
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("pagehide", flush);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      if (saveTimer !== undefined) window.clearTimeout(saveTimer);
       window.clearInterval(timer);
-      onCheckpoint?.(checkpointRef.current);
+      flush();
     };
   }, [onCheckpoint]);
 
