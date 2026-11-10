@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import type { SupabaseClient, User } from "@supabase/supabase-js";
-import { BookOpen, BookMarked, Check, CircleHelp, Download, FileText, Flag, Heart, HandHeart, LibraryBig, Loader2, MessageCircle, MessagesSquare, Plus, Send, ShieldCheck, Sparkles, Upload, UsersRound, X } from "lucide-react";
+import { BookOpen, Check, Download, FileText, Flag, Heart, LibraryBig, Loader2, MessageCircle, MessagesSquare, Plus, Send, ShieldCheck, Sparkles, Upload, UsersRound, X, ExternalLink } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
@@ -33,6 +33,7 @@ function ComunidadePage() {
   const [user, setUser] = useState<User | null>(null);
   const [admin, setAdmin] = useState(false);
   const [posts, setPosts] = useState<Post[]>([]);
+  const [pendingPosts, setPendingPosts] = useState<Post[]>([]);
   const [resources, setResources] = useState<Resource[]>([]);
   const [pending, setPending] = useState<Resource[]>([]);
   const [profiles, setProfiles] = useState<Record<string, Profile>>({});
@@ -43,6 +44,9 @@ function ComunidadePage() {
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [tab, setTab] = useState("todos");
+  const [expandedText, setExpandedText] = useState<string | null>(null);
+  const [pollChoice, setPollChoice] = useState("");
+  const [pollVoted, setPollVoted] = useState(false);
   const [composer, setComposer] = useState(false);
   const [libraryForm, setLibraryForm] = useState(false);
   const [category, setCategory] = useState<Category>("pergunta");
@@ -78,15 +82,19 @@ function ComunidadePage() {
     }
     setLikes(counts);
     const isAdmin = Boolean(a.data && !a.error); setAdmin(isAdmin);
-    const ids = [...new Set(rows.map((row) => row.user_id))];
+    const ids = [...new Set([...rows, ...((r.data || []) as Resource[])].map((row) => row.user_id))];
     if (ids.length) {
       const { data } = await db.from("community_member_profiles").select("id,display_name").in("id", ids);
       setProfiles(Object.fromEntries(((data || []) as Profile[]).map((x) => [x.id, x])));
     }
     if (isAdmin) {
-      const { data } = await db.from("community_resources").select("*").eq("status", "pending").order("created_at");
-      setPending((data || []) as Resource[]);
-    } else setPending([]);
+      const [{ data: pendingResources }, { data: postsAwaitingReview }] = await Promise.all([
+        db.from("community_resources").select("*").eq("status", "pending").order("created_at"),
+        db.from("community_posts").select("*").eq("status", "pending").order("created_at"),
+      ]);
+      setPending((pendingResources || []) as Resource[]);
+      setPendingPosts((postsAwaitingReview || []) as Post[]);
+    } else { setPending([]); setPendingPosts([]); }
     setLoading(false);
   }, []);
 
@@ -100,16 +108,20 @@ function ComunidadePage() {
     if (tab === "forum") return posts.filter((p) => p.category === "pergunta" || p.category === "debate");
     if (tab === "estudos") return posts.filter((p) => p.category === "estudo");
     if (tab === "testemunhos") return posts.filter((p) => p.category === "testemunho");
-    if (tab === "oracao") return posts.filter((p) => p.category === "oracao");
+    if (tab === "arquivos") return [];
+    if (tab === "forum") return posts.filter((p) => p.category === "pergunta" || p.category === "debate" || p.category === "reflexao");
     return posts;
   }, [posts, tab]);
 
   async function publish(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); if (!user) return; setBusy(true);
-    const { error } = await db.from("community_posts").insert({ user_id: user.id, category, title: title.trim(), body: body.trim(), scripture_reference: reference.trim() || null, status: "published" });
+    const { count, error: countError } = await db.from("community_posts").select("id", { count: "exact", head: true }).eq("user_id", user.id);
+    if (countError) { setBusy(false); toast.error("Não foi possível verificar sua primeira publicação."); return; }
+    const status = count === 0 ? "pending" : "published";
+    const { error } = await db.from("community_posts").insert({ user_id: user.id, category, title: title.trim(), body: body.trim(), scripture_reference: reference.trim() || null, status });
     setBusy(false);
     if (error) { toast.error("Não foi possível publicar. Confira os campos e tente novamente."); return; }
-    toast.success("Publicação compartilhada. Que ela edifique a comunidade!");
+    toast.success(status === "pending" ? "Sua primeira publicação foi enviada para aprovação da equipe." : "Publicação compartilhada. Que ela edifique a comunidade!");
     setTitle(""); setBody(""); setReference(""); setComposer(false); await reload(user);
   }
 
@@ -163,6 +175,14 @@ function ComunidadePage() {
     setBookTitle(""); setAuthor(""); setDescription(""); setPdf(null); setRights(false); setCourseCandidate(false); setLibraryForm(false); await reload(user);
   }
 
+  async function moderatePost(post: Post, approved: boolean) {
+    if (!user || !admin) return;
+    const { error } = await db.from("community_posts").update({ status: approved ? "published" : "hidden" }).eq("id", post.id);
+    if (error) { toast.error("Não foi possível moderar a publicação."); return; }
+    toast.success(approved ? "Publicação aprovada e visível na comunidade." : "Publicação recusada.");
+    await reload(user);
+  }
+
   async function moderate(resource: Resource, status: "approved" | "rejected") {
     if (!user) return;
     const { error } = await db.from("community_resources").update({ status, moderation_note: notes[resource.id]?.trim() || null, reviewed_by: user.id, reviewed_at: new Date().toISOString() }).eq("id", resource.id);
@@ -180,57 +200,32 @@ function ComunidadePage() {
 
   return <AppShell title="Comunidade" subtitle="Crescendo juntos no conhecimento de Deus.">
     <div className="mx-auto max-w-4xl space-y-5">
-      <section className="community-hero relative isolate overflow-hidden rounded-[1.75rem] border border-white/20 p-5 text-white shadow-xl sm:rounded-[2rem] sm:p-8 lg:p-9">
-        <div className="pointer-events-none absolute -right-16 -top-20 size-64 rounded-full bg-sky-300/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -left-12 size-64 rounded-full bg-amber-300/20 blur-3xl" />
-        <div className="relative flex min-h-[220px] flex-col justify-between gap-7 sm:min-h-[260px]">
-          <div className="max-w-2xl">
-            <span className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/15 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-sm backdrop-blur-md"><UsersRound className="size-3.5" /> Comunhão e crescimento</span>
-            <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight drop-shadow sm:text-4xl lg:text-5xl">Caminhando juntos na fé.</h2>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/90 drop-shadow-sm sm:text-base">Um espaço para aprender a Palavra, compartilhar experiências, fortalecer amizades e orar uns pelos outros em Cristo.</p>
+      <section className="rounded-3xl border border-primary/10 bg-white p-4 shadow-soft sm:p-6">
+        <div className="grid items-center gap-5 sm:grid-cols-[minmax(0,1fr)_minmax(220px,0.8fr)]">
+          <div className="min-w-0"><span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary"><UsersRound className="size-3.5" /> Comunhão e crescimento</span><h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl">Comunidade</h2><p className="mt-2 text-sm leading-relaxed text-slate-600">Crescendo juntos no conhecimento de Deus</p>
+            <a href="https://chat.whatsapp.com/KXe3BvJqUyJ2sX5NAShfPi?s=cl&p=i&mlu=4&ilr=4&iam=2" target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-100"><MessageCircle className="size-4" />Grupo no WhatsApp <span className="font-normal text-emerald-700">— conversa rápida</span><ExternalLink className="size-3.5" /></a>
           </div>
-          <div className="flex items-end justify-between gap-3">
-            <div className="max-w-xl rounded-2xl border border-white/25 bg-slate-950/30 p-3.5 shadow-lg backdrop-blur-md sm:p-4">
-              <p className="font-display text-base italic leading-relaxed sm:text-lg">“Onde estiverem dois ou três reunidos em meu nome, ali estou no meio deles.”</p>
-              <p className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-amber-200">Mateus 18:20</p>
-            </div>
-            <div className="hidden rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-md sm:block"><BookOpen className="size-8 text-amber-200" /></div>
-          </div>
+          <div className="community-scripture relative flex min-h-[190px] flex-col justify-end overflow-hidden rounded-2xl p-4 text-white shadow-md sm:min-h-[220px]"><p className="max-w-sm font-display text-lg italic leading-relaxed">“Onde há dois ou três reunidos em meu nome, eu estou no meio deles.”</p><p className="mt-2 text-xs font-bold uppercase tracking-wider text-amber-200">Mateus 18:20</p></div>
         </div>
       </section>
 
       <Tabs value={tab} onValueChange={setTab}>
-        <TabsList className="grid h-auto w-full grid-cols-3 gap-1 rounded-2xl bg-muted/80 p-1 sm:grid-cols-6">
-          <TabsTrigger value="todos" className="gap-1 rounded-xl py-2 text-xs sm:text-sm"><UsersRound className="size-4" />Todos</TabsTrigger>
-          <TabsTrigger value="forum" className="gap-1 rounded-xl py-2 text-xs sm:text-sm"><MessagesSquare className="size-4" />Fórum</TabsTrigger>
-          <TabsTrigger value="estudos" className="gap-1 rounded-xl py-2 text-xs sm:text-sm"><BookOpen className="size-4" />Estudos</TabsTrigger>
-          <TabsTrigger value="arquivos" className="gap-1 rounded-xl py-2 text-xs sm:text-sm"><LibraryBig className="size-4" />Arquivos</TabsTrigger>
-          <TabsTrigger value="testemunhos" className="gap-1 rounded-xl py-2 text-xs sm:text-sm"><Heart className="size-4" />Testemunhos</TabsTrigger>
-          <TabsTrigger value="oracao" className="gap-1 rounded-xl py-2 text-xs sm:text-sm"><HandHeart className="size-4" />Oração</TabsTrigger>
+        <TabsList className="grid h-auto w-full grid-cols-2 gap-1 rounded-2xl bg-muted/80 p-1 sm:grid-cols-5">
+          <TabsTrigger value="todos" className="rounded-xl py-2 text-xs sm:text-sm">Todos</TabsTrigger><TabsTrigger value="forum" className="rounded-xl py-2 text-xs sm:text-sm">Fórum</TabsTrigger><TabsTrigger value="estudos" className="rounded-xl py-2 text-xs sm:text-sm">Estudos</TabsTrigger><TabsTrigger value="arquivos" className="rounded-xl py-2 text-xs sm:text-sm">Arquivos</TabsTrigger><TabsTrigger value="testemunhos" className="rounded-xl py-2 text-xs sm:text-sm">Testemunhos</TabsTrigger>
         </TabsList>
 
         <TabsContent value={tab} className="mt-4 space-y-5">
           {tab !== "arquivos" && <>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {[
-                { icon: CircleHelp, title: "Perguntas bíblicas", sub: "Tire dúvidas com respeito", cat: "pergunta" as Category, tone: "from-sky-500/15 via-cyan-500/10 to-blue-500/5", iconTone: "bg-sky-500/15 text-sky-700 dark:text-sky-300" },
-                { icon: MessagesSquare, title: "Debates da fé", sub: "Examine as Escrituras", cat: "debate" as Category, tone: "from-violet-500/15 via-indigo-500/10 to-blue-500/5", iconTone: "bg-violet-500/15 text-violet-700 dark:text-violet-300" },
-                { icon: BookMarked, title: "Estudos", sub: "Compartilhe aprendizados", cat: "estudo" as Category, tone: "from-amber-500/20 via-yellow-500/10 to-orange-500/5", iconTone: "bg-amber-500/20 text-amber-700 dark:text-amber-300" },
-                { icon: HandHeart, title: "Testemunhos e oração", sub: "Edifique e interceda", cat: "testemunho" as Category, tone: "from-rose-500/15 via-pink-500/10 to-orange-500/5", iconTone: "bg-rose-500/15 text-rose-700 dark:text-rose-300" },
-              ].map((item) => <button key={item.title} type="button" onClick={() => { setCategory(item.cat); setComposer(true); }} className={`community-category-card group relative isolate min-h-[126px] overflow-hidden rounded-2xl border border-border/70 bg-gradient-to-br ${item.tone} p-3.5 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg active:scale-[.98] sm:min-h-[145px] sm:p-4`}><span className={`mb-3 flex size-10 items-center justify-center rounded-xl shadow-sm transition-transform duration-300 group-hover:scale-110 ${item.iconTone}`}><item.icon className="size-5" /></span><span className="block text-sm font-bold leading-snug sm:text-base">{item.title}</span><span className="mt-1.5 block text-[11px] leading-relaxed text-muted-foreground sm:text-xs">{item.sub}</span><span className="pointer-events-none absolute -bottom-8 -right-6 -z-10 size-24 rounded-full bg-white/30 blur-2xl transition-transform duration-500 group-hover:scale-150 dark:bg-white/5" /></button>)}
-            </div>
-
             <Card className="border-primary/15 bg-gradient-to-r from-blue-950 to-blue-800 p-4 text-white shadow-sm sm:p-5">
               <div className="flex items-start gap-3"><div className="rounded-xl bg-white/15 p-2"><Sparkles className="size-5 text-amber-300" /></div><div className="flex-1">
-                <p className="text-xs font-semibold uppercase tracking-wide text-blue-200">Tema para refletir</p><h3 className="mt-1 font-display text-xl font-semibold">A fé que se expressa em amor</h3><p className="mt-1 text-sm text-blue-100">“A fé, se não tiver obras, por si só está morta.” — Tiago 2:17</p><p className="mt-2 text-xs text-blue-200">Como a fé em Cristo transforma nossas atitudes no dia a dia?</p>
-                <Button size="sm" variant="secondary" className="mt-3" onClick={() => { setCategory("debate"); setTitle("Como a fé em Cristo transforma nossas atitudes?"); setReference("Tiago 2:14–18"); setComposer(true); }}>Participar da reflexão</Button>
+                <p className="text-xs font-semibold uppercase tracking-wide text-blue-200">Em Destaque</p><h3 className="mt-1 font-display text-xl font-semibold">Tema do Dia: A Fé que Move Montanhas</h3><p className="mt-2 text-sm leading-relaxed text-blue-100">“Porque em verdade vos digo que, se tiverdes fé e não duvidardes, não só fareis o que foi feito à figueira, mas até se a este monte disserdes: Ergue-te e precipita-te no mar, assim será feito.” — Mateus 21:21–22</p><Button size="sm" variant="secondary" className="mt-3" onClick={() => { const target = posts.find((p) => /fé que move montanhas/i.test(p.title)); if (target) { setExpanded(target.id); document.getElementById(`community-post-${target.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }); } else { setCategory("debate"); setTitle("A Fé que Move Montanhas"); setReference("Marcos 11:23"); setComposer(true); } }}>Participar</Button>
               </div></div>
             </Card>
 
-            <div className="flex flex-wrap items-center justify-between gap-3"><div><h3 className="font-display text-xl font-semibold">Compartilhe com a comunidade</h3><p className="text-xs text-muted-foreground">Uma pergunta, aprendizado, oração ou testemunho.</p></div><Button onClick={() => setComposer((v) => !v)} className="gap-2">{composer ? <X className="size-4" /> : <Plus className="size-4" />}{composer ? "Fechar" : "Publicar"}</Button></div>
+            <div className="flex flex-wrap items-center justify-between gap-3"><div><h3 className="font-display text-xl font-semibold">Compartilhe com a comunidade</h3><p className="text-xs text-muted-foreground">Uma palavra, pergunta ou reflexão.</p></div><Button onClick={() => setComposer((v) => !v)} className="gap-2">{composer ? <X className="size-4" /> : <Plus className="size-4" />}{composer ? "Fechar" : "Publicar"}</Button></div>
 
             {composer && <Card className="border-primary/20 p-4 shadow-sm sm:p-5"><form onSubmit={publish} className="space-y-3">
-              <h3 className="font-semibold">Nova publicação</h3>
+              <h3 className="font-semibold">Nova publicação</h3><p className="text-xs text-muted-foreground">Compartilhe uma palavra, pergunta ou reflexão...</p>
               <label className="block space-y-1 text-sm font-medium">Tipo de publicação<select value={category} onChange={(e) => setCategory(e.target.value as Category)} className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm">{Object.entries(labels).map(([v, label]) => <option key={v} value={v}>{label}</option>)}</select></label>
               <Input value={title} onChange={(e) => setTitle(e.target.value)} minLength={4} maxLength={160} placeholder="Dê um título à sua publicação" required />
               <Textarea value={body} onChange={(e) => setBody(e.target.value)} minLength={10} maxLength={8000} rows={5} placeholder="Escreva sua pergunta, reflexão, testemunho ou pedido de oração..." required />
@@ -238,11 +233,15 @@ function ComunidadePage() {
               <div className="flex flex-wrap items-center justify-between gap-2"><p className="max-w-md text-xs text-muted-foreground">Diferencie o que o texto bíblico afirma da sua interpretação e aplicação.</p><Button type="submit" disabled={busy || !user} className="gap-2">{busy ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}Publicar</Button></div>
             </form></Card>}
 
+            <div className="grid gap-4 lg:grid-cols-2">
+              <Card className="space-y-3 p-4 sm:p-5"><div className="flex items-center justify-between gap-2"><h3 className="font-display text-lg font-semibold">Enquetes da Comunidade</h3><span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-semibold text-emerald-700">Ativa até 12/11</span></div><p className="text-sm font-medium">Qual livro da Bíblia você mais ama?</p><div className="space-y-2">{["João","Salmos","Romanos","Provérbios"].map((option) => <label key={option} className="flex cursor-pointer items-center gap-2 rounded-xl border border-border p-2.5 text-sm"><input type="radio" name="community-poll" value={option} checked={pollChoice === option} onChange={(e) => { setPollChoice(e.target.value); setPollVoted(false); }} className="accent-primary" />{option}</label>)}</div><div className="flex items-center justify-between gap-2"><span className="text-xs text-muted-foreground">142 participantes</span><Button size="sm" disabled={!pollChoice || pollVoted} onClick={() => { setPollVoted(true); toast.success("Voto registrado nesta sessão."); }}>{pollVoted ? "Voto registrado" : "Votar"}</Button></div></Card>
+              <Card className="space-y-3 p-4 sm:p-5"><span className="inline-flex w-fit rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-semibold text-primary">Desafio Bíblico da Semana</span><h3 className="font-display text-lg font-semibold">Leia e medite em Salmos 23</h3><p className="text-sm text-muted-foreground">Compartilhe sua reflexão e receba encorajamento da comunidade.</p><div className="flex items-center justify-between text-xs"><span className="font-semibold text-primary">68% concluído</span><span className="text-muted-foreground">Progresso da comunidade</span></div><div className="h-2 overflow-hidden rounded-full bg-primary/10"><div className="h-full w-[68%] rounded-full bg-primary" /></div><Button size="sm" onClick={() => { setTab("estudos"); setCategory("estudo"); setTitle("Minha reflexão sobre Salmos 23"); setReference("Salmos 23"); setComposer(true); setBody("O que mais chamou minha atenção neste salmo foi..."); }}>Participar</Button></Card>
+            </div>
             {loading ? <div className="flex justify-center py-12"><Loader2 className="size-7 animate-spin text-primary" /></div> : shownPosts.length === 0 ? <Card className="p-8 text-center"><MessagesSquare className="mx-auto size-9 text-muted-foreground" /><h3 className="mt-3 font-semibold">Seja o primeiro a contribuir</h3><p className="mt-1 text-sm text-muted-foreground">Compartilhe uma pergunta ou reflexão fundamentada na Palavra.</p><Button className="mt-4" onClick={() => setComposer(true)}>Criar publicação</Button></Card> : shownPosts.map((post) => {
               const profile = profiles[post.user_id]; const reaction = likes[post.id] || { count: 0, mine: false };
-              return <Card key={post.id} className="overflow-hidden border-border/70 p-4 shadow-sm sm:p-5">
+              return <Card id={`community-post-${post.id}`} key={post.id} className="overflow-hidden border-border/70 p-4 shadow-sm sm:p-5">
                 <div className="flex items-start gap-3"><div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{initials(profile?.display_name || (post.user_id === user?.id ? name : null))}</div><div className="min-w-0 flex-1"><div className="flex flex-wrap items-center gap-2"><span className="text-sm font-semibold">{profile?.display_name || (post.user_id === user?.id ? name : "Membro da comunidade")}</span>{post.user_id === user?.id && <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary">Você</span>}<span className="text-xs text-muted-foreground">{age(post.created_at)}</span></div><span className="mt-1 inline-flex rounded-full bg-secondary px-2.5 py-1 text-[11px] font-medium">{labels[post.category]}</span></div><button type="button" onClick={() => void report(post.id)} className="rounded-lg p-2 text-muted-foreground hover:bg-muted" aria-label="Sinalizar publicação"><Flag className="size-4" /></button></div>
-                <h3 className="mt-3 text-base font-semibold leading-snug">{post.title}</h3><p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-foreground/85">{post.body}</p>
+                <h3 className="mt-3 text-base font-semibold leading-snug">{post.title}</h3><p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-foreground/85">{expandedText === post.id || post.body.length <= 260 ? post.body : `${post.body.slice(0, 260).trimEnd()}…`} {post.body.length > 260 && <button type="button" className="font-semibold text-primary" onClick={() => setExpandedText(expandedText === post.id ? null : post.id)}>{expandedText === post.id ? "Ler menos" : "Ler mais"}</button>}</p>
                 {post.scripture_reference && <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-primary/5 px-3 py-2 text-xs font-semibold text-primary"><BookOpen className="size-4" />{post.scripture_reference}</div>}
                 <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-border/70 pt-3"><button type="button" onClick={() => void react(post.id)} className={`inline-flex items-center gap-1.5 text-sm ${reaction.mine ? "font-semibold text-primary" : "text-muted-foreground hover:text-primary"}`}><Heart className={`size-4 ${reaction.mine ? "fill-current" : ""}`} />{reaction.count} Edificou</button><button type="button" onClick={() => void toggleComments(post.id)} className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary"><MessageCircle className="size-4" />Conversar</button></div>
                 {expanded === post.id && <div className="mt-3 space-y-3 rounded-xl bg-muted/40 p-3">{(comments[post.id] || []).map((c) => <div key={c.id} className="flex gap-2 text-sm"><div className="flex size-7 shrink-0 items-center justify-center rounded-full bg-background text-[10px] font-semibold">{initials(profiles[c.user_id]?.display_name || (c.user_id === user?.id ? name : null))}</div><div className="min-w-0 flex-1 rounded-lg bg-background p-2"><p className="text-xs font-semibold">{profiles[c.user_id]?.display_name || (c.user_id === user?.id ? name : "Membro")}</p><p className="mt-1 whitespace-pre-wrap">{c.body}</p></div></div>)}<div className="flex gap-2"><Input value={drafts[post.id] || ""} onChange={(e) => setDrafts((old) => ({ ...old, [post.id]: e.target.value }))} placeholder="Escreva uma resposta respeitosa..." maxLength={2000} /><Button size="icon" onClick={() => void comment(post.id)} aria-label="Enviar comentário"><Send className="size-4" /></Button></div></div>}
@@ -251,17 +250,18 @@ function ComunidadePage() {
           </>}
 
           {tab === "arquivos" && <div className="space-y-5">
-            <Card className="border-primary/15 bg-gradient-to-br from-blue-50 to-indigo-50 p-5 dark:from-blue-950/40 dark:to-slate-900"><div className="flex items-start gap-3"><div className="rounded-xl bg-primary/10 p-3 text-primary"><LibraryBig className="size-7" /></div><div className="flex-1"><h3 className="font-display text-xl font-semibold">Biblioteca colaborativa</h3><p className="mt-1 text-sm text-muted-foreground">Compartilhe materiais que ajudem a comunidade a estudar a Bíblia com responsabilidade. Todo arquivo passa pela análise da equipe antes de ficar disponível.</p><Button className="mt-4 gap-2" onClick={() => setLibraryForm((v) => !v)}><Upload className="size-4" />Enviar um PDF</Button></div></div></Card>
+            <Card className="border-primary/15 bg-gradient-to-br from-blue-50 to-indigo-50 p-5 dark:from-blue-950/40 dark:to-slate-900"><div className="flex items-start gap-3"><div className="rounded-xl bg-primary/10 p-3 text-primary"><LibraryBig className="size-7" /></div><div className="flex-1"><h3 className="font-display text-xl font-semibold">Biblioteca colaborativa</h3><p className="mt-1 text-sm text-muted-foreground">Compartilhe materiais que ajudem a comunidade a estudar a Bíblia com responsabilidade. Todo arquivo passa pela análise da equipe antes de ficar disponível.</p><Button className="mt-4 gap-2" onClick={() => setLibraryForm((v) => !v)}><Upload className="size-4" />Compartilhar Livros e Recursos</Button></div></div></Card>
             {libraryForm && <Card className="p-4 shadow-sm sm:p-5"><form onSubmit={submitPdf} className="space-y-3"><div><h3 className="font-semibold">Enviar material para análise</h3><p className="text-xs text-muted-foreground">PDF de até 15 MB. O arquivo ficará privado até ser aprovado.</p></div>
-              <Input value={bookTitle} onChange={(e) => setBookTitle(e.target.value)} minLength={3} maxLength={180} placeholder="Título do livro ou material" required /><Input value={author} onChange={(e) => setAuthor(e.target.value)} minLength={2} maxLength={160} placeholder="Autor ou responsável" required />
+              <Input value={bookTitle} onChange={(e) => setBookTitle(e.target.value)} minLength={3} maxLength={180} placeholder="Título do livro ou arquivo" required /><Input value={author} onChange={(e) => setAuthor(e.target.value)} minLength={2} maxLength={160} placeholder="Autor ou responsável" required />
               <label className="block space-y-1 text-sm font-medium">Categoria<select value={bookCategory} onChange={(e) => setBookCategory(e.target.value)} className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm">{resourceCategories.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}</select></label>
-              <Textarea value={description} onChange={(e) => setDescription(e.target.value)} minLength={10} maxLength={2000} rows={3} placeholder="Como este material pode contribuir para o estudo bíblico?" required />
+              <Textarea value={description} onChange={(e) => setDescription(e.target.value)} minLength={10} maxLength={2000} rows={3} placeholder="Por que este material edifica a comunidade?" required />
               <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-primary/30 bg-primary/5 p-3 text-sm"><FileText className="size-5 text-primary" /><span className="min-w-0 flex-1"><span className="block font-medium">{pdf?.name || "Selecionar arquivo PDF"}</span><span className="text-xs text-muted-foreground">{pdf ? sizeLabel(pdf.size) : "Somente PDF • máximo 15 MB"}</span></span><input type="file" accept="application/pdf,.pdf" className="sr-only" onChange={(e) => setPdf(e.target.files?.[0] || null)} /></label>
               <label className="flex items-start gap-2 text-xs leading-relaxed text-muted-foreground"><input type="checkbox" checked={courseCandidate} onChange={(e) => setCourseCandidate(e.target.checked)} className="mt-0.5 size-4 accent-primary" />Sugiro este material para avaliação como possível base de um futuro curso no Caminho Divino.</label>
               <label className="flex items-start gap-2 text-xs leading-relaxed text-muted-foreground"><input type="checkbox" checked={rights} onChange={(e) => setRights(e.target.checked)} className="mt-0.5 size-4 accent-primary" />Confirmo que sou autor ou tenho autorização para compartilhar este arquivo e que o envio respeita os direitos autorais. Entendo que a equipe poderá recusar materiais sem permissão de distribuição.</label>
               <div className="flex flex-wrap justify-end gap-2"><Button type="button" variant="outline" onClick={() => setLibraryForm(false)}>Cancelar</Button><Button type="submit" disabled={busy || !rights || !pdf} className="gap-2">{busy ? <Loader2 className="size-4 animate-spin" /> : <Upload className="size-4" />}Enviar para análise</Button></div>
             </form></Card>}
-            {loading ? <div className="flex justify-center py-10"><Loader2 className="size-7 animate-spin text-primary" /></div> : resources.length === 0 ? <Card className="p-8 text-center"><BookOpen className="mx-auto size-9 text-muted-foreground" /><h3 className="mt-3 font-semibold">A biblioteca está começando</h3><p className="mt-1 text-sm text-muted-foreground">Os materiais aprovados pela equipe aparecerão aqui.</p></Card> : resources.map((r) => <Card key={r.id} className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center"><div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-red-500/10 text-red-600"><FileText className="size-6" /></div><div className="min-w-0 flex-1"><h3 className="font-semibold">{r.title}</h3><p className="text-xs text-muted-foreground">{r.author} • {sizeLabel(Number(r.file_size))}</p><p className="mt-1 text-sm text-muted-foreground">{r.description}</p><span className="mt-2 inline-block rounded-full bg-secondary px-2 py-1 text-[10px] font-medium">{resourceCategories.find((x) => x.value === r.category)?.label || "Material bíblico"}</span></div><Button variant="outline" className="gap-2" onClick={() => void download(r)}><Download className="size-4" />Abrir PDF</Button></Card>)}
+            {loading ? <div className="flex justify-center py-10"><Loader2 className="size-7 animate-spin text-primary" /></div> : resources.length === 0 ? <Card className="p-8 text-center"><BookOpen className="mx-auto size-9 text-muted-foreground" /><h3 className="mt-3 font-semibold">A biblioteca está começando</h3><p className="mt-1 text-sm text-muted-foreground">Os materiais aprovados pela equipe aparecerão aqui.</p></Card> : resources.map((r) => <Card key={r.id} className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center"><div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-red-500/10 text-red-600"><FileText className="size-6" /></div><div className="min-w-0 flex-1"><h3 className="font-semibold">{r.title}</h3><p className="text-xs text-muted-foreground">{r.author} • {sizeLabel(Number(r.file_size))} • Indicado por {profiles[r.user_id]?.display_name || "Membro da comunidade"}</p><p className="mt-1 text-sm text-muted-foreground">{r.description}</p><p className="text-xs text-muted-foreground">{r.file_name}</p><span className="mt-2 inline-block rounded-full bg-secondary px-2 py-1 text-[10px] font-medium">{resourceCategories.find((x) => x.value === r.category)?.label || "Material bíblico"}</span></div><Button variant="outline" className="gap-2" onClick={() => void download(r)}><Download className="size-4" />Abrir PDF</Button></Card>)}
+            {admin && <section className="space-y-3 border-t border-border pt-5"><div className="flex items-center gap-2"><ShieldCheck className="size-5 text-primary" /><h3 className="font-semibold">Moderação de primeiras publicações</h3><span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">{pendingPosts.length} pendente(s)</span></div>{pendingPosts.length === 0 ? <p className="text-sm text-muted-foreground">Não há publicações aguardando análise.</p> : pendingPosts.map((post) => <Card key={post.id} className="space-y-3 p-4"><div><h4 className="font-semibold">{post.title}</h4><p className="mt-1 whitespace-pre-wrap text-sm text-muted-foreground">{post.body}</p><p className="mt-2 text-xs text-muted-foreground">{labels[post.category]} • {age(post.created_at)}</p></div><div className="flex flex-wrap gap-2"><Button size="sm" onClick={() => void moderatePost(post, true)}><Check className="mr-1 size-4" />Aprovar</Button><Button size="sm" variant="outline" onClick={() => void moderatePost(post, false)}><X className="mr-1 size-4" />Reprovar</Button></div></Card>)}</section>}
             {admin && <section className="space-y-3 border-t border-border pt-5"><div className="flex items-center gap-2"><ShieldCheck className="size-5 text-primary" /><h3 className="font-semibold">Moderação da biblioteca</h3><span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">{pending.length} pendente(s)</span></div>{pending.length === 0 ? <p className="text-sm text-muted-foreground">Não há materiais aguardando análise.</p> : pending.map((r) => <Card key={r.id} className="space-y-3 p-4"><div><h4 className="font-semibold">{r.title}</h4><p className="text-xs text-muted-foreground">{r.author} • {r.file_name} • {sizeLabel(Number(r.file_size))}</p><p className="mt-2 text-sm">{r.description}</p>{r.course_candidate && <span className="mt-2 inline-flex rounded-full bg-primary/10 px-2 py-1 text-[10px] font-medium text-primary">Sugerido para futuro curso</span>}</div><Input value={notes[r.id] || ""} onChange={(e) => setNotes((old) => ({ ...old, [r.id]: e.target.value }))} placeholder="Observação da equipe (opcional)" /><div className="flex flex-wrap gap-2"><Button size="sm" onClick={() => void moderate(r, "approved")} className="gap-1"><Check className="size-4" />Aprovar</Button><Button size="sm" variant="outline" onClick={() => void moderate(r, "rejected")} className="gap-1"><X className="size-4" />Recusar</Button><Button size="sm" variant="ghost" onClick={() => void download(r)} className="gap-1"><Download className="size-4" />Analisar PDF</Button></div></Card>)}</section>}
           </div>}
         </TabsContent>
