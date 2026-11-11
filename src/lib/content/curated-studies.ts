@@ -1,4 +1,11 @@
 import type { StudyContent } from "../types";
+import { nehemiah7Study } from "./nehemiah-7-study";
+import { nehemiah8Study } from "./nehemiah-8-study";
+import { nehemiah9Study } from "./nehemiah-9-study";
+import { nehemiah10Study } from "./nehemiah-10-study";
+import { nehemiah11Study } from "./nehemiah-11-study";
+import { nehemiah12Study } from "./nehemiah-12-study";
+import { nehemiah13Study } from "./nehemiah-13-study";
 import { nehemiah1Study } from "./nehemiah-1-study";
 import { nehemiah2Study } from "./nehemiah-2-study";
 import { nehemiah3Study } from "./nehemiah-3-study";
@@ -847,4 +854,11 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-neemias-cap-4": nehemiah4Study,
   "biblia-neemias-cap-5": nehemiah5Study,
   "biblia-neemias-cap-6": nehemiah6Study,
+  "biblia-neemias-cap-7": nehemiah7Study,
+  "biblia-neemias-cap-8": nehemiah8Study,
+  "biblia-neemias-cap-9": nehemiah9Study,
+  "biblia-neemias-cap-10": nehemiah10Study,
+  "biblia-neemias-cap-11": nehemiah11Study,
+  "biblia-neemias-cap-12": nehemiah12Study,
+  "biblia-neemias-cap-13": nehemiah13Study,
 };
