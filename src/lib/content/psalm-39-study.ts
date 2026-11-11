@@ -97,9 +97,9 @@ export const psalm39Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 39:1-4"
+        "Salmos 39:1-3"
       ],
-      "body": "**Trecho:** Salmos 39:1-4.\\n\\n**Lugar no argumento:** O esforço de controlar a fala diante da injustiça. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **1.** O salmista decide vigiar seus caminhos para não pecar com a língua diante do perverso.\\n- **2.** Ele se cala até mesmo sobre o bem, mas o silêncio intensifica sua dor.\\n- **3.** O coração arde e a reflexão interior se transforma em palavra.\\n- **4.** Ele pede que Deus lhe mostre o fim e a medida de seus dias.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 39:1-3.\\n\\n**Lugar no argumento:** O esforço de controlar a fala diante da injustiça. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **1.** O salmista decide vigiar seus caminhos para não pecar com a língua diante do perverso.\\n- **2.** Ele se cala até mesmo sobre o bem, mas o silêncio intensifica sua dor.\\n- **3.** O coração arde e a reflexão interior se transforma em palavra.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-2",
@@ -107,9 +107,9 @@ export const psalm39Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 39:5-8"
+        "Salmos 39:4-6"
       ],
-      "body": "**Trecho:** Salmos 39:5-8.\\n\\n**Lugar no argumento:** A brevidade da vida e a vaidade das acumulações. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **5.** A vida humana é breve diante da eternidade divina.\\n- **6.** A existência é comparada a um sopro; a imagem ressalta fragilidade.\\n- **7.** O ser humano se agita acumulando bens sem saber quem os desfrutará.\\n- **8.** A pergunta central é onde repousa a esperança; a resposta é o próprio Senhor.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 39:4-6.\\n\\n**Lugar no argumento:** A brevidade da vida e a vaidade das acumulações. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **4.** Ele pede que Deus lhe mostre o fim e a medida de seus dias.\\n- **5.** A vida humana é breve diante da eternidade divina.\\n- **6.** A existência é comparada a um sopro; a imagem ressalta fragilidade.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-3",
@@ -117,9 +117,9 @@ export const psalm39Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 39:9-12"
+        "Salmos 39:7-11"
       ],
-      "body": "**Trecho:** Salmos 39:9-12.\\n\\n**Lugar no argumento:** Esperança no Senhor, confissão e pedido de misericórdia. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **9.** O pedido por livramento da transgressão reconhece dependência da graça.\\n- **10.** O salmista pede que a afronta do insensato não o destrua.\\n- **11.** Ele se sente silenciado e atingido pela disciplina divina.\\n- **12.** A disciplina é comparada ao desgaste de algo consumido; a imagem é intensa.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 39:7-11.\\n\\n**Lugar no argumento:** Esperança no Senhor, confissão e pedido de misericórdia. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **7.** O ser humano se agita acumulando bens sem saber quem os desfrutará.\\n- **8.** A pergunta central é onde repousa a esperança; a resposta é o próprio Senhor.\\n- **9.** O pedido por livramento da transgressão reconhece dependência da graça.\\n- **10.** O salmista pede que a afronta do insensato não o destrua.\\n- **11.** Ele se sente silenciado e atingido pela disciplina divina.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-4",
@@ -127,9 +127,9 @@ export const psalm39Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 39:13-13"
+        "Salmos 39:12-13"
       ],
-      "body": "**Trecho:** Salmos 39:13-13.\\n\\n**Lugar no argumento:** Oração de peregrino por atenção e alívio. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **13.** A vida passa como sombra e a acumulação humana não oferece segurança.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 39:12-13.\\n\\n**Lugar no argumento:** Oração de peregrino por atenção e alívio. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **12.** A disciplina é comparada ao desgaste de algo consumido; a imagem é intensa.\\n- **13.** A vida passa como sombra e a acumulação humana não oferece segurança.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "sintese-teologica",
