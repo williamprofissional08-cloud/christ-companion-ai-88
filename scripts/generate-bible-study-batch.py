@@ -4,6 +4,7 @@ import json
 import os
 import pathlib
 import re
+import socket
 import time
 import urllib.error
 import urllib.request
@@ -111,9 +112,11 @@ Use kinds: exegesis, context, theology, pastoral, application, method, glossary,
     endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
     request = urllib.request.Request(endpoint, data=payload,
         headers={"Content-Type": "application/json", "Accept": "application/json", "x-goog-api-key": TOKEN})
-    for attempt in range(3):
+    max_attempts = 4
+    for attempt in range(max_attempts):
         try:
-            with urllib.request.urlopen(request, timeout=300) as response:
+            print(f"Consultando Gemini para {reference} (tentativa {attempt + 1}/{max_attempts})...", flush=True)
+            with urllib.request.urlopen(request, timeout=600) as response:
                 body = response.read().decode("utf-8", "replace")
             if not body.strip():
                 raise ValueError("API Gemini retornou corpo vazio.")
@@ -134,13 +137,21 @@ Use kinds: exegesis, context, theology, pastoral, application, method, glossary,
             return data
         except urllib.error.HTTPError as error:
             detail = error.read().decode("utf-8", "replace")[:1200]
-            if error.code not in (408, 429, 500, 502, 503, 504) or attempt == 2:
+            if error.code not in (408, 429, 500, 502, 503, 504) or attempt == max_attempts - 1:
                 raise SystemExit(f"Gemini API HTTP {error.code}: {detail}")
-            time.sleep(10 * (attempt + 1))
+            wait = min(20 * (2 ** attempt), 120)
+            print(f"Gemini HTTP {error.code}; nova tentativa em {wait}s.", flush=True)
+            time.sleep(wait)
+        except (TimeoutError, socket.timeout, urllib.error.URLError) as error:
+            if attempt == max_attempts - 1:
+                raise SystemExit(f"Tempo de espera/rede esgotado para {reference} após {max_attempts} tentativas: {error}")
+            wait = min(20 * (2 ** attempt), 120)
+            print(f"Gemini demorou ou houve falha de rede ({error}); nova tentativa em {wait}s.", flush=True)
+            time.sleep(wait)
         except (ValueError, KeyError, TypeError, json.JSONDecodeError) as error:
-            if attempt == 2:
+            if attempt == max_attempts - 1:
                 raise SystemExit(f"Resposta inválida para {reference}: {error}")
-            time.sleep(5 * (attempt + 1))
+            time.sleep(min(10 * (2 ** attempt), 60))
 
 def validate(data):
     required = ["intro", "historicalContext", "keyPoints", "application", "crossReferences", "questions", "conclusion", "prayer", "sections"]
