@@ -84,6 +84,17 @@ const curatedBatch = [
   { book: "Juízes", chapter: 8, verseCount: 35, slug: "biblia-juizes-cap-8", exportName: "judges8Study", file: "judges-8-study.ts" },
   { book: "Juízes", chapter: 9, verseCount: 57, slug: "biblia-juizes-cap-9", exportName: "judges9Study", file: "judges-9-study.ts" },
   { book: "Juízes", chapter: 10, verseCount: 18, slug: "biblia-juizes-cap-10", exportName: "judges10Study", file: "judges-10-study.ts" },
+  { book: "Juízes", chapter: 11, verseCount: 40, slug: "biblia-juizes-cap-11", exportName: "judges11Study", file: "judges-11-study.ts" },
+  { book: "Juízes", chapter: 12, verseCount: 15, slug: "biblia-juizes-cap-12", exportName: "judges12Study", file: "judges-12-study.ts" },
+  { book: "Juízes", chapter: 13, verseCount: 25, slug: "biblia-juizes-cap-13", exportName: "judges13Study", file: "judges-13-study.ts" },
+  { book: "Juízes", chapter: 14, verseCount: 20, slug: "biblia-juizes-cap-14", exportName: "judges14Study", file: "judges-14-study.ts" },
+  { book: "Juízes", chapter: 15, verseCount: 20, slug: "biblia-juizes-cap-15", exportName: "judges15Study", file: "judges-15-study.ts" },
+  { book: "Juízes", chapter: 16, verseCount: 31, slug: "biblia-juizes-cap-16", exportName: "judges16Study", file: "judges-16-study.ts" },
+  { book: "Juízes", chapter: 17, verseCount: 13, slug: "biblia-juizes-cap-17", exportName: "judges17Study", file: "judges-17-study.ts" },
+  { book: "Juízes", chapter: 18, verseCount: 31, slug: "biblia-juizes-cap-18", exportName: "judges18Study", file: "judges-18-study.ts" },
+  { book: "Juízes", chapter: 19, verseCount: 30, slug: "biblia-juizes-cap-19", exportName: "judges19Study", file: "judges-19-study.ts" },
+  { book: "Juízes", chapter: 20, verseCount: 48, slug: "biblia-juizes-cap-20", exportName: "judges20Study", file: "judges-20-study.ts" },
+  { book: "Juízes", chapter: 21, verseCount: 25, slug: "biblia-juizes-cap-21", exportName: "judges21Study", file: "judges-21-study.ts" },
 ];
 
 async function readContent(path) {
