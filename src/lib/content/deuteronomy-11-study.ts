@@ -36,9 +36,9 @@ export const deuteronomy11Study: StudyContent = {
     kind: "scripture",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 11:11:1-7"
+      "Deuteronômio 11:1-7"
     ],
-    body: "**Leitura orientada — Deuteronômio 11:11:1-7**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés convoca Israel a amar o Senhor e recordar os sinais do Egito, o cuidado no deserto e o juízo contra a rebeldia de Datã e Abirão.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A memória bíblica não é mera repetição de fatos: forma a identidade e orienta a fidelidade. O texto dirige-se à comunidade que vive sob a aliança mosaica.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 11:1-7**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés convoca Israel a amar o Senhor e recordar os sinais do Egito, o cuidado no deserto e o juízo contra a rebeldia de Datã e Abirão.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A memória bíblica não é mera repetição de fatos: forma a identidade e orienta a fidelidade. O texto dirige-se à comunidade que vive sob a aliança mosaica.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-2",
@@ -46,9 +46,9 @@ export const deuteronomy11Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 11:11:8-17"
+      "Deuteronômio 11:8-17"
     ],
-    body: "**Leitura orientada — Deuteronômio 11:11:8-17**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA permanência na terra é relacionada à obediência. Diferentemente do Egito irrigado por canais, a terra prometida depende das chuvas do céu; o povo é advertido contra a idolatria que desviaria sua lealdade.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A descrição é agrícola e pactual. Não autoriza concluir que toda seca atual seja punição direta por pecado coletivo; a aplicação deve respeitar o destinatário original e o conjunto bíblico.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 11:8-17**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA permanência na terra é relacionada à obediência. Diferentemente do Egito irrigado por canais, a terra prometida depende das chuvas do céu; o povo é advertido contra a idolatria que desviaria sua lealdade.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A descrição é agrícola e pactual. Não autoriza concluir que toda seca atual seja punição direta por pecado coletivo; a aplicação deve respeitar o destinatário original e o conjunto bíblico.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-3",
@@ -56,9 +56,9 @@ export const deuteronomy11Study: StudyContent = {
     kind: "context",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 11:11:18-21"
+      "Deuteronômio 11:18-21"
     ],
-    body: "**Leitura orientada — Deuteronômio 11:11:18-21**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nAs palavras devem ser guardadas no coração, ensinadas aos filhos e lembradas em casa, no caminho, ao deitar e ao levantar. A imagem das mãos, olhos e portas reforça a presença constante do ensino.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A formação espiritual não é limitada a momentos formais. A comunidade transmite a fé por ensino, memória e prática cotidiana; Jesus reafirma a centralidade do amor a Deus e ao próximo.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 11:18-21**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nAs palavras devem ser guardadas no coração, ensinadas aos filhos e lembradas em casa, no caminho, ao deitar e ao levantar. A imagem das mãos, olhos e portas reforça a presença constante do ensino.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A formação espiritual não é limitada a momentos formais. A comunidade transmite a fé por ensino, memória e prática cotidiana; Jesus reafirma a centralidade do amor a Deus e ao próximo.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-4",
@@ -66,9 +66,9 @@ export const deuteronomy11Study: StudyContent = {
     kind: "application",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 11:11:22-32"
+      "Deuteronômio 11:22-32"
     ],
-    body: "**Leitura orientada — Deuteronômio 11:11:22-32**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés associa o amor obediente à promessa de posse da terra e apresenta a bênção e a maldição diante do povo, com referência aos montes Gerizim e Ebal.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A escolha é real e solene dentro da aliança. Não se deve reduzir bênção e maldição a fórmulas de prosperidade individual; o texto trata da vida de Israel como povo diante de Deus.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 11:22-32**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés associa o amor obediente à promessa de posse da terra e apresenta a bênção e a maldição diante do povo, com referência aos montes Gerizim e Ebal.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A escolha é real e solene dentro da aliança. Não se deve reduzir bênção e maldição a fórmulas de prosperidade individual; o texto trata da vida de Israel como povo diante de Deus.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   }
 ]
 };
