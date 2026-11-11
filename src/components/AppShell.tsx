@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "@tanstack/react-router";
 import {
   BookOpen, Compass, Flame, GraduationCap, HeartHandshake, Home, LogOut,
-  Menu, MessageCircleHeart, Moon, NotebookPen, FilePenLine, Route as RouteIcon,
+  MessageCircleHeart, Moon, NotebookPen, FilePenLine, Route as RouteIcon,
   Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreHorizontal,
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
