@@ -183,8 +183,8 @@ export function AppShell({
       </div>
 
       <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-background/95 backdrop-blur lg:hidden">
-        <div className="mx-auto grid max-w-lg grid-cols-6">
-          {[...NAV.slice(0, 5), { to: "/admin" as const, label: "Admin", icon: ShieldCheck }].map((item) => (
+        <div className="mx-auto grid max-w-lg grid-cols-5">
+          {[NAV[0], NAV[2], NAV[3], NAV[4], { to: "/admin" as const, label: "Admin", icon: ShieldCheck }].map((item) => (
             <Link
               key={item.to}
               to={item.to}
