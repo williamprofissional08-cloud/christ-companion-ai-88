@@ -74,6 +74,8 @@ import { firstKings17Study } from "./1-kings-17-study";
 import { firstKings18Study } from "./1-kings-18-study";
 import { firstKings19Study } from "./1-kings-19-study";
 import { firstKings20Study } from "./1-kings-20-study";
+import { firstKings21Study } from "./1-kings-21-study";
+import { firstKings22Study } from "./1-kings-22-study";
 
 import { ruth1Study } from "./ruth-1-study";
 import { ruth2Study } from "./ruth-2-study";
@@ -398,6 +400,8 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-1-reis-cap-18": firstKings18Study,
   "biblia-1-reis-cap-19": firstKings19Study,
   "biblia-1-reis-cap-20": firstKings20Study,
+  "biblia-1-reis-cap-21": firstKings21Study,
+  "biblia-1-reis-cap-22": firstKings22Study,
   "biblia-juizes-cap-1": judges1Study,
   "biblia-juizes-cap-2": judges2Study,
   "biblia-juizes-cap-3": judges3Study,
