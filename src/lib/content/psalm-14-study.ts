@@ -97,7 +97,7 @@ export const psalm14Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 14:1-3"
       ],
-      "body": "**Trecho:** Salmos 14:1-3.\n\n**Observação literária e teológica:** A insensatez e a corrupção humana. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **1.** O insensato representa uma postura moral e espiritual, não falta de inteligência.\n- **2.** Negar Deus no coração é viver sem referência à sua autoridade e justiça.\n- **3.** A imagem de Deus olhando dos céus apresenta avaliação divina da humanidade.\n- **4.** A linguagem de desvio resume a gravidade do pecado humano.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 14:1-3.\n\n**Observação:** a insensatez é postura moral e espiritual, não falta de inteligência.\n\n**Versículo por versículo:**\n- **1.** O insensato vive como se Deus não existisse e corrompe sua conduta.\n- **2.** Deus observa a humanidade e procura quem o busque com entendimento.\n- **3.** A imagem de desvio e corrupção resume a gravidade do pecado humano.\n\n**Interpretação responsável:** leia cada imagem no conjunto do salmo e não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto."
     },
     {
       "id": "pericope-2",
@@ -107,7 +107,7 @@ export const psalm14Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 14:4-6"
       ],
-      "body": "**Trecho:** Salmos 14:4-6.\n\n**Observação literária e teológica:** A opressão e a presença de Deus. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **4.** Os agentes da injustiça exploram o povo como quem consome alimento.\n- **5.** A ausência de invocação do Senhor revela desprezo prático por Deus.\n- **6.** O terror diante do juízo contrasta com o refúgio dos que buscam o Senhor.\n- **7.** Deus é abrigo do pobre mesmo quando os opressores parecem prevalecer.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 14:4-6.\n\n**Observação:** a opressão dos vulneráveis é confrontada pela presença protetora de Deus.\n\n**Versículo por versículo:**\n- **4.** Os agentes da injustiça exploram o povo como quem consome alimento e não invocam o Senhor.\n- **5.** O terror diante do juízo contrasta com a segurança dos que buscam a Deus.\n- **6.** Os opressores frustram o conselho dos pobres, mas o Senhor é seu refúgio.\n\n**Interpretação responsável:** leia cada imagem no conjunto do salmo e não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto."
     },
     {
       "id": "pericope-3",
