@@ -330,6 +330,16 @@ const curatedBatch = [
   { book: "Salmos", chapter: 28, verseCount: 9, slug: "biblia-salmos-cap-28", exportName: "psalm28Study", file: "psalm-28-study.ts" },
   { book: "Salmos", chapter: 29, verseCount: 11, slug: "biblia-salmos-cap-29", exportName: "psalm29Study", file: "psalm-29-study.ts" },
   { book: "Salmos", chapter: 30, verseCount: 12, slug: "biblia-salmos-cap-30", exportName: "psalm30Study", file: "psalm-30-study.ts" },
+  { book: "Salmos", chapter: 31, verseCount: 24, slug: "biblia-salmos-cap-31", exportName: "psalm31Study", file: "psalm-31-study.ts" },
+  { book: "Salmos", chapter: 32, verseCount: 11, slug: "biblia-salmos-cap-32", exportName: "psalm32Study", file: "psalm-32-study.ts" },
+  { book: "Salmos", chapter: 33, verseCount: 22, slug: "biblia-salmos-cap-33", exportName: "psalm33Study", file: "psalm-33-study.ts" },
+  { book: "Salmos", chapter: 34, verseCount: 22, slug: "biblia-salmos-cap-34", exportName: "psalm34Study", file: "psalm-34-study.ts" },
+  { book: "Salmos", chapter: 35, verseCount: 28, slug: "biblia-salmos-cap-35", exportName: "psalm35Study", file: "psalm-35-study.ts" },
+  { book: "Salmos", chapter: 36, verseCount: 12, slug: "biblia-salmos-cap-36", exportName: "psalm36Study", file: "psalm-36-study.ts" },
+  { book: "Salmos", chapter: 37, verseCount: 40, slug: "biblia-salmos-cap-37", exportName: "psalm37Study", file: "psalm-37-study.ts" },
+  { book: "Salmos", chapter: 38, verseCount: 22, slug: "biblia-salmos-cap-38", exportName: "psalm38Study", file: "psalm-38-study.ts" },
+  { book: "Salmos", chapter: 39, verseCount: 13, slug: "biblia-salmos-cap-39", exportName: "psalm39Study", file: "psalm-39-study.ts" },
+  { book: "Salmos", chapter: 40, verseCount: 17, slug: "biblia-salmos-cap-40", exportName: "psalm40Study", file: "psalm-40-study.ts" },
 ]; 
 
 async function readContent(path) {
