@@ -36,7 +36,7 @@ function Inicio() {
 
   const metadata = user?.user_metadata ?? {};
   const rawDisplayName = String(metadata["full_name"] ?? metadata["name"] ?? user?.email?.split("@")[0] ?? "William");
-  const displayName = rawDisplayName.trim().split(/\\s+/)[0] || "William";
+  const displayName = rawDisplayName.trim().split(/\s+/)[0] || "William";
   const hour = new Date().getHours();
   const greeting = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
   const d = devotional.data;
