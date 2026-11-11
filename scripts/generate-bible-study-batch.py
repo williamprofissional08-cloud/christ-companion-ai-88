@@ -55,7 +55,7 @@ if not CATALOG_PATH.exists() or not BOOKS_PATH.exists() or not REFERENCE_PATH.ex
 
 reference_source = REFERENCE_PATH.read_text(encoding="utf-8")
 reference_titles = re.findall(r'\btitle\s*:\s*["\`]([^"\`]+)["\`]', reference_source)
-reference_outline = "\\n".join(f"- {title}" for title in reference_titles[-19:])
+reference_outline = "\n".join(f"- {title}" for title in reference_titles[-19:])
 if len(reference_titles) < 15:
     raise SystemExit("O estudo de Gênesis 1 não forneceu uma estrutura editorial suficiente.")
 
