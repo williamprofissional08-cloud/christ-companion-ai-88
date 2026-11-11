@@ -3,6 +3,10 @@ import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
 const curatedBatch = [
+  { book: "Esdras", chapter: 7, verseCount: 28, slug: "biblia-esdras-cap-7", exportName: "ezra7Study", file: "ezra-7-study.ts" },
+  { book: "Esdras", chapter: 8, verseCount: 36, slug: "biblia-esdras-cap-8", exportName: "ezra8Study", file: "ezra-8-study.ts" },
+  { book: "Esdras", chapter: 9, verseCount: 15, slug: "biblia-esdras-cap-9", exportName: "ezra9Study", file: "ezra-9-study.ts" },
+  { book: "Esdras", chapter: 10, verseCount: 44, slug: "biblia-esdras-cap-10", exportName: "ezra10Study", file: "ezra-10-study.ts" },
   { book: "Esdras", chapter: 1, verseCount: 11, slug: "biblia-esdras-cap-1", exportName: "ezra1Study", file: "ezra-1-study.ts" },
   { book: "Esdras", chapter: 2, verseCount: 70, slug: "biblia-esdras-cap-2", exportName: "ezra2Study", file: "ezra-2-study.ts" },
   { book: "Esdras", chapter: 3, verseCount: 13, slug: "biblia-esdras-cap-3", exportName: "ezra3Study", file: "ezra-3-study.ts" },

@@ -1,4 +1,9 @@
 import type { StudyContent } from "../types";
+import { ezra7Study } from "./ezra-7-study";
+import { ezra8Study } from "./ezra-8-study";
+import { ezra9Study } from "./ezra-9-study";
+import { ezra10Study } from "./ezra-10-study";
+
 import { ezra1Study } from "./ezra-1-study";
 import { ezra2Study } from "./ezra-2-study";
 import { ezra3Study } from "./ezra-3-study";
@@ -826,4 +831,8 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-esdras-cap-4": ezra4Study,
   "biblia-esdras-cap-5": ezra5Study,
   "biblia-esdras-cap-6": ezra6Study,
+  "biblia-esdras-cap-7": ezra7Study,
+  "biblia-esdras-cap-8": ezra8Study,
+  "biblia-esdras-cap-9": ezra9Study,
+  "biblia-esdras-cap-10": ezra10Study,
 };
