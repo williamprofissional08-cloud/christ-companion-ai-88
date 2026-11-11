@@ -133,6 +133,8 @@ const curatedBatch = [
   { book: "1 Reis", chapter: 18, verseCount: 46, slug: "biblia-1-reis-cap-18", exportName: "firstKings18Study", file: "1-kings-18-study.ts" },
   { book: "1 Reis", chapter: 19, verseCount: 21, slug: "biblia-1-reis-cap-19", exportName: "firstKings19Study", file: "1-kings-19-study.ts" },
   { book: "1 Reis", chapter: 20, verseCount: 43, slug: "biblia-1-reis-cap-20", exportName: "firstKings20Study", file: "1-kings-20-study.ts" },
+  { book: "1 Reis", chapter: 21, verseCount: 29, slug: "biblia-1-reis-cap-21", exportName: "firstKings21Study", file: "1-kings-21-study.ts" },
+  { book: "1 Reis", chapter: 22, verseCount: 53, slug: "biblia-1-reis-cap-22", exportName: "firstKings22Study", file: "1-kings-22-study.ts" },
 ];
 
 async function readContent(path) {
