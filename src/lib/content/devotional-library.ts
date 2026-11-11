@@ -117,7 +117,8 @@ export function fallbackDevotional(day: string, selection = 0): DevotionalConten
     theme: theme.title + " — " + book[0],
     verse: {
       reference,
-      text: "Síntese para meditação, não uma citação literal: " + bookContext + ". Leia o trecho indicado diretamente em sua Bíblia e observe como ele apresenta o caráter e a ação de Deus.",
+      text: bookContext,
+      kind: "synthesis",
     },
     reflection:
       "A leitura de " + reference + " apresenta " + bookContext.toLowerCase() + ". Esse contexto nos ajuda a não tratar a passagem como uma frase isolada: primeiro precisamos observar o que o texto comunicou aos seus primeiros leitores e como se encaixa no testemunho das Escrituras.\n\n" +
