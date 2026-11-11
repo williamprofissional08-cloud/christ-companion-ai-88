@@ -13,7 +13,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { buildSteps, getTrack } from "@/lib/content/tracks";
-import { getTrackProgress, getTrackStepContent, saveTrackStep } from "@/lib/tracks.functions";
+import { getTrackImage } from "@/lib/content/track-image-catalog";
+import { getTrackProgress, getTrackStepContent, listTrackImageAssignments, saveTrackStep } from "@/lib/tracks.functions";
 import { extractReferences } from "@/lib/scripture-refs";
 
 export const Route = createFileRoute("/_authenticated/trilhas/$slug")({
@@ -45,12 +46,20 @@ function TrilhaPage() {
 
   const fetchProgress = useServerFn(getTrackProgress);
   const fetchContent = useServerFn(getTrackStepContent);
+  const fetchImageAssignments = useServerFn(listTrackImageAssignments);
   const persist = useServerFn(saveTrackStep);
 
   const progress = useQuery({
     queryKey: ["track-progress", slug],
     queryFn: () => fetchProgress({ data: { slug } }),
     enabled: Boolean(track),
+  });
+
+  const imageAssignments = useQuery({
+    queryKey: ["track-detail-image-assignments"],
+    queryFn: () => fetchImageAssignments(),
+    enabled: Boolean(track),
+    staleTime: 60_000,
   });
 
   const content = useQuery({
@@ -96,6 +105,11 @@ function TrilhaPage() {
   }
 
   const isDone = completed.has(active);
+  const cover = track ? getTrackImage(
+    track.slug,
+    track.theme,
+    Object.fromEntries((imageAssignments.data ?? []).map((row) => [row.track_slug, row.image_id])),
+  ) : undefined;
   const references = content.data
     ? [
         ...new Set([
@@ -110,6 +124,7 @@ function TrilhaPage() {
   return (
     <AppShell title={track.title} subtitle={`${track.theme} · ${steps.length} etapas`}>
       <div className="space-y-4">
+        {cover ? <div className="overflow-hidden rounded-2xl border border-border/50 shadow-soft"><img src={cover.src} alt={cover.alt} className="h-40 w-full object-cover sm:h-52" /></div> : null}
         <Card className="border-border/50 p-5 shadow-soft">
           <p className="text-sm text-muted-foreground">{track.summary}</p>
           <p className="mt-1 text-xs font-medium text-muted-foreground">{track.keyVerse}</p>
