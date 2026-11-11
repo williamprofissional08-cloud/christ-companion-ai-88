@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -16,13 +17,24 @@ const db = supabase as unknown as SupabaseClient;
 type Category = "pergunta" | "debate" | "estudo" | "testemunho" | "oracao" | "reflexao";
 type Post = { id: string; user_id: string; category: Category; title: string; body: string; scripture_reference: string | null; created_at: string };
 type Resource = { id: string; user_id: string; title: string; author: string; description: string; category: string; storage_path: string; file_name: string; file_size: number; status: "pending" | "approved" | "rejected"; course_candidate?: boolean; created_at: string };
-type Profile = { id: string; display_name: string | null };
+type Profile = { id: string; display_name: string | null; avatar_url: string | null };
 type Comment = { id: string; post_id: string; user_id: string; body: string; created_at: string };
 const labels: Record<Category, string> = { pergunta: "Pergunta bíblica", debate: "Debate da fé", estudo: "Estudo compartilhado", testemunho: "Testemunho", oracao: "Pedido de oração", reflexao: "Reflexão" };
 const resourceCategories = [{ value: "estudo", label: "Estudo bíblico" }, { value: "comentario", label: "Comentário bíblico" }, { value: "teologia", label: "Teologia" }, { value: "historia", label: "História e contexto" }, { value: "devocional", label: "Devocional" }, { value: "outro", label: "Outro material" }];
 const initials = (name?: string | null) => (name || "Membro").trim().split(/\s+/).slice(0, 2).map((part) => part[0]?.toUpperCase()).join("");
 const age = (value: string) => { const m = Math.max(1, Math.floor((Date.now() - new Date(value).getTime()) / 60000)); return m < 60 ? `há ${m} min` : m < 1440 ? `há ${Math.floor(m / 60)} h` : `há ${Math.floor(m / 1440)} dia(s)`; };
 const sizeLabel = (bytes: number) => bytes < 1048576 ? `${Math.max(1, Math.round(bytes / 1024))} KB` : `${(bytes / 1048576).toFixed(1)} MB`;
+
+function MemberAvatar({ profile, name, size = "size-11" }: { profile: Profile | undefined; name?: string | null; size?: string }) {
+  return (
+    <Avatar className={`${size} shrink-0 border-2 border-white shadow-sm`}>
+      <AvatarImage src={profile?.avatar_url ?? undefined} alt="" />
+      <AvatarFallback className="bg-primary/10 text-sm font-bold text-primary">
+        {initials(profile?.display_name || name)}
+      </AvatarFallback>
+    </Avatar>
+  );
+}
 
 export const Route = createFileRoute("/_authenticated/comunidade")({
   head: () => ({ meta: [{ title: "Comunidade — Caminho Divino" }, { name: "description", content: "Cresça na Palavra, compartilhe estudos, ore e caminhe com a comunidade." }] }),
@@ -82,9 +94,14 @@ function ComunidadePage() {
     }
     setLikes(counts);
     const isAdmin = Boolean(a.data && !a.error); setAdmin(isAdmin);
-    const ids = [...new Set([...rows, ...((r.data || []) as Resource[])].map((row) => row.user_id))];
+    const ids = [
+      ...new Set([
+        current.id,
+        ...[...rows, ...((r.data || []) as Resource[])].map((row) => row.user_id),
+      ]),
+    ];
     if (ids.length) {
-      const { data } = await db.from("community_member_profiles").select("id,display_name").in("id", ids);
+      const { data } = await db.from("community_member_profiles").select("id,display_name,avatar_url").in("id", ids);
       setProfiles(Object.fromEntries(((data || []) as Profile[]).map((x) => [x.id, x])));
     }
     if (isAdmin) {
@@ -142,7 +159,7 @@ function ComunidadePage() {
     if (error) { toast.error("Não foi possível carregar as respostas."); return; }
     const rows = (data || []) as Comment[]; setComments((old) => ({ ...old, [postId]: rows }));
     const ids = [...new Set(rows.map((x) => x.user_id))];
-    if (ids.length) { const { data: people } = await db.from("community_member_profiles").select("id,display_name").in("id", ids); setProfiles((old) => ({ ...old, ...Object.fromEntries(((people || []) as Profile[]).map((x) => [x.id, x])) })); }
+    if (ids.length) { const { data: people } = await db.from("community_member_profiles").select("id,display_name,avatar_url").in("id", ids); setProfiles((old) => ({ ...old, ...Object.fromEntries(((people || []) as Profile[]).map((x) => [x.id, x])) })); }
   }
 
   async function comment(postId: string) {
@@ -203,14 +220,14 @@ function ComunidadePage() {
       title="Comunidade"
       subtitle="Crescendo juntos no conhecimento de Deus."
     >
-      <div className="mx-auto max-w-5xl space-y-4 pb-2">
+      <div className="mx-auto max-w-7xl space-y-4 pb-2 lg:space-y-5">
         <section className="overflow-hidden rounded-[1.75rem] border border-primary/10 bg-white shadow-soft dark:bg-card">
-          <div className="grid min-h-[190px] items-center gap-4 p-5 sm:grid-cols-[1fr_0.82fr] sm:p-7">
+          <div className="grid min-h-[190px] items-center gap-4 p-5 sm:grid-cols-[1fr_0.82fr] sm:p-7 lg:min-h-[230px] lg:gap-8 lg:p-9">
             <div className="min-w-0">
               <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                 <UsersRound className="size-3.5" /> Crescendo juntos
               </span>
-              <h2 className="mt-3 font-display text-4xl font-semibold leading-none tracking-tight text-[#142d59] dark:text-foreground sm:text-5xl">
+              <h2 className="mt-3 font-display text-4xl font-semibold leading-none tracking-tight text-[#142d59] dark:text-foreground sm:text-5xl lg:text-6xl">
                 Comunidade
               </h2>
               <p className="mt-2 text-sm text-slate-600 dark:text-muted-foreground sm:text-base">
@@ -226,8 +243,8 @@ function ComunidadePage() {
                 <ExternalLink className="size-3" />
               </a>
             </div>
-            <div className="community-scripture relative flex min-h-[145px] flex-col justify-center overflow-hidden rounded-2xl p-5 text-white sm:min-h-[160px]">
-              <p className="max-w-sm font-display text-lg italic leading-snug sm:text-xl">
+            <div className="community-scripture relative flex min-h-[145px] flex-col justify-center overflow-hidden rounded-2xl p-5 text-white sm:min-h-[160px] lg:min-h-[180px] lg:p-7">
+              <p className="max-w-lg font-display text-lg italic leading-snug sm:text-xl lg:text-2xl">
                 “Onde há dois ou três reunidos em meu nome, eu estou no meio
                 deles.”
               </p>
@@ -240,7 +257,7 @@ function ComunidadePage() {
 
         <section
           aria-label="Formas de participar"
-          className="grid grid-cols-2 gap-3 sm:grid-cols-4"
+          className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:gap-4"
         >
           {[
             {
@@ -287,7 +304,7 @@ function ComunidadePage() {
               key={label}
               type="button"
               onClick={action}
-              className="community-category-card flex min-h-[132px] flex-col items-center justify-center rounded-2xl border border-border/70 bg-white p-4 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md dark:bg-card"
+              className="community-category-card flex min-h-[132px] flex-col items-center justify-center rounded-2xl border border-border/70 bg-white p-4 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md dark:bg-card lg:min-h-[172px] lg:p-6"
             >
               <Icon className="mb-2 size-9 text-primary" strokeWidth={1.8} />
               <span className="max-w-[15rem] font-semibold leading-tight text-[#142d59] dark:text-foreground">
@@ -393,9 +410,7 @@ function ComunidadePage() {
                   onClick={() => setComposer((v) => !v)}
                   className="flex min-h-[66px] w-full items-center gap-3 rounded-2xl border border-border/70 bg-white px-4 text-left shadow-sm transition hover:border-primary/30 dark:bg-card sm:px-5"
                 >
-                  <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                    {initials(name)}
-                  </div>
+                  <MemberAvatar profile={profiles[user?.id ?? ""]} name={name} size="size-10" />
                   <span className="min-w-0 flex-1 truncate text-sm text-muted-foreground sm:text-base">
                     Compartilhe uma palavra, pergunta ou reflexão...
                   </span>
@@ -488,6 +503,200 @@ function ComunidadePage() {
                     </form>
                   </Card>
                 )}
+
+                <div className="space-y-3">
+                  <div className="flex items-end justify-between gap-3 px-1">
+                    <div>
+                      <h3 className="font-display text-xl font-semibold">
+                        Publicações da comunidade
+                      </h3>
+                      <p className="text-xs text-muted-foreground">
+                        Perguntas, estudos e testemunhos compartilhados.
+                      </p>
+                    </div>
+                    {!loading && (
+                      <span className="text-xs text-muted-foreground">
+                        {shownPosts.length} publicação(ões)
+                      </span>
+                    )}
+                  </div>
+                  {loading ? (
+                    <div className="flex justify-center py-12">
+                      <Loader2 className="size-7 animate-spin text-primary" />
+                    </div>
+                  ) : shownPosts.length === 0 ? (
+                    <Card className="p-8 text-center">
+                      <MessagesSquare className="mx-auto size-9 text-muted-foreground" />
+                      <h3 className="mt-3 font-semibold">
+                        Seja o primeiro a contribuir
+                      </h3>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        Compartilhe uma pergunta ou reflexão fundamentada na
+                        Palavra.
+                      </p>
+                      <Button
+                        className="mt-4"
+                        onClick={() => setComposer(true)}
+                      >
+                        Criar publicação
+                      </Button>
+                    </Card>
+                  ) : (
+                    shownPosts.map((post) => {
+                      const profile = profiles[post.user_id];
+                      const reaction = likes[post.id] || {
+                        count: 0,
+                        mine: false,
+                      };
+                      return (
+                        <Card
+                          id={`community-post-${post.id}`}
+                          key={post.id}
+                          className="overflow-hidden rounded-2xl border-border/70 p-4 shadow-sm sm:p-5"
+                        >
+                          <div className="flex items-start gap-3">
+                            <MemberAvatar
+                              profile={profile}
+                              name={post.user_id === user?.id ? name : null}
+                            />
+                            <div className="min-w-0 flex-1">
+                              <div className="flex flex-wrap items-center gap-2">
+                                <span className="text-sm font-semibold">
+                                  {profile?.display_name ||
+                                    (post.user_id === user?.id
+                                      ? name
+                                      : "Membro da comunidade")}
+                                </span>
+                                {post.user_id === user?.id && (
+                                  <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary">
+                                    Você
+                                  </span>
+                                )}
+                                <span className="text-xs text-muted-foreground">
+                                  {age(post.created_at)}
+                                </span>
+                              </div>
+                              <span className="mt-1 inline-flex rounded-full bg-secondary px-2.5 py-1 text-[11px] font-medium">
+                                {labels[post.category]}
+                              </span>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => void report(post.id)}
+                              className="rounded-lg p-2 text-muted-foreground hover:bg-muted"
+                              aria-label="Sinalizar publicação"
+                            >
+                              <Flag className="size-4" />
+                            </button>
+                          </div>
+                          <div className="mt-3">
+                            <h3 className="text-lg font-semibold leading-snug text-[#142d59] dark:text-foreground">
+                              {post.title}
+                            </h3>
+                            <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-foreground/85">
+                              {expandedText === post.id ||
+                              post.body.length <= 260
+                                ? post.body
+                                : `${post.body.slice(0, 260).trimEnd()}…`}{" "}
+                              {post.body.length > 260 && (
+                                <button
+                                  type="button"
+                                  className="font-semibold text-primary"
+                                  onClick={() =>
+                                    setExpandedText(
+                                      expandedText === post.id ? null : post.id,
+                                    )
+                                  }
+                                >
+                                  {expandedText === post.id
+                                    ? "Ler menos"
+                                    : "Ler mais"}
+                                </button>
+                              )}
+                            </p>
+                          </div>
+                          {post.scripture_reference && (
+                            <div className="mt-3 flex items-center gap-3 rounded-xl border border-primary/10 bg-primary/[0.035] p-3">
+                              <BookOpen className="size-5 shrink-0 text-primary" />
+                              <div>
+                                <p className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+                                  Referência bíblica
+                                </p>
+                                <p className="text-sm font-semibold text-primary">
+                                  {post.scripture_reference}
+                                </p>
+                              </div>
+                            </div>
+                          )}
+                          <div className="mt-4 flex flex-wrap items-center gap-5 border-t border-border/70 pt-3">
+                            <button
+                              type="button"
+                              onClick={() => void react(post.id)}
+                              className={`inline-flex items-center gap-1.5 text-sm ${reaction.mine ? "font-semibold text-primary" : "text-muted-foreground hover:text-primary"}`}
+                            >
+                              <Heart
+                                className={`size-4 ${reaction.mine ? "fill-current" : ""}`}
+                              />
+                              {reaction.count} Edificou
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => void toggleComments(post.id)}
+                              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary"
+                            >
+                              <MessageCircle className="size-4" />
+                              Conversar
+                            </button>
+                          </div>
+                          {expanded === post.id && (
+                            <div className="mt-3 space-y-3 rounded-xl bg-muted/40 p-3">
+                              {(comments[post.id] || []).map((c) => (
+                                <div key={c.id} className="flex gap-2 text-sm">
+                                  <MemberAvatar
+                                    profile={profiles[c.user_id]}
+                                    name={c.user_id === user?.id ? name : null}
+                                    size="size-7"
+                                  />
+                                  <div className="min-w-0 flex-1 rounded-lg bg-background p-2">
+                                    <p className="text-xs font-semibold">
+                                      {profiles[c.user_id]?.display_name ||
+                                        (c.user_id === user?.id
+                                          ? name
+                                          : "Membro")}
+                                    </p>
+                                    <p className="mt-1 whitespace-pre-wrap">
+                                      {c.body}
+                                    </p>
+                                  </div>
+                                </div>
+                              ))}
+                              <div className="flex gap-2">
+                                <Input
+                                  value={drafts[post.id] || ""}
+                                  onChange={(e) =>
+                                    setDrafts((old) => ({
+                                      ...old,
+                                      [post.id]: e.target.value,
+                                    }))
+                                  }
+                                  placeholder="Escreva uma resposta respeitosa..."
+                                  maxLength={2000}
+                                />
+                                <Button
+                                  size="icon"
+                                  onClick={() => void comment(post.id)}
+                                  aria-label="Enviar comentário"
+                                >
+                                  <Send className="size-4" />
+                                </Button>
+                              </div>
+                            </div>
+                          )}
+                        </Card>
+                      );
+                    })
+                  )}
+                </div>
 
                 <div className="grid gap-4 lg:grid-cols-2">
                   <Card className="space-y-3 rounded-2xl p-4 sm:p-5">
@@ -587,203 +796,6 @@ function ComunidadePage() {
                       Participar →
                     </Button>
                   </Card>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex items-end justify-between gap-3 px-1">
-                    <div>
-                      <h3 className="font-display text-xl font-semibold">
-                        Publicações da comunidade
-                      </h3>
-                      <p className="text-xs text-muted-foreground">
-                        Perguntas, estudos e testemunhos compartilhados.
-                      </p>
-                    </div>
-                    {!loading && (
-                      <span className="text-xs text-muted-foreground">
-                        {shownPosts.length} publicação(ões)
-                      </span>
-                    )}
-                  </div>
-                  {loading ? (
-                    <div className="flex justify-center py-12">
-                      <Loader2 className="size-7 animate-spin text-primary" />
-                    </div>
-                  ) : shownPosts.length === 0 ? (
-                    <Card className="p-8 text-center">
-                      <MessagesSquare className="mx-auto size-9 text-muted-foreground" />
-                      <h3 className="mt-3 font-semibold">
-                        Seja o primeiro a contribuir
-                      </h3>
-                      <p className="mt-1 text-sm text-muted-foreground">
-                        Compartilhe uma pergunta ou reflexão fundamentada na
-                        Palavra.
-                      </p>
-                      <Button
-                        className="mt-4"
-                        onClick={() => setComposer(true)}
-                      >
-                        Criar publicação
-                      </Button>
-                    </Card>
-                  ) : (
-                    shownPosts.map((post) => {
-                      const profile = profiles[post.user_id];
-                      const reaction = likes[post.id] || {
-                        count: 0,
-                        mine: false,
-                      };
-                      return (
-                        <Card
-                          id={`community-post-${post.id}`}
-                          key={post.id}
-                          className="overflow-hidden rounded-2xl border-border/70 p-4 shadow-sm sm:p-5"
-                        >
-                          <div className="flex items-start gap-3">
-                            <div className="flex size-11 shrink-0 items-center justify-center rounded-full border-2 border-white bg-primary/10 text-sm font-bold text-primary shadow-sm">
-                              {initials(
-                                profile?.display_name ||
-                                  (post.user_id === user?.id ? name : null),
-                              )}
-                            </div>
-                            <div className="min-w-0 flex-1">
-                              <div className="flex flex-wrap items-center gap-2">
-                                <span className="text-sm font-semibold">
-                                  {profile?.display_name ||
-                                    (post.user_id === user?.id
-                                      ? name
-                                      : "Membro da comunidade")}
-                                </span>
-                                {post.user_id === user?.id && (
-                                  <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary">
-                                    Você
-                                  </span>
-                                )}
-                                <span className="text-xs text-muted-foreground">
-                                  {age(post.created_at)}
-                                </span>
-                              </div>
-                              <span className="mt-1 inline-flex rounded-full bg-secondary px-2.5 py-1 text-[11px] font-medium">
-                                {labels[post.category]}
-                              </span>
-                            </div>
-                            <button
-                              type="button"
-                              onClick={() => void report(post.id)}
-                              className="rounded-lg p-2 text-muted-foreground hover:bg-muted"
-                              aria-label="Sinalizar publicação"
-                            >
-                              <Flag className="size-4" />
-                            </button>
-                          </div>
-                          <div className="mt-3">
-                            <h3 className="text-lg font-semibold leading-snug text-[#142d59] dark:text-foreground">
-                              {post.title}
-                            </h3>
-                            <p className="mt-2 whitespace-pre-wrap text-sm leading-relaxed text-foreground/85">
-                              {expandedText === post.id ||
-                              post.body.length <= 260
-                                ? post.body
-                                : `${post.body.slice(0, 260).trimEnd()}…`}{" "}
-                              {post.body.length > 260 && (
-                                <button
-                                  type="button"
-                                  className="font-semibold text-primary"
-                                  onClick={() =>
-                                    setExpandedText(
-                                      expandedText === post.id ? null : post.id,
-                                    )
-                                  }
-                                >
-                                  {expandedText === post.id
-                                    ? "Ler menos"
-                                    : "Ler mais"}
-                                </button>
-                              )}
-                            </p>
-                          </div>
-                          {post.scripture_reference && (
-                            <div className="mt-3 flex items-center gap-3 rounded-xl border border-primary/10 bg-primary/[0.035] p-3">
-                              <BookOpen className="size-5 shrink-0 text-primary" />
-                              <div>
-                                <p className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
-                                  Referência bíblica
-                                </p>
-                                <p className="text-sm font-semibold text-primary">
-                                  {post.scripture_reference}
-                                </p>
-                              </div>
-                            </div>
-                          )}
-                          <div className="mt-4 flex flex-wrap items-center gap-5 border-t border-border/70 pt-3">
-                            <button
-                              type="button"
-                              onClick={() => void react(post.id)}
-                              className={`inline-flex items-center gap-1.5 text-sm ${reaction.mine ? "font-semibold text-primary" : "text-muted-foreground hover:text-primary"}`}
-                            >
-                              <Heart
-                                className={`size-4 ${reaction.mine ? "fill-current" : ""}`}
-                              />
-                              {reaction.count} Edificou
-                            </button>
-                            <button
-                              type="button"
-                              onClick={() => void toggleComments(post.id)}
-                              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary"
-                            >
-                              <MessageCircle className="size-4" />
-                              Conversar
-                            </button>
-                          </div>
-                          {expanded === post.id && (
-                            <div className="mt-3 space-y-3 rounded-xl bg-muted/40 p-3">
-                              {(comments[post.id] || []).map((c) => (
-                                <div key={c.id} className="flex gap-2 text-sm">
-                                  <div className="flex size-7 shrink-0 items-center justify-center rounded-full bg-background text-[10px] font-semibold">
-                                    {initials(
-                                      profiles[c.user_id]?.display_name ||
-                                        (c.user_id === user?.id ? name : null),
-                                    )}
-                                  </div>
-                                  <div className="min-w-0 flex-1 rounded-lg bg-background p-2">
-                                    <p className="text-xs font-semibold">
-                                      {profiles[c.user_id]?.display_name ||
-                                        (c.user_id === user?.id
-                                          ? name
-                                          : "Membro")}
-                                    </p>
-                                    <p className="mt-1 whitespace-pre-wrap">
-                                      {c.body}
-                                    </p>
-                                  </div>
-                                </div>
-                              ))}
-                              <div className="flex gap-2">
-                                <Input
-                                  value={drafts[post.id] || ""}
-                                  onChange={(e) =>
-                                    setDrafts((old) => ({
-                                      ...old,
-                                      [post.id]: e.target.value,
-                                    }))
-                                  }
-                                  placeholder="Escreva uma resposta respeitosa..."
-                                  maxLength={2000}
-                                />
-                                <Button
-                                  size="icon"
-                                  onClick={() => void comment(post.id)}
-                                  aria-label="Enviar comentário"
-                                >
-                                  <Send className="size-4" />
-                                </Button>
-                              </div>
-                            </div>
-                          )}
-                        </Card>
-                      );
-                    })
-                  )}
                 </div>
               </>
             )}
