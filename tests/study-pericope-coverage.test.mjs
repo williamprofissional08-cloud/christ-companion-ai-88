@@ -208,7 +208,7 @@ const curatedBatch = [
   { book: "2 Crônicas", chapter: 17, verseCount: 19, slug: "biblia-2-cronicas-cap-17", exportName: "secondChronicles17Study", file: "2-chronicles-17-study.ts" },
   { book: "2 Crônicas", chapter: 18, verseCount: 34, slug: "biblia-2-cronicas-cap-18", exportName: "secondChronicles18Study", file: "2-chronicles-18-study.ts" },
   { book: "2 Crônicas", chapter: 19, verseCount: 11, slug: "biblia-2-cronicas-cap-19", exportName: "secondChronicles19Study", file: "2-chronicles-19-study.ts" },
-  { book: "2 Crônicas", chapter: 20, verseCount: 8, slug: "biblia-2-cronicas-cap-20", exportName: "secondChronicles20Study", file: "2-chronicles-20-study.ts" },
+  { book: "2 Crônicas", chapter: 20, verseCount: 37, slug: "biblia-2-cronicas-cap-20", exportName: "secondChronicles20Study", file: "2-chronicles-20-study.ts" },
 ];
 
 async function readContent(path) {
