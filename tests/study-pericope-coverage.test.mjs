@@ -219,6 +219,12 @@ const curatedBatch = [
   { book: "2 Crônicas", chapter: 28, verseCount: 27, slug: "biblia-2-cronicas-cap-28", exportName: "secondChronicles28Study", file: "2-chronicles-28-study.ts" },
   { book: "2 Crônicas", chapter: 29, verseCount: 36, slug: "biblia-2-cronicas-cap-29", exportName: "secondChronicles29Study", file: "2-chronicles-29-study.ts" },
   { book: "2 Crônicas", chapter: 30, verseCount: 27, slug: "biblia-2-cronicas-cap-30", exportName: "secondChronicles30Study", file: "2-chronicles-30-study.ts" },
+  { book: "2 Crônicas", chapter: 31, verseCount: 21, slug: "biblia-2-cronicas-cap-31", exportName: "secondChronicles31Study", file: "2-chronicles-31-study.ts" },
+  { book: "2 Crônicas", chapter: 32, verseCount: 33, slug: "biblia-2-cronicas-cap-32", exportName: "secondChronicles32Study", file: "2-chronicles-32-study.ts" },
+  { book: "2 Crônicas", chapter: 33, verseCount: 25, slug: "biblia-2-cronicas-cap-33", exportName: "secondChronicles33Study", file: "2-chronicles-33-study.ts" },
+  { book: "2 Crônicas", chapter: 34, verseCount: 33, slug: "biblia-2-cronicas-cap-34", exportName: "secondChronicles34Study", file: "2-chronicles-34-study.ts" },
+  { book: "2 Crônicas", chapter: 35, verseCount: 27, slug: "biblia-2-cronicas-cap-35", exportName: "secondChronicles35Study", file: "2-chronicles-35-study.ts" },
+  { book: "2 Crônicas", chapter: 36, verseCount: 23, slug: "biblia-2-cronicas-cap-36", exportName: "secondChronicles36Study", file: "2-chronicles-36-study.ts" },
 ];
 
 async function readContent(path) {
