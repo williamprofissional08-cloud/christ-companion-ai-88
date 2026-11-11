@@ -16,7 +16,7 @@ export const deuteronomy30Study: StudyContent = {
   {
     id: "secao-1",
     title: "Restauração depois do exílio",
-    kind: scripture,
+    kind: "scripture",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 30:1-5"],
     body: "**Leitura orientada — Deuteronômio 30:1-5**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nQuando as bênçãos e maldições se tornarem realidade e o povo voltar o coração ao Senhor, Deus promete compaixão e reunião dos dispersos. A esperança não nega as consequências, mas afirma que o juízo não é a última palavra.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** Quando as bênçãos e maldições se tornarem realidade e o povo voltar o coração ao Senhor, Deus promete compaixão e reunião dos dispersos. A esperança não nega as consequências, mas afirma que o juízo não é a última palavra. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -24,7 +24,7 @@ export const deuteronomy30Study: StudyContent = {
   {
     id: "secao-2",
     title: "O Senhor transforma o coração",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 30:6-10"],
     body: "**Leitura orientada — Deuteronômio 30:6-10**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nA promessa de circuncidar o coração expressa transformação interior que capacita o povo a amar a Deus. O texto não ensina que a obediência seja apenas esforço externo; a renovação profunda é dom e chamado.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** A promessa de circuncidar o coração expressa transformação interior que capacita o povo a amar a Deus. O texto não ensina que a obediência seja apenas esforço externo; a renovação profunda é dom e chamado. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -32,7 +32,7 @@ export const deuteronomy30Study: StudyContent = {
   {
     id: "secao-3",
     title: "A palavra próxima e acessível",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 30:11-14"],
     body: "**Leitura orientada — Deuteronômio 30:11-14**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nMoisés afirma que o mandamento não está inacessivelmente distante. A palavra foi comunicada ao povo para ser conhecida e praticada. O argumento enfatiza responsabilidade, não autonomia humana absoluta.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** Moisés afirma que o mandamento não está inacessivelmente distante. A palavra foi comunicada ao povo para ser conhecida e praticada. O argumento enfatiza responsabilidade, não autonomia humana absoluta. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -40,7 +40,7 @@ export const deuteronomy30Study: StudyContent = {
   {
     id: "secao-4",
     title: "Escolhe a vida",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 30:15-20"],
     body: "**Leitura orientada — Deuteronômio 30:15-20**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nVida e morte, bem e mal são colocados diante de Israel. Amar o Senhor, ouvir sua voz e apegar-se a ele é o caminho da vida na aliança. A escolha é comunitária e histórica, ligada à promessa feita aos patriarcas.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** Vida e morte, bem e mal são colocados diante de Israel. Amar o Senhor, ouvir sua voz e apegar-se a ele é o caminho da vida na aliança. A escolha é comunitária e histórica, ligada à promessa feita aos patriarcas. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
