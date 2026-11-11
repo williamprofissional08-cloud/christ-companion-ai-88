@@ -99,6 +99,16 @@ const curatedBatch = [
   { book: "Juízes", chapter: 19, verseCount: 30, slug: "biblia-juizes-cap-19", exportName: "judges19Study", file: "judges-19-study.ts" },
   { book: "Juízes", chapter: 20, verseCount: 48, slug: "biblia-juizes-cap-20", exportName: "judges20Study", file: "judges-20-study.ts" },
   { book: "Juízes", chapter: 21, verseCount: 25, slug: "biblia-juizes-cap-21", exportName: "judges21Study", file: "judges-21-study.ts" },
+  { book: "2 Samuel", chapter: 11, verseCount: 27, slug: "biblia-2-samuel-cap-11", exportName: "secondSamuel11Study", file: "2-samuel-11-study.ts" },
+  { book: "2 Samuel", chapter: 12, verseCount: 31, slug: "biblia-2-samuel-cap-12", exportName: "secondSamuel12Study", file: "2-samuel-12-study.ts" },
+  { book: "2 Samuel", chapter: 13, verseCount: 39, slug: "biblia-2-samuel-cap-13", exportName: "secondSamuel13Study", file: "2-samuel-13-study.ts" },
+  { book: "2 Samuel", chapter: 14, verseCount: 33, slug: "biblia-2-samuel-cap-14", exportName: "secondSamuel14Study", file: "2-samuel-14-study.ts" },
+  { book: "2 Samuel", chapter: 15, verseCount: 37, slug: "biblia-2-samuel-cap-15", exportName: "secondSamuel15Study", file: "2-samuel-15-study.ts" },
+  { book: "2 Samuel", chapter: 16, verseCount: 23, slug: "biblia-2-samuel-cap-16", exportName: "secondSamuel16Study", file: "2-samuel-16-study.ts" },
+  { book: "2 Samuel", chapter: 17, verseCount: 29, slug: "biblia-2-samuel-cap-17", exportName: "secondSamuel17Study", file: "2-samuel-17-study.ts" },
+  { book: "2 Samuel", chapter: 18, verseCount: 33, slug: "biblia-2-samuel-cap-18", exportName: "secondSamuel18Study", file: "2-samuel-18-study.ts" },
+  { book: "2 Samuel", chapter: 19, verseCount: 43, slug: "biblia-2-samuel-cap-19", exportName: "secondSamuel19Study", file: "2-samuel-19-study.ts" },
+  { book: "2 Samuel", chapter: 20, verseCount: 26, slug: "biblia-2-samuel-cap-20", exportName: "secondSamuel20Study", file: "2-samuel-20-study.ts" },
 ];
 
 async function readContent(path) {
