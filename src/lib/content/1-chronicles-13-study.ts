@@ -4,20 +4,20 @@ import type { StudyContent } from "../types";
 export const firstChronicles13Study: StudyContent = {
   "version": 4,
   "depth": "deep",
-  "intro": "A arca, Uzá e a necessidade de buscar a Deus conforme sua palavra.",
-  "historicalContext": "Davi consulta líderes e reúne Israel para trazer a arca, mas o transporte inadequado termina na morte de Uzá. A arca permanece na casa de Obede-Edom, cuja família é abençoada. O capítulo confronta entusiasmo religioso sem atenção às instruções divinas.",
+  "intro": "1 Crônicas 13 relata a decisão de trazer a arca da aliança a Jerusalém, a celebração do povo, o incidente com Uzá e a permanência da arca na casa de Obede-Edom. O episódio confronta entusiasmo religioso com a necessidade de reverência e obediência.",
+  "historicalContext": "O capítulo vem após a consolidação inicial do reino de Davi e antecede a organização levítica do transporte da arca em 1 Crônicas 15. A narrativa paralela está em 2 Samuel 6:1-11. O cronista destaca a consulta coletiva, o transporte em carro novo, a morte de Uzá e a bênção na casa de Obede-Edom.",
   "keyPoints": [
     {
       "title": "Tema central",
-      "text": "A arca, Uzá e a necessidade de buscar a Deus conforme sua palavra"
+      "text": "A tentativa de transportar a arca, o incidente com Uzá e a necessidade de reverência."
     },
     {
       "title": "Contexto",
-      "text": "Davi consulta líderes e reúne Israel para trazer a arca, mas o transporte inadequado termina na morte de Uzá. A arca permanece na casa de Obede-Edom, cuja família é abençoada. O capítulo confronta entusiasmo religioso sem atenção às instruções divinas."
+      "text": "O capítulo vem após a consolidação inicial do reino de Davi e antecede a organização levítica do transporte da arca em 1 Crônicas 15. A narrativa paralela está em 2 Samuel 6:1-11. O cronista destaca a consulta coletiva, o transporte em carro novo, a morte de Uzá e a bênção na casa de Obede-Edom."
     },
     {
       "title": "Estrutura",
-      "text": "13:1-4, consulta e decisão coletiva; 13:5-8, transporte e celebração; 13:9-11, Uzá e a santidade da arca; 13:12-14, temor de Davi e permanência da arca. O capítulo 14 registra a consolidação do reino, a família de Davi e as vitórias sobre os filisteus."
+      "text": "13:1-4, consulta e decisão; 13:5-8, transporte e celebração; 13:9-11, Uzá; 13:12-14, temor de Davi e permanência da arca."
     },
     {
       "title": "Chave de leitura",
@@ -28,12 +28,13 @@ export const firstChronicles13Study: StudyContent = {
       "text": "Ler a história de Israel no horizonte da promessa bíblica culminada em Jesus, sem alegorias inventadas."
     }
   ],
-  "application": "Números 4:15; 7:9; Deuteronômio 10:8; 2 Samuel 6:1-11; 1 Crônicas 15:2, 13-15; João 4:23-24 Leia a passagem integralmente e aplique seus princípios à luz do conjunto das Escrituras.",
+  "application": "A sinceridade e o entusiasmo não substituem a obediência. Trate o sagrado com reverência, examine as Escrituras e não transforme a morte de Uzá em fórmula simplista para explicar tragédias atuais.",
   "crossReferences": [
-    "A intenção sincera não substitui obediência",
-    "a santidade de Deus não deve ser tratada com banalidade",
-    "Davi consulta o Senhor antes das batalhas",
-    "vitória não é licença para orgulho."
+    "Números 4:15",
+    "Números 7:9",
+    "2 Samuel 6:1-11",
+    "1 Crônicas 15:2, 13-15",
+    "João 4:23-24"
   ],
   "questions": [
     "Qual é a ideia central do capítulo?",
@@ -44,7 +45,7 @@ export const firstChronicles13Study: StudyContent = {
     "Que conexão com Cristo é sustentada pelo cânon?",
     "Qual aplicação respeita o sentido da passagem?"
   ],
-  "conclusion": "A arca, Uzá e a necessidade de buscar a Deus conforme sua palavra. Davi consulta líderes e reúne Israel para trazer a arca, mas o transporte inadequado termina na morte de Uzá. A arca permanece na casa de Obede-Edom, cuja família é abençoada. O capítulo confronta entusiasmo religioso sem atenção às instruções divinas.",
+  "conclusion": "1 Crônicas 13 mostra que o desejo de honrar a Deus precisa ser acompanhado de atenção à sua palavra. O capítulo prepara a correção descrita em 1 Crônicas 15.",
   "prayer": "Senhor, dá-nos atenção ao texto, humildade na interpretação e fidelidade na aplicação. Que tua Palavra nos conduza a Cristo e forme em nós amor, justiça e serviço. Amém.",
   "sections": [
     {
@@ -66,38 +67,6 @@ export const firstChronicles13Study: StudyContent = {
         "1 Crônicas 13:1-14"
       ],
       "body": "**Tema central:** A arca, Uzá e a necessidade de buscar a Deus conforme sua palavra.\\n\\nDavi consulta líderes e reúne Israel para trazer a arca, mas o transporte inadequado termina na morte de Uzá. A arca permanece na casa de Obede-Edom, cuja família é abençoada. O capítulo confronta entusiasmo religioso sem atenção às instruções divinas.\\n\\n**Objetivo do estudo:** compreender o movimento do capítulo dentro de 1 Crônicas, identificar o que o narrador afirma, avaliar sua ênfase teológica e formular aplicações responsáveis.\\n\\n**Ideia principal:** a história de Israel é narrada à luz da aliança e da fidelidade de Deus; seus líderes e comunidades continuam responsáveis por suas decisões."
-    },
-    {
-      "id": "contexto",
-      "title": "2. Contexto histórico, literário e canônico",
-      "kind": "context",
-      "confidence": "probable",
-      "scriptureRefs": [
-        "1 Crônicas 13:1-14",
-        "1 Crônicas 9:1-2",
-        "1 Crônicas 29:29"
-      ],
-      "body": "1 Crônicas foi escrito para uma comunidade que precisava compreender sua identidade e sua continuidade na história da aliança. O livro relê tradições de Israel com atenção à casa de Davi, ao templo, ao sacerdócio, à adoração e à vida comunitária.\\n\\nDavi consulta líderes e reúne Israel para trazer a arca, mas o transporte inadequado termina na morte de Uzá. A arca permanece na casa de Obede-Edom, cuja família é abençoada. O capítulo confronta entusiasmo religioso sem atenção às instruções divinas.\\n\\n**Lugar no argumento do livro:** 13:1-4, consulta e decisão coletiva; 13:5-8, transporte e celebração; 13:9-11, Uzá e a santidade da arca; 13:12-14, temor de Davi e permanência da arca. O capítulo 14 registra a consolidação do reino, a família de Davi e as vitórias sobre os filisteus.\\n\\n**Cuidado metodológico:** o cronista seleciona e organiza materiais; compare passagens paralelas quando existirem. A seleção narrativa não deve ser tratada como biografia moderna completa. Não invente datas, motivações privadas ou detalhes que o texto não oferece."
-    },
-    {
-      "id": "estrutura",
-      "title": "3. Estrutura literária e movimentos do capítulo",
-      "kind": "analysis",
-      "confidence": "high",
-      "scriptureRefs": [
-        "1 Crônicas 13:1-14"
-      ],
-      "body": "Acompanhe o capítulo em unidades: **13:1-4, consulta e decisão coletiva; 13:5-8, transporte e celebração; 13:9-11, Uzá e a santidade da arca; 13:12-14, temor de Davi e permanência da arca. O capítulo 14 registra a consolidação do reino, a família de Davi e as vitórias sobre os filisteus.**.\\n\\nObserve como cada movimento prepara o seguinte. Identifique quem age, quem fala, quais decisões alteram a narrativa e onde aparecem avaliações teológicas. A estrutura é uma ferramenta de leitura, não uma substituição do texto versículo por versículo."
-    },
-    {
-      "id": "exegese",
-      "title": "4. Estudo das perícopes — observação, interpretação e aplicação",
-      "kind": "analysis",
-      "confidence": "high",
-      "scriptureRefs": [
-        "1 Crônicas 13:1-14"
-      ],
-      "body": "**Perícopes para estudo:** 13:1-4, consulta e decisão coletiva; 13:5-8, transporte e celebração; 13:9-11, Uzá e a santidade da arca; 13:12-14, temor de Davi e permanência da arca. O capítulo 14 registra a consolidação do reino, a família de Davi e as vitórias sobre os filisteus..\\n\\n**Observação:** leia cada unidade separadamente. Anote personagens, verbos, repetições, contrastes, conectivos, lugares e resultados. Pergunte por que o narrador incluiu esses detalhes.\\n\\n**Interpretação:** Davi consulta líderes e reúne Israel para trazer a arca, mas o transporte inadequado termina na morte de Uzá. A arca permanece na casa de Obede-Edom, cuja família é abençoada. O capítulo confronta entusiasmo religioso sem atenção às instruções divinas.\\n\\n**O que o texto afirma:** a narrativa apresenta os acontecimentos e sua avaliação dentro da história da aliança.\\n\\n**O que não devemos concluir sem base:** não atribuir intenções não declaradas, não transformar descrição em mandamento universal e não usar episódios antigos como autorização automática para práticas atuais.\\n\\n**Conexões bíblicas:** compare A intenção sincera não substitui obediência; a santidade de Deus não deve ser tratada com banalidade; Davi consulta o Senhor antes das batalhas; vitória não é licença para orgulho.. Leia as passagens em seus próprios contextos e observe tanto convergências quanto diferenças.\\n\\n**Aplicação responsável:** Números 4:15; 7:9; Deuteronômio 10:8; 2 Samuel 6:1-11; 1 Crônicas 15:2, 13-15; João 4:23-24"
     },
     {
       "id": "teologia",
