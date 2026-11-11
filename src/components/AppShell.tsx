@@ -24,6 +24,7 @@ const PRIMARY_NAV = [
 ] as const;
 
 const MORE_NAV = [
+  { to: "/assistente", label: "Assistente", icon: MessageCircleHeart },
   { to: "/devocional", label: "Devocional", icon: Flame },
   { to: "/planos", label: "Planos de oração", icon: HeartHandshake },
   { to: "/estudos", label: "Estudos", icon: Compass },
