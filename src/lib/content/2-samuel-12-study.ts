@@ -69,6 +69,46 @@ export const secondSamuel12Study: StudyContent = {
       "2 Samuel 12:24-31"
     ],
     "body": "**Leitura bíblica:** leia 2 Samuel 12:24-31 diretamente em sua Bíblia. O comentário a seguir é autoral e não substitui uma tradução bíblica.\n\n**Observação do texto:** Nasce Salomão, e a narrativa menciona o amor do Senhor por ele. Joabe chama Davi para concluir a campanha contra Rabá. A vida política continua, mas a casa real não retorna simplesmente ao estado anterior.\n\n**Interpretação:** observe os personagens, as ações, os contrastes, as repetições e as consequências narradas. Diferencie o que o narrador afirma daquilo que os personagens dizem. A passagem deve ser compreendida no desenvolvimento do capítulo e na história da aliança davídica.\n\n**Contexto histórico e literário:** Na corte real, confrontar o rei exigia coragem. Natã usa uma parábola para despertar o senso de justiça de Davi e depois o acusa diretamente. O capítulo distingue confissão, perdão e consequências históricas, sem banalizar a graça nem transformar o sofrimento da criança em regra universal.\n\n**Conexão bíblico-teológica:** a história de Davi não exige idealizar o rei. A esperança bíblica aponta para o Filho de Davi, Jesus Cristo, cujo reino manifesta justiça e serviço. O Novo Testamento não autoriza transferir automaticamente para a igreja as guerras, punições ou disputas políticas da monarquia de Israel.\n\n**Aplicação:** pratique verdade, justiça, humildade e cuidado com o próximo. Não confunda sucesso estratégico com aprovação moral de Deus; avalie atitudes à luz do caráter de Cristo."
+  },
+  {
+    "id": "2sm-12-complemento-1",
+    "title": "A parábola profética e a reversão do julgamento de Davi",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 12"
+    ],
+    "body": "**Análise:** A parábola faz Davi pronunciar um juízo correto sobre um caso que espelha sua conduta. A palavra profética conduz à confissão e anuncia perdão e consequências.\n\n**Leitura cuidadosa:** A parábola profética e a reversão do julgamento de Davi. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-12-complemento-2",
+    "title": "Confissão, perdão, consequências e reparação",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 12"
+    ],
+    "body": "**Análise:** A parábola faz Davi pronunciar um juízo correto sobre um caso que espelha sua conduta. A palavra profética conduz à confissão e anuncia perdão e consequências.\n\n**Leitura cuidadosa:** Confissão, perdão, consequências e reparação. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-12-complemento-3",
+    "title": "Os limites de generalizar o relato sobre a criança",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 12"
+    ],
+    "body": "**Análise:** A parábola faz Davi pronunciar um juízo correto sobre um caso que espelha sua conduta. A palavra profética conduz à confissão e anuncia perdão e consequências.\n\n**Leitura cuidadosa:** Os limites de generalizar o relato sobre a criança. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-12-complemento-4",
+    "title": "Arrependimento e transformação à luz do Salmo 51",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 12"
+    ],
+    "body": "**Análise:** A parábola faz Davi pronunciar um juízo correto sobre um caso que espelha sua conduta. A palavra profética conduz à confissão e anuncia perdão e consequências.\n\n**Leitura cuidadosa:** Arrependimento e transformação à luz do Salmo 51. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
   }
-]
+
 };
