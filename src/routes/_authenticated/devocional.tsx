@@ -65,6 +65,8 @@ function DevocionalPage() {
 
 
   const displayedData = draw === 0 ? data : fallbackDevotional(day, draw);
+  const isSynthesis = displayedData.verse.kind === "synthesis" || displayedData.verse.text.startsWith("Síntese para meditação, não uma citação literal:");
+  const verseText = displayedData.verse.text.replace(/^Síntese para meditação, não uma citação literal:\s*/i, "");
   const blocks = [
     { label: "Reflexão", text: displayedData.reflection },
     { label: "Aplicação prática", text: displayedData.application },
@@ -82,11 +84,13 @@ function DevocionalPage() {
       </div>
       <ExportCard filename={`devocional-${day}-${draw}`} title={`Devocional — ${displayedData.theme}`}>
       <Card className="animate-rise border-border/50 p-6 shadow-soft">
-        <p className="text-xs font-semibold tracking-wide text-primary uppercase">Versículo</p>
-        <blockquote className="mt-3 font-display text-xl leading-relaxed">
-          “{displayedData.verse.text}”
-        </blockquote>
-        <p className="mt-2 text-sm font-medium text-muted-foreground">{displayedData.verse.reference}</p>
+        <p className="text-xs font-semibold tracking-wide text-primary uppercase">{isSynthesis ? "Síntese para meditação" : "Versículo"}</p>
+        {isSynthesis ? (
+          <p className="mt-3 text-base leading-relaxed">{verseText}</p>
+        ) : (
+          <blockquote className="mt-3 font-display text-xl leading-relaxed">“{displayedData.verse.text}”</blockquote>
+        )}
+        <p className="mt-2 text-sm font-medium text-muted-foreground">{isSynthesis ? "Leitura bíblica sugerida: " : ""}{displayedData.verse.reference}</p>
       </Card>
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
