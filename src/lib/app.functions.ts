@@ -11,15 +11,15 @@ export const getDashboard = createServerFn({ method: "GET" })
   .inputValidator((input: unknown) => daySchema.parse(input))
   .handler(async ({ data, context }) => {
     const { supabase, userId } = context;
-    const [devotional, habits, goals, plans, journal, streakRows] = await Promise.all([
+    const [devotional, habits, goals, plans, journal, streakRows, trackProgress] = await Promise.all([
       supabase.from("devotionals").select("content").eq("user_id", userId).eq("day", data.day).maybeSingle(),
       supabase.from("habit_days").select("habits").eq("user_id", userId).eq("day", data.day).maybeSingle(),
       supabase.from("goals").select("*").eq("user_id", userId).order("created_at", { ascending: true }),
       supabase.from("plan_progress").select("*").eq("user_id", userId).order("updated_at", { ascending: false }),
       supabase.from("journal_entries").select("*").eq("user_id", userId).order("created_at", { ascending: false }).limit(5),
-      supabase.from("habit_days").select("day, habits").eq("user_id", userId).order("day", { ascending: false }).limit(30),
+      supabase.from("habit_days").select("day, habits").eq("user_id", userId).order("day", { ascending: false }).limit(30),\n      supabase.from("track_progress").select("track_slug, completed_steps, updated_at").eq("user_id", userId).order("updated_at", { ascending: false }),
     ]);
-    for (const result of [devotional, habits, goals, plans, journal, streakRows]) {
+    for (const result of [devotional, habits, goals, plans, journal, streakRows, trackProgress]) {
       if (result.error) throw new Error("Não foi possível carregar os dados do painel.");
     }
     return {
@@ -28,7 +28,7 @@ export const getDashboard = createServerFn({ method: "GET" })
       goals: goals.data ?? [],
       plans: plans.data ?? [],
       journal: journal.data ?? [],
-      history: (streakRows.data ?? []) as { day: string; habits: Record<string, boolean> }[],
+      history: (streakRows.data ?? []) as { day: string; habits: Record<string, boolean> }[],\n      trackProgress: trackProgress.data ?? [],
     };
   });
 
