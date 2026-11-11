@@ -3,6 +3,13 @@ import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
 const curatedBatch = [
+  { book: "Neemias", chapter: 7, verseCount: 73, slug: "biblia-neemias-cap-7", exportName: "nehemiah7Study", file: "nehemiah-7-study.ts" },
+  { book: "Neemias", chapter: 8, verseCount: 18, slug: "biblia-neemias-cap-8", exportName: "nehemiah8Study", file: "nehemiah-8-study.ts" },
+  { book: "Neemias", chapter: 9, verseCount: 38, slug: "biblia-neemias-cap-9", exportName: "nehemiah9Study", file: "nehemiah-9-study.ts" },
+  { book: "Neemias", chapter: 10, verseCount: 39, slug: "biblia-neemias-cap-10", exportName: "nehemiah10Study", file: "nehemiah-10-study.ts" },
+  { book: "Neemias", chapter: 11, verseCount: 36, slug: "biblia-neemias-cap-11", exportName: "nehemiah11Study", file: "nehemiah-11-study.ts" },
+  { book: "Neemias", chapter: 12, verseCount: 47, slug: "biblia-neemias-cap-12", exportName: "nehemiah12Study", file: "nehemiah-12-study.ts" },
+  { book: "Neemias", chapter: 13, verseCount: 31, slug: "biblia-neemias-cap-13", exportName: "nehemiah13Study", file: "nehemiah-13-study.ts" },
   { book: "Neemias", chapter: 1, verseCount: 11, slug: "biblia-neemias-cap-1", exportName: "nehemiah1Study", file: "nehemiah-1-study.ts" },
   { book: "Neemias", chapter: 2, verseCount: 20, slug: "biblia-neemias-cap-2", exportName: "nehemiah2Study", file: "nehemiah-2-study.ts" },
   { book: "Neemias", chapter: 3, verseCount: 32, slug: "biblia-neemias-cap-3", exportName: "nehemiah3Study", file: "nehemiah-3-study.ts" },
