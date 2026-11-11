@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
-import { BookOpen, Bot, GraduationCap, Route as RouteIcon, Share2, Sparkles, Trophy } from "lucide-react";
+import { BookOpen, GraduationCap, Route as RouteIcon, Share2, Sparkles, Trophy } from "lucide-react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
 import { Button } from "@/components/ui/button";
