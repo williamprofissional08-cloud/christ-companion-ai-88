@@ -3,6 +3,12 @@ import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
 const curatedBatch = [
+  { book: "Neemias", chapter: 1, verseCount: 11, slug: "biblia-neemias-cap-1", exportName: "nehemiah1Study", file: "nehemiah-1-study.ts" },
+  { book: "Neemias", chapter: 2, verseCount: 20, slug: "biblia-neemias-cap-2", exportName: "nehemiah2Study", file: "nehemiah-2-study.ts" },
+  { book: "Neemias", chapter: 3, verseCount: 32, slug: "biblia-neemias-cap-3", exportName: "nehemiah3Study", file: "nehemiah-3-study.ts" },
+  { book: "Neemias", chapter: 4, verseCount: 23, slug: "biblia-neemias-cap-4", exportName: "nehemiah4Study", file: "nehemiah-4-study.ts" },
+  { book: "Neemias", chapter: 5, verseCount: 19, slug: "biblia-neemias-cap-5", exportName: "nehemiah5Study", file: "nehemiah-5-study.ts" },
+  { book: "Neemias", chapter: 6, verseCount: 19, slug: "biblia-neemias-cap-6", exportName: "nehemiah6Study", file: "nehemiah-6-study.ts" },
   { book: "Esdras", chapter: 7, verseCount: 28, slug: "biblia-esdras-cap-7", exportName: "ezra7Study", file: "ezra-7-study.ts" },
   { book: "Esdras", chapter: 8, verseCount: 36, slug: "biblia-esdras-cap-8", exportName: "ezra8Study", file: "ezra-8-study.ts" },
   { book: "Esdras", chapter: 9, verseCount: 15, slug: "biblia-esdras-cap-9", exportName: "ezra9Study", file: "ezra-9-study.ts" },

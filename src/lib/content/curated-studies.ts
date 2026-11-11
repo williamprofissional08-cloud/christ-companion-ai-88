@@ -1,4 +1,10 @@
 import type { StudyContent } from "../types";
+import { nehemiah1Study } from "./nehemiah-1-study";
+import { nehemiah2Study } from "./nehemiah-2-study";
+import { nehemiah3Study } from "./nehemiah-3-study";
+import { nehemiah4Study } from "./nehemiah-4-study";
+import { nehemiah5Study } from "./nehemiah-5-study";
+import { nehemiah6Study } from "./nehemiah-6-study";
 import { ezra7Study } from "./ezra-7-study";
 import { ezra8Study } from "./ezra-8-study";
 import { ezra9Study } from "./ezra-9-study";
@@ -835,4 +841,10 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-esdras-cap-8": ezra8Study,
   "biblia-esdras-cap-9": ezra9Study,
   "biblia-esdras-cap-10": ezra10Study,
+  "biblia-neemias-cap-1": nehemiah1Study,
+  "biblia-neemias-cap-2": nehemiah2Study,
+  "biblia-neemias-cap-3": nehemiah3Study,
+  "biblia-neemias-cap-4": nehemiah4Study,
+  "biblia-neemias-cap-5": nehemiah5Study,
+  "biblia-neemias-cap-6": nehemiah6Study,
 };
