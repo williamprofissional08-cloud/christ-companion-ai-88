@@ -64,7 +64,7 @@ function Inicio() {
       toggle({ data: { day, key: vars.key, value: vars.value } }),
     onMutate: async ({ key, value }) => {
       await queryClient.cancelQueries({ queryKey: ["dashboard", day] });
-      const previous = queryClient.getQueryData<any>(["dashboard", day]);
+      const previous = queryClient.getQueryData<NonNullable<typeof data>>(["dashboard", day]);
       if (previous) queryClient.setQueryData(["dashboard", day], {
         ...previous, habits: { ...(previous.habits ?? {}), [key]: value },
       });
@@ -87,19 +87,14 @@ function Inicio() {
   const hour = new Date().getHours();
   const greeting = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
   const initials = displayName.slice(0, 1).toLocaleUpperCase("pt-BR");
-  const activeTrack = (trackProgress.data ?? [])
-    .filter((row: any) => (row.completed_steps?.length ?? 0) > 0)
-    .map((row: any) => {
-      const track = READING_TRACKS.find((item) => item.slug === row.track_slug);
-      if (!track) return null;
-      const total = buildSteps(track).length;
-      const completed = row.completed_steps?.length ?? 0;
-      return { track, total, completed, next: Math.min(total, completed + 1) };
-    })
-    .filter(Boolean)
-    .sort((a: any, b: any) => b.completed - a.completed)[0] as
-      | { track: (typeof READING_TRACKS)[number]; total: number; completed: number; next: number }
-      | undefined;
+  const activeTracks = (trackProgress.data ?? []).flatMap((row) => {
+    const track = READING_TRACKS.find((item) => item.slug === row.track_slug);
+    const completed = row.completed_steps?.length ?? 0;
+    if (!track || completed === 0) return [];
+    const total = buildSteps(track).length;
+    return [{ track, total, completed, next: Math.min(total, completed + 1) }];
+  });
+  const activeTrack = activeTracks.sort((a, b) => b.completed - a.completed)[0];
 
   return (
     <AppShell title="Caminho Divino">
