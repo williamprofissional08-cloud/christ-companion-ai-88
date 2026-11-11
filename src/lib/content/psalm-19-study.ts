@@ -99,7 +99,7 @@ export const psalm19Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 19:1-6"
       ],
-      "body": "**Trecho:** Salmos 19:1-6.\n\n**Observação literária e teológica:** Os céus anunciam a glória do Criador. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **1.** Os céus proclamam a obra de Deus sem palavras humanas.\n- **2.** Dia e noite formam testemunho contínuo.\n- **3.** A mensagem alcança toda a terra sem linguagem audível.\n- **4.** O sol como noivo e corredor comunica vigor e regularidade.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 19:1-6.\n\n**Observação:** a criação testemunha continuamente a glória do Criador.\n\n**Versículo por versículo:**\n- **1.** Os céus proclamam a obra de Deus sem palavras humanas.\n- **2.** Dia e noite formam um testemunho contínuo.\n- **3.** A mensagem não depende de linguagem audível.\n- **4.** O testemunho alcança toda a terra; a imagem do sol prepara a estrofe seguinte.\n- **5.** O sol é comparado a um noivo que sai de seu aposento, imagem de vigor.\n- **6.** Sua trajetória alcança toda a extensão do céu e comunica regularidade e abrangência.\n\n**Interpretação responsável:** leia cada imagem no conjunto do salmo e não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto."
     },
     {
       "id": "pericope-2",
