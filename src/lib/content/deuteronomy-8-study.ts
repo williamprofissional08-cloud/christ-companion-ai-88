@@ -36,9 +36,9 @@ export const deuteronomy8Study: StudyContent = {
     kind: "scripture",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 8:8:1-5"
+      "Deuteronômio 8:1-5"
     ],
-    body: "**Leitura orientada — Deuteronômio 8:8:1-5**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés pede que Israel se lembre de todo o caminho pelo deserto. A fome, o maná e a disciplina são apresentados como experiências pelas quais Deus ensinou o povo a depender dele.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O texto interpreta a trajetória de Israel à luz da aliança. Não afirma que todo sofrimento de qualquer pessoa seja punição direta por um pecado específico; essa conclusão ultrapassaria o que a passagem diz.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 8:1-5**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés pede que Israel se lembre de todo o caminho pelo deserto. A fome, o maná e a disciplina são apresentados como experiências pelas quais Deus ensinou o povo a depender dele.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O texto interpreta a trajetória de Israel à luz da aliança. Não afirma que todo sofrimento de qualquer pessoa seja punição direta por um pecado específico; essa conclusão ultrapassaria o que a passagem diz.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-2",
@@ -46,9 +46,9 @@ export const deuteronomy8Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 8:8:6-10"
+      "Deuteronômio 8:6-10"
     ],
-    body: "**Leitura orientada — Deuteronômio 8:8:6-10**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA terra é descrita como lugar de abundância, e o maná é lembrado como ensino de que o ser humano não vive somente de pão, mas de tudo o que procede da boca do Senhor.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** Jesus cita Deuteronômio 8:3 ao resistir à tentação (Mateus 4:4; Lucas 4:4). A conexão cristã destaca confiança e obediência à palavra de Deus, sem negar a necessidade real de alimento.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 8:6-10**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA terra é descrita como lugar de abundância, e o maná é lembrado como ensino de que o ser humano não vive somente de pão, mas de tudo o que procede da boca do Senhor.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** Jesus cita Deuteronômio 8:3 ao resistir à tentação (Mateus 4:4; Lucas 4:4). A conexão cristã destaca confiança e obediência à palavra de Deus, sem negar a necessidade real de alimento.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-3",
@@ -56,9 +56,9 @@ export const deuteronomy8Study: StudyContent = {
     kind: "context",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 8:8:11-18"
+      "Deuteronômio 8:11-18"
     ],
-    body: "**Leitura orientada — Deuteronômio 8:8:11-18**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO perigo aparece quando casas, rebanhos e riquezas levam Israel a esquecer o Senhor. Moisés adverte que a capacidade de produzir riqueza também deve ser reconhecida como dádiva de Deus.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A advertência combate a autossuficiência. Não condena todo trabalho ou posse, mas rejeita a ideia de que prosperidade prova superioridade espiritual ou que o ser humano seja a fonte última de seu sucesso.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 8:11-18**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO perigo aparece quando casas, rebanhos e riquezas levam Israel a esquecer o Senhor. Moisés adverte que a capacidade de produzir riqueza também deve ser reconhecida como dádiva de Deus.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A advertência combate a autossuficiência. Não condena todo trabalho ou posse, mas rejeita a ideia de que prosperidade prova superioridade espiritual ou que o ser humano seja a fonte última de seu sucesso.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-4",
@@ -66,9 +66,9 @@ export const deuteronomy8Study: StudyContent = {
     kind: "application",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 8:8:19-20"
+      "Deuteronômio 8:19-20"
     ],
-    body: "**Leitura orientada — Deuteronômio 8:8:19-20**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO capítulo termina com uma advertência severa: se Israel seguir outros deuses, perecerá como as nações cuja infidelidade é mencionada no contexto.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A advertência é dirigida a Israel dentro da aliança e não deve ser usada para declarar que uma dificuldade financeira ou nacional prova abandono de Deus. Seu princípio é a seriedade da idolatria e da infidelidade.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 8:19-20**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO capítulo termina com uma advertência severa: se Israel seguir outros deuses, perecerá como as nações cuja infidelidade é mencionada no contexto.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A advertência é dirigida a Israel dentro da aliança e não deve ser usada para declarar que uma dificuldade financeira ou nacional prova abandono de Deus. Seu princípio é a seriedade da idolatria e da infidelidade.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   }
 ]
 };
