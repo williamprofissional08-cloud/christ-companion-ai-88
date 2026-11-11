@@ -3,6 +3,16 @@ import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
 const curatedBatch = [
+  { book: "Ester", chapter: 1, verseCount: 22, slug: "biblia-ester-cap-1", exportName: "esther1Study", file: "esther-1-study.ts" },
+  { book: "Ester", chapter: 2, verseCount: 23, slug: "biblia-ester-cap-2", exportName: "esther2Study", file: "esther-2-study.ts" },
+  { book: "Ester", chapter: 3, verseCount: 15, slug: "biblia-ester-cap-3", exportName: "esther3Study", file: "esther-3-study.ts" },
+  { book: "Ester", chapter: 4, verseCount: 17, slug: "biblia-ester-cap-4", exportName: "esther4Study", file: "esther-4-study.ts" },
+  { book: "Ester", chapter: 5, verseCount: 14, slug: "biblia-ester-cap-5", exportName: "esther5Study", file: "esther-5-study.ts" },
+  { book: "Ester", chapter: 6, verseCount: 14, slug: "biblia-ester-cap-6", exportName: "esther6Study", file: "esther-6-study.ts" },
+  { book: "Ester", chapter: 7, verseCount: 10, slug: "biblia-ester-cap-7", exportName: "esther7Study", file: "esther-7-study.ts" },
+  { book: "Ester", chapter: 8, verseCount: 17, slug: "biblia-ester-cap-8", exportName: "esther8Study", file: "esther-8-study.ts" },
+  { book: "Ester", chapter: 9, verseCount: 32, slug: "biblia-ester-cap-9", exportName: "esther9Study", file: "esther-9-study.ts" },
+  { book: "Ester", chapter: 10, verseCount: 3, slug: "biblia-ester-cap-10", exportName: "esther10Study", file: "esther-10-study.ts" },
   { book: "Neemias", chapter: 7, verseCount: 73, slug: "biblia-neemias-cap-7", exportName: "nehemiah7Study", file: "nehemiah-7-study.ts" },
   { book: "Neemias", chapter: 8, verseCount: 18, slug: "biblia-neemias-cap-8", exportName: "nehemiah8Study", file: "nehemiah-8-study.ts" },
   { book: "Neemias", chapter: 9, verseCount: 38, slug: "biblia-neemias-cap-9", exportName: "nehemiah9Study", file: "nehemiah-9-study.ts" },

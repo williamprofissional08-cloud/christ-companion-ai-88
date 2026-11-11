@@ -1,4 +1,14 @@
 import type { StudyContent } from "../types";
+import { esther1Study } from "./esther-1-study";
+import { esther2Study } from "./esther-2-study";
+import { esther3Study } from "./esther-3-study";
+import { esther4Study } from "./esther-4-study";
+import { esther5Study } from "./esther-5-study";
+import { esther6Study } from "./esther-6-study";
+import { esther7Study } from "./esther-7-study";
+import { esther8Study } from "./esther-8-study";
+import { esther9Study } from "./esther-9-study";
+import { esther10Study } from "./esther-10-study";
 import { nehemiah7Study } from "./nehemiah-7-study";
 import { nehemiah8Study } from "./nehemiah-8-study";
 import { nehemiah9Study } from "./nehemiah-9-study";
@@ -861,4 +871,14 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-neemias-cap-11": nehemiah11Study,
   "biblia-neemias-cap-12": nehemiah12Study,
   "biblia-neemias-cap-13": nehemiah13Study,
+  "biblia-ester-cap-1": esther1Study,
+  "biblia-ester-cap-2": esther2Study,
+  "biblia-ester-cap-3": esther3Study,
+  "biblia-ester-cap-4": esther4Study,
+  "biblia-ester-cap-5": esther5Study,
+  "biblia-ester-cap-6": esther6Study,
+  "biblia-ester-cap-7": esther7Study,
+  "biblia-ester-cap-8": esther8Study,
+  "biblia-ester-cap-9": esther9Study,
+  "biblia-ester-cap-10": esther10Study,
 };
