@@ -156,6 +156,7 @@ jobs:
               raise SystemExit("Faixa atual inválida; continuação interrompida.")
 
           actual_end = min(start + batch - 1, current["chapters"])
+          print("BIBLE_FINISHED=false")
           if actual_end < current["chapters"]:
               next_book = current
               next_start = actual_end + 1
@@ -171,7 +172,6 @@ jobs:
               raise SystemExit(0)
 
           next_batch = min(batch, next_book["chapters"] - next_start + 1)
-          print("BIBLE_FINISHED=false")
           print(f"NEXT_BOOK_SLUG={next_book['slug']}")
           print(f"NEXT_START_CHAPTER={next_start}")
           print(f"NEXT_BATCH_SIZE={next_batch}")
