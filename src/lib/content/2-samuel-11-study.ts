@@ -69,6 +69,46 @@ export const secondSamuel11Study: StudyContent = {
       "2 Samuel 11:26-27"
     ],
     "body": "**Leitura bíblica:** leia 2 Samuel 11:26-27 diretamente em sua Bíblia. O comentário a seguir é autoral e não substitui uma tradução bíblica.\n\n**Observação do texto:** Bate-Seba lamenta o marido e depois é levada à casa de Davi. A aparente normalização política não significa aprovação: o narrador declara que o que Davi fez desagradou ao Senhor.\n\n**Interpretação:** observe os personagens, as ações, os contrastes, as repetições e as consequências narradas. Diferencie o que o narrador afirma daquilo que os personagens dizem. A passagem deve ser compreendida no desenvolvimento do capítulo e na história da aliança davídica.\n\n**Contexto histórico e literário:** A campanha contra os amonitas prossegue enquanto Davi permanece em Jerusalém. O capítulo denuncia o abuso do poder real, o encobrimento e o assassinato deliberado de Urias. O silêncio narrativo sobre a perspectiva de Bate-Seba não deve ser confundido com consentimento; a assimetria de poder é central.\n\n**Conexão bíblico-teológica:** a história de Davi não exige idealizar o rei. A esperança bíblica aponta para o Filho de Davi, Jesus Cristo, cujo reino manifesta justiça e serviço. O Novo Testamento não autoriza transferir automaticamente para a igreja as guerras, punições ou disputas políticas da monarquia de Israel.\n\n**Aplicação:** pratique verdade, justiça, humildade e cuidado com o próximo. Não culpabilize vítimas, não minimize abuso e não use o silêncio narrativo para inventar consentimento. Proteção e responsabilização são indispensáveis."
+  },
+  {
+    "id": "2sm-11-complemento-1",
+    "title": "Progressão narrativa do pecado e do encobrimento",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 11"
+    ],
+    "body": "**Análise:** O texto progride por ações sucessivas de Davi e termina com a avaliação explícita do Senhor. A narrativa desloca o leitor da aparência de normalidade do palácio para a injustiça.\n\n**Leitura cuidadosa:** Progressão narrativa do pecado e do encobrimento. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-11-complemento-2",
+    "title": "Poder real, responsabilidade e a lei para os reis",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 11"
+    ],
+    "body": "**Análise:** O texto progride por ações sucessivas de Davi e termina com a avaliação explícita do Senhor. A narrativa desloca o leitor da aparência de normalidade do palácio para a injustiça.\n\n**Leitura cuidadosa:** Poder real, responsabilidade e a lei para os reis. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-11-complemento-3",
+    "title": "O silêncio sobre Bate-Seba e a leitura sem culpabilização",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 11"
+    ],
+    "body": "**Análise:** O texto progride por ações sucessivas de Davi e termina com a avaliação explícita do Senhor. A narrativa desloca o leitor da aparência de normalidade do palácio para a injustiça.\n\n**Leitura cuidadosa:** O silêncio sobre Bate-Seba e a leitura sem culpabilização. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-11-complemento-4",
+    "title": "A crítica ao abuso de poder à luz da liderança de Cristo",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 11"
+    ],
+    "body": "**Análise:** O texto progride por ações sucessivas de Davi e termina com a avaliação explícita do Senhor. A narrativa desloca o leitor da aparência de normalidade do palácio para a injustiça.\n\n**Leitura cuidadosa:** A crítica ao abuso de poder à luz da liderança de Cristo. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
   }
-]
+
 };
