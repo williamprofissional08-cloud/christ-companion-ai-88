@@ -36,9 +36,9 @@ export const deuteronomy15Study: StudyContent = {
     kind: "scripture",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 15:15:1-6"
+      "Deuteronômio 15:1-6"
     ],
-    body: "**Leitura orientada — Deuteronômio 15:15:1-6**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO texto determina remissão no sétimo ano e distingue o tratamento do irmão israelita daquele aplicado a estrangeiros. A promessa de bênção está relacionada à fidelidade de Israel na terra.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A legislação trata de dívidas dentro da sociedade da aliança. Não é um manual direto para sistemas bancários modernos, mas revela preocupação em impedir que a dívida destrua permanentemente a vida dos membros vulneráveis da comunidade.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 15:1-6**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO texto determina remissão no sétimo ano e distingue o tratamento do irmão israelita daquele aplicado a estrangeiros. A promessa de bênção está relacionada à fidelidade de Israel na terra.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A legislação trata de dívidas dentro da sociedade da aliança. Não é um manual direto para sistemas bancários modernos, mas revela preocupação em impedir que a dívida destrua permanentemente a vida dos membros vulneráveis da comunidade.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-2",
@@ -46,9 +46,9 @@ export const deuteronomy15Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 15:15:7-11"
+      "Deuteronômio 15:7-11"
     ],
-    body: "**Leitura orientada — Deuteronômio 15:15:7-11**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés proíbe endurecer o coração ou fechar a mão ao irmão pobre. A ajuda deve ser generosa, mesmo quando o ano da remissão se aproxima.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O texto reconhece que sempre haverá necessitados e, por isso, chama a uma generosidade persistente. Jesus retoma a prioridade do cuidado com os pobres; a aplicação não deve transformar ajuda em instrumento de controle ou humilhação.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 15:7-11**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés proíbe endurecer o coração ou fechar a mão ao irmão pobre. A ajuda deve ser generosa, mesmo quando o ano da remissão se aproxima.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O texto reconhece que sempre haverá necessitados e, por isso, chama a uma generosidade persistente. Jesus retoma a prioridade do cuidado com os pobres; a aplicação não deve transformar ajuda em instrumento de controle ou humilhação.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-3",
@@ -56,9 +56,9 @@ export const deuteronomy15Study: StudyContent = {
     kind: "context",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 15:15:12-18"
+      "Deuteronômio 15:12-18"
     ],
-    body: "**Leitura orientada — Deuteronômio 15:15:12-18**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO servo hebreu deveria ser libertado no sétimo ano e receber provisões para recomeçar. A memória da escravidão no Egito fundamenta o dever de não despedir a pessoa de mãos vazias.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A passagem regula uma forma antiga de servidão por dívida; não equivale à aprovação de toda forma de escravidão. O texto limita a exploração e exige provisão para a liberdade. A dignidade humana e a libertação devem orientar a leitura cristã.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 15:12-18**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO servo hebreu deveria ser libertado no sétimo ano e receber provisões para recomeçar. A memória da escravidão no Egito fundamenta o dever de não despedir a pessoa de mãos vazias.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A passagem regula uma forma antiga de servidão por dívida; não equivale à aprovação de toda forma de escravidão. O texto limita a exploração e exige provisão para a liberdade. A dignidade humana e a libertação devem orientar a leitura cristã.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-4",
@@ -66,9 +66,9 @@ export const deuteronomy15Study: StudyContent = {
     kind: "application",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 15:15:19-23"
+      "Deuteronômio 15:19-23"
     ],
-    body: "**Leitura orientada — Deuteronômio 15:15:19-23**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nOs primogênitos machos do gado são separados ao Senhor e consumidos no lugar escolhido, com regras sobre defeitos e proibição de comer sangue.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A consagração dos primeiros frutos reconhece que a vida e a produção pertencem a Deus. As regras sacrificiais são próprias do culto de Israel; a aplicação cristã destaca gratidão e entrega a Deus.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 15:19-23**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nOs primogênitos machos do gado são separados ao Senhor e consumidos no lugar escolhido, com regras sobre defeitos e proibição de comer sangue.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A consagração dos primeiros frutos reconhece que a vida e a produção pertencem a Deus. As regras sacrificiais são próprias do culto de Israel; a aplicação cristã destaca gratidão e entrega a Deus.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   }
 ]
 };
