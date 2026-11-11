@@ -86,8 +86,10 @@ function Inicio() {
                   <blockquote className="mt-4 font-display text-xl font-semibold leading-snug text-[#142d59] dark:text-white sm:text-2xl">“{d.verse.text}”</blockquote>
                 )}
                 <p className="mt-3 text-sm font-bold text-[#2462b5] dark:text-blue-300">{isSynthesis ? "Leitura bíblica sugerida: " : ""}{d.verse.reference}</p>
-                <div className="mt-4 rounded-xl border border-white/70 bg-white/75 p-4 text-sm leading-relaxed text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200">
-                  <div className="flex items-start gap-3">
+                <div className="relative isolate mt-4 overflow-hidden rounded-xl border border-white/70 bg-white/75 text-sm leading-relaxed text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200">
+                  <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 z-0 h-full w-full object-cover object-right opacity-30 dark:opacity-15" />
+                  <div aria-hidden="true" className="absolute inset-0 z-10 bg-gradient-to-r from-white/95 via-white/85 to-white/65 dark:from-slate-900/90 dark:via-slate-900/80 dark:to-slate-900/55" />
+                  <div className="relative z-20 flex items-start gap-3 p-4">
                     <Sparkles className="mt-0.5 size-5 shrink-0 text-[#2868c5]" aria-hidden />
                     <p>{d.motivational || "Deus ilumina cada passo quando caminhamos com confiança."}</p>
                   </div>
@@ -97,7 +99,11 @@ function Inicio() {
               <>
                 <blockquote className="mt-5 font-display text-[1.45rem] font-semibold leading-snug text-[#142d59] dark:text-white sm:text-2xl">“A tua palavra é lâmpada para os meus pés e luz para o meu caminho.”</blockquote>
                 <p className="mt-3 text-sm font-bold text-[#2462b5] dark:text-blue-300">Salmos 119:105</p>
-                <p className="mt-5 rounded-2xl bg-white/75 p-4 text-sm leading-relaxed text-slate-700 dark:bg-slate-800 dark:text-slate-200">Deus ilumina cada passo quando caminhamos com confiança.</p>
+                <div className="relative isolate mt-5 overflow-hidden rounded-2xl border border-white/70 bg-white/75 text-sm leading-relaxed text-slate-700 dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200">
+                  <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 z-0 h-full w-full object-cover object-right opacity-30 dark:opacity-15" />
+                  <div aria-hidden="true" className="absolute inset-0 z-10 bg-gradient-to-r from-white/95 via-white/85 to-white/65 dark:from-slate-900/90 dark:via-slate-900/80 dark:to-slate-900/55" />
+                  <p className="relative z-20 p-4">Deus ilumina cada passo quando caminhamos com confiança.</p>
+                </div>
               </>
             )}
             <div className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-[1.15fr_0.85fr]">
