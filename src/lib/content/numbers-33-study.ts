@@ -225,6 +225,94 @@ export const Numbers33Study: StudyContent = {
       "scriptureRefs": [],
       "confidence": "high",
       "collapsible": false
+    },
+    {
+      "id": "aprofundamento-1",
+      "title": "19. Leitura detalhada — vv. 1-4: o êxodo como marco",
+      "body": "A lista começa com a saída de Ramessés e recorda que Israel partiu publicamente, enquanto os egípcios sepultavam seus primogênitos. O texto interpreta o êxodo como demonstração do juízo de Deus contra os deuses do Egito. A memória da libertação é o ponto de partida para compreender todo o itinerário.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 33"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-2",
+      "title": "20. Leitura detalhada — vv. 5-15: do Egito ao Sinai",
+      "body": "As primeiras estações registram a saída do Egito, a passagem por Sucote, Etã, Pi-Hairote e o caminho pelo mar, chegando ao deserto e ao Sinai. Compare com Êxodo 12–19. As listas não repetem cada acontecimento narrativo; selecionam lugares para registrar o percurso.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 33"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-3",
+      "title": "21. Leitura detalhada — vv. 16-36: a longa caminhada",
+      "body": "A sequência inclui locais associados ao período do deserto, como Quibrote-Hataavá e Hazerote, e outros cuja localização é incerta. O registro não explica em cada estação o que ocorreu ali. Para compreender episódios específicos, consulte as narrativas correspondentes em Êxodo e Números.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 33"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-4",
+      "title": "22. Leitura detalhada — vv. 37-39: monte Hor e a morte de Arão",
+      "body": "O texto registra a subida ao monte Hor e a morte de Arão no quadragésimo ano, aos 123 anos. A informação reforça a transição de geração e liderança. Números 20:22-29 apresenta a narrativa da morte e a transferência das vestes sacerdotais para Eleazar.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 33"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-5",
+      "title": "23. Leitura detalhada — vv. 40-49: a chegada às campinas de Moabe",
+      "body": "A lista finaliza em locais próximos ao Jordão e a Jericó. O povo está diante da terra, mas a caminhada ainda precisa ser interpretada à luz da aliança. Chegar ao destino geográfico não significa que a fidelidade esteja automaticamente garantida.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 33"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-6",
+      "title": "24. Leitura detalhada — vv. 50-56: instruções para a entrada",
+      "body": "As ordens sobre expulsar habitantes e destruir objetos de culto pertencem ao contexto da conquista da terra por Israel. O texto também alerta sobre as consequências da infidelidade. A aplicação cristã não transforma a igreja em exército territorial; a luta contra a idolatria é espiritual e ética.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 33"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-7",
+      "title": "25. A lista como memória e formação",
+      "body": "A enumeração dos lugares forma a memória coletiva. Uma comunidade que lembra sua história pode reconhecer tanto a provisão quanto os erros. Deuteronômio 8 desenvolve essa ideia ao chamar Israel a não esquecer o cuidado de Deus no deserto.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 33"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-8",
+      "title": "26. Síntese cristocêntrica e aplicação",
+      "body": "A memória do êxodo aponta para a importância bíblica da libertação, mas a igreja lê a missão à luz de Jesus. A comunidade cristã anuncia reconciliação e serve ao próximo; não reivindica a terra de outro povo por meio de violência. A fidelidade atual se demonstra em adoração exclusiva a Deus, justiça e amor.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 33"
+      ],
+      "confidence": "high",
+      "collapsible": false
     }
   ]
 };
