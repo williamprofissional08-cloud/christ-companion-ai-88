@@ -160,6 +160,16 @@ const curatedBatch = [
   { book: "2 Reis", chapter: 23, verseCount: 37, slug: "biblia-2-reis-cap-23", exportName: "secondKings23Study", file: "2-kings-23-study.ts" },
   { book: "2 Reis", chapter: 24, verseCount: 20, slug: "biblia-2-reis-cap-24", exportName: "secondKings24Study", file: "2-kings-24-study.ts" },
   { book: "2 Reis", chapter: 25, verseCount: 30, slug: "biblia-2-reis-cap-25", exportName: "secondKings25Study", file: "2-kings-25-study.ts" },
+  { book: "1 Crônicas", chapter: 1, verseCount: 54, slug: "biblia-1-cronicas-cap-1", exportName: "firstChronicles1Study", file: "1-chronicles-1-study.ts" },
+  { book: "1 Crônicas", chapter: 2, verseCount: 55, slug: "biblia-1-cronicas-cap-2", exportName: "firstChronicles2Study", file: "1-chronicles-2-study.ts" },
+  { book: "1 Crônicas", chapter: 3, verseCount: 24, slug: "biblia-1-cronicas-cap-3", exportName: "firstChronicles3Study", file: "1-chronicles-3-study.ts" },
+  { book: "1 Crônicas", chapter: 4, verseCount: 43, slug: "biblia-1-cronicas-cap-4", exportName: "firstChronicles4Study", file: "1-chronicles-4-study.ts" },
+  { book: "1 Crônicas", chapter: 5, verseCount: 26, slug: "biblia-1-cronicas-cap-5", exportName: "firstChronicles5Study", file: "1-chronicles-5-study.ts" },
+  { book: "1 Crônicas", chapter: 6, verseCount: 81, slug: "biblia-1-cronicas-cap-6", exportName: "firstChronicles6Study", file: "1-chronicles-6-study.ts" },
+  { book: "1 Crônicas", chapter: 7, verseCount: 40, slug: "biblia-1-cronicas-cap-7", exportName: "firstChronicles7Study", file: "1-chronicles-7-study.ts" },
+  { book: "1 Crônicas", chapter: 8, verseCount: 40, slug: "biblia-1-cronicas-cap-8", exportName: "firstChronicles8Study", file: "1-chronicles-8-study.ts" },
+  { book: "1 Crônicas", chapter: 9, verseCount: 34, slug: "biblia-1-cronicas-cap-9", exportName: "firstChronicles9Study", file: "1-chronicles-9-study.ts" },
+  { book: "1 Crônicas", chapter: 10, verseCount: 14, slug: "biblia-1-cronicas-cap-10", exportName: "firstChronicles10Study", file: "1-chronicles-10-study.ts" },
 ];
 
 async function readContent(path) {
