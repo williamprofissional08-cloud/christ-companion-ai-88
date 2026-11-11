@@ -1,0 +1,59 @@
+import type { StudyContent } from "../types";
+
+/** Estudo de 1 Samuel 1; leitura por perícopes, contexto, interpretação e aplicação responsável. */
+export const firstSamuel1Study: StudyContent = {
+ version: 1, depth: "deep",
+ intro: "A oração de Ana e o nascimento de Samuel. A esterilidade de Ana, sua oração em Siló, a incompreensão inicial de Eli, o nascimento de Samuel e seu oferecimento ao serviço do Senhor.",
+ historicalContext: "O capítulo apresenta uma família marcada por sofrimento e rivalidade dentro do contexto do culto em Siló. A narrativa não transforma esterilidade em sinal de culpa nem promete que toda oração receberá a mesma resposta. O foco recai sobre a aflição de Ana, sua confiança e a ação soberana de Deus na história de Israel. A provocação de Penina intensifica a dor de Ana; Elcana demonstra afeto, mas não compreende plenamente sua angústia. Ana derrama sua alma diante do Senhor e faz um voto. Eli interpreta mal sua oração, mas depois a abençoa. O nascimento de Samuel é narrado como resposta recebida, e o cumprimento do voto mostra que Ana não trata a dádiva como posse absoluta. O livro de 1 Samuel descreve a transição do período dos juízes para a monarquia, sem ocultar os conflitos espirituais, familiares e políticos envolvidos.",
+ keyPoints: [
+  {
+    "title": "A aflição de Ana e a tensão familiar",
+    "text": "A provocação de Penina intensifica a dor de Ana; Elcana demonstra afeto, mas não compreende plenamente sua angústia. Ana derrama sua alma diante do Senhor e faz um voto. Eli interpreta mal sua oração, mas depois a abençoa. O nascimento de Samuel é narrado como resposta recebida, e o cumprimento do voto mostra que Ana não trata a dádiva como posse absoluta. Acompanhe a sequência narrativa e observe a relação entre ação humana, palavra divina e consequências."
+  },
+  {
+    "title": "A oração derramada diante do Senhor",
+    "text": "A provocação de Penina intensifica a dor de Ana; Elcana demonstra afeto, mas não compreende plenamente sua angústia. Ana derrama sua alma diante do Senhor e faz um voto. Eli interpreta mal sua oração, mas depois a abençoa. O nascimento de Samuel é narrado como resposta recebida, e o cumprimento do voto mostra que Ana não trata a dádiva como posse absoluta. O desenvolvimento deve ser lido em conexão com a unidade do capítulo e com o argumento do livro."
+  },
+  {
+    "title": "A resposta recebida e o cumprimento do voto",
+    "text": "A provocação de Penina intensifica a dor de Ana; Elcana demonstra afeto, mas não compreende plenamente sua angústia. Ana derrama sua alma diante do Senhor e faz um voto. Eli interpreta mal sua oração, mas depois a abençoa. O nascimento de Samuel é narrado como resposta recebida, e o cumprimento do voto mostra que Ana não trata a dádiva como posse absoluta. O desenvolvimento deve ser lido em conexão com a unidade do capítulo e com o argumento do livro."
+  }
+],
+ application: "A oração não é técnica para controlar Deus. O voto de Ana pertence à narrativa e não deve ser usado para pressionar pessoas vulneráveis. O texto permite reconhecer a dor, a oração sincera, a correção de julgamentos precipitados e a gratidão que se expressa em fidelidade.",
+ crossReferences: ["Lucas 1:5-25","Lucas 1:46-55","Gênesis 21:1-7"],
+ questions: ["O que o texto afirma explicitamente e o que permanece implícito?","Como o contexto histórico, literário e pactual esclarece esta passagem?","Que atitudes são elogiadas, denunciadas ou apenas descritas?","Quais dificuldades interpretativas exigem cautela e quais leituras devem ser rejeitadas?","Como as referências cruzadas ampliam a compreensão sem apagar o contexto original?","Que aplicação é coerente com o texto e com o ensino de Jesus, sem transformar a narrativa em fórmula?"],
+ conclusion: "A esterilidade de Ana, sua oração em Siló, a incompreensão inicial de Eli, o nascimento de Samuel e seu oferecimento ao serviço do Senhor. O capítulo deve ser recebido como parte da história bíblica da aliança, observando tanto a ação de Deus quanto a responsabilidade humana. A oração não é técnica para controlar Deus. O voto de Ana pertence à narrativa e não deve ser usado para pressionar pessoas vulneráveis. O texto permite reconhecer a dor, a oração sincera, a correção de julgamentos precipitados e a gratidão que se expressa em fidelidade.",
+ prayer: "Senhor Deus, dá-me humildade para ouvir tua Palavra, atenção ao contexto e honestidade para não impor ao texto minhas próprias ideias. Corrige em mim o orgulho, a injustiça e a falsa confiança. Ensina-me a responder com fé, obediência e amor, seguindo Jesus Cristo. Amém.",
+ sections: [
+  {
+    "id": "pericope-1-1",
+    "title": "A aflição de Ana e a tensão familiar",
+    "kind": "scripture",
+    "confidence": "high",
+    "scriptureRefs": [
+      "1 Samuel 1:1-8"
+    ],
+    "body": "**Leitura orientada — 1 Samuel 1:1-8.** Leia a passagem integral em sua Bíblia. A síntese abaixo é uma paráfrase explicativa para estudo, não uma tradução bíblica.\\n\\n**Observação do texto:** A esterilidade de Ana, sua oração em Siló, a incompreensão inicial de Eli, o nascimento de Samuel e seu oferecimento ao serviço do Senhor. Observe quem age, quem fala, quais conflitos aparecem, como o narrador organiza os acontecimentos e quais palavras ou ações se repetem. Separe afirmações explícitas do texto de inferências que dependem de interpretação.\\n\\n**Contexto e interpretação:** A provocação de Penina intensifica a dor de Ana; Elcana demonstra afeto, mas não compreende plenamente sua angústia. Ana derrama sua alma diante do Senhor e faz um voto. Eli interpreta mal sua oração, mas depois a abençoa. O nascimento de Samuel é narrado como resposta recebida, e o cumprimento do voto mostra que Ana não trata a dádiva como posse absoluta. Considere a posição desta perícope no capítulo e no desenvolvimento do livro. A narrativa descreve acontecimentos da história de Israel sob a antiga aliança; nem toda ação registrada é aprovada ou prescrita como modelo universal.\\n\\n**Dificuldades e limites:** O capítulo apresenta uma família marcada por sofrimento e rivalidade dentro do contexto do culto em Siló. A narrativa não transforma esterilidade em sinal de culpa nem promete que toda oração receberá a mesma resposta. O foco recai sobre a aflição de Ana, sua confiança e a ação soberana de Deus na história de Israel. Não acrescente detalhes que o texto não informa, não transforme descrição em mandamento e não apresente como consenso aquilo que é debatido entre intérpretes.\\n\\n**Aplicação responsável:** A oração não é técnica para controlar Deus. O voto de Ana pertence à narrativa e não deve ser usado para pressionar pessoas vulneráveis. O texto permite reconhecer a dor, a oração sincera, a correção de julgamentos precipitados e a gratidão que se expressa em fidelidade. Pergunte como a passagem confronta a idolatria, a injustiça, a autossuficiência ou a falta de confiança, sem retirar o episódio de seu contexto. Leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo."
+  },
+  {
+    "id": "pericope-1-2",
+    "title": "A oração derramada diante do Senhor",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "1 Samuel 1:9-18"
+    ],
+    "body": "**Leitura orientada — 1 Samuel 1:9-18.** Leia a passagem integral em sua Bíblia. A síntese abaixo é uma paráfrase explicativa para estudo, não uma tradução bíblica.\\n\\n**Observação do texto:** A esterilidade de Ana, sua oração em Siló, a incompreensão inicial de Eli, o nascimento de Samuel e seu oferecimento ao serviço do Senhor. Observe quem age, quem fala, quais conflitos aparecem, como o narrador organiza os acontecimentos e quais palavras ou ações se repetem. Separe afirmações explícitas do texto de inferências que dependem de interpretação.\\n\\n**Contexto e interpretação:** A provocação de Penina intensifica a dor de Ana; Elcana demonstra afeto, mas não compreende plenamente sua angústia. Ana derrama sua alma diante do Senhor e faz um voto. Eli interpreta mal sua oração, mas depois a abençoa. O nascimento de Samuel é narrado como resposta recebida, e o cumprimento do voto mostra que Ana não trata a dádiva como posse absoluta. Considere a posição desta perícope no capítulo e no desenvolvimento do livro. A narrativa descreve acontecimentos da história de Israel sob a antiga aliança; nem toda ação registrada é aprovada ou prescrita como modelo universal.\\n\\n**Dificuldades e limites:** O capítulo apresenta uma família marcada por sofrimento e rivalidade dentro do contexto do culto em Siló. A narrativa não transforma esterilidade em sinal de culpa nem promete que toda oração receberá a mesma resposta. O foco recai sobre a aflição de Ana, sua confiança e a ação soberana de Deus na história de Israel. Não acrescente detalhes que o texto não informa, não transforme descrição em mandamento e não apresente como consenso aquilo que é debatido entre intérpretes.\\n\\n**Aplicação responsável:** A oração não é técnica para controlar Deus. O voto de Ana pertence à narrativa e não deve ser usado para pressionar pessoas vulneráveis. O texto permite reconhecer a dor, a oração sincera, a correção de julgamentos precipitados e a gratidão que se expressa em fidelidade. Pergunte como a passagem confronta a idolatria, a injustiça, a autossuficiência ou a falta de confiança, sem retirar o episódio de seu contexto. Leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo."
+  },
+  {
+    "id": "pericope-1-3",
+    "title": "A resposta recebida e o cumprimento do voto",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "1 Samuel 1:19-28"
+    ],
+    "body": "**Leitura orientada — 1 Samuel 1:19-28.** Leia a passagem integral em sua Bíblia. A síntese abaixo é uma paráfrase explicativa para estudo, não uma tradução bíblica.\\n\\n**Observação do texto:** A esterilidade de Ana, sua oração em Siló, a incompreensão inicial de Eli, o nascimento de Samuel e seu oferecimento ao serviço do Senhor. Observe quem age, quem fala, quais conflitos aparecem, como o narrador organiza os acontecimentos e quais palavras ou ações se repetem. Separe afirmações explícitas do texto de inferências que dependem de interpretação.\\n\\n**Contexto e interpretação:** A provocação de Penina intensifica a dor de Ana; Elcana demonstra afeto, mas não compreende plenamente sua angústia. Ana derrama sua alma diante do Senhor e faz um voto. Eli interpreta mal sua oração, mas depois a abençoa. O nascimento de Samuel é narrado como resposta recebida, e o cumprimento do voto mostra que Ana não trata a dádiva como posse absoluta. Considere a posição desta perícope no capítulo e no desenvolvimento do livro. A narrativa descreve acontecimentos da história de Israel sob a antiga aliança; nem toda ação registrada é aprovada ou prescrita como modelo universal.\\n\\n**Dificuldades e limites:** O capítulo apresenta uma família marcada por sofrimento e rivalidade dentro do contexto do culto em Siló. A narrativa não transforma esterilidade em sinal de culpa nem promete que toda oração receberá a mesma resposta. O foco recai sobre a aflição de Ana, sua confiança e a ação soberana de Deus na história de Israel. Não acrescente detalhes que o texto não informa, não transforme descrição em mandamento e não apresente como consenso aquilo que é debatido entre intérpretes.\\n\\n**Aplicação responsável:** A oração não é técnica para controlar Deus. O voto de Ana pertence à narrativa e não deve ser usado para pressionar pessoas vulneráveis. O texto permite reconhecer a dor, a oração sincera, a correção de julgamentos precipitados e a gratidão que se expressa em fidelidade. Pergunte como a passagem confronta a idolatria, a injustiça, a autossuficiência ou a falta de confiança, sem retirar o episódio de seu contexto. Leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo."
+  }
+]
+};

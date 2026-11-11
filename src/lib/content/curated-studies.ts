@@ -1,4 +1,15 @@
 import type { StudyContent } from "../types";
+import { firstSamuel1Study } from "./1-samuel-1-study";
+import { firstSamuel2Study } from "./1-samuel-2-study";
+import { firstSamuel3Study } from "./1-samuel-3-study";
+import { firstSamuel4Study } from "./1-samuel-4-study";
+import { firstSamuel5Study } from "./1-samuel-5-study";
+import { firstSamuel6Study } from "./1-samuel-6-study";
+import { firstSamuel7Study } from "./1-samuel-7-study";
+import { firstSamuel8Study } from "./1-samuel-8-study";
+import { firstSamuel9Study } from "./1-samuel-9-study";
+import { firstSamuel10Study } from "./1-samuel-10-study";
+
 import { ruth1Study } from "./ruth-1-study";
 import { ruth2Study } from "./ruth-2-study";
 import { ruth3Study } from "./ruth-3-study";
@@ -247,6 +258,16 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-rute-cap-3": ruth3Study,
   "biblia-rute-cap-4": ruth4Study,
   "genesis-1-criacao": genesis1Study,
+  "biblia-1-samuel-cap-1": firstSamuel1Study,
+  "biblia-1-samuel-cap-2": firstSamuel2Study,
+  "biblia-1-samuel-cap-3": firstSamuel3Study,
+  "biblia-1-samuel-cap-4": firstSamuel4Study,
+  "biblia-1-samuel-cap-5": firstSamuel5Study,
+  "biblia-1-samuel-cap-6": firstSamuel6Study,
+  "biblia-1-samuel-cap-7": firstSamuel7Study,
+  "biblia-1-samuel-cap-8": firstSamuel8Study,
+  "biblia-1-samuel-cap-9": firstSamuel9Study,
+  "biblia-1-samuel-cap-10": firstSamuel10Study,
   "biblia-juizes-cap-1": judges1Study,
   "biblia-juizes-cap-2": judges2Study,
   "biblia-juizes-cap-3": judges3Study,
