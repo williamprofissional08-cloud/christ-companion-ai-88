@@ -9,8 +9,8 @@ import urllib.error
 import urllib.request
 
 ROOT = pathlib.Path(".")
-TOKEN = os.environ.get("GH_TOKEN", "").strip()
-MODEL = os.environ.get("MODEL", "openai/gpt-4.1").strip()
+TOKEN = os.environ.get("GEMINI_API_KEY", "").strip()
+MODEL = os.environ.get("MODEL", "gemini-3.8-flash").strip()
 BOOK_SLUG = os.environ.get("BOOK_SLUG", "numbers").strip().lower()
 START = int(os.environ.get("START_CHAPTER", "21"))
 COUNT = int(os.environ.get("BATCH_SIZE", "7"))
@@ -45,7 +45,7 @@ PREFIX = {
 }
 
 if not TOKEN:
-    raise SystemExit("GH_TOKEN ausente. Verifique permissions: models: read.")
+    raise SystemExit("GEMINI_API_KEY ausente. Cadastre o segredo GEMINI_API_KEY em Settings > Secrets and variables > Actions.")
 if not 1 <= COUNT <= 7:
     raise SystemExit("O lote deve examinar de 1 a 7 capítulos.")
 if not CATALOG_PATH.exists() or not BOOKS_PATH.exists():
@@ -87,34 +87,117 @@ Retorne SOMENTE JSON válido com: version (4), depth ("deep"), intro (mínimo 90
 As seções devem cobrir: introdução e tese; contexto literário/histórico e limites da evidência; gênero; estrutura; exposição por perícope/versículos; termos importantes sem etimologia especulativa; teologia do capítulo; relação com o livro e cânon; debates interpretativos; erros de leitura; aplicações; método de interpretação; glossário; exercícios/avaliação; esboço expositivo; meditação e síntese. Cada body com pelo menos 250 caracteres. Evite repetição artificial.
 Use kinds: exegesis, context, theology, pastoral, application, method, glossary, exercise. confidence: high, probable, debated, uncertain. Identificadores únicos em kebab-case. Referências bíblicas verificáveis. Texto claro e específico ao capítulo.
 """
-    payload = json.dumps({"model": MODEL, "messages": [
-        {"role": "system", "content": "Você é exegeta bíblico, professor e editor teológico. Fidelidade textual, honestidade epistemológica, profundidade e clareza didática são prioritárias. Responda apenas JSON válido."},
-        {"role": "user", "content": prompt}], "temperature": 0.2, "max_tokens": 20000}).encode()
-    request = urllib.request.Request("https://models.github.ai/inference/chat/completions", data=payload,
-        headers={"Content-Type": "application/json", "Accept": "application/json", "Authorization": "Bearer " + TOKEN})
+    payload = json.dumps({
+        "systemInstruction": {"parts": [{"text": "Você é exegeta bíblico, professor e editor teológico. Fidelidade textual, honestidade epistemológica, profundidade e clareza didática são prioritárias. Responda apenas JSON válido."}]},
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 20000, "responseMimeType": "application/json"}
+    }).encode()
+    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
+    request = urllib.request.Request(endpoint, data=payload,
+        headers={"Content-Type": "application/json", "Accept": "application/json", "x-goog-api-key": TOKEN})
     for attempt in range(3):
         try:
             with urllib.request.urlopen(request, timeout=300) as response:
                 body = response.read().decode("utf-8", "replace")
+            if not body.strip():
+                raise ValueError("API Gemini retornou corpo vazio.")
             result = json.loads(body)
-            choices = result.get("choices") or []
-            if not choices:
-                raise ValueError(f"API sem choices: {body[:700]}")
-            message = choices[0].get("message") or {}
-            raw = message.get("content")
-            if isinstance(raw, list):
-                raw = "".join(part.get("text", "") if isinstance(part, dict) else str(part) for part in raw)
-            if not isinstance(raw, str) or not raw.strip():
-                raise ValueError(f"Resposta vazia: {message.get('refusal')}")
-            raw = re.sub(r'^\s*\x60{3}(?:json)?\s*', '', raw.strip())
-            raw = re.sub(r'\s*\x60{3}\s*$', '', raw)
+            candidates = result.get("candidates") or []
+            if not candidates:
+                feedback = result.get("promptFeedback") or {}
+                raise ValueError(f"Gemini sem candidatos: {json.dumps(feedback, ensure_ascii=False)[:700]}")
+            parts = (candidates[0].get("content") or {}).get("parts") or []
+            raw = "".join(part.get("text", "") for part in parts if isinstance(part, dict))
+            if not raw.strip():
+                finish = candidates[0].get("finishReason", "desconhecido")
+                raise ValueError(f"Gemini não retornou texto; finishReason={finish}")
+            raw = re.sub(r'^\s*`{3}(?:json)?\s*', '', raw.strip())
+            raw = re.sub(r'\s*`{3}\s*$', '', raw)
             data = json.loads(raw)
             validate(data)
             return data
         except urllib.error.HTTPError as error:
-            detail = error.read().decode("utf-8", "replace")[:1000]
-            if error.code in (401, 403) or error.code not in (408, 429, 500, 502, 503, 504) or attempt == 2:
-                raise SystemExit(f"GitHub Models HTTP {error.code}: {detail}")
+            detail = error.read().decode("utf-8", "replace")[:1200]
+            if error.code not in (408, 429, 500, 502, 503, 504) or attempt == 2:
+                raise SystemExit(f"Gemini API HTTP {error.code}: {detail}")
+            time.sleep(10 * (attempt + 1))
+        except (ValueError, KeyError, TypeError, json.JSONDecodeError) as error:
+            if attempt == 2:
+                raise SystemExit(f"Resposta inválida para {reference}: {error}")
+            time.sleep(5 * (attempt + 1))
+
+def validate(data):
+    required = ["intro", "historicalContext", "keyPoints", "application", "crossReferences", "questions", "conclusion", "prayer", "sections"]
+    if not isinstance(data, dict) or any(key not in data for key in required):
+        raise ValueError("Campos obrigatórios ausentes.")
+    for key, minimum in {"intro": 900, "historicalContext": 700, "application": 800, "conclusion": 400, "prayer": 80}.items():
+        if not isinstance(data[key], str) or len(data[key]) < minimum:
+            raise ValueError(f"{key} abaixo do mínimo de {minimum} caracteres.")
+    if data.get("depth") != "deep" or len(data["keyPoints"]) < 8 or len(data["crossReferences"]) < 12 or len(data["questions"]) < 15 or len(data["sections"]) < 22:
+        raise ValueError("Profundidade ou quantidade mínima não atingida.")
+    ids = set()
+    for section in data["sections"]:
+        if not isinstance(section, dict) or not all(key in section for key in ("id", "title", "body", "kind", "confidence")):
+            raise ValueError("Seção incompleta.")
+        if len(section["body"]) < 250 or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", section["id"]) or section["id"] in ids:
+            raise ValueError("Seção superficial ou ID inválido/duplicado.")
+        if section["confidence"] not in ("high", "probable", "debated", "uncertain"):
+            raise ValueError("Nível de confiança inválido.")
+        ids.add(section["id"])
+
+def main():
+    global catalog
+    imports = []
+    entries = []
+    generated = 0
+    preserved = []
+    for chapter in range(START, END + 1):
+        slug = slug_for(chapter)
+        symbol = symbol_for(chapter)
+        path = CONTENT_DIR / f"{file_prefix}-{chapter}-study.ts"
+        has_catalog_entry = re.search(r'["\']' + re.escape(slug) + r'["\']\s*:', catalog) is not None
+        has_import = re.search(r'import\s*\{\s*' + re.escape(symbol) + r'\s*\}', catalog) is not None
+        if has_catalog_entry and not path.exists():
+            raise SystemExit(f"Inconsistência: {slug} consta no catálogo, mas arquivo ausente. Interrompido sem sobrescrever.")
+        if path.exists():
+            if not has_catalog_entry:
+                if not has_import:
+                    imports.append(f'import {{ {symbol} }} from "./{file_prefix}-{chapter}-study";')
+                entries.append(f'  "{slug}": {symbol},')
+            preserved.append(chapter)
+            continue
+        study = ask_model(chapter)
+        path.write_text('import type { StudyContent } from "../types";\n\n' + f"export const {symbol}: StudyContent = " + json.dumps(study, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
+        imports.append(f'import {{ {symbol} }} from "./{file_prefix}-{chapter}-study";')
+        entries.append(f'  "{slug}": {symbol},')
+        generated += 1
+        print(f'Gerado {book["name"]} {chapter}: {len(study["sections"])} seções.', flush=True)
+    if not imports and not entries:
+        print(f"Nenhum capítulo novo; capítulos já existentes preservados: {preserved}.")
+        return
+    type_import = 'import type { StudyContent } from "../types";'
+    if imports:
+        catalog = catalog.replace(type_import, type_import + "\n" + "\n".join(imports), 1)
+    marker = "export const CURATED_STUDIES: Record<string, StudyContent> = {"
+    start = catalog.find(marker)
+    close = catalog.find("\n};", start)
+    if start < 0 or close < 0:
+        raise SystemExit("Estrutura do catálogo não reconhecida.")
+    if entries:
+        catalog = catalog[:close] + "\n" + "\n".join(entries) + catalog[close:]
+    CATALOG_PATH.write_text(catalog, encoding="utf-8")
+    print(f"Lote concluído: {generated} novos; {len(preserved)} existentes preservados.", flush=True)
+
+if __name__ == "__main__":
+    main()
+, '', raw)
+            data = json.loads(raw)
+            validate(data)
+            return data
+        except urllib.error.HTTPError as error:
+            detail = error.read().decode("utf-8", "replace")[:1200]
+            if error.code not in (408, 429, 500, 502, 503, 504) or attempt == 2:
+                raise SystemExit(f"Gemini API HTTP {error.code}: {detail}")
             time.sleep(10 * (attempt + 1))
         except (ValueError, KeyError, TypeError, json.JSONDecodeError) as error:
             if attempt == 2:

@@ -19,19 +19,18 @@ on:
         default: "7"
         type: string
       model:
-        description: "GitHub Models model id"
+        description: "Modelo Gemini API"
         required: true
-        default: "openai/gpt-4.1"
+        default: "gemini-3.8-flash"
         type: string
       target_branch:
         description: "Branch de trabalho já criada"
         required: true
-        default: "codex/universal-bible-study-automation"
+        default: "fix/bible-study-generator-gemini-api"
         type: string
 
 permissions:
   contents: write
-  models: read
   pull-requests: write
 
 concurrency:
@@ -54,12 +53,15 @@ jobs:
           python-version: "3.12"
       - name: Gerar somente capítulos ausentes
         env:
-          GH_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           MODEL: ${{ inputs.model }}
           BOOK_SLUG: ${{ inputs.book_slug }}
           START_CHAPTER: ${{ inputs.start_chapter }}
           BATCH_SIZE: ${{ inputs.batch_size }}
-        run: python scripts/generate-bible-study-batch.py
+        run: |
+          set -euo pipefail
+          if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Cadastre GEMINI_API_KEY em Settings > Secrets and variables > Actions."; exit 1; fi
+          python scripts/generate-bible-study-batch.py
       - name: Validar alterações
         run: |
           set -euo pipefail
