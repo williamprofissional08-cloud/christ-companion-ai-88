@@ -146,6 +146,12 @@ import { numbers17Study } from "./numbers-17-study";
 import { numbers18Study } from "./numbers-18-study";
 import { numbers19Study } from "./numbers-19-study";
 import { numbers20Study } from "./numbers-20-study";
+import { Numbers36Study } from "./numbers-36-study";
+import { Numbers35Study } from "./numbers-35-study";
+import { Numbers34Study } from "./numbers-34-study";
+import { Numbers33Study } from "./numbers-33-study";
+import { Numbers32Study } from "./numbers-32-study";
+import { Numbers31Study } from "./numbers-31-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -300,4 +306,10 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-numeros-cap-28": Numbers28Study,
   "biblia-numeros-cap-29": Numbers29Study,
   "biblia-numeros-cap-30": Numbers30Study,
+  "biblia-numeros-cap-36": Numbers36Study,
+  "biblia-numeros-cap-35": Numbers35Study,
+  "biblia-numeros-cap-34": Numbers34Study,
+  "biblia-numeros-cap-33": Numbers33Study,
+  "biblia-numeros-cap-32": Numbers32Study,
+  "biblia-numeros-cap-31": Numbers31Study,
 };
