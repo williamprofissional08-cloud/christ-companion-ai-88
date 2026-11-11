@@ -72,6 +72,8 @@ def slug_for(chapter):
 
 def symbol_for(chapter):
     base = re.sub(r"[^a-zA-Z0-9]", "", file_prefix.title())
+    if base[:1].isdigit():
+        base = "Book" + base
     return f"{base}{chapter}Study"
 
 def ask_model(chapter):
