@@ -109,8 +109,8 @@ function EstudosPage() {
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
             {BIBLE_BOOKS.length} livros · {BIBLE_CHAPTER_TOTAL.toLocaleString("pt-BR")} capítulos.
-            Escolha um livro e abra o capítulo que deseja estudar. Os estudos são preparados
-            individualmente por capítulo; Gênesis 1 mantém o estudo aprofundado revisado como modelo.
+            Escolha um livro e abra o capítulo que deseja estudar. Cada capítulo possui seu próprio
+            estudo bíblico, organizado para apresentar o texto, o contexto, a interpretação e a aplicação.
           </p>
         </div>
 
