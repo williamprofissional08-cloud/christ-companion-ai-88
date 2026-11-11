@@ -1,4 +1,16 @@
 import type { StudyContent } from "../types";
+import { job31Study } from "./job-31-study";
+import { job32Study } from "./job-32-study";
+import { job33Study } from "./job-33-study";
+import { job34Study } from "./job-34-study";
+import { job35Study } from "./job-35-study";
+import { job36Study } from "./job-36-study";
+import { job37Study } from "./job-37-study";
+import { job38Study } from "./job-38-study";
+import { job39Study } from "./job-39-study";
+import { job40Study } from "./job-40-study";
+import { job41Study } from "./job-41-study";
+import { job42Study } from "./job-42-study";
 import { job11Study } from "./job-11-study";
 import { job12Study } from "./job-12-study";
 import { job13Study } from "./job-13-study";
@@ -941,4 +953,16 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-jo-cap-28": job28Study,
   "biblia-jo-cap-29": job29Study,
   "biblia-jo-cap-30": job30Study,
+  "biblia-jo-cap-31": job31Study,
+  "biblia-jo-cap-32": job32Study,
+  "biblia-jo-cap-33": job33Study,
+  "biblia-jo-cap-34": job34Study,
+  "biblia-jo-cap-35": job35Study,
+  "biblia-jo-cap-36": job36Study,
+  "biblia-jo-cap-37": job37Study,
+  "biblia-jo-cap-38": job38Study,
+  "biblia-jo-cap-39": job39Study,
+  "biblia-jo-cap-40": job40Study,
+  "biblia-jo-cap-41": job41Study,
+  "biblia-jo-cap-42": job42Study,
 };
