@@ -152,6 +152,12 @@ import { Numbers34Study } from "./numbers-34-study";
 import { Numbers33Study } from "./numbers-33-study";
 import { Numbers32Study } from "./numbers-32-study";
 import { Numbers31Study } from "./numbers-31-study";
+import { deuteronomy1Study } from "./deuteronomy-1-study";
+import { deuteronomy2Study } from "./deuteronomy-2-study";
+import { deuteronomy3Study } from "./deuteronomy-3-study";
+import { deuteronomy4Study } from "./deuteronomy-4-study";
+import { deuteronomy5Study } from "./deuteronomy-5-study";
+import { deuteronomy6Study } from "./deuteronomy-6-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -312,4 +318,10 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-numeros-cap-33": Numbers33Study,
   "biblia-numeros-cap-32": Numbers32Study,
   "biblia-numeros-cap-31": Numbers31Study,
+  "biblia-deuteronomio-cap-1": deuteronomy1Study,
+  "biblia-deuteronomio-cap-2": deuteronomy2Study,
+  "biblia-deuteronomio-cap-3": deuteronomy3Study,
+  "biblia-deuteronomio-cap-4": deuteronomy4Study,
+  "biblia-deuteronomio-cap-5": deuteronomy5Study,
+  "biblia-deuteronomio-cap-6": deuteronomy6Study,
 };
