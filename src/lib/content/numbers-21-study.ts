@@ -1,378 +1,683 @@
 import type { StudyContent } from "../types";
 
+/**
+ * Estudo aprofundado de Números 21, organizado segundo o padrão didático de Gênesis 1.
+ * Distingue observação do texto, contexto, interpretação e aplicação.
+ * A tradução de estudo é livre e não substitui uma edição bíblica publicada.
+ */
 export const Numbers21Study: StudyContent = {
-  "version": 4,
-  "depth": "deep",
-  "intro": "Números 21 constitui uma das viradas mais decisivas de todo o Pentateuco. Após quatro décadas de peregrinação estéril pelo deserto, caracterizadas pela rebeldia crônica da primeira geração saída do Egito e sentenciada a perecer antes de alcançar o repouso da promessa (conforme Números 14), este capítulo inaugura a transição viva para a segunda geração. Geograficamente, o povo deixa a península do Sinai e as imediações de Cades-Barneia e empreende uma marcha estratégica ao redor de Edom e Moabe, rumo às estepes do Jordão e à Transjordânia. Literariamente, a narrativa combina relatos de combate militar, episódios dolorosos de murmuração disciplinada e curada, e antigos fragmentos poéticos preservados em fontes externas, como o 'Livro das Guerras do SENHOR'. Teologicamente, o capítulo apresenta uma tensão soberba entre o julgamento de Deus sobre a impaciência humana e a graça salvífica manifesta na serpente de bronze, culminando na vitória decisiva sobre monarcas formidáveis da Transjordânia — Seom e Ogue —, cujos territórios antecipam fisicamente a herança prometida aos patriarcas. Longe de ser um mero itinerário militar, Números 21 educa a comunidade da aliança a confiar na providência bélica e graciosa de Javé, demonstrando que a posse da terra prometida não é fruto de autoafirmação bélica, mas da entrega fiel às instruções do Deus que fere para curar e que desarma as potências idolátricas.",
-  "historicalContext": "O cenário histórico e geográfico de Números 21 situa-se na Idade do Bronze Recente ou início da Idade do Ferro I (conforme os debates cronológicos bíblicos tradicionais e arqueológicos), nas bordas meridionais e orientais da Transjordânia e do Negueve. O texto menciona entidades políticas consolidadas e territórios fortificados, como o reino cananeu de Arade ao sul, os domínios moabitas divididos pelo rio Arnom, e os reinos amorreus estabelecidos de Seom (centrado em Hesbom) e Ogue (em Basã). A rota percorrida contorna as terras de Edom e Moabe após recusas de trânsito pacífico pelo Caminho Real, forçando Israel a transitar por gargantas áridas e inóspitas, ambiente propício à crise psicológica e hídrica da comunidade. A arqueologia no planalto jordaniano e no Negueve (como em Tel Arad) demonstra ocupações estratificadas e debates intensos sobre a identificação exata dos sítios cananeus da Idade do Bronze em relação aos povoados da Idade do Ferro. Historicamente, a Transjordânia era uma encruzilhada de rotas comerciais vitais e conflitos territoriais entre amorreus, moabitas e amonitas; os poemas arcaicos inseridos no capítulo refletem memórias orais ou arquivísticas prévias à redação final do Pentateuco, preservando a memória de que Javé outorgou a Israel vitórias em territórios que anteriormente haviam sido arrancados de Moabe por Seom.",
-  "keyPoints": [
-    {
-      "title": "A transição geracional e militar em Hormá",
-      "text": "A vitória sobre o rei de Arade em Hormá (vv. 1-3) marca uma antítese deliberada ao fracasso trágico da geração anterior em Números 14:45. Aqui, Israel busca o SENHOR em voto solene de consagração e obtém triunfo inequívoco."
-    },
-    {
-      "title": "A crise da rota de Edom e a murmuração fatal",
-      "text": "O desvio árduo em torno de Edom expõe a fragilidade psicológica da comunidade, que volta a desdenhar o maná divino como 'pão vil' e desafia a liderança de Moisés e a integridade de Deus (vv. 4-5)."
-    },
-    {
-      "title": "A disciplina pedagógica das serpentes abrasadoras",
-      "text": "O envio das serpentes venenosas (vv. 6-7) não opera como vingança arbitrária, mas como juízo disciplinar que desmascara a rebeldia e conduz a comunidade ao arrependimento explícito e ao pedido de mediação."
-    },
-    {
-      "title": "A serpente de bronze: cura mediante a fé na palavra",
-      "text": "A ereção da serpente de bronze sobre a haste (vv. 8-9) estabelece que a libertação vem da obediência visual à prescrição divina, transformando o símbolo da morte no meio instrumental da preservação da vida."
-    },
-    {
-      "title": "Fontes poéticas e o Livro das Guerras do SENHOR",
-      "text": "A citação expressa do 'Livro das Guerras do SENHOR' (vv. 14-15) reflete o uso pedagógico de arquivos literários arcaicos para registrar a soberania de Deus sobre a topografia do Arnom e a providência hídrica."
-    },
-    {
-      "title": "O Cântico do Poço e a cooperação da liderança",
-      "text": "Em Beer (vv. 16-18), a provisão miraculosa de água é celebrada com júbilo cooperativo, onde príncipes e povo trabalham com seus bordões sob a promessa divina, em contraste com a amargura de Meribá."
-    },
-    {
-      "title": "A recusa de Seom e o confronto inevitável",
-      "text": "A diplomacia de paz proposta a Seom é rejeitada belicosamente; a subsequente vitória israelita desapossa os amorreus de Hesbom e cumpre os desígnios territoriais do concerto (vv. 21-25)."
-    },
-    {
-      "title": "A queda de Ogue em Basã e a antecipação de Canaã",
-      "text": "A derrota de Ogue em Edrei (vv. 33-35) elimina o último bastião de resistência na Transjordânia setentrional, conferindo à nova geração a garantia tangível de que a terra prometida a oeste do Jordão também será entregue."
-    }
+  version: 5,
+  depth: "deep",
+  intro: "Números 21 acompanha Israel em uma etapa decisiva da caminhada rumo à terra prometida. O capítulo reúne quatro movimentos: a vitória sobre o rei de Arade (vv. 1-3); a murmuração durante o contorno de Edom e a provisão da serpente de bronze (vv. 4-9); os deslocamentos, o poço e os cânticos preservados na memória de Israel (vv. 10-20); e as vitórias sobre Seom e Ogue, reis amorreus da Transjordânia (vv. 21-35). A mensagem central não é que Israel conquista por sua própria força, mas que Deus permanece soberano: disciplina a rebelião, oferece o meio de preservação que ele mesmo determina e conduz o povo em direção à promessa. O capítulo também prepara uma conexão explícita com Cristo, pois Jesus compara sua elevação à serpente erguida por Moisés (João 3:14-15).",
+  historicalContext: "O relato se passa no percurso de Israel pelo deserto, depois dos acontecimentos de Números 20. Edom não permitiu que Israel atravessasse seu território pela rota solicitada (Números 20:14-21), e o povo precisou contornar a região. O capítulo menciona lugares e fronteiras da região do Neguebe e da Transjordânia: Arade e Hormá, Obote, Ijé-Abarim, o vale do Zerede, o ribeiro Arnom, Beer, Pisga, Hesbom e Basã. A localização exata de alguns acampamentos antigos permanece discutida. O texto identifica Seom como rei amorreu, cuja capital era Hesbom, e Ogue como rei de Basã. A cronologia exata do êxodo e a identificação arqueológica de vários sítios são debatidas; por isso, não devemos apresentar uma data ou identificação como se o próprio capítulo a informasse. O cenário ajuda a compreender a dificuldade da jornada, as disputas territoriais e a importância das rotas e fontes de água.",
+  keyPoints: [
+    { title: "Deus concede a vitória sobre Arade", text: "Israel faz um voto e reconhece que a vitória depende da resposta do Senhor, não de uma capacidade militar independente." },
+    { title: "A murmuração revela o coração do povo", text: "O cansaço da caminhada se transforma em acusação contra Deus e desprezo pelo alimento que ele havia providenciado." },
+    { title: "A serpente de bronze é um sinal de provisão divina", text: "A cura não está em poder mágico do objeto, mas na promessa de Deus e na resposta obediente de quem olha." },
+    { title: "Deus sustenta o povo no caminho", text: "Os itinerários, o poço de Beer e os cânticos mostram a continuidade da provisão durante a marcha." },
+    { title: "As vitórias na Transjordânia dependem do Senhor", text: "Israel vence Seom e Ogue porque Deus entrega seus territórios, segundo a narrativa." }
   ],
-  "application": "O estudo de Números 21 interpela a igreja contemporânea e a liderança cristã em dimensões existenciais e pastorais profundas. Primeiramente, o texto confronta a tendência humana de desvalorizar a provisão graciosa e ordinária de Deus. O desprezo do povo pelo maná ('nossa alma tem fastio deste pão vil') retrata a ingratidão de corações que se entediam com a fidelidade diária do Senhor e anseiam pelos confortos idolátricos do cativeiro anterior. Pastores e pregadores devem alertar contra o perigo da murmuração, que corrói a comunhão e convoca a disciplina divina. Em segundo lugar, a serpente de bronze ensina a natureza da justificação e da fé bíblica: os israelitas mordidos não foram instruídos a contemplar suas próprias feridas, nem a formular antídotos humanos, mas a olhar para fora de si mesmos, fixando os olhos na provisão ordenada por Deus. Conforme Jesus declara em João 3:14-15, este olhar antecipa o ato de crer no Filho do Homem levantado na cruz para conceder vida eterna. Em terceiro lugar, o cântico festivo em Beer e as vitórias contra Seom e Ogue lembram os crentes de que as batalhas espirituais e os cansaços da peregrinação terrena devem ser enfrentados em cooperação mútua, louvor genuíno e firme confiança nas promessas do Todo-Poderoso, sabendo que as fortalezas deste mundo não prevalecerão contra o plano redentor de Deus.",
-  "crossReferences": [
-    "Números 14:45 — O primeiro confronto em Hormá resultou em derrota humilhante devido à presunção da primeira geração rebelde.",
-    "Deuteronômio 2:24-37 — Exposição teológica retrospectiva de Moisés detalhando a recusa de Seom e a soberania divina na entrega de Hesbom.",
-    "Deuteronômio 3:1-11 — Relato paralelo da vitória sobre Ogue, rei de Basã, ressaltando sua estatura imponente e a possessão de sua terra.",
-    "Juízes 11:18-22 — Jefté emprega a narrativa de Números 21 como precedente jurídico e histórico em sua defesa diplomática contra os amonitas.",
-    "2 Reis 18:4 — Ezequias destrói a serpente de bronze (Neustã) porque o povo a havia corrompido, transformando-a em objeto de culto idolátrico.",
-    "Salmo 78:34-38 — O salmista reflete sobre o ciclo de disciplina no deserto, onde o povo buscava a Deus quando Ele os feria com castigos severos.",
-    "Salmo 135:10-12 — Celebração litúrgica que exalta a derrubada de Seom e Ogue como manifestação eterna da misericórdia e poder de Javé.",
-    "Salmo 136:17-22 — Hino de louvor pactual que relembra as vitórias sobre reis poderosos na Transjordânia como prova do amor leal (hesed) divino.",
-    "Isaías 15:1-9 — Oráculo profético contra Moabe que menciona locais geográficos presentes no itinerário de Números 21, como Ar e o Arnom.",
-    "João 3:14-15 — Cristo apropria-se tipologicamente do levantamento da serpente no deserto como prefiguração de sua crucificação e meio de vida eterna.",
-    "1 Coríntios 10:9-10 — Paulo adverte a igreja em Corinto a não tentar o Senhor nem murmurar, lembrando que muitos pereceram mordidos por serpentes.",
-    "Hebreus 12:2 — Exortação a correr a carreira cristã olhando firmemente para Jesus, ecoando o olhar salvífico exigido aos feridos no deserto."
+  application: "Números 21 nos chama a examinar como reagimos ao cansaço e à frustração. Podemos reconhecer dificuldades reais sem transformar o sofrimento em acusação contra Deus ou desprezo por sua provisão. O capítulo também ensina que a resposta à culpa não é buscar soluções supersticiosas, mas voltar-se para o meio que Deus oferece. Em Cristo, a conexão anunciada por João 3:14-15 nos chama a confiar no Filho levantado. Por fim, as vitórias de Israel não autorizam violência religiosa nem promessas de sucesso automático aos cristãos: pertencem a um momento específico da história da aliança e devem ser lidas em seu contexto.",
+  crossReferences: ["Números 20:14-21", "Êxodo 16:1-15", "Deuteronômio 2:1-9, 24-37", "Deuteronômio 8:2-5, 15-16", "Salmos 78:17-22", "Salmos 105:39-43", "2 Reis 18:4", "João 3:14-17", "1 Coríntios 10:9-11", "Hebreus 3:7-19"],
+  questions: [
+    "O que Israel fez quando o rei de Arade atacou, e a quem atribuiu a vitória?",
+    "Por que o povo voltou a murmurar durante o contorno de Edom?",
+    "Quais foram as duas acusações feitas contra Deus e Moisés em Números 21:5?",
+    "O que o texto afirma sobre a finalidade da serpente de bronze?",
+    "Por que não devemos atribuir poder mágico ao objeto de bronze?",
+    "Como João 3:14-15 interpreta a serpente levantada por Moisés?",
+    "O que o cântico do poço ensina sobre a provisão de Deus e a participação da comunidade?",
+    "Qual foi o pedido diplomático de Israel a Seom e como ele respondeu?",
+    "O que Números 21 ensina sobre a dependência de Deus sem transformar as guerras antigas em modelo para hoje?"
   ],
-  "questions": [
-    "Qual é o contraste teológico e comportamental primordial entre a batalha de Hormá em Números 21 e o episódio anterior em Números 14:45?",
-    "Por que o desânimo do povo 'por causa do caminho' (v. 4) degenerou rapidamente em ataque direto contra Deus e Moisés?",
-    "Qual é a relação literária e simbólica entre a serpente ardente que infligia a morte e a serpente de bronze que comunicava a cura?",
-    "De que maneira o episódio da serpente de bronze desmonta a tentação de se alcançar a justificação por mérito ou esforço humano?",
-    "Como a arqueologia e a crítica histórica avaliam a citação do 'Livro das Guerras do SENHOR' em Números 21:14-15?",
-    "Qual o significado teológico e eclesial do cântico do poço em Beer (vv. 16-18) no contexto das carências hídricas do deserto?",
-    "Por que Israel propôs formalmente passagem pacífica a Seom, sabendo de antemão que a terra de Canaã havia sido prometida aos patriarcas?",
-    "Como a posse das cidades de Seom resolve a questão geopolítica da legitimidade da presença israelita ao norte do Arnom perante Moabe?",
-    "Qual foi o propósito pedagógico e psicológico da palavra divina a Moisés sobre Ogue: 'Não o temas' (v. 34)?",
-    "Em que sentido as vitórias na Transjordânia serviram como 'primícias' territoriais para a fé da segunda geração?",
-    "Como Jesus ressignifica Números 21:8-9 em João 3:14-15 sem recorrer a alegorismos arbitrários ou descontextualizados?",
-    "Por que o rei Ezequias julgou necessário destruir a serpente de bronze séculos mais tarde, conforme registrado em 2 Reis 18:4?",
-    "Quais são os perigos pastorais de ler as ordens de guerra e aniquilação contra Seom e Ogue fora do horizonte do juízo divino veterotestamentário?",
-    "Como Números 21 equilibra a responsabilidade humana de cavar poços e lutar batalhas com a concessão soberana do socorro divino?",
-    "De que forma a peregrinação tortuosa ao redor de Edom ilustra a paciência formativa de Deus em contraposição ao imediatismo humano?"
-  ],
-  "conclusion": "Números 21 encerra a prolongada fase de declínio e frustração do deserto, inaugurando a era triunfante da posse pactual. O capítulo revela a majestosa pedagogia divina: Deus corrige severamente o orgulho ingrato de seus filhos por meio de serpentes disciplinares, mas simultaneamente ergue o meio gracioso de redenção para todo aquele que crer e olhar. Ao conceder vitórias expressivas sobre os temíveis impérios de Seom e Ogue, o Senhor consolida o ânimo de uma nova geração, demonstrando que nenhuma soberania humana pode frustrar as promessas juradas a Abraão. Para o crente e pregador de hoje, o capítulo ecoa como uma vigorosa convocação à perseverança paciente, ao desprezo da murmuração e à fixação inabalável dos olhos em Cristo crucificado, o verdadeiro e definitivo Libertador.",
-  "prayer": "Ó Deus gracioso, livra-nos da ingratidão e da murmuração; faz-nos olhar com fé salvífica para Teu Filho levantado na cruz e concede-nos coragem para marchar firmes rumo ao Teu Reino eterno. Amém.",
-  "sections": [
+  conclusion: "Números 21 apresenta um povo frágil, capaz de confiar e também de murmurar, mas acompanhado pelo Deus que disciplina, preserva e conduz. A serpente de bronze mostra que a vida veio por uma provisão determinada pelo Senhor, e João 3 revela que Jesus usa esse episódio para explicar sua própria elevação e a vida recebida pela fé. Os cânticos e as vitórias na Transjordânia recordam que Deus sustentou Israel no caminho. A leitura responsável mantém cada episódio em seu contexto e reconhece que a fidelidade de Deus, e não a autossuficiência humana, está no centro do capítulo.",
+  prayer: "Senhor Deus, ajuda-me a reconhecer tua provisão mesmo quando a caminhada se torna difícil. Perdoa minhas murmurações e ensina-me a responder com confiança, humildade e obediência. Obrigado porque tua Palavra aponta para Jesus Cristo, levantado para que todo aquele que nele crê tenha vida. Dá-me discernimento para compreender as Escrituras com fidelidade e aplicar seus ensinamentos com amor. Amém.",
+  sections: [
     {
-      "id": "intro-tese",
-      "title": "Introdução Literária e Tese Central",
-      "body": "Números 21 assinala o divisor de águas na narrativa da caminhada no deserto. A tese central do capítulo é que a posse da terra prometida depende não do poder autônomo de Israel, mas da submissão reverente à disciplina, à palavra e à graça soberana de Javé. O capítulo articula três movimentos cruciais: a vitória obtida mediante voto humilde contra o cananeu de Arade (vv. 1-3); o colapso moral pelo desânimo da jornada, superado pela provisão graciosa da serpente de bronze (vv. 4-9); e o avanço triunfante através de Moabe e da Transjordânia com a conquista dos reinos amorreus de Seom e Ogue (vv. 10-35). Ao longo dessas perícopes, o autor bíblico demonstra didaticamente que a mesma comunidade propensa à morte por sua murmuração é capacitada a herdar a promessa quando acolhe a mediação divina.",
-      "kind": "theology",
-      "scriptureRefs": [
-        "Nm 21:1-3",
-        "Nm 21:4-9",
-        "Nm 21:21-35"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "leitura-biblica-completa",
+      title: "Leitura bíblica — Números 21:1-35, versículo por versículo",
+      kind: "scripture",
+      confidence: "high",
+      scriptureRefs: ["Números 21:1-35"],
+      body: `**Texto de estudo em tradução livre para linguagem atual, elaborado para acompanhar o sentido do capítulo.** Não é uma edição oficial de Almeida nem substitui a leitura na tradução bíblica utilizada pelo aluno. Compare sempre com sua Bíblia.
+
+**1** O rei cananeu de Arade, que vivia no Neguebe, soube que Israel vinha pelo caminho de Atarim e atacou o povo, levando alguns prisioneiros.
+
+**2** Israel fez um voto ao SENHOR: Se entregares este povo em nossas mãos, destruiremos completamente suas cidades, conforme o compromisso assumido.
+
+**3** O SENHOR ouviu a voz de Israel e entregou os cananeus. Israel os derrotou e destruiu suas cidades; por isso, aquele lugar recebeu o nome de Hormá.
+
+**4** Depois partiram do monte Hor pelo caminho do mar Vermelho, contornando a terra de Edom. No caminho, o povo perdeu a paciência.
+
+**5** O povo falou contra Deus e contra Moisés: Por que vocês nos tiraram do Egito para morrermos neste deserto? Não há pão nem água, e estamos cansados deste alimento tão limitado.
+
+**6** Então o SENHOR enviou entre o povo serpentes venenosas, e muitas pessoas foram mordidas e morreram.
+
+**7** O povo foi a Moisés e confessou: Pecamos, pois falamos contra o SENHOR e contra você. Ore ao SENHOR para que afaste de nós as serpentes. Moisés orou pelo povo.
+
+**8** O SENHOR disse a Moisés: Faça uma serpente e coloque-a sobre uma haste. Quem tiver sido mordido e olhar para ela permanecerá vivo.
+
+**9** Moisés fez uma serpente de bronze e a colocou sobre uma haste. Quando alguém era mordido e olhava para a serpente de bronze, permanecia vivo.
+
+**10** Os israelitas partiram e acamparam em Obote.
+
+**11** Depois partiram de Obote e acamparam em Ijé-Abarim, no deserto que fica diante de Moabe, a leste.
+
+**12** Dali partiram e acamparam no vale do Zerede.
+
+**13** Partiram novamente e acamparam do outro lado do Arnom, no deserto que se estende desde a fronteira dos amorreus. O Arnom era a fronteira entre Moabe e os amorreus.
+
+**14** Por isso se menciona no Livro das Guerras do SENHOR: Vaebe em Sufá, os vales do Arnom,
+
+**15** e as encostas dos vales que se estendem até Ar e chegam à fronteira de Moabe.
+
+**16** Dali foram para Beer, o poço a respeito do qual o SENHOR disse a Moisés: Reúna o povo, e eu lhe darei água.
+
+**17** Então Israel cantou este cântico: Brota, ó poço! Cantem a seu respeito!
+
+**18** Poço cavado por líderes, aberto pelos nobres do povo com seus bastões de comando. Do deserto foram para Matana,
+
+**19** de Matana para Naaliel, de Naaliel para Bamote,
+
+**20** e de Bamote para o vale que fica na região de Moabe, junto ao alto de Pisga, de onde se avista o deserto.
+
+**21** Israel enviou mensageiros a Seom, rei dos amorreus, dizendo:
+
+**22** Deixe-nos atravessar sua terra. Não entraremos em campos nem vinhas, nem beberemos água de poços. Seguiremos pela estrada real até atravessarmos seu território.
+
+**23** Seom não permitiu que Israel atravessasse sua terra. Reuniu seu exército e saiu contra Israel no deserto. Chegou a Jaza e lutou contra Israel.
+
+**24** Israel o derrotou à espada e tomou sua terra desde o Arnom até o Jaboque, até a região dos amonitas, cuja fronteira era fortificada.
+
+**25** Israel tomou todas aquelas cidades e passou a habitar nas cidades dos amorreus, especialmente em Hesbom e nos povoados ao redor.
+
+**26** Hesbom era a cidade de Seom, rei dos amorreus, que havia guerreado contra o antigo rei de Moabe e tomado dele toda a terra até o Arnom.
+
+**27** Por isso os poetas dizem: Venham a Hesbom; que seja reconstruída e fortificada a cidade de Seom!
+
+**28** Pois saiu fogo de Hesbom, chama da cidade de Seom; consumiu Ar de Moabe e os senhores dos lugares altos do Arnom.
+
+**29** Ai de você, Moabe! Está perdido, povo de Quemós! Seus filhos foram levados ao cativeiro, e suas filhas, à servidão, por Seom, rei dos amorreus.
+
+**30** Mas nós os derrotamos; Hesbom foi destruída até Dibom. Devastamos até Nofá e até Medeba.
+
+**31** Assim Israel passou a habitar na terra dos amorreus.
+
+**32** Moisés enviou pessoas para explorar Jazer. Israel tomou seus povoados e expulsou os amorreus que ali viviam.
+
+**33** Depois mudaram de direção e subiram pelo caminho de Basã. Ogue, rei de Basã, saiu com todo o seu povo para enfrentá-los em Edrei.
+
+**34** O SENHOR disse a Moisés: Não tenha medo dele, pois eu o entreguei em suas mãos, junto com todo o seu povo e sua terra. Faça com ele o que fez com Seom, rei dos amorreus, que vivia em Hesbom.
+
+**35** Israel derrotou Ogue, seus filhos e todo o seu povo, sem deixar sobreviventes, e tomou posse de sua terra.
+
+**Orientação:** os versículos 14-15 e 27-30 contêm poesia antiga e expressões difíceis. Algumas traduções apresentam diferenças nesses trechos. A versão acima comunica o sentido geral sem pretender resolver todas as questões textuais. Leia o capítulo em sua Bíblia e observe as notas de tradução, se houver.`
     },
     {
-      "id": "contexto-historico-geografico",
-      "title": "Contexto Histórico, Geográfico e Arqueológico",
-      "body": "A geografia de Números 21 transcorre do Negueve meridional (região de Arade e Hormá) para as cercanias do golfo de Ácaba ('caminho do mar Vermelho'), subindo a leste pelas bordas de Edom e Moabe até as gargantas do rio Arnom e as planícies férteis da Transjordânia (Hesbom e Basã). A topografia impôs privações severas de água e alimentos nutritivos, gerando cansaço fisiológico extremo. No âmbito arqueológico, as pesquisas em Tel Arad e na região de Hesbom (Tell Hesban) suscitaram ricos debates: as evidências de ocupação urbana fortificada do Bronze Recente nessas áreas são escassas, levando estudiosos a debaterem se os assentamentos bíblicos se localizavam em sítios vizinhos ainda não identificados ou se representavam fortalezas menores de caráter seminômade da Idade do Ferro inicial.",
-      "kind": "context",
-      "scriptureRefs": [
-        "Nm 21:1",
-        "Nm 21:4",
-        "Nm 21:13-14",
-        "Dt 2:24"
-      ],
-      "confidence": "probable",
-      "collapsible": false
+      id: "introducao",
+      title: "1. Introdução — Uma etapa decisiva no caminho da promessa",
+      kind: "introduction",
+      confidence: "high",
+      scriptureRefs: ["Números 20:14-21", "Números 21:1-35"],
+      body: `Números 21 não é apenas uma sequência de batalhas. O capítulo mostra Israel avançando em meio a dificuldades, enfrentando as consequências de sua própria rebeldia e experimentando a provisão de Deus.
+
+**O que aconteceu antes?** Em Números 20, Edom recusou a passagem de Israel por seu território. O povo precisou mudar a rota. Também ocorreu a morte de Arão no monte Hor. Esses acontecimentos ajudam a entender o cenário de Números 21.
+
+**O que vamos estudar?**
+- A vitória sobre o rei de Arade.
+- A murmuração durante a caminhada e o episódio das serpentes.
+- A serpente de bronze e sua relação com João 3.
+- Os itinerários, o poço de Beer e os cânticos.
+- Os confrontos com Seom e Ogue.
+
+**Ideia principal:** Deus disciplina a rebelião, provê o meio de preservação e conduz seu povo; a confiança deve estar nele, não na força humana.
+
+**Como estudar:** leia cada passagem na sua Bíblia antes de avançar. Nas explicações, distinguiremos o que o texto afirma, o que é interpretação e o que pode ser aplicado à vida atual.`
     },
     {
-      "id": "genero-e-estrutura",
-      "title": "Gênero Literário e Macroestrutura do Capítulo",
-      "body": "O capítulo combina narrativa histórica em prosa com arcaicas inserções poéticas e listas de itinerário (itinerários de marcha). Sua macroestrutura organiza-se de modo quiasmático e progressivo: (A) Vitória militar sobre o rei de Arade após consagração (vv. 1-3); (B) Crise de fé, praga e restauração graciosa pela serpente de bronze (vv. 4-9); (C) Itinerário com cantos poéticos de celebração e fontes literárias (vv. 10-20); (B') Confronto militar e diplomático com Seom rei dos amorreus (vv. 21-32); (A') Confronto e aniquilação do império de Ogue rei de Basã (vv. 33-35). Essa arquitetura literária contrapõe a fraqueza interna gerada pela rebelião à força triunfante outorgada por Deus contra as nações hostis.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 21:1-35"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "contexto-historico",
+      title: "2. Contexto histórico e geográfico — Onde Israel estava?",
+      kind: "context",
+      confidence: "probable",
+      scriptureRefs: ["Números 20:14-21", "Números 21:1-20", "Deuteronômio 2:1-13"],
+      body: `**O cenário da caminhada**
+
+O capítulo começa com uma referência a Arade, no Neguebe, e depois acompanha Israel em deslocamentos ao redor de Edom e Moabe. A rota passa por regiões áridas e chega à Transjordânia, a leste do rio Jordão.
+
+**Lugares mencionados**
+- **Arade e Hormá:** associados ao primeiro conflito do capítulo. A identificação exata dos locais e a relação entre os nomes antigos e os sítios arqueológicos atuais são discutidas.
+- **Obote e Ijé-Abarim:** acampamentos na rota a leste de Moabe.
+- **Zerede e Arnom:** vales e cursos d'água que funcionavam como referências geográficas e fronteiras.
+- **Beer:** nome relacionado a poço; o texto associa o local à provisão de água.
+- **Hesbom:** cidade ligada ao reino de Seom.
+- **Basã e Edrei:** região e cidade associadas ao domínio de Ogue.
+
+**Por que a geografia importa?**
+
+A rota ajuda a compreender o desgaste da viagem, a necessidade de água e as tensões políticas entre os povos da região. O pedido de passagem a Seom também mostra que Israel procurou atravessar uma estrada sem danificar plantações nem utilizar os poços dos habitantes.
+
+**O que sabemos e o que permanece debatido**
+O texto bíblico fornece nomes, deslocamentos e relações políticas. A identificação moderna de alguns acampamentos não é segura, e a arqueologia não permite afirmar que cada lugar mencionado já foi localizado de modo definitivo. A datação do êxodo e a cronologia dos assentamentos da região também são debatidas.
+
+**Para guardar:** o contexto geográfico esclarece as dificuldades da narrativa, mas não devemos preencher lacunas com certezas que o texto e as evidências não oferecem.`
     },
     {
-      "id": "pericope-arade-horma",
-      "title": "Exposição de Números 21:1-3 — A Reversão em Hormá",
-      "body": "A narrativa inicia-se com o ataque do cananeu, rei de Arade, que habitava no Negueve e fez alguns prisioneiros hebreus. Diferentemente da primeira geração em Números 14:40-45, que invadira o monte presumidamente sem a presença de Moisés e da arca, a nova geração reage apelando formalmente a Javé em voto solene de 'herem' (consagração ou anátema total). O texto registra explicitamente: 'O SENHOR ouviu a voz de Israel e lhe entregou os cananeus' (v. 3). O sítio foi denominado 'Hormá' (lugar do anátema). Esta vitória inicial estabelece o tom da nova geração: o sucesso militar é diretamente proporcional à total dependência pactual e consagração ao Todo-Poderoso, expurgando pretensões de autopreservação carnal.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 21:1-3",
-        "Nm 14:45",
-        "Js 12:14"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "como-ler",
+      title: "3. Como o capítulo está organizado?",
+      kind: "context",
+      confidence: "high",
+      scriptureRefs: ["Números 21:1-35"],
+      body: `O capítulo pode ser acompanhado em cinco partes:
+
+1. **A vitória sobre Arade (vv. 1-3):** Israel enfrenta um ataque e faz um voto ao SENHOR.
+2. **A murmuração e a serpente de bronze (vv. 4-9):** a impaciência se transforma em pecado; depois da confissão, Deus determina um meio de preservação.
+3. **A rota e o poço de Beer (vv. 10-20):** o texto registra acampamentos, água e cânticos.
+4. **A derrota de Seom (vv. 21-32):** o pedido de passagem é recusado, e ocorre o confronto.
+5. **A derrota de Ogue (vv. 33-35):** Israel enfrenta outro rei amorreu e toma seu território.
+
+**Observe a progressão:** o capítulo alterna fragilidade humana e ação divina. Israel murmura e precisa de misericórdia; depois enfrenta obstáculos políticos e militares, mas o narrador atribui a vitória ao Senhor.
+
+Essa divisão é uma ferramenta de leitura. Não significa que o texto tenha sido escrito originalmente com títulos ou numeração de tópicos como os nossos.`
     },
     {
-      "id": "pericope-caminho-murmuracao",
-      "title": "Exposição de Números 21:4-5 — O Cansaço e o Desprezo pelo Maná",
-      "body": "Após contornar Edom pelo árduo caminho do mar Vermelho, 'a alma do povo impacientou-se por causa do caminho' (v. 4). A fadiga física converteu-se rapidamente em perversão teológica. Israel repete a calúnia acusatória de que Deus e Moisés os tiraram do Egito 'para morrerem no deserto'. Além disso, atacam a providência celestial: 'nossa alma tem fastio deste pão vil' (v. 5). O termo hebraico traduzido como 'vil' ou 'miserável' (haqqəloqēl) expressa desgosto insolente pelo maná divino. A murmuração revela um desvio idolátrico profundo: a comunidade prefere a ilusória estabilidade da escravidão egípcia à liberdade pactual que requer confiança perseverante na providência diária do Criador.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 21:4-5",
-        "Ex 16:3",
-        "Nm 11:6"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "topico-1",
+      title: "4. Tópico 1 — A vitória sobre Arade: dependência do Senhor",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Números 21:1-3", "Números 14:39-45", "Juízes 1:16-17"],
+      body: `**Leia Números 21:1-3.**
+
+O rei cananeu de Arade ataca Israel e leva alguns prisioneiros. O texto não descreve todos os detalhes do combate; destaca a reação do povo: Israel faz um voto ao SENHOR, pedindo que ele entregue os adversários em suas mãos.
+
+**Versículo 1 — O ataque**
+
+Israel ainda está em deslocamento. O ataque mostra que a caminhada não era uma viagem tranquila. O povo enfrentava ameaças reais antes de chegar à terra.
+
+**Versículo 2 — O voto**
+
+Israel promete dedicar as cidades à destruição caso Deus conceda a vitória. O termo hebraico associado a essa dedicação é *ḥērem*. No contexto de guerra, descreve algo colocado sob interdição ou consagrado irrevogavelmente a Deus, frequentemente por destruição. É uma prática severa do mundo antigo e deve ser lida no contexto específico da narrativa bíblica, não convertida em autorização para violência religiosa hoje.
+
+**Versículo 3 — A resposta atribuída a Deus**
+
+O narrador diz que o SENHOR ouviu Israel e entregou os cananeus. O texto relaciona a vitória à ação divina. O nome Hormá está associado à ideia de destruição/interdição, embora a história e a localização exata do topônimo sejam discutidas.
+
+**Comparação importante:** em Números 14:39-45, israelitas tentaram subir à região montanhosa contra a advertência de Moisés e foram derrotados. Em Números 21, o relato apresenta um voto e afirma que o SENHOR entregou os adversários. Não devemos reduzir os dois episódios a uma regra mecânica; o próprio texto destaca a diferença entre agir presunçosamente e depender da direção divina.
+
+**O que aprendemos?** A narrativa atribui a vitória a Deus. Não ensina que todo projeto humano será bem-sucedido se alguém fizer um voto. Votos não são instrumentos para obrigar Deus; devem ser tratados com seriedade e reverência.`
     },
     {
-      "id": "pericope-serpentes-juizo",
-      "title": "Exposição de Números 21:6-7 — O Juízo Pedagógico e a Confissão",
-      "body": "Em resposta à afronta desdenhosa, 'o SENHOR mandou entre o povo serpentes abrasadoras (han-nəḥāšîm haś-śərāpîm)' (v. 6). A designação 'śārāp' evoca picadas venenosas de efeito inflamatório agudo, resultando em mortes em massa. O impacto da mortandade demoliu a soberba do povo, impelindo-o a uma confissão transparente: 'Havemos pecado, porquanto temos falado contra o SENHOR e contra ti' (v. 7). Diferente de outras murmurações onde apenas pediram água ou pão, aqui há o reconhecimento expresso do pecado teológico e relacional, seguido da súplica para que Moisés exercesse sua função mediadora. O castigo não teve caráter puramente punitivo, mas terapêutico e penitencial.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 21:6-7",
-        "Dt 8:15",
-        "Is 14:29"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "topico-2",
+      title: "5. Tópico 2 — O cansaço que se transforma em murmuração",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Números 21:4-5", "Números 20:2-5", "Êxodo 16:2-3"],
+      body: `**Leia Números 21:4-5.**
+
+Depois de contornar Edom, o povo se impacienta por causa do caminho. O texto não nega o desgaste da jornada; mostra que o cansaço se converte em acusação contra Deus e Moisés.
+
+**Versículo 4 — A impaciência**
+
+A expressão hebraica comunica que a alma do povo ficou impaciente ou desanimada por causa do caminho. A dificuldade física é real, mas a reação passa a ser uma postura de oposição.
+
+**Versículo 5 — As acusações**
+
+O povo questiona por que foi tirado do Egito para morrer no deserto. Também declara que não há pão nem água e demonstra repulsa pelo alimento que Deus vinha fornecendo.
+
+Há uma tensão no próprio discurso: Israel diz que não há pão, embora receba o maná. A reclamação não é uma descrição neutra da despensa; expressa desprezo pela provisão divina.
+
+**O maná**
+
+Êxodo 16 descreve o maná como alimento dado por Deus durante a caminhada. Números 11:4-6 já havia registrado insatisfação semelhante. O capítulo 21 mostra que a memória da provisão não impediu o povo de voltar a reclamar.
+
+**O que o texto afirma:** o povo falou contra Deus e contra Moisés e desprezou o alimento.
+
+**O que não devemos concluir:** não devemos ensinar que sentir fome, cansaço, tristeza ou fazer perguntas sinceras seja, por si só, pecado. A crítica do texto recai sobre a acusação e o desprezo que negam a fidelidade de Deus.
+
+**Aplicação:** podemos apresentar a Deus nossas necessidades com sinceridade sem transformar a dor em ingratidão ou desprezo por aquilo que ele já nos concedeu.`
     },
     {
-      "id": "pericope-serpente-bronze-cura",
-      "title": "Exposição de Números 21:8-9 — A Serpente Erguida e o Olhar da Fé",
-      "body": "Deus ordena a Moisés confeccionar uma serpente de bronze (nəḥaš nəḥōšet, um marcante trocadilho poético e consonantal em hebraico) e afixá-la sobre uma haste (nēs). A ordem divina estipulava: 'todo aquele que for mordido, e olhar para ela, viverá'. A cura não residia em propriedades mágicas ou virtudes intrínsecas do bronze, mas exclusivamente na submissão obediente à promessa divina associada ao objeto levantado. O próprio instrumento do juízo — a forma da serpente mortal — tornou-se o sinal instrumental da salvação para aqueles que a contemplassem. A transmissão da vida exigia um ato de fé exteriorizado no olhar obediente à estaca erguida no centro do arraial.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 21:8-9",
-        "2Rs 18:4",
-        "Zc 12:10"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "topico-3",
+      title: "6. Tópico 3 — As serpentes e a confissão do pecado",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Números 21:6-7", "Deuteronômio 8:15", "1 Coríntios 10:9-11"],
+      body: `**Leia Números 21:6-7.**
+
+O texto afirma que o SENHOR enviou serpentes venenosas entre o povo. Muitas pessoas foram mordidas e morreram. A narrativa interpreta o acontecimento como juízo divino sobre a rebelião que acabara de ser descrita.
+
+**Versículo 6 — O juízo**
+
+A expressão hebraica *neḥāšîm śerāphîm* é tradicionalmente traduzida como “serpentes abrasadoras”. “Abrasadoras” pode estar relacionada à sensação intensa provocada pela mordida ou ao modo como esses animais eram designados. O texto não identifica a espécie zoológica, e não devemos inventá-la.
+
+**Versículo 7 — A confissão**
+
+O povo reconhece: “Pecamos, pois falamos contra o SENHOR e contra ti”. A confissão nomeia a conduta errada. Em seguida, pede que Moisés ore para que as serpentes sejam afastadas.
+
+Moisés ora pelo povo. A narrativa destaca tanto o reconhecimento do pecado quanto a intercessão.
+
+**Uma distinção necessária**
+
+O texto apresenta este episódio específico como juízo de Deus. Não autoriza afirmar que toda enfermidade, acidente ou sofrimento de uma pessoa seja castigo por um pecado particular. Essa generalização não é ensinada aqui.
+
+**O que aprendemos?** A confissão bíblica não disfarça o erro: reconhece-o diante de Deus. Também vemos Moisés intercedendo por um povo que o havia atacado verbalmente.`
     },
     {
-      "id": "pericope-itinerario-arnom",
-      "title": "Exposição de Números 21:10-15 — O Avanço pelo Arnom e o Livro das Guerras",
-      "body": "O texto retoma o itinerário geográfico em Obote, Ié-Abarim e no vale de Zerede, acampando finalmente além do Arnom, na fronteira natural que separava Moabe dos amorreus (vv. 10-13). O narrador insere aqui uma citação solene de uma obra poética desaparecida: o 'Livro das Guerras do SENHOR' (v. 14). A citação preserva estrofes que celebram a soberania cósmica de Javé governando as correntes e os vales do Arnom até a habitação de Ar. Este procedimento demonstra que a história sagrada não hesitava em registrar a memória nacional mediante o uso de coleções poéticas pré-existentes, confirmando que a conquista do território amorreu era um evento cósmico orquestrado pelas próprias guerras santas de Javé.",
-      "kind": "context",
-      "scriptureRefs": [
-        "Nm 21:10-15",
-        "Nm 22:36",
-        "Dt 2:18"
-      ],
-      "confidence": "probable",
-      "collapsible": false
+      id: "topico-4",
+      title: "7. Tópico 4 — A serpente de bronze: a provisão que Deus determina",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Números 21:8-9", "João 3:14-17", "2 Reis 18:4"],
+      body: `**Leia Números 21:8-9.**
+
+Deus ordena a Moisés que faça uma serpente e a coloque sobre uma haste. A pessoa mordida deveria olhar para ela e permanecer viva.
+
+**Versículo 8 — A ordem**
+
+A iniciativa parte de Deus. O povo não inventa um ritual para controlar a situação. O Senhor determina um sinal e associa a ele a promessa de preservação.
+
+**Versículo 9 — A resposta**
+
+Moisés obedece. O texto relata que quem havia sido mordido e olhava para a serpente de bronze permanecia vivo. A narrativa não atribui ao metal uma força curadora autônoma. O sinal funciona porque Deus o estabeleceu.
+
+**O trocadilho hebraico**
+
+O texto usa palavras de som semelhante para “serpente” (*nāḥāš*) e “bronze” (*neḥōšet*). O jogo sonoro reforça a descrição do objeto, mas não prova que o bronze tivesse poder especial.
+
+**Por que olhar?**
+
+O gesto era uma resposta concreta à palavra de Deus. O texto não explica um mecanismo médico nem diz que a pessoa foi curada por uma propriedade física do objeto. O centro é a provisão divina recebida em obediência.
+
+**O perigo da idolatria posterior**
+
+Em 2 Reis 18:4, a serpente foi chamada Neustã e acabou destruída porque o povo lhe queimava incenso. Um sinal que havia servido à obediência tornou-se objeto de culto indevido. Isso demonstra que até algo ligado a uma experiência legítima pode ser transformado em ídolo.
+
+**O que aprendemos?** Não devemos atribuir poder espiritual a objetos, imagens ou amuletos. A confiança pertence a Deus, e não ao instrumento que ele utilizou em uma ocasião específica.`
     },
     {
-      "id": "pericope-canto-do-poco",
-      "title": "Exposição de Números 21:16-20 — O Cântico de Beer e a Água da Comunhão",
-      "body": "Chegando a Beer ('poço'), o SENHOR ordenou a Moisés: 'Ajunta o povo, e lhe darei água' (v. 16). O texto quebra a memória traumática de Meribá (onde a água brotou em meio à contenda) ao apresentar o 'Cântico do Poço' (vv. 17-18). Israel canta com entusiasmo: 'Bramai, ó poço! Cantai dele!'. Notavelmente, o texto frisa que os próprios nobres e príncipes cavaram o poço com os seus cetros e bordões, atuando sob a direção do legislador. A harmonia entre a palavra divina e o labor cooperativo da liderança produziu refrigério sustentador no coração do ermo, ilustrando a comunhão que deve caracterizar o povo de Deus quando opera debaixo da bênção graciosa da providência.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 21:16-20",
-        "Nm 20:10-13",
-        "Sl 105:41"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "topico-5",
+      title: "8. Tópico 5 — O itinerário: Deus acompanha o povo no caminho",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Números 21:10-15", "Números 33:41-49", "Deuteronômio 2:13-18"],
+      body: `**Leia Números 21:10-15.**
+
+Depois do episódio da serpente, o texto registra uma sequência de acampamentos: Obote, Ijé-Abarim, o vale do Zerede e a região do Arnom.
+
+**Por que registrar nomes de lugares?**
+
+Os itinerários preservam a memória do percurso. Eles mostram que a história da aliança acontece em lugares concretos, com deslocamentos, fronteiras e dificuldades reais. Nem todos os locais podem ser identificados com segurança hoje.
+
+**O Arnom**
+
+O ribeiro Arnom aparece como referência de fronteira entre Moabe e o território dos amorreus. A localização geográfica ajuda a compreender o cenário político dos confrontos seguintes.
+
+**O Livro das Guerras do SENHOR (vv. 14-15)**
+
+O narrador cita uma obra ou coleção poética conhecida por esse nome. O conteúdo completo desse livro não foi preservado na Bíblia. A citação demonstra que o texto bíblico incorpora uma memória poética antiga, mas não nos permite reconstruir o livro inteiro nem afirmar detalhes sobre sua autoria.
+
+**Cuidado interpretativo:** a referência a uma fonte antiga não diminui a mensagem do texto. Também não autoriza especulações sobre documentos que não possuímos.
+
+**O que aprendemos?** A Bíblia não apresenta a caminhada apenas em grandes acontecimentos. Ela também registra etapas, lugares e travessias. A fidelidade de Deus acompanha o povo ao longo do percurso, não somente nos momentos de vitória.`
     },
     {
-      "id": "pericope-derrota-seom",
-      "title": "Exposição de Números 21:21-32 — A Conquista de Hesbom contra os Amorreus",
-      "body": "Israel envia mensageiros diplomáticos a Seom, rei dos amorreus, solicitando travessia inofensiva pelo Caminho Real, sem tocar em campos ou poços (vv. 21-22). Seom recusa com arrogância belicosa e marcha contra Israel em Jaaz. Israel fere o exército amorreu 'ao fio da espada' e ocupa toda a sua terra, desde o Arnom até o Jaboque (vv. 23-25). O texto enfatiza que Hesbom fora a capital a partir da qual Seom guerreara contra o primeiro rei de Moabe, arrancando-lhe suas possessões. Assim, Israel não despojou Moabe ilegitimamente, mas tomou posse de um território que havia sido legitimamente conquistado aos amorreus, estabelecendo assentamentos permanentes na Transjordânia.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 21:21-32",
-        "Jz 11:19-21",
-        "Dt 2:26-36"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "topico-6",
+      title: "9. Tópico 6 — O poço de Beer e o cântico da comunidade",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Números 21:16-20", "Êxodo 17:1-7", "Salmos 105:41"],
+      body: `**Leia Números 21:16-20.**
+
+Em Beer, o SENHOR anuncia que dará água ao povo. Em seguida, Israel canta sobre o poço, e o texto menciona líderes e nobres participando de sua abertura.
+
+**Versículo 16 — A promessa de água**
+
+O nome Beer está relacionado à palavra hebraica para poço. O texto apresenta a iniciativa de Deus: ele reúne o povo e promete água.
+
+**Versículos 17-18 — O cântico**
+
+O povo responde com um cântico. A poesia celebra o poço e menciona a participação de líderes e nobres com seus bastões. Não temos informação suficiente para descrever com precisão o método de escavação ou transformar a imagem poética em um relatório técnico.
+
+**Versículos 19-20 — A rota continua**
+
+A lista de lugares conduz o leitor em direção à região de Moabe e ao alto de Pisga. O itinerário prepara a narrativa para os confrontos com os reis amorreus.
+
+**Comparação com Êxodo 17:** em Refidim, a falta de água gerou conflito e o Senhor providenciou água da rocha. Em Números 21, o cântico do poço apresenta outra memória de provisão. Os episódios são diferentes e não devem ser confundidos.
+
+**O que aprendemos?** A provisão de Deus pode ser celebrada em comunidade. O texto reúne a promessa divina e a participação humana, sem colocar a ação dos líderes no lugar da iniciativa do Senhor.`
     },
     {
-      "id": "pericope-poema-hesbom",
-      "title": "Exposição do Poema Antigo de Hesbom (vv. 27-30)",
-      "body": "Os versículos 27-30 registram um cântico sapiencial ou satírico introduzido por 'dizem os que falam em provérbios (ham-mōšəlîm)'. Originalmente, este poema pode ter sido uma elegia moabita ou um canto de vitória amorreu que zombava da devastação de Ar de Moabe e da impotência de seu deus Quemos ('Ai de ti, Moabe! Perdido estás, povo de Quemos!'). O narrador bíblico incorpora essa composição para usá-la ironicamente: se o outrora invencível Seom destruíra Moabe com fogo devastador, agora o próprio Seom fora totalmente aniquilado pelo Deus de Israel. A incorporação literária demonstra como o texto bíblico subverte as canções de glória humana para demonstrar a soberania suprema de Javé sobre o destino dos impérios.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 21:27-30",
-        "Jr 48:45-46",
-        "1Rs 11:7"
-      ],
-      "confidence": "probable",
-      "collapsible": false
+      id: "topico-7",
+      title: "10. Tópico 7 — O pedido a Seom e a recusa do rei",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Números 21:21-23", "Deuteronômio 2:24-30", "Juízes 11:19-22"],
+      body: `**Leia Números 21:21-23.**
+
+Israel envia mensageiros a Seom, rei dos amorreus, solicitando passagem por sua terra. O pedido promete não entrar nos campos e vinhas nem beber a água dos poços; o povo seguiria pela estrada real.
+
+**Versículos 21-22 — Uma solicitação de passagem**
+
+O texto registra um pedido diplomático. A estrada real era uma rota importante na região. Israel apresenta limites claros para sua travessia.
+
+**Versículo 23 — A recusa e o ataque**
+
+Seom não permite a passagem. Reúne suas forças e sai ao encontro de Israel em Jaza. O texto passa da negociação para o confronto.
+
+**O que não devemos acrescentar:** Números 21 não descreve todas as conversas entre os grupos nem oferece detalhes sobre o tamanho dos exércitos. Devemos evitar completar a narrativa com informações imaginadas.
+
+**O que aprendemos?** A narrativa mostra que o avanço de Israel ocorre em meio a conflitos políticos concretos. A leitura deve acompanhar o relato sem transformar a ação militar antiga em modelo para disputas atuais.`
     },
     {
-      "id": "pericope-derrota-ogue",
-      "title": "Exposição de Números 21:33-35 — O Confronto Decisivo com Ogue de Basã",
-      "body": "Avançando para o norte pelo caminho de Basã, Israel depara-se com Ogue, monarca formidável, e todo o seu exército em Edrei (v. 33). Ogue pertencia ao remanescente dos refains (Dt 3:11) e governava uma região rica e estrategicamente inexpugnável. Diante da iminência do combate, Javé tranquiliza Moisés com uma ordem libertadora de fé: 'Não o temas, porque to entreguei na tua mão, a ele, a todo o seu povo e à sua terra' (v. 34). A destruição de Ogue foi total, sem deixar sobrevivente algum, e Israel herdou suas possessões territoriais férteis. Esse triunfo consumou o domínio hebraico sobre toda a Transjordânia oriental, servindo de testemunho estarrecedor para as nações cananeias ocidentais.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 21:33-35",
-        "Dt 3:1-7",
-        "Js 2:10"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "topico-8",
+      title: "11. Tópico 8 — A derrota de Seom e o poema sobre Hesbom",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Números 21:24-32", "Deuteronômio 2:31-37", "Juízes 11:19-22"],
+      body: `**Leia Números 21:24-32.**
+
+Israel derrota Seom e ocupa cidades dos amorreus. O narrador explica que Seom havia tomado anteriormente território do rei de Moabe. Em seguida, cita um poema sobre Hesbom.
+
+**Versículos 24-25 — O resultado da batalha**
+
+O texto informa que Israel tomou território desde o Arnom até o Jaboque, respeitando a referência à fronteira amonita. Não devemos ampliar os limites além do que o texto diz.
+
+**Versículo 26 — A história anterior de Seom**
+
+O narrador explica que Seom havia conquistado terras que antes pertenciam a Moabe. Essa informação é importante para entender a situação territorial da região.
+
+**Versículos 27-30 — O poema antigo**
+
+O texto cita um cântico associado a Hesbom. O poema menciona fogo, devastação e o deus moabita Quemós. Sua voz original pode refletir a memória de uma vitória de Seom sobre Moabe; a relação exata entre o poema e seu contexto de origem é debatida.
+
+O narrador utiliza esse material dentro do relato da derrota de Seom. O contraste é marcante: a cidade celebrada no poema passa a integrar a narrativa da conquista amorreia por Israel.
+
+**Versículos 31-32 — Ocupação e exploração de Jazer**
+
+Israel habita na terra dos amorreus, e Moisés envia pessoas para explorar Jazer. Israel toma seus povoados. O texto não oferece detalhes suficientes para reconstruir cada etapa dessa operação.
+
+**Cuidado:** a passagem descreve guerras de um período específico da história de Israel. Não é autorização para que comunidades religiosas atuais reivindiquem territórios ou pratiquem violência em nome de Deus.
+
+**O que aprendemos?** O capítulo mostra a mudança do domínio territorial e atribui a Israel a vitória sobre Seom. A interpretação deve permanecer ligada à história narrada e ao conjunto da revelação bíblica.`
     },
     {
-      "id": "analise-termos-hebraicos",
-      "title": "Termos Exegéticos Cruciais em Números 21",
-      "body": "Três vocábulos hebraicos definem o capítulo: (1) 'Ḥērem' (v. 2-3): Consagração irrevogável à destruição ou ao santuário, despojando o guerreiro de ganho pessoal; o julgamento de Deus não era saque egoísta, mas ato sagrado de justiça cósmica. (2) 'Śərāpîm' (v. 6): Raiz verbal associada ao queimar/arder; descreve serpentes venenosas cuja mordida produz inflamação cáustica e febre letal. (3) 'Nēs' (vv. 8-9): Estandarte militar ou haste elevada que servia de marco visível de reunião; aqui é o poste onde a serpente de bronze é exposta para que todos os dispersos pelo acampamento pudessem divisá-la. A exegese recusa etimologias místicas modernas: o vocabulário reflete realidades materiais transformadas em veículos da aliança divina.",
-      "kind": "glossary",
-      "scriptureRefs": [
-        "Nm 21:2",
-        "Nm 21:6",
-        "Nm 21:8"
-      ],
-      "confidence": "high",
-      "collapsible": true
+      id: "topico-9",
+      title: "12. Tópico 9 — Ogue de Basã: o medo e a palavra de Deus",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Números 21:33-35", "Deuteronômio 3:1-11", "Salmos 136:17-22"],
+      body: `**Leia Números 21:33-35.**
+
+Israel muda de direção e sobe em direção a Basã. Ogue, rei da região, sai com seu povo para lutar contra Israel em Edrei.
+
+**Versículo 33 — Um novo confronto**
+
+Depois da vitória sobre Seom, Israel encontra outro rei. A narrativa apresenta Ogue como governante de Basã, região situada ao norte da Transjordânia.
+
+**Versículo 34 — A palavra dirigida a Moisés**
+
+O SENHOR diz a Moisés que não tenha medo, pois entregou Ogue, seu povo e sua terra nas mãos de Israel. A segurança de Israel é fundamentada na palavra de Deus.
+
+**Versículo 35 — A vitória**
+
+O relato informa que Ogue, seus filhos e seu povo foram derrotados, e Israel tomou a terra. Deuteronômio 3 retoma o episódio e acrescenta informações sobre o território e a memória de Ogue.
+
+**O que o texto enfatiza?** A vitória é atribuída ao Senhor. O narrador não apresenta Israel como invencível por natureza.
+
+**Cuidado na aplicação:** não devemos transformar Ogue em símbolo de qualquer pessoa que discorde de nós, nem prometer que Deus eliminará todos os obstáculos materiais dos cristãos. A passagem narra um acontecimento específico da história de Israel.`
     },
     {
-      "id": "teologia-do-capitulo",
-      "title": "Teologia Bíblica de Números 21: Juízo, Graça e Território",
-      "body": "Números 21 desdobra três eixos teológicos indissolúveis. O primeiro é o carátar disciplinar da soberania divina: Deus não tolera o desprezo à sua graça diária; a murmuração atenta contra a própria essência do relacionamento de aliança. O segundo é a soteriologia da visualização pactual: a libertação é concedida por meio de um instrumento paradoxal de cura ordenado por Deus, exigindo renúncia a qualquer esforço de autocura. O terceiro é a teologia da herança territorial: a possessão da Transjordânia é demonstrada como dádiva pura de Javé diante de reis invencíveis. As vitórias sobre Seom e Ogue ensinam que o Deus que cura o veneno do pecado interior é o mesmo Senhor que desbarata as forças opressoras exteriores para cumprir sua promessa patriarcal.",
-      "kind": "theology",
-      "scriptureRefs": [
-        "Nm 21:7",
-        "Nm 21:9",
-        "Nm 21:34",
-        "Gn 15:16"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "palavras-chave",
+      title: "13. Palavras-chave — observando o hebraico com cuidado",
+      kind: "analysis",
+      confidence: "probable",
+      scriptureRefs: ["Números 21:2, 4-9, 14, 17, 27"],
+      body: `O estudo das palavras originais pode esclarecer o texto, mas deve ser feito com prudência. Uma palavra não carrega automaticamente todos os significados possíveis em cada passagem.
+
+- **Ḥērem (חרם) — interdição ou consagração:** em Números 21:2-3, descreve a dedicação dos lugares à destruição no contexto da guerra antiga. Não deve ser convertido em autorização contemporânea para violência religiosa.
+- **Qāṣar (קצר), no contexto de “a alma do povo se impacientou”:** a expressão de Números 21:4 comunica impaciência ou desânimo. O sentido deve ser entendido pela frase completa, não por uma equivalência isolada.
+- **Neḥāšîm śerāphîm (נחשים שרפים) — serpentes abrasadoras:** expressão de Números 21:6. A tradução tradicional descreve serpentes venenosas; o texto não identifica a espécie.
+- **Neḥāš neḥōšet (נחש נחשת) — serpente de bronze:** em Números 21:9 há uma aproximação sonora entre os termos hebraicos para serpente e bronze.
+- **Nēs (נס) — haste, estandarte ou sinal erguido:** em Números 21:8-9, refere-se ao objeto levantado para ser visto.
+- **Be’er (באר) — poço:** relaciona-se ao nome Beer, em Números 21:16-18.
+- **Mōšəlîm (משלים) — os que proferem provérbios ou poemas:** expressão associada à introdução do cântico em Números 21:27.
+
+**Regra de estudo:** consulte léxicos e gramáticas confiáveis. Não deduza doutrinas apenas de semelhanças sonoras, raízes ou possíveis sentidos de uma palavra.`
     },
     {
-      "id": "tipologia-cristologica-joao3",
-      "title": "A Conexão Canônica com Cristo: A Hermenêutica de João 3:14-15",
-      "body": "A hermenêutica cristã deve seguir estritamente o precedente joanino para não cair em alegorismo infundado. Em João 3:14-15, Jesus declara: 'E, como Moisés levantou a serpente no deserto, assim importa que o Filho do Homem seja levantado, para que todo o que nele crê tenha a vida eterna'. A correspondência tipológica baseia-se em quatro analogias estruturais legítimas: (a) a condição de perdição mortal e irreversível das vítimas; (b) o desígnio e a iniciativa exclusivamente divinos na provisão do remédio; (c) o instrumento paradoxal: assim como a forma da serpente que matava curou os feridos, Cristo foi feito maldição e pecado por nós (2Co 5:21; Gl 3:13) na cruz para nos salvar; (d) a apropriação do benefício por um ato simples e direto de olhar obediente / crer de todo o coração.",
-      "kind": "theology",
-      "scriptureRefs": [
-        "Jo 3:14-15",
-        "2Co 5:21",
-        "Gl 3:13"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "questoes-interpretativas",
+      title: "14. Questões interpretativas — o que é afirmado e o que é debatido?",
+      kind: "analysis",
+      confidence: "debated",
+      scriptureRefs: ["Números 21:1-35"],
+      body: `**1. Onde ficava exatamente Arade e o local chamado Hormá?**
+
+O texto situa Arade no Neguebe e associa a região a Hormá. A identificação dos sítios e a relação entre os episódios de Números e Josué são objeto de discussão histórica e arqueológica. É melhor reconhecer a incerteza do que afirmar uma localização exata sem evidência suficiente.
+
+**2. O que eram as serpentes abrasadoras?**
+
+A expressão indica serpentes perigosas, mas não fornece classificação zoológica. Propostas sobre espécies específicas são hipóteses, não informação explícita do capítulo.
+
+**3. O que era o Livro das Guerras do SENHOR?**
+
+O texto cita uma obra poética ou coleção de cânticos que não foi preservada integralmente na Bíblia. Não conhecemos seu conteúdo completo, sua forma final ou todos os seus autores.
+
+**4. Quem produziu o poema sobre Hesbom?**
+
+O poema pode preservar uma tradição de vitória amorreia sobre Moabe. O narrador o incorpora à narrativa de Israel. A origem precisa e a história de transmissão são discutidas.
+
+**5. Como entender a guerra e o conceito de ḥērem?**
+
+A passagem pertence à narrativa da formação de Israel como povo da aliança e à representação bíblica do juízo sobre povos e territórios específicos. Cristãos precisam interpretá-la à luz do conjunto das Escrituras, sem transformá-la em justificativa para guerras atuais.
+
+**6. A serpente de bronze era um objeto de culto?**
+
+Em Números 21, ela é um sinal ordenado por Deus para a preservação dos mordidos. Em 2 Reis 18:4, séculos depois, o objeto foi tratado de maneira idólatra e destruído por Ezequias. Os dois textos mostram usos diferentes em momentos diferentes.`
     },
     {
-      "id": "desvio-idolatrico-neusta",
-      "title": "O Desvio Idolatrico Posterior: A Serpente Transformada em Neustã",
-      "body": "Uma lição advertencial vital para a teologia pastoral provém de 2 Reis 18:4, quando o piedoso rei Ezequias despedaçou a serpente de bronze que Moisés fizera, 'porque até àquele dia os filhos de Israel lhe queimavam incenso, e a chamavam Neustã'. A comunidade humana possui uma inclinação trágica de transformar o instrumento transitório da graça de Deus em amuleto cúltico idolátrico autônomo. O que fora ordenado para apontar para a misericórdia invisível de Javé tornou-se objeto de fetichismo religioso. A exegese bíblica nos adverte solenemente contra a veneração de relíquias e a sacramentalização mecânica de experiências passadas, as quais roubam a glória exclusiva que pertence unicamente ao Senhor.",
-      "kind": "pastoral",
-      "scriptureRefs": [
-        "2Rs 18:4",
-        "Rm 1:25",
-        "1Co 10:14"
-      ],
-      "confidence": "high",
-      "collapsible": true
+      id: "referencias-explicadas",
+      title: "15. Referências bíblicas — como outros textos iluminam Números 21",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Êxodo 16:1-15", "Deuteronômio 2:24-37", "2 Reis 18:4", "João 3:14-17"],
+      body: `- **Números 20:14-21:** explica por que Israel precisou contornar Edom.
+- **Êxodo 16:1-15:** recorda a provisão do maná, que o povo despreza em Números 21:5.
+- **Números 11:4-6:** apresenta outra ocasião de insatisfação com o alimento.
+- **Deuteronômio 2:24-37:** retoma a derrota de Seom e explica o avanço de Israel.
+- **Deuteronômio 3:1-11:** retoma a vitória sobre Ogue e descreve a região de Basã.
+- **2 Reis 18:4:** relata que a serpente de bronze foi destruída quando passou a receber culto indevido.
+- **Salmos 78:17-22:** recorda a rebeldia de Israel no deserto.
+- **João 3:14-17:** Jesus usa a serpente levantada por Moisés para explicar sua própria elevação e a vida eterna concedida a quem crê.
+- **1 Coríntios 10:9-11:** utiliza episódios do deserto como advertência para a comunidade cristã.
+
+**Como usar referências cruzadas:** leia o contexto de cada passagem. Uma referência não deve ser usada apenas porque contém uma palavra parecida; ela precisa contribuir de fato para a compreensão do assunto.`
     },
     {
-      "id": "debates-interpretativos",
-      "title": "Debates Interpretativos e Desafios Textuais",
-      "body": "Existem divergências relevantes na interpretação deste capítulo. No âmbito literário, debate-se se a autoria mosaica utilizou arquivos históricos contemporâneos (como o Livro das Guerras do SENHOR) ou se o texto reflete compilações de tradições posteriores do período monárquico (hipóteses da crítica das fontes). No âmbito geográfico e cronológico, discute-se o descompasso entre a menção de Hesbom fortificada e a escassez de ruínas da Idade do Bronze Recente em Tell Hesban. Outro debate exegético reside na natureza do poema em vv. 27-30: alguns eruditos o classificam como cântico triunfal amorreu preservado intacto, enquanto outros o compreendem como uma sátira hebraica redigida após o evento. Conservadores e críticos sustentam leituras distintas sem prejuízo da soberania bíblica.",
-      "kind": "context",
-      "scriptureRefs": [
-        "Nm 21:14",
-        "Nm 21:26-30"
-      ],
-      "confidence": "debated",
-      "collapsible": true
+      id: "erros-interpretacao",
+      title: "16. Cuidados — erros de interpretação que devemos evitar",
+      kind: "analysis",
+      confidence: "high",
+      scriptureRefs: ["Números 21:1-35", "2 Reis 18:4", "João 3:14-17", "1 Coríntios 10:9-11"],
+      body: `1. **Transformar a serpente em amuleto:** o texto não atribui poder mágico ao bronze. O sinal dependia da ordem e da promessa de Deus.
+2. **Afirmar que todo sofrimento é castigo por um pecado específico:** Números 21 narra um juízo específico; não oferece uma explicação universal para toda doença ou tragédia.
+3. **Usar a guerra como autorização para violência atual:** os episódios pertencem a um contexto particular da história de Israel e não autorizam guerras religiosas contemporâneas.
+4. **Prometer vitória material automática:** a conquista dos territórios não é fórmula para garantir emprego, dinheiro, saúde ou sucesso a qualquer leitor.
+5. **Alegorizar cada detalhe:** não há base para atribuir significado espiritual independente a cada material, lugar ou número.
+6. **Confundir o poema antigo com uma declaração de fé moabita:** o texto cita uma composição poética e a incorpora ao relato; sua origem exata é debatida.
+7. **Ignorar a ligação com João 3:** a própria Escritura fornece uma conexão cristológica explícita, que deve ser respeitada sem extrapolações.`
     },
     {
-      "id": "erros-comuns-de-leitura",
-      "title": "Erros Comuns de Leitura e Abusos Hermenêuticos",
-      "body": "O leitor moderno costuma incidir em equívocos graves: (1) Alegorizar cada detalhe do bronze (como associá-lo artificialmente ao juízo cósmico ou pureza material) sem respaldo canônico; (2) Tratar o 'herem' e a guerra na Transjordânia como licença para nacionalismos militaristas modernos, esquecendo que as guerras do Antigo Testamento pertencem a uma etapa estrita e irrepetível da teocracia bíblica em cumprimento ao juízo contra a iniquidade cananeia (Gn 15:16); (3) Minimizar a queixa do povo como mero cansaço legítimo, quando o texto hebraico explicita rebelião e difamação direta da providência de Deus; (4) Usar a cura pela serpente como amuleto para teologias de cura mágica ou prosperidade automática.",
-      "kind": "method",
-      "scriptureRefs": [
-        "Gn 15:16",
-        "Nm 21:5",
-        "2Pe 1:20"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "cristo",
+      title: "17. Números 21 e Jesus Cristo — a serpente levantada",
+      kind: "theology",
+      confidence: "high",
+      scriptureRefs: ["Números 21:8-9", "João 3:14-17", "Gálatas 3:13", "2 Coríntios 5:21"],
+      body: `A conexão mais direta entre Números 21 e Jesus aparece em João 3:14-15. Jesus diz que, assim como Moisés levantou a serpente no deserto, também o Filho do Homem deveria ser levantado, para que todo aquele que nele crê tenha a vida eterna.
+
+**O que Jesus está comparando?**
+
+- **A condição humana:** os israelitas estavam sob ameaça de morte por causa das mordidas; no diálogo de João 3, Jesus fala da necessidade de vida eterna.
+- **A iniciativa divina:** em Números, Deus determina o sinal; em João, o envio do Filho é iniciativa do amor de Deus (João 3:16-17).
+- **O sinal levantado:** a serpente foi colocada em uma haste; Jesus seria levantado na cruz.
+- **A resposta de fé:** os mordidos deveriam olhar para o sinal segundo a palavra de Deus; as pessoas são chamadas a crer no Filho.
+
+**Limites da comparação**
+
+Jesus estabelece a analogia principal: a elevação do sinal e a vida recebida por meio da resposta indicada por Deus. Não precisamos atribuir significado independente ao bronze, à haste ou a cada detalhe da cena.
+
+Gálatas 3:13 e 2 Coríntios 5:21 ajudam a compreender a obra de Cristo, mas devem ser lidos em seus próprios contextos. João 3 é a referência explícita que relaciona a serpente levantada a Jesus.
+
+**O que isso significa para a fé cristã?** A salvação não é conquistada por autossuficiência. O ser humano é chamado a confiar em Cristo, aquele que Deus enviou. A vida eterna é apresentada como dádiva recebida pela fé, não como prêmio por mérito humano.`
     },
     {
-      "id": "metodo-interpretativo",
-      "title": "Método Gramático-Histórico e Exegese Canônica",
-      "body": "A abordagem correta de Números 21 exige o método gramático-histórico articulado à teologia bíblico-canônica. Primeiramente, analisa-se a gramática do hebraico bíblico, prestando atenção à sintaxe das orações de confissão e aos recursos poéticos arcaicos presentes nos cânticos. Em segundo lugar, situa-se o episódio no horizonte sócio-espacial das rotas comerciais da Transjordânia do final do segundo milênio a.C. Em terceiro lugar, integra-se o texto à teologia do Pentateuco, reconhecendo o cumprimento paulatino da aliança abraâmica sobre a terra. Por fim, acolhe-se a tipologia do Novo Testamento segundo o critério explícito de Cristo, mantendo os limites semânticos sem forçar alegorizações subjetivas.",
-      "kind": "method",
-      "scriptureRefs": [
-        "Nm 21:1-35",
-        "Dt 2:1-37",
-        "Jo 3:14-15"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "aplicacoes",
+      title: "18. O que Números 21 ensina para nossa vida?",
+      kind: "application",
+      confidence: "high",
+      scriptureRefs: ["Números 21:4-9", "João 3:14-17", "1 Coríntios 10:9-11"],
+      body: `**1. Leve o cansaço a Deus sem alimentar a ingratidão.** O desgaste da caminhada era real, mas o povo passou a acusar Deus e desprezar sua provisão. Podemos falar honestamente sobre nossas dores sem abandonar a confiança.
+
+**2. Reconheça o pecado com clareza.** O povo confessou que havia falado contra o SENHOR e contra Moisés. A confissão verdadeira não procura esconder ou justificar o erro.
+
+**3. Não transforme sinais em objetos de superstição.** A serpente foi útil porque Deus a determinou naquele episódio. Quando recebeu culto, tornou-se objeto de idolatria.
+
+**4. Confie em Cristo.** João 3 conduz o leitor da serpente levantada à obra do Filho. A resposta cristã é crer em Jesus, não procurar amuletos ou fórmulas religiosas.
+
+**5. Leia as vitórias antigas com responsabilidade.** As guerras de Israel não autorizam hostilidade contra povos, religiões ou adversários atuais.
+
+**Perguntas para reflexão**
+- Como costumo reagir quando um caminho fica mais difícil do que esperava?
+- Tenho reconhecido a provisão de Deus ou me concentrado apenas no que me falta?
+- Existe algo bom que transformei em objeto de confiança no lugar de Deus?
+- Minha compreensão de Jesus está fundamentada no texto bíblico ou em associações inventadas?`
     },
     {
-      "id": "glossario-termos",
-      "title": "Glossário Exegético e Topográfico",
-      "body": "Definições fundamentais para o estudo de Números 21: (a) Arnom: Garganta e rio profundo que desemboca no mar Morto, marcando fronteiras políticas entre Moabe e os amorreus. (b) Hesbom: Centro fortificado e residência real de Seom, posteriormente atribuída à tribo de Rúben. (c) Basã: Região agrícola extremamente fértil a leste do mar da Galileia, afamada por suas pastagens e rebanhos robustos. (d) Jaaz: Localidade geográfica precisa onde se travou o embate militar decisivo contra Seom. (e) Edrei: Cidade fortificada localizada sobre um planalto rochoso onde o rei Ogue foi confrontado e desbaratado pelas forças israelitas.",
-      "kind": "glossary",
-      "scriptureRefs": [
-        "Nm 21:13",
-        "Nm 21:23",
-        "Nm 21:26",
-        "Nm 21:33"
-      ],
-      "confidence": "high",
-      "collapsible": true
+      id: "resumo",
+      title: "19. Resumo — o que precisamos guardar deste capítulo",
+      kind: "summary",
+      confidence: "high",
+      scriptureRefs: ["Números 21:1-35"],
+      body: `- Israel enfrentou o rei de Arade e atribuiu a vitória à ação do SENHOR.
+- Durante o contorno de Edom, o povo se impacientou, falou contra Deus e desprezou o maná.
+- Deus enviou serpentes; o povo confessou o pecado, e Moisés intercedeu.
+- Deus determinou a serpente de bronze como sinal por meio do qual os mordidos permaneceriam vivos.
+- O povo prosseguiu, recebeu água em Beer e cantou.
+- O relato registrou a derrota de Seom e Ogue e a ocupação de seus territórios.
+- Jesus utilizou a serpente levantada para ensinar sobre sua própria elevação e a vida eterna pela fé.
+
+**Mensagem central:** Deus é soberano para disciplinar, preservar e conduzir. O capítulo chama o leitor a abandonar a autossuficiência, reconhecer o pecado e confiar na provisão que Deus oferece.`
     },
     {
-      "id": "exercicios-pedagogicos",
-      "title": "Exercícios de Fixação e Avaliação Exegética",
-      "body": "Responda criticamente com base no texto exegético: 1. Compare o voto formulado em Números 21:2 com as ações da primeira geração em Números 14:40-45. Que elementos estruturais explicam o sucesso da nova geração? 2. Analise linguisticamente o descontentamento popular em Números 21:5 contra o maná. Quais foram as implicações pactuais desse repúdio? 3. Explique a conexão tipológica feita por nosso Senhor Jesus em João 3:14-15 com Números 21:8-9, destacando semelhanças e distinções soteriológicas. 4. De que modo a citação do Livro das Guerras do SENHOR e os cânticos poéticos enriquecem a compreensão literária e a preservação do texto do Pentateuco?",
-      "kind": "exercise",
-      "scriptureRefs": [
-        "Nm 21:2",
-        "Nm 21:5",
-        "Nm 21:14",
-        "Jo 3:14"
-      ],
-      "confidence": "high",
-      "collapsible": true
+      id: "exercicios",
+      title: "20. Exercícios — vamos conferir se você compreendeu?",
+      kind: "exercise",
+      confidence: "high",
+      scriptureRefs: ["Números 21:1-35", "João 3:14-17"],
+      body: `**Parte A — Compreensão do texto**
+
+1. Quem atacou Israel no início do capítulo?
+2. Qual voto Israel fez ao SENHOR?
+3. Por que o povo ficou impaciente durante a caminhada?
+4. O que o povo disse contra Deus e Moisés?
+5. O que Deus ordenou a Moisés que fizesse?
+6. O que aconteceu com quem olhava para a serpente de bronze?
+7. Que obra antiga é citada em Números 21:14?
+8. Qual era o nome do rei amorreu derrotado por Israel antes de Ogue?
+9. Qual foi a orientação do SENHOR a Moisés diante de Ogue?
+
+**Parte B — Interpretação**
+
+10. Por que a serpente de bronze não deve ser tratada como amuleto?
+11. Qual é a diferença entre o cansaço legítimo e a murmuração descrita no capítulo?
+12. O que João 3:14-17 ensina ao relacionar a serpente levantada com Jesus?
+13. Por que as guerras de Números 21 não podem ser usadas como autorização para violência religiosa hoje?
+
+**Parte C — Aplicação**
+
+14. Como você pode expressar uma dificuldade sem desprezar a provisão de Deus?
+15. Que atitude concreta pode demonstrar confiança em Cristo nesta semana?
+
+**Respostas orientadoras**
+
+1. O rei cananeu de Arade.
+2. Prometeu dedicar as cidades à destruição se Deus entregasse o inimigo.
+3. Porque o caminho era difícil ao contornar Edom.
+4. Questionou por que haviam sido tirados do Egito e desprezou o alimento recebido.
+5. Fazer uma serpente e colocá-la sobre uma haste.
+6. Permanecia vivo, conforme a promessa de Deus.
+7. O Livro das Guerras do SENHOR.
+8. Seom.
+9. Que não tivesse medo, pois Deus havia entregue Ogue e seu povo.
+10. Porque o texto atribui a preservação à ordem e à promessa de Deus, não a um poder próprio do metal.
+11. O cansaço é uma experiência humana; a murmuração do relato torna-se acusação contra Deus e desprezo por sua provisão.
+12. Jesus ensina que o Filho do Homem seria levantado e que quem crê nele recebe vida eterna.
+13. Porque são acontecimentos específicos da história da aliança, não mandamentos dirigidos às comunidades cristãs atuais.
+14-15. Respostas pessoais devem ser avaliadas à luz do texto e não de fórmulas prontas.
+
+**Atividade:** escreva, em suas próprias palavras, a mensagem central de Números 21 e explique como João 3:14-17 ilumina o episódio da serpente.`
     },
     {
-      "id": "esboco-homiletico",
-      "title": "Esboço Homilético Expositivo: 'Do Veneno da Rebeldia à Vitória da Fé'",
-      "body": "Proposição: O Deus fiel cura o arrependido que olha para a Sua provisão e capacita o Seu povo a vencer gigantes no caminho da promessa. Divisões expositivas: I. O Veneno da Ingratidão (vv. 4-5) — Como o cansaço do caminho e o desprezo pela provisão diária acarretam a murmuração pecaminosa. II. O Remédio Paradoxal da Graça (vv. 6-9) — A disciplina severa que desperta a confissão e o olhar salvífico para a provisão estipulada por Deus, prefigurando a cruz de Cristo. III. O Cântico da Provisão Compartilhada (vv. 16-18) — A alegria e a união da comunidade quando liderança e povo cavam juntos debaixo da promessa divina. IV. A Queda dos Gigantes do Deserto (vv. 21-35) — A certeza de que Deus desarma os Seons e Ogues desta vida para conceder herança ao Seu povo perseverante.",
-      "kind": "pastoral",
-      "scriptureRefs": [
-        "Nm 21:4-9",
-        "Nm 21:16-18",
-        "Nm 21:33-35"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "oficina-pregador",
+      title: "21. Oficina do pregador — ensinando Números 21 com fidelidade",
+      kind: "application",
+      confidence: "high",
+      scriptureRefs: ["Números 21:4-9", "Números 21:16-18", "Números 21:21-35", "João 3:14-17"],
+      body: `**Tema:** Da murmuração à vida: a provisão de Deus no caminho.
+
+**Texto principal:** Números 21:4-9, com apoio de João 3:14-17.
+
+**Objetivo da mensagem:** mostrar que a rebelião humana precisa ser reconhecida, que Deus é quem determina o meio de preservação e que Jesus é o centro da conexão cristã apresentada pelo próprio Novo Testamento.
+
+**Introdução sugerida**
+
+O povo estava no caminho da promessa, mas o caminho era difícil. O cansaço revelou o que havia no coração: em vez de apresentar sua necessidade com confiança, Israel falou contra Deus e desprezou sua provisão. O texto nos leva a observar o pecado, a confissão e a resposta que o Senhor determinou.
+
+**I. O cansaço pode revelar uma confiança enfraquecida (vv. 4-5).**
+- Explique a rota ao redor de Edom e a impaciência do povo.
+- Mostre a diferença entre reconhecer uma dificuldade e acusar Deus.
+- Aplicação: fale com Deus com sinceridade, sem alimentar desprezo por sua provisão.
+
+**II. O pecado precisa ser reconhecido (vv. 6-7).**
+- Explique o juízo descrito pelo narrador.
+- Destaque a confissão objetiva do povo.
+- Aplicação: arrependimento não é apenas sentir medo das consequências; é reconhecer a própria culpa diante de Deus.
+
+**III. Deus determina o meio de preservação (vv. 8-9).**
+- Explique a serpente como sinal ordenado por Deus, sem atribuir poder mágico ao bronze.
+- Leia João 3:14-17 e mostre a comparação feita por Jesus.
+- Aplicação: a esperança cristã está em Cristo, não em objetos, fórmulas ou méritos humanos.
+
+**Conclusão**
+
+Números 21 não apresenta um povo autossuficiente, mas uma comunidade que precisa da disciplina e da provisão de Deus. A ligação com João 3 aponta para Jesus, levantado para que todo aquele que nele crê tenha vida eterna.
+
+**Cuidados para quem ensina**
+- Não diga que toda doença é castigo por pecado específico.
+- Não prometa cura física automática com base na serpente.
+- Não transforme as guerras do capítulo em autorização para violência atual.
+- Não atribua significados ocultos a cada detalhe do bronze ou da haste.
+- Leia João 3 em seu contexto, incluindo os versículos 16-17.
+
+**Esboço alternativo do capítulo inteiro**
+1. A vitória que vem do Senhor (vv. 1-3).
+2. A murmuração e a provisão da serpente (vv. 4-9).
+3. A água e a memória cantada do caminho (vv. 10-20).
+4. As vitórias na Transjordânia sob a palavra de Deus (vv. 21-35).
+
+**Perguntas para a turma**
+- Qual é a diferença entre lamentar uma dificuldade e murmurar contra Deus?
+- Por que a serpente não deveria ser adorada?
+- Qual é a conexão que Jesus estabelece em João 3?
+- Como ensinar as guerras do Antigo Testamento sem aplicá-las indevidamente ao presente?`
     },
     {
-      "id": "meditacao-sintese",
-      "title": "Meditação Teológica e Síntese Final",
-      "body": "Números 21 permanece como um farol solene de advertência e consolo. Revela a feiura da alma humana que se aborrece do maná celestial, mas exalta a paciência restauradora de um Deus que não abandona Seus filhos no veneno do deserto. Ao contemplarmos a serpente sobre a haste, somos imediatamente transportados para o Calvário, onde o Filho Unigênito assumiu a nossa maldição a fim de que todo aquele que nele crer receba cura definitiva e herança eterna. Diante dos desertos áridos e das batalhas formidáveis que se interpõem em nossa jornada de fé, descansamos na certeza de que o Senhor que abriu poços em Beer e abateu os muros de Hesbom guia o Seu povo soberanamente até a chegada triunfante na pátria celestial.",
-      "kind": "theology",
-      "scriptureRefs": [
-        "Nm 21:9",
-        "Jo 3:14-15",
-        "Rm 8:31-37"
-      ],
-      "confidence": "high",
-      "collapsible": false
+      id: "oracao-final",
+      title: "22. Oração final",
+      kind: "prayer",
+      confidence: "high",
+      scriptureRefs: ["Números 21:4-9", "João 3:14-17"],
+      body: `Senhor Deus, reconheço que muitas vezes o cansaço e a frustração podem afetar minha maneira de falar e agir. Perdoa-me quando desprezo tua provisão ou deixo de confiar em tua Palavra. Ensina-me a confessar meus erros com sinceridade e a depender de ti.
+
+Obrigado porque as Escrituras apontam para Jesus Cristo, teu Filho, levantado para que todo aquele que nele crê tenha vida eterna. Guarda-me de confiar em objetos, fórmulas ou méritos próprios. Dá-me humildade para aprender, discernimento para interpretar tua Palavra corretamente e amor para ensiná-la sem distorções. Em nome de Jesus. Amém.`
     }
   ]
 };
