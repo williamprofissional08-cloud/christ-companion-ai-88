@@ -69,6 +69,46 @@ export const secondSamuel17Study: StudyContent = {
       "2 Samuel 17:23-29"
     ],
     "body": "**Leitura bíblica:** leia 2 Samuel 17:23-29 diretamente em sua Bíblia. O comentário a seguir é autoral e não substitui uma tradução bíblica.\n\n**Observação do texto:** Aitofel morre após perceber que seu conselho foi rejeitado. Aliados levam alimento e recursos para Davi e seu povo. A ajuda concreta sustenta os vulneráveis durante a crise.\n\n**Interpretação:** observe os personagens, as ações, os contrastes, as repetições e as consequências narradas. Diferencie o que o narrador afirma daquilo que os personagens dizem. A passagem deve ser compreendida no desenvolvimento do capítulo e na história da aliança davídica.\n\n**Contexto histórico e literário:** Absalão precisa decidir como perseguir Davi. Aitofel propõe um ataque imediato; Husai recomenda mobilização ampla e ganha tempo. O narrador atribui o desfecho à providência divina, sem apagar as decisões, a coragem e os riscos humanos.\n\n**Conexão bíblico-teológica:** a história de Davi não exige idealizar o rei. A esperança bíblica aponta para o Filho de Davi, Jesus Cristo, cujo reino manifesta justiça e serviço. O Novo Testamento não autoriza transferir automaticamente para a igreja as guerras, punições ou disputas políticas da monarquia de Israel.\n\n**Aplicação:** pratique verdade, justiça, humildade e cuidado com o próximo. Não confunda sucesso estratégico com aprovação moral de Deus; avalie atitudes à luz do caráter de Cristo."
+  },
+  {
+    "id": "2sm-17-complemento-1",
+    "title": "A comparação entre os planos de Aitofel e Husai",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 17"
+    ],
+    "body": "**Análise:** O narrador atribui a frustração do conselho de Aitofel à providência divina, mas descreve também decisões, mensageiros, riscos e provisões.\n\n**Leitura cuidadosa:** A comparação entre os planos de Aitofel e Husai. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-17-complemento-2",
+    "title": "Providência divina e responsabilidade humana",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 17"
+    ],
+    "body": "**Análise:** O narrador atribui a frustração do conselho de Aitofel à providência divina, mas descreve também decisões, mensageiros, riscos e provisões.\n\n**Leitura cuidadosa:** Providência divina e responsabilidade humana. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-17-complemento-3",
+    "title": "A coragem dos mensageiros discretos",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 17"
+    ],
+    "body": "**Análise:** O narrador atribui a frustração do conselho de Aitofel à providência divina, mas descreve também decisões, mensageiros, riscos e provisões.\n\n**Leitura cuidadosa:** A coragem dos mensageiros discretos. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-17-complemento-4",
+    "title": "O cuidado material como solidariedade",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 17"
+    ],
+    "body": "**Análise:** O narrador atribui a frustração do conselho de Aitofel à providência divina, mas descreve também decisões, mensageiros, riscos e provisões.\n\n**Leitura cuidadosa:** O cuidado material como solidariedade. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
   }
-]
+
 };
