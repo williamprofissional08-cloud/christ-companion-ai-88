@@ -45,9 +45,9 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
     <nav aria-label="Navegação principal" className="flex flex-col gap-1">
       {ALL_NAV.map((item) => (
         <Link key={item.to} to={item.to} onClick={onNavigate}
-          className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-sidebar-foreground/80 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-          activeProps={{ className: "flex items-center gap-3 rounded-xl bg-sidebar-accent px-3 py-2.5 text-sm font-semibold text-sidebar-accent-foreground" }}>
-          <item.icon className="size-4.5 shrink-0" aria-hidden />{item.label}
+          className="group flex min-h-11 items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-sidebar-foreground/80 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground dark:text-slate-200/90 dark:hover:bg-blue-950/80 dark:hover:text-white"
+          activeProps={{ className: "group flex min-h-11 items-center gap-3 rounded-xl bg-sidebar-accent px-3.5 py-2.5 text-sm font-semibold text-sidebar-accent-foreground dark:bg-blue-900/70 dark:text-white" }}>
+          <item.icon className="size-5 shrink-0 text-sidebar-foreground/70 dark:text-blue-200" aria-hidden />{item.label}
         </Link>
       ))}
     </nav>
@@ -80,18 +80,18 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
 
   return (
     <div className="app-ambient flex min-h-screen min-w-0 bg-sky-50/70 dark:bg-background">
-      <aside className="hidden w-64 shrink-0 flex-col border-r border-sidebar-border bg-sidebar px-3 py-5 lg:sticky lg:top-0 lg:flex lg:h-screen">
-        <Link to="/inicio" className="mb-6 flex items-center gap-3 px-2">
-          <img src={logo} alt="" width={40} height={40} className="size-10 shrink-0 object-contain" />
-          <span className="font-display text-base font-semibold">Caminho Divino</span>
+      <aside className="hidden w-72 shrink-0 flex-col border-r border-sidebar-border bg-sidebar px-4 py-6 dark:border-slate-800 dark:bg-[#08182c] lg:sticky lg:top-0 lg:flex lg:h-screen">
+        <Link to="/inicio" className="mb-7 flex items-center gap-3 rounded-xl px-2 py-1">
+          <img src={logo} alt="" width={42} height={42} className="size-10 shrink-0 object-contain" />
+          <span className="font-display text-base font-semibold tracking-tight">Caminho Divino</span>
         </Link>
         <div className="min-h-0 flex-1 overflow-y-auto"><NavLinks /></div>
-        <div className="mt-4 flex flex-col gap-1 border-t border-sidebar-border pt-3">
-          <Button variant="ghost" size="sm" onClick={toggle} className="justify-start gap-3 rounded-xl px-3">
-            {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
-            {theme === "dark" ? "Modo claro" : "Modo escuro"}
+        <div className="mt-4 flex flex-col gap-1 border-t border-sidebar-border pt-3 dark:border-slate-800">
+          <Button variant="ghost" size="sm" onClick={toggle} aria-label={theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"} className="h-12 justify-between rounded-xl bg-blue-50 px-3.5 text-left dark:bg-blue-950/70 dark:text-blue-100 dark:hover:bg-blue-900/80">
+            <span className="flex items-center gap-3"><Moon className="size-5 text-blue-700 dark:text-blue-300" />{theme === "dark" ? "Modo claro" : "Modo escuro"}</span>
+            <span aria-hidden="true" className={`flex h-6 w-11 items-center rounded-full p-0.5 transition-colors ${theme === "dark" ? "bg-blue-500" : "bg-slate-300"}`}><span className={`size-5 rounded-full bg-white shadow transition-transform ${theme === "dark" ? "translate-x-5" : "translate-x-0"}`} /></span>
           </Button>
-          <Button variant="ghost" size="sm" onClick={signOut} className="justify-start gap-3 rounded-xl px-3"><LogOut className="size-4" /> Sair</Button>
+          <Button variant="ghost" size="sm" onClick={signOut} className="h-11 justify-start gap-3 rounded-xl px-3.5 text-sidebar-foreground/85 hover:bg-red-50 hover:text-red-700 dark:text-slate-200 dark:hover:bg-red-950/40 dark:hover:text-red-200"><LogOut className="size-5" /> Sair</Button>
         </div>
       </aside>
 
@@ -105,18 +105,18 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
                     <MoreHorizontal className="size-4" /> Mais
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="left" className="w-[min(20rem,85vw)] overflow-y-auto bg-sidebar px-4 py-6">
-                  <Link to="/inicio" onClick={() => setOpen(false)} className="mb-6 flex items-center gap-3 px-2">
+                <SheetContent side="left" className="flex w-[min(21rem,88vw)] flex-col overflow-y-auto border-sidebar-border bg-sidebar px-4 py-6 dark:border-slate-800 dark:bg-[#08182c]">
+                  <Link to="/inicio" onClick={() => setOpen(false)} className="mb-7 flex items-center gap-3 px-2 py-1">
                     <img src={logo} alt="" width={36} height={36} className="size-9" />
                     <span className="font-display font-semibold">Caminho Divino</span>
                   </Link>
-                  <NavLinks onNavigate={() => setOpen(false)} />
-                  <div className="mt-6 flex flex-col gap-2 border-t border-sidebar-border pt-4">
-                    <Button variant="ghost" size="sm" onClick={toggle} className="justify-start gap-3">
-                      {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
-                      {theme === "dark" ? "Modo claro" : "Modo escuro"}
+                  <div className="min-h-0 flex-1"><NavLinks onNavigate={() => setOpen(false)} /></div>
+                  <div className="mt-6 flex flex-col gap-1 border-t border-sidebar-border pt-4 dark:border-slate-800">
+                    <Button variant="ghost" size="sm" onClick={toggle} aria-label={theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"} className="h-12 justify-between rounded-xl bg-blue-50 px-3.5 dark:bg-blue-950/70 dark:text-blue-100 dark:hover:bg-blue-900/80">
+                      <span className="flex items-center gap-3"><Moon className="size-5 text-blue-700 dark:text-blue-300" />{theme === "dark" ? "Modo claro" : "Modo escuro"}</span>
+                      <span aria-hidden="true" className={`flex h-6 w-11 items-center rounded-full p-0.5 transition-colors ${theme === "dark" ? "bg-blue-500" : "bg-slate-300"}`}><span className={`size-5 rounded-full bg-white shadow transition-transform ${theme === "dark" ? "translate-x-5" : "translate-x-0"}`} /></span>
                     </Button>
-                    <Button variant="ghost" size="sm" onClick={signOut} className="justify-start gap-3"><LogOut className="size-4" /> Sair</Button>
+                    <Button variant="ghost" size="sm" onClick={signOut} className="h-11 justify-start gap-3 rounded-xl px-3.5 text-sidebar-foreground/85 hover:bg-red-50 hover:text-red-700 dark:text-slate-200 dark:hover:bg-red-950/40 dark:hover:text-red-200"><LogOut className="size-5" /> Sair</Button>
                   </div>
                 </SheetContent>
               </Sheet>

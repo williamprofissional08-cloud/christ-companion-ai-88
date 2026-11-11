@@ -194,9 +194,10 @@ function ConfiguracoesPage() {
 
   return (
     <AppShell title="Configurações" subtitle="Sua rotina, seus lembretes, seu ritmo">
-      <div className="space-y-4">
-        <ProfileEditor />
-        <Card className="border-primary/20 bg-primary/5 p-5 shadow-soft">
+      <div className="mx-auto w-full max-w-6xl space-y-5 pb-8 sm:space-y-6">
+        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="lg:col-span-2"><ProfileEditor /></div>
+        <Card className="border-primary/20 bg-gradient-to-br from-primary/10 via-background to-background p-5 shadow-soft sm:p-6 lg:col-span-2">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-start gap-3">
                 <div className="rounded-xl bg-primary/10 p-2 text-primary">
@@ -216,12 +217,15 @@ function ConfiguracoesPage() {
               </Button>
             </div>
         </Card>
-        <Card className="border-border/50 p-6 shadow-soft">
-          <h2 className="font-display text-lg font-semibold">Lembretes</h2>
+        <Card className="overflow-hidden rounded-2xl border-border/60 bg-card p-5 shadow-soft sm:p-6">
+          <div className="mb-4 border-b border-border/60 pb-4">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-primary">Sua rotina diária</p>
+          <h2 className="font-display text-xl font-semibold">Lembretes</h2>
           <p className="text-sm text-muted-foreground">
             Enviamos avisos de oração, devocional e leitura no horário escolhido, enquanto o app
             estiver aberto em uma aba.
           </p>
+          </div>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="hora">Horário</Label>
@@ -331,8 +335,11 @@ function ConfiguracoesPage() {
 
         </Card>
 
-        <Card className="border-border/50 p-6 shadow-soft">
-          <h2 className="font-display text-lg font-semibold">Leitura e desafio</h2>
+        <Card className="overflow-hidden rounded-2xl border-border/60 bg-card p-5 shadow-soft sm:p-6">
+          <div className="mb-4 border-b border-border/60 pb-4">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-primary">Crescimento espiritual</p>
+          <h2 className="font-display text-xl font-semibold">Leitura e desafio</h2>
+          </div>
           <div className="mt-4 space-y-2">
             <Label>Duração da leitura diária</Label>
             <div className="flex flex-wrap gap-2">
@@ -370,8 +377,11 @@ function ConfiguracoesPage() {
           </div>
         </Card>
 
-        <Card className="border-border/50 p-6 shadow-soft">
-          <h2 className="font-display text-lg font-semibold">Interesses e objetivo</h2>
+        <Card className="overflow-hidden rounded-2xl border-border/60 bg-card p-5 shadow-soft sm:p-6">
+          <div className="mb-4 border-b border-border/60 pb-4">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-primary">Personalização</p>
+          <h2 className="font-display text-xl font-semibold">Interesses e objetivo</h2>
+          </div>
           <div className="mt-4 space-y-2">
             <Label htmlFor="objetivo">Objetivo espiritual diário</Label>
             <Input
@@ -409,12 +419,15 @@ function ConfiguracoesPage() {
           </div>
         </Card>
 
-        <Button onClick={() => mutation.mutate(undefined)} disabled={mutation.isPending}>
+        <Button className="w-full rounded-xl shadow-soft sm:w-auto lg:col-span-2 lg:justify-self-end" onClick={() => mutation.mutate(undefined)} disabled={mutation.isPending}>
           {mutation.isPending ? "Salvando..." : "Salvar configurações"}
         </Button>
 
-        <Card className="border-border/50 p-6 shadow-soft">
-          <h2 className="font-display text-lg font-semibold">Conta e acesso</h2>
+        <Card className="overflow-hidden rounded-2xl border-border/60 bg-card p-5 shadow-soft sm:p-6 lg:col-span-2">
+          <div className="mb-4 border-b border-border/60 pb-4">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-primary">Segurança</p>
+          <h2 className="font-display text-xl font-semibold">Conta e acesso</h2>
+          </div>
           <p className="mt-2 text-sm text-muted-foreground">
             Conta conectada: <span className="font-medium text-foreground">{user?.email ?? "E-mail indisponível"}</span>
           </p>
@@ -450,6 +463,7 @@ function ConfiguracoesPage() {
             {signingOut ? "Saindo..." : "Sair e trocar de conta"}
           </Button>
         </Card>
+        </div>
       </div>
     </AppShell>
   );
