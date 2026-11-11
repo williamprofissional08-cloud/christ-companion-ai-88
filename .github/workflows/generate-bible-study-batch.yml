@@ -186,7 +186,7 @@ jobs:
 
           echo "Próximo lote: $NEXT_BOOK_SLUG capítulos $NEXT_START_CHAPTER–$((NEXT_START_CHAPTER + NEXT_BATCH_SIZE - 1)) (total do livro: $NEXT_BOOK_CHAPTERS)."
           gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/workflows/generate-bible-study-batch.yml/dispatches" \
-            -f ref=main \
+            -f "ref=$TARGET_BRANCH" \
             -f "inputs[book_slug]=$NEXT_BOOK_SLUG" \
             -f "inputs[start_chapter]=$NEXT_START_CHAPTER" \
             -f "inputs[batch_size]=$NEXT_BATCH_SIZE" \
