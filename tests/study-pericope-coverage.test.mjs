@@ -189,6 +189,16 @@ const curatedBatch = [
   { book: "1 Crônicas", chapter: 27, verseCount: 34, slug: "biblia-1-cronicas-cap-27", exportName: "firstChronicles27Study", file: "1-chronicles-27-study.ts" },
   { book: "1 Crônicas", chapter: 28, verseCount: 21, slug: "biblia-1-cronicas-cap-28", exportName: "firstChronicles28Study", file: "1-chronicles-28-study.ts" },
   { book: "1 Crônicas", chapter: 29, verseCount: 30, slug: "biblia-1-cronicas-cap-29", exportName: "firstChronicles29Study", file: "1-chronicles-29-study.ts" },
+  { book: "2 Crônicas", chapter: 1, verseCount: 17, slug: "biblia-2-cronicas-cap-1", exportName: "secondChronicles1Study", file: "2-chronicles-1-study.ts" },
+  { book: "2 Crônicas", chapter: 2, verseCount: 18, slug: "biblia-2-cronicas-cap-2", exportName: "secondChronicles2Study", file: "2-chronicles-2-study.ts" },
+  { book: "2 Crônicas", chapter: 3, verseCount: 17, slug: "biblia-2-cronicas-cap-3", exportName: "secondChronicles3Study", file: "2-chronicles-3-study.ts" },
+  { book: "2 Crônicas", chapter: 4, verseCount: 22, slug: "biblia-2-cronicas-cap-4", exportName: "secondChronicles4Study", file: "2-chronicles-4-study.ts" },
+  { book: "2 Crônicas", chapter: 5, verseCount: 14, slug: "biblia-2-cronicas-cap-5", exportName: "secondChronicles5Study", file: "2-chronicles-5-study.ts" },
+  { book: "2 Crônicas", chapter: 6, verseCount: 42, slug: "biblia-2-cronicas-cap-6", exportName: "secondChronicles6Study", file: "2-chronicles-6-study.ts" },
+  { book: "2 Crônicas", chapter: 7, verseCount: 22, slug: "biblia-2-cronicas-cap-7", exportName: "secondChronicles7Study", file: "2-chronicles-7-study.ts" },
+  { book: "2 Crônicas", chapter: 8, verseCount: 18, slug: "biblia-2-cronicas-cap-8", exportName: "secondChronicles8Study", file: "2-chronicles-8-study.ts" },
+  { book: "2 Crônicas", chapter: 9, verseCount: 31, slug: "biblia-2-cronicas-cap-9", exportName: "secondChronicles9Study", file: "2-chronicles-9-study.ts" },
+  { book: "2 Crônicas", chapter: 10, verseCount: 19, slug: "biblia-2-cronicas-cap-10", exportName: "secondChronicles10Study", file: "2-chronicles-10-study.ts" },
 ];
 
 async function readContent(path) {
