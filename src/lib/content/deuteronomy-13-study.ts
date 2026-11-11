@@ -36,9 +36,9 @@ export const deuteronomy13Study: StudyContent = {
     kind: "scripture",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 13:13:1-5"
+      "Deuteronômio 13:1-5"
     ],
-    body: "**Leitura orientada — Deuteronômio 13:13:1-5**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMesmo que um sinal anunciado aconteça, Israel não deve seguir quem o convide a servir outros deuses. O texto apresenta a situação como prova da lealdade do povo ao Senhor.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A experiência extraordinária não é critério suficiente de verdade. A mensagem deve ser avaliada pela revelação já recebida. A pena civil prevista pertence à antiga ordem de Israel e não é mandato para cristãos executarem pessoas.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 13:1-5**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMesmo que um sinal anunciado aconteça, Israel não deve seguir quem o convide a servir outros deuses. O texto apresenta a situação como prova da lealdade do povo ao Senhor.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A experiência extraordinária não é critério suficiente de verdade. A mensagem deve ser avaliada pela revelação já recebida. A pena civil prevista pertence à antiga ordem de Israel e não é mandato para cristãos executarem pessoas.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-2",
@@ -46,9 +46,9 @@ export const deuteronomy13Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 13:13:6-11"
+      "Deuteronômio 13:6-11"
     ],
-    body: "**Leitura orientada — Deuteronômio 13:13:6-11**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO texto considera a sedução promovida por irmão, filho, cônjuge ou amigo íntimo. A proximidade afetiva não torna legítimo abandonar o Senhor.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A passagem ressalta que a fidelidade a Deus não pode ser subordinada à pressão de relações pessoais. As sanções descritas refletem o sistema judicial teocrático de Israel e não autorizam denúncia abusiva, coerção ou violência.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 13:6-11**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO texto considera a sedução promovida por irmão, filho, cônjuge ou amigo íntimo. A proximidade afetiva não torna legítimo abandonar o Senhor.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A passagem ressalta que a fidelidade a Deus não pode ser subordinada à pressão de relações pessoais. As sanções descritas refletem o sistema judicial teocrático de Israel e não autorizam denúncia abusiva, coerção ou violência.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-3",
@@ -56,9 +56,9 @@ export const deuteronomy13Study: StudyContent = {
     kind: "context",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 13:13:12-18"
+      "Deuteronômio 13:12-18"
     ],
-    body: "**Leitura orientada — Deuteronômio 13:13:12-18**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nSe surgir notícia de uma cidade que abandonou o Senhor, a comunidade deve investigar cuidadosamente antes de agir. O texto inclui julgamento e consequências severas no contexto da aliança.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A exigência de investigação impede agir apenas por rumor. A aplicação contemporânea deve rejeitar linchamentos e perseguição: comunidades cristãs tratam desvios por ensino, discernimento, disciplina e proteção das pessoas, segundo o Novo Testamento.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 13:12-18**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nSe surgir notícia de uma cidade que abandonou o Senhor, a comunidade deve investigar cuidadosamente antes de agir. O texto inclui julgamento e consequências severas no contexto da aliança.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A exigência de investigação impede agir apenas por rumor. A aplicação contemporânea deve rejeitar linchamentos e perseguição: comunidades cristãs tratam desvios por ensino, discernimento, disciplina e proteção das pessoas, segundo o Novo Testamento.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   }
 ]
 };
