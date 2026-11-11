@@ -3,13 +3,18 @@ name: Generate curated Bible study batch
 on:
   workflow_dispatch:
     inputs:
-      start_chapter:
-        description: "Primeiro capítulo de Gênesis a gerar"
+      book_slug:
+        description: "Slug do livro em bible-books.ts"
         required: true
-        default: "24"
+        default: "numeros"
+        type: string
+      start_chapter:
+        description: "Capítulo inicial a examinar"
+        required: true
+        default: "21"
         type: string
       batch_size:
-        description: "Quantidade de capítulos consecutivos (1 a 7)"
+        description: "Quantidade de capítulos a examinar (1 a 7)"
         required: true
         default: "7"
         type: string
@@ -21,7 +26,7 @@ on:
       target_branch:
         description: "Branch de trabalho já criada"
         required: true
-        default: "codex/genesis-24-30"
+        default: "codex/universal-bible-study-automation"
         type: string
 
 permissions:
@@ -30,33 +35,31 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: genesis-study-batch-${{ inputs.target_branch }}
+  group: bible-study-batch-${{ inputs.target_branch }}
   cancel-in-progress: false
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - name: Checkout branch de trabalho
         uses: actions/checkout@v4
         with:
           ref: ${{ inputs.target_branch }}
           fetch-depth: 0
-
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Gerar estudos em sequência
+      - name: Gerar somente capítulos ausentes
         env:
           GH_TOKEN: ${{ github.token }}
           MODEL: ${{ inputs.model }}
+          BOOK_SLUG: ${{ inputs.book_slug }}
           START_CHAPTER: ${{ inputs.start_chapter }}
           BATCH_SIZE: ${{ inputs.batch_size }}
         run: python scripts/generate-bible-study-batch.py
-
       - name: Validar alterações
         run: |
           set -euo pipefail
@@ -66,37 +69,32 @@ jobs:
           npm run lint -- --rule 'prettier/prettier: off'
           npm run build
           npm test
-
       - name: Commit e push do lote
-        id: commit
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/lib/content
           if git diff --cached --quiet; then
-            echo "Nenhum estudo novo foi gerado."
-            exit 1
+            echo "Nenhum estudo novo; nada para enviar."
+            exit 0
           fi
-          git commit -m "content(bible): add Genesis ${{ inputs.start_chapter }} batch"
+          git commit -m "content(bible): add ${{ inputs.book_slug }} study batch"
           git push origin "${{ inputs.target_branch }}"
-          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
       - name: Abrir ou atualizar PR do lote
         env:
           GH_TOKEN: ${{ github.token }}
           TARGET_BRANCH: ${{ inputs.target_branch }}
+          BOOK_SLUG: ${{ inputs.book_slug }}
           START_CHAPTER: ${{ inputs.start_chapter }}
           BATCH_SIZE: ${{ inputs.batch_size }}
         run: |
           set -euo pipefail
-          END_CHAPTER=$((START_CHAPTER + BATCH_SIZE - 1))
-          TITLE="Estudos bíblicos profundos: Gênesis ${START_CHAPTER}–${END_CHAPTER}"
-          BODY=$(printf '## Lote de estudos\n\n- Capítulos: Gênesis %s–%s\n- Gerados individualmente em sequência, sem sobrescrever estudos existentes.\n- Validações: TypeScript, ESLint, build e testes.\n- Revisão teológica/editorial humana necessária antes do merge.\n\n**Esta PR não deve ser mesclada automaticamente.**' "$START_CHAPTER" "$END_CHAPTER")
+          TITLE="Estudos bíblicos: ${BOOK_SLUG} — capítulos ${START_CHAPTER}+"
+          BODY=$(printf '## Lote de estudos bíblicos\n\n- Livro: %s\n- Faixa examinada: %s–%s\n- Capítulos existentes preservados; somente ausentes são criados.\n- Validações: TypeScript, ESLint, build e testes.\n- Revisão teológica/editorial humana obrigatória.\n\n**Não mesclar automaticamente.**' "$BOOK_SLUG" "$START_CHAPTER" "$((START_CHAPTER + BATCH_SIZE - 1))")
           EXISTING=$(gh pr list --head "$TARGET_BRANCH" --base main --json number --jq '.[0].number')
           if [ -n "$EXISTING" ]; then
             gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY"
-            echo "PR existente atualizada: #$EXISTING"
           else
             gh pr create --base main --head "$TARGET_BRANCH" --title "$TITLE" --body "$BODY"
           fi
