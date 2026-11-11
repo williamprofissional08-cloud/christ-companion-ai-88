@@ -12,6 +12,51 @@ import { Label } from "@/components/ui/label";
 
 type Profile = { display_name: string | null; avatar_url: string | null };
 
+const MAX_AVATAR_BYTES = 5 * 1024 * 1024;
+const SUPPORTED_AVATAR_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
+
+async function prepareAvatarFile(file: File): Promise<File> {
+  const extension = file.name.toLowerCase().split(".").pop() ?? "";
+  const isImage = file.type.startsWith("image/") || ["heic", "heif", "avif"].includes(extension);
+  if (!isImage) throw new Error("Selecione um arquivo de imagem.");
+  if (SUPPORTED_AVATAR_TYPES.has(file.type) && file.size <= MAX_AVATAR_BYTES) return file;
+
+  const objectUrl = URL.createObjectURL(file);
+  try {
+    const image = new Image();
+    image.src = objectUrl;
+    await new Promise<void>((resolve, reject) => {
+      image.onload = () => resolve();
+      image.onerror = () => reject(new Error("Este formato de foto não pôde ser aberto neste navegador. Tente salvar a imagem como JPG."));
+    });
+
+    const maxDimension = 1200;
+    const scale = Math.min(1, maxDimension / Math.max(image.naturalWidth, image.naturalHeight));
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
+    canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+    const context = canvas.getContext("2d");
+    if (!context) throw new Error("Não foi possível preparar a foto. Tente outra imagem.");
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+    const blob = await new Promise<Blob>((resolve, reject) => {
+      canvas.toBlob(
+        (result) => result ? resolve(result) : reject(new Error("Não foi possível converter a foto para JPG.")),
+        "image/jpeg",
+        0.86,
+      );
+    });
+    return new File([blob], `${file.name.replace(/\.[^.]+$/, "") || "foto"}.jpg`, {
+      type: "image/jpeg",
+      lastModified: Date.now(),
+    });
+  } finally {
+    URL.revokeObjectURL(objectUrl);
+  }
+}
+
 export function ProfileEditor() {
   const { user } = useAuth();
   const queryClient = useQueryClient();
@@ -54,20 +99,15 @@ export function ProfileEditor() {
 
   async function uploadAvatar(file?: File) {
     if (!user || !file) return;
-    if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
-      toast.error("Use uma imagem JPG, PNG ou WebP.");
-      return;
-    }
-    if (file.size > 5 * 1024 * 1024) {
-      toast.error("A imagem deve ter no máximo 5 MB.");
-      return;
-    }
     setUploading(true);
     try {
-      const extension = file.type === "image/png" ? "png" : file.type === "image/webp" ? "webp" : "jpg";
-      const path = user.id + "/" + crypto.randomUUID() + "." + extension;
+      const avatarFile = await prepareAvatarFile(file);
+      if (avatarFile.size > MAX_AVATAR_BYTES) {
+        throw new Error("A foto precisa ter no máximo 5 MB mesmo depois da otimização. Escolha uma imagem menor.");
+      }
+      const path = user.id + "/" + crypto.randomUUID() + ".jpg";
       const { error: uploadError } = await supabase.storage.from("profile-avatars")
-        .upload(path, file, { contentType: file.type, upsert: false });
+        .upload(path, avatarFile, { contentType: "image/jpeg", upsert: false });
       if (uploadError) throw uploadError;
       const { data } = supabase.storage.from("profile-avatars").getPublicUrl(path);
       const { error: profileError } = await supabase.from("profiles")
@@ -94,13 +134,14 @@ export function ProfileEditor() {
           <AvatarFallback><UserRound className="size-8" /></AvatarFallback>
         </Avatar>
         <div className="space-y-2">
-          <input ref={fileRef} type="file" accept="image/jpeg,image/png,image/webp" className="hidden"
+          <input ref={fileRef} type="file" accept="image/*" className="sr-only"
+            aria-label="Selecionar foto de perfil" disabled={uploading}
             onChange={(event) => void uploadAvatar(event.target.files?.[0])} />
           <Button type="button" variant="outline" size="sm" disabled={uploading}
             onClick={() => fileRef.current?.click()}>
             <Camera className="mr-2 size-4" />{uploading ? "Enviando foto..." : "Alterar foto"}
           </Button>
-          <p className="text-xs text-muted-foreground">JPG, PNG ou WebP · até 5 MB</p>
+          <p className="text-xs text-muted-foreground">Fotos do celular, JPG, PNG ou WebP · até 5 MB após otimização</p>
         </div>
       </div>
       <div className="mt-5 space-y-2">
