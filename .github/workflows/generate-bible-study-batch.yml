@@ -126,31 +126,70 @@ jobs:
           TARGET_BRANCH: ${{ inputs.target_branch }}
         run: |
           set -euo pipefail
-          TOTAL_CHAPTERS=$(python - <<'PY'
+          python - <<'PY' >> "$GITHUB_ENV"
+          import os
           import re
           from pathlib import Path
+
           source = Path("src/lib/content/bible-books.ts").read_text(encoding="utf-8")
-          for item in re.findall(r"\{([^{}]*\bslug\s*:[^{}]*)\}", source, re.S):
-              slug = re.search(r'\bslug\s*:\s*"([^"]+)"', item)
-              chapters = re.search(r'\bchapters\s*:\s*(\d+)', item)
-              if slug and chapters and slug.group(1) == __import__("os").environ["BOOK_SLUG"]:
-                  print(chapters.group(1))
-                  break
+          books = []
+          for item in re.findall(r"\\{([^{}]*\\bslug\\s*:[^{}]*)\\}", source, re.S):
+              def field(pattern):
+                  match = re.search(pattern, item)
+                  return match.group(1) if match else None
+              slug = field(r'\\bslug\\s*:\\s*"([^"]+)"')
+              chapters = field(r"\\bchapters\\s*:\\s*(\\d+)")
+              order = field(r"\\border\\s*:\\s*(\\d+)")
+              if slug and chapters and order:
+                  books.append({"slug": slug, "chapters": int(chapters), "order": int(order)})
+          books.sort(key=lambda book: book["order"])
+          if len(books) != 66:
+              raise SystemExit(f"Índice bíblico inválido: esperados 66 livros, encontrados {len(books)}.")
+
+          current_index = next((i for i, book in enumerate(books) if book["slug"] == os.environ["BOOK_SLUG"]), None)
+          if current_index is None:
+              raise SystemExit(f"Livro atual não encontrado: {os.environ['BOOK_SLUG']}.")
+          start = int(os.environ["START_CHAPTER"])
+          batch = int(os.environ["BATCH_SIZE"])
+          current = books[current_index]
+          if start < 1 or start > current["chapters"] or not 1 <= batch <= 7:
+              raise SystemExit("Faixa atual inválida; continuação interrompida.")
+
+          actual_end = min(start + batch - 1, current["chapters"])
+          if actual_end < current["chapters"]:
+              next_book = current
+              next_start = actual_end + 1
+          elif current_index + 1 < len(books):
+              next_book = books[current_index + 1]
+              next_start = 1
           else:
-              raise SystemExit("Livro não encontrado para continuação automática.")
+              print("BIBLE_FINISHED=true")
+              print(f"NEXT_BOOK_SLUG={current['slug']}")
+              print("NEXT_START_CHAPTER=1")
+              print("NEXT_BATCH_SIZE=1")
+              print(f"echo='Bíblia concluída: {current['slug']} {current['chapters']}/ {current['chapters']}.'")
+              raise SystemExit(0)
+
+          next_batch = min(batch, next_book["chapters"] - next_start + 1)
+          print("BIBLE_FINISHED=false")
+          print(f"NEXT_BOOK_SLUG={next_book['slug']}")
+          print(f"NEXT_START_CHAPTER={next_start}")
+          print(f"NEXT_BATCH_SIZE={next_batch}")
+          print(f"NEXT_BOOK_CHAPTERS={next_book['chapters']}")
+          print(f"NEXT_BOOK_ORDER={next_book['order']}")
           PY
-          )
-          NEXT_START=$((START_CHAPTER + BATCH_SIZE))
-          if [ "$NEXT_START" -gt "$TOTAL_CHAPTERS" ]; then
-            echo "Livro concluído: $BOOK_SLUG ($TOTAL_CHAPTERS capítulos)."
+
+          if [ "$BIBLE_FINISHED" = "true" ]; then
+            echo "Todos os 66 livros e 1.189 capítulos foram percorridos."
             exit 0
           fi
-          echo "Agendando próximo lote: $BOOK_SLUG capítulo $NEXT_START."
+
+          echo "Próximo lote: $NEXT_BOOK_SLUG capítulos $NEXT_START_CHAPTER–$((NEXT_START_CHAPTER + NEXT_BATCH_SIZE - 1)) (total do livro: $NEXT_BOOK_CHAPTERS)."
           gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/workflows/generate-bible-study-batch.yml/dispatches" \
             -f ref=main \
-            -f "inputs[book_slug]=$BOOK_SLUG" \
-            -f "inputs[start_chapter]=$NEXT_START" \
-            -f "inputs[batch_size]=$BATCH_SIZE" \
+            -f "inputs[book_slug]=$NEXT_BOOK_SLUG" \
+            -f "inputs[start_chapter]=$NEXT_START_CHAPTER" \
+            -f "inputs[batch_size]=$NEXT_BATCH_SIZE" \
             -f "inputs[model]=$MODEL" \
             -f "inputs[target_branch]=$TARGET_BRANCH" \
             -f "inputs[auto_continue]=true"
