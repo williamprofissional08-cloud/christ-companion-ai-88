@@ -180,6 +180,15 @@ const curatedBatch = [
   { book: "1 Crônicas", chapter: 18, verseCount: 17, slug: "biblia-1-cronicas-cap-18", exportName: "firstChronicles18Study", file: "1-chronicles-18-study.ts" },
   { book: "1 Crônicas", chapter: 19, verseCount: 19, slug: "biblia-1-cronicas-cap-19", exportName: "firstChronicles19Study", file: "1-chronicles-19-study.ts" },
   { book: "1 Crônicas", chapter: 20, verseCount: 8, slug: "biblia-1-cronicas-cap-20", exportName: "firstChronicles20Study", file: "1-chronicles-20-study.ts" },
+  { book: "1 Crônicas", chapter: 21, verseCount: 30, slug: "biblia-1-cronicas-cap-21", exportName: "firstChronicles21Study", file: "1-chronicles-21-study.ts" },
+  { book: "1 Crônicas", chapter: 22, verseCount: 19, slug: "biblia-1-cronicas-cap-22", exportName: "firstChronicles22Study", file: "1-chronicles-22-study.ts" },
+  { book: "1 Crônicas", chapter: 23, verseCount: 32, slug: "biblia-1-cronicas-cap-23", exportName: "firstChronicles23Study", file: "1-chronicles-23-study.ts" },
+  { book: "1 Crônicas", chapter: 24, verseCount: 31, slug: "biblia-1-cronicas-cap-24", exportName: "firstChronicles24Study", file: "1-chronicles-24-study.ts" },
+  { book: "1 Crônicas", chapter: 25, verseCount: 31, slug: "biblia-1-cronicas-cap-25", exportName: "firstChronicles25Study", file: "1-chronicles-25-study.ts" },
+  { book: "1 Crônicas", chapter: 26, verseCount: 32, slug: "biblia-1-cronicas-cap-26", exportName: "firstChronicles26Study", file: "1-chronicles-26-study.ts" },
+  { book: "1 Crônicas", chapter: 27, verseCount: 34, slug: "biblia-1-cronicas-cap-27", exportName: "firstChronicles27Study", file: "1-chronicles-27-study.ts" },
+  { book: "1 Crônicas", chapter: 28, verseCount: 21, slug: "biblia-1-cronicas-cap-28", exportName: "firstChronicles28Study", file: "1-chronicles-28-study.ts" },
+  { book: "1 Crônicas", chapter: 29, verseCount: 30, slug: "biblia-1-cronicas-cap-29", exportName: "firstChronicles29Study", file: "1-chronicles-29-study.ts" },
 ];
 
 async function readContent(path) {
