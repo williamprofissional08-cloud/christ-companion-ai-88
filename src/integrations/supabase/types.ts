@@ -1624,6 +1624,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      complete_lesson: { Args: { _lesson_id: string }; Returns: string }
       has_premium: { Args: { _user_id: string }; Returns: boolean }
       has_role: {
         Args: {
