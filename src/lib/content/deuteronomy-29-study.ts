@@ -16,7 +16,7 @@ export const deuteronomy29Study: StudyContent = {
   {
     id: "secao-1",
     title: "Memória dos atos do Senhor",
-    kind: scripture,
+    kind: "scripture",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 29:1-9"],
     body: "**Leitura orientada — Deuteronômio 29:1-9**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nMoisés recorda a libertação, a condução pelo deserto e as vitórias concedidas. O povo é convocado a perceber o sentido espiritual da história e a guardar as palavras da aliança. Memória bíblica não é nostalgia: fundamenta fidelidade presente.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** Moisés recorda a libertação, a condução pelo deserto e as vitórias concedidas. O povo é convocado a perceber o sentido espiritual da história e a guardar as palavras da aliança. Memória bíblica não é nostalgia: fundamenta fidelidade presente. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -24,7 +24,7 @@ export const deuteronomy29Study: StudyContent = {
   {
     id: "secao-2",
     title: "Toda a comunidade incluída",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 29:10-15"],
     body: "**Leitura orientada — Deuteronômio 29:10-15**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nLíderes, famílias, estrangeiros e pessoas em diferentes funções estão diante do Senhor. A aliança não é privilégio de uma elite; compromete a comunidade e também aponta para gerações futuras.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** Líderes, famílias, estrangeiros e pessoas em diferentes funções estão diante do Senhor. A aliança não é privilégio de uma elite; compromete a comunidade e também aponta para gerações futuras. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -32,7 +32,7 @@ export const deuteronomy29Study: StudyContent = {
   {
     id: "secao-3",
     title: "O perigo da infidelidade presumida",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 29:16-21"],
     body: "**Leitura orientada — Deuteronômio 29:16-21**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nA lembrança das práticas das nações e a imagem da raiz venenosa alertam contra quem ouve a aliança, mas presume que pode seguir seu próprio caminho sem consequências. A advertência não autoriza investigar ou condenar pessoas por suspeitas.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** A lembrança das práticas das nações e a imagem da raiz venenosa alertam contra quem ouve a aliança, mas presume que pode seguir seu próprio caminho sem consequências. A advertência não autoriza investigar ou condenar pessoas por suspeitas. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -40,7 +40,7 @@ export const deuteronomy29Study: StudyContent = {
   {
     id: "secao-4",
     title: "O testemunho futuro e os limites do conhecimento",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 29:22-29"],
     body: "**Leitura orientada — Deuteronômio 29:22-29**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nAs gerações futuras poderão perguntar sobre a devastação da terra, e a resposta aponta para a quebra da aliança. O encerramento distingue o que foi revelado para orientar a obediência daquilo que pertence ao conhecimento de Deus.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** As gerações futuras poderão perguntar sobre a devastação da terra, e a resposta aponta para a quebra da aliança. O encerramento distingue o que foi revelado para orientar a obediência daquilo que pertence ao conhecimento de Deus. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
