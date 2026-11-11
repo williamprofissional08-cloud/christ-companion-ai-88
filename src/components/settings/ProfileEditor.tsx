@@ -24,10 +24,10 @@ async function prepareAvatarFile(file: File): Promise<File> {
   const objectUrl = URL.createObjectURL(file);
   try {
     const image = new Image();
-    image.src = objectUrl;
     await new Promise<void>((resolve, reject) => {
       image.onload = () => resolve();
       image.onerror = () => reject(new Error("Este formato de foto não pôde ser aberto neste navegador. Tente salvar a imagem como JPG."));
+      image.src = objectUrl;
     });
 
     const maxDimension = 1200;
@@ -98,7 +98,11 @@ export function ProfileEditor() {
   }
 
   async function uploadAvatar(file?: File) {
-    if (!user || !file) return;
+    if (!user) return;
+    if (!file) {
+      if (fileRef.current) fileRef.current.value = "";
+      return;
+    }
     setUploading(true);
     try {
       const avatarFile = await prepareAvatarFile(file);
