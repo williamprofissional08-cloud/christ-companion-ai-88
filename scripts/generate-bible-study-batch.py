@@ -112,7 +112,7 @@ Use kinds: exegesis, context, theology, pastoral, application, method, glossary,
                 finish = candidates[0].get("finishReason", "desconhecido")
                 raise ValueError(f"Gemini não retornou texto; finishReason={finish}")
             raw = re.sub(r'^\s*`{3}(?:json)?\s*', '', raw.strip())
-            raw = re.sub(r'\s*`{3}\s*, '', raw)
+            raw = re.sub(r'\s*`{3}\s*$', '', raw)
             data = json.loads(raw)
             validate(data)
             return data
