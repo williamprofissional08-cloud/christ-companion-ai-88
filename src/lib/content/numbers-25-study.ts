@@ -8,11 +8,11 @@ export const Numbers25Study: StudyContent = {
   "keyPoints": [
     {
       "title": "Apostasia interna versus hostilidade externa",
-      "text": "O capítulo demonstra que as forças externas que contrataram Balaão foram incapazes de amaldiçoar Israel; a ruína da congregação proveio exclusivamente de sua própria complacência moral e infidelidade idolátrica."
+      "text": "A narrativa cria um contraste literário com os capítulos 22–24: Balaão não pronuncia a maldição desejada por Balaque, mas Israel enfrenta uma crise interna em Baal-Peor. O capítulo enfatiza a responsabilidade do próprio povo, sem afirmar que essa seja a única ameaça possível à comunidade."
     },
     {
       "title": "A natureza da apostasia em Baal-Peor",
-      "text": "O envolvimento com as mulheres moabitas não foi mera imoralidade biológica, mas um ato de traição pactual que integrou comensalidade cúltica e prostração diante de divindades locais."
+      "text": "O texto associa a aproximação com mulheres moabitas à participação em sacrifícios e à adoração de Baal-Peor. A questão é apresentada como infidelidade à aliança; não devemos reduzir o episódio a uma explicação exclusivamente sexual nem acrescentar detalhes rituais que o capítulo não descreve."
     },
     {
       "title": "A gravidade do termo 'apegar-se'",
@@ -28,15 +28,15 @@ export const Numbers25Study: StudyContent = {
     },
     {
       "title": "O zelo de Fineias como intervenção sacerdotal",
-      "text": "A ação direta de Fineias foi interpretada pelo próprio Yahweh como uma manifestação autêntica do zelo divino, aplacando o furor santo e fazendo expiação pelos filhos de Israel sem o uso de animais sacrificiais."
+      "text": "O próprio texto relaciona a ação de Fineias ao zelo pela honra de Deus e afirma que, por meio dela, a ira e a praga cessaram. A linguagem de expiação aparece no versículo 13. Trata-se de um episódio singular da narrativa da aliança mosaica; não é autorização para violência religiosa em outros contextos."
     },
     {
       "title": "A aliança de paz e sacerdócio perpétuo",
-      "text": "Deus recompensa Fineias com um 'pacto de paz' (berit shalom) e um 'sacerdócio perpétuo' (kehunat 'olam), legitimando a linhagem sacerdotal eleazarita como guardiã da santidade do tabernáculo."
+      "text": "Deus concede a Fineias uma aliança de paz e a promessa de continuidade sacerdotal, conforme os versículos 12–13. O texto apresenta essa concessão como resposta específica ao episódio; não devemos transformá-la em regra geral de recompensa por atos violentos."
     },
     {
       "title": "O encerramento da geração do deserto",
-      "text": "A morte dos 24.000 consuma a transição geracional prescrita em Números 14, preparando o terreno purificado para o censo de Números 26 e a posse efetiva da terra prometida."
+      "text": "O versículo 9 informa que morreram 24.000 pessoas na praga. A proximidade com o novo censo de Números 26 permite perceber uma transição narrativa, mas o capítulo 25 não afirma que a morte dessas pessoas tenha sido o mecanismo de purificação para a posse da terra."
     }
   ],
   "application": "A passagem adverte contra a idolatria, a infidelidade e a mistura da adoração ao Senhor com outros cultos. Também ensina a levar a sério a responsabilidade de líderes e comunidades diante do pecado. Ao mesmo tempo, a ação de Fineias pertence a um episódio judicial singular da antiga aliança, narrado em uma estrutura teocrática específica. Ela não autoriza cristãos a agredir, perseguir ou matar pessoas em nome da fé. No ensino de Jesus e dos apóstolos, a resposta da comunidade cristã deve envolver fidelidade a Deus, arrependimento, verdade, disciplina responsável e amor ao próximo.",
@@ -306,7 +306,7 @@ export const Numbers25Study: StudyContent = {
     {
       "id": "meditacao-devocional",
       "title": "Meditação e Síntese Espiritual",
-      "body": "A tragédia de Sitim reverbera como um grito de alerta no coração dos crentes: onde a oposição aberta e os encantamentos das trevas falharam, o apelo sutil ao compromisso mundano e aos apetites da carne triunfou. Quão facilmente baixamos a guarda quando nos sentimos estabelecidos e vitoriosos! Mas o texto também brilha com a graça de um Deus que providencia reconciliação e recompensa os que mantêm zelo puro pelo Seu Nome. Que o Espírito Santo crie em nós um coração indiviso, incapaz de curvar-se aos baais deste século.",
+      "body": "A tragédia de Sitim reverbera como um grito de alerta no coração dos crentes: onde a oposição aberta e os encantamentos das trevas falharam, o apelo sutil ao compromisso mundano e aos apetites da carne triunfou. Quão facilmente baixamos a guarda quando nos sentimos estabelecidos e vitoriosos! O texto registra a cessação da praga e a aliança concedida a Fineias. Ao aplicar a passagem, devemos reconhecer a gravidade da infidelidade e a especificidade histórica do episódio, sem prometer recompensas automáticas a quem reivindica zelo religioso. Que o Espírito Santo crie em nós um coração indiviso, incapaz de curvar-se aos baais deste século.",
       "kind": "pastoral",
       "scriptureRefs": [
         "1Jo 5:21",
@@ -318,7 +318,7 @@ export const Numbers25Study: StudyContent = {
     {
       "id": "sintese-pedagogica",
       "title": "Síntese Pedagógica para Professores da Bíblia",
-      "body": "Ao ensinar Números 25, conduza seus alunos a enxergar a arquitetura maior do Pentateuco. Mostre que o pecado de Sitim não é um evento acidental, mas o clímax da apostasia da geração do êxodo, justificando teologicamente o recenseamento e renovação pactual subsequentes. Instigue a turma a fazer a distinção precisa entre o zelo homicida humano e o zelo santo pactual, direcionando todo o peso do ensino para a suficiência expiatória de Cristo, que pacificou nosso relacionamento com Deus mediante Seu próprio sangue derramado.",
+      "body": "Ao ensinar Números 25, conduza seus alunos a enxergar a arquitetura maior do Pentateuco. Mostre como Números 25 contrasta com os capítulos 22–24: depois de Balaão não conseguir amaldiçoar Israel, parte do povo se envolve em idolatria e infidelidade em Baal-Peor. Explique a responsabilidade dos líderes, a praga e a intervenção de Fineias dentro do contexto singular da aliança mosaica. O capítulo seguinte apresenta um novo censo, mas não afirma explicitamente que o episódio de Peor seja a justificativa teológica exclusiva para ele. Ao relacionar o texto a Cristo, use Hebreus 7 para contrastar o sacerdócio humano com o sacerdócio superior e permanente de Jesus; não diga que Números 25 prediz diretamente cada detalhe da obra de Cristo.",
       "kind": "pastoral",
       "scriptureRefs": [
         "Cl 1:20",

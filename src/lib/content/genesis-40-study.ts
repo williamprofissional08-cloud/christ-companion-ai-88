@@ -123,5 +123,47 @@ Para a comunidade cristã, o capítulo ensina a usar capacidades com humildade, 
       scriptureRefs: ["Gênesis 40:1-23"],
       body: "**Tema:** servir com fidelidade enquanto a resposta ainda não chega. **Proposição:** mesmo preso e esquecido, José reconhece que a interpretação pertence a Deus e serve os outros. **Movimentos:** (1) prisão e sonhos (vv. 1-8); (2) interpretações (vv. 9-19); (3) cumprimento e esquecimento (vv. 20-23). **Cuidado:** não transformar o episódio em método universal de interpretação de sonhos. **Aplicação:** usar dons com humildade e perseverar sem promessas fáceis."
     }
+
+    ,{
+      id: "contexto-historico-literario",
+      title: "16. Contexto histórico e literário — José na prisão real",
+      kind: "context",
+      confidence: "probable",
+      scriptureRefs: ["Gênesis 39:20–23", "Gênesis 40:1–23", "Gênesis 41:1–14"],
+      body: "Gênesis 40 está situado depois da acusação injusta contra José e antes de sua apresentação a Faraó. A prisão é descrita como lugar ligado aos presos do rei, e José recebe responsabilidade sobre o copeiro-chefe e o padeiro-chefe. Esses cargos pertenciam ao ambiente da corte egípcia; o texto, porém, não fornece detalhes suficientes para reconstruir toda a organização administrativa ou afirmar a causa específica da prisão de cada oficial. Literariamente, o capítulo funciona como preparação para Gênesis 41: os sonhos dos oficiais demonstram que José atribui a Deus a capacidade de interpretar, e o esquecimento do copeiro prolonga a espera até o momento narrativo seguinte. Leia o capítulo em continuidade com Gênesis 39 e 41, sem isolá-lo como fórmula de sucesso pessoal."
+    },
+    {
+      id: "estrutura-e-mensagem-central",
+      title: "17. Estrutura literária e mensagem central",
+      kind: "structure",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 40:1–23"],
+      body: "O capítulo pode ser acompanhado em quatro movimentos: (1) os oficiais são colocados sob os cuidados de José e ambos têm sonhos (vv. 1–8); (2) José ouve o sonho do copeiro e anuncia sua restauração (vv. 9–15); (3) José ouve o sonho do padeiro e anuncia sua execução (vv. 16–19); (4) as interpretações se cumprem, mas José permanece esquecido (vv. 20–23). A mensagem central não é que toda pessoa fiel será rapidamente promovida. O texto destaca que José reconhece Deus como fonte da interpretação, serve com responsabilidade em circunstâncias injustas e permanece na prisão mesmo depois de ajudar o copeiro."
+    },
+    {
+      id: "referencias-cruzadas",
+      title: "18. Referências bíblicas e conexões com o restante das Escrituras",
+      kind: "canonical",
+      confidence: "high",
+      scriptureRefs: ["Gênesis 39:20–23", "Gênesis 41:1–16", "Gênesis 41:9–14", "Salmo 105:17–22", "Daniel 2:19–23, 27–30"],
+      body: "**Gênesis 39:20–23:** mostra que José já experimentava a presença e o cuidado de Deus na prisão; isso prepara o cenário do capítulo 40. **Gênesis 41:1–16:** retoma o esquecimento do copeiro e mostra José diante de Faraó; José novamente atribui a Deus a interpretação. **Salmo 105:17–22:** recorda a trajetória de José e a providência divina na história de Israel, sem apagar o sofrimento vivido. **Daniel 2:19–23, 27–30:** apresenta outro servo de Deus que declara que a sabedoria para revelar mistérios vem de Deus. A conexão é temática: em ambos os relatos, a honra não deve ser atribuída à capacidade humana como fonte última da revelação."
+    },
+    {
+      id: "sintese-aplicacao",
+      title: "19. Síntese e aplicações responsáveis",
+      kind: "application",
+      confidence: "probable",
+      scriptureRefs: ["Gênesis 40:8", "Gênesis 40:14–15", "Gênesis 40:23"],
+      body: "**O que o texto afirma:** José declara que as interpretações pertencem a Deus; os sonhos recebem interpretações distintas; os acontecimentos se cumprem; o copeiro se esquece de José. **O que aprendemos:** reconhecer os próprios limites, servir ao próximo mesmo em circunstâncias difíceis, falar com honestidade e não transformar a fé em técnica para controlar o futuro. **O que não devemos concluir:** que todo sonho atual contém uma mensagem divina, que existe um método bíblico para decifrar sonhos, que a fidelidade garante promoção imediata ou que toda demora terá a mesma explicação da história de José. A aplicação deve nascer do movimento real do capítulo e ser lida à luz do conjunto das Escrituras."
+    },
+    {
+      id: "meditacao-oracao",
+      title: "20. Meditação e oração",
+      kind: "reflection",
+      confidence: "probable",
+      scriptureRefs: ["Gênesis 40:6–8", "Gênesis 40:14–15", "Gênesis 40:23"],
+      body: "**Para meditar:** Tenho reconhecido meus limites diante de situações que não consigo controlar? Tenho percebido a tristeza de quem está ao meu redor, como José percebeu? Consigo continuar agindo com integridade sem transformar a espera em promessa de recompensa imediata? **Oração:** Senhor Deus, ensina-me a reconhecer que a verdadeira sabedoria vem de ti. Dá-me sensibilidade para servir às pessoas, coragem para falar com verdade e perseverança quando sou esquecido ou injustiçado. Guarda-me de atribuir a ti mensagens que tua Palavra não autorizou e ajuda-me a confiar em teu caráter. Amém."
+    }
+
   ]
 };
