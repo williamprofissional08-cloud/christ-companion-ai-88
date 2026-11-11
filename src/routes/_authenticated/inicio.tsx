@@ -16,6 +16,7 @@ import { getDevotional } from "@/lib/ai.functions";
 import { loadDevotionalSafely } from "@/lib/devotional-loader";
 import { HABIT_ITEMS, todayISO } from "@/lib/types";
 import { useAuth } from "@/hooks/use-auth";
+import { supabase } from "@/integrations/supabase/client";
 import { buildSteps, READING_TRACKS } from "@/lib/content/tracks";
 
 export const Route = createFileRoute("/_authenticated/inicio")({
@@ -36,6 +37,16 @@ function Inicio() {
   const day = todayISO();
   const queryClient = useQueryClient();
   const { user } = useAuth();
+  const profile = useQuery({
+    queryKey: ["account-profile", user?.id],
+    enabled: Boolean(user?.id),
+    queryFn: async () => {
+      const { data, error } = await supabase.from("profiles")
+        .select("display_name, avatar_url").eq("id", user!.id).maybeSingle();
+      if (error) throw error;
+      return { display_name: data?.display_name ?? null, avatar_url: data?.avatar_url ?? null };
+    },
+  });
   const dashboard = useServerFn(getDashboard);
   const devotionalFn = useServerFn(getDevotional);
   const toggle = useServerFn(toggleHabit);
