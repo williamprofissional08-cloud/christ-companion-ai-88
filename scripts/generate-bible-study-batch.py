@@ -4,6 +4,7 @@ import json
 import os
 import pathlib
 import re
+import socket
 import time
 import urllib.error
 import urllib.request
@@ -53,8 +54,24 @@ if not CATALOG_PATH.exists() or not BOOKS_PATH.exists():
 
 book_source = BOOKS_PATH.read_text(encoding="utf-8")
 catalog = CATALOG_PATH.read_text(encoding="utf-8")
-pattern = re.compile(r'\{\s*slug:\s*"([^"]+)",\s*name:\s*"([^"]+)",\s*chapters:\s*(\d+),\s*category:\s*"([^"]+)",\s*testament:\s*"([^"]+)"', re.M)
-books = {m.group(1): {"name": m.group(2), "chapters": int(m.group(3)), "category": m.group(4), "testament": m.group(5)} for m in pattern.finditer(book_source)}
+book_objects = re.findall(r"\{([^{}]*\bslug\s*:[^{}]*)\}", book_source, re.S)
+books = {}
+for item in book_objects:
+    fields = {
+        "slug": re.search(r'\bslug\s*:\s*"([^"]+)"', item),
+        "name": re.search(r'\bname\s*:\s*"([^"]+)"', item),
+        "chapters": re.search(r'\bchapters\s*:\s*(\d+)', item),
+        "testament": re.search(r'\btestament\s*:\s*"([^"]+)"', item),
+        "category": re.search(r'\bcategory\s*:\s*"([^"]+)"', item),
+    }
+    if all(fields.values()):
+        slug = fields["slug"].group(1)
+        books[slug] = {
+            "name": fields["name"].group(1),
+            "chapters": int(fields["chapters"].group(1)),
+            "testament": fields["testament"].group(1),
+            "category": fields["category"].group(1),
+        }
 if len(books) != 66:
     raise SystemExit(f"Índice bíblico deveria conter 66 livros; encontrados {len(books)}.")
 if BOOK_SLUG not in books or BOOK_SLUG not in PREFIX:
@@ -95,8 +112,10 @@ Use kinds: exegesis, context, theology, pastoral, application, method, glossary,
     endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
     request = urllib.request.Request(endpoint, data=payload,
         headers={"Content-Type": "application/json", "Accept": "application/json", "x-goog-api-key": TOKEN})
-    for attempt in range(4):
+    max_attempts = 4
+    for attempt in range(max_attempts):
         try:
+            print(f"Consultando Gemini para {reference} (tentativa {attempt + 1}/{max_attempts})...", flush=True)
             with urllib.request.urlopen(request, timeout=600) as response:
                 body = response.read().decode("utf-8", "replace")
             if not body.strip():
@@ -118,13 +137,21 @@ Use kinds: exegesis, context, theology, pastoral, application, method, glossary,
             return data
         except urllib.error.HTTPError as error:
             detail = error.read().decode("utf-8", "replace")[:1200]
-            if error.code not in (408, 429, 500, 502, 503, 504) or attempt == 3:
+            if error.code not in (408, 429, 500, 502, 503, 504) or attempt == max_attempts - 1:
                 raise SystemExit(f"Gemini API HTTP {error.code}: {detail}")
-            time.sleep(20 * (2 ** attempt))
+            wait = min(20 * (2 ** attempt), 120)
+            print(f"Gemini HTTP {error.code}; nova tentativa em {wait}s.", flush=True)
+            time.sleep(wait)
+        except (TimeoutError, socket.timeout, urllib.error.URLError) as error:
+            if attempt == max_attempts - 1:
+                raise SystemExit(f"Tempo de espera/rede esgotado para {reference} após {max_attempts} tentativas: {error}")
+            wait = min(20 * (2 ** attempt), 120)
+            print(f"Gemini demorou ou houve falha de rede ({error}); nova tentativa em {wait}s.", flush=True)
+            time.sleep(wait)
         except (ValueError, KeyError, TypeError, json.JSONDecodeError) as error:
-            if attempt == 2:
+            if attempt == max_attempts - 1:
                 raise SystemExit(f"Resposta inválida para {reference}: {error}")
-            time.sleep(10 * (2 ** attempt))
+            time.sleep(min(10 * (2 ** attempt), 60))
 
 def validate(data):
     required = ["intro", "historicalContext", "keyPoints", "application", "crossReferences", "questions", "conclusion", "prayer", "sections"]
