@@ -22,6 +22,16 @@ const curatedBatch = [
   { book: "Deuteronômio", chapter: 4, verseCount: 49, slug: "biblia-deuteronomio-cap-4", exportName: "deuteronomy4Study", file: "deuteronomy-4-study.ts" },
   { book: "Deuteronômio", chapter: 5, verseCount: 33, slug: "biblia-deuteronomio-cap-5", exportName: "deuteronomy5Study", file: "deuteronomy-5-study.ts" },
   { book: "Deuteronômio", chapter: 6, verseCount: 25, slug: "biblia-deuteronomio-cap-6", exportName: "deuteronomy6Study", file: "deuteronomy-6-study.ts" },
+  { book: "Deuteronômio", chapter: 7, verseCount: 26, slug: "biblia-deuteronomio-cap-7", exportName: "deuteronomy7Study", file: "deuteronomy-7-study.ts" },
+  { book: "Deuteronômio", chapter: 8, verseCount: 20, slug: "biblia-deuteronomio-cap-8", exportName: "deuteronomy8Study", file: "deuteronomy-8-study.ts" },
+  { book: "Deuteronômio", chapter: 9, verseCount: 29, slug: "biblia-deuteronomio-cap-9", exportName: "deuteronomy9Study", file: "deuteronomy-9-study.ts" },
+  { book: "Deuteronômio", chapter: 10, verseCount: 22, slug: "biblia-deuteronomio-cap-10", exportName: "deuteronomy10Study", file: "deuteronomy-10-study.ts" },
+  { book: "Deuteronômio", chapter: 11, verseCount: 32, slug: "biblia-deuteronomio-cap-11", exportName: "deuteronomy11Study", file: "deuteronomy-11-study.ts" },
+  { book: "Deuteronômio", chapter: 12, verseCount: 32, slug: "biblia-deuteronomio-cap-12", exportName: "deuteronomy12Study", file: "deuteronomy-12-study.ts" },
+  { book: "Deuteronômio", chapter: 13, verseCount: 18, slug: "biblia-deuteronomio-cap-13", exportName: "deuteronomy13Study", file: "deuteronomy-13-study.ts" },
+  { book: "Deuteronômio", chapter: 14, verseCount: 29, slug: "biblia-deuteronomio-cap-14", exportName: "deuteronomy14Study", file: "deuteronomy-14-study.ts" },
+  { book: "Deuteronômio", chapter: 15, verseCount: 23, slug: "biblia-deuteronomio-cap-15", exportName: "deuteronomy15Study", file: "deuteronomy-15-study.ts" },
+  { book: "Deuteronômio", chapter: 16, verseCount: 22, slug: "biblia-deuteronomio-cap-16", exportName: "deuteronomy16Study", file: "deuteronomy-16-study.ts" },
 ];
 
 async function readContent(path) {
