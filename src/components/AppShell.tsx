@@ -27,7 +27,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { getSettings } from "@/lib/settings.functions";
-import { amIAdmin } from "@/lib/admin.functions";
 import { useReminders } from "@/hooks/use-reminders";
 import { useTheme } from "@/hooks/use-auth";
 import { toast } from "sonner";
@@ -55,14 +54,6 @@ const NAV = [
 ] as const;
 
 function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
-  const checkAdmin = useServerFn(amIAdmin);
-  const { data: isAdmin } = useQuery({
-    queryKey: ["am-i-admin"],
-    queryFn: () => checkAdmin(),
-    staleTime: 0,
-    refetchOnMount: "always",
-    retry: 2,
-  });
   // Keep the admin entry discoverable. The /admin route and every admin
   // server function enforce the role on the server; hiding this link here
   // made a transient permission-query failure look like a deleted panel.
