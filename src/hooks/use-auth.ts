@@ -49,6 +49,59 @@ export function useAuth() {
   }, []);
 
   const user: User | null = session?.user ?? null;
+
+  // Record real app activity so the admin dashboard does not mistake an
+  // existing signed-in account for a user who has never accessed the app.
+  useEffect(() => {
+    const userId = user?.id;
+    if (!userId) return;
+
+    let pending = false;
+    const storageKey = `caminho-divino:last-seen:${userId}`;
+    const recordActivity = () => {
+      if (pending) return;
+      const now = Date.now();
+      try {
+        const previous = Number(window.localStorage.getItem(storageKey) ?? 0);
+        if (previous && now - previous < 5 * 60 * 1000) return;
+        window.localStorage.setItem(storageKey, String(now));
+      } catch {
+        // Activity tracking must never block normal app usage.
+      }
+
+      pending = true;
+      void supabase.from("profiles")
+        .update({ last_seen_at: new Date(now).toISOString() })
+        .eq("id", userId)
+        .then(({ error }) => {
+          if (error) {
+            console.warn("[Caminho Divino] Não foi possível registrar o último acesso:", error.message);
+            try {
+              if (window.localStorage.getItem(storageKey) === String(now)) {
+                window.localStorage.removeItem(storageKey);
+              }
+            } catch {
+              // Ignore storage restrictions; a later activity can retry.
+            }
+          }
+        })
+        .finally(() => { pending = false; });
+    };
+
+    recordActivity();
+    window.addEventListener("focus", recordActivity);
+    window.addEventListener("pointerdown", recordActivity, { passive: true });
+    window.addEventListener("keydown", recordActivity);
+    document.addEventListener("visibilitychange", recordActivity);
+
+    return () => {
+      window.removeEventListener("focus", recordActivity);
+      window.removeEventListener("pointerdown", recordActivity);
+      window.removeEventListener("keydown", recordActivity);
+      document.removeEventListener("visibilitychange", recordActivity);
+    };
+  }, [user?.id]);
+
   return { session, user, loading, authError, isAuthenticated: Boolean(user) };
 }
 
