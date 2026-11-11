@@ -49,11 +49,11 @@ export const firstChronicles18Study: StudyContent = {
   "sections": [
     {
       "id": "leitura-biblica",
-      "title": "Leitura bíblica orientada — 1 Crônicas 18:1-13",
+      "title": "Leitura bíblica orientada — 1 Crônicas 18:1-17",
       "kind": "scripture",
       "confidence": "high",
       "scriptureRefs": [
-        "1 Crônicas 18:1-13"
+        "1 Crônicas 18:1-17"
       ],
       "body": "Leia integralmente **1 Crônicas 18:1-13** em sua Bíblia antes de continuar. Esta seção não substitui a Escritura nem reproduz uma tradução protegida. Durante a leitura, marque os personagens, lugares, ações, repetições, mudanças de cena e avaliações do narrador. Registre dúvidas sem tentar resolvê-las antes de observar o contexto."
     },
