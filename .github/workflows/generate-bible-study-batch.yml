@@ -133,13 +133,13 @@ jobs:
 
           source = Path("src/lib/content/bible-books.ts").read_text(encoding="utf-8")
           books = []
-          for item in re.findall(r"\\{([^{}]*\\bslug\\s*:[^{}]*)\\}", source, re.S):
+          for item in re.findall(r"\{([^{}]*\bslug\s*:[^{}]*)\}", source, re.S):
               def field(pattern):
                   match = re.search(pattern, item)
                   return match.group(1) if match else None
-              slug = field(r'\\bslug\\s*:\\s*"([^"]+)"')
-              chapters = field(r"\\bchapters\\s*:\\s*(\\d+)")
-              order = field(r"\\border\\s*:\\s*(\\d+)")
+              slug = field(r'\bslug\s*:\s*"([^"]+)"')
+              chapters = field(r"\bchapters\s*:\s*(\d+)")
+              order = field(r"\border\s*:\s*(\d+)")
               if slug and chapters and order:
                   books.append({"slug": slug, "chapters": int(chapters), "order": int(order)})
           books.sort(key=lambda book: book["order"])
