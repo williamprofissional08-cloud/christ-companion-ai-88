@@ -226,6 +226,94 @@ export const Numbers32Study: StudyContent = {
       "scriptureRefs": [],
       "confidence": "high",
       "collapsible": false
+    },
+    {
+      "id": "aprofundamento-1",
+      "title": "19. Leitura detalhada — vv. 1-5: o pedido territorial",
+      "body": "Os rebanhos são o motivo explicitamente mencionado para o interesse de Rúben e Gade na região. O pedido é apresentado como proposta de receber a terra já conquistada a leste do Jordão. O texto não afirma que essas tribos rejeitavam a promessa; a preocupação surge porque a ausência delas na campanha poderia desanimar o restante de Israel.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 32"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-2",
+      "title": "20. Leitura detalhada — vv. 6-15: a memória da geração anterior",
+      "body": "Moisés pergunta se os irmãos deveriam ir à guerra enquanto os solicitantes permanecessem instalados. Ele recorda os espias e a reação de medo que levou Israel a recuar. A memória de Cades funciona como advertência: a incredulidade de alguns pode afetar a coragem de muitos. O líder avalia o efeito comunitário, não apenas a intenção declarada.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 32"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-3",
+      "title": "21. Leitura detalhada — vv. 16-19: uma proposta mais completa",
+      "body": "Os líderes acrescentam detalhes: construirão abrigos para os rebanhos e cidades para as famílias, enquanto os homens aptos irão à frente. O compromisso distingue a segurança das famílias da responsabilidade militar dos homens. O texto não exige que crianças e rebanhos fiquem desprotegidos; procura organizar a vida enquanto a missão comum continua.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 32"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-4",
+      "title": "22. Leitura detalhada — vv. 20-27: condição e compromisso",
+      "body": "Moisés apresenta a condição: atravessar o Jordão, combater e permanecer até que os demais recebam sua herança. A promessa inclui uma advertência: se não cumprirem, o pecado os alcançará. A frase não é superstição; expressa que a responsabilidade diante de Deus não desaparece porque a pessoa conseguiu escapar da cobrança humana.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 32"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-5",
+      "title": "23. Leitura detalhada — vv. 28-32: o acordo é público",
+      "body": "Moisés comunica o acordo a Eleazar, Josué e aos chefes das tribos. Isso garante que a decisão seja conhecida pelos responsáveis pela distribuição e pela liderança futura. A transparência reduz a possibilidade de que o compromisso seja esquecido ou reinterpretado depois da morte de Moisés.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 32"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-6",
+      "title": "24. Leitura detalhada — vv. 33-42: cidades e assentamentos",
+      "body": "A narrativa enumera cidades reconstruídas ou ocupadas pelas tribos a leste do Jordão. Algumas identificações geográficas permanecem incertas. O capítulo não fornece um mapa moderno completo; seu objetivo é registrar a ocupação e a atribuição das cidades às famílias e tribos.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 32"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-7",
+      "title": "25. A relação com Josué 1 e Josué 22",
+      "body": "Josué 1:12-18 relembra às tribos do leste seu compromisso de ajudar os irmãos. Josué 22 registra o retorno dos combatentes após o cumprimento da tarefa. A leitura desses textos em conjunto mostra que o acordo de Números 32 não foi uma promessa isolada: ele orientou a ação e foi posteriormente reconhecido.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 32"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-8",
+      "title": "26. Síntese cristocêntrica",
+      "body": "A unidade do povo de Deus não significa que todos tenham a mesma tarefa ou a mesma condição, mas impede que o benefício individual seja construído pelo abandono do próximo. Filipenses 2:3-4 e Gálatas 6:2 ajudam a aplicar o princípio sem transformar a antiga distribuição de terras em regra para a igreja.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 32"
+      ],
+      "confidence": "high",
+      "collapsible": false
     }
   ]
 };
