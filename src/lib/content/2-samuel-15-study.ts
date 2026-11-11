@@ -69,6 +69,46 @@ export const secondSamuel15Study: StudyContent = {
       "2 Samuel 15:24-37"
     ],
     "body": "**Leitura bíblica:** leia 2 Samuel 15:24-37 diretamente em sua Bíblia. O comentário a seguir é autoral e não substitui uma tradução bíblica.\n\n**Observação do texto:** Davi envia a arca de volta e aceita a vontade do Senhor, sem tratá-la como garantia mágica. Itai demonstra lealdade; Husai retorna para frustrar o conselho de Aitofel. A crise envolve fé, estratégia e risco.\n\n**Interpretação:** observe os personagens, as ações, os contrastes, as repetições e as consequências narradas. Diferencie o que o narrador afirma daquilo que os personagens dizem. A passagem deve ser compreendida no desenvolvimento do capítulo e na história da aliança davídica.\n\n**Contexto histórico e literário:** Absalão constrói apoio na porta da cidade, lugar associado a decisões judiciais. A promessa de justiça é instrumentalizada para obter poder. Davi deixa Jerusalém para evitar que a cidade se torne campo de batalha; a arca não é tratada como amuleto de vitória.\n\n**Conexão bíblico-teológica:** a história de Davi não exige idealizar o rei. A esperança bíblica aponta para o Filho de Davi, Jesus Cristo, cujo reino manifesta justiça e serviço. O Novo Testamento não autoriza transferir automaticamente para a igreja as guerras, punições ou disputas políticas da monarquia de Israel.\n\n**Aplicação:** pratique verdade, justiça, humildade e cuidado com o próximo. Não confunda sucesso estratégico com aprovação moral de Deus; avalie atitudes à luz do caráter de Cristo."
+  },
+  {
+    "id": "2sm-15-complemento-1",
+    "title": "A porta da cidade e a legitimidade política",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 15"
+    ],
+    "body": "**Análise:** A narrativa contrasta a autopromoção de Absalão com a postura de Davi diante da arca e da vontade de Deus.\n\n**Leitura cuidadosa:** A porta da cidade e a legitimidade política. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-15-complemento-2",
+    "title": "A instrumentalização da linguagem religiosa",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 15"
+    ],
+    "body": "**Análise:** A narrativa contrasta a autopromoção de Absalão com a postura de Davi diante da arca e da vontade de Deus.\n\n**Leitura cuidadosa:** A instrumentalização da linguagem religiosa. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-15-complemento-3",
+    "title": "A arca não é objeto mágico",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 15"
+    ],
+    "body": "**Análise:** A narrativa contrasta a autopromoção de Absalão com a postura de Davi diante da arca e da vontade de Deus.\n\n**Leitura cuidadosa:** A arca não é objeto mágico. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-15-complemento-4",
+    "title": "A soberania divina e a liderança humilde",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 15"
+    ],
+    "body": "**Análise:** A narrativa contrasta a autopromoção de Absalão com a postura de Davi diante da arca e da vontade de Deus.\n\n**Leitura cuidadosa:** A soberania divina e a liderança humilde. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
   }
-]
+
 };
