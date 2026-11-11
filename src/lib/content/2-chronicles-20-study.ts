@@ -52,13 +52,13 @@ export const secondChronicles20Study: StudyContent = {
   "sections": [
     {
       "id": "leitura-biblica",
-      "title": "Leitura bíblica orientada — 2 Crônicas 20:1-8",
+      "title": "Leitura bíblica orientada — 2 Crônicas 20:1-37",
       "kind": "scripture",
       "confidence": "high",
       "scriptureRefs": [
-        "2 Crônicas 20:1-8"
+        "2 Crônicas 20:1-37"
       ],
-      "body": "Leia integralmente **2 Crônicas 20:1-8** em sua Bíblia antes de estudar os comentários. Este material é um roteiro de leitura e não uma tradução substituta. Observe quem fala, quem age, quais decisões são tomadas, como o narrador avalia os acontecimentos e quais consequências aparecem. Anote primeiro o que o texto afirma explicitamente; depois formule interpretações e aplicações."
+      "body": "Leia integralmente **2 Crônicas 20:1-37** em sua Bíblia antes de estudar os comentários. Este material é um roteiro de leitura e não uma tradução substituta. Observe quem fala, quem age, quais decisões são tomadas, como o narrador avalia os acontecimentos e quais consequências aparecem. Anote primeiro o que o texto afirma explicitamente; depois formule interpretações e aplicações."
     },
     {
       "id": "introducao",
@@ -66,7 +66,7 @@ export const secondChronicles20Study: StudyContent = {
       "kind": "introduction",
       "confidence": "high",
       "scriptureRefs": [
-        "2 Crônicas 20:1-8"
+        "2 Crônicas 20:1-37"
       ],
       "body": "**Tema central: A oração comunitária reconhece a incapacidade humana e confia no caráter de Deus.**\n\nJosafá ora diante da ameaça e o povo louva. A ameaça e a convocação para buscar o Senhor A oração de Josafá no templo A palavra de Jaaziel e a resposta do povo Louvor, livramento e reconhecimento Resumo do reinado e a aliança naval fracassada\n\n**Objetivos:** compreender a progressão narrativa; identificar a ênfase do cronista; relacionar o episódio à história da aliança; comparar textos paralelos; distinguir observação, interpretação e aplicação; e reconhecer conexões com Cristo sustentadas pelo conjunto das Escrituras.\n\n**Método:** leia a passagem na Bíblia, observe o contexto imediato e só então avalie as explicações. Uma aplicação legítima precisa respeitar o sentido histórico e o ensino de Cristo."
     },
@@ -76,7 +76,7 @@ export const secondChronicles20Study: StudyContent = {
       "kind": "context",
       "confidence": "high",
       "scriptureRefs": [
-        "2 Crônicas 20:1-8",
+        "2 Crônicas 20:1-37",
         "Deuteronômio 20:1-4",
         "2 Crônicas 6:12-42",
         "Salmo 46:1-3"
@@ -89,7 +89,7 @@ export const secondChronicles20Study: StudyContent = {
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
-        "2 Crônicas 20:1-8"
+        "2 Crônicas 20:1-37"
       ],
       "body": "O capítulo desenvolve-se em 5 movimentos:\n\n1. 20:20:1-4 — A ameaça e a convocação para buscar o Senhor\n2. 20:20:5-13 — A oração de Josafá no templo\n3. 20:20:14-19 — A palavra de Jaaziel e a resposta do povo\n4. 20:20:20-30 — Louvor, livramento e reconhecimento\n5. 20:20:31-37 — Resumo do reinado e a aliança naval fracassada\n\nAcompanhe a progressão: qual crise ou decisão inicia cada unidade? Quem transmite a palavra do Senhor? Como os líderes respondem? Que consequência encerra o episódio? A divisão em perícopes é uma ferramenta de leitura; não substitui a unidade do capítulo."
     },
@@ -151,7 +151,7 @@ export const secondChronicles20Study: StudyContent = {
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
-        "2 Crônicas 20:1-8",
+        "2 Crônicas 20:1-37",
         "Deuteronômio 20:1-4",
         "2 Crônicas 6:12-42",
         "Salmo 46:1-3",
@@ -168,7 +168,7 @@ export const secondChronicles20Study: StudyContent = {
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
-        "2 Crônicas 20:1-8",
+        "2 Crônicas 20:1-37",
         "Romanos 15:4",
         "2 Timóteo 3:16-17"
       ],
@@ -180,7 +180,7 @@ export const secondChronicles20Study: StudyContent = {
       "kind": "exercise",
       "confidence": "high",
       "scriptureRefs": [
-        "2 Crônicas 20:1-8"
+        "2 Crônicas 20:1-37"
       ],
       "body": "**Perguntas para revisar**\n\n1. Qual é a mensagem central do capítulo? Demonstre-a com elementos do texto.\n2. Como as perícopes se conectam?\n3. O que o cronista enfatiza em comparação com os relatos paralelos?\n4. Que dados são explícitos e quais reconstruções permanecem incertas?\n5. Como a aliança e a palavra profética influenciam a narrativa?\n6. Que interpretação extrapolaria as evidências?\n7. Como o capítulo se integra à história bíblica que culmina em Cristo?\n8. Qual aplicação respeita o contexto e o evangelho?\n\n**Exercício:** escreva três parágrafos separados: (a) observação — o que o texto diz; (b) interpretação — o que significava no contexto de Judá; (c) aplicação — como a verdade se relaciona à vida cristã. Marque toda afirmação que não consiga demonstrar pela passagem."
     },
@@ -190,9 +190,9 @@ export const secondChronicles20Study: StudyContent = {
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
-        "2 Crônicas 20:1-8"
+        "2 Crônicas 20:1-37"
       ],
-      "body": "**Texto-base:** 2 Crônicas 20:1-8.\n\n**Tema:** A oração comunitária reconhece a incapacidade humana e confia no caráter de Deus.\n\n**Proposição:** formule em uma frase a verdade principal comunicada pelo capítulo.\n\n**Introdução:** apresente a questão histórica ou teológica que o texto aborda, sem inventar fatos.\n\n**Exposição:** organize a mensagem segundo as perícopes: A ameaça e a convocação para buscar o Senhor; A oração de Josafá no templo; A palavra de Jaaziel e a resposta do povo; Louvor, livramento e reconhecimento; Resumo do reinado e a aliança naval fracassada. Explique contexto, progressão narrativa e intenção do cronista. Use referências cruzadas para esclarecer, não para desviar do texto-base.\n\n**Conexão com Cristo:** mostre como a passagem se integra à história da redenção e ao testemunho do Novo Testamento. Evite alegorias sem fundamento.\n\n**Aplicação:** apresente respostas concretas, éticas e proporcionais ao texto. Não transforme promessas específicas a Israel em garantias materiais para a igreja.\n\n**Revisão:** cada afirmação pode ser sustentada pela passagem? A mensagem comunica graça e verdade? Evita manipulação, triunfalismo, coerção e promessas indevidas?"
+      "body": "**Texto-base:** 2 Crônicas 20:1-37.\n\n**Tema:** A oração comunitária reconhece a incapacidade humana e confia no caráter de Deus.\n\n**Proposição:** formule em uma frase a verdade principal comunicada pelo capítulo.\n\n**Introdução:** apresente a questão histórica ou teológica que o texto aborda, sem inventar fatos.\n\n**Exposição:** organize a mensagem segundo as perícopes: A ameaça e a convocação para buscar o Senhor; A oração de Josafá no templo; A palavra de Jaaziel e a resposta do povo; Louvor, livramento e reconhecimento; Resumo do reinado e a aliança naval fracassada. Explique contexto, progressão narrativa e intenção do cronista. Use referências cruzadas para esclarecer, não para desviar do texto-base.\n\n**Conexão com Cristo:** mostre como a passagem se integra à história da redenção e ao testemunho do Novo Testamento. Evite alegorias sem fundamento.\n\n**Aplicação:** apresente respostas concretas, éticas e proporcionais ao texto. Não transforme promessas específicas a Israel em garantias materiais para a igreja.\n\n**Revisão:** cada afirmação pode ser sustentada pela passagem? A mensagem comunica graça e verdade? Evita manipulação, triunfalismo, coerção e promessas indevidas?"
     },
     {
       "id": "conclusao-oracao",
@@ -200,7 +200,7 @@ export const secondChronicles20Study: StudyContent = {
       "kind": "conclusion",
       "confidence": "high",
       "scriptureRefs": [
-        "2 Crônicas 20:1-8"
+        "2 Crônicas 20:1-37"
       ],
       "body": "**Síntese:** A oração comunitária reconhece a incapacidade humana e confia no caráter de Deus. O capítulo deve ser lido em seu contexto histórico, em diálogo com os demais relatos bíblicos e à luz do testemunho completo das Escrituras. Sua mensagem não autoriza aplicações que contrariem o caráter de Cristo.\n\n**Para guardar:** a leitura fiel começa pelo texto, reconhece seus limites e conduz a uma prática humilde, justa e perseverante.\n\n**Oração:** Senhor Deus, dá-nos humildade para ouvir tua Palavra, discernimento para interpretá-la com responsabilidade e coragem para praticá-la. Livra-nos de usar as Escrituras para justificar orgulho ou injustiça. Conduze-nos a Cristo e forma em nós um coração fiel. Amém."
     }
