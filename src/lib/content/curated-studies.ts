@@ -2,6 +2,7 @@ import type { StudyContent } from "../types";
 import { Numbers24Study } from "./numbers-24-study";
 import { Numbers25Study } from "./numbers-25-study";
 import { Numbers26Study } from "./numbers-26-study";
+import { Numbers27Study } from "./numbers-27-study";
 import { Numbers21Study } from "./numbers-21-study";
 import { Numbers22Study } from "./numbers-22-study";
 import { Numbers23Study } from "./numbers-23-study";
@@ -292,4 +293,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-numeros-cap-24": Numbers24Study,
   "biblia-numeros-cap-25": Numbers25Study,
   "biblia-numeros-cap-26": Numbers26Study,
+  "biblia-numeros-cap-27": Numbers27Study,
 };
