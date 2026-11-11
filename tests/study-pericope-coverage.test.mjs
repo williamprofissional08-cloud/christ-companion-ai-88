@@ -10,6 +10,12 @@ const curatedBatch = [
   { book: "Gênesis", chapter: 49, verseCount: 33, slug: "biblia-genesis-cap-49", exportName: "genesis49Study", file: "genesis-49-study.ts" },
   { book: "Gênesis", chapter: 50, verseCount: 26, slug: "biblia-genesis-cap-50", exportName: "genesis50Study", file: "genesis-50-study.ts" },
   { book: "Êxodo", chapter: 1, verseCount: 22, slug: "biblia-exodo-cap-1", exportName: "exodus1Study", file: "exodus-1-study.ts" },
+  { book: "Números", chapter: 31, verseCount: 54, slug: "biblia-numeros-cap-31", exportName: "Numbers31Study", file: "numbers-31-study.ts" },
+  { book: "Números", chapter: 32, verseCount: 42, slug: "biblia-numeros-cap-32", exportName: "Numbers32Study", file: "numbers-32-study.ts" },
+  { book: "Números", chapter: 33, verseCount: 56, slug: "biblia-numeros-cap-33", exportName: "Numbers33Study", file: "numbers-33-study.ts" },
+  { book: "Números", chapter: 34, verseCount: 29, slug: "biblia-numeros-cap-34", exportName: "Numbers34Study", file: "numbers-34-study.ts" },
+  { book: "Números", chapter: 35, verseCount: 34, slug: "biblia-numeros-cap-35", exportName: "Numbers35Study", file: "numbers-35-study.ts" },
+  { book: "Números", chapter: 36, verseCount: 13, slug: "biblia-numeros-cap-36", exportName: "Numbers36Study", file: "numbers-36-study.ts" },
 ];
 
 async function readContent(path) {
