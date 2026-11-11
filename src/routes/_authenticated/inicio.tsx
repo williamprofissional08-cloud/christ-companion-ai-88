@@ -92,7 +92,7 @@ function Inicio() {
   const trackStep = Math.min(completedSteps + 1, trackTotal || completedSteps + 1);
 
   return (
-    <AppShell title="Início" subtitle="Que a Palavra guie o seu dia.">
+    <AppShell title="Início">
       <div className="space-y-4">
         <div className="flex items-center justify-between gap-3 px-1">
           <div>
@@ -163,9 +163,17 @@ function Inicio() {
           </Card>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border/60 bg-card px-4 py-3">
-          <p className="text-sm"><strong>Suas metas</strong> <span className="text-muted-foreground">— Você ainda não definiu metas.</span></p>
-          <Link to="/metas" className="text-sm font-semibold text-primary hover:underline">Criar minha primeira meta</Link>
+        <div className="rounded-xl border border-border/60 bg-card px-4 py-3">
+          {data?.goals?.length ? (
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <p className="text-sm font-semibold">Suas metas</p>
+              <Link to="/metas" className="text-sm font-semibold text-primary hover:underline">Ver minhas metas</Link>
+            </div>
+          ) : (
+            <p className="text-sm"><span className="text-muted-foreground">Você ainda não definiu metas.</span>{" "}
+              <Link to="/metas" className="font-semibold text-primary hover:underline">Criar minha primeira meta</Link>
+            </p>
+          )}
         </div>
 
         <WeeklySummary summary={summary.data} isLoading={summary.isLoading} />
