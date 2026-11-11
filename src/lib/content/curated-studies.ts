@@ -1,4 +1,8 @@
 import type { StudyContent } from "../types";
+import { ruth1Study } from "./ruth-1-study";
+import { ruth2Study } from "./ruth-2-study";
+import { ruth3Study } from "./ruth-3-study";
+import { ruth4Study } from "./ruth-4-study";
 import { judges11Study } from "./judges-11-study";
 import { judges12Study } from "./judges-12-study";
 import { judges13Study } from "./judges-13-study";
@@ -238,6 +242,10 @@ import { joshua24Study } from "./joshua-24-study";
  * Rótulos: [TEXTO BÍBLICO] [CONTEXTO] [INFERÊNCIA] [INTERPRETAÇÃO] [ESPECULAÇÃO].
  */
 export const CURATED_STUDIES: Record<string, StudyContent> = {
+  "biblia-rute-cap-1": ruth1Study,
+  "biblia-rute-cap-2": ruth2Study,
+  "biblia-rute-cap-3": ruth3Study,
+  "biblia-rute-cap-4": ruth4Study,
   "genesis-1-criacao": genesis1Study,
   "biblia-juizes-cap-1": judges1Study,
   "biblia-juizes-cap-2": judges2Study,
