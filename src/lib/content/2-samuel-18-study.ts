@@ -69,6 +69,46 @@ export const secondSamuel18Study: StudyContent = {
       "2 Samuel 18:31-33"
     ],
     "body": "**Leitura bíblica:** leia 2 Samuel 18:31-33 diretamente em sua Bíblia. O comentário a seguir é autoral e não substitui uma tradução bíblica.\n\n**Observação do texto:** Davi chora e deseja ter morrido no lugar de Absalão. Sua dor é real, mas a crise pública continua. O capítulo não resolve a tensão entre luto familiar e dever do governante.\n\n**Interpretação:** observe os personagens, as ações, os contrastes, as repetições e as consequências narradas. Diferencie o que o narrador afirma daquilo que os personagens dizem. A passagem deve ser compreendida no desenvolvimento do capítulo e na história da aliança davídica.\n\n**Contexto histórico e literário:** A rebelião é derrotada, mas a vitória não produz alegria simples. Davi sofre profundamente pelo filho, enquanto o povo precisa restaurar a ordem. O capítulo expõe a tensão entre responsabilidade pública e dor familiar; não glorifica a guerra nem transforma a morte em espetáculo.\n\n**Conexão bíblico-teológica:** a história de Davi não exige idealizar o rei. A esperança bíblica aponta para o Filho de Davi, Jesus Cristo, cujo reino manifesta justiça e serviço. O Novo Testamento não autoriza transferir automaticamente para a igreja as guerras, punições ou disputas políticas da monarquia de Israel.\n\n**Aplicação:** pratique verdade, justiça, humildade e cuidado com o próximo. Não glorifique a guerra nem transforme a morte em espetáculo. Reconheça o luto e a responsabilidade pública."
+  },
+  {
+    "id": "2sm-18-complemento-1",
+    "title": "A floresta e os limites das leituras alegóricas",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 18"
+    ],
+    "body": "**Análise:** A morte de Absalão encerra a rebelião, mas não produz triunfo emocional. O lamento de Davi impede que a batalha seja lida como vitória sem custo.\n\n**Leitura cuidadosa:** A floresta e os limites das leituras alegóricas. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-18-complemento-2",
+    "title": "A ordem de Davi e o conflito militar",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 18"
+    ],
+    "body": "**Análise:** A morte de Absalão encerra a rebelião, mas não produz triunfo emocional. O lamento de Davi impede que a batalha seja lida como vitória sem custo.\n\n**Leitura cuidadosa:** A ordem de Davi e o conflito militar. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-18-complemento-3",
+    "title": "Comunicar a verdade com sensibilidade",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 18"
+    ],
+    "body": "**Análise:** A morte de Absalão encerra a rebelião, mas não produz triunfo emocional. O lamento de Davi impede que a batalha seja lida como vitória sem custo.\n\n**Leitura cuidadosa:** Comunicar a verdade com sensibilidade. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-18-complemento-4",
+    "title": "Luto, dever público e compaixão",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 18"
+    ],
+    "body": "**Análise:** A morte de Absalão encerra a rebelião, mas não produz triunfo emocional. O lamento de Davi impede que a batalha seja lida como vitória sem custo.\n\n**Leitura cuidadosa:** Luto, dever público e compaixão. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
   }
-]
+
 };
