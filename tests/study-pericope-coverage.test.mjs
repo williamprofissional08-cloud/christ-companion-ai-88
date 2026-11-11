@@ -32,6 +32,16 @@ const curatedBatch = [
   { book: "Deuteronômio", chapter: 14, verseCount: 29, slug: "biblia-deuteronomio-cap-14", exportName: "deuteronomy14Study", file: "deuteronomy-14-study.ts" },
   { book: "Deuteronômio", chapter: 15, verseCount: 23, slug: "biblia-deuteronomio-cap-15", exportName: "deuteronomy15Study", file: "deuteronomy-15-study.ts" },
   { book: "Deuteronômio", chapter: 16, verseCount: 22, slug: "biblia-deuteronomio-cap-16", exportName: "deuteronomy16Study", file: "deuteronomy-16-study.ts" },
+  { book: "Deuteronômio", chapter: 17, verseCount: 20, slug: "biblia-deuteronomio-cap-17", exportName: "deuteronomy17Study", file: "deuteronomy-17-study.ts" },
+  { book: "Deuteronômio", chapter: 18, verseCount: 22, slug: "biblia-deuteronomio-cap-18", exportName: "deuteronomy18Study", file: "deuteronomy-18-study.ts" },
+  { book: "Deuteronômio", chapter: 19, verseCount: 21, slug: "biblia-deuteronomio-cap-19", exportName: "deuteronomy19Study", file: "deuteronomy-19-study.ts" },
+  { book: "Deuteronômio", chapter: 20, verseCount: 20, slug: "biblia-deuteronomio-cap-20", exportName: "deuteronomy20Study", file: "deuteronomy-20-study.ts" },
+  { book: "Deuteronômio", chapter: 21, verseCount: 23, slug: "biblia-deuteronomio-cap-21", exportName: "deuteronomy21Study", file: "deuteronomy-21-study.ts" },
+  { book: "Deuteronômio", chapter: 22, verseCount: 30, slug: "biblia-deuteronomio-cap-22", exportName: "deuteronomy22Study", file: "deuteronomy-22-study.ts" },
+  { book: "Deuteronômio", chapter: 23, verseCount: 25, slug: "biblia-deuteronomio-cap-23", exportName: "deuteronomy23Study", file: "deuteronomy-23-study.ts" },
+  { book: "Deuteronômio", chapter: 24, verseCount: 22, slug: "biblia-deuteronomio-cap-24", exportName: "deuteronomy24Study", file: "deuteronomy-24-study.ts" },
+  { book: "Deuteronômio", chapter: 25, verseCount: 19, slug: "biblia-deuteronomio-cap-25", exportName: "deuteronomy25Study", file: "deuteronomy-25-study.ts" },
+  { book: "Deuteronômio", chapter: 26, verseCount: 19, slug: "biblia-deuteronomio-cap-26", exportName: "deuteronomy26Study", file: "deuteronomy-26-study.ts" },
 ];
 
 async function readContent(path) {
