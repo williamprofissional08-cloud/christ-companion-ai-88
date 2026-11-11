@@ -1,4 +1,11 @@
 import type { StudyContent } from "../types";
+import { ezra1Study } from "./ezra-1-study";
+import { ezra2Study } from "./ezra-2-study";
+import { ezra3Study } from "./ezra-3-study";
+import { ezra4Study } from "./ezra-4-study";
+import { ezra5Study } from "./ezra-5-study";
+import { ezra6Study } from "./ezra-6-study";
+
 import { firstChronicles1Study } from "./1-chronicles-1-study";
 import { firstChronicles2Study } from "./1-chronicles-2-study";
 import { firstChronicles3Study } from "./1-chronicles-3-study";
@@ -813,4 +820,10 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-2-cronicas-cap-34": secondChronicles34Study,
   "biblia-2-cronicas-cap-35": secondChronicles35Study,
   "biblia-2-cronicas-cap-36": secondChronicles36Study,
+  "biblia-esdras-cap-1": ezra1Study,
+  "biblia-esdras-cap-2": ezra2Study,
+  "biblia-esdras-cap-3": ezra3Study,
+  "biblia-esdras-cap-4": ezra4Study,
+  "biblia-esdras-cap-5": ezra5Study,
+  "biblia-esdras-cap-6": ezra6Study,
 };

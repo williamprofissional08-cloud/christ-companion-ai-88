@@ -3,6 +3,12 @@ import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
 const curatedBatch = [
+  { book: "Esdras", chapter: 1, verseCount: 11, slug: "biblia-esdras-cap-1", exportName: "ezra1Study", file: "ezra-1-study.ts" },
+  { book: "Esdras", chapter: 2, verseCount: 70, slug: "biblia-esdras-cap-2", exportName: "ezra2Study", file: "ezra-2-study.ts" },
+  { book: "Esdras", chapter: 3, verseCount: 13, slug: "biblia-esdras-cap-3", exportName: "ezra3Study", file: "ezra-3-study.ts" },
+  { book: "Esdras", chapter: 4, verseCount: 24, slug: "biblia-esdras-cap-4", exportName: "ezra4Study", file: "ezra-4-study.ts" },
+  { book: "Esdras", chapter: 5, verseCount: 17, slug: "biblia-esdras-cap-5", exportName: "ezra5Study", file: "ezra-5-study.ts" },
+  { book: "Esdras", chapter: 6, verseCount: 22, slug: "biblia-esdras-cap-6", exportName: "ezra6Study", file: "ezra-6-study.ts" },
   { book: "Rute", chapter: 1, verseCount: 22, slug: "biblia-rute-cap-1", exportName: "ruth1Study", file: "ruth-1-study.ts" },
   { book: "Rute", chapter: 2, verseCount: 23, slug: "biblia-rute-cap-2", exportName: "ruth2Study", file: "ruth-2-study.ts" },
   { book: "Rute", chapter: 3, verseCount: 18, slug: "biblia-rute-cap-3", exportName: "ruth3Study", file: "ruth-3-study.ts" },
