@@ -9,8 +9,8 @@ import urllib.error
 import urllib.request
 
 ROOT = pathlib.Path(".")
-TOKEN = os.environ.get("GH_TOKEN", "").strip()
-MODEL = os.environ.get("MODEL", "openai/gpt-4.1").strip()
+TOKEN = os.environ.get("GEMINI_API_KEY", "").strip()
+MODEL = os.environ.get("MODEL", "gemini-3.8-flash").strip()
 BOOK_SLUG = os.environ.get("BOOK_SLUG", "numbers").strip().lower()
 START = int(os.environ.get("START_CHAPTER", "21"))
 COUNT = int(os.environ.get("BATCH_SIZE", "7"))
@@ -45,7 +45,7 @@ PREFIX = {
 }
 
 if not TOKEN:
-    raise SystemExit("GH_TOKEN ausente. Verifique permissions: models: read.")
+    raise SystemExit("GEMINI_API_KEY ausente. Cadastre o segredo GEMINI_API_KEY em Settings > Secrets and variables > Actions.")
 if not 1 <= COUNT <= 7:
     raise SystemExit("O lote deve examinar de 1 a 7 capítulos.")
 if not CATALOG_PATH.exists() or not BOOKS_PATH.exists():
@@ -87,34 +87,39 @@ Retorne SOMENTE JSON válido com: version (4), depth ("deep"), intro (mínimo 90
 As seções devem cobrir: introdução e tese; contexto literário/histórico e limites da evidência; gênero; estrutura; exposição por perícope/versículos; termos importantes sem etimologia especulativa; teologia do capítulo; relação com o livro e cânon; debates interpretativos; erros de leitura; aplicações; método de interpretação; glossário; exercícios/avaliação; esboço expositivo; meditação e síntese. Cada body com pelo menos 250 caracteres. Evite repetição artificial.
 Use kinds: exegesis, context, theology, pastoral, application, method, glossary, exercise. confidence: high, probable, debated, uncertain. Identificadores únicos em kebab-case. Referências bíblicas verificáveis. Texto claro e específico ao capítulo.
 """
-    payload = json.dumps({"model": MODEL, "messages": [
-        {"role": "system", "content": "Você é exegeta bíblico, professor e editor teológico. Fidelidade textual, honestidade epistemológica, profundidade e clareza didática são prioritárias. Responda apenas JSON válido."},
-        {"role": "user", "content": prompt}], "temperature": 0.2, "max_tokens": 20000}).encode()
-    request = urllib.request.Request("https://models.github.ai/inference/chat/completions", data=payload,
-        headers={"Content-Type": "application/json", "Accept": "application/json", "Authorization": "Bearer " + TOKEN})
+    payload = json.dumps({
+        "systemInstruction": {"parts": [{"text": "Você é exegeta bíblico, professor e editor teológico. Fidelidade textual, honestidade epistemológica, profundidade e clareza didática são prioritárias. Responda apenas JSON válido."}]},
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 20000, "responseMimeType": "application/json"}
+    }).encode()
+    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
+    request = urllib.request.Request(endpoint, data=payload,
+        headers={"Content-Type": "application/json", "Accept": "application/json", "x-goog-api-key": TOKEN})
     for attempt in range(3):
         try:
             with urllib.request.urlopen(request, timeout=300) as response:
                 body = response.read().decode("utf-8", "replace")
+            if not body.strip():
+                raise ValueError("API Gemini retornou corpo vazio.")
             result = json.loads(body)
-            choices = result.get("choices") or []
-            if not choices:
-                raise ValueError(f"API sem choices: {body[:700]}")
-            message = choices[0].get("message") or {}
-            raw = message.get("content")
-            if isinstance(raw, list):
-                raw = "".join(part.get("text", "") if isinstance(part, dict) else str(part) for part in raw)
-            if not isinstance(raw, str) or not raw.strip():
-                raise ValueError(f"Resposta vazia: {message.get('refusal')}")
-            raw = re.sub(r'^\s*\x60{3}(?:json)?\s*', '', raw.strip())
-            raw = re.sub(r'\s*\x60{3}\s*$', '', raw)
+            candidates = result.get("candidates") or []
+            if not candidates:
+                feedback = result.get("promptFeedback") or {}
+                raise ValueError(f"Gemini sem candidatos: {json.dumps(feedback, ensure_ascii=False)[:700]}")
+            parts = (candidates[0].get("content") or {}).get("parts") or []
+            raw = "".join(part.get("text", "") for part in parts if isinstance(part, dict))
+            if not raw.strip():
+                finish = candidates[0].get("finishReason", "desconhecido")
+                raise ValueError(f"Gemini não retornou texto; finishReason={finish}")
+            raw = re.sub(r'^\\s*`{3}(?:json)?\\s*', '', raw.strip())
+            raw = re.sub(r'\\s*`{3}\\s*$', '', raw)
             data = json.loads(raw)
             validate(data)
             return data
         except urllib.error.HTTPError as error:
-            detail = error.read().decode("utf-8", "replace")[:1000]
-            if error.code in (401, 403) or error.code not in (408, 429, 500, 502, 503, 504) or attempt == 2:
-                raise SystemExit(f"GitHub Models HTTP {error.code}: {detail}")
+            detail = error.read().decode("utf-8", "replace")[:1200]
+            if error.code not in (408, 429, 500, 502, 503, 504) or attempt == 2:
+                raise SystemExit(f"Gemini API HTTP {error.code}: {detail}")
             time.sleep(10 * (attempt + 1))
         except (ValueError, KeyError, TypeError, json.JSONDecodeError) as error:
             if attempt == 2:
