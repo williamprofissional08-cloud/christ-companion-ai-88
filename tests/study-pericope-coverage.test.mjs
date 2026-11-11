@@ -135,6 +135,16 @@ const curatedBatch = [
   { book: "1 Reis", chapter: 20, verseCount: 43, slug: "biblia-1-reis-cap-20", exportName: "firstKings20Study", file: "1-kings-20-study.ts" },
   { book: "1 Reis", chapter: 21, verseCount: 29, slug: "biblia-1-reis-cap-21", exportName: "firstKings21Study", file: "1-kings-21-study.ts" },
   { book: "1 Reis", chapter: 22, verseCount: 53, slug: "biblia-1-reis-cap-22", exportName: "firstKings22Study", file: "1-kings-22-study.ts" },
+  { book: "2 Reis", chapter: 1, verseCount: 18, slug: "biblia-2-reis-cap-1", exportName: "secondKings1Study", file: "2-kings-1-study.ts" },
+  { book: "2 Reis", chapter: 2, verseCount: 25, slug: "biblia-2-reis-cap-2", exportName: "secondKings2Study", file: "2-kings-2-study.ts" },
+  { book: "2 Reis", chapter: 3, verseCount: 27, slug: "biblia-2-reis-cap-3", exportName: "secondKings3Study", file: "2-kings-3-study.ts" },
+  { book: "2 Reis", chapter: 4, verseCount: 44, slug: "biblia-2-reis-cap-4", exportName: "secondKings4Study", file: "2-kings-4-study.ts" },
+  { book: "2 Reis", chapter: 5, verseCount: 27, slug: "biblia-2-reis-cap-5", exportName: "secondKings5Study", file: "2-kings-5-study.ts" },
+  { book: "2 Reis", chapter: 6, verseCount: 33, slug: "biblia-2-reis-cap-6", exportName: "secondKings6Study", file: "2-kings-6-study.ts" },
+  { book: "2 Reis", chapter: 7, verseCount: 20, slug: "biblia-2-reis-cap-7", exportName: "secondKings7Study", file: "2-kings-7-study.ts" },
+  { book: "2 Reis", chapter: 8, verseCount: 29, slug: "biblia-2-reis-cap-8", exportName: "secondKings8Study", file: "2-kings-8-study.ts" },
+  { book: "2 Reis", chapter: 9, verseCount: 37, slug: "biblia-2-reis-cap-9", exportName: "secondKings9Study", file: "2-kings-9-study.ts" },
+  { book: "2 Reis", chapter: 10, verseCount: 36, slug: "biblia-2-reis-cap-10", exportName: "secondKings10Study", file: "2-kings-10-study.ts" },
 ];
 
 async function readContent(path) {
