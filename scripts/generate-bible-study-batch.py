@@ -239,8 +239,10 @@ def validate(data):
         if not isinstance(section["scriptureRefs"], list) or not section["scriptureRefs"] or not all(isinstance(ref, str) and ref.strip() for ref in section["scriptureRefs"]):
             raise ValueError("Cada seção precisa conter referências bíblicas específicas e não vazias.")
         if len(section["body"]) < 500 or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", section["id"]) or section["id"] in ids:
-            raise ValueError("Seção superficial (mínimo 350 caracteres) ou ID inválido/duplicado.")
-        if section.get("kind") not in ("scripture", "introduction", "context", "exegesis", "theology", "pastoral", "application", "method", "glossary", "exercise", "analysis", "meditation", "reference"):\n            raise ValueError("Tipo de seção inválido ou não reconhecido.")\n        if section["confidence"] not in ("high", "probable", "debated", "uncertain"):
+            raise ValueError("Seção superficial (mínimo 500 caracteres) ou ID inválido/duplicado.")
+        if section.get("kind") not in ("scripture", "introduction", "context", "exegesis", "theology", "pastoral", "application", "method", "glossary", "exercise", "analysis", "meditation", "reference"):
+            raise ValueError("Tipo de seção inválido ou não reconhecido.")
+        if section["confidence"] not in ("high", "probable", "debated", "uncertain"):
             raise ValueError("Nível de confiança inválido.")
         ids.add(section["id"])
 
