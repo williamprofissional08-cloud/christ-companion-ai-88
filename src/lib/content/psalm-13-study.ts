@@ -98,7 +98,7 @@ export const psalm13Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 13:1-2"
       ],
-      "body": "**Trecho:** Salmos 13:1-2.\n\n**Observação literária e teológica:** A repetição da pergunta: até quando?. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **1.** A pergunta sobre ser esquecido expressa a experiência subjetiva de distância, não que Deus literalmente esqueça.\n- **2.** A face escondida é imagem relacional de ausência de resposta percebida.\n- **3.** O conflito interior e a tristeza persistente são apresentados em oração.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 13:1-2.\n\n**Observação:** a repetição da pergunta expressa a duração da angústia.\n\n**Versículo por versículo:**\n- **1.** A pergunta sobre ser esquecido expressa a experiência subjetiva de distância, não que Deus literalmente esqueça.\n- **2.** O salmista descreve o conflito interior e a tristeza persistente, levando sua dor a Deus.\n\n**Interpretação responsável:** leia cada imagem no conjunto do salmo e não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto."
     },
     {
       "id": "pericope-2",
@@ -108,7 +108,7 @@ export const psalm13Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 13:3-4"
       ],
-      "body": "**Trecho:** Salmos 13:3-4.\n\n**Observação literária e teológica:** O pedido por atenção e livramento. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **3.** O pedido para Deus olhar e responder transforma a angústia em diálogo.\n- **4.** Os olhos que se apagam apontam para a gravidade da ameaça de morte.\n- **5.** O salmista pede que o inimigo não interprete sua queda como vitória.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 13:3-4.\n\n**Observação:** o lamento se transforma em pedido por atenção e livramento.\n\n**Versículo por versículo:**\n- **3.** O pedido para Deus olhar e responder transforma a angústia em diálogo; a ameaça de morte é real.\n- **4.** O salmista pede que o inimigo não interprete sua queda como vitória.\n\n**Interpretação responsável:** leia cada imagem no conjunto do salmo e não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto."
     },
     {
       "id": "pericope-3",
@@ -118,7 +118,7 @@ export const psalm13Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 13:5-6"
       ],
-      "body": "**Trecho:** Salmos 13:5-6.\n\n**Observação literária e teológica:** A confiança no amor fiel e o cântico. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **5.** A confiança se ancora no amor leal de Deus, não em circunstâncias já resolvidas.\n- **6.** O louvor antecipa o reconhecimento do cuidado recebido.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 13:5-6.\n\n**Observação:** a confiança se ancora no amor fiel de Deus.\n\n**Versículo por versículo:**\n- **5.** O salmista confia no amor leal do Senhor, ainda que a situação não esteja resolvida.\n- **6.** O louvor antecipa o reconhecimento do cuidado recebido.\n\n**Interpretação responsável:** leia cada imagem no conjunto do salmo e não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto."
     },
     {
       "id": "sintese-teologica",
