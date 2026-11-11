@@ -60,16 +60,16 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   const items = [...NAV, { to: "/admin" as const, label: "Painel administrativo", icon: ShieldCheck }];
 
   return (
-    <nav className="flex flex-col gap-1">
+    <nav className="flex flex-col gap-0.5">
       {items.map((item) => (
         <Link
           key={item.to}
           to={item.to}
           onClick={onNavigate}
-          className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-sidebar-foreground/80 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+          className="flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13px] font-medium text-sidebar-foreground/80 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
           activeProps={{
             className:
-              "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold bg-sidebar-accent text-sidebar-accent-foreground",
+              "flex items-center gap-3 rounded-lg px-2.5 py-2 text-[13px] font-semibold bg-sidebar-accent text-sidebar-accent-foreground",
           }}
         >
           <item.icon className="size-4.5 shrink-0" aria-hidden />
@@ -111,10 +111,10 @@ export function AppShell({
 
   return (
     <div className="app-ambient min-h-screen bg-background">
-      <aside className="fixed inset-y-0 left-0 hidden w-72 flex-col border-r border-sidebar-border bg-sidebar px-4 py-6 lg:flex">
-        <Link to="/inicio" className="mb-8 flex items-center gap-3 px-2">
-          <img src={logo} alt="" width={40} height={40} className="size-10" />
-          <span className="font-display text-lg leading-tight font-semibold text-sidebar-foreground">
+      <aside className="fixed inset-y-0 left-0 hidden w-64 flex-col border-r border-sidebar-border bg-sidebar px-3 py-5 lg:flex">
+        <Link to="/inicio" className="mb-6 flex items-center gap-2.5 px-2">
+          <img src={logo} alt="" width={36} height={36} className="size-9" />
+          <span className="font-display text-base leading-tight font-semibold text-sidebar-foreground">
             Caminho
             <br />
             Divino
@@ -132,9 +132,9 @@ export function AppShell({
         </div>
       </aside>
 
-      <div className="lg:pl-72">
+      <div className="lg:pl-64">
         <header className="sticky top-0 z-30 border-b border-border/70 bg-background/85 backdrop-blur">
-          <div className="mx-auto flex w-full max-w-[1600px] items-center gap-3 px-4 py-3.5 sm:px-6 lg:px-8 2xl:px-10">
+          <div className="mx-auto flex w-full max-w-[1280px] items-center gap-2.5 px-3 py-2.5 sm:px-5 lg:px-6">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon-sm" className="lg:hidden" aria-label="Abrir menu">
@@ -163,7 +163,7 @@ export function AppShell({
               </SheetContent>
             </Sheet>
             <div className="min-w-0 flex-1">
-              <h1 className="truncate text-base font-semibold sm:text-lg">{title}</h1>
+              <h1 className="truncate text-sm font-semibold sm:text-base">{title}</h1>
               {subtitle ? (
                 <p className="truncate text-xs text-muted-foreground sm:text-sm">{subtitle}</p>
               ) : null}
@@ -179,7 +179,7 @@ export function AppShell({
             </Button>
           </div>
         </header>
-        <main className="mx-auto w-full max-w-[1600px] px-4 pt-6 pb-24 sm:px-6 lg:px-8 lg:pt-8 lg:pb-12 2xl:px-10">{children}</main>
+        <main className="mx-auto w-full max-w-[1280px] px-3 pt-4 pb-20 sm:px-5 sm:pt-5 lg:px-6 lg:pt-6 lg:pb-10">{children}</main>
       </div>
 
       <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-background/95 backdrop-blur lg:hidden">
@@ -188,12 +188,12 @@ export function AppShell({
             <Link
               key={item.to}
               to={item.to}
-              className="flex flex-col items-center gap-1 py-2.5 text-[11px] text-muted-foreground"
+              className="flex flex-col items-center gap-0.5 py-2 text-[10px] text-muted-foreground"
               activeProps={{
-                className: "flex flex-col items-center gap-1 py-2.5 text-[11px] text-primary font-semibold",
+                className: "flex flex-col items-center gap-0.5 py-2 text-[10px] text-primary font-semibold",
               }}
             >
-              <item.icon className="size-5" aria-hidden />
+              <item.icon className="size-[18px]" aria-hidden />
               {item.label}
             </Link>
           ))}
