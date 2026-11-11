@@ -109,6 +109,10 @@ const curatedBatch = [
   { book: "2 Samuel", chapter: 18, verseCount: 33, slug: "biblia-2-samuel-cap-18", exportName: "secondSamuel18Study", file: "2-samuel-18-study.ts" },
   { book: "2 Samuel", chapter: 19, verseCount: 43, slug: "biblia-2-samuel-cap-19", exportName: "secondSamuel19Study", file: "2-samuel-19-study.ts" },
   { book: "2 Samuel", chapter: 20, verseCount: 26, slug: "biblia-2-samuel-cap-20", exportName: "secondSamuel20Study", file: "2-samuel-20-study.ts" },
+  { book: "2 Samuel", chapter: 21, verseCount: 22, slug: "biblia-2-samuel-cap-21", exportName: "secondSamuel21Study", file: "2-samuel-21-study.ts" },
+  { book: "2 Samuel", chapter: 22, verseCount: 51, slug: "biblia-2-samuel-cap-22", exportName: "secondSamuel22Study", file: "2-samuel-22-study.ts" },
+  { book: "2 Samuel", chapter: 23, verseCount: 39, slug: "biblia-2-samuel-cap-23", exportName: "secondSamuel23Study", file: "2-samuel-23-study.ts" },
+  { book: "2 Samuel", chapter: 24, verseCount: 25, slug: "biblia-2-samuel-cap-24", exportName: "secondSamuel24Study", file: "2-samuel-24-study.ts" },
 ];
 
 async function readContent(path) {
