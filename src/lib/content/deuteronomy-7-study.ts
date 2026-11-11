@@ -36,9 +36,9 @@ export const deuteronomy7Study: StudyContent = {
     kind: "scripture",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 7:7:1-6"
+      "Deuteronômio 7:1-6"
     ],
-    body: "**Leitura orientada — Deuteronômio 7:7:1-6**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA passagem descreve a separação de Israel dos povos de Canaã e a proibição de alianças que conduzissem à idolatria. O próprio texto fundamenta essa identidade na consagração do povo ao Senhor, não em superioridade étnica ou valor humano intrínseco.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A linguagem de santidade significa pertencimento especial a Deus dentro da aliança. As instruções de destruição pertencem ao cenário singular da conquista e são objeto de debate ético e teológico; não podem ser transferidas para a igreja nem usadas para justificar violência, perseguição ou supremacismo.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 7:1-6**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA passagem descreve a separação de Israel dos povos de Canaã e a proibição de alianças que conduzissem à idolatria. O próprio texto fundamenta essa identidade na consagração do povo ao Senhor, não em superioridade étnica ou valor humano intrínseco.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A linguagem de santidade significa pertencimento especial a Deus dentro da aliança. As instruções de destruição pertencem ao cenário singular da conquista e são objeto de debate ético e teológico; não podem ser transferidas para a igreja nem usadas para justificar violência, perseguição ou supremacismo.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-2",
@@ -46,9 +46,9 @@ export const deuteronomy7Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 7:7:7-11"
+      "Deuteronômio 7:7-11"
     ],
-    body: "**Leitura orientada — Deuteronômio 7:7:7-11**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés nega que Israel tenha sido escolhido por ser numeroso. O texto aponta para o amor do Senhor e para o juramento feito aos antepassados; a libertação do Egito demonstra sua fidelidade.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A graça precede a obediência, mas não a torna irrelevante. O texto distingue a fidelidade de Deus da resposta humana: o povo é chamado a guardar a aliança porque foi alcançado pelo amor do Senhor.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 7:7-11**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés nega que Israel tenha sido escolhido por ser numeroso. O texto aponta para o amor do Senhor e para o juramento feito aos antepassados; a libertação do Egito demonstra sua fidelidade.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A graça precede a obediência, mas não a torna irrelevante. O texto distingue a fidelidade de Deus da resposta humana: o povo é chamado a guardar a aliança porque foi alcançado pelo amor do Senhor.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-3",
@@ -56,9 +56,9 @@ export const deuteronomy7Study: StudyContent = {
     kind: "context",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 7:7:12-16"
+      "Deuteronômio 7:12-16"
     ],
-    body: "**Leitura orientada — Deuteronômio 7:7:12-16**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA passagem associa ouvir e guardar os mandamentos às bênçãos da aliança: fecundidade, sustento, proteção e preservação. O texto fala a Israel como povo em uma terra e em uma relação pactual específica.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** Não se deve transformar essas promessas nacionais e agrárias em garantia automática de riqueza, saúde ou ausência de sofrimento para cada cristão. A aplicação considera a aliança bíblica em seu desenvolvimento e o ensino de Jesus.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 7:12-16**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA passagem associa ouvir e guardar os mandamentos às bênçãos da aliança: fecundidade, sustento, proteção e preservação. O texto fala a Israel como povo em uma terra e em uma relação pactual específica.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** Não se deve transformar essas promessas nacionais e agrárias em garantia automática de riqueza, saúde ou ausência de sofrimento para cada cristão. A aplicação considera a aliança bíblica em seu desenvolvimento e o ensino de Jesus.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-4",
@@ -66,9 +66,9 @@ export const deuteronomy7Study: StudyContent = {
     kind: "application",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 7:7:17-24"
+      "Deuteronômio 7:17-24"
     ],
-    body: "**Leitura orientada — Deuteronômio 7:7:17-24**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés antecipa a pergunta sobre como Israel enfrentaria nações mais numerosas. A resposta é recordar os sinais do êxodo e confiar na presença do Senhor, que conduziria o processo de maneira progressiva.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A memória dos atos de Deus fortalece a confiança. A linguagem de vitória está ligada à conquista histórica; não deve ser convertida em promessa de triunfo político ou militar para comunidades cristãs.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 7:17-24**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés antecipa a pergunta sobre como Israel enfrentaria nações mais numerosas. A resposta é recordar os sinais do êxodo e confiar na presença do Senhor, que conduziria o processo de maneira progressiva.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A memória dos atos de Deus fortalece a confiança. A linguagem de vitória está ligada à conquista histórica; não deve ser convertida em promessa de triunfo político ou militar para comunidades cristãs.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-5",
@@ -76,9 +76,9 @@ export const deuteronomy7Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 7:7:25-26"
+      "Deuteronômio 7:25-26"
     ],
-    body: "**Leitura orientada — Deuteronômio 7:7:25-26**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nOs objetos de culto dos povos são apresentados como armadilhas. Israel não deveria cobiçar a prata e o ouro associados aos ídolos nem introduzi-los em sua casa.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O problema não é apenas a imagem material, mas a lealdade religiosa que ela representa. A aplicação cristã é abandonar ídolos e práticas que rivalizam com Deus, sem desprezar pessoas de outras culturas ou religiões.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 7:25-26**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nOs objetos de culto dos povos são apresentados como armadilhas. Israel não deveria cobiçar a prata e o ouro associados aos ídolos nem introduzi-los em sua casa.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O problema não é apenas a imagem material, mas a lealdade religiosa que ela representa. A aplicação cristã é abandonar ídolos e práticas que rivalizam com Deus, sem desprezar pessoas de outras culturas ou religiões.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   }
 ]
 };
