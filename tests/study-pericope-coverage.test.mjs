@@ -42,6 +42,16 @@ const curatedBatch = [
   { book: "Deuteronômio", chapter: 24, verseCount: 22, slug: "biblia-deuteronomio-cap-24", exportName: "deuteronomy24Study", file: "deuteronomy-24-study.ts" },
   { book: "Deuteronômio", chapter: 25, verseCount: 19, slug: "biblia-deuteronomio-cap-25", exportName: "deuteronomy25Study", file: "deuteronomy-25-study.ts" },
   { book: "Deuteronômio", chapter: 26, verseCount: 19, slug: "biblia-deuteronomio-cap-26", exportName: "deuteronomy26Study", file: "deuteronomy-26-study.ts" },
+  { book: "Josué", chapter: 1, verseCount: 18, slug: "biblia-josue-cap-1", exportName: "joshua1Study", file: "joshua-1-study.ts" },
+  { book: "Josué", chapter: 2, verseCount: 24, slug: "biblia-josue-cap-2", exportName: "joshua2Study", file: "joshua-2-study.ts" },
+  { book: "Josué", chapter: 3, verseCount: 17, slug: "biblia-josue-cap-3", exportName: "joshua3Study", file: "joshua-3-study.ts" },
+  { book: "Josué", chapter: 4, verseCount: 24, slug: "biblia-josue-cap-4", exportName: "joshua4Study", file: "joshua-4-study.ts" },
+  { book: "Josué", chapter: 5, verseCount: 15, slug: "biblia-josue-cap-5", exportName: "joshua5Study", file: "joshua-5-study.ts" },
+  { book: "Josué", chapter: 6, verseCount: 27, slug: "biblia-josue-cap-6", exportName: "joshua6Study", file: "joshua-6-study.ts" },
+  { book: "Josué", chapter: 7, verseCount: 26, slug: "biblia-josue-cap-7", exportName: "joshua7Study", file: "joshua-7-study.ts" },
+  { book: "Josué", chapter: 8, verseCount: 35, slug: "biblia-josue-cap-8", exportName: "joshua8Study", file: "joshua-8-study.ts" },
+  { book: "Josué", chapter: 9, verseCount: 27, slug: "biblia-josue-cap-9", exportName: "joshua9Study", file: "joshua-9-study.ts" },
+  { book: "Josué", chapter: 10, verseCount: 43, slug: "biblia-josue-cap-10", exportName: "joshua10Study", file: "joshua-10-study.ts" },
 ];
 
 async function readContent(path) {
