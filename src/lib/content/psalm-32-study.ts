@@ -95,9 +95,9 @@ export const psalm32Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 32:1-4"
+        "Salmos 32:1-2"
       ],
-      "body": "**Trecho:** Salmos 32:1-4.\\n\\n**Lugar no argumento:** A felicidade de quem recebe perdão. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **1.** É feliz quem tem a transgressão perdoada: a bem-aventurança começa pela graça.\\n- **2.** A culpa não é contabilizada contra quem foi perdoado; a integridade inclui sinceridade diante de Deus.\\n- **3.** O silêncio diante da culpa é descrito como desgaste interior.\\n- **4.** A mão divina pesa sobre o salmista; imagem de convicção e disciplina, não diagnóstico médico universal.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 32:1-2.\\n\\n**Lugar no argumento:** A felicidade de quem recebe perdão. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **1.** É feliz quem tem a transgressão perdoada: a bem-aventurança começa pela graça.\\n- **2.** A culpa não é contabilizada contra quem foi perdoado; a integridade inclui sinceridade diante de Deus.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-2",
@@ -105,9 +105,9 @@ export const psalm32Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 32:5-8"
+        "Salmos 32:3-5"
       ],
-      "body": "**Trecho:** Salmos 32:5-8.\\n\\n**Lugar no argumento:** O peso do silêncio e a restauração pela confissão. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **5.** A confissão rompe o encobrimento e recebe o perdão divino.\\n- **6.** A experiência torna-se convite para que os fiéis orem enquanto Deus pode ser encontrado.\\n- **7.** Mesmo águas ameaçadoras não submergem quem encontra refúgio no Senhor.\\n- **8.** Deus é abrigo e fonte de cânticos de livramento.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 32:3-5.\\n\\n**Lugar no argumento:** O peso do silêncio e a restauração pela confissão. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **3.** O silêncio diante da culpa é descrito como desgaste interior.\\n- **4.** A mão divina pesa sobre o salmista; imagem de convicção e disciplina, não diagnóstico médico universal.\\n- **5.** A confissão rompe o encobrimento e recebe o perdão divino.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-3",
@@ -115,9 +115,19 @@ export const psalm32Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 32:9-11"
+        "Salmos 32:6-7"
       ],
-      "body": "**Trecho:** Salmos 32:9-11.\\n\\n**Lugar no argumento:** Oração, proteção e cânticos de livramento. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **9.** O Senhor promete instruir e orientar o caminho; a direção divina envolve relacionamento.\\n- **10.** O texto adverte contra a teimosia irracional simbolizada por cavalo e mula que precisam ser contidos.\\n- **11.** O ímpio enfrenta muitas dores, enquanto o amor leal envolve quem confia no Senhor.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 32:6-7.\\n\\n**Lugar no argumento:** Oração, proteção e cânticos de livramento. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **6.** A experiência torna-se convite para que os fiéis orem enquanto Deus pode ser encontrado.\\n- **7.** Mesmo águas ameaçadoras não submergem quem encontra refúgio no Senhor.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+    },
+    {
+      "id": "pericope-4",
+      "title": "4.4 Exposição: Instrução, advertência e alegria no Senhor",
+      "kind": "exposition",
+      "confidence": "high",
+      "scriptureRefs": [
+        "Salmos 32:8-11"
+      ],
+      "body": "**Trecho:** Salmos 32:8-11.\\n\\n**Lugar no argumento:** Instrução, advertência e alegria no Senhor. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **8.** Deus é abrigo e fonte de cânticos de livramento.\\n- **9.** O Senhor promete instruir e orientar o caminho; a direção divina envolve relacionamento.\\n- **10.** O texto adverte contra a teimosia irracional simbolizada por cavalo e mula que precisam ser contidos.\\n- **11.** O ímpio enfrenta muitas dores, enquanto o amor leal envolve quem confia no Senhor.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "sintese-teologica",
