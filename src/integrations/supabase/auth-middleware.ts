@@ -79,9 +79,24 @@ export const requireSupabaseAuth = createMiddleware({ type: 'function' })
       }
     }
 
+    // Bind each server-function request to the exact Supabase project that
+    // issued the browser session. The key is the browser client's public key;
+    // never forward or accept a service-role/secret key here.
+    // Read the same public build-time configuration used to construct the
+    // browser client. SupabaseClient intentionally protects its internal URL
+    // and key properties, so do not access them through the client instance.
+    const browserProjectUrl = import.meta.env['VITE_SUPABASE_URL'] || process.env['SUPABASE_URL']
+    const browserPublishableKey = import.meta.env['VITE_SUPABASE_PUBLISHABLE_KEY'] || process.env['SUPABASE_PUBLISHABLE_KEY']
+
+    if (!browserProjectUrl || !browserPublishableKey || browserPublishableKey.startsWith('sb_secret_')) {
+      throw new Error('Configuração pública do Supabase inválida. Atualize o aplicativo.')
+    }
+
     return next({
       headers: {
         Authorization: `Bearer ${accessToken}`,
+        'x-caminho-supabase-url': browserProjectUrl,
+        'x-caminho-supabase-apikey': browserPublishableKey,
       },
     })
   })
