@@ -1,0 +1,41 @@
+import type { StudyContent } from "../types";
+
+/** Estudo aprofundado de Deuteronômio 27, organizado em perícopes e leitura responsável. */
+export const deuteronomy27Study: StudyContent = {
+  version: 1,
+  depth: "deep",
+  intro: "Deuteronômio 27 prepara a renovação pública da aliança quando Israel atravessar o Jordão. A lei deve ser registrada, a adoração deve reconhecer a graça do Senhor e as bênçãos e maldições são proclamadas diante do povo.",
+  historicalContext: "O capítulo reúne instruções para um rito de aliança associado aos montes Ebal e Gerizim. As pedras inscritas, o altar e as respostas coletivas tornam pública a instrução e lembram que a aliança envolve toda a comunidade.",
+  keyPoints: [{"title":"Pedras inscritas e altar ao Senhor","text":"O povo deveria erguer pedras, revesti-las e escrever nelas as palavras da lei; também construiria um altar de pedras não lavradas. A memória da lei e a adoração aparecem juntas. A forma simples do altar impede que a obra humana se torne o centro do culto."},{"title":"A identidade do povo da aliança","text":"Moisés e os sacerdotes chamam Israel a ouvir: naquele momento o povo é lembrado de sua relação pactual com o Senhor e de sua responsabilidade de obedecer. A identidade recebida não elimina a necessidade de fidelidade."},{"title":"As proclamações no monte Ebal","text":"As tribos são distribuídas entre os montes para o rito público. As declarações finais denunciam práticas que destroem a justiça, exploram os vulneráveis ou corrompem a vida comunitária; o povo responde assumindo a seriedade da aliança."}],
+  application: "Interprete o capítulo respeitando seu gênero, destinatário e contexto da aliança com Israel. Não transforme leis, bênçãos, maldições ou imagens poéticas em fórmulas individuais de prosperidade, culpa ou condenação. A aplicação cristã deve considerar o desenvolvimento da revelação bíblica e o ensino de Jesus, preservando justiça, misericórdia, verdade e dignidade humana.",
+  crossReferences: ["Deuteronômio 6:4-9","Deuteronômio 30:1-20","Josué 1:1-9","Salmo 90:1-17","Hebreus 3:1-6"],
+  questions: ["Qual é a ideia central do capítulo e como ela se conecta ao argumento de Deuteronômio?","Quem é o destinatário original e qual situação histórica ou literária está em vista?","O que o texto afirma diretamente, e onde começa a interpretação?","Quais palavras, imagens ou repetições estruturam a passagem?","Como o conjunto das Escrituras e o ensino de Jesus orientam a leitura cristã?","Que aplicação preserva o sentido original sem transportar mecanicamente a legislação ou a experiência de Israel?"],
+  conclusion: "Deuteronômio 27 prepara a renovação pública da aliança quando Israel atravessar o Jordão. A lei deve ser registrada, a adoração deve reconhecer a graça do Senhor e as bênçãos e maldições são proclamadas diante do povo. O capítulo precisa ser lido em sua unidade literária e histórica. A leitura cristã considera a continuidade da história bíblica e o ensino de Jesus, sem atribuir ao texto aplicações que ele não autoriza.",
+  prayer: "Senhor Deus, concede-me humildade e discernimento para compreender tua Palavra. Ajuda-me a respeitar seu contexto, distinguir texto e interpretação e aplicar com fidelidade seus princípios. Forma em mim o caráter de Cristo, em amor, verdade e misericórdia. Amém.",
+  sections: [
+  {
+    id: "secao-1",
+    title: "Pedras inscritas e altar ao Senhor",
+    kind: scripture,
+    confidence: "high",
+    scriptureRefs: ["Deuteronômio 27:1-8"],
+    body: "**Leitura orientada — Deuteronômio 27:1-8**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nO povo deveria erguer pedras, revesti-las e escrever nelas as palavras da lei; também construiria um altar de pedras não lavradas. A memória da lei e a adoração aparecem juntas. A forma simples do altar impede que a obra humana se torne o centro do culto.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** O povo deveria erguer pedras, revesti-las e escrever nelas as palavras da lei; também construiria um altar de pedras não lavradas. A memória da lei e a adoração aparecem juntas. A forma simples do altar impede que a obra humana se torne o centro do culto. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
+  },
+  {
+    id: "secao-2",
+    title: "A identidade do povo da aliança",
+    kind: analysis,
+    confidence: "high",
+    scriptureRefs: ["Deuteronômio 27:9-10"],
+    body: "**Leitura orientada — Deuteronômio 27:9-10**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nMoisés e os sacerdotes chamam Israel a ouvir: naquele momento o povo é lembrado de sua relação pactual com o Senhor e de sua responsabilidade de obedecer. A identidade recebida não elimina a necessidade de fidelidade.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** Moisés e os sacerdotes chamam Israel a ouvir: naquele momento o povo é lembrado de sua relação pactual com o Senhor e de sua responsabilidade de obedecer. A identidade recebida não elimina a necessidade de fidelidade. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
+  },
+  {
+    id: "secao-3",
+    title: "As proclamações no monte Ebal",
+    kind: analysis,
+    confidence: "high",
+    scriptureRefs: ["Deuteronômio 27:11-26"],
+    body: "**Leitura orientada — Deuteronômio 27:11-26**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nAs tribos são distribuídas entre os montes para o rito público. As declarações finais denunciam práticas que destroem a justiça, exploram os vulneráveis ou corrompem a vida comunitária; o povo responde assumindo a seriedade da aliança.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** As tribos são distribuídas entre os montes para o rito público. As declarações finais denunciam práticas que destroem a justiça, exploram os vulneráveis ou corrompem a vida comunitária; o povo responde assumindo a seriedade da aliança. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
+  }
+  ]
+};
