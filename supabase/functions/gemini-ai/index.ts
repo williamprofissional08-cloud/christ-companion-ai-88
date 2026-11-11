@@ -85,6 +85,13 @@ Deno.serve(async (req: Request) => {
     return new Response("Content-Type inválido", { status: 415, headers: { "Cache-Control": "no-store" } });
   }
 
+  // Only the app's own server may call this proxy; the server owns prompts and roles.
+  const proxySecret = Deno.env.get("GEMINI_PROXY_SECRET");
+  const provided = req.headers.get("x-gemini-proxy-secret");
+  if (!proxySecret || !provided || provided !== proxySecret) {
+    return new Response("Não autorizado", { status: 401, headers: { "Cache-Control": "no-store" } });
+  }
+
   const rateLimitResponse = await enforceChatRateLimit(req);
   if (rateLimitResponse) return rateLimitResponse;
 
@@ -92,8 +99,22 @@ Deno.serve(async (req: Request) => {
   if (!body || body.byteLength === 0) {
     return new Response("Corpo JSON inválido ou acima do limite", { status: 413, headers: { "Cache-Control": "no-store" } });
   }
+  let forwardBody: string;
   try {
-    JSON.parse(new TextDecoder().decode(body));
+    const parsed = JSON.parse(new TextDecoder().decode(body));
+    if (!parsed || typeof parsed !== "object" || !Array.isArray(parsed.messages) || parsed.messages.length === 0 || parsed.messages.length > 200) {
+      throw new Error("invalid");
+    }
+    const ALLOWED_ROLES = new Set(["system", "user", "assistant", "tool"]);
+    for (const m of parsed.messages) {
+      if (!m || typeof m !== "object" || !ALLOWED_ROLES.has(m.role)) throw new Error("invalid");
+    }
+    const allowed: Record<string, unknown> = { model: "gemini-2.5-flash", messages: parsed.messages };
+    for (const k of ["stream", "temperature", "top_p", "max_tokens", "stop", "tools", "tool_choice", "response_format", "stream_options"]) {
+      if (k in parsed) allowed[k] = parsed[k];
+    }
+    if (typeof allowed.max_tokens === "number") allowed.max_tokens = Math.min(Math.max(1, allowed.max_tokens), 16384);
+    forwardBody = JSON.stringify(allowed);
   } catch {
     return new Response("Corpo JSON inválido", { status: 400, headers: { "Cache-Control": "no-store" } });
   }
@@ -110,7 +131,7 @@ Deno.serve(async (req: Request) => {
     const upstream = await fetch(GEMINI_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
-      body,
+      body: forwardBody,
       signal: AbortSignal.any([req.signal, AbortSignal.timeout(60_000)]),
     });
     const headers = new Headers({

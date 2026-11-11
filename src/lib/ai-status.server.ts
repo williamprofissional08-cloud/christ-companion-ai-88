@@ -30,6 +30,7 @@ export async function checkAiGatewayStatus(supabase: SupabaseClient): Promise<Ai
 
   try {
     const { error } = await supabase.functions.invoke("gemini-ai", {
+      headers: { "x-gemini-proxy-secret": process.env["GEMINI_PROXY_SECRET"] ?? "" },
       body: {
         model: "gemini-2.5-flash",
         messages: [{ role: "user", content: "Responda somente: OK" }],
