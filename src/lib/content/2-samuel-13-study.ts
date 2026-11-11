@@ -110,5 +110,5 @@ export const secondSamuel13Study: StudyContent = {
     ],
     "body": "**Análise:** O capítulo não apresenta a violência como romance nem a vingança como solução. A voz de Tamar, a omissão de Davi e a ação de Absalão devem ser avaliadas separadamente.\n\n**Leitura cuidadosa:** Proteção dos vulneráveis na leitura cristã. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
   }
-
+ ],
 };
