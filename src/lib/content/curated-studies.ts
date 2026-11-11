@@ -48,6 +48,16 @@ import { secondChronicles17Study } from "./2-chronicles-17-study";
 import { secondChronicles18Study } from "./2-chronicles-18-study";
 import { secondChronicles19Study } from "./2-chronicles-19-study";
 import { secondChronicles20Study } from "./2-chronicles-20-study";
+import { secondChronicles21Study } from "./2-chronicles-21-study";
+import { secondChronicles22Study } from "./2-chronicles-22-study";
+import { secondChronicles23Study } from "./2-chronicles-23-study";
+import { secondChronicles24Study } from "./2-chronicles-24-study";
+import { secondChronicles25Study } from "./2-chronicles-25-study";
+import { secondChronicles26Study } from "./2-chronicles-26-study";
+import { secondChronicles27Study } from "./2-chronicles-27-study";
+import { secondChronicles28Study } from "./2-chronicles-28-study";
+import { secondChronicles29Study } from "./2-chronicles-29-study";
+import { secondChronicles30Study } from "./2-chronicles-30-study";
 import { firstSamuel1Study } from "./1-samuel-1-study";
 import { firstSamuel2Study } from "./1-samuel-2-study";
 import { firstSamuel3Study } from "./1-samuel-3-study";
@@ -781,4 +791,14 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-2-cronicas-cap-18": secondChronicles18Study,
   "biblia-2-cronicas-cap-19": secondChronicles19Study,
   "biblia-2-cronicas-cap-20": secondChronicles20Study,
+  "biblia-2-cronicas-cap-21": secondChronicles21Study,
+  "biblia-2-cronicas-cap-22": secondChronicles22Study,
+  "biblia-2-cronicas-cap-23": secondChronicles23Study,
+  "biblia-2-cronicas-cap-24": secondChronicles24Study,
+  "biblia-2-cronicas-cap-25": secondChronicles25Study,
+  "biblia-2-cronicas-cap-26": secondChronicles26Study,
+  "biblia-2-cronicas-cap-27": secondChronicles27Study,
+  "biblia-2-cronicas-cap-28": secondChronicles28Study,
+  "biblia-2-cronicas-cap-29": secondChronicles29Study,
+  "biblia-2-cronicas-cap-30": secondChronicles30Study,
 };
