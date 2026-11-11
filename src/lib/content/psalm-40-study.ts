@@ -98,9 +98,9 @@ export const psalm40Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 40:1-4"
+        "Salmos 40:1-5"
       ],
-      "body": "**Trecho:** Salmos 40:1-4.\\n\\n**Lugar no argumento:** Espera, resgate e novo cântico. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **1.** O salmista esperou com perseverança e o Senhor se inclinou para ouvi-lo.\\n- **2.** Deus o tirou de um poço de destruição e firmou seus pés; imagens de resgate.\\n- **3.** O Senhor colocou um novo cântico em sua boca, testemunho que inspira outros a confiar.\\n- **4.** É feliz quem confia no Senhor e não se volta aos arrogantes nem à falsidade.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 40:1-5.\\n\\n**Lugar no argumento:** Espera, resgate e novo cântico. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **1.** O salmista esperou com perseverança e o Senhor se inclinou para ouvi-lo.\\n- **2.** Deus o tirou de um poço de destruição e firmou seus pés; imagens de resgate.\\n- **3.** O Senhor colocou um novo cântico em sua boca, testemunho que inspira outros a confiar.\\n- **4.** É feliz quem confia no Senhor e não se volta aos arrogantes nem à falsidade.\\n- **5.** As obras e pensamentos de Deus são numerosos e incomparáveis.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-2",
@@ -108,9 +108,9 @@ export const psalm40Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 40:5-8"
+        "Salmos 40:6-10"
       ],
-      "body": "**Trecho:** Salmos 40:5-8.\\n\\n**Lugar no argumento:** A vontade de Deus e o testemunho público. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **5.** As obras e pensamentos de Deus são numerosos e incomparáveis.\\n- **6.** Deus não deseja ritual vazio; o salmo destaca escuta e obediência.\\n- **7.** A expressão sobre ouvidos preparados ressalta disponibilidade para ouvir a vontade divina.\\n- **8.** O salmista se apresenta para cumprir o que está escrito a seu respeito.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 40:6-10.\\n\\n**Lugar no argumento:** A vontade de Deus e o testemunho público. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **6.** Deus não deseja ritual vazio; o salmo destaca escuta e obediência.\\n- **7.** A expressão sobre ouvidos preparados ressalta disponibilidade para ouvir a vontade divina.\\n- **8.** O salmista se apresenta para cumprir o que está escrito a seu respeito.\\n- **9.** A lei de Deus está no coração, não apenas em observância externa.\\n- **10.** Ele anuncia justiça e fidelidade na grande assembleia.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-3",
@@ -118,9 +118,9 @@ export const psalm40Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 40:9-12"
+        "Salmos 40:11-15"
       ],
-      "body": "**Trecho:** Salmos 40:9-12.\\n\\n**Lugar no argumento:** Pedido por misericórdia diante de nova aflição. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **9.** A lei de Deus está no coração, não apenas em observância externa.\\n- **10.** Ele anuncia justiça e fidelidade na grande assembleia.\\n- **11.** Não esconde a justiça e a salvação; proclama a fidelidade e o amor leal.\\n- **12.** O pedido é que a misericórdia não seja retida diante das dificuldades presentes.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 40:11-15.\\n\\n**Lugar no argumento:** Pedido por misericórdia diante de nova aflição. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **11.** Não esconde a justiça e a salvação; proclama a fidelidade e o amor leal.\\n- **12.** O pedido é que a misericórdia não seja retida diante das dificuldades presentes.\\n- **13.** As aflições o cercam e a culpa o alcança; o quadro é de vulnerabilidade profunda.\\n- **14.** Ele pede libertação e intervenção urgente.\\n- **15.** Os que desejam sua destruição são confrontados com vergonha e frustração.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-4",
@@ -128,19 +128,9 @@ export const psalm40Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 40:13-16"
+        "Salmos 40:16-17"
       ],
-      "body": "**Trecho:** Salmos 40:13-16.\\n\\n**Lugar no argumento:** Alegria dos que buscam Deus e clamor do necessitado. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **13.** As aflições o cercam e a culpa o alcança; o quadro é de vulnerabilidade profunda.\\n- **14.** Ele pede libertação e intervenção urgente.\\n- **15.** Os que desejam sua destruição são confrontados com vergonha e frustração.\\n- **16.** Os que buscam Deus são convidados a alegrar-se continuamente nele.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
-    },
-    {
-      "id": "pericope-5",
-      "title": "4.5 Exposição: Alegria dos que buscam Deus e clamor do necessitado",
-      "kind": "exposition",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Salmos 40:17-17"
-      ],
-      "body": "**Trecho:** Salmos 40:17-17.\\n\\n**Lugar no argumento:** Alegria dos que buscam Deus e clamor do necessitado. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **17.** O Senhor é grande; os que amam sua salvação devem proclamá-lo.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 40:16-17.\\n\\n**Lugar no argumento:** Alegria dos que buscam Deus e clamor do necessitado. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **16.** Os que buscam Deus são convidados a alegrar-se continuamente nele.\\n- **17.** O Senhor é grande; os que amam sua salvação devem proclamá-lo.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "sintese-teologica",
