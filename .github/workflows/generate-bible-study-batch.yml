@@ -126,7 +126,7 @@ jobs:
           TARGET_BRANCH: ${{ inputs.target_branch }}
         run: |
           set -euo pipefail
-          python - <<'PY' >> "$GITHUB_ENV"
+          python - <<'PY' > /tmp/next-batch.env
           import os
           import re
           from pathlib import Path
@@ -178,6 +178,7 @@ jobs:
           print(f"NEXT_BOOK_CHAPTERS={next_book['chapters']}")
           print(f"NEXT_BOOK_ORDER={next_book['order']}")
           PY
+          source /tmp/next-batch.env
 
           if [ "$BIBLE_FINISHED" = "true" ]; then
             echo "Todos os 66 livros e 1.189 capítulos foram percorridos."
