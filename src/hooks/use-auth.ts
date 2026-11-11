@@ -70,10 +70,11 @@ export function useAuth() {
       }
 
       pending = true;
-      void supabase.from("profiles")
-        .update({ last_seen_at: new Date(now).toISOString() })
-        .eq("id", userId)
-        .then(({ error }) => {
+      void (async () => {
+        try {
+          const { error } = await supabase.from("profiles")
+            .update({ last_seen_at: new Date(now).toISOString() })
+            .eq("id", userId);
           if (error) {
             console.warn("[Caminho Divino] Não foi possível registrar o último acesso:", error.message);
             try {
@@ -84,8 +85,10 @@ export function useAuth() {
               // Ignore storage restrictions; a later activity can retry.
             }
           }
-        })
-        .finally(() => { pending = false; });
+        } finally {
+          pending = false;
+        }
+      })();
     };
 
     recordActivity();
