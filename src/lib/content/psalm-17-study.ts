@@ -109,7 +109,7 @@ export const psalm17Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 17:6-9"
       ],
-      "body": "**Trecho:** Salmos 17:6-9.\n\n**Observação literária e teológica:** A súplica por amor leal e proteção. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **6.** A confiança de que Deus responde fundamenta novo pedido.\n- **7.** A pupila do olho representa algo precioso e cuidadosamente guardado.\n- **8.** A sombra das asas é metáfora de abrigo.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 17:6-9.\n\n**Observação literária e teológica:** A súplica por amor leal e proteção. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **6.** A confiança de que Deus responde fundamenta novo pedido.\n- **7.** A pupila do olho representa algo precioso e cuidadosamente guardado.\n- **8.** A sombra das asas é metáfora de abrigo.\n- **9.** O pedido de proteção conclui a unidade e prepara a descrição dos perseguidores.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
     },
     {
       "id": "pericope-3",
@@ -119,7 +119,7 @@ export const psalm17Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 17:10-12"
       ],
-      "body": "**Trecho:** Salmos 17:10-12.\n\n**Observação literária e teológica:** A descrição dos perseguidores. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **10.** O coração endurecido e a fala orgulhosa caracterizam os adversários.\n- **11.** A perseguição é descrita como cerco e emboscada.\n- **9.** O pedido de proteção conclui a unidade e prepara a descrição dos perseguidores.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 17:10-12.\n\n**Observação literária e teológica:** A descrição dos perseguidores. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **10.** O coração endurecido e a fala orgulhosa caracterizam os adversários.\n- **11.** A perseguição é descrita como cerco e emboscada.\n- **12.** A imagem do leão reforça o perigo de uma perseguição predatória.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
     },
     {
       "id": "pericope-4",
@@ -129,7 +129,7 @@ export const psalm17Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 17:13-15"
       ],
-      "body": "**Trecho:** Salmos 17:13-15.\n\n**Observação literária e teológica:** A intervenção e a esperança final. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **13.** O salmista pede que Deus interrompa a violência.\n- **14.** Os bens dos adversários são contrastados com a porção recebida nesta vida.\n- **15.** A satisfação final é descrita como contemplar a face de Deus.\n- **12.** A imagem do leão reforça o perigo de uma perseguição predatória.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 17:13-15.\n\n**Observação literária e teológica:** A intervenção e a esperança final. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **13.** O salmista pede que Deus interrompa a violência.\n- **14.** Os bens dos adversários são contrastados com a porção recebida nesta vida.\n- **15.** A satisfação final é descrita como contemplar a face de Deus.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
     },
     {
       "id": "sintese-teologica",
