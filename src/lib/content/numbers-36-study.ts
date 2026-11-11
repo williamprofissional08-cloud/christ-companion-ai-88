@@ -203,6 +203,94 @@ export const Numbers36Study: StudyContent = {
       "scriptureRefs": [],
       "confidence": "high",
       "collapsible": false
+    },
+    {
+      "id": "aprofundamento-1",
+      "title": "17. Leitura detalhada — vv. 1-4: o problema da transferência",
+      "body": "Os chefes de Gileade explicam que, se as filhas herdassem e depois se casassem fora da tribo, a porção poderia ser vinculada à tribo dos maridos. O jubileu tornaria a questão relevante para a permanência da distribuição territorial. A preocupação nasce da estrutura da herança tribal, não de uma discussão abstrata sobre casamento.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 36"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-2",
+      "title": "18. Leitura detalhada — vv. 5-9: a solução apresentada",
+      "body": "Moisés transmite a orientação de que as herdeiras podem casar com quem considerarem adequado, desde que dentro do clã de sua tribo paterna. A regra procura preservar a herança entre as tribos. É importante reconhecer que a solução limita a escolha matrimonial das mulheres dentro do contexto social antigo.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 36"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-3",
+      "title": "19. Leitura detalhada — vv. 10-12: o cumprimento",
+      "body": "As filhas de Zelofeade obedecem à orientação e casam-se dentro dos clãs de Manassés. O texto encerra a questão sem registrar conflito posterior. A conclusão confirma que a herança permaneceu vinculada à tribo do pai.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 36"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-4",
+      "title": "20. Leitura detalhada — v. 13: o encerramento do livro",
+      "body": "O versículo final situa essas instruções nas campinas de Moabe, junto ao Jordão, diante de Jericó. O livro termina com Israel preparado para a transição à terra. As leis finais não são apêndices sem importância: organizam a vida da nova geração.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 36"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-5",
+      "title": "21. O caso das filhas de Zelofeade em dois capítulos",
+      "body": "Números 27 reconhece o direito de herança das filhas na ausência de filhos homens. Números 36 considera como a transferência por casamento poderia afetar a distribuição tribal. Ler apenas um capítulo produz uma visão incompleta; os dois precisam ser considerados juntos.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 36"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-6",
+      "title": "22. A sociedade patriarcal e a leitura responsável",
+      "body": "O texto reflete uma sociedade organizada por linhagem paterna e herança tribal. Reconhecer esse contexto não exige ignorar a importância do direito concedido às filhas, nem esconder os limites impostos à sua escolha. Uma leitura honesta descreve as duas dimensões sem transformar a norma antiga em regra universal.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 36"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-7",
+      "title": "23. Conexão com Levítico 25 e Josué 17",
+      "body": "Levítico 25 apresenta o jubileu e a restauração de propriedades familiares; Josué 17:3-6 registra a herança das filhas de Zelofeade. Esses textos mostram a continuidade entre a legislação, sua aplicação e a organização da terra.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 36"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-8",
+      "title": "24. Síntese cristocêntrica e aplicação",
+      "body": "A dignidade humana não depende da posição na estrutura de herança. Gálatas 3:28 fala da unidade em Cristo, sem apagar o contexto histórico de Números. A aplicação é ouvir as pessoas afetadas, proteger direitos, avaliar consequências e evitar usar legislação antiga para controlar casamentos atuais.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 36"
+      ],
+      "confidence": "high",
+      "collapsible": false
     }
   ]
 };
