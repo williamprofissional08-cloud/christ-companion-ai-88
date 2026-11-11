@@ -205,8 +205,23 @@ function ChatWindow({
           </Card>
         ) : null}
 
-        {status === "submitted" ? (
-          <div className="text-sm text-muted-foreground">O assistente está buscando na Palavra...</div>
+        {busy ? (
+          <div
+            role="status"
+            aria-live="polite"
+            className="flex items-center gap-3 rounded-xl border border-border/60 bg-card px-4 py-3 text-sm text-muted-foreground"
+          >
+            <span className="flex items-center gap-1" aria-hidden="true">
+              <span className="size-2 animate-bounce rounded-full bg-primary [animation-delay:-0.2s]" />
+              <span className="size-2 animate-bounce rounded-full bg-primary [animation-delay:-0.1s]" />
+              <span className="size-2 animate-bounce rounded-full bg-primary" />
+            </span>
+            <span>
+              {status === "submitted"
+                ? "Consultando as referências bíblicas e preparando a resposta..."
+                : "O assistente está escrevendo a resposta..."}
+            </span>
+          </div>
         ) : null}
         <div ref={bottomRef} />
       </div>
