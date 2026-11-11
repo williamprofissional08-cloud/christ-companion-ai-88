@@ -19,6 +19,15 @@ import { firstChronicles17Study } from "./1-chronicles-17-study";
 import { firstChronicles18Study } from "./1-chronicles-18-study";
 import { firstChronicles19Study } from "./1-chronicles-19-study";
 import { firstChronicles20Study } from "./1-chronicles-20-study";
+import { firstChronicles21Study } from "./1-chronicles-21-study";
+import { firstChronicles22Study } from "./1-chronicles-22-study";
+import { firstChronicles23Study } from "./1-chronicles-23-study";
+import { firstChronicles24Study } from "./1-chronicles-24-study";
+import { firstChronicles25Study } from "./1-chronicles-25-study";
+import { firstChronicles26Study } from "./1-chronicles-26-study";
+import { firstChronicles27Study } from "./1-chronicles-27-study";
+import { firstChronicles28Study } from "./1-chronicles-28-study";
+import { firstChronicles29Study } from "./1-chronicles-29-study";
 import { firstSamuel1Study } from "./1-samuel-1-study";
 import { firstSamuel2Study } from "./1-samuel-2-study";
 import { firstSamuel3Study } from "./1-samuel-3-study";
@@ -723,4 +732,13 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-juizes-cap-19": judges19Study,
   "biblia-juizes-cap-20": judges20Study,
   "biblia-juizes-cap-21": judges21Study,
+  "biblia-1-cronicas-cap-21": firstChronicles21Study,
+  "biblia-1-cronicas-cap-22": firstChronicles22Study,
+  "biblia-1-cronicas-cap-23": firstChronicles23Study,
+  "biblia-1-cronicas-cap-24": firstChronicles24Study,
+  "biblia-1-cronicas-cap-25": firstChronicles25Study,
+  "biblia-1-cronicas-cap-26": firstChronicles26Study,
+  "biblia-1-cronicas-cap-27": firstChronicles27Study,
+  "biblia-1-cronicas-cap-28": firstChronicles28Study,
+  "biblia-1-cronicas-cap-29": firstChronicles29Study,
 };
