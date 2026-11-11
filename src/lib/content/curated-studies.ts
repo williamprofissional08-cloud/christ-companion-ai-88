@@ -12,6 +12,7 @@ import { firstChronicles10Study } from "./1-chronicles-10-study";
 import { firstChronicles11Study } from "./1-chronicles-11-study";
 import { firstChronicles12Study } from "./1-chronicles-12-study";
 import { firstChronicles13Study } from "./1-chronicles-13-study";
+import { firstChronicles14Study } from "./1-chronicles-14-study";
 import { firstChronicles15Study } from "./1-chronicles-15-study";
 import { firstChronicles16Study } from "./1-chronicles-16-study";
 import { firstChronicles17Study } from "./1-chronicles-17-study";
@@ -382,6 +383,7 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-1-cronicas-cap-11": firstChronicles11Study,
   "biblia-1-cronicas-cap-12": firstChronicles12Study,
   "biblia-1-cronicas-cap-13": firstChronicles13Study,
+  "biblia-1-cronicas-cap-14": firstChronicles14Study,
   "biblia-1-cronicas-cap-15": firstChronicles15Study,
   "biblia-1-cronicas-cap-16": firstChronicles16Study,
   "biblia-1-cronicas-cap-17": firstChronicles17Study,
