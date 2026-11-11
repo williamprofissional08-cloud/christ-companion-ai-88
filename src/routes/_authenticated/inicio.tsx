@@ -102,7 +102,7 @@ function Inicio() {
       | undefined;
 
   return (
-    <AppShell title="Caminho Divino" subtitle="Que a Palavra guie o seu dia.">
+    <AppShell title="Caminho Divino">
       <div className="mx-auto max-w-5xl space-y-4">
         <section className="flex items-center justify-between gap-3 px-1">
           <div className="min-w-0">
