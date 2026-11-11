@@ -53,8 +53,24 @@ if not CATALOG_PATH.exists() or not BOOKS_PATH.exists():
 
 book_source = BOOKS_PATH.read_text(encoding="utf-8")
 catalog = CATALOG_PATH.read_text(encoding="utf-8")
-pattern = re.compile(r'\{\s*slug:\s*"([^"]+)",\s*name:\s*"([^"]+)",\s*chapters:\s*(\d+),\s*testament:\s*"([^"]+)",\s*category:\s*"([^"]+)"', re.M)
-books = {m.group(1): {"name": m.group(2), "chapters": int(m.group(3)), "testament": m.group(4), "category": m.group(5)} for m in pattern.finditer(book_source)}
+book_objects = re.findall(r"\{([^{}]*\bslug\s*:[^{}]*)\}", book_source, re.S)
+books = {}
+for item in book_objects:
+    fields = {
+        "slug": re.search(r'\bslug\s*:\s*"([^"]+)"', item),
+        "name": re.search(r'\bname\s*:\s*"([^"]+)"', item),
+        "chapters": re.search(r'\bchapters\s*:\s*(\d+)', item),
+        "testament": re.search(r'\btestament\s*:\s*"([^"]+)"', item),
+        "category": re.search(r'\bcategory\s*:\s*"([^"]+)"', item),
+    }
+    if all(fields.values()):
+        slug = fields["slug"].group(1)
+        books[slug] = {
+            "name": fields["name"].group(1),
+            "chapters": int(fields["chapters"].group(1)),
+            "testament": fields["testament"].group(1),
+            "category": fields["category"].group(1),
+        }
 if len(books) != 66:
     raise SystemExit(f"Índice bíblico deveria conter 66 livros; encontrados {len(books)}.")
 if BOOK_SLUG not in books or BOOK_SLUG not in PREFIX:
