@@ -57,7 +57,7 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
   const { theme, toggle } = useTheme();
   const { user } = useAuth();
   const metadata = user?.user_metadata ?? {};
-  const displayName = String(metadata["full_name"] ?? metadata["name"] ?? user?.email?.split("@")[0] ?? "Usuário").trim().split(/\\s+/)[0] || "Usuário";
+  const displayName = String(metadata["full_name"] ?? metadata["name"] ?? user?.email?.split("@")[0] ?? "Usuário").trim().split(/\s+/)[0] || "Usuário";
   const avatarUrl = typeof metadata["avatar_url"] === "string" ? metadata["avatar_url"] : typeof metadata["picture"] === "string" ? metadata["picture"] : "";
   const navigate = useNavigate();
   const queryClient = useQueryClient();
