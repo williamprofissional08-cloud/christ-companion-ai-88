@@ -206,6 +206,10 @@ import { joshua17Study } from "./joshua-17-study";
 import { joshua18Study } from "./joshua-18-study";
 import { joshua19Study } from "./joshua-19-study";
 import { joshua20Study } from "./joshua-20-study";
+import { joshua21Study } from "./joshua-21-study";
+import { joshua22Study } from "./joshua-22-study";
+import { joshua23Study } from "./joshua-23-study";
+import { joshua24Study } from "./joshua-24-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -420,4 +424,8 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-josue-cap-18": joshua18Study,
   "biblia-josue-cap-19": joshua19Study,
   "biblia-josue-cap-20": joshua20Study,
+  "biblia-josue-cap-21": joshua21Study,
+  "biblia-josue-cap-22": joshua22Study,
+  "biblia-josue-cap-23": joshua23Study,
+  "biblia-josue-cap-24": joshua24Study,
 };
