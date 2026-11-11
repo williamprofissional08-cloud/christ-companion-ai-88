@@ -1,4 +1,14 @@
 import type { StudyContent } from "../types";
+import { judges1Study } from "./judges-1-study";
+import { judges2Study } from "./judges-2-study";
+import { judges3Study } from "./judges-3-study";
+import { judges4Study } from "./judges-4-study";
+import { judges5Study } from "./judges-5-study";
+import { judges6Study } from "./judges-6-study";
+import { judges7Study } from "./judges-7-study";
+import { judges8Study } from "./judges-8-study";
+import { judges9Study } from "./judges-9-study";
+import { judges10Study } from "./judges-10-study";
 import { Numbers28Study } from "./numbers-28-study";
 import { Numbers29Study } from "./numbers-29-study";
 import { Numbers30Study } from "./numbers-30-study";
@@ -218,6 +228,16 @@ import { joshua24Study } from "./joshua-24-study";
  */
 export const CURATED_STUDIES: Record<string, StudyContent> = {
   "genesis-1-criacao": genesis1Study,
+  "biblia-juizes-cap-1": judges1Study,
+  "biblia-juizes-cap-2": judges2Study,
+  "biblia-juizes-cap-3": judges3Study,
+  "biblia-juizes-cap-4": judges4Study,
+  "biblia-juizes-cap-5": judges5Study,
+  "biblia-juizes-cap-6": judges6Study,
+  "biblia-juizes-cap-7": judges7Study,
+  "biblia-juizes-cap-8": judges8Study,
+  "biblia-juizes-cap-9": judges9Study,
+  "biblia-juizes-cap-10": judges10Study,
   "biblia-genesis-cap-2": genesis2Study,
   "biblia-genesis-cap-3": genesis3Study,
   "biblia-genesis-cap-4": genesis4Study,
