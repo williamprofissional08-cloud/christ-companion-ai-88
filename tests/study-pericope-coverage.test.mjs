@@ -3,6 +3,10 @@ import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
 const curatedBatch = [
+  { book: "Rute", chapter: 1, verseCount: 22, slug: "biblia-rute-cap-1", exportName: "ruth1Study", file: "ruth-1-study.ts" },
+  { book: "Rute", chapter: 2, verseCount: 23, slug: "biblia-rute-cap-2", exportName: "ruth2Study", file: "ruth-2-study.ts" },
+  { book: "Rute", chapter: 3, verseCount: 18, slug: "biblia-rute-cap-3", exportName: "ruth3Study", file: "ruth-3-study.ts" },
+  { book: "Rute", chapter: 4, verseCount: 22, slug: "biblia-rute-cap-4", exportName: "ruth4Study", file: "ruth-4-study.ts" },
   { book: "Gênesis", chapter: 45, verseCount: 28, slug: "biblia-genesis-cap-45", exportName: "genesis45Study", file: "genesis-45-study.ts" },
   { book: "Gênesis", chapter: 46, verseCount: 34, slug: "biblia-genesis-cap-46", exportName: "genesis46Study", file: "genesis-46-study.ts" },
   { book: "Gênesis", chapter: 47, verseCount: 31, slug: "biblia-genesis-cap-47", exportName: "genesis47Study", file: "genesis-47-study.ts" },
