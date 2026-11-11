@@ -587,14 +587,30 @@ export const adminListMembers = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])
   .handler(async ({ context }): Promise<AdminMember[]> => {
     await assertAdmin(context.supabase, context.userId);
-    const { data, error } = await context.supabase
-      .from("profiles")
-      .select("id, display_name, email, created_at, last_seen_at")
-      .order("created_at", { ascending: false })
-      .limit(500);
-    if (error) throw new Error(error.message);
-    return data ?? [];
+    const [{ supabaseAdmin }, profiles] = await Promise.all([
+      import("@/integrations/supabase/client.server"),
+      context.supabase.from("profiles")
+        .select("id, display_name, created_at, last_seen_at")
+        .order("created_at", { ascending: false })
+        .limit(500),
+    ]);
+    if (profiles.error) throw new Error(profiles.error.message);
+
+    // Email belongs to auth.users, not profiles. Read it only on the server
+    // after the admin guard, then join by the immutable auth user id.
+    const { data: authUsers, error: authError } = await supabaseAdmin.auth.admin.listUsers({
+      page: 1,
+      perPage: 500,
+    });
+    if (authError) throw new Error(`Não foi possível carregar os e-mails das contas: ${authError.message}`);
+    const emails = new Map((authUsers.users ?? []).map((user) => [user.id, user.email ?? null]));
+
+    return (profiles.data ?? []).map((profile) => ({
+      ...profile,
+      email: emails.get(profile.id) ?? null,
+    }));
   });
+
 type ManagedContentKind = "study" | "prayer_plan";
 type ManagedContentStatus = "draft" | "published" | "archived";
 type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue | undefined };
