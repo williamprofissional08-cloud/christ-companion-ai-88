@@ -300,7 +300,17 @@ const curatedBatch = [
   { book: "2 Crônicas", chapter: 34, verseCount: 33, slug: "biblia-2-cronicas-cap-34", exportName: "secondChronicles34Study", file: "2-chronicles-34-study.ts" },
   { book: "2 Crônicas", chapter: 35, verseCount: 27, slug: "biblia-2-cronicas-cap-35", exportName: "secondChronicles35Study", file: "2-chronicles-35-study.ts" },
   { book: "2 Crônicas", chapter: 36, verseCount: 23, slug: "biblia-2-cronicas-cap-36", exportName: "secondChronicles36Study", file: "2-chronicles-36-study.ts" },
-];
+  { book: "Salmos", chapter: 1, verseCount: 6, slug: "biblia-salmos-cap-1", exportName: "psalm1Study", file: "psalm-1-study.ts" },
+  { book: "Salmos", chapter: 2, verseCount: 12, slug: "biblia-salmos-cap-2", exportName: "psalm2Study", file: "psalm-2-study.ts" },
+  { book: "Salmos", chapter: 3, verseCount: 8, slug: "biblia-salmos-cap-3", exportName: "psalm3Study", file: "psalm-3-study.ts" },
+  { book: "Salmos", chapter: 4, verseCount: 8, slug: "biblia-salmos-cap-4", exportName: "psalm4Study", file: "psalm-4-study.ts" },
+  { book: "Salmos", chapter: 5, verseCount: 12, slug: "biblia-salmos-cap-5", exportName: "psalm5Study", file: "psalm-5-study.ts" },
+  { book: "Salmos", chapter: 6, verseCount: 10, slug: "biblia-salmos-cap-6", exportName: "psalm6Study", file: "psalm-6-study.ts" },
+  { book: "Salmos", chapter: 7, verseCount: 17, slug: "biblia-salmos-cap-7", exportName: "psalm7Study", file: "psalm-7-study.ts" },
+  { book: "Salmos", chapter: 8, verseCount: 9, slug: "biblia-salmos-cap-8", exportName: "psalm8Study", file: "psalm-8-study.ts" },
+  { book: "Salmos", chapter: 9, verseCount: 20, slug: "biblia-salmos-cap-9", exportName: "psalm9Study", file: "psalm-9-study.ts" },
+  { book: "Salmos", chapter: 10, verseCount: 18, slug: "biblia-salmos-cap-10", exportName: "psalm10Study", file: "psalm-10-study.ts" },
+]; 
 
 async function readContent(path) {
   return readFile(new URL("../" + path, import.meta.url), "utf8");
