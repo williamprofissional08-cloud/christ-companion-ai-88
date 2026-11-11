@@ -16,7 +16,7 @@ export const deuteronomy27Study: StudyContent = {
   {
     id: "secao-1",
     title: "Pedras inscritas e altar ao Senhor",
-    kind: scripture,
+    kind: "scripture",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 27:1-8"],
     body: "**Leitura orientada — Deuteronômio 27:1-8**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nO povo deveria erguer pedras, revesti-las e escrever nelas as palavras da lei; também construiria um altar de pedras não lavradas. A memória da lei e a adoração aparecem juntas. A forma simples do altar impede que a obra humana se torne o centro do culto.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** O povo deveria erguer pedras, revesti-las e escrever nelas as palavras da lei; também construiria um altar de pedras não lavradas. A memória da lei e a adoração aparecem juntas. A forma simples do altar impede que a obra humana se torne o centro do culto. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -24,7 +24,7 @@ export const deuteronomy27Study: StudyContent = {
   {
     id: "secao-2",
     title: "A identidade do povo da aliança",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 27:9-10"],
     body: "**Leitura orientada — Deuteronômio 27:9-10**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nMoisés e os sacerdotes chamam Israel a ouvir: naquele momento o povo é lembrado de sua relação pactual com o Senhor e de sua responsabilidade de obedecer. A identidade recebida não elimina a necessidade de fidelidade.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** Moisés e os sacerdotes chamam Israel a ouvir: naquele momento o povo é lembrado de sua relação pactual com o Senhor e de sua responsabilidade de obedecer. A identidade recebida não elimina a necessidade de fidelidade. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -32,7 +32,7 @@ export const deuteronomy27Study: StudyContent = {
   {
     id: "secao-3",
     title: "As proclamações no monte Ebal",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 27:11-26"],
     body: "**Leitura orientada — Deuteronômio 27:11-26**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nAs tribos são distribuídas entre os montes para o rito público. As declarações finais denunciam práticas que destroem a justiça, exploram os vulneráveis ou corrompem a vida comunitária; o povo responde assumindo a seriedade da aliança.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** As tribos são distribuídas entre os montes para o rito público. As declarações finais denunciam práticas que destroem a justiça, exploram os vulneráveis ou corrompem a vida comunitária; o povo responde assumindo a seriedade da aliança. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
