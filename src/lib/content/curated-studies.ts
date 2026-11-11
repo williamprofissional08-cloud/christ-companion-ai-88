@@ -50,6 +50,10 @@ import { secondSamuel17Study } from "./2-samuel-17-study";
 import { secondSamuel18Study } from "./2-samuel-18-study";
 import { secondSamuel19Study } from "./2-samuel-19-study";
 import { secondSamuel20Study } from "./2-samuel-20-study";
+import { secondSamuel21Study } from "./2-samuel-21-study";
+import { secondSamuel22Study } from "./2-samuel-22-study";
+import { secondSamuel23Study } from "./2-samuel-23-study";
+import { secondSamuel24Study } from "./2-samuel-24-study";
 
 import { ruth1Study } from "./ruth-1-study";
 import { ruth2Study } from "./ruth-2-study";
@@ -350,6 +354,10 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-2-samuel-cap-18": secondSamuel18Study,
   "biblia-2-samuel-cap-19": secondSamuel19Study,
   "biblia-2-samuel-cap-20": secondSamuel20Study,
+  "biblia-2-samuel-cap-21": secondSamuel21Study,
+  "biblia-2-samuel-cap-22": secondSamuel22Study,
+  "biblia-2-samuel-cap-23": secondSamuel23Study,
+  "biblia-2-samuel-cap-24": secondSamuel24Study,
   "biblia-juizes-cap-1": judges1Study,
   "biblia-juizes-cap-2": judges2Study,
   "biblia-juizes-cap-3": judges3Study,
