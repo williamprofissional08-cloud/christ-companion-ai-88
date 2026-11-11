@@ -54,7 +54,7 @@ if not CATALOG_PATH.exists() or not BOOKS_PATH.exists():
 book_source = BOOKS_PATH.read_text(encoding="utf-8")
 catalog = CATALOG_PATH.read_text(encoding="utf-8")
 pattern = re.compile(r'\{\s*slug:\s*"([^"]+)",\s*name:\s*"([^"]+)",\s*chapters:\s*(\d+),\s*testament:\s*"([^"]+)",\s*category:\s*"([^"]+)"', re.M)
-books = {m.group(1): {"name": m.group(2), "chapters": int(m.group(3)), "testament": m.group(4), "category": m.group(5)} for m in pattern.finditer(book_source)}
+books = {m.group(1): {"name": m.group(2), "chapters": int(m.group(3)), "category": m.group(4), "testament": m.group(5)} for m in pattern.finditer(book_source)}
 if len(books) != 66:
     raise SystemExit(f"Índice bíblico deveria conter 66 livros; encontrados {len(books)}.")
 if BOOK_SLUG not in books or BOOK_SLUG not in PREFIX:
@@ -95,9 +95,9 @@ Use kinds: exegesis, context, theology, pastoral, application, method, glossary,
     endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
     request = urllib.request.Request(endpoint, data=payload,
         headers={"Content-Type": "application/json", "Accept": "application/json", "x-goog-api-key": TOKEN})
-    for attempt in range(3):
+    for attempt in range(4):
         try:
-            with urllib.request.urlopen(request, timeout=300) as response:
+            with urllib.request.urlopen(request, timeout=600) as response:
                 body = response.read().decode("utf-8", "replace")
             if not body.strip():
                 raise ValueError("API Gemini retornou corpo vazio.")
@@ -118,13 +118,13 @@ Use kinds: exegesis, context, theology, pastoral, application, method, glossary,
             return data
         except urllib.error.HTTPError as error:
             detail = error.read().decode("utf-8", "replace")[:1200]
-            if error.code not in (408, 429, 500, 502, 503, 504) or attempt == 2:
+            if error.code not in (408, 429, 500, 502, 503, 504) or attempt == 3:
                 raise SystemExit(f"Gemini API HTTP {error.code}: {detail}")
-            time.sleep(10 * (attempt + 1))
+            time.sleep(20 * (2 ** attempt))
         except (ValueError, KeyError, TypeError, json.JSONDecodeError) as error:
             if attempt == 2:
                 raise SystemExit(f"Resposta inválida para {reference}: {error}")
-            time.sleep(5 * (attempt + 1))
+            time.sleep(10 * (2 ** attempt))
 
 def validate(data):
     required = ["intro", "historicalContext", "keyPoints", "application", "crossReferences", "questions", "conclusion", "prayer", "sections"]
