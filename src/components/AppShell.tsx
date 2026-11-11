@@ -18,12 +18,13 @@ import logo from "@/assets/logo.png";
 
 const PRIMARY_NAV = [
   { to: "/inicio", label: "Início", icon: Home },
-  { to: "/assistente", label: "Assistente", icon: MessageCircleHeart },
-  { to: "/trilhas", label: "Trilhas guiadas", icon: RouteIcon },
+  { to: "/estudos", label: "Estudo", icon: BookOpen },
+  { to: "/trilhas", label: "Trilhas", icon: RouteIcon },
   { to: "/escola", label: "Escola Bíblica", icon: GraduationCap },
 ] as const;
 
 const MORE_NAV = [
+  { to: "/assistente", label: "Assistente", icon: MessageCircleHeart },
   { to: "/devocional", label: "Devocional", icon: Flame },
   { to: "/planos", label: "Planos de oração", icon: HeartHandshake },
   { to: "/estudos", label: "Estudos", icon: Compass },
@@ -152,7 +153,7 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
           <div className={homeHeader ? "mx-auto grid max-w-lg grid-cols-4" : "mx-auto grid max-w-lg grid-cols-5"}>
             {(homeHeader ? [
               { to: "/inicio" as const, label: "Início", icon: Home },
-              { to: "/assistente" as const, label: "Assistente", icon: MessageCircleHeart },
+              { to: "/estudos" as const, label: "Estudo", icon: BookOpen },
               { to: "/trilhas" as const, label: "Trilhas", icon: RouteIcon },
               { to: "/configuracoes" as const, label: "Perfil", icon: UserRound },
             ] : [...PRIMARY_NAV, { to: "/admin" as const, label: "Admin", icon: ShieldCheck }]).map((item) => (
