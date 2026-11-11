@@ -168,6 +168,16 @@ import { deuteronomy13Study } from "./deuteronomy-13-study";
 import { deuteronomy14Study } from "./deuteronomy-14-study";
 import { deuteronomy15Study } from "./deuteronomy-15-study";
 import { deuteronomy16Study } from "./deuteronomy-16-study";
+import { deuteronomy17Study } from "./deuteronomy-17-study";
+import { deuteronomy18Study } from "./deuteronomy-18-study";
+import { deuteronomy19Study } from "./deuteronomy-19-study";
+import { deuteronomy20Study } from "./deuteronomy-20-study";
+import { deuteronomy21Study } from "./deuteronomy-21-study";
+import { deuteronomy22Study } from "./deuteronomy-22-study";
+import { deuteronomy23Study } from "./deuteronomy-23-study";
+import { deuteronomy24Study } from "./deuteronomy-24-study";
+import { deuteronomy25Study } from "./deuteronomy-25-study";
+import { deuteronomy26Study } from "./deuteronomy-26-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -344,4 +354,14 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-deuteronomio-cap-14": deuteronomy14Study,
   "biblia-deuteronomio-cap-15": deuteronomy15Study,
   "biblia-deuteronomio-cap-16": deuteronomy16Study,
+  "biblia-deuteronomio-cap-17": deuteronomy17Study,
+  "biblia-deuteronomio-cap-18": deuteronomy18Study,
+  "biblia-deuteronomio-cap-19": deuteronomy19Study,
+  "biblia-deuteronomio-cap-20": deuteronomy20Study,
+  "biblia-deuteronomio-cap-21": deuteronomy21Study,
+  "biblia-deuteronomio-cap-22": deuteronomy22Study,
+  "biblia-deuteronomio-cap-23": deuteronomy23Study,
+  "biblia-deuteronomio-cap-24": deuteronomy24Study,
+  "biblia-deuteronomio-cap-25": deuteronomy25Study,
+  "biblia-deuteronomio-cap-26": deuteronomy26Study,
 };
