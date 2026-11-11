@@ -83,7 +83,7 @@ function Inicio() {
   const d = devotional.data;
   const metadata = user?.user_metadata ?? {};
   const rawDisplayName = String(metadata["full_name"] ?? metadata["name"] ?? user?.email?.split("@")[0] ?? "Olá");
-  const displayName = rawDisplayName.trim().split(/\\s+/)[0] || "Olá";
+  const displayName = rawDisplayName.trim().split(/\s+/)[0] || "Olá";
   const avatarUrl = typeof metadata["avatar_url"] === "string" ? metadata["avatar_url"] : typeof metadata["picture"] === "string" ? metadata["picture"] : "";
   const hour = new Date().getHours();
   const greeting = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
