@@ -17,6 +17,7 @@ START = int(os.environ.get("START_CHAPTER", "21"))
 COUNT = int(os.environ.get("BATCH_SIZE", "7"))
 CATALOG_PATH = ROOT / "src/lib/content/curated-studies.ts"
 BOOKS_PATH = ROOT / "src/lib/content/bible-books.ts"
+REFERENCE_PATH = ROOT / "src/lib/content/genesis-1-study.ts"
 CONTENT_DIR = ROOT / "src/lib/content"
 
 PREFIX = {
@@ -49,8 +50,14 @@ if not TOKEN:
     raise SystemExit("GEMINI_API_KEY ausente. Cadastre o segredo GEMINI_API_KEY em Settings > Secrets and variables > Actions.")
 if not 1 <= COUNT <= 7:
     raise SystemExit("O lote deve examinar de 1 a 7 capítulos.")
-if not CATALOG_PATH.exists() or not BOOKS_PATH.exists():
-    raise SystemExit("Catálogo ou índice bíblico não encontrado.")
+if not CATALOG_PATH.exists() or not BOOKS_PATH.exists() or not REFERENCE_PATH.exists():
+    raise SystemExit("Catálogo, índice bíblico ou estudo de referência Gênesis 1 não encontrado.")
+
+reference_source = REFERENCE_PATH.read_text(encoding="utf-8")
+reference_titles = re.findall(r'\btitle\s*:\s*["\`]([^"\`]+)["\`]', reference_source)
+reference_outline = "\n".join(f"- {title}" for title in reference_titles[-19:])
+if len(reference_titles) < 15:
+    raise SystemExit("O estudo de Gênesis 1 não forneceu uma estrutura editorial suficiente.")
 
 book_source = BOOKS_PATH.read_text(encoding="utf-8")
 catalog = CATALOG_PATH.read_text(encoding="utf-8")
@@ -96,13 +103,25 @@ def symbol_for(chapter):
 def ask_model(chapter):
     reference = f'{book["name"]} {chapter}'
     prompt = f"""
-Produza um estudo bíblico exegético, profundo, didático e editorialmente responsável de {reference}, em português brasileiro, para formação bíblica e preparação de pregadores.
-PADRÃO OBRIGATÓRIO: use Gênesis 1 como referência editorial de profundidade, clareza, progressão pedagógica e organização. Ensine o aluno a compreender o texto, não apenas resuma. Desenvolva a leitura por perícopes/unidades literárias e explique cada unidade com rigor e linguagem acessível.
-Livro: {book["name"]}; testamento: {book["testament"]}; categoria: {book["category"]}; capítulo {chapter} de {book["chapters"]}. Respeite o gênero literário.
-Não invente fatos históricos, arqueológicos, linguísticos, datas, autoria ou referências. Distinga dados explícitos do texto, contexto provável, inferência, interpretação debatida e hipótese. Apresente divergências relevantes com justiça. Não alegorize detalhes sem base. Não force conexões com Cristo: use apenas quando sustentadas pelo texto e pelo cânon. Não transforme promessas particulares em garantias individuais. Não legitime violência, exploração ou abuso. Não reproduza longos trechos de traduções protegidas.
-Retorne SOMENTE JSON válido com: version (4), depth ("deep"), intro (mínimo 900 caracteres), historicalContext (700), keyPoints (mínimo 8 objetos title/text), application (800), crossReferences (mínimo 12 strings no formato "Referência bíblica — explicação"), questions (mínimo 15 strings contendo perguntas completas). NÃO retorne objetos nessas duas listas; cada item deve ser string., conclusion (400), prayer (80), sections (mínimo 22 objetos com id, title, body, kind, scriptureRefs, confidence, collapsible).
-As seções devem cobrir: introdução e tese; contexto literário/histórico e limites da evidência; gênero; estrutura; exposição por perícope/versículos; termos importantes sem etimologia especulativa; teologia do capítulo; relação com o livro e cânon; debates interpretativos; erros de leitura; aplicações; método de interpretação; glossário; exercícios/avaliação; esboço expositivo; meditação e síntese. Cada body com pelo menos 250 caracteres. Evite repetição artificial.
-Use kinds: exegesis, context, theology, pastoral, application, method, glossary, exercise. confidence: high, probable, debated, uncertain. Identificadores únicos em kebab-case. Referências bíblicas verificáveis. Texto claro e específico ao capítulo.
+Produza um estudo bíblico EXCEPCIONALMENTE profundo, completo, didático e editorialmente responsável de {reference}, em português brasileiro, para formação bíblica e preparação de pregadores.
+PADRÃO EDITORIAL OBRIGATÓRIO: siga a profundidade, clareza, organização progressiva e didática do estudo de Gênesis 1 existente no repositório. Use esta estrutura como referência de abrangência, sem copiar seu conteúdo:
+{reference_outline}
+
+O aluno deve compreender o texto, explicar cada unidade e preparar uma exposição bíblica. Não entregue resumo superficial nem conteúdo genérico reutilizável.
+Livro: {book["name"]}; testamento: {book["testament"]}; categoria: {book["category"]}; capítulo {chapter} de {book["chapters"]}. Respeite o gênero literário, o contexto do livro e a progressão do capítulo.
+
+REQUISITOS EDITORIAIS INEGOCIÁVEIS:
+1. Faça leitura integral, cobrindo todos os versículos. Inclua seção de leitura em tradução livre/paráfrase própria, identificada claramente como tradução livre para estudo, sem reproduzir longos trechos de versões protegidas.
+2. Divida o capítulo em perícopes/unidades literárias coerentes. Explique cada unidade com observação do texto, contexto, sentido, palavras-chave, conexões e aplicação. Nenhum trecho pode ficar sem explicação.
+3. Inclua introdução e tese central; contexto histórico, geográfico e cultural com limites da evidência; gênero; estrutura; exposição detalhada; termos originais relevantes com cautela lexical; teologia do capítulo; relação com o livro e o cânon; conexão com Cristo quando sustentada; debates interpretativos; erros comuns; método de interpretação; glossário; aplicações; exercícios com respostas orientadoras; oficina do pregador com esboço expositivo; meditação e oração.
+4. Diferencie o que o texto afirma, inferência provável, interpretação debatida e o que não pode ser afirmado com segurança. Não invente história, arqueologia, datas, autoria, etimologias ou referências. Não force tipologias, alegorias ou conexões com Cristo.
+5. Não transforme promessas específicas em garantias individuais. Não legitime violência, exploração, racismo, abuso ou superstição. Apresente interpretações relevantes com equilíbrio.
+6. Ensine: explique termos difíceis, contexto, lógica do argumento e por que cada detalhe importa. Evite repetição artificial, frases vazias e aplicações genéricas.
+7. O esboço homilético deve nascer da estrutura do capítulo e ajudar o pregador a ensinar com fidelidade.
+
+Retorne SOMENTE JSON válido com: version (5), depth ("deep"), intro (mínimo 1200 caracteres), historicalContext (mínimo 900), keyPoints (mínimo 8 objetos title/text específicos), application (mínimo 1000), crossReferences (mínimo 12 strings "Referência bíblica — explicação contextualizada"), questions (mínimo 15 strings com perguntas e respostas orientadoras), conclusion (mínimo 500), prayer (mínimo 100), sections (mínimo 24 objetos com id, title, body, kind, scriptureRefs, confidence, collapsible).
+Cada seção deve ter body de pelo menos 350 caracteres, referências bíblicas pertinentes e conteúdo específico do capítulo. IDs únicos em kebab-case. Use kinds: exegesis, context, theology, pastoral, application, method, glossary, exercise; confidence: high, probable, debated, uncertain.
+A seção de leitura deve identificar os versículos/intervalos cobertos. A exposição deve cobrir sequencialmente todas as perícopes até o último versículo. Inclua síntese, exercícios respondidos, esboço expositivo, meditação e oração. Não invente dados para atingir quantidade mínima; declare quando a evidência for limitada.
 """
     payload = json.dumps({
         "systemInstruction": {"parts": [{"text": "Você é exegeta bíblico, professor e editor teológico. Fidelidade textual, honestidade epistemológica, profundidade e clareza didática são prioritárias. Responda apenas JSON válido."}]},
@@ -204,21 +223,23 @@ def validate(data):
     required = ["intro", "historicalContext", "keyPoints", "application", "crossReferences", "questions", "conclusion", "prayer", "sections"]
     if not isinstance(data, dict) or any(key not in data for key in required):
         raise ValueError("Campos obrigatórios ausentes.")
-    for key, minimum in {"intro": 900, "historicalContext": 700, "application": 800, "conclusion": 400, "prayer": 80}.items():
+    for key, minimum in {"intro": 1200, "historicalContext": 900, "application": 1000, "conclusion": 500, "prayer": 100}.items():
         if not isinstance(data[key], str) or len(data[key]) < minimum:
             raise ValueError(f"{key} abaixo do mínimo de {minimum} caracteres.")
     if not all(isinstance(item, str) and item.strip() for item in data["crossReferences"]):
         raise ValueError("crossReferences deve conter somente strings não vazias.")
     if not all(isinstance(item, str) and item.strip() for item in data["questions"]):
         raise ValueError("questions deve conter somente strings não vazias.")
-    if data.get("depth") != "deep" or len(data["keyPoints"]) < 8 or len(data["crossReferences"]) < 12 or len(data["questions"]) < 15 or len(data["sections"]) < 22:
+    if data.get("depth") != "deep" or len(data["keyPoints"]) < 8 or len(data["crossReferences"]) < 12 or len(data["questions"]) < 15 or len(data["sections"]) < 24:
         raise ValueError("Profundidade ou quantidade mínima não atingida.")
     ids = set()
     for section in data["sections"]:
-        if not isinstance(section, dict) or not all(key in section for key in ("id", "title", "body", "kind", "confidence")):
-            raise ValueError("Seção incompleta.")
-        if len(section["body"]) < 250 or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", section["id"]) or section["id"] in ids:
-            raise ValueError("Seção superficial ou ID inválido/duplicado.")
+        if not isinstance(section, dict) or not all(key in section for key in ("id", "title", "body", "kind", "confidence", "scriptureRefs")):
+            raise ValueError("Seção incompleta: exige id, title, body, kind, confidence e scriptureRefs.")
+        if not isinstance(section["scriptureRefs"], list) or not section["scriptureRefs"] or not all(isinstance(ref, str) and ref.strip() for ref in section["scriptureRefs"]):
+            raise ValueError("Cada seção precisa conter referências bíblicas específicas e não vazias.")
+        if len(section["body"]) < 350 or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", section["id"]) or section["id"] in ids:
+            raise ValueError("Seção superficial (mínimo 350 caracteres) ou ID inválido/duplicado.")
         if section["confidence"] not in ("high", "probable", "debated", "uncertain"):
             raise ValueError("Nível de confiança inválido.")
         ids.add(section["id"])

@@ -26,7 +26,7 @@ on:
       auto_continue:
         description: "Continuar automaticamente até o último capítulo do livro"
         required: true
-        default: false
+        default: true
         type: boolean
       target_branch:
         description: "Branch de trabalho já criada"
@@ -108,7 +108,7 @@ jobs:
         run: |
           set -euo pipefail
           TITLE="Estudos bíblicos: ${BOOK_SLUG} — capítulos ${START_CHAPTER}+"
-          BODY=$(printf '## Lote de estudos bíblicos\n\n- Livro: %s\n- Faixa examinada: %s–%s\n- Capítulos existentes preservados; somente ausentes são criados.\n- Validações: TypeScript, ESLint, build e testes.\n- Revisão teológica/editorial humana obrigatória.\n\n**Não mesclar automaticamente.**' "$BOOK_SLUG" "$START_CHAPTER" "$((START_CHAPTER + BATCH_SIZE - 1))")
+          BODY=$(printf '## Lote de estudos bíblicos\n\n- Livro: %s\n- Faixa examinada: %s–%s\n- Capítulos existentes preservados; somente ausentes são criados.\n- Validações: TypeScript, ESLint, build e testes.\n- Revisão teológica/editorial humana obrigatória.\n\n**Aprovação humana para merge: obrigatória.** A geração do próximo lote não depende de aprovação nem de merge; só continua se todas as validações técnicas deste lote passarem.' "$BOOK_SLUG" "$START_CHAPTER" "$((START_CHAPTER + BATCH_SIZE - 1))")
           EXISTING=$(gh pr list --head "$TARGET_BRANCH" --base main --json number --jq '.[0].number')
           if [ -n "$EXISTING" ]; then
             gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY"
@@ -186,7 +186,7 @@ jobs:
 
           echo "Próximo lote: $NEXT_BOOK_SLUG capítulos $NEXT_START_CHAPTER–$((NEXT_START_CHAPTER + NEXT_BATCH_SIZE - 1)) (total do livro: $NEXT_BOOK_CHAPTERS)."
           gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/workflows/generate-bible-study-batch.yml/dispatches" \
-            -f ref=main \
+            -f "ref=$TARGET_BRANCH" \
             -f "inputs[book_slug]=$NEXT_BOOK_SLUG" \
             -f "inputs[start_chapter]=$NEXT_START_CHAPTER" \
             -f "inputs[batch_size]=$NEXT_BATCH_SIZE" \
