@@ -178,6 +178,16 @@ import { deuteronomy23Study } from "./deuteronomy-23-study";
 import { deuteronomy24Study } from "./deuteronomy-24-study";
 import { deuteronomy25Study } from "./deuteronomy-25-study";
 import { deuteronomy26Study } from "./deuteronomy-26-study";
+import { joshua1Study } from "./joshua-1-study";
+import { joshua2Study } from "./joshua-2-study";
+import { joshua3Study } from "./joshua-3-study";
+import { joshua4Study } from "./joshua-4-study";
+import { joshua5Study } from "./joshua-5-study";
+import { joshua6Study } from "./joshua-6-study";
+import { joshua7Study } from "./joshua-7-study";
+import { joshua8Study } from "./joshua-8-study";
+import { joshua9Study } from "./joshua-9-study";
+import { joshua10Study } from "./joshua-10-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -364,4 +374,14 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-deuteronomio-cap-24": deuteronomy24Study,
   "biblia-deuteronomio-cap-25": deuteronomy25Study,
   "biblia-deuteronomio-cap-26": deuteronomy26Study,
+  "biblia-josue-cap-1": joshua1Study,
+  "biblia-josue-cap-2": joshua2Study,
+  "biblia-josue-cap-3": joshua3Study,
+  "biblia-josue-cap-4": joshua4Study,
+  "biblia-josue-cap-5": joshua5Study,
+  "biblia-josue-cap-6": joshua6Study,
+  "biblia-josue-cap-7": joshua7Study,
+  "biblia-josue-cap-8": joshua8Study,
+  "biblia-josue-cap-9": joshua9Study,
+  "biblia-josue-cap-10": joshua10Study,
 };
