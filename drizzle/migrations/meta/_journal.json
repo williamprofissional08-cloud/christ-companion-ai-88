@@ -8,6 +8,20 @@
       "when": 1791247926286,
       "tag": "0000_add_study_reading_checkpoints",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794360809970,
+      "tag": "0001_security_completion_premium_cache",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794360899635,
+      "tag": "0002_restore_missing_ai_admin_objects",
+      "breakpoints": true
     }
   ]
 }

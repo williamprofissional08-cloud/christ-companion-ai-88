@@ -33,6 +33,7 @@ import { Route as AuthenticatedPlanosRouteImport } from './routes/_authenticated
 import { Route as AuthenticatedTrilhasRouteImport } from './routes/_authenticated/trilhas'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin.index'
+import { Route as AuthenticatedAdminAlunosRouteImport } from './routes/_authenticated/admin.alunos'
 import { Route as AuthenticatedAdminConteudoRouteImport } from './routes/_authenticated/admin.conteudo'
 import { Route as AuthenticatedAssistenteIndexRouteImport } from './routes/_authenticated/assistente.index'
 import { Route as AuthenticatedAssistenteThreadIdRouteImport } from './routes/_authenticated/assistente.$threadId'
@@ -46,7 +47,6 @@ import { Route as AuthenticatedTrilhasIndexRouteImport } from './routes/_authent
 import { Route as AuthenticatedTrilhasSlugRouteImport } from './routes/_authenticated/trilhas.$slug'
 import { Route as ApiEscolaProfessorIaRouteImport } from './routes/api/escola/professor-ia'
 import { Route as ApiEscolaProfessorTtsRouteImport } from './routes/api/escola/professor-tts'
-import { Route as AuthenticatedAdminAlunosRouteImport } from './routes/_authenticated/admin.alunos'
 import { Route as AuthenticatedAdminAulasLessonIdRouteImport } from './routes/_authenticated/admin.aulas.$lessonId'
 import { Route as AuthenticatedAdminCursosIndexRouteImport } from './routes/_authenticated/admin.cursos.index'
 import { Route as AuthenticatedAdminCursosIdRouteImport } from './routes/_authenticated/admin.cursos.$id'
@@ -174,6 +174,12 @@ const AuthenticatedAdminIndexRoute = AuthenticatedAdminIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AuthenticatedAdminRoute,
 } as any)
+const AuthenticatedAdminAlunosRoute =
+  AuthenticatedAdminAlunosRouteImport.update({
+    id: '/alunos',
+    path: '/alunos',
+    getParentRoute: () => AuthenticatedAdminRoute,
+  } as any)
 const AuthenticatedAdminConteudoRoute =
   AuthenticatedAdminConteudoRouteImport.update({
     id: '/conteudo',
@@ -248,11 +254,6 @@ const ApiEscolaProfessorTtsRoute = ApiEscolaProfessorTtsRouteImport.update({
   path: '/api/escola/professor-tts',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedAdminAlunosRoute = AuthenticatedAdminAlunosRouteImport.update({
-  id: '/alunos',
-  path: '/alunos',
-  getParentRoute: () => AuthenticatedAdminRoute,
-} as any)
 const AuthenticatedAdminAulasLessonIdRoute =
   AuthenticatedAdminAulasLessonIdRouteImport.update({
     id: '/aulas/$lessonId',
@@ -285,7 +286,6 @@ const AuthenticatedEscolaSlugAulaLessonSlugRoute =
   } as any)
 
 export interface FileRoutesByFullPath {
-  '/admin/alunos': typeof AuthenticatedAdminAlunosRoute
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/auth-callback': typeof AuthCallbackRoute
@@ -308,6 +308,7 @@ export interface FileRoutesByFullPath {
   '/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/trilhas': typeof AuthenticatedTrilhasRouteWithChildren
   '/api/chat': typeof ApiChatRoute
+  '/admin/alunos': typeof AuthenticatedAdminAlunosRoute
   '/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/escola/$slug': typeof AuthenticatedEscolaSlugRouteWithChildren
@@ -329,7 +330,6 @@ export interface FileRoutesByFullPath {
   '/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
 export interface FileRoutesByTo {
-  '/admin/alunos': typeof AuthenticatedAdminAlunosRoute
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/auth-callback': typeof AuthCallbackRoute
@@ -346,6 +346,7 @@ export interface FileRoutesByTo {
   '/onboarding': typeof AuthenticatedOnboardingRoute
   '/pesquisa': typeof AuthenticatedPesquisaRoute
   '/api/chat': typeof ApiChatRoute
+  '/admin/alunos': typeof AuthenticatedAdminAlunosRoute
   '/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/estudos/$slug': typeof AuthenticatedEstudosSlugRoute
@@ -366,7 +367,6 @@ export interface FileRoutesByTo {
   '/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
 export interface FileRoutesById {
-  '/_authenticated/admin/alunos': typeof AuthenticatedAdminAlunosRoute
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
@@ -391,6 +391,7 @@ export interface FileRoutesById {
   '/_authenticated/planos': typeof AuthenticatedPlanosRouteWithChildren
   '/_authenticated/trilhas': typeof AuthenticatedTrilhasRouteWithChildren
   '/api/chat': typeof ApiChatRoute
+  '/_authenticated/admin/alunos': typeof AuthenticatedAdminAlunosRoute
   '/_authenticated/admin/conteudo': typeof AuthenticatedAdminConteudoRoute
   '/_authenticated/assistente/$threadId': typeof AuthenticatedAssistenteThreadIdRoute
   '/_authenticated/escola/$slug': typeof AuthenticatedEscolaSlugRouteWithChildren
@@ -436,6 +437,7 @@ export interface FileRouteTypes {
     | '/planos'
     | '/trilhas'
     | '/api/chat'
+    | '/admin/alunos'
     | '/admin/conteudo'
     | '/assistente/$threadId'
     | '/escola/$slug'
@@ -473,6 +475,7 @@ export interface FileRouteTypes {
     | '/onboarding'
     | '/pesquisa'
     | '/api/chat'
+    | '/admin/alunos'
     | '/admin/conteudo'
     | '/assistente/$threadId'
     | '/estudos/$slug'
@@ -516,6 +519,7 @@ export interface FileRouteTypes {
     | '/_authenticated/planos'
     | '/_authenticated/trilhas'
     | '/api/chat'
+    | '/_authenticated/admin/alunos'
     | '/_authenticated/admin/conteudo'
     | '/_authenticated/assistente/$threadId'
     | '/_authenticated/escola/$slug'

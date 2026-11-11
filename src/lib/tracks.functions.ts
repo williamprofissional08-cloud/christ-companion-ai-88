@@ -87,7 +87,8 @@ export const getTrackStepContent = createServerFn({ method: "POST" })
     if (!step) throw new Error("Etapa não encontrada");
 
     const cacheKey = `${data.slug}:${data.step}`;
-    const cached = await context.supabase
+    const { supabaseAdmin: cacheReader } = await import("@/integrations/supabase/client.server");
+    const cached = await cacheReader
       .from("generated_content")
       .select("content")
       .eq("kind", "track-step")

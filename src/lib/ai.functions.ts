@@ -129,7 +129,7 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
     if (!plan) throw new Error("Plano não encontrado");
     if (data.day > plan.days) throw new Error("Dia fora da duração deste plano");
     const cacheKey = published ? `${data.slug}:${data.day}:v${new Date(managedData?.updated_at ?? 0).getTime()}` : `${data.slug}:${data.day}`;
-    const cached = await context.supabase
+    const cached = await supabaseAdmin
       .from("generated_content")
       .select("content")
       .eq("kind", "plan-day")
@@ -199,7 +199,8 @@ export const getStudyContent = createServerFn({ method: "POST" })
     if (!study) throw new Error("Estudo não encontrado");
     if (curated && (!published || !managedData?.content)) return curated;
     const cacheKey = published ? `${data.slug}:v${new Date(managedData!.updated_at ?? 0).getTime()}` : data.slug;
-    const cached = await context.supabase
+    if (!supabaseAdminClient) throw new Error("Supabase admin client unavailable");
+    const cached = await supabaseAdminClient
       .from("generated_content")
       .select("content")
       .eq("kind", "study")

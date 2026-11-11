@@ -1682,6 +1682,7 @@ export type Database = {
         Args: { _question_id: string }
         Returns: boolean
       }
+      complete_lesson: { Args: { _lesson_id: string }; Returns: string }
       consume_ai_rate_limit: {
         Args: { p_endpoint: string }
         Returns: {

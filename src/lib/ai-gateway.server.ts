@@ -19,7 +19,8 @@ export const PROVIDER_OPTIONS = { lovable: { reasoningEffort: "none" } } as cons
 export function aiResponsesModel(accessToken: string) {
   const supabaseUrl = process.env["SUPABASE_URL"];
   const publishableKey = process.env["SUPABASE_PUBLISHABLE_KEY"];
-  if (!supabaseUrl || !publishableKey) {
+  const proxySecret = process.env["GEMINI_PROXY_SECRET"];
+  if (!supabaseUrl || !publishableKey || !proxySecret) {
     throw new Error("Configuração do Supabase indisponível para o serviço Gemini.");
   }
   const provider = createOpenAICompatible({
@@ -28,6 +29,7 @@ export function aiResponsesModel(accessToken: string) {
     headers: {
       Authorization: `Bearer ${accessToken}`,
       apikey: publishableKey,
+      "x-gemini-proxy-secret": proxySecret,
     },
   });
   return provider("gemini-2.5-flash") as unknown as LanguageModel;
