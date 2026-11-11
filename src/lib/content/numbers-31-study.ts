@@ -227,6 +227,94 @@ export const Numbers31Study: StudyContent = {
       "scriptureRefs": [],
       "confidence": "high",
       "collapsible": false
+    },
+    {
+      "id": "aprofundamento-1",
+      "title": "19. Leitura detalhada — vv. 1-6: convocação e liderança",
+      "body": "A ordem é transmitida por Moisés aos representantes do povo, e o contingente reúne mil homens de cada tribo. O número indica participação nacional, não uma pequena ação privada. Fineias acompanha a expedição com objetos do santuário e trombetas. A narrativa associa a campanha à crise de Peor, mas não fornece todos os detalhes de estratégia, duração ou localização. O leitor deve evitar preencher essas lacunas com imaginação.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 31"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-2",
+      "title": "20. Leitura detalhada — vv. 7-12: retorno da campanha",
+      "body": "O texto enumera os reis mortos, entre eles Zur, ligado à narrativa de Peor, e descreve o retorno com pessoas e bens capturados. A lista tem função narrativa e administrativa: mostra o resultado da campanha e prepara as instruções sobre purificação e repartição. Não devemos tratar pessoas capturadas como simples números; a linguagem do texto registra consequências humanas graves.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 31"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-3",
+      "title": "21. Leitura detalhada — vv. 13-18: a cena mais difícil",
+      "body": "Moisés sai ao encontro dos combatentes e questiona a preservação das mulheres. Em seguida, o texto registra uma ordem de morte que inclui meninos e mulheres que tiveram relações com homens, preservando meninas que não tiveram essa experiência. O leitor contemporâneo percebe aqui uma questão moral profunda. Uma exposição fiel não omite o conteúdo, não o torna leve e não afirma que a passagem autoriza ações semelhantes hoje.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 31"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-4",
+      "title": "22. Leitura detalhada — vv. 19-24: pureza ritual",
+      "body": "O contato com mortos exigia um período de purificação antes do retorno ao acampamento. O texto também diferencia materiais que podiam passar pelo fogo e aqueles que deveriam ser lavados. Essas instruções pertencem ao sistema de pureza ritual do Pentateuco. Não são uma afirmação de que a pessoa que toca um cadáver seja culpada de pecado moral.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 31"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-5",
+      "title": "23. Leitura detalhada — vv. 25-47: números e repartição",
+      "body": "A divisão considera os combatentes, o restante da congregação e os levitas. Há uma parte destinada aos que participaram da campanha e outra à comunidade; tributos específicos são separados para Eleazar e para os levitas. A precisão dos números mostra que a distribuição era contabilizada e regulada. Não é necessário reproduzir todas as somas para compreender o princípio narrativo, mas a leitura integral permite conferir cada proporção.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 31"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-6",
+      "title": "24. Leitura detalhada — vv. 48-54: prestação de contas",
+      "body": "Os oficiais contam os homens e constatam que nenhum soldado de seu contingente havia faltado. Eles apresentam uma oferta de ouro como reconhecimento diante do Senhor. O gesto é descrito como oferta, não como preço pela vitória. A narrativa encerra o capítulo com a memória da oferta guardada no tabernáculo.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 31"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-7",
+      "title": "25. Debate teológico: juízo, guerra e revelação",
+      "body": "A passagem é interpretada de maneiras distintas. Algumas leituras confessionais a entendem como juízo divino excepcional dentro da história de Israel; outras destacam a linguagem e as convenções das narrativas de guerra antigas, bem como o desenvolvimento da compreensão bíblica da vontade de Deus. Há também debates históricos sobre a composição e a memória desses relatos. O estudo deve expor essas linhas sem fingir consenso total nem usar uma hipótese como fato comprovado.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 31"
+      ],
+      "confidence": "debated",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-8",
+      "title": "26. Síntese cristocêntrica e limites de aplicação",
+      "body": "O Novo Testamento não convoca a igreja a reproduzir campanhas militares de Israel. Jesus rejeita a imposição violenta de seu reino e ordena amar os inimigos. A leitura cristã deve manter a seriedade do texto antigo e, ao mesmo tempo, obedecer à missão de Cristo. A passagem pode nos levar a refletir sobre a gravidade do pecado, o juízo e a responsabilidade, mas nunca a legitimar perseguição, violência étnica ou coerção religiosa.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 31"
+      ],
+      "confidence": "high",
+      "collapsible": false
     }
   ]
 };
