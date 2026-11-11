@@ -31,7 +31,6 @@ on:
 
 permissions:
   contents: write
-  models: read
   pull-requests: write
 
 concurrency:
@@ -59,7 +58,10 @@ jobs:
           BOOK_SLUG: ${{ inputs.book_slug }}
           START_CHAPTER: ${{ inputs.start_chapter }}
           BATCH_SIZE: ${{ inputs.batch_size }}
-        run: |\n          if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Cadastre GEMINI_API_KEY em Settings > Secrets and variables > Actions."; exit 1; fi\n          python scripts/generate-bible-study-batch.py
+        run: |
+          set -euo pipefail
+          if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Cadastre GEMINI_API_KEY em Settings > Secrets and variables > Actions."; exit 1; fi
+          python scripts/generate-bible-study-batch.py
       - name: Validar alterações
         run: |
           set -euo pipefail
