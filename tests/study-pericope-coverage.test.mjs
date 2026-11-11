@@ -3,6 +3,16 @@ import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
 const curatedBatch = [
+  { book: "Jó", chapter: 1, verseCount: 22, slug: "biblia-jo-cap-1", exportName: "job1Study", file: "job-1-study.ts" },
+  { book: "Jó", chapter: 2, verseCount: 13, slug: "biblia-jo-cap-2", exportName: "job2Study", file: "job-2-study.ts" },
+  { book: "Jó", chapter: 3, verseCount: 26, slug: "biblia-jo-cap-3", exportName: "job3Study", file: "job-3-study.ts" },
+  { book: "Jó", chapter: 4, verseCount: 21, slug: "biblia-jo-cap-4", exportName: "job4Study", file: "job-4-study.ts" },
+  { book: "Jó", chapter: 5, verseCount: 27, slug: "biblia-jo-cap-5", exportName: "job5Study", file: "job-5-study.ts" },
+  { book: "Jó", chapter: 6, verseCount: 30, slug: "biblia-jo-cap-6", exportName: "job6Study", file: "job-6-study.ts" },
+  { book: "Jó", chapter: 7, verseCount: 21, slug: "biblia-jo-cap-7", exportName: "job7Study", file: "job-7-study.ts" },
+  { book: "Jó", chapter: 8, verseCount: 22, slug: "biblia-jo-cap-8", exportName: "job8Study", file: "job-8-study.ts" },
+  { book: "Jó", chapter: 9, verseCount: 35, slug: "biblia-jo-cap-9", exportName: "job9Study", file: "job-9-study.ts" },
+  { book: "Jó", chapter: 10, verseCount: 22, slug: "biblia-jo-cap-10", exportName: "job10Study", file: "job-10-study.ts" },
   { book: "Ester", chapter: 1, verseCount: 22, slug: "biblia-ester-cap-1", exportName: "esther1Study", file: "esther-1-study.ts" },
   { book: "Ester", chapter: 2, verseCount: 23, slug: "biblia-ester-cap-2", exportName: "esther2Study", file: "esther-2-study.ts" },
   { book: "Ester", chapter: 3, verseCount: 15, slug: "biblia-ester-cap-3", exportName: "esther3Study", file: "esther-3-study.ts" },
