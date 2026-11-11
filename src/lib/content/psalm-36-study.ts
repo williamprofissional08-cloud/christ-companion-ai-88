@@ -106,9 +106,9 @@ export const psalm36Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 36:5-8"
+        "Salmos 36:5-9"
       ],
-      "body": "**Trecho:** Salmos 36:5-8.\\n\\n**Lugar no argumento:** A grandeza do amor leal, justiça e fonte da vida. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **5.** O amor leal de Deus alcança os céus; a imagem expressa grandeza incomensurável.\\n- **6.** A fidelidade divina é comparada às nuvens, ampla e confiável.\\n- **7.** A justiça de Deus é firme como montanhas; seus juízos são profundos como o abismo.\\n- **8.** Deus preserva humanos e animais, revelando amplitude de cuidado.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 36:5-9.\\n\\n**Lugar no argumento:** A grandeza do amor leal, justiça e fonte da vida. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **5.** O amor leal de Deus alcança os céus; a imagem expressa grandeza incomensurável.\\n- **6.** A fidelidade divina é comparada às nuvens, ampla e confiável.\\n- **7.** A justiça de Deus é firme como montanhas; seus juízos são profundos como o abismo.\\n- **8.** Deus preserva humanos e animais, revelando amplitude de cuidado.\\n- **9.** O amor leal é precioso; os filhos dos homens encontram abrigo sob suas asas.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-3",
@@ -116,9 +116,9 @@ export const psalm36Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 36:9-12"
+        "Salmos 36:10-12"
       ],
-      "body": "**Trecho:** Salmos 36:9-12.\\n\\n**Lugar no argumento:** Pedido de continuidade do cuidado e queda da arrogância. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **9.** O amor leal é precioso; os filhos dos homens encontram abrigo sob suas asas.\\n- **10.** A imagem da casa divina fala de comunhão e abundância recebida.\\n- **11.** Deus é fonte da vida; na sua luz, a realidade é vista com clareza.\\n- **12.** O pedido é para que o amor leal continue sobre os que conhecem Deus.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 36:10-12.\\n\\n**Lugar no argumento:** Pedido de continuidade do cuidado e queda da arrogância. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **10.** A imagem da casa divina fala de comunhão e abundância recebida.\\n- **11.** Deus é fonte da vida; na sua luz, a realidade é vista com clareza.\\n- **12.** O pedido é para que o amor leal continue sobre os que conhecem Deus.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "sintese-teologica",
