@@ -117,7 +117,7 @@ export function fallbackDevotional(day: string, selection = 0): DevotionalConten
     theme: theme.title + " — " + book[0],
     verse: {
       reference,
-      text: bookContext + ". Leia o trecho indicado diretamente em sua Bíblia e observe como ele apresenta o caráter e a ação de Deus.",
+      text: bookContext,
       kind: "synthesis",
     },
     reflection:
