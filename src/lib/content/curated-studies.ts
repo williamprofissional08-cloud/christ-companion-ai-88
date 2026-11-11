@@ -76,6 +76,16 @@ import { firstKings19Study } from "./1-kings-19-study";
 import { firstKings20Study } from "./1-kings-20-study";
 import { firstKings21Study } from "./1-kings-21-study";
 import { firstKings22Study } from "./1-kings-22-study";
+import { secondKings1Study } from "./2-kings-1-study";
+import { secondKings2Study } from "./2-kings-2-study";
+import { secondKings3Study } from "./2-kings-3-study";
+import { secondKings4Study } from "./2-kings-4-study";
+import { secondKings5Study } from "./2-kings-5-study";
+import { secondKings6Study } from "./2-kings-6-study";
+import { secondKings7Study } from "./2-kings-7-study";
+import { secondKings8Study } from "./2-kings-8-study";
+import { secondKings9Study } from "./2-kings-9-study";
+import { secondKings10Study } from "./2-kings-10-study";
 
 import { ruth1Study } from "./ruth-1-study";
 import { ruth2Study } from "./ruth-2-study";
@@ -402,6 +412,16 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-1-reis-cap-20": firstKings20Study,
   "biblia-1-reis-cap-21": firstKings21Study,
   "biblia-1-reis-cap-22": firstKings22Study,
+  "biblia-2-reis-cap-1": secondKings1Study,
+  "biblia-2-reis-cap-2": secondKings2Study,
+  "biblia-2-reis-cap-3": secondKings3Study,
+  "biblia-2-reis-cap-4": secondKings4Study,
+  "biblia-2-reis-cap-5": secondKings5Study,
+  "biblia-2-reis-cap-6": secondKings6Study,
+  "biblia-2-reis-cap-7": secondKings7Study,
+  "biblia-2-reis-cap-8": secondKings8Study,
+  "biblia-2-reis-cap-9": secondKings9Study,
+  "biblia-2-reis-cap-10": secondKings10Study,
   "biblia-juizes-cap-1": judges1Study,
   "biblia-juizes-cap-2": judges2Study,
   "biblia-juizes-cap-3": judges3Study,
