@@ -20,7 +20,7 @@ export const Numbers29Study: StudyContent = {
     },
     {
       "title": "Sukkot: abundância cúltica e a contagem decrescente dos novilhos",
-      "text": "A Festa dos Tabernáculos (vv. 12-34) prescreve uma hecatombe sem paralelo: 70 novilhos sacrificados ao longo de sete dias em ordem decrescente (de 13 até 7), simbolizando perfeição sacrificial, gratidão transbordante pela colheita e, na tradição judaica posterior, intercessão pelas setenta nações do mundo."
+      "text": "A Festa dos Tabernáculos (vv. 12-34) prescreve uma hecatombe sem paralelo: 70 novilhos oferecidos ao longo de sete dias em ordem decrescente (de 13 até 7). O texto determina a sequência, mas não explica seu simbolismo; a associação com as setenta nações aparece em interpretação judaica posterior e deve ser identificada como tradição, não como afirmação explícita do capítulo."
     },
     {
       "title": "Shemini Atzeret: o oitavo dia de recolhimento solene",
