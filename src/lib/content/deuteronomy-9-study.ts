@@ -36,9 +36,9 @@ export const deuteronomy9Study: StudyContent = {
     kind: "scripture",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 9:9:1-6"
+      "Deuteronômio 9:1-6"
     ],
-    body: "**Leitura orientada — Deuteronômio 9:9:1-6**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nIsrael enfrentaria povos fortes e cidades fortificadas, mas Moisés insiste que a posse da terra não decorre da justiça do povo. O texto menciona o juízo sobre a maldade das nações e a fidelidade à promessa feita aos patriarcas.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A passagem não autoriza orgulho étnico ou religioso. A eleição não é atestado de superioridade moral; o próprio capítulo expõe a rebeldia de Israel.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 9:1-6**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nIsrael enfrentaria povos fortes e cidades fortificadas, mas Moisés insiste que a posse da terra não decorre da justiça do povo. O texto menciona o juízo sobre a maldade das nações e a fidelidade à promessa feita aos patriarcas.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A passagem não autoriza orgulho étnico ou religioso. A eleição não é atestado de superioridade moral; o próprio capítulo expõe a rebeldia de Israel.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-2",
@@ -46,9 +46,9 @@ export const deuteronomy9Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 9:9:7-12"
+      "Deuteronômio 9:7-12"
     ],
-    body: "**Leitura orientada — Deuteronômio 9:9:7-12**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés manda lembrar a provocação do povo no deserto e introduz o episódio do bezerro de ouro enquanto ele recebia as tábuas da aliança.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A memória tem função pedagógica: Israel precisa reconhecer sua infidelidade e a gravidade de trocar o Senhor por uma representação fabricada.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 9:7-12**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés manda lembrar a provocação do povo no deserto e introduz o episódio do bezerro de ouro enquanto ele recebia as tábuas da aliança.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A memória tem função pedagógica: Israel precisa reconhecer sua infidelidade e a gravidade de trocar o Senhor por uma representação fabricada.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-3",
@@ -56,9 +56,9 @@ export const deuteronomy9Study: StudyContent = {
     kind: "context",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 9:9:13-21"
+      "Deuteronômio 9:13-21"
     ],
-    body: "**Leitura orientada — Deuteronômio 9:9:13-21**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés relata a ameaça de destruição, sua descida do monte e a quebra das tábuas. Ele descreve a destruição do bezerro e sua oração em favor do povo e de Arão.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A narrativa apresenta a intercessão como súplica dependente da misericórdia divina, não como mérito que obriga Deus. A quebra das tábuas dramatiza a ruptura da aliança.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 9:13-21**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés relata a ameaça de destruição, sua descida do monte e a quebra das tábuas. Ele descreve a destruição do bezerro e sua oração em favor do povo e de Arão.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A narrativa apresenta a intercessão como súplica dependente da misericórdia divina, não como mérito que obriga Deus. A quebra das tábuas dramatiza a ruptura da aliança.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-4",
@@ -66,9 +66,9 @@ export const deuteronomy9Study: StudyContent = {
     kind: "application",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 9:9:22-29"
+      "Deuteronômio 9:22-29"
     ],
-    body: "**Leitura orientada — Deuteronômio 9:9:22-29**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés recorda outros episódios de resistência e resume sua súplica: que o Senhor não destrua o povo, lembrando-se de sua propriedade, de sua libertação e das promessas aos patriarcas.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O texto une responsabilidade humana e misericórdia. A oração apela ao nome e à fidelidade de Deus; na leitura cristã, a intercessão de Moisés pode ser comparada com a intercessão de Cristo, sem confundir os papéis.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 9:22-29**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés recorda outros episódios de resistência e resume sua súplica: que o Senhor não destrua o povo, lembrando-se de sua propriedade, de sua libertação e das promessas aos patriarcas.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O texto une responsabilidade humana e misericórdia. A oração apela ao nome e à fidelidade de Deus; na leitura cristã, a intercessão de Moisés pode ser comparada com a intercessão de Cristo, sem confundir os papéis.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   }
 ]
 };
