@@ -104,7 +104,7 @@ def ask_model(chapter):
     reference = f'{book["name"]} {chapter}'
     prompt = f"""
 Produza um estudo bíblico EXCEPCIONALMENTE profundo, completo, didático e editorialmente responsável de {reference}, em português brasileiro, para formação bíblica e preparação de pregadores.
-PADRÃO EDITORIAL OBRIGATÓRIO: siga a profundidade, clareza, organização progressiva e didática do estudo de Gênesis 1 existente no repositório. Use esta estrutura como referência de abrangência, sem copiar seu conteúdo:
+PADRÃO EDITORIAL OBRIGATÓRIO: siga a profundidade, clareza, organização progressiva e didática do estudo de Gênesis 1 existente no repositório. Use TODA a estrutura abaixo como referência de abrangência, sem copiar seu conteúdo nem forçar a mesma divisão quando o gênero do capítulo exigir outra organização:
 {reference_outline}
 
 O aluno deve compreender o texto, explicar cada unidade e preparar uma exposição bíblica. Não entregue resumo superficial nem conteúdo genérico reutilizável.
@@ -119,8 +119,8 @@ REQUISITOS EDITORIAIS INEGOCIÁVEIS:
 6. Ensine: explique termos difíceis, contexto, lógica do argumento e por que cada detalhe importa. Evite repetição artificial, frases vazias e aplicações genéricas.
 7. O esboço homilético deve nascer da estrutura do capítulo e ajudar o pregador a ensinar com fidelidade.
 
-Retorne SOMENTE JSON válido com: version (5), depth ("deep"), intro (mínimo 1200 caracteres), historicalContext (mínimo 900), keyPoints (mínimo 8 objetos title/text específicos), application (mínimo 1000), crossReferences (mínimo 12 strings "Referência bíblica — explicação contextualizada"), questions (mínimo 15 strings com perguntas e respostas orientadoras), conclusion (mínimo 500), prayer (mínimo 100), sections (mínimo 24 objetos com id, title, body, kind, scriptureRefs, confidence, collapsible).
-Cada seção deve ter body de pelo menos 350 caracteres, referências bíblicas pertinentes e conteúdo específico do capítulo. IDs únicos em kebab-case. Use kinds: exegesis, context, theology, pastoral, application, method, glossary, exercise; confidence: high, probable, debated, uncertain.
+Retorne SOMENTE JSON válido com: version (5), depth ("deep"), intro (mínimo 1200 caracteres), historicalContext (mínimo 900), keyPoints (mínimo 8 objetos title/text específicos), application (mínimo 1000), crossReferences (mínimo 12 strings "Referência bíblica — explicação contextualizada"), questions (mínimo 15 strings com perguntas e respostas orientadoras), conclusion (mínimo 500), prayer (mínimo 100), sections (mínimo 26 objetos com id, title, body, kind, scriptureRefs, confidence, collapsible).
+Cada seção deve ter body de pelo menos 500 caracteres, referências bíblicas pertinentes e conteúdo específico do capítulo. A estrutura deve incluir, em seções próprias quando pertinente: leitura integral; introdução; contexto; estrutura; exposição sequencial de todas as perícopes; palavras-chave/idioma original quando relevante; questões interpretativas; referências cruzadas explicadas; cuidados contra erros; relação com Cristo somente quando sustentada; aplicação; síntese; exercícios respondidos; oficina de pregação; meditação e oração. Não use uma seção genérica para substituir várias dessas etapas. IDs únicos em kebab-case. Use kinds: exegesis, context, theology, pastoral, application, method, glossary, exercise; confidence: high, probable, debated, uncertain.
 A seção de leitura deve identificar os versículos/intervalos cobertos. A exposição deve cobrir sequencialmente todas as perícopes até o último versículo. Inclua síntese, exercícios respondidos, esboço expositivo, meditação e oração. Não invente dados para atingir quantidade mínima; declare quando a evidência for limitada.
 """
     payload = json.dumps({
@@ -230,7 +230,7 @@ def validate(data):
         raise ValueError("crossReferences deve conter somente strings não vazias.")
     if not all(isinstance(item, str) and item.strip() for item in data["questions"]):
         raise ValueError("questions deve conter somente strings não vazias.")
-    if data.get("depth") != "deep" or len(data["keyPoints"]) < 8 or len(data["crossReferences"]) < 12 or len(data["questions"]) < 15 or len(data["sections"]) < 24:
+    if data.get("version") != 5 or data.get("depth") != "deep" or len(data["keyPoints"]) < 8 or len(data["crossReferences"]) < 12 or len(data["questions"]) < 15 or len(data["sections"]) < 26:
         raise ValueError("Profundidade ou quantidade mínima não atingida.")
     ids = set()
     for section in data["sections"]:
@@ -238,9 +238,9 @@ def validate(data):
             raise ValueError("Seção incompleta: exige id, title, body, kind, confidence e scriptureRefs.")
         if not isinstance(section["scriptureRefs"], list) or not section["scriptureRefs"] or not all(isinstance(ref, str) and ref.strip() for ref in section["scriptureRefs"]):
             raise ValueError("Cada seção precisa conter referências bíblicas específicas e não vazias.")
-        if len(section["body"]) < 350 or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", section["id"]) or section["id"] in ids:
+        if len(section["body"]) < 500 or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", section["id"]) or section["id"] in ids:
             raise ValueError("Seção superficial (mínimo 350 caracteres) ou ID inválido/duplicado.")
-        if section["confidence"] not in ("high", "probable", "debated", "uncertain"):
+        if section.get("kind") not in ("scripture", "introduction", "context", "exegesis", "theology", "pastoral", "application", "method", "glossary", "exercise", "analysis", "meditation", "reference"):\n            raise ValueError("Tipo de seção inválido ou não reconhecido.")\n        if section["confidence"] not in ("high", "probable", "debated", "uncertain"):
             raise ValueError("Nível de confiança inválido.")
         ids.add(section["id"])
 
