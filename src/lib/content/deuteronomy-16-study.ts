@@ -36,9 +36,9 @@ export const deuteronomy16Study: StudyContent = {
     kind: "scripture",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 16:16:1-8"
+      "Deuteronômio 16:1-8"
     ],
-    body: "**Leitura orientada — Deuteronômio 16:16:1-8**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nIsrael deve celebrar a Páscoa no mês de abibe, recordando a saída do Egito. A celebração envolve o lugar escolhido pelo Senhor e os dias dos pães sem fermento.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A festa mantém a libertação no centro da identidade de Israel. Na leitura cristã, a Páscoa forma parte do contexto bíblico para compreender a morte de Jesus, mas as regras calendáricas e sacrificiais não são impostas à igreja como obrigação legal.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 16:1-8**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nIsrael deve celebrar a Páscoa no mês de abibe, recordando a saída do Egito. A celebração envolve o lugar escolhido pelo Senhor e os dias dos pães sem fermento.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A festa mantém a libertação no centro da identidade de Israel. Na leitura cristã, a Páscoa forma parte do contexto bíblico para compreender a morte de Jesus, mas as regras calendáricas e sacrificiais não são impostas à igreja como obrigação legal.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-2",
@@ -46,9 +46,9 @@ export const deuteronomy16Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 16:16:9-12"
+      "Deuteronômio 16:9-12"
     ],
-    body: "**Leitura orientada — Deuteronômio 16:16:9-12**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA festa é celebrada após a contagem das semanas desde o início da colheita. A oferta deve ser voluntária, proporcional à bênção recebida, e a alegria inclui levitas, estrangeiros, órfãos e viúvas.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A gratidão pela colheita se transforma em generosidade. A celebração não é individualista: inclui pessoas que poderiam ficar à margem da prosperidade comunitária.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 16:9-12**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA festa é celebrada após a contagem das semanas desde o início da colheita. A oferta deve ser voluntária, proporcional à bênção recebida, e a alegria inclui levitas, estrangeiros, órfãos e viúvas.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A gratidão pela colheita se transforma em generosidade. A celebração não é individualista: inclui pessoas que poderiam ficar à margem da prosperidade comunitária.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-3",
@@ -56,9 +56,9 @@ export const deuteronomy16Study: StudyContent = {
     kind: "context",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 16:16:13-17"
+      "Deuteronômio 16:13-17"
     ],
-    body: "**Leitura orientada — Deuteronômio 16:16:13-17**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nApós a colheita, Israel celebra durante sete dias, lembrando a provisão do Senhor. Todos são chamados a participar conforme a bênção recebida.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A festa une memória, provisão e alegria. O princípio é que a adoração reconhece Deus como fonte do sustento e não exclui os vulneráveis da celebração.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 16:13-17**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nApós a colheita, Israel celebra durante sete dias, lembrando a provisão do Senhor. Todos são chamados a participar conforme a bênção recebida.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A festa une memória, provisão e alegria. O princípio é que a adoração reconhece Deus como fonte do sustento e não exclui os vulneráveis da celebração.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-4",
@@ -66,9 +66,9 @@ export const deuteronomy16Study: StudyContent = {
     kind: "application",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 16:16:18-20"
+      "Deuteronômio 16:18-20"
     ],
-    body: "**Leitura orientada — Deuteronômio 16:16:18-20**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nJuízes e oficiais devem ser estabelecidos nas cidades. Eles não podem perverter o direito, favorecer pessoas ou aceitar suborno; a justiça deve ser buscada com perseverança.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A administração pública deve proteger o direito, especialmente contra a influência do dinheiro e do poder. O texto oferece fundamento bíblico para integridade e imparcialidade, sem determinar um modelo constitucional moderno.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 16:18-20**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nJuízes e oficiais devem ser estabelecidos nas cidades. Eles não podem perverter o direito, favorecer pessoas ou aceitar suborno; a justiça deve ser buscada com perseverança.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A administração pública deve proteger o direito, especialmente contra a influência do dinheiro e do poder. O texto oferece fundamento bíblico para integridade e imparcialidade, sem determinar um modelo constitucional moderno.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-5",
@@ -76,9 +76,9 @@ export const deuteronomy16Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 16:16:21-22"
+      "Deuteronômio 16:21-22"
     ],
-    body: "**Leitura orientada — Deuteronômio 16:16:21-22**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO capítulo proíbe plantar poste sagrado e erguer coluna cultual junto ao altar do Senhor.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A adoração não pode ser misturada a símbolos de outros cultos. O princípio cristão é fidelidade a Deus e discernimento, sem transformar a proibição em licença para vandalismo.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 16:21-22**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO capítulo proíbe plantar poste sagrado e erguer coluna cultual junto ao altar do Senhor.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A adoração não pode ser misturada a símbolos de outros cultos. O princípio cristão é fidelidade a Deus e discernimento, sem transformar a proibição em licença para vandalismo.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   }
 ]
 };
