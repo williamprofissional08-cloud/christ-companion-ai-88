@@ -250,30 +250,8 @@ export const completeLesson = createServerFn({ method: "POST" })
     }
 
     const courseId = mod.course_id;
-    const { data: existing } = await context.supabase
-      .from("lesson_progress")
-      .select("id")
-      .eq("user_id", context.userId)
-      .eq("lesson_id", lesson.id)
-      .maybeSingle();
-
-    const payload = {
-      status: "concluida" as const,
-      course_id: courseId,
-      completed_at: new Date().toISOString(),
-    };
-    if (existing) {
-      const { error: upErr } = await context.supabase
-        .from("lesson_progress")
-        .update(payload)
-        .eq("id", existing.id);
-      if (upErr) throw new Error(upErr.message);
-    } else {
-      const { error: insErr } = await context.supabase
-        .from("lesson_progress")
-        .insert({ user_id: context.userId, lesson_id: lesson.id, ...payload });
-      if (insErr) throw new Error(insErr.message);
-    }
+    const { error: completeErr } = await context.supabase.rpc("complete_lesson", { _lesson_id: lesson.id });
+    if (completeErr) throw new Error("Não foi possível concluir a aula.");
 
     const { data: modules } = await context.supabase
       .from("course_modules")
