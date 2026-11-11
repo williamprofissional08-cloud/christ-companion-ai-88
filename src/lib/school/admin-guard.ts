@@ -12,8 +12,10 @@ export async function isAdminUser(
   _supabase: SupabaseClient<Database>,
   userId: string,
 ): Promise<boolean> {
-  const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-  const { data, error } = await supabaseAdmin
+  // Query the role through the already-authenticated client. This guarantees
+  // the lookup uses the exact Supabase project that issued the user's session.
+  // RLS explicitly permits each authenticated user to read their own role.
+  const { data, error } = await _supabase
     .from("user_roles")
     .select("role")
     .eq("user_id", userId)
