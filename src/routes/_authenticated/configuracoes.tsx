@@ -1,9 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
-import { BellRing, Send } from "lucide-react";
+import { ArrowRight, BellRing, Send, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
@@ -26,6 +26,7 @@ import { requestNotificationPermission, sendTestReminder } from "@/hooks/use-rem
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
 import { ProfileEditor } from "@/components/settings/ProfileEditor";
+import { amIAdmin } from "@/lib/admin.functions";
 
 
 export const Route = createFileRoute("/_authenticated/configuracoes")({
@@ -118,6 +119,15 @@ function ConfiguracoesPage() {
   }
   const fetchSettings = useServerFn(getSettings);
   const persist = useServerFn(saveSettings);
+  const checkAdmin = useServerFn(amIAdmin);
+  const { data: isAdmin, isError: adminCheckFailed } = useQuery({
+    queryKey: ["am-i-admin"],
+    queryFn: () => checkAdmin(),
+    enabled: Boolean(user),
+    staleTime: 0,
+    refetchOnMount: "always",
+    retry: 2,
+  });
   const { data, isLoading } = useQuery({
     queryKey: ["settings"],
     queryFn: () => fetchSettings(),
@@ -196,6 +206,28 @@ function ConfiguracoesPage() {
     <AppShell title="Configurações" subtitle="Sua rotina, seus lembretes, seu ritmo">
       <div className="space-y-4">
         <ProfileEditor />
+        {(isAdmin === true || adminCheckFailed) && (
+          <Card className="border-primary/20 bg-primary/5 p-5 shadow-soft">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="rounded-xl bg-primary/10 p-2 text-primary">
+                  <ShieldCheck className="size-5" aria-hidden />
+                </div>
+                <div>
+                  <h2 className="font-display font-semibold">Painel administrativo</h2>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Acesso rápido à administração do Caminho Divino.
+                  </p>
+                </div>
+              </div>
+              <Button asChild size="sm">
+                <Link to="/admin">
+                  Abrir painel <ArrowRight className="ml-1 size-4" />
+                </Link>
+              </Button>
+            </div>
+          </Card>
+        )}
         <Card className="border-border/50 p-6 shadow-soft">
           <h2 className="font-display text-lg font-semibold">Lembretes</h2>
           <p className="text-sm text-muted-foreground">
