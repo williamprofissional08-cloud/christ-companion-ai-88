@@ -107,7 +107,7 @@ export const psalm15Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 15:3-5"
       ],
-      "body": "**Trecho:** Salmos 15:3-5.\n\n**Observação literária e teológica:** A ética da palavra, da honra e do dinheiro. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **3.** O justo não usa a língua para difamar nem prejudica o próximo.\n- **4.** Honrar quem teme ao Senhor demonstra discernimento moral.\n- **5.** Cumprir a palavra mesmo quando custa demonstra integridade.\n- **6.** A recusa à exploração financeira e ao suborno protege o vulnerável.\n- **7.** A estabilidade final está ligada à fidelidade, não à imunidade contra dificuldades.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 15:3-5.\n\n**Observação:** a comunhão com Deus alcança a fala, os relacionamentos e o uso do dinheiro.\n\n**Versículo por versículo:**\n- **3.** O justo não difama, não prejudica o próximo e não espalha desonra.\n- **4.** Ele rejeita o mal, honra quem teme ao Senhor e cumpre a palavra mesmo quando custa.\n- **5.** Não explora financeiramente o próximo nem aceita suborno; a estabilidade final está ligada à fidelidade.\n\n**Interpretação responsável:** leia cada imagem no conjunto do salmo e não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto."
     },
     {
       "id": "sintese-teologica",
