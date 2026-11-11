@@ -47,10 +47,10 @@ function Inicio() {
     const text = `${verseText} — ${reference}\nCaminho Divino`;
     try {
       if (typeof navigator !== "undefined" && navigator.share) {
-        await navigator.share({ title: "Versículo do dia", text });
+        await navigator.share({ title: isSynthesis ? "Leitura bíblica do dia" : "Versículo do dia", text });
       } else if (typeof navigator !== "undefined" && navigator.clipboard) {
         await navigator.clipboard.writeText(text);
-        toast.success("Versículo copiado para compartilhar.");
+        toast.success(isSynthesis ? "Leitura copiada para compartilhar." : "Versículo copiado para compartilhar.");
       } else {
         toast.error("O compartilhamento não está disponível neste dispositivo.");
       }
