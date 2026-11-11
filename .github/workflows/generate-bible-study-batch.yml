@@ -16,7 +16,7 @@ on:
       batch_size:
         description: "Quantidade de capítulos a examinar (1 a 7)"
         required: true
-        default: "7"
+        default: "3"
         type: string
       model:
         description: "Modelo Gemini API"
@@ -26,12 +26,12 @@ on:
       auto_continue:
         description: "Continuar automaticamente até o último capítulo do livro"
         required: true
-        default: true
+        default: false
         type: boolean
       target_branch:
         description: "Branch de trabalho já criada"
         required: true
-        default: "codex/numbers-21-27-batch"
+        default: "codex/universal-bible-study-automation-rebased"
         type: string
 
 permissions:
