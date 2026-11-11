@@ -70,6 +70,10 @@ const curatedBatch = [
   { book: "Josué", chapter: 18, verseCount: 28, slug: "biblia-josue-cap-18", exportName: "joshua18Study", file: "joshua-18-study.ts" },
   { book: "Josué", chapter: 19, verseCount: 51, slug: "biblia-josue-cap-19", exportName: "joshua19Study", file: "joshua-19-study.ts" },
   { book: "Josué", chapter: 20, verseCount: 9, slug: "biblia-josue-cap-20", exportName: "joshua20Study", file: "joshua-20-study.ts" },
+  { book: "Josué", chapter: 21, verseCount: 45, slug: "biblia-josue-cap-21", exportName: "joshua21Study", file: "joshua-21-study.ts" },
+  { book: "Josué", chapter: 22, verseCount: 34, slug: "biblia-josue-cap-22", exportName: "joshua22Study", file: "joshua-22-study.ts" },
+  { book: "Josué", chapter: 23, verseCount: 16, slug: "biblia-josue-cap-23", exportName: "joshua23Study", file: "joshua-23-study.ts" },
+  { book: "Josué", chapter: 24, verseCount: 33, slug: "biblia-josue-cap-24", exportName: "joshua24Study", file: "joshua-24-study.ts" },
 ];
 
 async function readContent(path) {
