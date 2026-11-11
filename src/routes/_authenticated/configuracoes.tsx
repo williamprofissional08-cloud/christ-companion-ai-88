@@ -26,7 +26,6 @@ import { requestNotificationPermission, sendTestReminder } from "@/hooks/use-rem
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
 import { ProfileEditor } from "@/components/settings/ProfileEditor";
-import { amIAdmin } from "@/lib/admin.functions";
 
 
 export const Route = createFileRoute("/_authenticated/configuracoes")({
@@ -119,15 +118,6 @@ function ConfiguracoesPage() {
   }
   const fetchSettings = useServerFn(getSettings);
   const persist = useServerFn(saveSettings);
-  const checkAdmin = useServerFn(amIAdmin);
-  const { data: isAdmin, isError: adminCheckFailed } = useQuery({
-    queryKey: ["am-i-admin"],
-    queryFn: () => checkAdmin(),
-    enabled: Boolean(user),
-    staleTime: 0,
-    refetchOnMount: "always",
-    retry: 2,
-  });
   const { data, isLoading } = useQuery({
     queryKey: ["settings"],
     queryFn: () => fetchSettings(),
@@ -206,8 +196,7 @@ function ConfiguracoesPage() {
     <AppShell title="Configurações" subtitle="Sua rotina, seus lembretes, seu ritmo">
       <div className="space-y-4">
         <ProfileEditor />
-        {(isAdmin === true || adminCheckFailed) && (
-          <Card className="border-primary/20 bg-primary/5 p-5 shadow-soft">
+        <Card className="border-primary/20 bg-primary/5 p-5 shadow-soft">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-start gap-3">
                 <div className="rounded-xl bg-primary/10 p-2 text-primary">
@@ -226,8 +215,7 @@ function ConfiguracoesPage() {
                 </Link>
               </Button>
             </div>
-          </Card>
-        )}
+        </Card>
         <Card className="border-border/50 p-6 shadow-soft">
           <h2 className="font-display text-lg font-semibold">Lembretes</h2>
           <p className="text-sm text-muted-foreground">

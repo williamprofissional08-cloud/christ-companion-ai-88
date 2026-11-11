@@ -27,7 +27,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { getSettings } from "@/lib/settings.functions";
-import { amIAdmin } from "@/lib/admin.functions";
 import { useReminders } from "@/hooks/use-reminders";
 import { useTheme } from "@/hooks/use-auth";
 import { toast } from "sonner";
@@ -96,14 +95,6 @@ export function AppShell({
   const [open, setOpen] = useState(false);
   const fetchSettings = useServerFn(getSettings);
   const { data: settings } = useQuery({ queryKey: ["settings"], queryFn: () => fetchSettings() });
-  const checkAdmin = useServerFn(amIAdmin);
-  const { data: isAdmin, isError: adminCheckFailed } = useQuery({
-    queryKey: ["am-i-admin"],
-    queryFn: () => checkAdmin(),
-    staleTime: 0,
-    refetchOnMount: "always",
-    retry: 2,
-  });
   useReminders(settings);
 
 
@@ -192,8 +183,8 @@ export function AppShell({
       </div>
 
       <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-background/95 backdrop-blur lg:hidden">
-        <div className={`mx-auto grid max-w-lg ${isAdmin === true || adminCheckFailed ? "grid-cols-6" : "grid-cols-5"}`}>
-          {[...NAV.slice(0, 5), ...(isAdmin === true || adminCheckFailed ? [{ to: "/admin" as const, label: "Admin", icon: ShieldCheck }] : [])].map((item) => (
+        <div className="mx-auto grid max-w-lg grid-cols-6">
+          {[...NAV.slice(0, 5), { to: "/admin" as const, label: "Admin", icon: ShieldCheck }].map((item) => (
             <Link
               key={item.to}
               to={item.to}
