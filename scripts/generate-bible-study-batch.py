@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate sequential, validated curated Genesis studies using GitHub Models."""
+"""Generate missing curated chapter studies for any of the 66 Bible books."""
 import json
 import os
 import pathlib
@@ -9,166 +9,177 @@ import urllib.error
 import urllib.request
 
 ROOT = pathlib.Path(".")
-REPO = os.environ.get("GITHUB_REPOSITORY", "")
 TOKEN = os.environ.get("GH_TOKEN", "").strip()
 MODEL = os.environ.get("MODEL", "openai/gpt-4.1").strip()
-START = int(os.environ.get("START_CHAPTER", "24"))
+BOOK_SLUG = os.environ.get("BOOK_SLUG", "numbers").strip().lower()
+START = int(os.environ.get("START_CHAPTER", "21"))
 COUNT = int(os.environ.get("BATCH_SIZE", "7"))
-CATALOG = ROOT / "src/lib/content/curated-studies.ts"
-BOOKS = ROOT / "src/lib/content/bible-books.ts"
+CATALOG_PATH = ROOT / "src/lib/content/curated-studies.ts"
+BOOKS_PATH = ROOT / "src/lib/content/bible-books.ts"
+CONTENT_DIR = ROOT / "src/lib/content"
+
+PREFIX = {
+    "genesis": "genesis", "exodo": "exodus", "levitico": "leviticus",
+    "numeros": "numbers", "deuteronomio": "deuteronomy", "josue": "joshua",
+    "juizes": "judges", "rute": "ruth", "1-samuel": "1-samuel",
+    "2-samuel": "2-samuel", "1-reis": "1-kings", "2-reis": "2-kings",
+    "1-cronicas": "1-chronicles", "2-cronicas": "2-chronicles",
+    "esdras": "ezra", "neemias": "nehemiah", "ester": "esther",
+    "jo": "job", "salmos": "psalms", "proverbios": "proverbs",
+    "eclesiastes": "ecclesiastes", "cantico-dos-canticos": "song-of-solomon",
+    "isaias": "isaiah", "jeremias": "jeremiah", "lamentacoes": "lamentations",
+    "ezequiel": "ezekiel", "daniel": "daniel", "oseias": "hosea",
+    "joel": "joel", "amos": "amos", "obadias": "obadiah", "jonas": "jonah",
+    "miqueias": "micah", "naum": "nahum", "habacuque": "habakkuk",
+    "sofonias": "zephaniah", "ageu": "haggai", "zacarias": "zechariah",
+    "malaquias": "malachi", "mateus": "matthew", "marcos": "mark",
+    "lucas": "luke", "joao": "john", "atos": "acts", "romanos": "romans",
+    "1-corintios": "1-corinthians", "2-corintios": "2-corinthians",
+    "galatas": "galatians", "efesios": "ephesians", "filipenses": "philippians",
+    "colossenses": "colossians", "1-tessalonicenses": "1-thessalonians",
+    "2-tessalonicenses": "2-thessalonians", "1-timoteo": "1-timothy",
+    "2-timoteo": "2-timothy", "tito": "titus", "filemom": "philemon",
+    "hebreus": "hebrews", "tiago": "james", "1-pedro": "1-peter",
+    "2-pedro": "2-peter", "1-joao": "1-john", "2-joao": "2-john",
+    "3-joao": "3-john", "judas": "jude", "apocalipse": "revelation",
+}
 
 if not TOKEN:
     raise SystemExit("GH_TOKEN ausente. Verifique permissions: models: read.")
-if START < 1 or START > 50 or COUNT < 1 or COUNT > 7 or START + COUNT - 1 > 50:
-    raise SystemExit("Intervalo inválido: Gênesis tem 50 capítulos; lote permitido de 1 a 7.")
-if not CATALOG.exists() or not BOOKS.exists():
-    raise SystemExit("Estrutura de conteúdo não encontrada; execução interrompida.")
+if not 1 <= COUNT <= 7:
+    raise SystemExit("O lote deve examinar de 1 a 7 capítulos.")
+if not CATALOG_PATH.exists() or not BOOKS_PATH.exists():
+    raise SystemExit("Catálogo ou índice bíblico não encontrado.")
 
-catalog = CATALOG.read_text(encoding="utf-8")
-book_source = BOOKS.read_text(encoding="utf-8")
-if "export const CURATED_STUDIES" not in catalog:
-    raise SystemExit("Catálogo curado não reconhecido.")
+book_source = BOOKS_PATH.read_text(encoding="utf-8")
+catalog = CATALOG_PATH.read_text(encoding="utf-8")
+pattern = re.compile(r'\{\s*slug:\s*"([^"]+)",\s*name:\s*"([^"]+)",\s*chapters:\s*(\d+),\s*category:\s*"([^"]+)",\s*testament:\s*"([^"]+)"', re.M)
+books = {m.group(1): {"name": m.group(2), "chapters": int(m.group(3)), "category": m.group(4), "testament": m.group(5)} for m in pattern.finditer(book_source)}
+if len(books) != 66:
+    raise SystemExit(f"Índice bíblico deveria conter 66 livros; encontrados {len(books)}.")
+if BOOK_SLUG not in books or BOOK_SLUG not in PREFIX:
+    raise SystemExit(f"Slug não reconhecido: {BOOK_SLUG}.")
+book = books[BOOK_SLUG]
+if START < 1 or START > book["chapters"]:
+    raise SystemExit("Capítulo inicial fora dos limites do livro.")
+END = min(START + COUNT - 1, book["chapters"])
+file_prefix = PREFIX[BOOK_SLUG]
 
-def ask_model(chapter: int) -> dict:
+def slug_for(chapter):
+    if BOOK_SLUG == "genesis" and chapter == 1:
+        return "genesis-1-criacao"
+    return f"biblia-{BOOK_SLUG}-cap-{chapter}"
+
+def symbol_for(chapter):
+    base = re.sub(r"[^a-zA-Z0-9]", "", file_prefix.title())
+    return f"{base}{chapter}Study"
+
+def ask_model(chapter):
+    reference = f'{book["name"]} {chapter}'
     prompt = f"""
-Produza um estudo bíblico EXEGÉTICO, profundo, didático e editorialmente responsável de Gênesis {chapter}, em português brasileiro, para formação bíblica avançada e preparação de pregadores.
-Use Gênesis 1 como referência editorial de profundidade e Gênesis 23 como referência da estrutura TypeScript existente. O capítulo precisa ser estudado em seu contexto imediato e no desenvolvimento de Gênesis e do cânon bíblico.
-Não invente fatos históricos, arqueológicos, hebraicos, datas, autores ou referências. Identifique claramente o que é dado textual, contexto provável, inferência, interpretação e hipótese. Quando houver divergência relevante, explique as leituras sem caricatura e sem declarar certeza indevida. Não alegorize detalhes sem apoio textual. Não transforme promessas particulares em garantias individuais. Não faça aplicações que legitimem violência, exploração ou abuso.
-Retorne SOMENTE um objeto JSON válido, sem markdown, com exatamente estas propriedades:
-{{
- "version": 1, "depth": "deep",
- "intro": "introdução substancial (mínimo 900 caracteres), tese central e orientação de leitura",
- "historicalContext": "contexto literário, histórico e cultural (mínimo 600 caracteres), com limites da evidência",
- "keyPoints": [{{"title":"...","text":"..."}}], 
- "application": "aplicação pastoral e contemporânea responsável (mínimo 700 caracteres)",
- "crossReferences": ["referência bíblica — relação explicada"],
- "questions": ["pergunta de compreensão/exegese"],
- "conclusion": "síntese teológica e cristocêntrica cuidadosa (mínimo 300 caracteres)",
- "prayer": "oração coerente com o capítulo, sem promessas inventadas",
- "sections": [{{"id":"slug-unico","title":"...","body":"texto aprofundado","kind":"exegesis|context|theology|pastoral|application|method|glossary|exercise","scriptureRefs":["Gênesis {chapter}:1"],"confidence":"high|probable|debated|uncertain","collapsible":true}}]
-}}
-Requisitos mínimos: 8 keyPoints; 10 crossReferences relevantes e corretas; 12 perguntas; 18 sections substanciais, organizadas com progressão lógica. Inclua delimitação e estrutura literária, análise por perícope/versículos, palavras/conceitos importantes sem etimologias especulativas, contexto histórico com ressalvas, teologia bíblica, relação com Cristo somente quando sustentada pelo cânon, erros interpretativos comuns, aplicações, método de estudo, esboço expositivo, glossário e avaliação. Cada section deve ter body de pelo menos 350 caracteres, salvo itens de glossário/exercício. Evite repetição para atingir contagem.
-O texto bíblico deve ser consultado pelo leitor em sua tradução licenciada; não reproduza longos trechos de traduções protegidas. Referências no formato Livro capítulo:versículos. Seja específico ao capítulo {chapter}, não escreva um estudo genérico.
+Produza um estudo bíblico exegético, profundo, didático e editorialmente responsável de {reference}, em português brasileiro, para formação bíblica e preparação de pregadores.
+PADRÃO OBRIGATÓRIO: use Gênesis 1 como referência editorial de profundidade, clareza, progressão pedagógica e organização. Ensine o aluno a compreender o texto, não apenas resuma. Desenvolva a leitura por perícopes/unidades literárias e explique cada unidade com rigor e linguagem acessível.
+Livro: {book["name"]}; testamento: {book["testament"]}; categoria: {book["category"]}; capítulo {chapter} de {book["chapters"]}. Respeite o gênero literário.
+Não invente fatos históricos, arqueológicos, linguísticos, datas, autoria ou referências. Distinga dados explícitos do texto, contexto provável, inferência, interpretação debatida e hipótese. Apresente divergências relevantes com justiça. Não alegorize detalhes sem base. Não force conexões com Cristo: use apenas quando sustentadas pelo texto e pelo cânon. Não transforme promessas particulares em garantias individuais. Não legitime violência, exploração ou abuso. Não reproduza longos trechos de traduções protegidas.
+Retorne SOMENTE JSON válido com: version (4), depth ("deep"), intro (mínimo 900 caracteres), historicalContext (700), keyPoints (mínimo 8 objetos title/text), application (800), crossReferences (mínimo 12 referências corretas com explicação), questions (mínimo 15 perguntas), conclusion (400), prayer (80), sections (mínimo 22 objetos com id, title, body, kind, scriptureRefs, confidence, collapsible).
+As seções devem cobrir: introdução e tese; contexto literário/histórico e limites da evidência; gênero; estrutura; exposição por perícope/versículos; termos importantes sem etimologia especulativa; teologia do capítulo; relação com o livro e cânon; debates interpretativos; erros de leitura; aplicações; método de interpretação; glossário; exercícios/avaliação; esboço expositivo; meditação e síntese. Cada body com pelo menos 250 caracteres. Evite repetição artificial.
+Use kinds: exegesis, context, theology, pastoral, application, method, glossary, exercise. confidence: high, probable, debated, uncertain. Identificadores únicos em kebab-case. Referências bíblicas verificáveis. Texto claro e específico ao capítulo.
 """
-    payload = json.dumps({
-        "model": MODEL,
-        "messages": [
-            {"role": "system", "content": "Você é exegeta bíblico e editor acadêmico cuidadoso. Fidelidade textual, honestidade epistemológica e qualidade didática são prioritárias. Retorne apenas JSON válido."},
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.2,
-        "max_tokens": 16000
-    }).encode()
-    req = urllib.request.Request(
-        "https://models.github.ai/inference/chat/completions",
-        data=payload,
-        headers={"Content-Type": "application/json", "Accept": "application/json", "Authorization": "Bearer " + TOKEN}
-    )
+    payload = json.dumps({"model": MODEL, "messages": [
+        {"role": "system", "content": "Você é exegeta bíblico, professor e editor teológico. Fidelidade textual, honestidade epistemológica, profundidade e clareza didática são prioritárias. Responda apenas JSON válido."},
+        {"role": "user", "content": prompt}], "temperature": 0.2, "max_tokens": 20000}).encode()
+    request = urllib.request.Request("https://models.github.ai/inference/chat/completions", data=payload,
+        headers={"Content-Type": "application/json", "Accept": "application/json", "Authorization": "Bearer " + TOKEN})
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=240) as response:
-                response_body = response.read().decode("utf-8", "replace")
-            result = json.loads(response_body)
+            with urllib.request.urlopen(request, timeout=300) as response:
+                body = response.read().decode("utf-8", "replace")
+            result = json.loads(body)
             choices = result.get("choices") or []
             if not choices:
-                raise ValueError(
-                    "API não retornou choices; "
-                    f"model={result.get('model')!r}, id={result.get('id')!r}, "
-                    f"resposta={response_body[:700]!r}"
-                )
-            choice = choices[0]
-            message = choice.get("message") or {}
-            raw_content = message.get("content")
-            if isinstance(raw_content, list):
-                raw = "".join(
-                    part.get("text", "") if isinstance(part, dict) else str(part)
-                    for part in raw_content
-                ).strip()
-            elif isinstance(raw_content, str):
-                raw = raw_content.strip()
-            else:
-                raw = ""
-            if not raw:
-                refusal = message.get("refusal")
-                usage = result.get("usage")
-                raise ValueError(
-                    "GitHub Models retornou conteúdo vazio; "
-                    f"finish_reason={choice.get('finish_reason')!r}, "
-                    f"refusal={refusal!r}, usage={usage!r}, "
-                    f"response_id={result.get('id')!r}, "
-                    f"response_excerpt={response_body[:900]!r}"
-                )
-            raw = re.sub(r"^\\s*```(?:json)?\\s*", "", raw)
-            raw = re.sub(r"\\s*```\\s*$", "", raw)
+                raise ValueError(f"API sem choices: {body[:700]}")
+            message = choices[0].get("message") or {}
+            raw = message.get("content")
+            if isinstance(raw, list):
+                raw = "".join(part.get("text", "") if isinstance(part, dict) else str(part) for part in raw)
+            if not isinstance(raw, str) or not raw.strip():
+                raise ValueError(f"Resposta vazia: {message.get('refusal')}")
+            raw = re.sub(r'^\s*\x60{3}(?:json)?\s*', '', raw.strip())
+            raw = re.sub(r'\s*\x60{3}\s*$', '', raw)
             data = json.loads(raw)
-            validate_study(data, chapter)
+            validate(data)
             return data
-        except urllib.error.HTTPError as exc:
-            detail = exc.read().decode("utf-8", "replace")[:1200]
-            if exc.code in (401, 403):
-                raise SystemExit(f"GitHub Models sem acesso (HTTP {exc.code}): {detail}")
-            if exc.code not in (408, 429, 500, 502, 503, 504) or attempt == 2:
-                raise SystemExit(f"GitHub Models HTTP {exc.code}: {detail}")
-            time.sleep(15 * (attempt + 1))
-        except (KeyError, IndexError, json.JSONDecodeError, TypeError, ValueError) as exc:
+        except urllib.error.HTTPError as error:
+            detail = error.read().decode("utf-8", "replace")[:1000]
+            if error.code in (401, 403) or error.code not in (408, 429, 500, 502, 503, 504) or attempt == 2:
+                raise SystemExit(f"GitHub Models HTTP {error.code}: {detail}")
+            time.sleep(10 * (attempt + 1))
+        except (ValueError, KeyError, TypeError, json.JSONDecodeError) as error:
             if attempt == 2:
-                raise SystemExit(f"Resposta inválida para Gênesis {chapter}: {exc}")
-            print(
-                f"Tentativa {attempt + 1}/3 sem resposta JSON utilizável "
-                f"para Gênesis {chapter}: {exc}",
-                flush=True,
-            )
+                raise SystemExit(f"Resposta inválida para {reference}: {error}")
             time.sleep(5 * (attempt + 1))
 
-def validate_study(data: dict, chapter: int):
+def validate(data):
     required = ["intro", "historicalContext", "keyPoints", "application", "crossReferences", "questions", "conclusion", "prayer", "sections"]
-    if not isinstance(data, dict) or any(k not in data for k in required):
+    if not isinstance(data, dict) or any(key not in data for key in required):
         raise ValueError("Campos obrigatórios ausentes.")
-    limits = {"intro": 900, "historicalContext": 600, "application": 700, "conclusion": 300}
-    for key, minimum in limits.items():
+    for key, minimum in {"intro": 900, "historicalContext": 700, "application": 800, "conclusion": 400, "prayer": 80}.items():
         if not isinstance(data[key], str) or len(data[key]) < minimum:
             raise ValueError(f"{key} abaixo do mínimo de {minimum} caracteres.")
-    if len(data["keyPoints"]) < 8 or len(data["crossReferences"]) < 10 or len(data["questions"]) < 12 or len(data["sections"]) < 18:
-        raise ValueError("Quantidade mínima de tópicos, referências, perguntas ou seções não atingida.")
+    if data.get("depth") != "deep" or len(data["keyPoints"]) < 8 or len(data["crossReferences"]) < 12 or len(data["questions"]) < 15 or len(data["sections"]) < 22:
+        raise ValueError("Profundidade ou quantidade mínima não atingida.")
+    ids = set()
     for section in data["sections"]:
-        if not isinstance(section, dict) or not all(k in section for k in ("id", "title", "body", "kind", "confidence")):
-            raise ValueError("Seção com estrutura incompleta.")
-        if len(section["body"]) < 250:
-            raise ValueError(f"Seção superficial: {section.get('title', 'sem título')}")
-        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", section["id"]):
-            raise ValueError("ID de seção inválido.")
-    if data.get("depth") != "deep":
-        raise ValueError("O estudo precisa estar marcado como deep.")
+        if not isinstance(section, dict) or not all(key in section for key in ("id", "title", "body", "kind", "confidence")):
+            raise ValueError("Seção incompleta.")
+        if len(section["body"]) < 250 or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", section["id"]) or section["id"] in ids:
+            raise ValueError("Seção superficial ou ID inválido/duplicado.")
+        if section["confidence"] not in ("high", "probable", "debated", "uncertain"):
+            raise ValueError("Nível de confiança inválido.")
+        ids.add(section["id"])
 
 def main():
     global catalog
-    for chapter in range(START, START + COUNT):
-        path = ROOT / f"src/lib/content/genesis-{chapter}-study.ts"
-        if path.exists() or f"biblia-genesis-cap-{chapter}" in catalog:
-            raise SystemExit(f"Gênesis {chapter} já existe no catálogo/arquivos. Nada foi sobrescrito.")
-        print(f"Gerando Gênesis {chapter} com {MODEL}...", flush=True)
+    imports = []
+    entries = []
+    generated = 0
+    preserved = []
+    for chapter in range(START, END + 1):
+        slug = slug_for(chapter)
+        symbol = symbol_for(chapter)
+        path = CONTENT_DIR / f"{file_prefix}-{chapter}-study.ts"
+        has_catalog_entry = re.search(r'["\']' + re.escape(slug) + r'["\']\s*:', catalog) is not None
+        has_import = re.search(r'import\s*\{\s*' + re.escape(symbol) + r'\s*\}', catalog) is not None
+        if has_catalog_entry and not path.exists():
+            raise SystemExit(f"Inconsistência: {slug} consta no catálogo, mas arquivo ausente. Interrompido sem sobrescrever.")
+        if path.exists():
+            if not has_catalog_entry:
+                if not has_import:
+                    imports.append(f'import {{ {symbol} }} from "./{file_prefix}-{chapter}-study";')
+                entries.append(f'  "{slug}": {symbol},')
+            preserved.append(chapter)
+            continue
         study = ask_model(chapter)
-        symbol = f"genesis{chapter}Study"
-        path.write_text(
-            'import type { StudyContent } from "../types";\n\n'
-            + f"export const {symbol}: StudyContent = "
-            + json.dumps(study, ensure_ascii=False, indent=2)
-            + ";\n",
-            encoding="utf-8"
-        )
-        import_line = f'import {{ {symbol} }} from "./genesis-{chapter}-study";'
-        catalog = catalog.replace(
-            'import { genesis1Study } from "./genesis-1-study";',
-            import_line + '\n' + 'import { genesis1Study } from "./genesis-1-study";'
-        )
-        entry = f'  "biblia-genesis-cap-{chapter}": {symbol},'
-        catalog = catalog.replace(
-            '  "biblia-genesis-cap-23": genesis23Study,',
-            '  "biblia-genesis-cap-23": genesis23Study,\n' + entry
-        )
-        print(f"Gênesis {chapter}: estrutura validada ({len(study['sections'])} seções).", flush=True)
-    CATALOG.write_text(catalog, encoding="utf-8")
-    print(f"Lote Gênesis {START}–{START + COUNT - 1} gerado. Próximo passo: validação de build/testes.", flush=True)
+        path.write_text('import type { StudyContent } from "../types";\n\n' + f"export const {symbol}: StudyContent = " + json.dumps(study, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
+        imports.append(f'import {{ {symbol} }} from "./{file_prefix}-{chapter}-study";')
+        entries.append(f'  "{slug}": {symbol},')
+        generated += 1
+        print(f'Gerado {book["name"]} {chapter}: {len(study["sections"])} seções.', flush=True)
+    if not imports and not entries:
+        print(f"Nenhum capítulo novo; capítulos já existentes preservados: {preserved}.")
+        return
+    type_import = 'import type { StudyContent } from "../types";'
+    if imports:
+        catalog = catalog.replace(type_import, type_import + "\n" + "\n".join(imports), 1)
+    marker = "export const CURATED_STUDIES: Record<string, StudyContent> = {"
+    start = catalog.find(marker)
+    close = catalog.find("\n};", start)
+    if start < 0 or close < 0:
+        raise SystemExit("Estrutura do catálogo não reconhecida.")
+    if entries:
+        catalog = catalog[:close] + "\n" + "\n".join(entries) + catalog[close:]
+    CATALOG_PATH.write_text(catalog, encoding="utf-8")
+    print(f"Lote concluído: {generated} novos; {len(preserved)} existentes preservados.", flush=True)
 
 if __name__ == "__main__":
     main()
