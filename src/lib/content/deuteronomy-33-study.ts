@@ -16,7 +16,7 @@ export const deuteronomy33Study: StudyContent = {
   {
     id: "secao-1",
     title: "A majestade e a presença do Senhor",
-    kind: scripture,
+    kind: "scripture",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 33:1-5"],
     body: "**Leitura orientada — Deuteronômio 33:1-5**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nMoisés começa exaltando a manifestação do Senhor e sua relação com o povo. A lei é descrita como dádiva e herança da congregação. A autoridade de Israel está subordinada ao reinado de Deus.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** Moisés começa exaltando a manifestação do Senhor e sua relação com o povo. A lei é descrita como dádiva e herança da congregação. A autoridade de Israel está subordinada ao reinado de Deus. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -24,7 +24,7 @@ export const deuteronomy33Study: StudyContent = {
   {
     id: "secao-2",
     title: "Bênçãos sobre as tribos",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 33:6-25"],
     body: "**Leitura orientada — Deuteronômio 33:6-25**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nAs palavras sobre Rúben, Judá, Levi, Benjamim, José e as demais tribos refletem características, necessidades e esperanças próprias. Algumas frases são de interpretação debatida; o estudo deve distinguir o texto poético de reconstruções históricas incertas.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** As palavras sobre Rúben, Judá, Levi, Benjamim, José e as demais tribos refletem características, necessidades e esperanças próprias. Algumas frases são de interpretação debatida; o estudo deve distinguir o texto poético de reconstruções históricas incertas. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -32,7 +32,7 @@ export const deuteronomy33Study: StudyContent = {
   {
     id: "secao-3",
     title: "A segurança no Deus eterno",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 33:26-29"],
     body: "**Leitura orientada — Deuteronômio 33:26-29**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nO encerramento proclama que não há outro como o Deus de Israel, que socorre e protege seu povo. A segurança não repousa na autossuficiência nacional, mas no Senhor que é auxílio e escudo.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** O encerramento proclama que não há outro como o Deus de Israel, que socorre e protege seu povo. A segurança não repousa na autossuficiência nacional, mas no Senhor que é auxílio e escudo. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
