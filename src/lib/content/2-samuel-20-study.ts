@@ -69,6 +69,46 @@ export const secondSamuel20Study: StudyContent = {
       "2 Samuel 20:23-26"
     ],
     "body": "**Leitura bíblica:** leia 2 Samuel 20:23-26 diretamente em sua Bíblia. O comentário a seguir é autoral e não substitui uma tradução bíblica.\n\n**Observação do texto:** A cidade é poupada e a revolta termina. O capítulo registra os oficiais do reino. A estabilidade institucional é necessária, mas a lista não apaga as consequências das disputas anteriores.\n\n**Interpretação:** observe os personagens, as ações, os contrastes, as repetições e as consequências narradas. Diferencie o que o narrador afirma daquilo que os personagens dizem. A passagem deve ser compreendida no desenvolvimento do capítulo e na história da aliança davídica.\n\n**Contexto histórico e literário:** A disputa entre Judá e Israel abre espaço para Seba convocar nova rebelião. Joabe mata Amasa e cerca Abel-Bete-Maaca. Uma mulher sábia negocia a entrega do rebelde para impedir a destruição da cidade. O capítulo termina com uma lista administrativa que não apaga os custos humanos do poder.\n\n**Conexão bíblico-teológica:** a história de Davi não exige idealizar o rei. A esperança bíblica aponta para o Filho de Davi, Jesus Cristo, cujo reino manifesta justiça e serviço. O Novo Testamento não autoriza transferir automaticamente para a igreja as guerras, punições ou disputas políticas da monarquia de Israel.\n\n**Aplicação:** pratique verdade, justiça, humildade e cuidado com o próximo. Não confunda sucesso estratégico com aprovação moral de Deus; avalie atitudes à luz do caráter de Cristo."
+  },
+  {
+    "id": "2sm-20-complemento-1",
+    "title": "A divisão tribal e a revolta de Seba",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 20"
+    ],
+    "body": "**Análise:** A revolta de Seba nasce de uma divisão anterior. A mediação da mulher de Abel evita que uma cidade inteira seja destruída por causa de um líder rebelde.\n\n**Leitura cuidadosa:** A divisão tribal e a revolta de Seba. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-20-complemento-2",
+    "title": "A violência de Joabe e a ambição pelo poder",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 20"
+    ],
+    "body": "**Análise:** A revolta de Seba nasce de uma divisão anterior. A mediação da mulher de Abel evita que uma cidade inteira seja destruída por causa de um líder rebelde.\n\n**Leitura cuidadosa:** A violência de Joabe e a ambição pelo poder. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-20-complemento-3",
+    "title": "A mulher sábia como agente de preservação",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 20"
+    ],
+    "body": "**Análise:** A revolta de Seba nasce de uma divisão anterior. A mediação da mulher de Abel evita que uma cidade inteira seja destruída por causa de um líder rebelde.\n\n**Leitura cuidadosa:** A mulher sábia como agente de preservação. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-20-complemento-4",
+    "title": "A proteção dos inocentes e a paz negociada",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 20"
+    ],
+    "body": "**Análise:** A revolta de Seba nasce de uma divisão anterior. A mediação da mulher de Abel evita que uma cidade inteira seja destruída por causa de um líder rebelde.\n\n**Leitura cuidadosa:** A proteção dos inocentes e a paz negociada. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
   }
-]
+
 };
