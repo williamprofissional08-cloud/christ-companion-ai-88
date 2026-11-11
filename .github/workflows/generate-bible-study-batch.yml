@@ -26,7 +26,7 @@ on:
       target_branch:
         description: "Branch de trabalho já criada"
         required: true
-        default: "fix/bible-study-generator-gemini-api"
+        default: "codex/numbers-21-27-batch"
         type: string
 
 permissions:
@@ -47,6 +47,14 @@ jobs:
         with:
           ref: ${{ inputs.target_branch }}
           fetch-depth: 0
+      - name: Diagnosticar versão do código
+        run: |
+          set -euo pipefail
+          echo "Branch: $(git branch --show-current)"
+          echo "Commit: $(git rev-parse HEAD)"
+          git log -1 --oneline
+          echo "Final do gerador:"
+          nl -ba scripts/generate-bible-study-batch.py | tail -n 12
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
@@ -61,6 +69,7 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Cadastre GEMINI_API_KEY em Settings > Secrets and variables > Actions."; exit 1; fi
+          python -m py_compile scripts/generate-bible-study-batch.py
           python scripts/generate-bible-study-batch.py
       - name: Validar alterações
         run: |
