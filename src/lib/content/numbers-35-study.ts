@@ -235,6 +235,94 @@ export const Numbers35Study: StudyContent = {
       "scriptureRefs": [],
       "confidence": "high",
       "collapsible": false
+    },
+    {
+      "id": "aprofundamento-1",
+      "title": "20. Leitura detalhada — vv. 1-8: cidades e pastagens",
+      "body": "Os levitas recebem cidades distribuídas entre as tribos, com áreas de pastagem ao redor. A quantidade de cidades varia conforme a herança de cada tribo. O sistema demonstra que o serviço do santuário era sustentado por toda a comunidade, e não por uma propriedade tribal independente.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 35"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-2",
+      "title": "21. Leitura detalhada — vv. 9-15: finalidade das cidades de refúgio",
+      "body": "As seis cidades oferecem proteção a quem matou alguém sem intenção. O texto inclui israelitas e estrangeiros residentes ou visitantes. A proteção é geograficamente distribuída para que o acesso não dependa de uma única região.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 35"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-3",
+      "title": "22. Leitura detalhada — vv. 16-21: sinais de homicídio intencional",
+      "body": "O texto menciona instrumentos e ações que demonstram intenção e hostilidade. O propósito é diferenciar assassinato de morte não premeditada. A interpretação deve considerar o conjunto do caso, não selecionar um detalhe isolado e ignorar as circunstâncias.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 35"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-4",
+      "title": "23. Leitura detalhada — vv. 22-25: morte sem intenção",
+      "body": "O texto descreve situações em que não havia inimizade nem intenção prévia. A congregação deveria julgar e proteger o acusado. A cidade de refúgio impede a execução imediata por vingança, oferecendo um procedimento antes da decisão.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 35"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-5",
+      "title": "24. Leitura detalhada — vv. 26-29: limites da proteção",
+      "body": "Se o acusado saísse dos limites da cidade antes da morte do sumo sacerdote, poderia ser alcançado pelo vingador. Essa regra pertence ao sistema legal antigo e revela a forma específica pela qual Israel regulava o refúgio; não deve ser copiada como procedimento penal atual.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 35"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-6",
+      "title": "25. Leitura detalhada — vv. 30-34: testemunhas, resgate e sangue",
+      "body": "A exigência de mais de uma testemunha protege contra condenação baseada em acusação isolada. O texto também rejeita dinheiro como substituto para a responsabilização por homicídio. A vida não pode ser tratada como mercadoria, e a justiça não deve favorecer quem possui recursos.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 35"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-7",
+      "title": "26. Justiça, misericórdia e devido processo",
+      "body": "A cidade de refúgio não declara o acusado automaticamente inocente; oferece proteção enquanto os fatos são julgados. O princípio de não punir sem evidência e de evitar vingança precipitada continua relevante, embora o sistema jurídico moderno seja diferente.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 35"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-8",
+      "title": "27. Síntese cristocêntrica",
+      "body": "A imagem de refúgio pode lembrar a necessidade humana de proteção, mas Hebreus 6:18 usa a linguagem em outro contexto teológico. Não se deve confundir a função legal da cidade de refúgio com a obra de Cristo sem explicar a diferença. A aplicação central é valorizar vida, verdade e justiça.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 35"
+      ],
+      "confidence": "high",
+      "collapsible": false
     }
   ]
 };
