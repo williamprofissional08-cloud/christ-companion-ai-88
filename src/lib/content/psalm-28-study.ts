@@ -98,7 +98,7 @@ export const psalm28Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 28:1-2"
       ],
-      "body": "**Trecho:** Salmos 28:1-2.\n\n**Observação literária e teológica:** Clamor à rocha e pedido de audiência. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **1.** O Senhor é chamado de rocha, fundamento de segurança.\n- **2.** O silêncio de Deus é temido como experiência de abandono e proximidade da morte.\n- **3.** O gesto de erguer as mãos em direção ao santuário expressa súplica e culto.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
+      "body": "**Trecho:** Salmos 28:1-2.\n\n**Observação literária e teológica:** Clamor à rocha e pedido de audiência. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **1.** O Senhor é chamado de rocha, fundamento de segurança; o salmista teme que o silêncio divino o aproxime da morte.\n- **2.** O gesto de erguer as mãos em direção ao santuário expressa súplica e culto.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
     },
     {
       "id": "pericope-2",
@@ -108,7 +108,7 @@ export const psalm28Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 28:3-5"
       ],
-      "body": "**Trecho:** Salmos 28:3-5.\n\n**Observação literária e teológica:** Distinção entre o justo e os que praticam o mal. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **3.** O salmista pede que não seja contado entre os que falam paz mas tramam maldade.\n- **4.** A falsidade está na distância entre palavras amigáveis e intenções destrutivas.\n- **5.** O pedido de retribuição se refere à justiça divina diante de obras perversas.\n- **6.** A recusa em reconhecer a obra de Deus revela desprezo por sua ação; o salmista espera que o Senhor os confronte.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
+      "body": "**Trecho:** Salmos 28:3-5.\n\n**Observação literária e teológica:** Distinção entre o justo e os que praticam o mal. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **3.** O salmista pede que não seja contado entre os que falam paz mas tramam maldade.\n- **4.** A oração pede justiça proporcional às obras perversas, não vingança privada.\n- **5.** A recusa em reconhecer a obra de Deus revela desprezo por sua ação; o salmista espera que o Senhor os confronte.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
     },
     {
       "id": "pericope-3",
