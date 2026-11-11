@@ -2,7 +2,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import {
   BookOpen, Compass, Flame, GraduationCap, HeartHandshake, Home, LogOut,
   MessageCircleHeart, Moon, NotebookPen, FilePenLine, Route as RouteIcon,
-  Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreHorizontal,
+  Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreHorizontal, UserRound,
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
