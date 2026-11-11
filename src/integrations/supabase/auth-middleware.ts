@@ -86,72 +86,86 @@ export const requireSupabaseAuth = createMiddleware({ type: 'function' })
     })
   })
   .server(
-  async ({ next }) => {
-    
-    const SUPABASE_URL = process.env['SUPABASE_URL'];
-    const SUPABASE_PUBLISHABLE_KEY = process.env['SUPABASE_PUBLISHABLE_KEY'];
-
-    if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
-      const missing = [
-        ...(!SUPABASE_URL ? ['SUPABASE_URL'] : []),
-        ...(!SUPABASE_PUBLISHABLE_KEY ? ['SUPABASE_PUBLISHABLE_KEY'] : []),
-      ];
-      const message = `Missing Supabase environment variable(s): ${missing.join(', ')}. Connect Supabase in Lovable Cloud.`;
-      console.error(`[Supabase] ${message}`);
-      throw new Error(message);
-    }
-    
-    const request = getRequest();
-
-    if (!request?.headers) {
-      throw new Error('Unauthorized: No request headers available');
-    }
-
-    const authHeader = request.headers.get('authorization');
-
-    if (!authHeader) {
-      throw new Error('Unauthorized: No authorization header provided');
-    }
-
-    if (!authHeader.startsWith('Bearer ')) {
-      throw new Error('Unauthorized: Only Bearer tokens are supported');
-    }
-
-    const token = authHeader.slice('Bearer '.length).trim();
-    if (!token) {
-      throw new Error('Unauthorized: No token provided');
-    }
-
-    const supabase = createClient<Database>(
-      SUPABASE_URL!,
-      SUPABASE_PUBLISHABLE_KEY!,
-      {
-        global: {
-          fetch: createSupabaseFetch(SUPABASE_PUBLISHABLE_KEY!, token),
-        },
-        auth: {
-          storage: undefined,
-          persistSession: false,
-          autoRefreshToken: false,
-        },
+    async ({ next }) => {
+      const request = getRequest();
+      if (!request?.headers) {
+        throw new Error('Unauthorized: No request headers available');
       }
-    );
 
-    // Validate the forwarded access token against the same Auth project used
-    // by this server client. getUser() asks Supabase Auth to validate the JWT,
-    // avoiding local JWKS/signing-key assumptions from getClaims().
-    const { data, error } = await supabase.auth.getUser(token);
-    if (error || !data.user) {
-      console.error('[Supabase auth] Access-token validation failed:', error?.message ?? 'User not found');
-      throw new Error('Unauthorized: A sessão não foi aceita pelo projeto Supabase configurado no servidor. Entre novamente; se persistir, verifique se SUPABASE_URL e VITE_SUPABASE_URL apontam para o mesmo projeto.');
-    }
+      const authHeader = request.headers.get('authorization');
+      if (!authHeader?.startsWith('Bearer ')) {
+        throw new Error('Unauthorized: No valid Bearer token provided');
+      }
 
-    return next({
-      context: {
-        supabase,
-        userId: data.user.id,
-        claims: { sub: data.user.id },
-      },
-    });
-  },
-);
+      const token = authHeader.slice('Bearer '.length).trim();
+      if (!token) throw new Error('Unauthorized: No token provided');
+
+      const configuredUrl = process.env['SUPABASE_URL'];
+      const configuredKey = process.env['SUPABASE_PUBLISHABLE_KEY'];
+      const forwardedUrl = request.headers.get('x-caminho-supabase-url');
+      const forwardedKey = request.headers.get('x-caminho-supabase-apikey');
+
+      // Prefer the browser's public project configuration; it is the source
+      // that issued the session. Keep server env as a fallback for internal callers.
+      const supabaseUrl = (forwardedUrl || configuredUrl || '').replace(/\/+$/, '');
+      const supabaseKey = forwardedKey || configuredKey;
+
+      if (!supabaseUrl || !supabaseKey) {
+        throw new Error('Configuração do Supabase incompleta. Verifique as variáveis públicas e do servidor.');
+      }
+      if (supabaseKey.startsWith('sb_secret_')) {
+        throw new Error('A chave secreta do Supabase não pode ser usada como chave pública neste fluxo.');
+      }
+
+      let issuer: string | null = null;
+      try {
+        const payload = token.split('.')[1];
+        if (!payload) throw new Error('Missing JWT payload');
+        const normalized = payload.replace(/-/g, '+').replace(/_/g, '/');
+        const decoded = atob(normalized.padEnd(Math.ceil(normalized.length / 4) * 4, '='));
+        const claims = JSON.parse(decoded) as { iss?: unknown };
+        issuer = typeof claims.iss === 'string' ? claims.iss : null;
+      } catch {
+        throw new Error('Unauthorized: Token de sessão inválido.');
+      }
+
+      let projectOrigin: string;
+      try {
+        const parsedUrl = new URL(supabaseUrl);
+        if (parsedUrl.protocol !== 'https:' || !parsedUrl.hostname.endsWith('.supabase.co')) {
+          throw new Error('Invalid Supabase host');
+        }
+        projectOrigin = parsedUrl.origin;
+      } catch {
+        throw new Error('Configuração inválida: URL do projeto Supabase deve ser HTTPS e pertencer ao domínio Supabase.');
+      }
+
+      if (issuer !== `${supabaseUrl}/auth/v1` || issuer !== `${projectOrigin}/auth/v1`) {
+        console.error('[Supabase auth] Project mismatch between browser session and server configuration.', {
+          browserProject: supabaseUrl,
+          configuredProject: configuredUrl || null,
+        });
+        throw new Error('A sessão pertence a outro projeto Supabase. Atualize o aplicativo e entre novamente.');
+      }
+
+      const supabase = createClient<Database>(supabaseUrl, supabaseKey, {
+        global: { fetch: createSupabaseFetch(supabaseKey, token) },
+        auth: { storage: undefined, persistSession: false, autoRefreshToken: false },
+      });
+
+      // Supabase Auth performs the actual server-side JWT validation.
+      const { data, error } = await supabase.auth.getUser(token);
+      if (error || !data.user) {
+        console.error('[Supabase auth] Access-token validation failed:', error?.message ?? 'User not found');
+        throw new Error('Sua sessão não foi aceita pelo Supabase. Entre novamente para continuar.');
+      }
+
+      return next({
+        context: {
+          supabase,
+          userId: data.user.id,
+          claims: { sub: data.user.id },
+        },
+      });
+    },
+  );
