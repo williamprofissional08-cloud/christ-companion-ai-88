@@ -65,14 +65,14 @@ function Inicio() {
 
   return (
     <AppShell title="Caminho Divino" homeHeader>
-      <div className="mx-auto max-w-2xl space-y-5 pb-3">
-        <section className="px-1 pt-1">
-          <h1 className="font-display text-[1.8rem] font-bold tracking-tight text-[#142d59] dark:text-foreground sm:text-3xl">{greeting}, {displayName}</h1>
+      <div className="mx-auto w-full max-w-5xl space-y-4 pb-3 sm:space-y-5">
+        <section className="px-1 pt-0.5">
+          <h1 className="font-display text-2xl font-bold tracking-tight text-[#142d59] dark:text-foreground sm:text-3xl">{greeting}, {displayName}</h1>
           <p className="mt-1 text-sm text-slate-600 dark:text-muted-foreground">Que a Palavra guie o seu dia.</p>
         </section>
 
-        <Card className="overflow-hidden rounded-[1.65rem] border border-blue-100/80 bg-gradient-to-br from-[#dcecff] via-[#f5f9ff] to-[#fff8e9] p-0 shadow-[0_12px_30px_-20px_rgba(30,75,135,0.45)] dark:border-blue-900 dark:from-slate-900 dark:via-slate-900 dark:to-blue-950">
-          <div className="p-5 sm:p-6">
+        <Card className="overflow-hidden rounded-2xl border border-blue-100/80 bg-gradient-to-br from-[#dcecff] via-[#f5f9ff] to-[#fff8e9] p-0 shadow-[0_12px_30px_-20px_rgba(30,75,135,0.45)] dark:border-blue-900 dark:from-slate-900 dark:via-slate-900 dark:to-blue-950">
+          <div className="p-4 sm:p-5 lg:p-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#173f7c] px-3.5 py-2 text-[11px] font-bold tracking-[0.14em] text-white">
               <BookOpen className="size-4" aria-hidden /> {isSynthesis ? "LEITURA BÍBLICA DO DIA" : "VERSÍCULO DO DIA"}
             </div>
@@ -81,12 +81,12 @@ function Inicio() {
             ) : d ? (
               <>
                 {isSynthesis ? (
-                  <p className="mt-5 text-base leading-relaxed text-[#142d59] dark:text-white">{displayedVerseText}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-[#142d59] dark:text-white">{displayedVerseText}</p>
                 ) : (
-                  <blockquote className="mt-5 font-display text-[1.45rem] font-semibold leading-snug text-[#142d59] dark:text-white sm:text-2xl">“{d.verse.text}”</blockquote>
+                  <blockquote className="mt-4 font-display text-xl font-semibold leading-snug text-[#142d59] dark:text-white sm:text-2xl">“{d.verse.text}”</blockquote>
                 )}
                 <p className="mt-3 text-sm font-bold text-[#2462b5] dark:text-blue-300">{isSynthesis ? "Leitura bíblica sugerida: " : ""}{d.verse.reference}</p>
-                <div className="mt-5 rounded-2xl border border-white/70 bg-white/75 p-4 text-sm leading-relaxed text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200">
+                <div className="mt-4 rounded-xl border border-white/70 bg-white/75 p-4 text-sm leading-relaxed text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200">
                   <div className="flex items-start gap-3">
                     <Sparkles className="mt-0.5 size-5 shrink-0 text-[#2868c5]" aria-hidden />
                     <p>{d.motivational || "Deus ilumina cada passo quando caminhamos com confiança."}</p>
@@ -100,8 +100,8 @@ function Inicio() {
                 <p className="mt-5 rounded-2xl bg-white/75 p-4 text-sm leading-relaxed text-slate-700 dark:bg-slate-800 dark:text-slate-200">Deus ilumina cada passo quando caminhamos com confiança.</p>
               </>
             )}
-            <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-[1.15fr_0.85fr]">
-              <Button asChild className="h-12 rounded-xl bg-[#2464c5] text-sm font-semibold text-white shadow-sm hover:bg-[#1c52a5]">
+            <div className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-[1.15fr_0.85fr]">
+              <Button asChild className="h-10 rounded-xl bg-[#2464c5] text-sm font-semibold text-white shadow-sm hover:bg-[#1c52a5]">
                 <Link to="/devocional"><BookOpen className="mr-2 size-4" aria-hidden />Ler reflexão</Link>
               </Button>
               <Button type="button" variant="outline" onClick={shareVerse} className="h-12 rounded-xl border-blue-200 bg-white/80 text-sm font-semibold text-[#173f7c] hover:bg-blue-50 dark:border-slate-600 dark:bg-slate-800 dark:text-blue-100">
@@ -111,20 +111,20 @@ function Inicio() {
           </div>
         </Card>
 
-        <Card className="flex items-center gap-4 rounded-2xl border border-blue-100 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-card">
-          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-[#2464c5] dark:bg-blue-950"><Trophy className="size-6" aria-hidden /></div>
+        <Card className="flex items-center gap-3 rounded-xl border border-blue-100 bg-white p-3 sm:p-4 shadow-sm dark:border-slate-700 dark:bg-card">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-[#2464c5] dark:bg-blue-950"><Trophy className="size-6" aria-hidden /></div>
           <div className="min-w-0 flex-1">
             <h2 className="font-display text-base font-bold text-[#142d59] dark:text-foreground">Desafio de hoje</h2>
             <p className="mt-1 text-sm leading-relaxed text-slate-600 dark:text-muted-foreground">Leia o versículo e pratique uma atitude de fé.</p>
           </div>
         </Card>
 
-        <section className="space-y-3">
-          <h2 className="font-display text-xl font-bold tracking-tight text-[#142d59] dark:text-foreground">Continue sua jornada</h2>
-          <div className="grid grid-cols-3 gap-2.5 sm:gap-3">
-            <Link to="/assistente" className="group flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl border border-blue-100 bg-white px-2 py-4 text-center shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-card">
-              <span className="flex size-11 items-center justify-center rounded-2xl bg-blue-50 text-[#2464c5] dark:bg-blue-950"><Bot className="size-6" aria-hidden /></span>
-              <span className="text-xs font-semibold text-[#17345f] dark:text-foreground sm:text-sm">Assistente</span>
+        <section className="space-y-2.5">
+          <h2 className="font-display text-lg font-bold tracking-tight text-[#142d59] dark:text-foreground">Continue sua jornada</h2>
+          <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3">
+            <Link to="/estudos" className="group flex min-h-24 flex-col items-center justify-center gap-2 rounded-xl border border-blue-100 bg-white px-2 py-4 text-center shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-card">
+              <span className="flex size-9 items-center justify-center rounded-xl bg-blue-50 text-[#2464c5] dark:bg-blue-950"><BookOpen className="size-5" aria-hidden /></span>
+              <span className="text-[11px] font-semibold text-[#17345f] dark:text-foreground sm:text-sm">Estudos bíblicos</span>
             </Link>
             <Link to="/trilhas" className="group flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl border border-blue-100 bg-white px-2 py-4 text-center shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-card">
               <span className="flex size-11 items-center justify-center rounded-2xl bg-blue-50 text-[#2464c5] dark:bg-blue-950"><RouteIcon className="size-6" aria-hidden /></span>
