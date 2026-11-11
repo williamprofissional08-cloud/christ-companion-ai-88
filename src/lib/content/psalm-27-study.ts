@@ -109,7 +109,7 @@ export const psalm27Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 27:4-6"
       ],
-      "body": "**Trecho:** Salmos 27:4-6.\n\n**Observação literária e teológica:** O desejo pela presença de Deus. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **4.** O pedido central é habitar na presença do Senhor e contemplar sua beleza.\n- **5.** Buscar o templo é buscar comunhão e orientação, não apenas segurança física.\n- **6.** O abrigo e a rocha descrevem proteção concedida por Deus.\n- **7.** A cabeça erguida e os sacrifícios expressam vindicação e louvor.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
+      "body": "**Trecho:** Salmos 27:4-6.\n\n**Observação literária e teológica:** O desejo pela presença de Deus. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **4.** O pedido central é habitar na presença do Senhor e contemplar sua beleza.\n- **5.** Buscar o templo é buscar comunhão e orientação; Deus protege o salmista no dia da adversidade.\n- **6.** A cabeça erguida e os sacrifícios expressam vindicação e louvor.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
     },
     {
       "id": "pericope-3",
