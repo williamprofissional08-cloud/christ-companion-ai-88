@@ -133,7 +133,7 @@ export const psalm18Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 18:16-19"
       ],
-      "body": "**Trecho:** Salmos 18:16-19.\n\n**Observação literária e teológica:** O resgate das águas. Acompanhe a progressão do argumento e a função desta unidade no poema.\n\n**Versículo por versículo:**\n- **16.** Deus alcança o servo e o retira das águas profundas, símbolo de caos e perigo.\n- **17.** O livramento vem porque o adversário era mais forte; não é autossuficiência.\n- **18.** O Senhor conduz o servo a lugar espaçoso.\n- **19.** O Senhor conduz o servo a lugar espaçoso e o salva por seu agrado.\n\n**Interpretação responsável:** não isole uma frase nem transforme poesia em fórmula automática. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea.\n\n**Aplicação:** identifique a resposta que o próprio texto convida a oferecer diante de Deus e do próximo."
+      "body": "**Trecho:** Salmos 18:16-19.\n\n**Observação:** o Senhor resgata o salmista do caos e o conduz à segurança.\n\n**Versículo por versículo:**\n- **16.** Deus alcança o servo e o retira das águas profundas, símbolo de caos e perigo.\n- **17.** O livramento vem porque o adversário era mais forte; a vitória não nasce de autossuficiência.\n- **18.** Os inimigos o confrontaram no dia da calamidade, mas o Senhor se tornou seu apoio.\n- **19.** O Senhor o conduz a lugar espaçoso e o salva por seu agrado.\n\n**Interpretação responsável:** leia cada imagem no conjunto do salmo e não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto."
     },
     {
       "id": "pericope-5",
