@@ -53,6 +53,11 @@ jobs:
         with:
           ref: ${{ inputs.target_branch }}
           fetch-depth: 0
+      - name: Sincronizar branch com a versão atual da main
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git merge --no-edit origin/main
       - name: Diagnosticar versão do código
         run: |
           set -euo pipefail
