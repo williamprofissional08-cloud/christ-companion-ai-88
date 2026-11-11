@@ -36,9 +36,9 @@ export const deuteronomy12Study: StudyContent = {
     kind: "scripture",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 12:12:1-4"
+      "Deuteronômio 12:1-4"
     ],
-    body: "**Leitura orientada — Deuteronômio 12:12:1-4**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nIsrael recebe a ordem de remover os altares, colunas e imagens ligados ao culto dos povos da terra e não adorar o Senhor da mesma maneira que eles adoravam seus deuses.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A ordem pertence à conquista e à preservação da identidade pactual de Israel. Não é autorização para destruir templos, imagens ou propriedades de outras religiões hoje; a missão cristã não é conduzida por coerção.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 12:1-4**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nIsrael recebe a ordem de remover os altares, colunas e imagens ligados ao culto dos povos da terra e não adorar o Senhor da mesma maneira que eles adoravam seus deuses.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A ordem pertence à conquista e à preservação da identidade pactual de Israel. Não é autorização para destruir templos, imagens ou propriedades de outras religiões hoje; a missão cristã não é conduzida por coerção.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-2",
@@ -46,9 +46,9 @@ export const deuteronomy12Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 12:12:5-14"
+      "Deuteronômio 12:5-14"
     ],
-    body: "**Leitura orientada — Deuteronômio 12:12:5-14**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO povo deve buscar o lugar que o Senhor escolheria para ali levar ofertas e celebrar. O culto deixa de ser organizado segundo preferências individuais ou altares espalhados.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A centralização expressa unidade e fidelidade do culto nacional. A história bíblica posterior identifica Jerusalém como centro do templo; o capítulo, em seu momento, não nomeia a cidade.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 12:5-14**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO povo deve buscar o lugar que o Senhor escolheria para ali levar ofertas e celebrar. O culto deixa de ser organizado segundo preferências individuais ou altares espalhados.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A centralização expressa unidade e fidelidade do culto nacional. A história bíblica posterior identifica Jerusalém como centro do templo; o capítulo, em seu momento, não nomeia a cidade.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-3",
@@ -56,9 +56,9 @@ export const deuteronomy12Study: StudyContent = {
     kind: "context",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 12:12:15-28"
+      "Deuteronômio 12:15-28"
     ],
-    body: "**Leitura orientada — Deuteronômio 12:12:15-28**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO texto distingue o abate comum de animais do consumo das ofertas sagradas. O povo é chamado a alegrar-se diante do Senhor e não abandonar o levita, enquanto respeita a proibição de consumir sangue.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** As distinções pertencem ao culto e à vida comunitária de Israel. O princípio de gratidão, generosidade e respeito à vida permanece relevante, mas as regras alimentares devem ser lidas à luz do ensino apostólico.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 12:15-28**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO texto distingue o abate comum de animais do consumo das ofertas sagradas. O povo é chamado a alegrar-se diante do Senhor e não abandonar o levita, enquanto respeita a proibição de consumir sangue.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** As distinções pertencem ao culto e à vida comunitária de Israel. O princípio de gratidão, generosidade e respeito à vida permanece relevante, mas as regras alimentares devem ser lidas à luz do ensino apostólico.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-4",
@@ -66,9 +66,9 @@ export const deuteronomy12Study: StudyContent = {
     kind: "application",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 12:12:29-32"
+      "Deuteronômio 12:29-32"
     ],
-    body: "**Leitura orientada — Deuteronômio 12:12:29-32**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés adverte que Israel não deve investigar como as nações cultuavam seus deuses para reproduzir seus ritos. A instrução final exige guardar o que foi ordenado, sem acrescentar ou retirar.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O zelo pelo culto verdadeiro não legitima curiosidade que normalize idolatria ou práticas abusivas. A aplicação cristã exige discernimento bíblico, rejeita manipulação religiosa e não transforma preferências humanas em mandamentos divinos.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 12:29-32**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés adverte que Israel não deve investigar como as nações cultuavam seus deuses para reproduzir seus ritos. A instrução final exige guardar o que foi ordenado, sem acrescentar ou retirar.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O zelo pelo culto verdadeiro não legitima curiosidade que normalize idolatria ou práticas abusivas. A aplicação cristã exige discernimento bíblico, rejeita manipulação religiosa e não transforma preferências humanas em mandamentos divinos.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   }
 ]
 };
