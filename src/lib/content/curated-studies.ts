@@ -9,6 +9,16 @@ import { firstChronicles7Study } from "./1-chronicles-7-study";
 import { firstChronicles8Study } from "./1-chronicles-8-study";
 import { firstChronicles9Study } from "./1-chronicles-9-study";
 import { firstChronicles10Study } from "./1-chronicles-10-study";
+import { firstChronicles11Study } from "./1-chronicles-11-study";
+import { firstChronicles12Study } from "./1-chronicles-12-study";
+import { firstChronicles13Study } from "./1-chronicles-13-study";
+import { firstChronicles14Study } from "./1-chronicles-14-study";
+import { firstChronicles15Study } from "./1-chronicles-15-study";
+import { firstChronicles16Study } from "./1-chronicles-16-study";
+import { firstChronicles17Study } from "./1-chronicles-17-study";
+import { firstChronicles18Study } from "./1-chronicles-18-study";
+import { firstChronicles19Study } from "./1-chronicles-19-study";
+import { firstChronicles20Study } from "./1-chronicles-20-study";
 import { firstSamuel1Study } from "./1-samuel-1-study";
 import { firstSamuel2Study } from "./1-samuel-2-study";
 import { firstSamuel3Study } from "./1-samuel-3-study";
@@ -370,6 +380,16 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-1-cronicas-cap-8": firstChronicles8Study,
   "biblia-1-cronicas-cap-9": firstChronicles9Study,
   "biblia-1-cronicas-cap-10": firstChronicles10Study,
+  "biblia-1-cronicas-cap-11": firstChronicles11Study,
+  "biblia-1-cronicas-cap-12": firstChronicles12Study,
+  "biblia-1-cronicas-cap-13": firstChronicles13Study,
+  "biblia-1-cronicas-cap-14": firstChronicles14Study,
+  "biblia-1-cronicas-cap-15": firstChronicles15Study,
+  "biblia-1-cronicas-cap-16": firstChronicles16Study,
+  "biblia-1-cronicas-cap-17": firstChronicles17Study,
+  "biblia-1-cronicas-cap-18": firstChronicles18Study,
+  "biblia-1-cronicas-cap-19": firstChronicles19Study,
+  "biblia-1-cronicas-cap-20": firstChronicles20Study,
   "biblia-1-samuel-cap-1": firstSamuel1Study,
   "biblia-1-samuel-cap-2": firstSamuel2Study,
   "biblia-1-samuel-cap-3": firstSamuel3Study,
