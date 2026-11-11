@@ -225,6 +225,94 @@ export const Numbers34Study: StudyContent = {
       "scriptureRefs": [],
       "confidence": "high",
       "collapsible": false
+    },
+    {
+      "id": "aprofundamento-1",
+      "title": "19. Leitura detalhada — vv. 1-5: o limite sul",
+      "body": "O texto descreve o sul por meio de referências ao deserto de Zim, à subida de Acrabim, Cades-Barneia e outros pontos. A descrição deve ser lida como fronteira antiga, não como levantamento topográfico moderno. Algumas identificações permanecem debatidas entre estudiosos.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 34"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-2",
+      "title": "20. Leitura detalhada — v. 6: o limite ocidental",
+      "body": "O Grande Mar é geralmente identificado com o Mediterrâneo. A fronteira ocidental é a referência geográfica mais clara do capítulo. O mar funciona como limite natural na descrição da porção de Canaã.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 34"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-3",
+      "title": "21. Leitura detalhada — vv. 7-9: o limite norte",
+      "body": "A linha norte menciona o monte Hor, a entrada de Hamate e outras localidades. A identificação do monte Hor neste contexto não deve ser automaticamente confundida com o monte Hor associado à morte de Arão sem considerar as discussões geográficas. A lista preserva nomes antigos cuja localização exata pode não ser conhecida.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 34"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-4",
+      "title": "22. Leitura detalhada — vv. 10-12: o limite oriental",
+      "body": "O limite oriental menciona Hazar-Enã, Sefã, Ribla, o mar de Quinerete, o Jordão e o mar Salgado. O texto fecha o perímetro territorial. O objetivo é delimitar a herança, e não fornecer uma descrição de cada fronteira política posterior de Israel.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 34"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-5",
+      "title": "23. Leitura detalhada — vv. 13-15: nove tribos e meia",
+      "body": "A distribuição a oeste do Jordão é destinada a nove tribos e meia, pois Rúben, Gade e metade de Manassés já receberam território a leste. O capítulo considera a história narrada em Números 32 e evita tratar a nova distribuição como se as decisões anteriores não existissem.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 34"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-6",
+      "title": "24. Leitura detalhada — vv. 16-29: os responsáveis",
+      "body": "Eleazar, Josué e um representante de cada tribo são nomeados. A lista de nomes dá rosto à responsabilidade administrativa. A tarefa exige coordenação entre liderança sacerdotal, liderança nacional e representantes tribais.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 34"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-7",
+      "title": "25. Limites geográficos e reivindicações modernas",
+      "body": "As fronteiras bíblicas aparecem em diferentes passagens com formulações distintas e propósitos próprios. A identificação de locais antigos é parcialmente incerta. Por isso, não é responsável transformar Números 34 em mapa jurídico direto para conflitos contemporâneos ou reivindicações políticas sem considerar história, direito e contexto.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 34"
+      ],
+      "confidence": "high",
+      "collapsible": false
+    },
+    {
+      "id": "aprofundamento-8",
+      "title": "26. Síntese — promessa e administração",
+      "body": "O capítulo ensina que receber uma herança envolve planejamento, critérios e prestação de contas. Na vida cristã, isso se traduz em administrar recursos e responsabilidades com justiça, não em reproduzir a geografia da antiga aliança.",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Números 34"
+      ],
+      "confidence": "high",
+      "collapsible": false
     }
   ]
 };
