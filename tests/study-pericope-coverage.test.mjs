@@ -42,6 +42,14 @@ const curatedBatch = [
   { book: "Deuteronômio", chapter: 24, verseCount: 22, slug: "biblia-deuteronomio-cap-24", exportName: "deuteronomy24Study", file: "deuteronomy-24-study.ts" },
   { book: "Deuteronômio", chapter: 25, verseCount: 19, slug: "biblia-deuteronomio-cap-25", exportName: "deuteronomy25Study", file: "deuteronomy-25-study.ts" },
   { book: "Deuteronômio", chapter: 26, verseCount: 19, slug: "biblia-deuteronomio-cap-26", exportName: "deuteronomy26Study", file: "deuteronomy-26-study.ts" },
+  { book: "Deuteronômio", chapter: 27, verseCount: 26, slug: "biblia-deuteronomio-cap-27", exportName: "deuteronomy27Study", file: "deuteronomy-27-study.ts" },
+  { book: "Deuteronômio", chapter: 28, verseCount: 68, slug: "biblia-deuteronomio-cap-28", exportName: "deuteronomy28Study", file: "deuteronomy-28-study.ts" },
+  { book: "Deuteronômio", chapter: 29, verseCount: 29, slug: "biblia-deuteronomio-cap-29", exportName: "deuteronomy29Study", file: "deuteronomy-29-study.ts" },
+  { book: "Deuteronômio", chapter: 30, verseCount: 20, slug: "biblia-deuteronomio-cap-30", exportName: "deuteronomy30Study", file: "deuteronomy-30-study.ts" },
+  { book: "Deuteronômio", chapter: 31, verseCount: 30, slug: "biblia-deuteronomio-cap-31", exportName: "deuteronomy31Study", file: "deuteronomy-31-study.ts" },
+  { book: "Deuteronômio", chapter: 32, verseCount: 52, slug: "biblia-deuteronomio-cap-32", exportName: "deuteronomy32Study", file: "deuteronomy-32-study.ts" },
+  { book: "Deuteronômio", chapter: 33, verseCount: 29, slug: "biblia-deuteronomio-cap-33", exportName: "deuteronomy33Study", file: "deuteronomy-33-study.ts" },
+  { book: "Deuteronômio", chapter: 34, verseCount: 12, slug: "biblia-deuteronomio-cap-34", exportName: "deuteronomy34Study", file: "deuteronomy-34-study.ts" },
 ];
 
 async function readContent(path) {

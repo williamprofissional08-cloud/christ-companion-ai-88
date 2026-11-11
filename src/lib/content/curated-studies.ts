@@ -178,6 +178,14 @@ import { deuteronomy23Study } from "./deuteronomy-23-study";
 import { deuteronomy24Study } from "./deuteronomy-24-study";
 import { deuteronomy25Study } from "./deuteronomy-25-study";
 import { deuteronomy26Study } from "./deuteronomy-26-study";
+import { deuteronomy27Study } from "./deuteronomy-27-study";
+import { deuteronomy28Study } from "./deuteronomy-28-study";
+import { deuteronomy29Study } from "./deuteronomy-29-study";
+import { deuteronomy30Study } from "./deuteronomy-30-study";
+import { deuteronomy31Study } from "./deuteronomy-31-study";
+import { deuteronomy32Study } from "./deuteronomy-32-study";
+import { deuteronomy33Study } from "./deuteronomy-33-study";
+import { deuteronomy34Study } from "./deuteronomy-34-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -364,4 +372,12 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-deuteronomio-cap-24": deuteronomy24Study,
   "biblia-deuteronomio-cap-25": deuteronomy25Study,
   "biblia-deuteronomio-cap-26": deuteronomy26Study,
+  "biblia-deuteronomio-cap-27": deuteronomy27Study,
+  "biblia-deuteronomio-cap-28": deuteronomy28Study,
+  "biblia-deuteronomio-cap-29": deuteronomy29Study,
+  "biblia-deuteronomio-cap-30": deuteronomy30Study,
+  "biblia-deuteronomio-cap-31": deuteronomy31Study,
+  "biblia-deuteronomio-cap-32": deuteronomy32Study,
+  "biblia-deuteronomio-cap-33": deuteronomy33Study,
+  "biblia-deuteronomio-cap-34": deuteronomy34Study,
 };
