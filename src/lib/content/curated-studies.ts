@@ -1,4 +1,15 @@
 import type { StudyContent } from "../types";
+import { firstSamuel1Study } from "./1-samuel-1-study";
+import { firstSamuel2Study } from "./1-samuel-2-study";
+import { firstSamuel3Study } from "./1-samuel-3-study";
+import { firstSamuel4Study } from "./1-samuel-4-study";
+import { firstSamuel5Study } from "./1-samuel-5-study";
+import { firstSamuel6Study } from "./1-samuel-6-study";
+import { firstSamuel7Study } from "./1-samuel-7-study";
+import { firstSamuel8Study } from "./1-samuel-8-study";
+import { firstSamuel9Study } from "./1-samuel-9-study";
+import { firstSamuel10Study } from "./1-samuel-10-study";
+
 import { ruth1Study } from "./ruth-1-study";
 import { ruth2Study } from "./ruth-2-study";
 import { ruth3Study } from "./ruth-3-study";
