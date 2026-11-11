@@ -98,9 +98,9 @@ export const psalm34Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 34:1-5"
+        "Salmos 34:1-3"
       ],
-      "body": "**Trecho:** Salmos 34:1-5.\\n\\n**Lugar no argumento:** Louvor pessoal que convoca a comunidade. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **1.** O louvor é contínuo; não depende de uma circunstância isolada.\\n- **2.** A alma se gloria no Senhor, e os humildes encontram motivo de alegria.\\n- **3.** O salmista convida outros a engrandecerem juntos o nome divino.\\n- **4.** Ele buscou o Senhor e testemunha que foi ouvido e libertado de temores.\\n- **5.** Os que olham para Deus recebem luz e não precisam viver dominados pela vergonha.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 34:1-3.\\n\\n**Lugar no argumento:** Louvor pessoal que convoca a comunidade. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **1.** O louvor é contínuo; não depende de uma circunstância isolada.\\n- **2.** A alma se gloria no Senhor, e os humildes encontram motivo de alegria.\\n- **3.** O salmista convida outros a engrandecerem juntos o nome divino.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-2",
@@ -108,9 +108,9 @@ export const psalm34Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 34:6-10"
+        "Salmos 34:4-7"
       ],
-      "body": "**Trecho:** Salmos 34:6-10.\\n\\n**Lugar no argumento:** Busca, resposta e cuidado do anjo do Senhor. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **6.** O aflito clama e o Senhor o ouve e salva de suas angústias.\\n- **7.** A imagem do anjo do Senhor acampado ao redor comunica proteção divina.\\n- **8.** Provar e ver a bondade é convite à experiência confiante, não teste manipulativo.\\n- **9.** O temor do Senhor é apresentado como caminho de vida.\\n- **10.** Os santos são chamados a temer a Deus; a reverência não é pavor servil.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 34:4-7.\\n\\n**Lugar no argumento:** Busca, resposta e cuidado do anjo do Senhor. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **4.** Ele buscou o Senhor e testemunha que foi ouvido e libertado de temores.\\n- **5.** Os que olham para Deus recebem luz e não precisam viver dominados pela vergonha.\\n- **6.** O aflito clama e o Senhor o ouve e salva de suas angústias.\\n- **7.** A imagem do anjo do Senhor acampado ao redor comunica proteção divina.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-3",
@@ -118,9 +118,9 @@ export const psalm34Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 34:11-15"
+        "Salmos 34:8-10"
       ],
-      "body": "**Trecho:** Salmos 34:11-15.\\n\\n**Lugar no argumento:** Convite a provar a bondade divina. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **11.** Os leões podem passar necessidade, mas os que buscam o Senhor recebem o cuidado necessário; não é promessa de luxo.\\n- **12.** O mestre chama os filhos para ensinar o temor do Senhor.\\n- **13.** A pergunta sobre amar a vida introduz instruções éticas.\\n- **14.** Guardar a língua do mal e os lábios da falsidade é parte do temor.\\n- **15.** Afastar-se do mal e fazer o bem traduz a fé em prática.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 34:8-10.\\n\\n**Lugar no argumento:** Convite a provar a bondade divina. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **8.** Provar e ver a bondade é convite à experiência confiante, não teste manipulativo.\\n- **9.** O temor do Senhor é apresentado como caminho de vida.\\n- **10.** Os santos são chamados a temer a Deus; a reverência não é pavor servil.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-4",
@@ -128,9 +128,9 @@ export const psalm34Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 34:16-20"
+        "Salmos 34:11-14"
       ],
-      "body": "**Trecho:** Salmos 34:16-20.\\n\\n**Lugar no argumento:** Ensino do temor do Senhor e da ética da fala. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **16.** Buscar a paz exige persegui-la ativamente.\\n- **17.** Os olhos do Senhor estão atentos aos justos; a imagem expressa cuidado.\\n- **18.** Os ouvidos divinos estão abertos ao clamor deles.\\n- **19.** A face do Senhor se opõe aos que praticam o mal, linguagem de juízo.\\n- **20.** Os justos clamam e são ouvidos, mesmo que enfrentem muitas aflições.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 34:11-14.\\n\\n**Lugar no argumento:** Ensino do temor do Senhor e da ética da fala. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **11.** Os leões podem passar necessidade, mas os que buscam o Senhor recebem o cuidado necessário; não é promessa de luxo.\\n- **12.** O mestre chama os filhos para ensinar o temor do Senhor.\\n- **13.** A pergunta sobre amar a vida introduz instruções éticas.\\n- **14.** Guardar a língua do mal e os lábios da falsidade é parte do temor.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-5",
@@ -138,9 +138,9 @@ export const psalm34Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 34:21-22"
+        "Salmos 34:15-22"
       ],
-      "body": "**Trecho:** Salmos 34:21-22.\\n\\n**Lugar no argumento:** O cuidado de Deus, a aflição dos justos e a redenção. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **21.** O Senhor está perto dos quebrantados e salva os abatidos.\\n- **22.** Deus preserva o justo; a referência aos ossos expressa cuidado integral e é retomada em João 19.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 34:15-22.\\n\\n**Lugar no argumento:** O cuidado de Deus, a aflição dos justos e a redenção. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **15.** Afastar-se do mal e fazer o bem traduz a fé em prática.\\n- **16.** Buscar a paz exige persegui-la ativamente.\\n- **17.** Os olhos do Senhor estão atentos aos justos; a imagem expressa cuidado.\\n- **18.** Os ouvidos divinos estão abertos ao clamor deles.\\n- **19.** A face do Senhor se opõe aos que praticam o mal, linguagem de juízo.\\n- **20.** Os justos clamam e são ouvidos, mesmo que enfrentem muitas aflições.\\n- **21.** O Senhor está perto dos quebrantados e salva os abatidos.\\n- **22.** Deus preserva o justo; a referência aos ossos expressa cuidado integral e é retomada em João 19.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "sintese-teologica",
