@@ -23,6 +23,11 @@ on:
         required: true
         default: "gemini-3.8-flash"
         type: string
+      auto_continue:
+        description: "Continuar automaticamente até o último capítulo do livro"
+        required: true
+        default: true
+        type: boolean
       target_branch:
         description: "Branch de trabalho já criada"
         required: true
@@ -32,6 +37,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write
 
 concurrency:
   group: bible-study-batch-${{ inputs.target_branch }}
@@ -109,3 +115,42 @@ jobs:
           else
             gh pr create --base main --head "$TARGET_BRANCH" --title "$TITLE" --body "$BODY"
           fi
+      - name: Agendar próximo lote automaticamente
+        if: ${{ inputs.auto_continue }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BOOK_SLUG: ${{ inputs.book_slug }}
+          START_CHAPTER: ${{ inputs.start_chapter }}
+          BATCH_SIZE: ${{ inputs.batch_size }}
+          MODEL: ${{ inputs.model }}
+          TARGET_BRANCH: ${{ inputs.target_branch }}
+        run: |
+          set -euo pipefail
+          TOTAL_CHAPTERS=$(python - <<'PY'
+          import re
+          from pathlib import Path
+          source = Path("src/lib/content/bible-books.ts").read_text(encoding="utf-8")
+          for item in re.findall(r"\{([^{}]*\bslug\s*:[^{}]*)\}", source, re.S):
+              slug = re.search(r'\bslug\s*:\s*"([^"]+)"', item)
+              chapters = re.search(r'\bchapters\s*:\s*(\d+)', item)
+              if slug and chapters and slug.group(1) == __import__("os").environ["BOOK_SLUG"]:
+                  print(chapters.group(1))
+                  break
+          else:
+              raise SystemExit("Livro não encontrado para continuação automática.")
+          PY
+          )
+          NEXT_START=$((START_CHAPTER + BATCH_SIZE))
+          if [ "$NEXT_START" -gt "$TOTAL_CHAPTERS" ]; then
+            echo "Livro concluído: $BOOK_SLUG ($TOTAL_CHAPTERS capítulos)."
+            exit 0
+          fi
+          echo "Agendando próximo lote: $BOOK_SLUG capítulo $NEXT_START."
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/workflows/generate-bible-study-batch.yml/dispatches" \
+            -f ref=main \
+            -f "inputs[book_slug]=$BOOK_SLUG" \
+            -f "inputs[start_chapter]=$NEXT_START" \
+            -f "inputs[batch_size]=$BATCH_SIZE" \
+            -f "inputs[model]=$MODEL" \
+            -f "inputs[target_branch]=$TARGET_BRANCH" \
+            -f "inputs[auto_continue]=true"
