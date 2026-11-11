@@ -1,390 +1,300 @@
 import type { StudyContent } from "../types";
 
+/** Estudo de Números 23 revisado segundo a profundidade didática de Gênesis 1. */
 export const Numbers23Study: StudyContent = {
-  "version": 4,
+  "version": 5,
   "depth": "deep",
-  "intro": "O capítulo 23 do livro de Números constitui um dos ápices teológicos e literários de todo o Pentateuco, situando-se no coração do ciclo de Balaão (capítulos 22 a 24). Enquanto Israel se encontra acampado nas planícies de Moabe, inconsciente das maquinações geopolíticas e espirituais que se desenrolam nas colinas adjacentes, o rei Balaque contrata o vidente Balaão para manipular as esferas divinas e lançar uma maldição eficaz contra a comunidade da aliança. O que se desenrola em Números 23, contudo, é a completa subversão dos mecanismos da adivinhação do antigo Oriente Próximo. Em vez de subordinar a divindade aos ritos de controle humano, o texto apresenta a soberania absoluta de Yahweh, que se apropria dos próprios lábios do adivinho mesopotâmico para transformar o intento de imprecação em proclamação irrevogável de bênção. Este capítulo preserva dois dos quatro grandes oráculos poéticos de Balaão (o primeiro em 23:7-10 e o segundo em 23:18-24), caracterizados por paralelismos hebraicos arcaicos e denso vocabulário pactual. Longe de ser uma narrativa anedótica ou folclórica, o texto oferece uma demonstração rigorosa de que a aliança abraâmica registrada em Gênesis 12:1-3 permanece inabalável: aqueles a quem Deus abençoou não podem ser amaldiçoados por nenhuma agência terrena ou mágica. Ademais, o segundo oráculo estabelece um pilar dogmático fundamental sobre a natureza de Deus, declarando que Ele não é homem para que minta, nem filho da humanidade para que mude de ideia. Para o pregador e exegeta contemporâneo, Números 23 desmistifica os temores de feitiçarias e hostilidades estruturais, demonstrando que a segurança do povo de Deus repousa unicamente na fidelidade inalterável de sua palavra empenhada.",
-  "historicalContext": "O cenário histórico e geográfico de Números 23 localiza-se nas campinas de Moabe, a leste do rio Jordão, em frente a Jericó, pouco antes da travessia e conquista de Canaã sob Josué. O povo de Moabe e os midianitas, aterrorizados pela recente vitória militar de Israel sobre os reis amorreus Seom e Ogue (Nm 21), recorreram à perícia de Balaão, filho de Beor, procedente de Petor, junto ao rio Eufrates. Documentos extrabíblicos, notadamente a célebre Inscrição de Deir Alla descoberta na Jordânia em 1967 (redigida em escrita aramaica ou semítica do noroeste sobre gesso), confirmam a reputação histórica de 'Balaão, filho de Beor, vidente dos deuses', atestando que essa figura era amplamente reconhecida no mundo semítico como especialista em presságios e intercâmbio com o mundo sobrenatural. No contexto religioso da época, a divinação e a magia simpática baseavam-se no princípio de que oferendas abundantes e rituais manipulativos poderiam alterar a disposição dos deuses ou vincular as forças invisíveis à vontade de reis e clientes pagadores. Balaque adota essa cosmovisão ao construir sucessivamente sete altares e sacrificar novilhos e carneiros nas alturas de Bamote-Baal e no cume do Pisga. O texto bíblico, entretanto, documenta o confronto ontológico entre essa prática cúltica pagã e o Deus de Israel, que se recusa a ser coagido por sacrifícios e impõe Sua palavra soberana sobre o profeta mercenário.",
+  "intro": "Números 23 apresenta dois oráculos de Balaão, pronunciados quando Balaque tenta obter uma maldição contra Israel. O capítulo mostra a repetição de altares e sacrifícios, a frustração do rei e a declaração de que Deus não mente nem falha em cumprir sua palavra. O centro da narrativa não é o poder de Balaão nem a eficácia de rituais, mas a soberania e a fidelidade do Senhor. A bênção anunciada não pode ser revogada por interesses políticos ou práticas divinatórias.",
+  "historicalContext": "O cenário permanece nas campinas de Moabe, a leste do Jordão. Depois das vitórias de Israel sobre Seom e Ogue (Nm 21), Balaque teme a presença do povo e convoca Balaão, associado a Petor, para amaldiçoá-lo. O capítulo menciona Bamote-Baal, o campo de Zofim no Pisga e Peor. A inscrição de Deir Alla, na atual Jordânia, menciona um vidente chamado Balaão, filho de Beor; ela é relevante para a memória regional desse nome, mas não comprova todos os detalhes da narrativa bíblica. A identificação exata de alguns locais e a cronologia do período são debatidas.",
   "keyPoints": [
     {
-      "title": "A Soberania Inviolável da Bênção de Deus",
-      "text": "O oráculo inicial (vv. 7-10) estabelece o axioma básico do capítulo: nenhum adivinho ou rei pode amaldiçoar aquilo que o Senhor não amaldiçoou. A bênção divina sobre o Seu povo deriva de Sua aliança soberana e não está sujeita à anulação por técnicas mágicas ou pressões políticas."
+      "title": "A palavra de Deus não é controlada por rituais",
+      "text": "A repetição dos altares não obriga Deus a mudar sua decisão."
     },
     {
-      "title": "A Identidade Singular e a Separação de Israel",
-      "text": "A célebre declaração do v. 9 descreve Israel como um povo que habita a sós e não é contado entre as nações pagãs. Essa singularidade não decorria de isolacionismo geográfico absoluto, mas de sua vocação santa e distintiva sob o reinado teocrático de Yahweh."
+      "title": "Israel é visto à luz da promessa",
+      "text": "O primeiro oráculo retoma a promessa de numerosos descendentes e a identidade particular do povo."
     },
     {
-      "title": "A Fidelidade da Promessa de Multiplicação",
-      "text": "A pergunta retórica 'Quem pode contar o pó de Jacó?' (v. 10) remete explicitamente à promessa feita a Abraão em Gênesis 13:16 e 28:14, confirmando que a proliferação populacional de Israel em Moabe é evidência tangível da veracidade histórica das promessas patriarcais."
+      "title": "Deus é fiel e verdadeiro",
+      "text": "Números 23:19 afirma que Deus não mente nem falha em cumprir o que determinou."
     },
     {
-      "title": "A Imutabilidade Ontológica do Criador",
-      "text": "O v. 19 define a distinção categórica entre o Criador e a criatura: Deus não é homem para mentir, nem filho do homem para se arrepender. A palavra de Yahweh possui confiabilidade absoluta porque Sua natureza é isenta de inconstância moral, fraqueza ou engano."
+      "title": "A adivinhação não governa a história",
+      "text": "O segundo oráculo atribui a segurança de Israel à ação de Deus, não a fórmulas ou presságios."
     },
     {
-      "title": "A Ineficácia Absoluta do Ocultismo contra o Povo da Aliança",
-      "text": "O v. 23 assevera categoricamente que não há encantamento contra Jacó nem adivinhação contra Israel. As forças do ocultismo e as fórmulas divinatórias são completamente impotentes contra aqueles que estão guardados pela presença redentora do Senhor."
-    },
-    {
-      "title": "A Justiça Imputada e o Olhar Pactual da Graça",
-      "text": "O v. 21 registra que Deus 'não viu iniquidade em Jacó, nem contemplou desgraça em Israel'. Embora a narrativa do deserto registre repetidas rebeliões, o veredicto divino perante as nações inimigas preserva o estatuto justificado e protegido da comunidade da aliança sob a graça mediada pelo tabernáculo."
-    },
-    {
-      "title": "A Majestade Régia e o Poder Salvador no Acampamento",
-      "text": "A proclamação do v. 21 de que 'o brado de um rei está no meio dele' e a comparação do poder salvador divino com a força de um touro selvagem (v. 22) evidenciam que a presença viva de Yahweh como Rei guerreiro garante a invencibilidade espiritual do povo."
-    },
-    {
-      "title": "A Frustração dos Intentos de Manipulação Religiosa",
-      "text": "As sucessivas tentativas de Balaque de mudar de local geográfico e repetir hecatombes de sacrifícios (vv. 1-2, 13-14, 27-30) ilustram a tolice idolátrica de tentar domesticar Deus mediante rituais exteriores quando o decreto divino já foi formalmente selado."
+      "title": "Balaão não é apresentado como exemplo irrepreensível",
+      "text": "Outros textos bíblicos advertem contra sua ganância e sua influência posterior."
     }
   ],
-  "application": "A mensagem de Números 23 ressoa com profundo poder libertador e corretivo para a Igreja e a vida cristã contemporânea. Em primeiro lugar, ela desarraiga o medo paralisante de maldições hereditárias, feitiçarias, inveja ou maquinações ocultas. Muitos cristãos vivem cativos de uma cosmovisão sincrética e amedrontada, supondo que palavras de maldição proferidas por homens tenham poder intrínseco sobre suas vidas. Números 23:23 responde com clareza definitiva: 'Não há encantamento contra Jacó, nem adivinhação contra Israel'. Estando o crente abrigado em Cristo, selado pelo Espírito Santo e incluído na aliança da graça, nenhuma força hostil tem competência jurídica ou espiritual para anular a bênção redentora que repousa sobre ele. Em segundo lugar, o texto confronta qualquer tentativa de barganha cúltica ou manipulação religiosa. Balaque imaginava que multiplicando altares e sacrifícios forçaria Deus a capitular aos seus interesses estratégicos. Da mesma forma, posturas religiosas contemporâneas que prometem controlar o favor divino por meio de votos monetários, repetições de fórmulas mágicas ou manipulação devocional caem no mesmo erro pagão de Balaque. Deus não pode ser subornado; Sua aliança fundamenta-se em Sua graça soberana e em Sua Palavra imutável. Em terceiro lugar, a afirmação de que Deus não vê iniquidade em Seu povo enquanto este enfrenta as hostilidades do adversário antecipa a doutrina paulina da justificação: 'Quem intentará acusação contra os eleitos de Deus? É Deus quem os justifica' (Rm 8:33). O crente pode descansar na convicção inabalável de que as promessas de Deus jamais falharão, pois Aquele que prometeu é ontologicamente fiel e poderoso para cumprir tudo o que determinou em Sua santa aliança.",
+  "application": "Números 23 chama o leitor a abandonar a barganha religiosa e a superstição. Deus não pode ser comprado por ofertas nem manipulado por fórmulas. O capítulo também ensina confiança no caráter de Deus, sem prometer uma vida livre de sofrimento. A identidade de Israel no oráculo não autoriza desprezo por outros povos, e a proteção divina não deve ser transformada em licença para irresponsabilidade. A advertência posterior sobre Balaão lembra que conhecimento religioso precisa ser acompanhado de integridade.",
   "crossReferences": [
-    "Gênesis 12:3 — Estabelece a promessa original de que Yahweh amaldiçoará os que amaldiçoarem a descendência de Abraão e abençoará os que a abençoarem, sustentando a base jurídica dos oráculos de Números 23.",
-    "Gênesis 13:16 — Fornece a imagem patriarcal da semente tão numerosa quanto o pó da terra, diretamente ecoada na exclamação de Balaão sobre o 'pó de Jacó' em Números 23:10.",
-    "Êxodo 33:16 — Demonstra a distinção de Israel como povo separado pela presença de Yahweh, harmonizando-se com o tema de habitar 'a sós e não ser contado entre as nações' em Números 23:9.",
-    "1 Samuel 15:29 — Reitera a imutabilidade ontológica do Senhor com vocabulário idêntico ao de Números 23:19: a Glória de Israel não mente nem se arrepende, pois não é homem.",
-    "Salmo 89:34 — Afirma a inviolabilidade do pacto divino ('não quebrarei a minha aliança, nem alterarei o que saiu dos meus lábios'), aplicando a verdade fundamental do segundo oráculo de Balaão.",
-    "Jeremias 29:11 — Confirma o propósito soberano de paz e benevolência inabalável de Deus para com o povo eleito, superando as ameaças circundantes de imprecação e julgamento exterior.",
-    "Miqueias 6:5 — Convoca Israel à memória histórica do diálogo entre Balaque e Balaão para reconhecer a justiça salvadora e a intervenção protetora de Deus em prol do Seu povo.",
-    "Romanos 8:31-34 — Aplica cristologicamente o veredicto de que ninguém pode condenar ou amaldiçoar aqueles a quem o próprio Deus soberanamente justificou e resguardou em Sua graça.",
-    "Romanos 11:29 — Aponta que os dons e a vocação de Deus são sem arrependimento (irrevogáveis), ecoando explicitamente a afirmação de Números 23:19 sobre o decreto divino inalterável.",
-    "Tito 1:2 — Declara a esperança da vida eterna prometida antes dos tempos eternos pelo Deus que não pode mentir, ancorando o caráter divino na declaração magistral de Números 23:19.",
-    "Hebreus 6:17-18 — Ensina que Deus garantiu Sua promessa por juramento para demonstrar a imutabilidade do Seu conselho, tornando impossível que Deus minta perante a herança dos eleitos.",
-    "Apocalipse 2:14 — Menciona a posterior perversão de Balaão ao incitar o tropeço de Israel pela idolatria em Baal-Peor, evidenciando que o que não pôde ser feito por maldição mágica ocorreu por sedução moral."
+    "Gênesis 12:1-3 — A promessa de bênção a Abraão forma o pano de fundo do conflito com Balaque.",
+    "Gênesis 13:16 — A promessa de descendentes numerosos ajuda a compreender a imagem do pó de Jacó.",
+    "Gênesis 28:14 — Reitera a promessa de multiplicação da descendência.",
+    "Êxodo 19:4-6 — Descreve a vocação particular de Israel como povo de Deus.",
+    "Deuteronômio 23:3-5 — Recorda que Deus transformou a intenção de Balaão em bênção.",
+    "1 Samuel 15:29 — Afirma que a Glória de Israel não mente.",
+    "Miqueias 6:5 — Recorda o episódio de Balaque e Balaão.",
+    "2 Coríntios 1:20 — Ensina que as promessas de Deus encontram seu sim em Cristo.",
+    "Romanos 8:31-39 — Apresenta a segurança dos que estão em Cristo diante da acusação e da separação do amor de Deus.",
+    "2 Pedro 2:15-16; Judas 11; Apocalipse 2:14 — Usam Balaão como advertência contra ganância e sedução para o pecado."
   ],
   "questions": [
-    "Qual era a motivação geopolítica e militar de Balaque ao convocar um vidente renomado como Balaão para intervir na crise com Israel?",
-    "De que maneira a Inscrição de Deir Alla contribui para a contextualização histórica e arqueológica da figura de Balaão no antigo Oriente Próximo?",
-    "Por que a construção repetitiva de sete altares e o sacrifício de touros e carneiros representam uma tentativa pagã de manipulação divinatória?",
-    "O que significa dizer, teologicamente, que 'Deus pôs uma palavra na boca de Balaão' em Números 23:5?",
-    "Qual é o significado pactual e histórico da declaração de que Israel é 'um povo que habita a sós e não se conta entre as nações' (Nm 23:9)?",
-    "Como o primeiro oráculo poético (vv. 7-10) estabelece uma conexão temática e lexical direta com a aliança abraâmica de Gênesis 12 e 13?",
-    "O que revela a súplica de Balaão no versículo 10: 'Morra eu a morte dos justos, e seja o meu fim como o deles'?",
-    "Qual foi a estratégia de Balaque ao levar Balaão ao cume do Pisga após o fracasso do primeiro oráculo, e que pressuposto pagão essa mudança revela?",
-    "Como o texto de Números 23:19 fundamenta a doutrina clássica da imutabilidade ontológica e fidelidade de Deus no contexto de toda a Escritura?",
-    "De que maneira o versículo 21 reconcilia a afirmação de que Deus 'não viu iniquidade em Jacó' com os repetidos relatos de pecado e murmuração do povo no deserto?",
-    "O que o texto de Números 23:23 nos ensina sobre a autoridade e eficácia das práticas de ocultismo, magia simpática e feitiçaria contra os redimidos?",
-    "Como a analogia do 'chifre de boi selvagem' (Nm 23:22) descreve o poder libertador de Yahweh e a natureza da salvação concedida a Israel?",
-    "De que modo a reação de Balaque no versículo 25 ('nem o amaldiçoes de modo nenhum, nem o abençoes') expõe o desespero e a derrota do projeto pagão?",
-    "Quais são os principais erros de leitura hermenêutica que transformam o segundo oráculo de Balaão em um texto de fatalismo ou de desculpa para o pecado pessoal?",
-    "De que maneira Números 23 serve como advertência pastoral contemporânea contra a teologia de barganha e o medo infundado de maldições espirituais?"
+    "Qual era o objetivo de Balaque ao contratar Balaão?",
+    "O que a repetição dos sete altares revela sobre a tentativa de Balaque?",
+    "Como Números 23:8 explica o limite da atuação de Balaão?",
+    "O que significa a imagem do pó de Jacó?",
+    "Por que o versículo 19 destaca que Deus não mente?",
+    "Números 23:21 ensina que Israel nunca pecou? Por quê?",
+    "O que o versículo 23 afirma sobre encantamentos e adivinhação?",
+    "Como o Novo Testamento usa a figura de Balaão como advertência?",
+    "Qual é a diferença entre confiar em Deus e tentar manipulá-lo?",
+    "Como explicar a mensagem central do capítulo sem prometer ausência de sofrimento?"
   ],
-  "conclusion": "Números 23 ergue-se como um imponente monumento à fidelidade e soberania inabaláveis de Deus sobre a história humana e o mundo espiritual invisível. O fracasso de Balaque e a rendição profética de Balaão revelam com autoridade magistral que a comunidade redimida não se encontra à mercê de forças cósmicas cegas, conspirações geopolíticas ou fórmulas de imprecação ritual. O Deus transcendente, que é ontologicamente perfeito e imutável em Sua essência, estabeleceu uma aliança de bênção com Seu povo que jamais poderá ser revogada por manobras humanas. Enquanto Israel repousava no vale sem qualquer percepção da guerra teológica travada nas alturas de Moabe, Yahweh desarticulava todo plano do adversário e convertia a maldição em bênção irrevogável. Esta narrativa convida cada crente a depositar sua confiança estrita na integridade da Palavra divina: se Deus justificou, ninguém pode condenar; se Deus abençoou, nenhum poder no universo tem autoridade para desamparar aqueles que pertencem à Sua graça eterna.",
-  "prayer": "Ó soberano Deus imutável, louvamos o Teu santo nome porque a Tua bênção sobre nós é eterna e inalterável. Obrigado por nos resguardares de todo laço oculto e por nos manteres seguros sob a firmeza inabalável da Tua aliança da graça. Amém.",
+  "conclusion": "Números 23 mostra que Balaque não consegue comprar nem manipular a palavra de Deus. Os dois oráculos afirmam a bênção, a identidade e a proteção de Israel naquele momento da história da aliança. O segundo destaca que Deus é fiel e não mente. A narrativa não ensina que Israel era sem pecado nem que os fiéis nunca sofrerão; ensina que a vontade de Deus não se submete aos interesses humanos. O restante das Escrituras também alerta contra o caminho de Balaão, lembrando que a verdade anunciada precisa ser acompanhada de integridade.",
+  "prayer": "Senhor Deus, tu és verdadeiro e fiel. Livra-me da superstição, da ganância e da tentativa de controlar tua vontade. Ensina-me a confiar em tuas promessas sem exigir que tudo aconteça conforme meus desejos. Dá-me discernimento para compreender tua Palavra e integridade para ensiná-la sem distorção. Que minha esperança esteja em ti e na obra de Jesus Cristo. Amém.",
   "sections": [
     {
-      "id": "intro-e-tese",
-      "title": "Introdução Literária e Tese Central de Números 23",
-      "body": "O capítulo 23 de Números situa-se no clímax do drama narrativo travado entre a ameaça pagã e a segurança inquebrantável da aliança de Israel. A tese fundamental da perícope é que a palavra e o propósito salvífico de Yahweh operam com absoluta soberania sobre todas as formas de poder político e técnicas divinatórias do paganismo: aquilo que Deus determinou abençoar em fidelidade à Sua aliança com os patriarcas é intrinsecamente imune a qualquer agência de imprecação. Enquanto o povo de Israel permanece passivo e ignorante no vale, a batalha decisiva ocorre nas esferas celestiais e poéticas, demonstrando que a segurança do povo da aliança repousa não em sua proeza defensiva, mas no decreto imutável de Deus.",
+      "id": "leitura-biblica",
+      "title": "Leitura bíblica — Números 23:1-30, versículo por versículo",
+      "kind": "scripture",
+      "confidence": "high",
+      "body": "**Tradução livre para estudo.** Esta redação acompanha o sentido do texto hebraico em linguagem atual; não é uma edição bíblica oficial. Compare cada versículo com a tradução de sua preferência.\n\n**1** Balaão disse a Balaque: “Construa aqui sete altares e prepare para mim sete novilhos e sete carneiros”.\n**2** Balaque fez como Balaão pediu. Os dois ofereceram um novilho e um carneiro em cada altar.\n**3** Balaão disse a Balaque: “Fique junto ao seu holocausto enquanto me afasto. Talvez o SENHOR venha ao meu encontro; aquilo que ele me mostrar eu lhe comunicarei”. Então foi para um lugar elevado e sem vegetação.\n**4** Deus veio ao encontro de Balaão, e este lhe disse: “Preparei os sete altares e ofereci um novilho e um carneiro em cada um”.\n**5** O SENHOR colocou uma palavra na boca de Balaão e disse: “Volte a Balaque e fale o que eu lhe disser”.\n**6** Balaão voltou e encontrou Balaque de pé junto ao seu holocausto, acompanhado pelos líderes de Moabe.\n**7** Então Balaão pronunciou seu oráculo: “Balaque, rei de Moabe, trouxe-me de Arã, dos montes do Oriente. Venha, disse ele, amaldiçoe Jacó; venha, declare mal contra Israel.\n**8** Como poderia amaldiçoar quem Deus não amaldiçoou? Como poderia declarar mal contra quem o SENHOR não declarou mal?\n**9** Do alto das rochas eu o vejo; dos montes o contemplo. É um povo que habita à parte e não se considera apenas mais uma das nações.\n**10** Quem pode contar o pó de Jacó ou calcular a quarta parte de Israel? Que eu tenha o fim dos justos, e que meu destino seja como o deles”.\n**11** Balaque disse a Balaão: “O que você fez comigo? Eu o trouxe para amaldiçoar meus inimigos, mas você os abençoou”.\n**12** Balaão respondeu: “Não devo ter cuidado de falar aquilo que o SENHOR põe em minha boca?”.\n**13** Balaque lhe disse: “Venha comigo a outro lugar, de onde você verá apenas uma parte do povo. Dali, amaldiçoe-o em meu favor”.\n**14** Levou-o ao campo de Zofim, no alto do Pisga. Ali construiu sete altares e ofereceu um novilho e um carneiro em cada um.\n**15** Balaão disse a Balaque: “Fique aqui, junto ao seu holocausto, enquanto vou encontrar-me com o SENHOR”.\n**16** O SENHOR veio ao encontro de Balaão, colocou uma palavra em sua boca e disse: “Volte a Balaque e fale o que eu lhe disser”.\n**17** Balaão voltou e encontrou Balaque de pé junto ao holocausto, com os líderes de Moabe. Balaque perguntou: “O que o SENHOR falou?”.\n**18** Balaão pronunciou seu oráculo: “Levante-se, Balaque, e ouça; escute-me, filho de Zipor.\n**19** Deus não é homem para mentir, nem ser humano para mudar de ideia. Acaso ele fala e não age? Promete e não cumpre?\n**20** Recebi ordem para abençoar; ele abençoou, e não posso revogar.\n**21** Não se observa em Jacó um encantamento eficaz, nem se encontra adivinhação contra Israel. No tempo devido, será dito a Jacó e a Israel o que Deus realizou.\n**22** Deus os tirou do Egito; sua força é como a do boi selvagem.\n**23** Não há presságio eficaz contra Jacó nem adivinhação que prevaleça contra Israel. Agora se dirá a respeito de Jacó e Israel: “Vejam o que Deus fez!”.\n**24** O povo se levanta como leoa e se ergue como leão; não descansará até consumir a presa e beber o sangue dos mortos.\n**25** Balaque disse a Balaão: “Se você não pode amaldiçoá-los, pelo menos não os abençoe!”.\n**26** Balaão respondeu: “Não lhe disse que faria tudo o que o SENHOR falasse?”.\n**27** Balaque disse: “Venha, vou levá-lo a outro lugar. Talvez agrade a Deus que dali você os amaldiçoe em meu favor”.\n**28** Balaque levou Balaão ao cume de Peor, de onde se avistava o deserto.\n**29** Balaão disse a Balaque: “Construa aqui sete altares e prepare sete novilhos e sete carneiros”.\n**30** Balaque fez como Balaão havia dito e ofereceu um novilho e um carneiro em cada altar.\n\n**Observação:** os oráculos poéticos dos versículos 7-10 e 18-24 estão inseridos numa narrativa que mostra as tentativas repetidas de Balaque. O capítulo termina preparando o terceiro cenário, cujo oráculo aparece em Números 24.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
+    },
+    {
+      "id": "introducao",
+      "title": "1. Introdução — Quando a maldição pretendida se torna bênção",
+      "kind": "analysis",
+      "confidence": "high",
+      "body": "Números 23 integra o ciclo de Balaão, iniciado no capítulo 22 e concluído no capítulo 24. Balaque, rei de Moabe, tenta obter uma palavra de maldição contra Israel. Em vez disso, Balaão pronuncia dois oráculos que afirmam a bênção de Deus, a identidade singular do povo e a fidelidade divina.\n\n**Tese central:** a palavra de Deus não está sujeita ao controle de reis, pagamentos, sacrifícios ou técnicas divinatórias. Balaão não tem liberdade para transformar em maldição aquilo que Deus determina abençoar.\n\nO capítulo não ensina que Israel era moralmente impecável, nem que todo indivíduo que se identifica como cristão estará livre de sofrimento ou de consequências. Seu foco imediato é a fidelidade de Deus à promessa feita a Israel e a incapacidade de Balaque de controlar o resultado por meio de rituais.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
+    },
+    {
+      "id": "contexto",
+      "title": "2. Contexto histórico e geográfico — Israel nas campinas de Moabe",
+      "kind": "analysis",
+      "confidence": "high",
+      "body": "O cenário permanece na região de Moabe, a leste do Jordão, diante da área de Jericó. Em Números 21, Israel havia vencido Seom, rei dos amorreus, e Ogue, rei de Basã. Balaque interpreta a presença de Israel como ameaça e procura Balaão, vindo de Petor, para tentar neutralizar o povo por meio de uma maldição.\n\nO capítulo menciona Bamote-Baal, o campo de Zofim no Pisga e, ao final, o cume de Peor. São locais elevados de onde Balaque espera observar Israel e realizar os rituais. A identificação arqueológica exata de cada ponto não deve ser afirmada além do que as fontes permitem.\n\nA inscrição aramaica de Deir Alla, encontrada na atual Jordânia, contém uma referência a Balaão, filho de Beor, como vidente. Ela é importante para o estudo da memória regional desse nome, mas não comprova, por si só, todos os acontecimentos narrados em Números nem permite datá-los com precisão.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
+    },
+    {
+      "id": "estrutura",
+      "title": "3. Gênero literário e organização do capítulo",
+      "kind": "analysis",
+      "confidence": "high",
+      "body": "O capítulo combina narrativa em prosa e poesia oracular. A prosa relata os deslocamentos, os altares, os sacrifícios e as reações de Balaque. Os oráculos de Balaão apresentam linguagem poética, paralelismos, imagens e perguntas retóricas.\n\n**Movimento do texto:**\n1. Primeira preparação ritual e primeiro oráculo (vv. 1-10).\n2. Reação de Balaque e deslocamento para o Pisga (vv. 11-17).\n3. Segundo oráculo, com ênfase na fidelidade de Deus e na proteção de Israel (vv. 18-24).\n4. Frustração de Balaque e deslocamento para Peor (vv. 25-30).\n\nA repetição de sete altares e sacrifícios cria uma expectativa: Balaque acredita que mudar o local e repetir o rito poderá mudar a resposta. A narrativa mostra que a palavra divina não é controlada por esse procedimento.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
+    },
+    {
+      "id": "pericope1",
+      "title": "4. Exposição — A preparação dos sete altares (Números 23:1-6)",
+      "kind": "analysis",
+      "confidence": "high",
+      "body": "**Versículos 1-2 — O pedido e sua execução.** Balaão orienta Balaque a construir sete altares e oferecer sete novilhos e sete carneiros. O texto descreve a ação ritual, mas não afirma que o número sete ou a quantidade de animais possuam poder automático para obrigar Deus a responder.\n\n**Versículo 3 — A expectativa de Balaão.** Ele se afasta e diz que talvez o SENHOR venha ao seu encontro. O modo como a cena é narrada mostra que Balaão aguarda uma palavra que não controla. Não devemos transformar a expressão “lugar elevado” numa descrição segura de uma técnica espiritual específica.\n\n**Versículos 4-6 — A iniciativa pertence a Deus.** Balaão apresenta os sacrifícios, mas é Deus quem vem ao encontro e determina a mensagem. O versículo 5 é decisivo: a palavra é colocada na boca do vidente. Balaque pode pagar e organizar o ritual, mas não pode ditar o conteúdo do oráculo.\n\n**Ensinamento:** atos religiosos externos não compram a vontade divina. A adoração bíblica é resposta a Deus, não mecanismo de manipulação.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
+    },
+    {
+      "id": "pericope2",
+      "title": "5. Exposição — O primeiro oráculo: a bênção e a identidade de Israel (vv. 7-10)",
+      "kind": "analysis",
+      "confidence": "high",
+      "body": "**Versículo 7 — A origem da convocação.** Balaão recorda que foi trazido de Arã, dos montes do Oriente, para pronunciar maldição sobre Jacó e Israel. A poesia resume a intenção política e religiosa de Balaque.\n\n**Versículo 8 — A pergunta central.** “Como amaldiçoar quem Deus não amaldiçoou?” A pergunta não celebra a capacidade pessoal de Balaão; reconhece o limite imposto pela decisão divina. A maldição solicitada não pode prevalecer contra a palavra que Deus estabeleceu.\n\n**Versículo 9 — Um povo distinto.** A imagem de Israel visto do alto das rochas destaca sua identidade própria entre as nações. “Habitar à parte” não deve ser usado como autorização para desprezar outros povos ou defender superioridade étnica. No contexto, trata-se da vocação particular de Israel na história da aliança.\n\n**Versículo 10 — A promessa de multiplicação e o desejo de um fim justo.** A referência ao “pó de Jacó” ecoa a promessa de numerosos descendentes feita aos patriarcas (Gn 13:16; 28:14). A frase final expressa o desejo de compartilhar o destino dos justos. Não é suficiente, isoladamente, para afirmar que Balaão tenha se convertido ou passado a viver em fidelidade.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
+    },
+    {
+      "id": "pericope3",
+      "title": "6. Exposição — Balaque rejeita o resultado e tenta novamente (vv. 11-17)",
+      "kind": "analysis",
+      "confidence": "high",
+      "body": "**Versículos 11-12 — O conflito entre expectativa e palavra.** Balaque protesta porque Balaão abençoou Israel. Balaão responde que deve falar aquilo que o SENHOR coloca em sua boca. A resposta aponta para a autoridade da mensagem, não para a satisfação do contratante.\n\n**Versículos 13-14 — A mudança de lugar.** Balaque leva Balaão ao campo de Zofim, no alto do Pisga, esperando que uma visão parcial do povo favoreça outro resultado. O texto não diz que a geografia tenha poder sobre Deus; revela a insistência de Balaque em buscar uma solução ritual.\n\n**Versículos 15-17 — A repetição.** Novamente há espera, encontro com Deus e palavra colocada na boca de Balaão. A repetição reforça o tema: o conteúdo do oráculo vem de Deus, não da vontade do rei.\n\n**Para interpretar:** não precisamos supor que Balaque desconhecia totalmente a primeira resposta; sua insistência mostra que ele não a aceita. O texto retrata a tentativa humana de negociar com uma decisão que não lhe pertence.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
+    },
+    {
+      "id": "pericope4",
+      "title": "7. Exposição — O segundo oráculo: Deus não mente nem falha (vv. 18-20)",
       "kind": "theology",
-      "scriptureRefs": [
-        "Nm 23:1-30",
-        "Gn 12:1-3",
-        "Sl 33:10-11"
-      ],
       "confidence": "high",
-      "collapsible": false
+      "body": "**Versículo 18 — Um chamado solene.** Balaão convoca Balaque a levantar-se e ouvir. O rei, que esperava comandar o resultado, agora é colocado na posição de ouvinte.\n\n**Versículo 19 — A fidelidade de Deus.** A comparação entre Deus e o ser humano não significa que Deus seja incapaz de agir ou responder. O ponto é que Deus não mente nem promete levianamente. Sua palavra não sofre a instabilidade, o engano ou a impotência humana.\n\n**Versículo 20 — A bênção não pode ser revogada por Balaão.** Ele recebeu ordem para abençoar e não tem autoridade para desfazer aquilo que Deus determinou. A força do versículo está na iniciativa divina e na fidelidade à promessa.\n\n**Cuidado teológico:** este texto não deve ser usado para negar toda linguagem bíblica sobre Deus “arrepender-se” ou mudar a forma de agir em resposta às pessoas. Números 23:19 trata da confiabilidade de Deus: ele não mente nem falha em cumprir o que decidiu. Outros textos devem ser lidos em seus próprios contextos e gêneros.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "contexto-historico-limites",
-      "title": "Contexto Histórico, Geográfico e Limites da Evidência",
-      "body": "A ação se passa na região transjordânica das campinas de Moabe, durante o último ano da jornada de Israel pelo deserto. O rei moabita Balaque busca apoio do especialista religioso Balaão, originário da alta Mesopotâmia (Petor, ao longo do Eufrates). A descoberta arqueológica da Inscrição de Deir Alla em 1967 trouxe luz notável a esse contexto, documentando em uma parede de gesso a figura de 'Balaão, filho de Beor, vidente dos deuses', o que atesta a celebridade regional desse personagem como adivinho perito em consultar conselhos de divindades estrangeiras (os Shaddayin). Todavia, devemos manter a devida sobriedade epistemológica: a inscrição extrabíblica atesta a memória cultural e histórica de Balaão, mas reflete uma teologia politeísta pagã, contrastando de modo agudo com a representação canônica inspirada em Números, onde Balaão se vê constrangido pela autoridade soberana e exclusiva do Deus de Israel.",
-      "kind": "context",
-      "scriptureRefs": [
-        "Nm 22:1-5",
-        "Nm 23:7",
-        "Dt 23:4-5"
-      ],
+      "id": "pericope5",
+      "title": "8. Exposição — Deus está no meio do povo e não pode ser manipulado (vv. 21-24)",
+      "kind": "analysis",
       "confidence": "high",
-      "collapsible": true
+      "body": "**Versículo 21 — A presença do Rei.** O oráculo afirma que não se vê injustiça ou calamidade em Jacó naquele momento e declara que o brado do Rei está entre o povo. Isso não significa que Israel nunca pecou: o próprio livro de Números registra murmurações e rebeliões. A fala deve ser lida no contexto do oráculo e da proteção divina diante da tentativa de maldição.\n\n**Versículos 22 e 23 — O Êxodo e a impotência dos presságios.** Deus é lembrado como aquele que tirou Israel do Egito. A declaração sobre não haver encantamento ou adivinhação eficaz contra Jacó mostra que Balaque não pode submeter o Deus de Israel a práticas divinatórias. O texto não oferece uma fórmula para controlar acontecimentos; exalta a soberania de Deus.\n\n**Versículo 24 — A imagem do leão.** A força do povo é descrita por uma figura de vigor e vitória. A imagem pertence ao oráculo e à situação histórica retratada; não deve ser transformada em autorização para violência pessoal ou triunfalismo.\n\n**Síntese:** a segurança de Israel, neste episódio, está na presença e na ação de Deus, não na superioridade de um ritual ou na habilidade do vidente.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "genero-e-forma-literaria",
-      "title": "Gênero Literário: Narrativa em Prosa Enquadrando Poesia Arcaica",
-      "body": "O capítulo apresenta uma alternância sofisticada entre narrativa em prosa hebraica clássica e poesia oracular arcaica de alta densidade retórica. A prosa fornece o enquadramento cúltico e geográfico (a edificação dos altares, os holocaustos e os deslocamentos de Balaque e Balaão), enquanto os oráculos (vv. 7-10 e vv. 18-24) pertencem ao gênero do 'mashal' profético (oráculo poético/sentença sapiencial com autoridade divinamente comunicada). Esses oráculos exibem paralelismos antitéticos e sinonímicos rigorosos, vocabulário poético ancestral (como o uso reiterado de 'El' e 'Shaddai') e métrica bem cadenciada, evidenciando uma tradição literária preservada com reverente precisão pelo autor bíblico.",
-      "kind": "method",
-      "scriptureRefs": [
-        "Nm 23:7",
-        "Nm 23:18",
-        "Jó 27:1"
-      ],
+      "id": "pericope6",
+      "title": "9. Exposição — A frustração de Balaque e a ida a Peor (vv. 25-30)",
+      "kind": "analysis",
       "confidence": "high",
-      "collapsible": true
+      "body": "**Versículos 25-26 — O pedido impossível.** Balaque, frustrado, pede que Balaão ao menos deixe de abençoar Israel. Balaão repete que só pode falar o que o SENHOR ordenar. A autoridade do oráculo continua fora do controle do rei.\n\n**Versículos 27-28 — Um terceiro cenário.** Balaque propõe outro local, o cume de Peor, de onde se avistava o deserto. O deslocamento prepara o terceiro oráculo, registrado em Números 24:1-9.\n\n**Versículos 29-30 — A repetição dos altares.** Novamente são preparados sete altares e oferecidos animais. A repetição evidencia a persistência de Balaque, mas não altera a soberania de Deus.\n\nO capítulo termina sem apresentar o terceiro oráculo. Para compreender a sequência narrativa, o leitor deve prosseguir em Números 24, sem confundir os acontecimentos dos dois capítulos.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "estrutura-macro-do-capitulo",
-      "title": "Estrutura Literária e Progressão do Capítulo",
-      "body": "Números 23 é estruturado em dois ciclos perfeitamente paralelos e progressivos. O primeiro ciclo (vv. 1-12) compõe-se de: (1) Preparação ritual em Bamote-Baal com sete altares (vv. 1-3); (2) Encontro divino e recepção da palavra (vv. 4-6); (3) O Primeiro Oráculo de Balaão (vv. 7-10); (4) Frustração e protesto indignado de Balaque com réplica do vidente (vv. 11-12). O segundo ciclo (vv. 13-26) replica rigorosamente o padrão em um novo local: (1) Deslocamento para o cume do Pisga e novos sacrifícios (vv. 13-14); (2) Balaão vai ao encontro de Yahweh (vv. 15-17); (3) O Segundo Oráculo de Balaão, teologicamente mais contundente (vv. 18-24); (4) Desespero intensificado de Balaque e nova defesa da submissão à palavra (vv. 25-26). O capítulo fecha-se com a transição cômico-trágica para um terceiro local, o cume de Peor (vv. 27-30), preparando o próximo capítulo.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 23:1-12",
-        "Nm 23:13-26",
-        "Nm 23:27-30"
-      ],
+      "id": "lexico1",
+      "title": "10. Palavras-chave — A linguagem da bênção, maldição e oráculo",
+      "kind": "analysis",
       "confidence": "high",
-      "collapsible": false
+      "body": "**Jacó e Israel (vv. 7-10):** nomes que representam o povo descendente dos patriarcas. A alternância é poética e reforça a identidade coletiva.\n\n**Oráculo (vv. 7, 18):** declaração pronunciada em forma poética e solene. O termo descreve a fala profética no contexto; não autoriza tratar toda fala religiosa como revelação.\n\n**Amaldiçoar / abençoar (vv. 8, 11-12, 20):** ações opostas no conflito narrativo. A bênção não é uma energia que Balaão controla; é a palavra favorável de Deus sobre o povo.\n\n**Pó de Jacó (v. 10):** imagem de grande quantidade, ligada à promessa de numerosos descendentes. É linguagem poética, não uma contagem matemática.\n\n**Rei (v. 21):** referência à realeza divina presente no meio de Israel. O povo não é apresentado como autônomo; sua segurança está relacionada ao governo de Deus.\n\n**Boi selvagem (v. 22):** imagem de força e vigor. A identificação zoológica exata do termo hebraico é discutida; traduções usam expressões como boi selvagem ou animal de grande força. Não é prudente construir doutrina sobre uma identificação específica.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "pericope-1-preparacao-bamote-baal",
-      "title": "Exposição de Números 23:1-6: A Manipulação Cúltica em Bamote-Baal",
-      "body": "A narrativa inicia-se com ordens meticulosas de Balaão a Balaque: edificar sete altares e preparar sete novilhos e sete carneiros. O número sete carrega conotação de totalidade e plenitude sagrada nas culturas do antigo Oriente Próximo. No pensamento pagão e na ciência divinatória da época, o oferecimento de hecatombes opulentas tinha como objetivo 'aquecer o coração' das divindades e torná-las dóceis ao intento do suplicante. Balaão afasta-se 'a um lugar alto e descoberto' (shephi, v. 3), técnica típica para perscrutar agouros na natureza ou buscar uma teofania. Entretanto, a narrativa subverte a expectativa mágica: não é o rito que obriga a divindade, mas Yahweh quem soberanamente 'saiu ao encontro de Balaão' (v. 4). Deus não aceita a proposta de negociação cúltica de Balaão; em vez disso, 'pôs Yahweh uma palavra na boca de Balaão' (v. 5), transformando o instrumento de maldição em mero arauto de Seu próprio decreto.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 23:1-6",
-        "Is 40:13-14",
-        "Am 5:21-22"
-      ],
+      "id": "lexico2",
+      "title": "11. Termos e imagens do segundo oráculo",
+      "kind": "analysis",
       "confidence": "high",
-      "collapsible": false
+      "body": "**Encantamento e adivinhação (v. 23):** termos relacionados a práticas de presságio e consulta ritual. A passagem afirma que tais práticas não podem determinar o destino de Israel contra a palavra de Deus. Não descreve detalhadamente todos os sistemas religiosos do antigo Oriente Próximo.\n\n**O que Deus realizou (v. 23):** o povo é chamado a reconhecer a ação divina. A atenção sai da tentativa de manipulação de Balaque e se volta para os atos de Deus.\n\n**Leoa e leão (v. 24):** imagens de força, prontidão e vitória. O paralelismo intensifica a figura poética. A imagem não é uma ordem para que os israelitas ajam com crueldade.\n\n**Peor (v. 28):** nome associado ao local para onde Balaque conduz Balaão. O episódio seguinte mostrará que a história de Balaão ainda terá desdobramentos graves (Nm 24–25; 31:16).",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "pericope-2-primeiro-oraculo-vv-7-10",
-      "title": "Exposição de Números 23:7-10: O Primeiro Oráculo e a Singularidade de Israel",
-      "body": "O primeiro oráculo (vv. 7-10) começa delineando o mandato de Balaque: 'De Arã me mandou trazer Balaque... Vem, amaldiçoa-me a Jacó; e vem, denuncia a Israel' (v. 7). A resposta de Balaão fundamenta-se em uma impossibilidade teológica categórica: 'Como amaldiçoarei a quem Deus não amaldiçoou? E como denunciarei a quem o Senhor não denunciou?' (v. 8). No v. 9, ao contemplar o acampamento israelita desde o cume das rochas, ele profere: 'Eis que é um povo que habita a sós e entre as nações não se contará'. Essa separação (kadosh em conceito) não é sinônimo de isolamento estéril, mas de eleição exclusiva sob o senhorio de Yahweh. O versículo 10 evoca a promessa da aliança patriarcal de Gênesis 13:16 ao indagar: 'Quem pode contar o pó de Jacó, ou contar a quarta parte de Israel?'. Balaão encerra almejando a sorte escatológica dos fiéis da aliança: 'Morra eu a morte dos justos, e seja o meu fim como o deles!'. O vidente reconhece que o destino final desse povo é a vida sob o favor perpétuo de Deus.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 23:7-10",
-        "Gn 13:16",
-        "Sl 116:15"
-      ],
-      "confidence": "high",
-      "collapsible": false
-    },
-    {
-      "id": "pericope-3-reacao-de-balaque-e-transicao-pisga",
-      "title": "Exposição de Números 23:11-14: O Desconcerto de Balaque e o Campo de Zofim",
-      "body": "A reação de Balaque é de absoluto choque e revolta: 'Que me fizeste? Chamei-te para amaldiçoar os meus inimigos, e eis que somente os abençoaste!' (v. 11). A resposta de Balaão é rígida e desprovida de autonomia: 'Não deverei ter o cuidado de falar o que Yahweh pôs na minha boca?' (v. 12). Balaque, preso à mentalidade mágica politeísta, atribui o fracasso à perspectiva visual ou a alguma hostilidade topográfica particular. Em sua concepção pagã, se a visão de todo o povo produziu tal efeito, vê-lo apenas parcialmente mudaria o presságio. Conduz, pois, Balaão ao 'campo de Zofim, ao cume do Pisga' (v. 14), repetindo a construção de mais sete altares e sacrificando outros sete novilhos e sete carneiros. Essa insistência obstinada retrata a futilidade da idolatria em tentar contornar a vontade irrevogável de Deus mediante rearranjos de palco e repetições mecânicas de rituais.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 23:11-14",
-        "1Rs 20:23",
-        "Sl 2:1-4"
-      ],
-      "confidence": "high",
-      "collapsible": false
-    },
-    {
-      "id": "pericope-4-segundo-oraculo-vv-18-20",
-      "title": "Exposição de Números 23:15-20: A Imutabilidade Divina e o Decreto Irrevogável",
-      "body": "Após novo encontro no qual Deus põe Sua palavra na boca de Balaão, o segundo oráculo é inaugurado com solene autoridade régia: 'Levanta-te, Balaque, e ouve; inclina os teus ouvidos a mim, filho de Zipor' (v. 18). O versículo 19 articula uma das maiores declarações teológicas de toda a Escritura: 'Deus não é homem, para que minta; nem filho do homem, para que se arrependa. Porventura diria ele, e não o faria? Ou falaria, e não o confirmaria?'. Este texto estabelece a transcendência absoluta de Yahweh perante a inconstância da mente humana e dos caprichos dos ídolos pagãos. Porque Deus é veraz e fiel à Sua própria aliança, Balaão reconhece no v. 20 seu papel inteiramente passivo e subjugado: 'Eis que recebi ordem de abençoar; ele abençoou, e eu não o posso revogar'. A bênção não é uma declaração hipotética condicional, mas um decreto executivo cósmico já estabelecido.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 23:15-20",
-        "1Sm 15:29",
-        "Ml 3:6",
-        "Tg 1:17"
-      ],
-      "confidence": "high",
-      "collapsible": false
-    },
-    {
-      "id": "pericope-5-segundo-oraculo-vv-21-24",
-      "title": "Exposição de Números 23:21-24: A Inexistência de Feitiçaria e o Poder Real de Deus",
-      "body": "Nos versículos 21 a 24, o oráculo atinge seu zênite confessional. Balaão proclama que Deus 'não viu iniquidade em Jacó, nem contemplou desgraça em Israel; o Senhor seu Deus está com ele, e o brado de um rei está no meio dele' (v. 21). Deus contemplava o Seu povo sob a proteção pactual mediada pelo sistema de expiação do tabernáculo e por Seu amor eletivo. O v. 22 rememora a majestade do Êxodo: 'Deus os tirou do Egito; as suas forças são como as do boi selvagem (re'em)'. O versículo 23 destrói definitivamente a eficácia de qualquer ocultismo: 'Pois contra Jacó não há encantamento (nahash), nem adivinhação (qesem) contra Israel; agora se dirá de Jacó e de Israel: Que coisas Deus tem feito!'. Por fim, o v. 24 descreve Israel despertando como leoa e levantando-se como leão, metáfora imperial de vigor e triunfo militar conferido por Deus, prenunciando a derrota iminente das nações que intentavam sua destruição.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 23:21-24",
-        "Gn 49:9",
-        "Dt 33:17",
-        "Rm 8:33"
-      ],
-      "confidence": "high",
-      "collapsible": false
-    },
-    {
-      "id": "pericope-6-conclusao-deslocamento-peor",
-      "title": "Exposição de Números 23:25-30: O Desespero de Balaque e o Rumo a Peor",
-      "body": "A resposta de Balaque revela sua completa humilhação e desespero estratégico: 'Nem de maneira alguma o amaldiçoes, nem de maneira alguma o abençoes' (v. 25). Ele propõe uma capitulação pragmática: o silêncio total seria preferível à bênção multiplicada. Balaão, contudo, reitera o princípio fundamental de sua sujeição forçada: 'Não te disse eu: Tudo o que Yahweh falar, isso farei?' (v. 26). Incapaz de aceitar a soberania do Deus de Israel, Balaque insiste em sua cegueira idólatra: leva o adivinho a uma terceira elevação, 'ao cume de Peor, que olha para o deserto' (v. 28), repetindo uma vez mais o ritual estéril de erguer sete altares e oferecer sete novilhos e carneiros (vv. 29-30). O cenário agora está montado para o capítulo 24, e o leitor é conduzido a contemplar o absurdo da rebelião pagã contra o decreto divino.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Nm 23:25-30",
-        "Pv 21:30",
-        "Is 8:9-10"
-      ],
-      "confidence": "high",
-      "collapsible": false
-    },
-    {
-      "id": "analise-lexical-nahash-qesem",
-      "title": "Análise Lexical: Termos Técnicos de Adivinhação no v. 23",
-      "body": "Dois termos do hebraico bíblico no v. 23 são cruciais para a exegese: 'nahash' e 'qesem'. O substantivo 'nahash' refere-se ao encantamento ou à prática de buscar presságios mediante a leitura de sinais naturais (como líquidos em taças, voo de aves ou movimentos de animais). O termo 'qesem' é a palavra técnica padrão no antigo Oriente Próximo para adivinhação, frequentemente ligada ao lançamento de sortes, consulta a espíritos ou manipulação de flechas e fígados de animais (hepatoscopia). A declaração categórica do texto é que nem 'nahash' nem 'qesem' têm qualquer poder contra Jacó/Israel. A ausência de agouro eficaz decorre não de uma capacidade intrínseca do povo, mas do escudo impenetrável da presença de Yahweh, tornando nulas todas as técnicas da arte divinatória pagã.",
-      "kind": "glossary",
-      "scriptureRefs": [
-        "Nm 23:23",
-        "Dt 18:10-12",
-        "Ez 21:21"
-      ],
-      "confidence": "high",
-      "collapsible": true
-    },
-    {
-      "id": "analise-lexical-reem",
-      "title": "Análise Lexical e Zoológica: O Termo 'Re'em' no v. 22",
-      "body": "No versículo 22, o texto bíblico emprega o termo hebraico 're'em' (geralmente traduzido em versões históricas antigas como 'unicórnio', seguindo o grego monoceros da Septuaginta e o latim unicornis da Vulgata). Estudos linguísticos semíticos e zooarqueológicos modernos confirmaram com segurança que 're'em' é o auroque (Bos primigenius), o imponente touro selvagem extinto que habitava o Oriente Próximo, célebre na literatura do Antigo Oriente por sua força indomável e chifres maciços e letais. O símile bíblico compara a potência da libertação operada por Deus no Êxodo ao vigor incontrolável e avassalador do touro selvagem, assegurando que o Deus que resgatou Seu povo não pode ser contido por nenhum monarca ou exército humano.",
-      "kind": "glossary",
-      "scriptureRefs": [
-        "Nm 23:22",
-        "Dt 33:17",
-        "Jó 39:9-10",
-        "Sl 29:6"
-      ],
-      "confidence": "high",
-      "collapsible": true
-    },
-    {
-      "id": "teologia-da-imutabilidade",
-      "title": "Teologia Bíblica: A Imutabilidade Divina em Números 23:19",
-      "body": "Números 23:19 constitui um dos alicerces ontológicos da doutrina de Deus na tradição judaico-cristã. Ao afirmar categoricamente que 'Deus não é homem, para que minta; nem filho do homem, para que se arrependa', o texto demarca o abismo intransponível entre o Ser de Deus e o ser da criatura. Enquanto os homens são volúveis, inconstantes, limitados em conhecimento e propensos à infidelidade e engano, Deus é absolutamente íntegro, fiel e imutável em Seus decretos pactuais. A teologia reformada e a ortodoxia clássica interpretam as passagens bíblicas que falam de Deus 'se arrependendo' (como em Gn 6:6 ou Jn 3:10) como antropopatias pedagógicas — descrições acomodadas da resposta da justiça divina diante da mudança na postura do homem —, ao passo que Números 23:19 define a realidade ontológica e o caráter perene da palavra de Yahweh.",
+      "id": "teologia1",
+      "title": "12. Teologia bíblica — A fidelidade e a palavra de Deus",
       "kind": "theology",
-      "scriptureRefs": [
-        "Nm 23:19",
-        "1Sm 15:29",
-        "Sl 102:26-27",
-        "Tg 1:17"
-      ],
       "confidence": "high",
-      "collapsible": false
+      "body": "Números 23:19 está no centro do segundo oráculo. Deus não é comparado ao ser humano para diminuir sua proximidade com a criação, mas para destacar sua confiabilidade: ele não mente, não promete em vão e não falha em cumprir sua palavra.\n\nA narrativa inteira confirma esse ponto. Balaque muda de lugar, repete sacrifícios e tenta obter outra resposta. No entanto, o oráculo não se curva às expectativas do rei.\n\nA fidelidade divina deve ser compreendida junto ao caráter e às promessas específicas de Deus. Não significa que toda expectativa humana será atendida, nem que o cristão jamais enfrentará perdas. O texto anuncia que Deus não será coagido a contradizer o que decidiu realizar.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "teologia-da-graca-e-justificacao",
-      "title": "Teologia da Graça e Eleição: 'Não Viu Iniquidade em Jacó'",
-      "body": "A declaração do v. 21 de que Deus 'não viu iniquidade em Jacó, nem contemplou perversidade em Israel' apresenta uma aparente tensão dramática com os capítulos anteriores e posteriores de Números, nos quais o povo é repetidamente flagrado em murmuração, rebelião aberta, idolatria e queixa (cf. caps. 11, 14, 16, 20 e 21). Como pode o texto asseverar que Deus não vê pecado em Jacó? A resposta teológica repousa na distinção entre o olhar judicial interno de Deus sobre o Seu povo (onde Ele disciplina Seus filhos pela aliança) e o Seu escudo judicial externo diante dos inimigos pagãos. Diante das hostes que intentam aniquilar Israel, Yahweh contempla a congregação através dos méritos de Sua eleição soberana e da expiação sacrificial contínua que cobria o arraial sobre o propiciatório. Isto antecipa de modo vibrante a doutrina da justificação graciosa pela fé desenvolvida no Novo Testamento.",
+      "id": "teologia2",
+      "title": "13. “Não viu iniquidade em Jacó”: como compreender Números 23:21?",
       "kind": "theology",
+      "confidence": "debated",
+      "body": "A afirmação do versículo 21 pode causar dificuldade porque o próprio Pentateuco relata pecados de Israel. Algumas leituras enfatizam a posição do povo diante da aliança e a proteção que Deus lhe concede naquele momento; outras destacam que o oráculo descreve a ausência de uma acusação eficaz que permita a Balaque obter a maldição pretendida.\n\nÉ importante não afirmar que Israel era sem pecado. Números 11–21 registra repetidas falhas. Também não se deve transformar o versículo, sem explicação, numa exposição completa da doutrina cristã da justificação.\n\nA leitura mais segura observa o contexto imediato: Balaão não encontra fundamento para pronunciar a maldição que Balaque deseja, porque Deus está presente e age em favor de Israel. A teologia cristã da justificação deve ser desenvolvida com textos próprios, como Romanos 3–5, sem apagar o sentido histórico do oráculo.",
       "scriptureRefs": [
-        "Nm 23:21",
-        "Nm 14:11-20",
-        "Sl 32:1-2",
-        "Rm 4:6-8",
-        "Rm 8:33"
-      ],
-      "confidence": "high",
-      "collapsible": false
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "conexao-canonica-pentateuco-e-cristo",
-      "title": "Relação Canônica com o Pentateuco e Conexão Tipológica com Cristo",
-      "body": "O capítulo 23 de Números conecta-se umbilicalmente às promessas seminais feitas aos patriarcas em Gênesis: o tema da multidão incontável como o pó da terra (Gn 13:16; Nm 23:10) e a garantia irrevogável de que os que abençoarem a descendência de Abraão serão abençoados e os que a amaldiçoarem serão amaldiçoados (Gn 12:3). Além disso, a presença do 'brado de um rei' no meio do arraial (v. 21) e a metáfora do leão que se levanta (v. 24) antecipam diretamente o cetro de Judá profetizado em Gênesis 49:9-10 e a estrela de Jacó em Números 24:17. No plano canônico mais amplo do Novo Testamento, essa realidade pactual culmina em Jesus Cristo, o verdadeiro Leão da tribo de Judá (Ap 5:5), cuja mediação e sangue aspergido conferem ao Seu corpo, a Igreja, proteção definitiva e justificação irrevogável contra qualquer condenação ou acusação do acusador dos irmãos.",
+      "id": "conexoes",
+      "title": "14. Referências bíblicas — A promessa atravessa a Escritura",
+      "kind": "analysis",
+      "confidence": "high",
+      "body": "**Gênesis 12:1-3; 13:16; 28:14:** promessas a Abraão, incluindo bênção e numerosos descendentes. A imagem do pó de Jacó ecoa essa promessa.\n\n**Êxodo 19:4-6:** descreve a vocação de Israel como povo pertencente a Deus. Ajuda a compreender sua identidade particular, sem legitimar desprezo por outras nações.\n\n**Deuteronômio 23:3-5:** relembra que Deus não atendeu à intenção de Balaão de amaldiçoar Israel e transformou a maldição em bênção.\n\n**1 Samuel 15:29:** afirma que a Glória de Israel não mente. O texto compartilha o tema da fidelidade divina.\n\n**Miqueias 6:5:** chama Israel a recordar o episódio de Balaque e Balaão.\n\n**Romanos 8:31-39:** proclama a segurança dos que estão em Cristo diante da acusação e da separação do amor de Deus. A conexão cristã deve ser feita pelo tema da fidelidade divina, não como se Israel e a Igreja fossem simplesmente intercambiáveis em cada detalhe.\n\n**2 Pedro 2:15-16; Judas 11; Apocalipse 2:14:** retomam Balaão como advertência contra ganância e sedução para o pecado. Esses textos impedem que o leitor transforme Balaão em modelo de fidelidade.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
+    },
+    {
+      "id": "cristo",
+      "title": "15. Números 23 e Jesus Cristo — Uma leitura cristocêntrica responsável",
       "kind": "theology",
-      "scriptureRefs": [
-        "Gn 12:3",
-        "Gn 49:9-10",
-        "Nm 24:17",
-        "Rm 8:1",
-        "Ap 5:5"
-      ],
       "confidence": "high",
-      "collapsible": true
+      "body": "O capítulo não menciona diretamente Jesus. Sua contribuição para a leitura cristã está na apresentação da fidelidade de Deus à promessa e na impossibilidade de manipular sua palavra.\n\nO Novo Testamento anuncia que as promessas de Deus encontram seu “sim” em Cristo (2Co 1:20). Também ensina que, em Cristo, os que creem recebem reconciliação e não ficam sujeitos à condenação (Rm 8:1, 31-34). Essas conexões devem ser explicadas a partir dos textos do Novo Testamento.\n\nNão é necessário afirmar que cada altar, animal ou deslocamento de Balaque seja uma figura direta de Jesus. Uma leitura cristocêntrica fiel respeita primeiro o sentido de Números 23 e depois mostra como o conjunto da Escritura conduz à obra de Cristo.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "debates-interpretativos",
-      "title": "Debates Interpretativos: A Natureza Espiritual e a Conversão de Balaão",
-      "body": "Um dos debates exegéticos mais perenes em torno de Números 23 diz respeito ao caráter e status espiritual de Balaão: era ele um profeta genuíno de Yahweh que sucumbiu à ganância ou um adivinho pagão que foi temporariamente subjugado pelo Espírito soberano de Deus? A tradição rabínica clássica e a quase totalidade dos intérpretes reformados e históricos defendem que Balaão nunca foi um crente piedoso ou verdadeiro profeta da aliança, mas um adivinho profissional (kosēm, conforme expressamente chamado em Josué 13:22) que usava o nome de deuses locais, incluindo Yahweh, para propósitos comerciais. O Novo Testamento apoia consistentemente essa leitura negativa, associando-o ao 'amor do prêmio da injustiça' (2Pe 2:15), ao 'engano de Balaão por preço' (Jd 1:11) e ao arquiteto do tropeço idólatra de Baal-Peor (Ap 2:14). Deus usou a boca de um mago mercenário para declarar verdades eternas, assim como usou a mula de Balaão no capítulo 22.",
-      "kind": "context",
+      "id": "debates",
+      "title": "16. Questões interpretativas — O que é claro e o que exige cautela?",
+      "kind": "theology",
+      "confidence": "debated",
+      "body": "**“Israel habita à parte” (v. 9):** pode ser lido como distinção vocacional e pactual. Não deve ser transformado em justificativa para racismo, isolamento absoluto ou desprezo pelos povos.\n\n**“Não viu iniquidade em Jacó” (v. 21):** não significa que Israel nunca pecou. O contexto e o restante do livro exigem uma leitura que reconheça a realidade das falhas do povo.\n\n**“Deus não se arrepende” (v. 19):** o foco é a fidelidade de Deus em cumprir sua palavra. A relação com textos que usam linguagem de arrependimento divino deve considerar gênero, contexto e sentido de cada passagem.\n\n**“Não há encantamento contra Jacó” (v. 23):** afirma a impotência das práticas divinatórias diante da decisão divina neste episódio. Não é uma fórmula para garantir que pessoas fiéis nunca sofrerão ataques, injustiças ou perdas.\n\n**A identidade de Balaão:** Números o apresenta como alguém que recebe e transmite oráculos de Deus, mas outros textos bíblicos o criticam por ganância e por sua participação em acontecimentos posteriores. Não devemos concluir sua conversão apenas pelo desejo expresso no versículo 10.",
       "scriptureRefs": [
-        "Js 13:22",
-        "2Pe 2:15-16",
-        "Jd 1:11",
-        "Ap 2:14"
-      ],
-      "confidence": "high",
-      "collapsible": true
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "erros-comuns-de-leitura",
-      "title": "Erros Comuns de Leitura e Armadilhas Hermenêuticas",
-      "body": "Vários equívocos de interpretação devem ser evitados na abordagem de Números 23. Primeiro: o erro animista de crer que palavras mágicas têm poder intrínseco e autônomo. O texto mostra que o poder da bênção e da maldição deriva unicamente da soberania de Yahweh, e não da correta execução de encantamentos ou ritos verbais. Segundo: a apropriação individualista e triumfalista de promessas corporativas da aliança, na qual o leitor toma o versículo 23 ('contra Jacó não há encantamento') como amuleto mágico particular para imunidade a todo tipo de sofrimento terreno ou revés biológico. Terceiro: a leitura antinomista do versículo 21 ('não viu iniquidade'), sugerindo que Deus é indiferente ao pecado de Seu povo. O contexto amplo de Números prova que Yahweh castiga com severidade a rebeldia de Seus filhos (cf. a praga do cap. 25); a ausência de iniquidade vista no oráculo refere-se ao status pactual da nação perante o tribunal e os inimigos externos sob a eleição divina.",
-      "kind": "method",
-      "scriptureRefs": [
-        "Nm 23:21",
-        "Nm 23:23",
-        "1Co 10:1-12",
-        "Hb 12:5-6"
-      ],
+      "id": "erros",
+      "title": "17. Cuidados — Erros de interpretação que devemos evitar",
+      "kind": "application",
       "confidence": "high",
-      "collapsible": true
+      "body": "- Não usar Números 23:23 para prometer que nenhum cristão sofrerá, adoecerá ou será injustiçado.\n- Não ensinar que ofertas, campanhas, sacrifícios financeiros ou fórmulas obrigam Deus a agir.\n- Não dizer que Israel era moralmente perfeito por causa de Números 23:21.\n- Não usar “habita à parte” para defender superioridade étnica ou desprezo por outros povos.\n- Não tratar o versículo 19 como se eliminasse todos os textos bíblicos que descrevem respostas de Deus em linguagem relacional.\n- Não transformar cada elemento do ritual em símbolo secreto de Cristo.\n- Não afirmar que Balaão foi um profeta fiel em todos os aspectos; leia também Números 31:16, 2 Pedro 2:15-16 e Judas 11.\n- Não confundir a imagem poética do leão com autorização para violência ou domínio humano.\n\n**Regra de leitura:** observe o contexto imediato, compare passagens relacionadas, identifique o gênero literário e diferencie afirmação explícita de conclusão teológica.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "metodo-exegese-do-mashal",
-      "title": "Diretrizes Hermenêuticas: Como Interpretar o Mashal Profético",
-      "body": "Para interpretar adequadamente os oráculos de Números 23, o exegeta deve aplicar os princípios da poesia hebraica. Em primeiro lugar, deve-se identificar a estrutura do paralelismo (sinonímico, antitético ou sintético), percebendo que a segunda linha poética quase sempre reforça, especifica ou aprofunda o pensamento da primeira, e não introduz uma nova ideia desconexa (ex.: 'Como amaldiçoarei a quem Deus não amaldiçoou? / E como denunciarei a quem o Senhor não denunciou?'). Em segundo lugar, é indispensável atentar para a imagética arquetípica do texto — o leão, o auroque selvagem, o pó da terra —, analisando como essas figuras funcionavam no imaginário cultural do antigo Oriente Próximo para transmitir força, realeza e fecundidade. Em terceiro lugar, o oráculo deve ser lido à luz de sua função narrativa no enredo dramático do Pentateuco, onde a bênção forçada de Balaão expõe a futilidade da resistência das nações pagãs ao avanço do reino de Deus.",
-      "kind": "method",
-      "scriptureRefs": [
-        "Nm 23:7-10",
-        "Nm 23:18-24",
-        "Sl 1:1-6"
-      ],
+      "id": "metodo",
+      "title": "18. Como estudar o texto — Observação, interpretação e aplicação",
+      "kind": "analysis",
       "confidence": "high",
-      "collapsible": true
+      "body": "**Observação — O que está escrito?** Identifique quem fala, quem ouve, os locais, os rituais repetidos e as mudanças entre os dois oráculos. Marque as perguntas retóricas, imagens poéticas e repetições.\n\n**Interpretação — O que significava?** Balaque tenta obter uma maldição; Balaão reconhece que só pode transmitir a palavra que Deus lhe dá. Os dois oráculos afirmam que a decisão divina não pode ser manipulada.\n\n**Correlação — Como a Bíblia retoma o tema?** Leia as promessas patriarcais, as releituras históricas em Deuteronômio e Miqueias e as advertências do Novo Testamento sobre Balaão.\n\n**Aplicação — O que isso exige de nós?** Rejeitar superstição e barganha religiosa, confiar no caráter de Deus e avaliar a integridade de quem ensina.\n\n**Perguntas para o aluno:** Estou respeitando o sentido do texto? Estou atribuindo ao versículo uma promessa que ele não faz? Minha aplicação nasce da passagem ou apenas de uma ideia que eu já queria defender?",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "glossario-termos-hebraicos",
-      "title": "Glossário Exegético de Conceitos e Expressões-Chave",
-      "body": "1. Bamote-Baal (v. 1): 'Lugares altos de Baal', santuário cananeu em colina elevada dedicado ao culto cúltico da fertilidade. 2. Mashal (v. 7, 18): Oráculo poético, provérbio figurado, discurso carregado de autoridade espiritual e densidade metafórica. 3. Nahash (v. 23): Agouro, encantamento, presságio obtido por meio de técnicas divinatórias na natureza. 4. Qesem (v. 23): Adivinhação técnica e oracular, proibida na Lei mosaica sob pena de abominação (Dt 18:10). 5. Re'em (v. 22): Auroque selvagem, animal robusto e indomável, símbolo semítico de potência vigorosa e invencibilidade militar. 6. Shephi (v. 3): Colina descampada e solitária, planalto nu propício para observações de presságios pagãos no céu e no horizonte.",
-      "kind": "glossary",
-      "scriptureRefs": [
-        "Nm 23:1",
-        "Nm 23:3",
-        "Nm 23:7",
-        "Nm 23:22-23"
-      ],
+      "id": "glossario",
+      "title": "19. Glossário — Termos e expressões para o estudo",
+      "kind": "analysis",
       "confidence": "high",
-      "collapsible": true
+      "body": "**Oráculo:** pronunciamento solene, frequentemente em forma poética, apresentado como mensagem divina.\n\n**Bênção:** palavra ou ação favorável de Deus; no capítulo, está ligada à promessa e ao cuidado divino por Israel.\n\n**Maldição:** declaração de juízo ou desejo de dano. A narrativa mostra que Balaão não pode impor a Israel uma maldição contrária à palavra de Deus.\n\n**Aliança:** compromisso estabelecido por Deus, especialmente nas promessas feitas aos patriarcas e desenvolvidas na história de Israel.\n\n**Adivinhação:** práticas que buscam obter conhecimento ou influência por meios divinatórios. Números 23 afirma que elas não controlam a ação do Senhor.\n\n**Paralelismo poético:** recurso em que duas linhas se correspondem, repetem ou ampliam uma ideia.\n\n**Pisga e Peor:** nomes de elevações ou regiões mencionadas na sequência narrativa. A localização exata de alguns pontos permanece discutida.\n\n**Re'em:** termo hebraico do versículo 22, traduzido de maneiras diferentes, como “boi selvagem”. A identificação zoológica precisa não é consenso.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "aplicacoes-pastorais-e-homileticas",
-      "title": "Aplicações Pastorais e Homiléticas para a Igreja",
-      "body": "Para a pregação pastoral contemporânea, Números 23 provê três diretrizes de extraordinário conforto e advertência. Primeira: Libertação da fobia mágica e espiritual. O crente em Cristo não deve viver amedrontado por inveja, feitiçaria ou imprecações, pois nenhuma força do inferno prevalece contra aquele que foi justificado pelo sangue de Cristo. Segunda: Confrontação à mentalidade cúltica de barganha com Deus. A insistência de Balaque em mudar de colina e multiplicar holocaustos é o espelho exato do devoto que acredita que doações financeiras, novenas ou sacrifícios humanos podem alterar a soberana vontade divina; Deus não é negociável. Terceira: Conforto em tempos de guerra espiritual invisível. Assim como Israel dormia no vale em paz enquanto Yahweh vencia a conspiração espiritual nos cumes de Moabe, o povo de Deus hoje é preservado e sustentado pela intercessão sacerdotal de Cristo nas alturas celestiais, invisível aos olhos humanos.",
-      "kind": "pastoral",
-      "scriptureRefs": [
-        "Nm 23:23",
-        "Rm 8:31-39",
-        "Hb 7:25"
-      ],
+      "id": "aplicacao",
+      "title": "20. Aplicações pastorais — Fé sem superstição e integridade",
+      "kind": "application",
       "confidence": "high",
-      "collapsible": false
+      "body": "1. **Não transforme Deus em objeto de barganha.** O capítulo denuncia a tentativa de controlar a vontade divina por meio de rituais e pagamentos.\n2. **Confie no caráter de Deus, sem exigir que a vida seja livre de sofrimento.** A fidelidade divina não é promessa de conforto imediato, mas fundamento para perseverar.\n3. **Rejeite o medo supersticioso.** O texto não ensina que palavras ou rituais humanos possuam autoridade independente sobre o povo de Deus.\n4. **Examine o uso da religião para obter poder.** Balaque tenta usar a prática religiosa para alcançar seus objetivos políticos.\n5. **Valorize a integridade de quem ensina.** O restante da Escritura alerta que Balaão se tornou exemplo de ganância. Conhecimento religioso sem caráter é perigoso.\n6. **Lembre-se de que a bênção recebida deve conduzir à fidelidade.** A proteção de Deus não é licença para viver de qualquer maneira.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "esboco-expositivo-para-pregadores",
-      "title": "Esboço Homilético Expositivo: 'A Bênção que Ninguém Pode Revogar'",
-      "body": "Tema: A Soberania de Deus sobre as Maquinações do Inimigo. Texto: Números 23:18-24. Proposição: Porque o Deus da aliança é ontologicamente fiel e soberano, nenhuma força terrena ou espiritual pode amaldiçoar os redimidos por Sua graça. I. A Certeza Inabalável da Palavra de Deus (vv. 18-20): 1. Deus transcende a volubilidade e a mentira humana (v. 19a); 2. A palavra falada por Deus é irrevogavelmente executada na história (v. 19b-20). II. A Condição Graciosa do Povo da Aliança (vv. 21-22): 1. Cobertos pela justiça e graça que cancelam o veredicto de condenação exterior (v. 21a); 2. Sustentados pela presença real do Rei divino em seu arraial (v. 21b); 3. Libertos pelo poder incontrolável do Libertador divino (v. 22). III. A Vitória Absoluta sobre todo Ocultismo e Oposição (vv. 23-24): 1. A impotência terminal da feitiçaria e da adivinhação contra a Igreja (v. 23a); 2. O testemunho das nações diante das grandes obras de Deus (v. 23b); 3. O despertar da Igreja como povo forte e vitorioso sob o triunfo de Cristo (v. 24). Conclusão: Descanse na segurança da graça soberana de Cristo, o Rei que habita no meio do Seu povo.",
-      "kind": "pastoral",
+      "id": "pregador",
+      "title": "21. Oficina do pregador — Esboço expositivo de Números 23",
+      "kind": "application",
+      "confidence": "probable",
+      "body": "**Tema:** A palavra de Deus não pode ser manipulada.\n\n**Ideia central:** Deus é fiel à sua palavra; nenhum poder humano ou ritual pode obrigá-lo a contradizer aquilo que determinou.\n\n**Introdução:** Balaque acredita que, mudando de lugar e repetindo sacrifícios, conseguirá uma maldição contra Israel. O capítulo mostra que a palavra de Deus não está à venda.\n\n**1. O ser humano tenta controlar a bênção (23:1-6).** Explique os altares e sacrifícios sem atribuir a eles um poder automático. A iniciativa decisiva pertence a Deus.\n\n**2. Deus estabelece a identidade e a bênção de Israel (23:7-10).** Mostre a pergunta do versículo 8 e a conexão com as promessas aos patriarcas.\n\n**3. Deus é fiel e não mente (23:18-20).** Explique o caráter confiável de Deus e a impossibilidade de Balaão revogar a bênção.\n\n**4. A presença de Deus não se submete à adivinhação (23:21-24).** Explique as imagens do Rei, do Êxodo e do leão no contexto poético.\n\n**Conclusão cristã:** relacione a fidelidade de Deus às promessas cumpridas em Cristo (2Co 1:20), sem alegorizar detalhes que o texto não identifica como símbolos.\n\n**Perguntas para a congregação:** Onde tentamos negociar com Deus? Temos confundido fé com superstição? Nossa conduta corresponde à Palavra que professamos?\n\n**Orientação ao pregador:** leia a passagem, explique seu contexto, esclareça as imagens poéticas e só então aplique. Não prometa imunidade contra sofrimento nem use o texto para explorar financeiramente os ouvintes.",
       "scriptureRefs": [
-        "Nm 23:18-24",
-        "Rm 8:31-39",
-        "Cl 2:14-15"
-      ],
-      "confidence": "high",
-      "collapsible": true
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "exercicios-e-questoes-para-estudo",
-      "title": "Exercícios de Fixação e Avaliação Hermenêutica",
-      "body": "1. Compare a visão de Deus apresentada por Balaão em Números 23:19 com a reação de Saul em 1 Samuel 15:29 e o ensinamento sobre a imutabilidade em Tiago 1:17. Quais são as continuidades conceituais? 2. Como a descoberta da Inscrição de Deir Alla desafia tanto a leitura fundamentalista ingênua quanto o ceticismo radical sobre a historicidade do relato bíblico de Balaão? 3. Explique por que a afirmação 'não viu iniquidade em Jacó' não deve ser interpretada como impecabilidade moral intrínseca do povo de Israel no deserto. 4. Redija um parágrafo pastoral orientando um membro da igreja que afirma estar sob o efeito de uma maldição rogada por um parente, utilizando os princípios teológicos de Números 23:23.",
+      "id": "exercicios",
+      "title": "22. Exercícios — Verifique sua compreensão",
       "kind": "exercise",
-      "scriptureRefs": [
-        "Nm 23:19",
-        "Nm 23:21",
-        "Nm 23:23",
-        "1Sm 15:29",
-        "Tg 1:17"
-      ],
       "confidence": "high",
-      "collapsible": true
+      "body": "Responda com base no texto e confira as referências indicadas.\n\n**1.** Qual era o objetivo de Balaque ao contratar Balaão? (Nm 22:5-6; 23:7)\n**Resposta orientadora:** obter uma maldição contra Israel para tentar enfraquecer ou derrotar o povo.\n\n**2.** O que a repetição dos sete altares demonstra na narrativa? (Nm 23:1-6, 13-17, 27-30)\n**Resposta orientadora:** a insistência de Balaque em tentar mudar o resultado por meio de novos rituais e locais; não prova que os rituais controlassem Deus.\n\n**3.** Explique a pergunta de Números 23:8.\n**Resposta orientadora:** Balaão reconhece que não pode amaldiçoar quem Deus não amaldiçoou.\n\n**4.** O que significa a imagem do pó de Jacó? (Nm 23:10; Gn 13:16)\n**Resposta orientadora:** a grande quantidade de descendentes prometida aos patriarcas.\n\n**5.** Por que Números 23:19 destaca que Deus não mente?\n**Resposta orientadora:** para afirmar que sua palavra é confiável e que ele não falha em cumprir o que decidiu.\n\n**6.** Números 23:21 ensina que Israel nunca pecou? Explique.\n**Resposta orientadora:** não. O restante do livro registra pecados do povo; o versículo deve ser entendido no contexto do oráculo e da tentativa de Balaque de obter uma maldição.\n\n**7.** O que Números 23:23 afirma sobre encantamentos e adivinhação?\n**Resposta orientadora:** que essas práticas não podem prevalecer contra Israel diante da ação soberana de Deus naquele episódio; não é promessa de ausência de sofrimento.\n\n**8.** Como o Novo Testamento usa a figura de Balaão? (2Pe 2:15-16; Jd 11; Ap 2:14)\n**Resposta orientadora:** como advertência contra ganância e influência que conduz outros ao pecado.\n\n**9.** Qual é a diferença entre confiar em Deus e tentar manipulá-lo?\n**Resposta orientadora:** confiar é submeter-se à sua palavra; manipular é tratar ritos, ofertas ou fórmulas como meios de obrigá-lo a cumprir nossos desejos.\n\n**10.** Prepare uma explicação de dois minutos sobre a mensagem central de Números 23, sem prometer que o cristão nunca enfrentará dificuldades.\n\n**Critério:** respostas devem respeitar o contexto, distinguir afirmações do texto de aplicações e evitar conclusões que a passagem não sustenta.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     },
     {
-      "id": "meditacao-devocional-e-sintese",
-      "title": "Meditação Devocional e Síntese Teológica",
-      "body": "Que doce consolo flui de contemplar o arraial de Israel nas campinas de Moabe! As famílias estavam em suas tendas, ocupadas com os deveres cotidianos, totalmente alheias aos altares acesos no cume das montanhas por Balaque e Balaão. Contudo, enquanto o homem tramava destruição, o Deus da aliança defendia a honra de Seu nome e a vida de Seus eleitos nas alturas espirituais. Nada que os inimigos planejaram surtiu efeito, porque a boca que se abriu para amaldiçoar foi coagida a derramar bênçãos incomparáveis. O mesmo Deus que guardou Israel no deserto é o Deus que vela sobre você em Cristo Jesus. Nenhuma conspiração humana, nenhuma palavra amarga, nenhuma tribulação presente ou futura tem a capacidade de quebrar a bênção eterna que o Pai selou com o sangue precioso do Seu Filho na cruz do Calvário.",
-      "kind": "theology",
-      "scriptureRefs": [
-        "Nm 23:21-23",
-        "Sl 121:1-8",
-        "Rm 8:38-39"
-      ],
+      "id": "meditacao",
+      "title": "23. Meditação final — A palavra que não pode ser comprada",
+      "kind": "pastoral",
       "confidence": "high",
-      "collapsible": false
+      "body": "Balaque mudou de lugar, repetiu altares e insistiu em sua tentativa. Mas não conseguiu transformar a palavra de Deus em instrumento de seus próprios interesses. Números 23 nos convida a descansar no caráter fiel do Senhor e a abandonar a superstição que imagina controlar o sagrado.\n\nA confiança bíblica não significa que todos os nossos planos serão realizados ou que não enfrentaremos sofrimento. Significa que Deus é verdadeiro, digno de confiança e fiel ao que prometeu. Por isso, não precisamos comprar seu favor, manipular pessoas em seu nome ou viver dominados pelo medo de palavras humanas.\n\nQue a leitura deste capítulo produza reverência, humildade e integridade: recebamos a Palavra, examinemos nossas motivações e caminhemos em fidelidade.\n\n**Oração:** Senhor Deus, tu és verdadeiro e fiel. Livra-me da superstição, da ganância e da tentativa de controlar tua vontade. Ensina-me a confiar em tuas promessas sem exigir que tudo aconteça conforme meus desejos. Dá-me discernimento para compreender tua Palavra e integridade para ensiná-la sem distorção. Que minha esperança esteja em ti e na obra de Jesus Cristo. Amém.",
+      "scriptureRefs": [
+        "Números 23:1-30"
+      ]
     }
   ]
 };
