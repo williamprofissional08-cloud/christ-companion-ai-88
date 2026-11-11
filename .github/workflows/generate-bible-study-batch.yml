@@ -87,6 +87,7 @@ jobs:
           npm run build
           npm test
       - name: Commit e push do lote
+        id: commit
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -94,11 +95,14 @@ jobs:
           git add src/lib/content
           if git diff --cached --quiet; then
             echo "Nenhum estudo novo; nada para enviar."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "content(bible): add ${{ inputs.book_slug }} study batch"
           git push origin "${{ inputs.target_branch }}"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
       - name: Abrir ou atualizar PR do lote
+        if: steps.commit.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           TARGET_BRANCH: ${{ inputs.target_branch }}
