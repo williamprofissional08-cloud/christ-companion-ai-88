@@ -10,7 +10,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import { getSettings } from "@/lib/settings.functions";
 import { useReminders } from "@/hooks/use-reminders";
-import { useTheme } from "@/hooks/use-auth";
+import { useAuth, useTheme } from "@/hooks/use-auth";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -52,8 +52,12 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   );
 }
 
-export function AppShell({ children, title, subtitle }: { children: ReactNode; title: string; subtitle?: string }) {
+export function AppShell({ children, title, subtitle, homeHeader = false }: { children: ReactNode; title: string; subtitle?: string; homeHeader?: boolean }) {
   const { theme, toggle } = useTheme();
+  const { user } = useAuth();
+  const metadata = user?.user_metadata ?? {};
+  const displayName = String(metadata["full_name"] ?? metadata["name"] ?? user?.email?.split("@")[0] ?? "Usuário").trim().split(/\\s+/)[0] || "Usuário";
+  const avatarUrl = typeof metadata["avatar_url"] === "string" ? metadata["avatar_url"] : typeof metadata["picture"] === "string" ? metadata["picture"] : "";
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const [open, setOpen] = useState(false);
@@ -97,19 +101,40 @@ export function AppShell({ children, title, subtitle }: { children: ReactNode; t
               </div>
             </SheetContent>
           </Sheet>
-          <div className="min-w-0 flex-1 text-right">
-            <p className="truncate text-sm font-semibold">{title || "Caminho Divino"}</p>
-            {subtitle ? <p className="truncate text-xs text-muted-foreground">{subtitle}</p> : null}
-          </div>
-          <Button variant="ghost" size="icon-sm" onClick={toggle} className="hidden sm:inline-flex" aria-label="Alternar tema">
-            {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
-          </Button>
+          {homeHeader ? (
+            <div className="flex min-w-0 flex-1 items-center justify-center gap-2">
+              <img src={logo} alt="" width={34} height={34} className="size-9 shrink-0 object-contain" />
+              <div className="min-w-0 text-center">
+                <p className="truncate font-display text-base font-bold tracking-tight text-[#142d59]">Caminho Divino</p>
+                <p className="truncate text-[10px] text-slate-500">A Palavra sempre com você</p>
+              </div>
+            </div>
+          ) : (
+            <div className="min-w-0 flex-1 text-right">
+              <p className="truncate text-sm font-semibold">{title || "Caminho Divino"}</p>
+              {subtitle ? <p className="truncate text-xs text-muted-foreground">{subtitle}</p> : null}
+            </div>
+          )}
+          {homeHeader ? (
+            <Link to="/configuracoes" aria-label="Abrir perfil" className="flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-blue-200 bg-blue-700 text-sm font-semibold text-white shadow-sm">
+              {avatarUrl ? <img src={avatarUrl} alt="" className="size-full object-cover" /> : displayName.slice(0, 1).toLocaleUpperCase("pt-BR")}
+            </Link>
+          ) : (
+            <Button variant="ghost" size="icon-sm" onClick={toggle} className="hidden sm:inline-flex" aria-label="Alternar tema">
+              {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+            </Button>
+          )}
         </div>
       </header>
       <main className="mx-auto w-full max-w-5xl px-3 pt-4 pb-24 sm:px-5 sm:pt-5">{children}</main>
       <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-white/95 backdrop-blur dark:bg-background/95">
-        <div className="mx-auto grid max-w-lg grid-cols-5">
-          {[...PRIMARY_NAV, { to: "/admin" as const, label: "Admin", icon: ShieldCheck }].map((item) => (
+        <div className={homeHeader ? "mx-auto grid max-w-lg grid-cols-4" : "mx-auto grid max-w-lg grid-cols-5"}>
+          {(homeHeader ? [
+            { to: "/inicio" as const, label: "Início", icon: Home },
+            { to: "/assistente" as const, label: "Assistente", icon: MessageCircleHeart },
+            { to: "/trilhas" as const, label: "Trilhas", icon: RouteIcon },
+            { to: "/configuracoes" as const, label: "Perfil", icon: UserRound },
+          ] : [...PRIMARY_NAV, { to: "/admin" as const, label: "Admin", icon: ShieldCheck }]).map((item) => (
             <Link key={item.to} to={item.to} className="flex flex-col items-center gap-0.5 py-2 text-[10px] text-muted-foreground"
               activeProps={{ className: "flex flex-col items-center gap-0.5 py-2 text-[10px] text-primary font-semibold" }}>
               <item.icon className="size-[18px]" aria-hidden />{item.label}
