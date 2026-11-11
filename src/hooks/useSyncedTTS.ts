@@ -31,6 +31,8 @@ export function useSyncedTTS({
   const indexRef = useRef(Math.max(0, initialUnit));
   const rateRef = useRef<StudyPlaybackRate>(initialRate);
   const stateRef = useRef<SyncedTTSState>("idle");
+  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const startTimerRef = useRef<number | null>(null);
   const unitChangeRef = useRef(onUnitChange);
 
   useEffect(() => {
@@ -67,6 +69,9 @@ export function useSyncedTTS({
   const stop = useCallback((reset = true) => {
     if (!supportsSpeech()) return;
     runRef.current += 1;
+    if (startTimerRef.current !== null) window.clearTimeout(startTimerRef.current);
+    startTimerRef.current = null;
+    utteranceRef.current = null;
     window.speechSynthesis.cancel();
     if (reset) {
       indexRef.current = 0;
@@ -82,12 +87,17 @@ export function useSyncedTTS({
       const synth = window.speechSynthesis;
       const safeIndex = Math.max(0, Math.min(units.length - 1, requestedIndex));
       window.dispatchEvent(new Event("ccc:stop-audio"));
-      synth.cancel();
       const run = ++runRef.current;
+      if (startTimerRef.current !== null) window.clearTimeout(startTimerRef.current);
+      startTimerRef.current = null;
+      // Safari/iOS can drop speech queued immediately after cancel(). Give its
+      // native speech engine a moment to clear the previous utterance first.
+      synth.cancel();
       const speakNext = (nextIndex: number) => {
         if (run !== runRef.current) return;
         const unit = units[nextIndex];
         if (!unit) {
+          utteranceRef.current = null;
           updateState("idle");
           return;
         }
@@ -95,9 +105,11 @@ export function useSyncedTTS({
         setUnitIndex(nextIndex);
         unitChangeRef.current?.(nextIndex, unit.sectionIndex);
         const utterance = new SpeechSynthesisUtterance(unit.text);
+        utteranceRef.current = utterance;
         utterance.lang = preferredVoice?.lang ?? "pt-BR";
         utterance.rate = rateRef.current;
         utterance.pitch = 1;
+        utterance.volume = 1;
         if (preferredVoice) utterance.voice = preferredVoice;
         utterance.onstart = () => {
           if (run === runRef.current) updateState("playing");
@@ -107,13 +119,20 @@ export function useSyncedTTS({
         };
         utterance.onerror = (event) => {
           if (run !== runRef.current || event.error === "canceled" || event.error === "interrupted") return;
+          utteranceRef.current = null;
           setError("A voz do dispositivo interrompeu a leitura. Toque em continuar.");
           updateState("error");
         };
+        // Explicit resume helps recover a suspended iOS speech queue.
+        if (synth.paused) synth.resume();
         synth.speak(utterance);
       };
       setError(null);
-      speakNext(safeIndex);
+      updateState("idle");
+      startTimerRef.current = window.setTimeout(() => {
+        startTimerRef.current = null;
+        if (run === runRef.current) speakNext(safeIndex);
+      }, 120);
       return true;
     },
     [preferredVoice, units, updateState],
@@ -154,6 +173,9 @@ export function useSyncedTTS({
   useEffect(() => {
     const stopForOtherAudio = () => {
       runRef.current += 1;
+      if (startTimerRef.current !== null) window.clearTimeout(startTimerRef.current);
+      startTimerRef.current = null;
+      utteranceRef.current = null;
       if (supportsSpeech()) window.speechSynthesis.cancel();
       updateState("idle");
     };
@@ -161,6 +183,9 @@ export function useSyncedTTS({
     return () => {
       window.removeEventListener("ccc:stop-audio", stopForOtherAudio);
       runRef.current += 1;
+      if (startTimerRef.current !== null) window.clearTimeout(startTimerRef.current);
+      startTimerRef.current = null;
+      utteranceRef.current = null;
       if (supportsSpeech()) window.speechSynthesis.cancel();
     };
   }, [updateState]);
