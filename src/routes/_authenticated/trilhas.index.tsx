@@ -9,8 +9,9 @@ import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Input } from "@/components/ui/input";
-import { buildSteps, READING_TRACKS, TRACK_THEMES } from "@/lib/content/tracks";
-import { listTrackProgress } from "@/lib/tracks.functions";
+import { buildSteps, READING_TRACKS } from "@/lib/content/tracks";
+import { getTrackImage } from "@/lib/content/track-image-catalog";
+import { listTrackImageAssignments, listTrackProgress } from "@/lib/tracks.functions";
 
 export const Route = createFileRoute("/_authenticated/trilhas/")({
   head: () => ({
@@ -32,20 +33,34 @@ function TrilhasPage() {
   const [theme, setTheme] = useState<string>("Todas");
   const [query, setQuery] = useState("");
   const fetchProgress = useServerFn(listTrackProgress);
+  const fetchImageAssignments = useServerFn(listTrackImageAssignments);
   const { data: progress } = useQuery({
     queryKey: ["track-progress-all"],
     queryFn: () => fetchProgress(),
   });
+  const { data: imageRows } = useQuery({
+    queryKey: ["tracks-page-image-assignments"],
+    queryFn: () => fetchImageAssignments(),
+    staleTime: 60_000,
+  });
+  const imageAssignments = useMemo(
+    () => Object.fromEntries((imageRows ?? []).map((row) => [row.track_slug, row.image_id])),
+    [imageRows],
+  );
 
   const progressMap = useMemo(
     () => new Map((progress ?? []).map((row) => [row.track_slug, row.completed_steps?.length ?? 0])),
     [progress],
   );
   const featured = READING_TRACKS.find((track) => track.slug === "vencendo-a-ansiedade")!;
+  const featuredImage = getTrackImage(featured.slug, featured.theme, imageAssignments);
   const otherTracks = [
     { slug: "fe-que-move", theme: "FÉ", title: "Uma fé que fortalece", summary: "Caminhe pelas Escrituras e fortaleça sua confiança em Deus.", steps: 12, icon: Compass },
     { slug: "vida-de-oracao", theme: "ORAÇÃO", title: "Um coração em oração", summary: "Encontre momentos simples para conversar com Deus.", steps: 8, icon: Heart },
-  ].map((item) => ({ ...item, track: READING_TRACKS.find((track) => track.slug === item.slug)! }));
+  ].map((item) => {
+    const track = READING_TRACKS.find((entry) => entry.slug === item.slug)!;
+    return { ...item, track, cover: getTrackImage(item.slug, track.theme, imageAssignments) };
+  });
 
   const matches = (item: { theme: string; title: string; summary: string }) => {
     const normalizedTheme = item.theme.toLocaleLowerCase("pt-BR");
@@ -104,13 +119,7 @@ function TrilhasPage() {
               <Card className="overflow-hidden rounded-3xl border-sky-100 bg-white p-0 shadow-[0_8px_28px_rgba(35,66,91,0.08)] transition-shadow hover:shadow-md">
                 <div className="grid sm:grid-cols-[150px_1fr]">
                   <div className="relative min-h-36 overflow-hidden bg-gradient-to-br from-[#dcece8] via-[#c7dedb] to-[#a8c7c4] sm:min-h-full">
-                    <svg viewBox="0 0 180 210" className="absolute inset-0 h-full w-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                      <circle cx="132" cy="42" r="19" fill="#f7e9c7" />
-                      <path d="m0 125 62-82 44 57 29-35 45 66v79H0Z" fill="#9ebfc0" />
-                      <path d="m0 150 55-48 37 35 39-42 49 54v57H0Z" fill="#719b92" />
-                      <path d="M78 210c-15-34 1-47 15-64 13-15 9-31-2-45 30 21 31 42 13 61-12 13-13 28-4 48Z" fill="#f5f1e6" />
-                      <path d="M0 181c39-16 62-6 85 11 27 20 55 12 95-8v26H0Z" fill="#527c70" opacity=".65" />
-                    </svg>
+                    {featuredImage ? <img src={featuredImage.src} alt={featuredImage.alt} loading="lazy" className="absolute inset-0 size-full object-cover" /> : null}
                     <span className="absolute bottom-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-bold tracking-wider text-[#355d69]">PAZ E DESCANSO</span>
                   </div>
                   <div className="space-y-3 p-4 sm:p-5">
@@ -148,6 +157,7 @@ function TrilhasPage() {
                       <span className="text-[10px] font-bold tracking-[.16em] text-[#66859a]">{item.theme}</span>
                       <span className="flex size-9 items-center justify-center rounded-xl bg-[#edf4f6] text-[#426b86]"><Icon className="size-4.5" /></span>
                     </div>
+                    {item.cover ? <img src={item.cover.src} alt={item.cover.alt} loading="lazy" className="mb-3 h-28 w-full rounded-xl object-cover" /> : null}
                     <h3 className="font-display text-base font-semibold text-[#1b3552]">{item.title}</h3>
                     <p className="mt-1 min-h-10 text-xs leading-relaxed text-slate-600">{item.summary}</p>
                     <div className="mt-3 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500">

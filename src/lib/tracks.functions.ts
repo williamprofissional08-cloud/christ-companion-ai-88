@@ -2,6 +2,56 @@ import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { z } from "zod";
 import type { TrackStepContent } from "./types";
+import { assertAdmin } from "./school/admin-guard";
+
+const trackImageAssignmentSchema = z.object({
+  track_slug: z
+    .string()
+    .min(1)
+    .max(80)
+    .regex(/^[a-z0-9-]+$/),
+  image_id: z.enum([
+    "paz",
+    "fe",
+    "oracao",
+    "perdao",
+    "identidade",
+    "proposito",
+    "gratidao",
+    "esperanca",
+  ]),
+});
+
+export const listTrackImageAssignments = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .handler(async ({ context }) => {
+    const { data, error } = await context.supabase
+      .from("track_image_assignments")
+      .select("track_slug, image_id");
+    if (error) throw new Error(error.message);
+    return data ?? [];
+  });
+
+export const saveTrackImageAssignment = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) => trackImageAssignmentSchema.parse(input))
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context.supabase, context.userId);
+    const { getTrack } = await import("./content/tracks");
+    if (!getTrack(data.track_slug)) throw new Error("Trilha não encontrada.");
+
+    const { error } = await context.supabase.from("track_image_assignments").upsert(
+      {
+        track_slug: data.track_slug,
+        image_id: data.image_id,
+        updated_by: context.userId,
+        updated_at: new Date().toISOString(),
+      },
+      { onConflict: "track_slug" },
+    );
+    if (error) throw new Error(error.message);
+    return { ok: true };
+  });
 
 export const getTrackProgress = createServerFn({ method: "GET" })
   .middleware([requireSupabaseAuth])

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { getAdminStats } from "@/lib/admin.functions";
 import { getAiStatus } from "@/lib/ai-status.functions";
+import { TrackImageCatalog } from "@/components/admin/TrackImageCatalog";
 
 
 export const Route = createFileRoute("/_authenticated/admin/")({
@@ -178,6 +179,8 @@ function AdminDashboard() {
           </Card>
           </div>
         </section>
+
+        <TrackImageCatalog />
 
         <Card className="space-y-3 p-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
