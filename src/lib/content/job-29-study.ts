@@ -1,0 +1,180 @@
+import type { StudyContent } from "../types";
+
+/** Estudo aprofundado de Jó 29, no padrão didático de Gênesis 1. */
+export const job29Study: StudyContent = {
+  version: 4,
+  depth: "deep",
+  intro: "Jó recorda sua antiga honra e o cuidado que exercia pelos vulneráveis",
+  historicalContext: "Jó relembra os dias em que percebia a presença e a proteção de Deus e desfrutava respeito público. Sua memória não é apenas nostalgia de riqueza: destaca sua atuação em favor de pobres, órfãos, viúvas e pessoas sem defesa. O capítulo prepara o contraste com a humilhação descrita em Jó 30.",
+  keyPoints: [
+    { title: "Mensagem central", text: "Jó recorda sua antiga honra e o cuidado que exercia pelos vulneráveis" },
+    { title: "Contexto", text: "Jó relembra os dias em que percebia a presença e a proteção de Deus e desfrutava respeito público. Sua memória não é apenas nostalgia de riqueza: destaca sua atuação em favor de pobres, órfãos, viúvas e pessoas sem defesa. O capítulo prepara o contraste com a humilhação descrita em Jó 30." },
+    { title: "Estrutura", text: "1-6 — Jó recorda a comunhão e a prosperidade de tempos anteriores; 7-17 — Jó recorda respeito público e defesa dos necessitados; 18-25 — Jó esperava uma vida longa, mas era reconhecido como conselheiro" },
+    { title: "Interpretação", text: "Diferencie fala dos personagens, observação do texto e avaliação narrativa." },
+    { title: "Aplicação", text: "Pratique humildade, justiça e compaixão sem atribuir culpa automática a quem sofre." }
+  ],
+  application: "A memória da bênção pode ser acolhida com gratidão, sem concluir que a dor atual prova abandono divino. Liderança bíblica deve proteger vulneráveis, ouvir causas e enfrentar opressão com justiça. Não reduza a identidade de alguém à posição que perdeu. Honre a pessoa mesmo quando sua condição muda.",
+  crossReferences: ["Jó 1:1-22", "Jó 2:1-13", "Jó 38:1-7", "Jó 42:1-6", "Salmos 13:1-6", "João 9:1-3", "Romanos 8:18-39", "Tiago 5:11"],
+  questions: ["Explique Jó 29:1-6 — Jó recorda a comunhão e a prosperidade de tempos anteriores.","Explique Jó 29:7-17 — Jó recorda respeito público e defesa dos necessitados.","Explique Jó 29:18-25 — Jó esperava uma vida longa, mas era reconhecido como conselheiro.","Como distinguir a fala de um personagem da avaliação do narrador?","Que aplicação evita culpar quem sofre?"],
+  conclusion: "Jó recorda sua antiga honra e o cuidado que exercia pelos vulneráveis. Leia o capítulo no contexto do diálogo e do livro inteiro, distinguindo as afirmações gerais dos personagens de sua aplicação a Jó.",
+  prayer: "Senhor, dá-nos sabedoria, humildade e compaixão para ouvir tua Palavra e cuidar de quem sofre. Sustenta-nos em Cristo. Amém.",
+  sections: [
+  {
+    "id": "leitura-biblica",
+    "title": "Leitura bíblica orientada",
+    "kind": "scripture",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-25"
+    ],
+    "body": "Leia Jó 29:1-25 integralmente em sua tradução bíblica preferida. Este estudo oferece síntese e orientação, não reproduz uma tradução protegida. Observe quem fala, o gênero poético, as imagens, os contrastes e a progressão do argumento.\n\nRegistre separadamente observações do texto, interpretações e aplicações. Compare o capítulo com o prólogo (Jó 1–2), os demais diálogos e a resposta divina (Jó 38–42)."
+  },
+  {
+    "id": "introducao",
+    "title": "1. Introdução",
+    "kind": "introduction",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-25"
+    ],
+    "body": "**Tema:** Jó recorda sua antiga honra e o cuidado que exercia pelos vulneráveis.\n\n**Objetivos:** compreender o argumento do capítulo; reconhecer sua forma poética e sapiencial; acompanhar cada perícope; distinguir a fala dos personagens da avaliação narrativa; relacionar o texto ao conjunto das Escrituras e a Cristo sem alegorias arbitrárias; e formular aplicações fiéis ao contexto.\n\n**Método:** observação, interpretação literária e canônica, e aplicação responsável."
+  },
+  {
+    "id": "contexto",
+    "title": "2. Contexto histórico-literário e canônico",
+    "kind": "context",
+    "confidence": "probable",
+    "scriptureRefs": [
+      "Jó 29:1-25"
+    ],
+    "body": "Jó relembra os dias em que percebia a presença e a proteção de Deus e desfrutava respeito público. Sua memória não é apenas nostalgia de riqueza: destaca sua atuação em favor de pobres, órfãos, viúvas e pessoas sem defesa. O capítulo prepara o contraste com a humilhação descrita em Jó 30.\n\n**Lugar no livro:** Jó apresenta prólogo narrativo, diálogos poéticos, discursos de Eliú, resposta de Deus e epílogo. O leitor conhece informações no prólogo que os personagens não possuem. Por isso, as falas dos amigos não devem ser confundidas com a avaliação final do narrador.\n\n**Cuidado interpretativo:** não diagnostique a causa de uma tragédia com base em uma máxima isolada. Leia o discurso no debate completo."
+  },
+  {
+    "id": "estrutura",
+    "title": "3. Estrutura literária",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-25"
+    ],
+    "body": "O capítulo pode ser acompanhado em 3 movimentos:\n\n**Jó 29:1-6 — Jó recorda a comunhão e a prosperidade de tempos anteriores.**\n\n**Jó 29:7-17 — Jó recorda respeito público e defesa dos necessitados.**\n\n**Jó 29:18-25 — Jó esperava uma vida longa, mas era reconhecido como conselheiro.**\n\nObserve a progressão entre as partes, os contrastes, as perguntas e as imagens poéticas."
+  },
+  {
+    "id": "pericope-1",
+    "title": "4.1 Exposição — Jó recorda a comunhão e a prosperidade de tempos anteriores",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-6"
+    ],
+    "body": "**Leitura:** Jó 29:1-6. Leia a perícope em sua Bíblia.\n\n**Observação e explicação:** Jó lembra os dias em que sentia a presença de Deus, sua família estava reunida e seus recursos eram abundantes. A lembrança intensifica o contraste com a situação atual.\n\n**Interpretação:** identifique o argumento do personagem, o lugar da fala no diálogo e o que o prólogo já revelou ao leitor. Não transforme uma descrição poética em regra universal nem atribua ao narrador toda afirmação de um interlocutor.\n\n**Perguntas de aprofundamento:** Quem fala? A quem? Qual é a afirmação principal? Que palavras, imagens ou contrastes sustentam o argumento? O que o contexto confirma ou corrige?\n\n**Referências cruzadas para estudo:** Jó 1:1-22; Jó 2:1-13; Jó 38:1-7; Jó 42:1-6; Salmos 13:1-6; João 9:1-3; Romanos 8:18-39; Tiago 5:11. Leia cada passagem em seu contexto; as referências apontam temas relacionados, não significam que todas tratem da mesma situação.\n\n**Limites e cuidado pastoral:** não conclua que sofrimento prova pecado, falta de fé ou punição específica. Diferencie observação, interpretação e aplicação.\n\n**Aplicação:** A memória da bênção pode ser acolhida com gratidão, sem concluir que a dor atual prova abandono divino."
+  },
+  {
+    "id": "pericope-2",
+    "title": "4.2 Exposição — Jó recorda respeito público e defesa dos necessitados",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:7-17"
+    ],
+    "body": "**Leitura:** Jó 29:7-17. Leia a perícope em sua Bíblia.\n\n**Observação e explicação:** Jó descreve sua posição na comunidade e o cuidado com pessoas vulneráveis. Ele investigava causas, defendia necessitados e confrontava opressores. Sua honra estava ligada à justiça praticada, não apenas ao status.\n\n**Interpretação:** identifique o argumento do personagem, o lugar da fala no diálogo e o que o prólogo já revelou ao leitor. Não transforme uma descrição poética em regra universal nem atribua ao narrador toda afirmação de um interlocutor.\n\n**Perguntas de aprofundamento:** Quem fala? A quem? Qual é a afirmação principal? Que palavras, imagens ou contrastes sustentam o argumento? O que o contexto confirma ou corrige?\n\n**Referências cruzadas para estudo:** Jó 1:1-22; Jó 2:1-13; Jó 38:1-7; Jó 42:1-6; Salmos 13:1-6; João 9:1-3; Romanos 8:18-39; Tiago 5:11. Leia cada passagem em seu contexto; as referências apontam temas relacionados, não significam que todas tratem da mesma situação.\n\n**Limites e cuidado pastoral:** não conclua que sofrimento prova pecado, falta de fé ou punição específica. Diferencie observação, interpretação e aplicação.\n\n**Aplicação:** Liderança bíblica deve proteger vulneráveis, ouvir causas e enfrentar opressão com justiça."
+  },
+  {
+    "id": "pericope-3",
+    "title": "4.3 Exposição — Jó esperava uma vida longa, mas era reconhecido como conselheiro",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:18-25"
+    ],
+    "body": "**Leitura:** Jó 29:18-25. Leia a perícope em sua Bíblia.\n\n**Observação e explicação:** Jó relata que esperava estabilidade e longevidade, e que suas palavras eram recebidas como chuva em terra seca. A memória expressa perda profunda de identidade social e de futuro esperado.\n\n**Interpretação:** identifique o argumento do personagem, o lugar da fala no diálogo e o que o prólogo já revelou ao leitor. Não transforme uma descrição poética em regra universal nem atribua ao narrador toda afirmação de um interlocutor.\n\n**Perguntas de aprofundamento:** Quem fala? A quem? Qual é a afirmação principal? Que palavras, imagens ou contrastes sustentam o argumento? O que o contexto confirma ou corrige?\n\n**Referências cruzadas para estudo:** Jó 1:1-22; Jó 2:1-13; Jó 38:1-7; Jó 42:1-6; Salmos 13:1-6; João 9:1-3; Romanos 8:18-39; Tiago 5:11. Leia cada passagem em seu contexto; as referências apontam temas relacionados, não significam que todas tratem da mesma situação.\n\n**Limites e cuidado pastoral:** não conclua que sofrimento prova pecado, falta de fé ou punição específica. Diferencie observação, interpretação e aplicação.\n\n**Aplicação:** Não reduza a identidade de alguém à posição que perdeu. Honre a pessoa mesmo quando sua condição muda."
+  },
+  {
+    "id": "sintese-teologica",
+    "title": "5. Síntese teológica e temas centrais",
+    "kind": "theology",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-25",
+      "Jó 1:1-22",
+      "Jó 42:1-6"
+    ],
+    "body": "**Justiça e sofrimento:** o livro questiona explicações simplistas que associam diretamente toda dor a culpa pessoal.\n\n**Sabedoria e limites humanos:** os discursos mostram a necessidade de humildade ao falar sobre os caminhos de Deus.\n\n**Integridade e compaixão:** a fidelidade não elimina o lamento, e a sabedoria deve produzir cuidado, justiça e escuta.\n\n**Vozes do diálogo:** avalie as falas à luz do prólogo, da resposta divina e do epílogo."
+  },
+  {
+    "id": "cristo",
+    "title": "6. Relação com Cristo e leitura canônica",
+    "kind": "christ_connection",
+    "confidence": "probable",
+    "scriptureRefs": [
+      "Jó 29:1-25",
+      "1 Timóteo 2:5-6",
+      "Hebreus 4:14-16",
+      "Romanos 8:18-39"
+    ],
+    "body": "Jó não deve ser tratado como profecia direta de cada detalhe da vida de Jesus. O livro, porém, levanta questões sobre sofrimento, justiça, mediação, esperança e limites humanos que a revelação posterior ilumina.\n\nO Novo Testamento apresenta Jesus Cristo como mediador (1 Timóteo 2:5-6) e sumo sacerdote compassivo com nossas fraquezas (Hebreus 4:14-16). A conexão é canônica: não apague o sentido original do poema nem transforme cada personagem em alegoria."
+  },
+  {
+    "id": "aplicacao",
+    "title": "7. Aplicações responsáveis para hoje",
+    "kind": "application",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-25",
+      "Romanos 12:15",
+      "Gálatas 6:2"
+    ],
+    "body": "1. Não atribua culpa a quem sofre sem evidência bíblica e factual.\n2. Ouça antes de aconselhar; presença e compaixão podem ser mais úteis que explicações rápidas.\n3. Rejeite acusações e promessas religiosas sem fundamento.\n4. Defenda vulneráveis e pratique justiça concreta.\n5. Reconheça os limites do conhecimento humano diante do mistério.\n6. Permita o lamento sincero e leve perguntas a Deus.\n7. Aponte para Cristo com fundamento no conjunto das Escrituras."
+  },
+  {
+    "id": "exegese",
+    "title": "8. Oficina de interpretação e exegese",
+    "kind": "method",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-25"
+    ],
+    "body": "**Observação:** marque falas, interlocutores, imagens, repetições e contrastes.\n\n**Contexto:** situe o trecho no ciclo de discursos e no livro inteiro. Pergunte o que o leitor sabe e o personagem ainda desconhece.\n\n**Interpretação:** diferencie afirmação geral, aplicação feita pelo personagem, lamento, pergunta retórica e avaliação narrativa. Considere dificuldades poéticas e variantes de tradução.\n\n**Leitura canônica:** compare com textos sobre justiça, sofrimento, sabedoria e esperança, respeitando o contexto de cada passagem.\n\n**Aplicação:** formule uma resposta que promova humildade, compaixão e fidelidade a Cristo, sem culpar vítimas."
+  },
+  {
+    "id": "exercicios",
+    "title": "9. Exercícios de fixação e aprofundamento",
+    "kind": "exercise",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-25"
+    ],
+    "body": "1. Resuma o capítulo em cinco frases.\n2. Identifique o argumento principal de cada perícope.\n3. Registre três observações textuais e duas interpretações.\n4. Explique como o prólogo ou o contexto dos diálogos altera a leitura.\n5. Identifique uma afirmação verdadeira que poderia ser aplicada de modo errado.\n6. Formule uma resposta pastoral que não culpe quem sofre.\n7. Relacione o tema do capítulo com uma passagem do Novo Testamento, explicando o vínculo contextual.\n\n**Reflexão:** como este capítulo aprofunda a compreensão bíblica sobre justiça, sofrimento e sabedoria?"
+  },
+  {
+    "id": "pregacao",
+    "title": "10. Oficina de preparação de mensagem expositiva",
+    "kind": "sermon",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-25"
+    ],
+    "body": "**Tema sugerido:** Jó recorda sua antiga honra e o cuidado que exercia pelos vulneráveis.\n\n**Proposição:** a sabedoria bíblica chama a reconhecer os limites humanos, confiar em Deus e praticar justiça e compaixão.\n\n**Introdução:** apresente o lugar do capítulo no diálogo e a tensão que o texto aborda.\n\n**Exposição:** desenvolva cada perícope, explique o argumento e respeite a voz do personagem.\n\n**Cristo:** faça a conexão canônica com a mediação e a compaixão de Jesus, sem alegorizar detalhes.\n\n**Aplicação:** conduza a comunidade à escuta, à justiça, ao cuidado dos vulneráveis e à rejeição de julgamentos sem evidência.\n\n**Conclusão:** retome a ideia central e convide à confiança humilde em Deus."
+  },
+  {
+    "id": "glossario",
+    "title": "11. Glossário e revisão",
+    "kind": "review",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-25"
+    ],
+    "body": "**Literatura sapiencial:** reflexão bíblica sobre sabedoria, justiça e vida.\n\n**Lamento:** expressão de dor, perplexidade e pedido de auxílio diante de Deus.\n\n**Retribuição:** relação entre ações e consequências; Jó questiona a aplicação mecânica dessa lógica a cada caso individual.\n\n**Integridade:** coerência e retidão de vida diante de Deus e das pessoas.\n\n**Revisão:** quem fala? O livro endossa a fala? O que o prólogo revela? Qual aplicação respeita o texto?"
+  },
+  {
+    "id": "conclusao",
+    "title": "12. Conclusão e oração",
+    "kind": "conclusion",
+    "confidence": "high",
+    "scriptureRefs": [
+      "Jó 29:1-25"
+    ],
+    "body": "**Conclusão:** Jó recorda sua antiga honra e o cuidado que exercia pelos vulneráveis. Leia o capítulo no contexto do diálogo e do livro inteiro. A passagem chama à humildade, à compaixão e à fidelidade, sem reduzir o sofrimento humano a fórmulas.\n\n**Oração:** Senhor Deus, dá-nos sabedoria para compreender tua Palavra com humildade. Livra-nos de julgar precipitadamente, ensina-nos a consolar com compaixão, a praticar justiça e a confiar em Cristo. Sustenta os que sofrem e guia-nos na verdade. Amém."
+  }
+]
+};
