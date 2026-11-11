@@ -40,6 +40,16 @@ import { secondSamuel7Study } from "./2-samuel-7-study";
 import { secondSamuel8Study } from "./2-samuel-8-study";
 import { secondSamuel9Study } from "./2-samuel-9-study";
 import { secondSamuel10Study } from "./2-samuel-10-study";
+import { secondSamuel11Study } from "./2-samuel-11-study";
+import { secondSamuel12Study } from "./2-samuel-12-study";
+import { secondSamuel13Study } from "./2-samuel-13-study";
+import { secondSamuel14Study } from "./2-samuel-14-study";
+import { secondSamuel15Study } from "./2-samuel-15-study";
+import { secondSamuel16Study } from "./2-samuel-16-study";
+import { secondSamuel17Study } from "./2-samuel-17-study";
+import { secondSamuel18Study } from "./2-samuel-18-study";
+import { secondSamuel19Study } from "./2-samuel-19-study";
+import { secondSamuel20Study } from "./2-samuel-20-study";
 
 import { ruth1Study } from "./ruth-1-study";
 import { ruth2Study } from "./ruth-2-study";
@@ -330,6 +340,16 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-2-samuel-cap-8": secondSamuel8Study,
   "biblia-2-samuel-cap-9": secondSamuel9Study,
   "biblia-2-samuel-cap-10": secondSamuel10Study,
+  "biblia-2-samuel-cap-11": secondSamuel11Study,
+  "biblia-2-samuel-cap-12": secondSamuel12Study,
+  "biblia-2-samuel-cap-13": secondSamuel13Study,
+  "biblia-2-samuel-cap-14": secondSamuel14Study,
+  "biblia-2-samuel-cap-15": secondSamuel15Study,
+  "biblia-2-samuel-cap-16": secondSamuel16Study,
+  "biblia-2-samuel-cap-17": secondSamuel17Study,
+  "biblia-2-samuel-cap-18": secondSamuel18Study,
+  "biblia-2-samuel-cap-19": secondSamuel19Study,
+  "biblia-2-samuel-cap-20": secondSamuel20Study,
   "biblia-juizes-cap-1": judges1Study,
   "biblia-juizes-cap-2": judges2Study,
   "biblia-juizes-cap-3": judges3Study,
