@@ -69,6 +69,46 @@ export const secondSamuel14Study: StudyContent = {
       "2 Samuel 14:28-33"
     ],
     "body": "**Leitura bíblica:** leia 2 Samuel 14:28-33 diretamente em sua Bíblia. O comentário a seguir é autoral e não substitui uma tradução bíblica.\n\n**Observação do texto:** Absalão provoca um incêndio para forçar Joabe a atendê-lo. Davi finalmente o recebe e o beija, mas o texto não registra confissão ou reparação. O gesto formal não demonstra cura profunda.\n\n**Interpretação:** observe os personagens, as ações, os contrastes, as repetições e as consequências narradas. Diferencie o que o narrador afirma daquilo que os personagens dizem. A passagem deve ser compreendida no desenvolvimento do capítulo e na história da aliança davídica.\n\n**Contexto histórico e literário:** Absalão vive exilado após matar Amnom. Joabe usa uma mulher sábia de Tecoa para influenciar Davi. A narrativa examina a retórica política e a diferença entre permitir o retorno de alguém e restaurar verdadeiramente uma relação.\n\n**Conexão bíblico-teológica:** a história de Davi não exige idealizar o rei. A esperança bíblica aponta para o Filho de Davi, Jesus Cristo, cujo reino manifesta justiça e serviço. O Novo Testamento não autoriza transferir automaticamente para a igreja as guerras, punições ou disputas políticas da monarquia de Israel.\n\n**Aplicação:** pratique verdade, justiça, humildade e cuidado com o próximo. Não confunda sucesso estratégico com aprovação moral de Deus; avalie atitudes à luz do caráter de Cristo."
+  },
+  {
+    "id": "2sm-14-complemento-1",
+    "title": "A mulher de Tecoa como mediadora e personagem retórica",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 14"
+    ],
+    "body": "**Análise:** O discurso da mulher de Tecoa é uma construção persuasiva. A comparação ilumina a compaixão, mas não elimina a necessidade de responsabilização e proteção.\n\n**Leitura cuidadosa:** A mulher de Tecoa como mediadora e personagem retórica. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-14-complemento-2",
+    "title": "Os limites da analogia e a responsabilidade pública",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 14"
+    ],
+    "body": "**Análise:** O discurso da mulher de Tecoa é uma construção persuasiva. A comparação ilumina a compaixão, mas não elimina a necessidade de responsabilização e proteção.\n\n**Leitura cuidadosa:** Os limites da analogia e a responsabilidade pública. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-14-complemento-3",
+    "title": "Retorno formal e reconciliação responsável",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 14"
+    ],
+    "body": "**Análise:** O discurso da mulher de Tecoa é uma construção persuasiva. A comparação ilumina a compaixão, mas não elimina a necessidade de responsabilização e proteção.\n\n**Leitura cuidadosa:** Retorno formal e reconciliação responsável. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-14-complemento-4",
+    "title": "A diferença entre aparência, influência e caráter",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 14"
+    ],
+    "body": "**Análise:** O discurso da mulher de Tecoa é uma construção persuasiva. A comparação ilumina a compaixão, mas não elimina a necessidade de responsabilização e proteção.\n\n**Leitura cuidadosa:** A diferença entre aparência, influência e caráter. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
   }
-]
+
 };
