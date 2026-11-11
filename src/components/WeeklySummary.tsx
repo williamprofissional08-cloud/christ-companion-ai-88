@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import { Link } from "@tanstack/react-router";
 import { HABIT_ITEMS } from "@/lib/types";
 
 type Summary = {
@@ -16,88 +18,40 @@ type Summary = {
 
 const WEEKDAYS = ["D", "S", "T", "Q", "Q", "S", "S"];
 
-/** Resumo semanal de hábitos, trilhas, diário e metas. */
-export function WeeklySummary({
-  summary,
-  isLoading,
-}: {
-  summary: Summary | undefined;
-  isLoading?: boolean;
-}) {
-  if (isLoading || !summary) {
-    return <Skeleton className="h-56 w-full" />;
-  }
-
+export function WeeklySummary({ summary, isLoading }: { summary: Summary | undefined; isLoading?: boolean }) {
+  if (isLoading || !summary) return <Skeleton className="h-28 w-full rounded-2xl" />;
   const maxPerDay = HABIT_ITEMS.length;
+  const hasActivity = summary.habitTotal > 0 || summary.activeDays > 0 || summary.journalCount > 0 ||
+    summary.goalsCompleted > 0 || summary.tracksCompleted > 0 ||
+    summary.tracks.some((track) => track.completed > 0);
 
   return (
-    <Card className="border-border/50 p-6 shadow-soft">
-      <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-        Resumo dos últimos 7 dias
-      </p>
-
-      <div className="mt-4 flex items-end justify-between gap-2">
-        {summary.days.map((day) => {
-          const height = Math.max(6, (day.done / maxPerDay) * 72);
-          const weekday = WEEKDAYS[new Date(`${day.day}T12:00:00`).getDay()];
-          return (
-            <div key={day.day} className="flex flex-1 flex-col items-center gap-2">
-              <div className="flex h-[72px] w-full items-end">
-                <div
-                  className="w-full rounded-t-md bg-primary/80"
-                  style={{ height: `${height}px` }}
-                  title={`${day.done} de ${maxPerDay} hábitos`}
-                />
-              </div>
-              <span className="text-[11px] text-muted-foreground">{weekday}</span>
-            </div>
-          );
-        })}
+    <Card className="border-border/50 bg-white p-4 shadow-sm dark:bg-card sm:p-5">
+      <div className="flex items-center justify-between gap-2">
+        <h2 className="text-sm font-semibold">Resumo dos últimos 7 dias</h2>
+        {hasActivity ? <span className="text-xs text-muted-foreground">{summary.activeDays} dia(s) ativos</span> : null}
       </div>
-
-      <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <Metric label="Hábitos concluídos" value={String(summary.habitTotal)} />
-        <Metric label="Dias ativos" value={`${summary.activeDays}/7`} />
-        <Metric label="Registros no diário" value={String(summary.journalCount)} />
-        <Metric label="Metas concluídas" value={`${summary.goalsCompleted}/${summary.goalsTotal}`} />
-      </div>
-
-      <div className="mt-6">
-        <p className="text-sm font-medium">
-          Trilhas guiadas{" "}
-          <span className="text-muted-foreground">
-            ({summary.tracksCompleted} concluída(s))
-          </span>
-        </p>
-        {summary.tracks.length ? (
-          <div className="mt-3 space-y-3">
-            {summary.tracks.slice(0, 4).map((track) => (
-              <div key={track.slug}>
-                <div className="flex items-center justify-between text-sm">
-                  <span>{track.title}</span>
-                  <span className="text-muted-foreground">
-                    {track.completed}/{track.total}
-                  </span>
-                </div>
-                <Progress value={track.percent} className="mt-1.5" />
-              </div>
-            ))}
+      {!hasActivity ? (
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm text-muted-foreground">Comece hoje, um passo de cada vez.</p>
+          <Button asChild size="sm" variant="outline" className="rounded-full"><Link to="/devocional">Começar hoje</Link></Button>
+        </div>
+      ) : (
+        <>
+          <div className="mt-4 flex items-end justify-between gap-2">
+            {summary.days.map((day) => {
+              const height = Math.max(4, (day.done / maxPerDay) * 44);
+              const weekday = WEEKDAYS[new Date(`${day.day}T12:00:00`).getDay()];
+              return <div key={day.day} className="flex flex-1 flex-col items-center gap-1.5"><div className="flex h-11 w-full items-end"><div className="w-full rounded-t-md bg-primary/75" style={{ height: `${height}px` }} title={`${day.done} de ${maxPerDay} hábitos`} /></div><span className="text-[10px] text-muted-foreground">{weekday}</span></div>;
+            })}
           </div>
-        ) : (
-          <p className="mt-2 text-sm text-muted-foreground">
-            Você ainda não iniciou uma trilha guiada.
-          </p>
-        )}
-      </div>
+          <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-xs text-muted-foreground">
+            <span><strong className="text-foreground">{summary.habitTotal}</strong> hábitos concluídos</span>
+            <span><strong className="text-foreground">{summary.journalCount}</strong> registros no diário</span>
+            {summary.tracksCompleted > 0 ? <span><strong className="text-foreground">{summary.tracksCompleted}</strong> trilhas concluídas</span> : null}
+          </div>
+        </>
+      )}
     </Card>
-  );
-}
-
-function Metric({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <p className="font-display text-2xl font-semibold">{value}</p>
-      <p className="text-xs text-muted-foreground">{label}</p>
-    </div>
   );
 }
