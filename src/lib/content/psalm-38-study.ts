@@ -98,9 +98,9 @@ export const psalm38Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 38:1-5"
+        "Salmos 38:1-8"
       ],
-      "body": "**Trecho:** Salmos 38:1-5.\\n\\n**Lugar no argumento:** Sofrimento corporal e consciência da culpa. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **1.** O salmista pede correção sem ira esmagadora.\\n- **2.** As flechas e a mão pesada representam a intensidade da disciplina percebida.\\n- **3.** A saúde é descrita como abalada por causa da indignação; linguagem de experiência pessoal.\\n- **4.** A culpa pesa como carga difícil de suportar.\\n- **5.** As feridas são comparadas a mau cheiro, imagem de sofrimento extremo.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 38:1-8.\\n\\n**Lugar no argumento:** Sofrimento corporal e consciência da culpa. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **1.** O salmista pede correção sem ira esmagadora.\\n- **2.** As flechas e a mão pesada representam a intensidade da disciplina percebida.\\n- **3.** A saúde é descrita como abalada por causa da indignação; linguagem de experiência pessoal.\\n- **4.** A culpa pesa como carga difícil de suportar.\\n- **5.** As feridas são comparadas a mau cheiro, imagem de sofrimento extremo.\\n- **6.** A pessoa está curvada e enlutada durante o dia.\\n- **7.** A dor atinge o interior do corpo e a sensação de bem-estar desaparece.\\n- **8.** O salmista se sente enfraquecido e geme por causa da agitação interior.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-2",
@@ -108,9 +108,9 @@ export const psalm38Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 38:6-10"
+        "Salmos 38:9-14"
       ],
-      "body": "**Trecho:** Salmos 38:6-10.\\n\\n**Lugar no argumento:** Deus conhece o desejo e o silêncio diante dos acusadores. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **6.** A pessoa está curvada e enlutada durante o dia.\\n- **7.** A dor atinge o interior do corpo e a sensação de bem-estar desaparece.\\n- **8.** O salmista se sente enfraquecido e geme por causa da agitação interior.\\n- **9.** Deus conhece todos os desejos e suspiros, mesmo quando não são articulados.\\n- **10.** O coração bate acelerado e as forças diminuem.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 38:9-14.\\n\\n**Lugar no argumento:** Deus conhece o desejo e o silêncio diante dos acusadores. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **9.** Deus conhece todos os desejos e suspiros, mesmo quando não são articulados.\\n- **10.** O coração bate acelerado e as forças diminuem.\\n- **11.** A luz dos olhos se apaga, imagem de exaustão e abatimento.\\n- **12.** Amigos e familiares se afastam; o sofrimento inclui isolamento.\\n- **13.** Os adversários armam laços e falam em destruição.\\n- **14.** O salmista se comporta como quem não ouve e não responde às acusações.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-3",
@@ -118,23 +118,13 @@ export const psalm38Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 38:11-15"
+        "Salmos 38:15-20"
       ],
-      "body": "**Trecho:** Salmos 38:11-15.\\n\\n**Lugar no argumento:** Confissão, espera e hostilidade. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **11.** A luz dos olhos se apaga, imagem de exaustão e abatimento.\\n- **12.** Amigos e familiares se afastam; o sofrimento inclui isolamento.\\n- **13.** Os adversários armam laços e falam em destruição.\\n- **14.** O salmista se comporta como quem não ouve e não responde às acusações.\\n- **15.** Ele permanece sem defesa verbal, aguardando a resposta do Senhor.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 38:15-20.\\n\\n**Lugar no argumento:** Confissão, espera e hostilidade. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **15.** Ele permanece sem defesa verbal, aguardando a resposta do Senhor.\\n- **16.** A esperança está em Deus, que pode responder.\\n- **17.** O pedido é para que os adversários não triunfem quando o salmista vacila.\\n- **18.** Ele reconhece sua fraqueza e lamenta seu pecado.\\n- **19.** A culpa é confessada sem disfarce.\\n- **20.** Os inimigos são numerosos e retribuem o bem com mal.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-4",
       "title": "4.4 Exposição: Apelo final pela presença salvadora",
-      "kind": "exposition",
-      "confidence": "high",
-      "scriptureRefs": [
-        "Salmos 38:16-20"
-      ],
-      "body": "**Trecho:** Salmos 38:16-20.\\n\\n**Lugar no argumento:** Apelo final pela presença salvadora. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **16.** A esperança está em Deus, que pode responder.\\n- **17.** O pedido é para que os adversários não triunfem quando o salmista vacila.\\n- **18.** Ele reconhece sua fraqueza e lamenta seu pecado.\\n- **19.** A culpa é confessada sem disfarce.\\n- **20.** Os inimigos são numerosos e retribuem o bem com mal.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
-    },
-    {
-      "id": "pericope-5",
-      "title": "4.5 Exposição: Apelo final pela presença salvadora",
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
