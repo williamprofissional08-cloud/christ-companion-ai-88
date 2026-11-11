@@ -1,0 +1,186 @@
+import type { StudyContent } from "../types";
+
+/** Estudo aprofundado de 2 Reis 17, organizado no padrão didático de Gênesis 1. */
+export const secondKings17Study: StudyContent = {
+  "version": 4,
+  "depth": "deep",
+  "intro": "A queda de Samaria e a explicação teológica do exílio. O reino do norte cai diante da Assíria. O capítulo oferece uma longa interpretação teológica da catástrofe: idolatria, injustiça e rejeição dos profetas. Também descreve a instalação de populações estrangeiras e a mistura de práticas religiosas.",
+  "historicalContext": "O reino do norte cai diante da Assíria. O capítulo oferece uma longa interpretação teológica da catástrofe: idolatria, injustiça e rejeição dos profetas. Também descreve a instalação de populações estrangeiras e a mistura de práticas religiosas.",
+  "keyPoints": [
+    {
+      "title": "Tema central",
+      "text": "A queda de Samaria e a explicação teológica do exílio"
+    },
+    {
+      "title": "Contexto histórico-literário",
+      "text": "O reino do norte cai diante da Assíria. O capítulo oferece uma longa interpretação teológica da catástrofe: idolatria, injustiça e rejeição dos profetas. Também descreve a instalação de populações estrangeiras e a mistura de práticas religiosas."
+    },
+    {
+      "title": "Estrutura do capítulo",
+      "text": "1. O fim do reino do norte e o exílio (1–6); 2. As razões apresentadas para a queda (7–12); 3. A rejeição dos profetas e a persistência na idolatria (13–18); 4. Judá, Israel e o exílio como consequência da aliança (19–23); 5. Os povos assentados em Samaria e o sincretismo (24–41)"
+    },
+    {
+      "title": "Chave de interpretação",
+      "text": "Distinguir observação, interpretação e aplicação. Acompanhar a avaliação do narrador, comparar textos relacionados e evitar transformar relatos particulares em fórmulas universais."
+    },
+    {
+      "title": "Conexão com Cristo",
+      "text": "A história dos reis expõe a necessidade de justiça, fidelidade e liderança responsável. O Novo Testamento apresenta Jesus como o Rei justo que serve, não explora, e chama seus discípulos a rejeitar a lógica de domínio e vingança."
+    }
+  ],
+  "application": "Leia 2 Reis 17 integralmente. Observe o contexto, identifique as decisões e consequências, compare as referências e formule aplicações que respeitem o sentido original. À luz de Cristo, pratique fidelidade, justiça, humildade e serviço. Não transforme acontecimentos particulares em fórmulas universais nem use narrativas de violência para legitimar práticas atuais.",
+  "crossReferences": [
+    "Deuteronômio 28:36-37",
+    "Deuteronômio 29:24-28",
+    "Oséias 4:1-6",
+    "Amós 5:4-15",
+    "Lucas 4:24-27"
+  ],
+  "questions": [
+    "Quais razões o narrador apresenta para a queda de Samaria?",
+    "Qual é o papel dos profetas antes do exílio?",
+    "Por que não devemos usar o capítulo para explicar automaticamente tragédias atuais?",
+    "O que o texto critica na mistura de práticas religiosas?"
+  ],
+  "conclusion": "A queda de Samaria e a explicação teológica do exílio. O capítulo integra a história da aliança e convida a avaliar a liderança, a fidelidade e as consequências das escolhas. Sua leitura cristã deve conduzir à humildade, à justiça, à misericórdia e ao seguimento de Jesus.",
+  "prayer": "Senhor Deus, dá-nos entendimento para ler tua Palavra com fidelidade e humildade. Ajuda-nos a distinguir o que o texto afirma de nossas próprias ideias, a rejeitar aplicações injustas e a viver com justiça, misericórdia e serviço. Que nosso estudo nos aproxime de Jesus Cristo. Amém.",
+  "sections": [
+    {
+      "id": "introducao-contexto",
+      "title": "1. Introdução e contexto histórico",
+      "kind": "introduction",
+      "confidence": "high",
+      "scriptureRefs": [
+        "2 Reis 17:1-8"
+      ],
+      "body": "**Tema:** A queda de Samaria e a explicação teológica do exílio.\n\nO reino do norte cai diante da Assíria. O capítulo oferece uma longa interpretação teológica da catástrofe: idolatria, injustiça e rejeição dos profetas. Também descreve a instalação de populações estrangeiras e a mistura de práticas religiosas.\n\n**Por que este capítulo importa?** Ele integra a história dos reinos de Israel e Judá e ajuda a compreender como decisões espirituais, alianças políticas, liderança e injustiça afetam a comunidade. Leia o capítulo inteiro antes de estudar cada unidade."
+    },
+    {
+      "id": "estrutura-literaria",
+      "title": "2. Estrutura literária e movimento do capítulo",
+      "kind": "analysis",
+      "confidence": "high",
+      "scriptureRefs": [
+        "2 Reis 17:1-41"
+      ],
+      "body": "O capítulo progride em 5 movimentos narrativos:\n\n**1. O fim do reino do norte e o exílio (2 Reis 17:1-6).** Oseias se torna vassalo da Assíria, tenta aliança com o Egito e deixa de pagar tributo. Samaria é cercada e conquistada. Parte da população é deportada, encerrando o reino independente de Israel.\n\n**2. As razões apresentadas para a queda (2 Reis 17:7-12).** O narrador relaciona a queda à infidelidade contra o Senhor, à idolatria e à adoção de práticas das nações. A explicação é teológica e ligada à aliança; não deve ser usada para atribuir toda tragédia contemporânea a um pecado específico.\n\n**3. A rejeição dos profetas e a persistência na idolatria (2 Reis 17:13-18).** Deus envia profetas para chamar Israel e Judá ao retorno, mas o povo não escuta. O texto descreve resistência persistente, culto a ídolos e práticas condenadas pela aliança. A paciência divina precede o juízo.\n\n**4. Judá, Israel e o exílio como consequência da aliança (2 Reis 17:19-23).** Judá também não guarda os mandamentos, e Israel é removido de sua terra. A narrativa enfatiza que a palavra profética se cumpriu. A advertência é dirigida ao povo da aliança em seu contexto histórico.\n\n**5. Os povos assentados em Samaria e o sincretismo (2 Reis 17:24-41).** A Assíria instala outros povos, que enfrentam ataques de leões e recebem instrução sobre o culto ao Senhor. Porém continuam servindo a seus próprios deuses. O texto denuncia religião misturada e não autoriza hostilidade étnica.\n\nObserve repetições, contrastes, falas proféticas, ações dos governantes e consequências. A organização ajuda a não retirar uma frase do fluxo do capítulo."
+    },
+    {
+      "id": "2kings-17-pericope-1",
+      "title": "1. O fim do reino do norte e o exílio (versículos 1–6)",
+      "kind": "analysis",
+      "confidence": "high",
+      "scriptureRefs": [
+        "2 Reis 17:1-6"
+      ],
+      "body": "**Leitura bíblica orientada — 2 Reis 17:1-6.** Leia a passagem integralmente em sua Bíblia. O comentário a seguir é uma explicação autoral em linguagem atual; não é tradução oficial nem substitui o texto bíblico.\n\n**Observação do texto**\n\nOseias se torna vassalo da Assíria, tenta aliança com o Egito e deixa de pagar tributo. Samaria é cercada e conquistada. Parte da população é deportada, encerrando o reino independente de Israel.\n\n**Contexto histórico-literário**\n\nO reino do norte cai diante da Assíria. O capítulo oferece uma longa interpretação teológica da catástrofe: idolatria, injustiça e rejeição dos profetas. Também descreve a instalação de populações estrangeiras e a mistura de práticas religiosas.\n\n**O que o texto afirma e o que não afirma**\n\nA narrativa deve ser lida primeiro em seu contexto: personagens, decisões, consequências e avaliação do narrador. Não transforme um acontecimento singular em regra universal, nem atribua ao texto uma afirmação que ele não faz. Quando o capítulo descreve violência, idolatria ou injustiça, descrição não significa aprovação nem autorização para repetir tais atos.\n\n**Conexões bíblicas**\n\nCompare Deuteronômio 28:36-37; Deuteronômio 29:24-28; Oséias 4:1-6. Observe o contexto de cada passagem antes de construir uma ligação teológica.\n\n**Aplicação cristocêntrica**\n\nÀ luz de Jesus Cristo, autoridade deve ser exercida como serviço, a verdade deve caminhar com misericórdia e a fé não pode ser instrumento de exploração ou coerção. Pergunte como esta passagem chama o leitor à fidelidade, à justiça, à humildade e ao cuidado com o próximo."
+    },
+    {
+      "id": "2kings-17-pericope-2",
+      "title": "2. As razões apresentadas para a queda (versículos 7–12)",
+      "kind": "analysis",
+      "confidence": "high",
+      "scriptureRefs": [
+        "2 Reis 17:7-12"
+      ],
+      "body": "**Leitura bíblica orientada — 2 Reis 17:7-12.** Leia a passagem integralmente em sua Bíblia. O comentário a seguir é uma explicação autoral em linguagem atual; não é tradução oficial nem substitui o texto bíblico.\n\n**Observação do texto**\n\nO narrador relaciona a queda à infidelidade contra o Senhor, à idolatria e à adoção de práticas das nações. A explicação é teológica e ligada à aliança; não deve ser usada para atribuir toda tragédia contemporânea a um pecado específico.\n\n**Contexto histórico-literário**\n\nO reino do norte cai diante da Assíria. O capítulo oferece uma longa interpretação teológica da catástrofe: idolatria, injustiça e rejeição dos profetas. Também descreve a instalação de populações estrangeiras e a mistura de práticas religiosas.\n\n**O que o texto afirma e o que não afirma**\n\nA narrativa deve ser lida primeiro em seu contexto: personagens, decisões, consequências e avaliação do narrador. Não transforme um acontecimento singular em regra universal, nem atribua ao texto uma afirmação que ele não faz. Quando o capítulo descreve violência, idolatria ou injustiça, descrição não significa aprovação nem autorização para repetir tais atos.\n\n**Conexões bíblicas**\n\nCompare Deuteronômio 28:36-37; Deuteronômio 29:24-28; Oséias 4:1-6. Observe o contexto de cada passagem antes de construir uma ligação teológica.\n\n**Aplicação cristocêntrica**\n\nÀ luz de Jesus Cristo, autoridade deve ser exercida como serviço, a verdade deve caminhar com misericórdia e a fé não pode ser instrumento de exploração ou coerção. Pergunte como esta passagem chama o leitor à fidelidade, à justiça, à humildade e ao cuidado com o próximo."
+    },
+    {
+      "id": "2kings-17-pericope-3",
+      "title": "3. A rejeição dos profetas e a persistência na idolatria (versículos 13–18)",
+      "kind": "analysis",
+      "confidence": "high",
+      "scriptureRefs": [
+        "2 Reis 17:13-18"
+      ],
+      "body": "**Leitura bíblica orientada — 2 Reis 17:13-18.** Leia a passagem integralmente em sua Bíblia. O comentário a seguir é uma explicação autoral em linguagem atual; não é tradução oficial nem substitui o texto bíblico.\n\n**Observação do texto**\n\nDeus envia profetas para chamar Israel e Judá ao retorno, mas o povo não escuta. O texto descreve resistência persistente, culto a ídolos e práticas condenadas pela aliança. A paciência divina precede o juízo.\n\n**Contexto histórico-literário**\n\nO reino do norte cai diante da Assíria. O capítulo oferece uma longa interpretação teológica da catástrofe: idolatria, injustiça e rejeição dos profetas. Também descreve a instalação de populações estrangeiras e a mistura de práticas religiosas.\n\n**O que o texto afirma e o que não afirma**\n\nA narrativa deve ser lida primeiro em seu contexto: personagens, decisões, consequências e avaliação do narrador. Não transforme um acontecimento singular em regra universal, nem atribua ao texto uma afirmação que ele não faz. Quando o capítulo descreve violência, idolatria ou injustiça, descrição não significa aprovação nem autorização para repetir tais atos.\n\n**Conexões bíblicas**\n\nCompare Deuteronômio 28:36-37; Deuteronômio 29:24-28; Oséias 4:1-6. Observe o contexto de cada passagem antes de construir uma ligação teológica.\n\n**Aplicação cristocêntrica**\n\nÀ luz de Jesus Cristo, autoridade deve ser exercida como serviço, a verdade deve caminhar com misericórdia e a fé não pode ser instrumento de exploração ou coerção. Pergunte como esta passagem chama o leitor à fidelidade, à justiça, à humildade e ao cuidado com o próximo."
+    },
+    {
+      "id": "2kings-17-pericope-4",
+      "title": "4. Judá, Israel e o exílio como consequência da aliança (versículos 19–23)",
+      "kind": "analysis",
+      "confidence": "high",
+      "scriptureRefs": [
+        "2 Reis 17:19-23"
+      ],
+      "body": "**Leitura bíblica orientada — 2 Reis 17:19-23.** Leia a passagem integralmente em sua Bíblia. O comentário a seguir é uma explicação autoral em linguagem atual; não é tradução oficial nem substitui o texto bíblico.\n\n**Observação do texto**\n\nJudá também não guarda os mandamentos, e Israel é removido de sua terra. A narrativa enfatiza que a palavra profética se cumpriu. A advertência é dirigida ao povo da aliança em seu contexto histórico.\n\n**Contexto histórico-literário**\n\nO reino do norte cai diante da Assíria. O capítulo oferece uma longa interpretação teológica da catástrofe: idolatria, injustiça e rejeição dos profetas. Também descreve a instalação de populações estrangeiras e a mistura de práticas religiosas.\n\n**O que o texto afirma e o que não afirma**\n\nA narrativa deve ser lida primeiro em seu contexto: personagens, decisões, consequências e avaliação do narrador. Não transforme um acontecimento singular em regra universal, nem atribua ao texto uma afirmação que ele não faz. Quando o capítulo descreve violência, idolatria ou injustiça, descrição não significa aprovação nem autorização para repetir tais atos.\n\n**Conexões bíblicas**\n\nCompare Deuteronômio 28:36-37; Deuteronômio 29:24-28; Oséias 4:1-6. Observe o contexto de cada passagem antes de construir uma ligação teológica.\n\n**Aplicação cristocêntrica**\n\nÀ luz de Jesus Cristo, autoridade deve ser exercida como serviço, a verdade deve caminhar com misericórdia e a fé não pode ser instrumento de exploração ou coerção. Pergunte como esta passagem chama o leitor à fidelidade, à justiça, à humildade e ao cuidado com o próximo."
+    },
+    {
+      "id": "2kings-17-pericope-5",
+      "title": "5. Os povos assentados em Samaria e o sincretismo (versículos 24–41)",
+      "kind": "analysis",
+      "confidence": "high",
+      "scriptureRefs": [
+        "2 Reis 17:24-41"
+      ],
+      "body": "**Leitura bíblica orientada — 2 Reis 17:24-41.** Leia a passagem integralmente em sua Bíblia. O comentário a seguir é uma explicação autoral em linguagem atual; não é tradução oficial nem substitui o texto bíblico.\n\n**Observação do texto**\n\nA Assíria instala outros povos, que enfrentam ataques de leões e recebem instrução sobre o culto ao Senhor. Porém continuam servindo a seus próprios deuses. O texto denuncia religião misturada e não autoriza hostilidade étnica.\n\n**Contexto histórico-literário**\n\nO reino do norte cai diante da Assíria. O capítulo oferece uma longa interpretação teológica da catástrofe: idolatria, injustiça e rejeição dos profetas. Também descreve a instalação de populações estrangeiras e a mistura de práticas religiosas.\n\n**O que o texto afirma e o que não afirma**\n\nA narrativa deve ser lida primeiro em seu contexto: personagens, decisões, consequências e avaliação do narrador. Não transforme um acontecimento singular em regra universal, nem atribua ao texto uma afirmação que ele não faz. Quando o capítulo descreve violência, idolatria ou injustiça, descrição não significa aprovação nem autorização para repetir tais atos.\n\n**Conexões bíblicas**\n\nCompare Deuteronômio 28:36-37; Deuteronômio 29:24-28; Oséias 4:1-6. Observe o contexto de cada passagem antes de construir uma ligação teológica.\n\n**Aplicação cristocêntrica**\n\nÀ luz de Jesus Cristo, autoridade deve ser exercida como serviço, a verdade deve caminhar com misericórdia e a fé não pode ser instrumento de exploração ou coerção. Pergunte como esta passagem chama o leitor à fidelidade, à justiça, à humildade e ao cuidado com o próximo."
+    },
+    {
+      "id": "questoes-interpretativas",
+      "title": "8. Questões interpretativas e cuidados",
+      "kind": "interpretation",
+      "confidence": "probable",
+      "scriptureRefs": [
+        "2 Reis 17:1-41"
+      ],
+      "body": "**Distinções importantes para o estudo:**\n\n- **Descrição e aprovação:** o narrador pode relatar ações violentas ou pecaminosas sem recomendá-las.\n- **Promessa específica e regra geral:** sinais, livramentos e juízos dirigidos a pessoas em determinado momento não são garantias automáticas para todos.\n- **Contexto e aplicação:** a história de Israel deve ser compreendida dentro da aliança e do período monárquico antes de qualquer aplicação cristã.\n- **Cristo e o Reino:** o ensino de Jesus impede que autoridade, religião ou zelo sejam usados para exploração, vingança e coerção.\n\nQuestões que exigem cuidado devem permanecer abertas quando o próprio texto não oferece todos os detalhes."
+    },
+    {
+      "id": "referencias-cruzadas",
+      "title": "9. Referências bíblicas para aprofundamento",
+      "kind": "references",
+      "confidence": "high",
+      "scriptureRefs": [
+        "Deuteronômio 28:36-37",
+        "Deuteronômio 29:24-28",
+        "Oséias 4:1-6",
+        "Amós 5:4-15",
+        "Lucas 4:24-27"
+      ],
+      "body": "Leia as passagens em seu contexto e anote o que cada uma acrescenta:\n\n- **Deuteronômio 28:36-37:** compare o tema, o contexto histórico e a contribuição específica da passagem.\n- **Deuteronômio 29:24-28:** compare o tema, o contexto histórico e a contribuição específica da passagem.\n- **Oséias 4:1-6:** compare o tema, o contexto histórico e a contribuição específica da passagem.\n- **Amós 5:4-15:** compare o tema, o contexto histórico e a contribuição específica da passagem.\n- **Lucas 4:24-27:** compare o tema, o contexto histórico e a contribuição específica da passagem.\n\nNão use referências cruzadas como substituto da leitura do capítulo. Elas devem esclarecer, não forçar uma conclusão."
+    },
+    {
+      "id": "aplicacoes",
+      "title": "10. Aplicações para a vida cristã",
+      "kind": "application",
+      "confidence": "probable",
+      "scriptureRefs": [
+        "2 Reis 17:1-41",
+        "Mateus 20:25-28",
+        "João 13:12-17"
+      ],
+      "body": "**1. Fidelidade acima da aparência.** Examine se a obediência é integral ou apenas conveniente.\n\n**2. Responsabilidade no uso do poder.** Liderança, recursos e influência devem proteger pessoas, não servir ao orgulho.\n\n**3. Discernimento diante de crises.** Não confunda medo, propaganda ou prosperidade com verdade espiritual.\n\n**4. Misericórdia e justiça.** Não use narrativas antigas para legitimar violência, perseguição ou humilhação.\n\n**5. Humildade diante da Palavra.** Reconheça o que o texto afirma, o que permanece incerto e o que seria aplicação indevida.\n\n**Conexão cristocêntrica:** Jesus define grandeza como serviço (Mateus 20:25-28) e demonstra esse princípio ao lavar os pés dos discípulos (João 13:12-17)."
+    },
+    {
+      "id": "resumo-exercicios",
+      "title": "11. Resumo e exercícios de aprendizagem",
+      "kind": "reflection",
+      "confidence": "high",
+      "scriptureRefs": [
+        "2 Reis 17:1-41"
+      ],
+      "body": "**Resumo do capítulo**\n\nA queda de Samaria e a explicação teológica do exílio. A narrativa deve ser compreendida no contexto da história de Israel e Judá, observando a relação entre liderança, fidelidade à aliança, palavra profética e consequências comunitárias.\n\n**Responda sem consultar o estudo:**\n\n**1.** Quais razões o narrador apresenta para a queda de Samaria?\n\n**2.** Qual é o papel dos profetas antes do exílio?\n\n**3.** Por que não devemos usar o capítulo para explicar automaticamente tragédias atuais?\n\n**4.** O que o texto critica na mistura de práticas religiosas?\n\n**Atividade:** escreva em três colunas: (1) o que o texto diz; (2) o que você entende que significa; (3) uma aplicação que respeite o contexto. Depois confira suas respostas relendo o capítulo."
+    },
+    {
+      "id": "oficina-pregador",
+      "title": "12. Oficina do pregador — preparando uma mensagem",
+      "kind": "application",
+      "confidence": "probable",
+      "scriptureRefs": [
+        "2 Reis 17:1-41",
+        "Mateus 20:25-28"
+      ],
+      "body": "**Tema sugerido:** A queda de Samaria e a explicação teológica do exílio.\n\n**Ideia central:** Deus chama seu povo à fidelidade e responsabiliza governantes e comunidades por suas escolhas.\n\n**Introdução:** apresente o contexto histórico sem pressupor que o ouvinte conhece a sequência dos reis. Leia o capítulo e explique por que a situação era importante.\n\n**Desenvolvimento:**\n\n- **Ponto 1: O fim do reino do norte e o exílio.** Explique 2 Reis 17:1-6, destaque a ideia central e mostre como ela se conecta ao restante do capítulo.\n- **Ponto 2: As razões apresentadas para a queda.** Explique 2 Reis 17:7-12, destaque a ideia central e mostre como ela se conecta ao restante do capítulo.\n- **Ponto 3: A rejeição dos profetas e a persistência na idolatria.** Explique 2 Reis 17:13-18, destaque a ideia central e mostre como ela se conecta ao restante do capítulo.\n- **Ponto 4: Judá, Israel e o exílio como consequência da aliança.** Explique 2 Reis 17:19-23, destaque a ideia central e mostre como ela se conecta ao restante do capítulo.\n- **Ponto 5: Os povos assentados em Samaria e o sincretismo.** Explique 2 Reis 17:24-41, destaque a ideia central e mostre como ela se conecta ao restante do capítulo.\n\n**Conclusão cristocêntrica:** mostre como o texto aponta para a necessidade de fidelidade e liderança justa, e conecte essa necessidade ao ensino e ao exemplo de Jesus. Não transforme os reis antigos em modelos automáticos de liderança cristã.\n\n**Orientação:** não invente detalhes históricos, não apresente interpretação discutível como certeza e não use o texto para pressionar ou ferir ouvintes."
+    },
+    {
+      "id": "oracao-final",
+      "title": "13. Oração final",
+      "kind": "summary",
+      "confidence": "high",
+      "scriptureRefs": [
+        "2 Reis 17:1-41"
+      ],
+      "body": "Senhor Deus, ajuda-me a compreender este capítulo com atenção, humildade e fidelidade. Dá-me discernimento para reconhecer o que tua Palavra ensina, coragem para corrigir meus caminhos e amor para tratar as pessoas com justiça e misericórdia. Que o conhecimento das Escrituras me conduza a conhecer e seguir Jesus Cristo. Amém."
+    }
+  ]
+};
