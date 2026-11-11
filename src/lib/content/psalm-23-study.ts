@@ -98,7 +98,7 @@ export const psalm23Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 23:1-3"
       ],
-      "body": "**Trecho:** Salmos 23:1-3.\n\n**Observação literária e teológica:** O pastor que provê e restaura. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **1.** O Senhor como pastor expressa cuidado pessoal e autoridade protetora.\n- **2.** A ausência de falta descreve contentamento sob o cuidado divino, não promessa de riqueza.\n- **3.** Pastagens e águas tranquilas comunicam provisão e descanso.\n- **4.** A restauração da vida aponta para renovação e cuidado integral.\n- **5.** Deus guia por caminhos retos por causa de seu nome e caráter.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
+      "body": "**Trecho:** Salmos 23:1-3.\n\n**Observação literária e teológica:** O pastor que provê e restaura. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **1.** O Senhor como pastor expressa cuidado pessoal e autoridade protetora.\n- **2.** Pastagens verdejantes e águas tranquilas comunicam provisão e descanso; a ausência de falta não promete riqueza.\n- **3.** Deus restaura a vida e guia por caminhos retos por causa de seu nome e caráter.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
     },
     {
       "id": "pericope-2",
@@ -108,7 +108,7 @@ export const psalm23Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 23:4-4"
       ],
-      "body": "**Trecho:** Salmos 23:4-4.\n\n**Observação literária e teológica:** A presença no vale escuro. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **4.** O vale de sombra profunda representa perigo e mortalidade; o salmista não nega a realidade do medo.\n- **5.** A presença do pastor sustenta a confiança; vara e cajado simbolizam proteção e direção.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
+      "body": "**Trecho:** Salmos 23:4-4.\n\n**Observação literária e teológica:** A presença no vale escuro. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **4.** O vale de sombra profunda representa perigo e mortalidade; mesmo ali, a presença do pastor sustenta a confiança, e vara e cajado simbolizam proteção e direção.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
     },
     {
       "id": "pericope-3",
@@ -118,7 +118,7 @@ export const psalm23Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 23:5-6"
       ],
-      "body": "**Trecho:** Salmos 23:5-6.\n\n**Observação literária e teológica:** O anfitrião que acolhe e a bondade que acompanha. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **5.** A mesa diante dos adversários comunica honra e acolhimento em meio à oposição.\n- **6.** Óleo e cálice abundante são sinais de hospitalidade e generosidade.\n- **7.** Bondade e amor leal são retratados como acompanhantes constantes; a casa do Senhor expressa comunhão duradoura.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
+      "body": "**Trecho:** Salmos 23:5-6.\n\n**Observação literária e teológica:** O anfitrião que acolhe e a bondade que acompanha. Observe como esta unidade desenvolve a mensagem do poema.\n\n**Versículo por versículo:**\n- **5.** A mesa diante dos adversários comunica honra e acolhimento em meio à oposição.\n- **6.** Óleo, cálice abundante, bondade e amor leal expressam hospitalidade e cuidado duradouro; a casa do Senhor comunica comunhão.\n\n**Interpretação responsável:** leia as imagens no conjunto do salmo. Diferencie experiência do salmista, afirmação teológica e aplicação contemporânea. Não transforme a poesia em fórmula automática.\n\n**Aplicação:** identifique uma resposta concreta coerente com o texto e com o restante das Escrituras."
     },
     {
       "id": "sintese-teologica",
