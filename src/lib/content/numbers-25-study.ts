@@ -3,8 +3,8 @@ import type { StudyContent } from "../types";
 export const Numbers25Study: StudyContent = {
   "version": 4,
   "depth": "deep",
-  "intro": "Números 25 assinala uma das transições teológicas e narrativas mais dramáticas de todo o Pentateuco, marcando a queda trágica de Israel em Sitim, às portas da Terra Prometida. Após os oráculos triunfantes de Balaão nos capítulos 22 a 24 — onde se declarou que nenhuma magia ou maldição externa poderia derrubar a congregação eleita protegida por Yahweh —, o povo sucumbe à ruína a partir de dentro. A sedução cultual e moral pelos moabitas e midianitas expõe a terrível vulnerabilidade da aliança: o perigo supremo não reside nas hostes pagãs que conspiram nas fronteiras, mas na apostasia interna que desonra a santidade do Senhor. A infidelidade com Baal-Peor resulta em uma praga devastadora e na execução judicial dos culpados, evento apenas estancado pela intervenção zelosa e sacerdotal de Fineias, filho de Eleazar. Este capítulo funciona como a linha divisória definitiva entre a velha geração do êxodo, sentenciada a perecer no deserto, e a nova geração que será recenseada em Números 26 para herdar Canaã. O episódio cristaliza o conceito veterotestamentário do zelo divino (qin'ah), delineia a gravidade incomparável do sincretismo idolátrico e estabelece os fundamentos para a teologia bíblica da expiação e do sacerdócio perpétuo, ressoando profundamente em toda a história de Israel e nos escritos apostólicos.",
-  "historicalContext": "O cenário histórico e geográfico de Números 25 localiza-se nas campinas de Moabe, especificamente em Sitim (Abel-Sitim), a leste do rio Jordão, defronte de Jericó. Israel havia derrotado Seom e Ogue e encontrava-se acampado num vale fértil, em um período de calmaria militar que precederia a travessia do Jordão sob a liderança subsequente de Josué. As evidências textuais articulam que os povos locais, temerosos da força israelita, recorreram à diplomacia religiosa e sexual, envolvendo elementos cúlticos moabitas e clãs midianitas confederados. O culto a Baal-Peor envolvia refeições sacrificiais e ritos associados à fertilidade cananeia, nos quais a lealdade ao soberano cósmico era expressa mediante integração comunitária e comensalidade cúltica. A arqueologia da Transjordânia no final da Idade do Bronze e início do Ferro I atesta a coexistência fragmentada de grupos seminômades midianitas e centros cultuais locais dedicados a manifestações regionais de Baal. O texto bíblico não fornece detalhes mitológicos exaustivos sobre Peor, mantendo o foco analítico e moral na violação do primeiro mandamento do Decálogo e na quebra radical do pacto do Sinai.",
+  "intro": "Números 25 narra a infidelidade de parte de Israel em Sitim. Depois das bênçãos pronunciadas por Balaão nos capítulos anteriores, o povo se envolve com práticas de culto a Baal-Peor. A narrativa descreve a ira divina, uma praga e a intervenção violenta de Fineias, seguida da aliança de paz concedida a ele. O capítulo é difícil e exige leitura cuidadosa: apresenta um episódio específico da história de Israel sob a aliança do Sinai, não uma autorização geral para violência religiosa. O Novo Testamento retoma o acontecimento como advertência contra idolatria e imoralidade.",
+  "historicalContext": "Israel está nas campinas de Moabe, perto do Jordão, antes da entrada em Canaã. O texto menciona Sitim e relaciona o episódio ao culto de Baal-Peor. A narrativa associa mulheres moabitas, refeições sacrificiais e a adoração de outros deuses; não fornece uma descrição completa dos ritos praticados em Peor. A participação de midianitas aparece especialmente nos versículos 6–18. Números 31:16 relaciona o conselho de Balaão ao episódio, mas essa informação deve ser lida junto com a narrativa, sem inventar detalhes que o texto não apresenta.",
   "keyPoints": [
     {
       "title": "Apostasia interna versus hostilidade externa",
@@ -39,45 +39,16 @@ export const Numbers25Study: StudyContent = {
       "text": "A morte dos 24.000 consuma a transição geracional prescrita em Números 14, preparando o terreno purificado para o censo de Números 26 e a posse efetiva da terra prometida."
     }
   ],
-  "application": "O estudo de Números 25 interpela a igreja contemporânea de forma incisiva, alertando contra o perigo permanente do sincretismo cultural e da acomodação moral. Em muitas épocas, a comunidade da fé resiste heroicamente a ameaças explícitas de perseguição estatal ou oposição intelectual, apenas para claudicar diante da sedução gradual dos valores da sociedade ao redor. O episódio de Baal-Peor ensina que a contaminação da adoração raramente começa com uma renúncia teológica formal; ela se infiltra mediante laços relacionais comprometidos, práticas de comensalidade mundana e relativização da pureza moral. Para a liderança cristã, o capítulo impõe uma solene responsabilidade de discernimento e coragem: tolerar a provocação pública do pecado destrói o rebanho e desafia a santidade de Deus. Contudo, o texto também exige cautela hermenêutica estrita: o ato de Fineias foi uma intervenção sacerdotal singular dentro de uma teocracia do Antigo Testamento investida de mandato judicial imediato, e jamais serve de justificativa para violência vigilante ou fanatismo individual no contexto da Nova Aliança. Sob Cristo, o zelo autêntico manifesta-se no confronto espiritual contra o pecado próprio, na disciplina eclesiástica compassiva e firme, e na proclamação intransigente da santidade daquele que nos resgatou das trevas para a sua maravilhosa luz.",
-  "crossReferences": [
-    "Números 31:16 — Demonstra explicitamente que a sedução de Israel em Peor ocorreu por conselho maquiavélico do profeta Balaão.",
-    "Deuteronômio 4:3-4 — Moisés recorda a destruição dos que seguiram Baal-Peor e a preservação dos que permaneceram apegados a Yahweh.",
-    "Josué 22:17 — As tribos relembram a iniquidade de Peor como uma mancha histórica da qual a comunidade ainda precisava de contínua purificação.",
-    "Salmo 106:28-31 — Celebração poética da intervenção de Fineias, cuja justiça lhe foi imputada de geração em geração para sempre.",
-    "Oséias 9:10 — O profeta denuncia que em Baal-Peor Israel se consagrou àquela vergonha, tornando-se tão abominável quanto aquilo que amaram.",
-    "1 Coríntios 10:8 — Paulo utiliza explicitamente a queda em Sitim e a morte dos milhares como advertência pastoral contra a imoralidade e idolatria na igreja.",
-    "Apocalipse 2:14 — Carta à igreja de Pérgamo denunciando aqueles que sustentam a doutrina de Balaão, que ensinou Balaque a tropeçar perante os filhos de Israel.",
-    "Romanos 12:1-2 — Chamado ao culto racional e à recusa da conformação aos padrões deste século, contrastando com o 'apego' idolátrico de Sitim.",
-    "Hebreus 7:23-28 — O sacerdócio perpétuo e perfeito de Jesus Cristo, superando a promessa tipológica concedida a Fineias.",
-    "Gálatas 5:19-21 — As obras da carne, que incluem fornicação e idolatria, excluem os praticantes da herança do Reino de Deus.",
-    "2 Coríntios 6:14-17 — Advertência contra o jugo desigual e o imperativo da separação pactual entre a justiça e a iniquidade.",
-    "Malaquias 2:4-7 — Menção da aliança sacerdotal com Levi como pacto de vida e paz, calcada no temor reverente à lei da verdade."
-  ],
-  "questions": [
-    "Como a transição de Números 22–24 para Números 25 evidencia a diferença entre perigo externo e apostasia interna?",
-    "Qual é o significado teológico e litúrgico do termo hebraico 'tsamad' (apegar-se/juntar-se) usado em Números 25:3?",
-    "De que modo a comensalidade sacrificial com os moabitas constituía uma quebra formal da aliança do Sinai?",
-    "Qual era a função judicial da ordem de Moisés aos juízes de Israel em comparação com a instrução divina de enforcar os chefes diante do sol?",
-    "O que a insolência de Zinri e Cozbi revela sobre o estado de declínio espiritual de setores da liderança de Israel?",
-    "Por que o ato de Fineias foi computado como expiação (kipper) se nenhum animal sacrificial foi oferecido no altar?",
-    "Como o Salmo 106 interpreta a ação de Fineias usando uma linguagem paralela à justificação de Abraão em Gênesis 15:6?",
-    "Qual é o significado e o alcance da 'aliança de sacerdócio perpétuo' concedida à linhagem de Fineias?",
-    "De que forma o Novo Testamento, particularmente em 1 Coríntios 10 e Apocalipse 2, reaproveita o episódio de Baal-Peor para a ética eclesiástica?",
-    "Quais são os perigos hermenêuticos de usar a ação física de Fineias para justificar o justiçamento ou violência religiosa no tempo presente?",
-    "Como a execução dos 24.000 se relaciona com o cumprimento do julgamento divino sobre a geração rebelde de Números 14?",
-    "Qual era o papel geopolítico e religioso das mulheres midianitas em contraste com as moabitas no episódio narrado?",
-    "Como a santidade de Deus e o Seu zelo (qin'ah) operam tanto para a destruição do pecador impenitente quanto para a preservação da comunidade pactual?",
-    "De que maneira a liderança pastoral hoje pode confrontar o pecado aberto na comunidade sem cair no legalismo desprovido de graça?",
-    "Em que sentido Jesus Cristo cumpre e transcende o zelo sacerdotal tipificado pela figura de Fineias em Números 25?"
-  ],
-  "conclusion": "Números 25 permanece como um solene monumento à integridade inegociável da aliança de Deus. Ele ensina de modo inapelável que nenhuma bênção pronunciada sobre o povo de Deus substitui a obediência e a pureza de coração requeridas por Yahweh. O fracasso de Israel em Sitim demonstra a tragédia da complacência moral às margens da herança prometida, enquanto o zelo expiatório de Fineias aponta tipologicamente para a necessidade de uma mediação perfeita que estanque a ira e restaure a paz. Ao desmascarar a idolatria em suas raízes relacionais e cúlticas, o texto convoca a igreja a um compromisso incondicional com a exclusividade do senhorio de Cristo.",
-  "prayer": "Ó Deus Santo, purifica nossa vida de todo sincretismo; concede-nos zelo pela Tua verdade e preserva-nos fiéis em Tua aliança até o fim. Amém.",
+  "application": "A passagem adverte contra a idolatria, a infidelidade e a mistura da adoração ao Senhor com outros cultos. Também ensina a levar a sério a responsabilidade de líderes e comunidades diante do pecado. Ao mesmo tempo, a ação de Fineias pertence a um episódio judicial singular da antiga aliança, narrado em uma estrutura teocrática específica. Ela não autoriza cristãos a agredir, perseguir ou matar pessoas em nome da fé. No ensino de Jesus e dos apóstolos, a resposta da comunidade cristã deve envolver fidelidade a Deus, arrependimento, verdade, disciplina responsável e amor ao próximo.",
+  "crossReferences": ["Êxodo 20:1-6 — Proíbe a adoração de outros deuses e a fabricação de ídolos.","Números 22–24 — Mostra as tentativas frustradas de Balaque de obter uma maldição contra Israel.","Números 31:8, 16 — Registra a morte de Balaão e relaciona seu conselho à infidelidade em Peor.","Deuteronômio 4:3-4 — Recorda o episódio de Baal-Peor e a diferença entre os que seguiram o Senhor e os que se desviaram.","Josué 22:17 — Usa Peor como lembrança de uma grave transgressão de Israel.","Salmo 106:28-31 — Reconta a participação em Baal-Peor e a ação de Fineias.","1 Coríntios 10:6-8 — Paulo usa os acontecimentos do deserto como advertência à igreja.","2 Coríntios 6:14-18 — Ensina sobre a incompatibilidade entre fidelidade a Deus e idolatria.","Hebreus 7:23-28 — Apresenta a superioridade do sacerdócio de Cristo em relação aos sacerdotes humanos.","Apocalipse 2:14 — Retoma a doutrina de Balaão como advertência contra levar outros ao pecado."],
+  "questions": ["Quais ações de Israel são descritas nos versículos 1 a 3?","O que significa, no contexto, Israel ter se unido a Baal-Peor?","Como o texto descreve a resposta de Deus e as ordens transmitidas por Moisés?","O que acontece com Zinri e Cozbi nos versículos 6 a 8?","Como a narrativa descreve a intervenção de Fineias?","Qual é o resultado da praga segundo o versículo 9?","O que a aliança de paz dos versículos 10 a 13 concede a Fineias?","Por que os versículos 14 e 15 identificam Zinri e Cozbi?","Como Números 31:16 complementa a compreensão do episódio?","Por que a ação de Fineias não pode ser usada como autorização para violência religiosa hoje?","Como Paulo utiliza esse acontecimento em 1 Coríntios 10?"],
+  "conclusion": "Números 25 mostra como a infidelidade de Israel rompeu sua lealdade à aliança e trouxe consequências graves para a comunidade. A narrativa destaca a seriedade da idolatria, a responsabilidade da liderança e a intervenção de Fineias, mas não transforma sua ação em modelo de violência para outros tempos. O Novo Testamento utiliza Peor como advertência para que a comunidade cristã permaneça fiel a Deus e não repita os erros do passado.",
+  "prayer": "Senhor, guarda meu coração da idolatria e de tudo o que me afasta de ti. Dá-me discernimento para permanecer fiel, coragem para corrigir o que está errado com justiça e humildade, e amor para tratar as pessoas com dignidade. Ensina-me a ler os relatos difíceis da Bíblia com responsabilidade, sem justificar a violência. Amém.",
   "sections": [
     {
       "id": "intro-e-tese",
       "title": "Introdução Literária e Tese Central",
-      "body": "Números 25 registra a crise definitiva da geração do deserto nas campinas de Moabe. A tese central do capítulo é que a congregação da aliança não pode ser destruída por forças hostis externas nem por encantamentos espirituais, mas é tragicamente suscetível à autodestruição mediante a apostasia idolátrica e a promiscuidade cúltica interna. O contraste dramático entre os oráculos triunfantes de Balaão (caps. 22-24) e a apostasia em Sitim (cap. 25) estabelece a premissa de que a santidade de Yahweh é incompatível com a adoração compartilhada. O zelo sacerdotal de Fineias funciona literária e teologicamente como o antídoto reconciliador que estanca a ira judicial divina e inaugura uma aliança de paz perpétua.",
+      "body": "Números 25 descreve uma crise de infidelidade no acampamento de Israel. O povo participa de práticas associadas a Baal-Peor e se afasta da aliança com o Senhor. A narrativa apresenta pecado, julgamento, intervenção de Fineias e uma promessa de paz. O capítulo deve ser lido em seu contexto histórico: não é uma instrução geral para que pessoas executem punições religiosas. A própria Bíblia retoma o episódio como advertência contra idolatria e infidelidade.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Nm 25:1-3",
@@ -90,7 +61,7 @@ export const Numbers25Study: StudyContent = {
     {
       "id": "contexto-historico-literario",
       "title": "Contexto Literário e Limites da Evidência Histórica",
-      "body": "O texto posiciona Israel em Sitim, a leste do Jordão, em pleno território moabita/midianita. Historicamente, as evidências extrabíblicas para o culto de Baal-Peor são indiretas, fundamentadas em inscrições regionais (como a estela de Mesa e inscrições de Deir Alla) que atestam a adoração a deuses locais de fertilidade na Transjordânia. Os límites epistemológicos exigem reconhecer que não possuímos registros epigráficos contemporâneos de Moabe detalhando os ritos de Peor; sabemos, contudo, que os cultos semíticos ocidentais integravam sacrifícios de comunhão com refeições sagradas e elementos sexuais celebrando a fecundidade da terra. A cooperação entre moabitas e midianitas reflete uma confederação nômade e seminômade característica do Bronze Tardio e Ferro Inicial.",
+      "body": "O povo está em Sitim, nas campinas de Moabe, antes de atravessar o Jordão. O texto menciona mulheres moabitas, sacrifícios oferecidos a seus deuses e a participação posterior de uma mulher midianita. Não descreve em detalhes todos os ritos de Baal-Peor. Por isso, devemos evitar afirmações categóricas sobre práticas específicas que não são explicadas no capítulo. Números 31:16 acrescenta uma ligação com o conselho de Balaão.",
       "kind": "context",
       "scriptureRefs": [
         "Nm 22:4",
@@ -103,7 +74,7 @@ export const Numbers25Study: StudyContent = {
     {
       "id": "genero-literario",
       "title": "Gênero Literário e Convenções Narrativas",
-      "body": "Números 25 enquadra-se como narrativa histórica teológica com elementos jurídicos e pactuais. O texto opera mediante a estrutura clássica de pecado, juízo, mediação heróica e restauração da ordem da aliança. Há elementos etiológicos e genealógicos essenciais que legitimam a sucessão sacerdotal da linhagem de Fineias dentro da casa de Aarão. O uso da prosa é direto e deliberadamente desprovido de embelezamento retórico, enfatizando a brutalidade do pecado e a crueza do julgamento divino. A narrativa serve como documento instrutivo fundamental para a comunidade pós-exílica sobre as consequências inevitáveis da assimilação cultural e sincretista.",
+      "body": "O capítulo é uma narrativa teológica com ordens judiciais, nomes, consequências e uma declaração de aliança. O narrador não apresenta o episódio como uma regra universal de conduta, mas como acontecimento específico na história de Israel sob a aliança mosaica. A leitura cristã deve considerar também como Jesus e os apóstolos orientam a comunidade do Novo Testamento.",
       "kind": "context",
       "scriptureRefs": [
         "Nm 25:6-15",
@@ -115,7 +86,7 @@ export const Numbers25Study: StudyContent = {
     {
       "id": "estrutura-macro",
       "title": "Estrutura Literária de Números 25",
-      "body": "A perícope divide-se com rigor simétrico em quatro partes principais: (1) vv. 1-5: A apostasia coletiva com Baal-Peor, o acendimento da ira divina e as ordens judiciais de Moisés; (2) vv. 6-9: A provocação insolente de Zinri com a midianita Cozbi e a intervenção física decisiva de Fineias; (3) vv. 10-15: O discurso divino a Moisés, conferindo o louvor teológico a Fineias e a concessão do pacto de paz e sacerdócio perpétuo; (4) vv. 16-18: O mandato divino de guerra santa e hostilidade irreconciliável contra os midianitas devido ao engano de Peor.",
+      "body": "A narrativa pode ser dividida em quatro movimentos: (1) a participação de Israel no culto de Baal-Peor (vv. 1–5); (2) o episódio de Zinri, Cozbi e Fineias, seguido do fim da praga (vv. 6–9); (3) a aliança de paz e a promessa sacerdotal a Fineias (vv. 10–13); e (4) a identificação dos envolvidos e a ordem contra Midiã (vv. 14–18). Essa divisão ajuda a acompanhar o desenvolvimento do texto.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Nm 25:1-5",
@@ -129,7 +100,7 @@ export const Numbers25Study: StudyContent = {
     {
       "id": "exposicao-vv1-3",
       "title": "Exposição dos Versículos 1 a 3: A Apostasia em Sitim",
-      "body": "Israel habitava em Sitim quando o povo começou a prostituir-se (zanah) com as filhas de Moabe. O termo 'zanah' carrega duplicidade deliberada: a imoralidade corporal e a traição cúltica contra Yahweh. O convite para os sacrifícios de seus deuses resultou em comensalidade e prostração cúltica. O versículo 3 culmina com a terrível declaração: 'juntou-se Israel a Baal-Peor' (wayyitsamed Yisra'el le-Ba'al Pe'or). A comunhão sacrificial implicava lealdade espiritual direta à divindade cananeia, provocando o acendimento imediato da ira (charon af) de Yahweh, rompendo o escudo de bênção estabelecido nos capítulos anteriores.",
+      "body": "O texto afirma que Israel começou a se envolver com mulheres moabitas e foi convidado a participar de sacrifícios aos deuses delas. O versículo 3 resume a infidelidade dizendo que Israel se uniu a Baal-Peor. A questão central não é apenas uma relação interpessoal: o próprio relato destaca a participação em culto estrangeiro. O texto condena a troca da lealdade ao Senhor pela adoração de outra divindade. Não precisamos acrescentar detalhes rituais que o capítulo não informa.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Nm 25:1",
@@ -143,7 +114,7 @@ export const Numbers25Study: StudyContent = {
     {
       "id": "exposicao-vv4-5",
       "title": "Exposição dos Versículos 4 e 5: A Ordem Judicial Divina e Humana",
-      "body": "A resposta de Deus é severa: Yahweh ordena a Moisés tomar todos os cabeças do povo e enforcá-los (ou empalá-los, hebraico 'yaka'') perante o Senhor contra o sol, para aplacar o furor divino. Os líderes eram responsáveis pela disciplina do acampamento e responderam solidariamente pela tolerância ao mal. Moisés, por sua vez, ordena aos juízes institucionais que cada um mate os homens sob sua jurisdição que se juntaram a Baal-Peor. A execução pública e ostensiva tinha valor pedagógico e purificador, dissipando a cumplicidade corporativa do acampamento com o crime de traição pactual.",
+      "body": "Deus ordena uma resposta pública e judicial, e Moisés transmite instruções aos juízes. A linguagem descreve punições severas, próprias do contexto legal e teocrático de Israel antigo. O leitor deve reconhecer a gravidade do relato sem transformar essas ordens em autorização para violência por iniciativa individual ou para punições fora das instituições e do contexto descritos.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Nm 25:4",
