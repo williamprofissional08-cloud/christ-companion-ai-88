@@ -1,4 +1,15 @@
 import type { StudyContent } from "../types";
+import { judges11Study } from "./judges-11-study";
+import { judges12Study } from "./judges-12-study";
+import { judges13Study } from "./judges-13-study";
+import { judges14Study } from "./judges-14-study";
+import { judges15Study } from "./judges-15-study";
+import { judges16Study } from "./judges-16-study";
+import { judges17Study } from "./judges-17-study";
+import { judges18Study } from "./judges-18-study";
+import { judges19Study } from "./judges-19-study";
+import { judges20Study } from "./judges-20-study";
+import { judges21Study } from "./judges-21-study";
 import { judges1Study } from "./judges-1-study";
 import { judges2Study } from "./judges-2-study";
 import { judges3Study } from "./judges-3-study";
@@ -448,4 +459,15 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-josue-cap-22": joshua22Study,
   "biblia-josue-cap-23": joshua23Study,
   "biblia-josue-cap-24": joshua24Study,
+  "biblia-juizes-cap-11": judges11Study,
+  "biblia-juizes-cap-12": judges12Study,
+  "biblia-juizes-cap-13": judges13Study,
+  "biblia-juizes-cap-14": judges14Study,
+  "biblia-juizes-cap-15": judges15Study,
+  "biblia-juizes-cap-16": judges16Study,
+  "biblia-juizes-cap-17": judges17Study,
+  "biblia-juizes-cap-18": judges18Study,
+  "biblia-juizes-cap-19": judges19Study,
+  "biblia-juizes-cap-20": judges20Study,
+  "biblia-juizes-cap-21": judges21Study,
 };
