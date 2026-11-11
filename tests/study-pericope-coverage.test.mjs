@@ -209,6 +209,16 @@ const curatedBatch = [
   { book: "2 Crônicas", chapter: 18, verseCount: 34, slug: "biblia-2-cronicas-cap-18", exportName: "secondChronicles18Study", file: "2-chronicles-18-study.ts" },
   { book: "2 Crônicas", chapter: 19, verseCount: 11, slug: "biblia-2-cronicas-cap-19", exportName: "secondChronicles19Study", file: "2-chronicles-19-study.ts" },
   { book: "2 Crônicas", chapter: 20, verseCount: 37, slug: "biblia-2-cronicas-cap-20", exportName: "secondChronicles20Study", file: "2-chronicles-20-study.ts" },
+  { book: "2 Crônicas", chapter: 21, verseCount: 20, slug: "biblia-2-cronicas-cap-21", exportName: "secondChronicles21Study", file: "2-chronicles-21-study.ts" },
+  { book: "2 Crônicas", chapter: 22, verseCount: 12, slug: "biblia-2-cronicas-cap-22", exportName: "secondChronicles22Study", file: "2-chronicles-22-study.ts" },
+  { book: "2 Crônicas", chapter: 23, verseCount: 21, slug: "biblia-2-cronicas-cap-23", exportName: "secondChronicles23Study", file: "2-chronicles-23-study.ts" },
+  { book: "2 Crônicas", chapter: 24, verseCount: 27, slug: "biblia-2-cronicas-cap-24", exportName: "secondChronicles24Study", file: "2-chronicles-24-study.ts" },
+  { book: "2 Crônicas", chapter: 25, verseCount: 28, slug: "biblia-2-cronicas-cap-25", exportName: "secondChronicles25Study", file: "2-chronicles-25-study.ts" },
+  { book: "2 Crônicas", chapter: 26, verseCount: 23, slug: "biblia-2-cronicas-cap-26", exportName: "secondChronicles26Study", file: "2-chronicles-26-study.ts" },
+  { book: "2 Crônicas", chapter: 27, verseCount: 9, slug: "biblia-2-cronicas-cap-27", exportName: "secondChronicles27Study", file: "2-chronicles-27-study.ts" },
+  { book: "2 Crônicas", chapter: 28, verseCount: 27, slug: "biblia-2-cronicas-cap-28", exportName: "secondChronicles28Study", file: "2-chronicles-28-study.ts" },
+  { book: "2 Crônicas", chapter: 29, verseCount: 36, slug: "biblia-2-cronicas-cap-29", exportName: "secondChronicles29Study", file: "2-chronicles-29-study.ts" },
+  { book: "2 Crônicas", chapter: 30, verseCount: 27, slug: "biblia-2-cronicas-cap-30", exportName: "secondChronicles30Study", file: "2-chronicles-30-study.ts" },
 ];
 
 async function readContent(path) {
