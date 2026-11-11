@@ -1,4 +1,14 @@
 import type { StudyContent } from "../types";
+import { job1Study } from "./job-1-study";
+import { job2Study } from "./job-2-study";
+import { job3Study } from "./job-3-study";
+import { job4Study } from "./job-4-study";
+import { job5Study } from "./job-5-study";
+import { job6Study } from "./job-6-study";
+import { job7Study } from "./job-7-study";
+import { job8Study } from "./job-8-study";
+import { job9Study } from "./job-9-study";
+import { job10Study } from "./job-10-study";
 import { esther1Study } from "./esther-1-study";
 import { esther2Study } from "./esther-2-study";
 import { esther3Study } from "./esther-3-study";
@@ -881,4 +891,14 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-ester-cap-8": esther8Study,
   "biblia-ester-cap-9": esther9Study,
   "biblia-ester-cap-10": esther10Study,
+  "biblia-jo-cap-1": job1Study,
+  "biblia-jo-cap-2": job2Study,
+  "biblia-jo-cap-3": job3Study,
+  "biblia-jo-cap-4": job4Study,
+  "biblia-jo-cap-5": job5Study,
+  "biblia-jo-cap-6": job6Study,
+  "biblia-jo-cap-7": job7Study,
+  "biblia-jo-cap-8": job8Study,
+  "biblia-jo-cap-9": job9Study,
+  "biblia-jo-cap-10": job10Study,
 };
