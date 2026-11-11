@@ -60,6 +60,16 @@ const curatedBatch = [
   { book: "Josué", chapter: 8, verseCount: 35, slug: "biblia-josue-cap-8", exportName: "joshua8Study", file: "joshua-8-study.ts" },
   { book: "Josué", chapter: 9, verseCount: 27, slug: "biblia-josue-cap-9", exportName: "joshua9Study", file: "joshua-9-study.ts" },
   { book: "Josué", chapter: 10, verseCount: 43, slug: "biblia-josue-cap-10", exportName: "joshua10Study", file: "joshua-10-study.ts" },
+  { book: "Josué", chapter: 11, verseCount: 23, slug: "biblia-josue-cap-11", exportName: "joshua11Study", file: "joshua-11-study.ts" },
+  { book: "Josué", chapter: 12, verseCount: 24, slug: "biblia-josue-cap-12", exportName: "joshua12Study", file: "joshua-12-study.ts" },
+  { book: "Josué", chapter: 13, verseCount: 33, slug: "biblia-josue-cap-13", exportName: "joshua13Study", file: "joshua-13-study.ts" },
+  { book: "Josué", chapter: 14, verseCount: 15, slug: "biblia-josue-cap-14", exportName: "joshua14Study", file: "joshua-14-study.ts" },
+  { book: "Josué", chapter: 15, verseCount: 63, slug: "biblia-josue-cap-15", exportName: "joshua15Study", file: "joshua-15-study.ts" },
+  { book: "Josué", chapter: 16, verseCount: 10, slug: "biblia-josue-cap-16", exportName: "joshua16Study", file: "joshua-16-study.ts" },
+  { book: "Josué", chapter: 17, verseCount: 18, slug: "biblia-josue-cap-17", exportName: "joshua17Study", file: "joshua-17-study.ts" },
+  { book: "Josué", chapter: 18, verseCount: 28, slug: "biblia-josue-cap-18", exportName: "joshua18Study", file: "joshua-18-study.ts" },
+  { book: "Josué", chapter: 19, verseCount: 51, slug: "biblia-josue-cap-19", exportName: "joshua19Study", file: "joshua-19-study.ts" },
+  { book: "Josué", chapter: 20, verseCount: 9, slug: "biblia-josue-cap-20", exportName: "joshua20Study", file: "joshua-20-study.ts" },
 ];
 
 async function readContent(path) {
