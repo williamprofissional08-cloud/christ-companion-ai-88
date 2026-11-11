@@ -107,7 +107,7 @@ function Inicio() {
           <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-[#2464c5] dark:bg-blue-950"><Trophy className="size-6" aria-hidden /></div>
           <div className="min-w-0 flex-1">
             <h2 className="font-display text-base font-bold text-[#142d59] dark:text-foreground">Desafio de hoje</h2>
-            <p className="mt-1 text-sm leading-relaxed text-slate-600 dark:text-muted-foreground">{d?.challenge || "Leia o versículo e pratique uma atitude de fé."}</p>
+            <p className="mt-1 text-sm leading-relaxed text-slate-600 dark:text-muted-foreground">Leia o versículo e pratique uma atitude de fé.</p>
           </div>
         </Card>
 
