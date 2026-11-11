@@ -36,9 +36,9 @@ export const deuteronomy10Study: StudyContent = {
     kind: "scripture",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 10:10:1-5"
+      "Deuteronômio 10:1-5"
     ],
-    body: "**Leitura orientada — Deuteronômio 10:10:1-5**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés relata a ordem para preparar novas tábuas, nas quais seriam escritas as palavras da aliança. A arca passa a guardar o testemunho recebido.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A renovação não apaga a gravidade do pecado anterior; revela a continuidade da misericórdia e da responsabilidade pactual. O registro material serve como testemunho da palavra que Israel deve guardar.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 10:1-5**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés relata a ordem para preparar novas tábuas, nas quais seriam escritas as palavras da aliança. A arca passa a guardar o testemunho recebido.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A renovação não apaga a gravidade do pecado anterior; revela a continuidade da misericórdia e da responsabilidade pactual. O registro material serve como testemunho da palavra que Israel deve guardar.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-2",
@@ -46,9 +46,9 @@ export const deuteronomy10Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 10:10:6-11"
+      "Deuteronômio 10:6-11"
     ],
-    body: "**Leitura orientada — Deuteronômio 10:10:6-11**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO texto menciona deslocamentos, a separação dos levitas para carregar a arca, servir e abençoar, e a permanência de Moisés como intercessor.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A seção recorda que o culto e o serviço pertencem à vida comunitária de Israel. Os detalhes itinerários devem ser lidos como memória da jornada, sem forçar uma harmonização que o texto não fornece.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 10:6-11**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO texto menciona deslocamentos, a separação dos levitas para carregar a arca, servir e abençoar, e a permanência de Moisés como intercessor.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A seção recorda que o culto e o serviço pertencem à vida comunitária de Israel. Os detalhes itinerários devem ser lidos como memória da jornada, sem forçar uma harmonização que o texto não fornece.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-3",
@@ -56,9 +56,9 @@ export const deuteronomy10Study: StudyContent = {
     kind: "context",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 10:10:12-16"
+      "Deuteronômio 10:12-16"
     ],
-    body: "**Leitura orientada — Deuteronômio 10:10:12-16**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés resume o chamado: temer o Senhor, andar em seus caminhos, amá-lo, servi-lo e guardar seus mandamentos. O povo é convocado a circuncidar o coração e deixar de ser obstinado.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A obediência bíblica envolve interioridade e prática. A imagem da circuncisão do coração não despreza o sinal da aliança, mas exige que a vida corresponda ao compromisso assumido.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 10:12-16**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nMoisés resume o chamado: temer o Senhor, andar em seus caminhos, amá-lo, servi-lo e guardar seus mandamentos. O povo é convocado a circuncidar o coração e deixar de ser obstinado.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A obediência bíblica envolve interioridade e prática. A imagem da circuncisão do coração não despreza o sinal da aliança, mas exige que a vida corresponda ao compromisso assumido.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-4",
@@ -66,9 +66,9 @@ export const deuteronomy10Study: StudyContent = {
     kind: "application",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 10:10:17-22"
+      "Deuteronômio 10:17-22"
     ],
-    body: "**Leitura orientada — Deuteronômio 10:10:17-22**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO Senhor é apresentado como Deus dos deuses e Senhor dos senhores, que não age com parcialidade nem aceita suborno. Ele defende órfão e viúva e ama o estrangeiro, dando-lhe alimento e roupa.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A justiça social nasce do caráter de Deus. Israel deve amar o estrangeiro porque também foi estrangeiro no Egito. A aplicação cristã chama à justiça e ao acolhimento sem apagar o contexto histórico da lei.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 10:17-22**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO Senhor é apresentado como Deus dos deuses e Senhor dos senhores, que não age com parcialidade nem aceita suborno. Ele defende órfão e viúva e ama o estrangeiro, dando-lhe alimento e roupa.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A justiça social nasce do caráter de Deus. Israel deve amar o estrangeiro porque também foi estrangeiro no Egito. A aplicação cristã chama à justiça e ao acolhimento sem apagar o contexto histórico da lei.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   }
 ]
 };
