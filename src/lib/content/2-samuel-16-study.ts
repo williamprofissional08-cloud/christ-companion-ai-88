@@ -69,6 +69,46 @@ export const secondSamuel16Study: StudyContent = {
       "2 Samuel 16:20-23"
     ],
     "body": "**Leitura bíblica:** leia 2 Samuel 16:20-23 diretamente em sua Bíblia. O comentário a seguir é autoral e não substitui uma tradução bíblica.\n\n**Observação do texto:** Aitofel recomenda um gesto público que simboliza a reivindicação do trono e rompe definitivamente com Davi. A eficácia política do conselho não o torna justo; a casa real continua sob as consequências anunciadas.\n\n**Interpretação:** observe os personagens, as ações, os contrastes, as repetições e as consequências narradas. Diferencie o que o narrador afirma daquilo que os personagens dizem. A passagem deve ser compreendida no desenvolvimento do capítulo e na história da aliança davídica.\n\n**Contexto histórico e literário:** Durante a fuga, Davi enfrenta acusações, insultos e conselhos. A vulnerabilidade do rei abre espaço para oportunismo e ressentimento. O capítulo alerta que uma estratégia eficaz pode ser moralmente perversa e que decisões apressadas sem ouvir todos os lados podem produzir injustiça.\n\n**Conexão bíblico-teológica:** a história de Davi não exige idealizar o rei. A esperança bíblica aponta para o Filho de Davi, Jesus Cristo, cujo reino manifesta justiça e serviço. O Novo Testamento não autoriza transferir automaticamente para a igreja as guerras, punições ou disputas políticas da monarquia de Israel.\n\n**Aplicação:** pratique verdade, justiça, humildade e cuidado com o próximo. Não confunda sucesso estratégico com aprovação moral de Deus; avalie atitudes à luz do caráter de Cristo."
+  },
+  {
+    "id": "2sm-16-complemento-1",
+    "title": "A acusação de Ziba e o dever de ouvir",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 16"
+    ],
+    "body": "**Análise:** O capítulo intercala relatos não verificados, insultos e estratégia política. O leitor precisa distinguir discurso de personagem, informação confirmada e avaliação do narrador.\n\n**Leitura cuidadosa:** A acusação de Ziba e o dever de ouvir. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-16-complemento-2",
+    "title": "Simei, ressentimento e recusa da vingança",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 16"
+    ],
+    "body": "**Análise:** O capítulo intercala relatos não verificados, insultos e estratégia política. O leitor precisa distinguir discurso de personagem, informação confirmada e avaliação do narrador.\n\n**Leitura cuidadosa:** Simei, ressentimento e recusa da vingança. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-16-complemento-3",
+    "title": "Aitofel: estratégia sem retidão moral",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 16"
+    ],
+    "body": "**Análise:** O capítulo intercala relatos não verificados, insultos e estratégia política. O leitor precisa distinguir discurso de personagem, informação confirmada e avaliação do narrador.\n\n**Leitura cuidadosa:** Aitofel: estratégia sem retidão moral. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
+  },
+  {
+    "id": "2sm-16-complemento-4",
+    "title": "Discernimento diante de conselhos conflitantes",
+    "kind": "analysis",
+    "confidence": "high",
+    "scriptureRefs": [
+      "2 Samuel 16"
+    ],
+    "body": "**Análise:** O capítulo intercala relatos não verificados, insultos e estratégia política. O leitor precisa distinguir discurso de personagem, informação confirmada e avaliação do narrador.\n\n**Leitura cuidadosa:** Discernimento diante de conselhos conflitantes. Observe a sequência narrativa, o contexto histórico e o que o narrador afirma explicitamente. Não transforme descrição em mandamento nem fala de personagem em declaração divina.\n\n**Interpretação e limites:** leia a passagem em relação ao capítulo inteiro e à história de Israel. Quando o texto não oferece todos os detalhes, reconheça os limites em vez de preencher lacunas com suposições.\n\n**Conexão com Cristo e aplicação:** Jesus revela o Reino por meio da verdade, justiça, misericórdia e serviço. Aplique o princípio bíblico sem copiar automaticamente estruturas políticas, guerras ou punições da monarquia antiga.\n\n**Para reflexão:** que aspecto do texto corrige uma leitura superficial? Que responsabilidade aparece? Quem pode ser ferido por uma aplicação descuidada?"
   }
-]
+
 };
