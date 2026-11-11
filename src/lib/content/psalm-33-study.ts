@@ -108,9 +108,9 @@ export const psalm33Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 33:6-10"
+        "Salmos 33:6-9"
       ],
-      "body": "**Trecho:** Salmos 33:6-10.\\n\\n**Lugar no argumento:** A palavra criadora e o domínio sobre as águas. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **6.** Os céus são associados à palavra divina, ecoando a criação de Gênesis.\\n- **7.** A imagem de ajuntar águas comunica domínio sobre forças ameaçadoras.\\n- **8.** O mundo é convocado a reverenciar o Criador.\\n- **9.** A palavra divina cria e estabelece; sua ordem não depende de poderes rivais.\\n- **10.** O Senhor frustra planos arrogantes das nações.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 33:6-9.\\n\\n**Lugar no argumento:** A palavra criadora e o domínio sobre as águas. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **6.** Os céus são associados à palavra divina, ecoando a criação de Gênesis.\\n- **7.** A imagem de ajuntar águas comunica domínio sobre forças ameaçadoras.\\n- **8.** O mundo é convocado a reverenciar o Criador.\\n- **9.** A palavra divina cria e estabelece; sua ordem não depende de poderes rivais.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-3",
@@ -118,9 +118,9 @@ export const psalm33Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 33:11-15"
+        "Salmos 33:10-12"
       ],
-      "body": "**Trecho:** Salmos 33:11-15.\\n\\n**Lugar no argumento:** A soberania divina sobre os planos das nações. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **11.** Os projetos de Deus permanecem, em contraste com a instabilidade humana.\\n- **12.** A nação que reconhece o Senhor como Deus é chamada bem-aventurada.\\n- **13.** Deus contempla os seres humanos; nada da vida coletiva lhe é oculto.\\n- **14.** Do lugar de sua habitação, observa todos os habitantes da terra.\\n- **15.** Ele formou o coração de todos e conhece suas obras.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 33:10-12.\\n\\n**Lugar no argumento:** A soberania divina sobre os planos das nações. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **10.** O Senhor frustra planos arrogantes das nações.\\n- **11.** Os projetos de Deus permanecem, em contraste com a instabilidade humana.\\n- **12.** A nação que reconhece o Senhor como Deus é chamada bem-aventurada.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-4",
@@ -128,9 +128,9 @@ export const psalm33Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 33:16-20"
+        "Salmos 33:13-19"
       ],
-      "body": "**Trecho:** Salmos 33:16-20.\\n\\n**Lugar no argumento:** O olhar de Deus e a esperança dos que o temem. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **16.** Não é a superioridade militar que garante segurança definitiva.\\n- **17.** Um cavalo de guerra não assegura vitória nem livra por sua força.\\n- **18.** O olhar do Senhor está sobre os que o temem e esperam em seu amor leal.\\n- **19.** Ele é apresentado como libertador da morte e sustentador em tempos de fome.\\n- **20.** A comunidade declara que espera no Senhor, seu auxílio e escudo.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 33:13-19.\\n\\n**Lugar no argumento:** O olhar de Deus e a esperança dos que o temem. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **13.** Deus contempla os seres humanos; nada da vida coletiva lhe é oculto.\\n- **14.** Do lugar de sua habitação, observa todos os habitantes da terra.\\n- **15.** Ele formou o coração de todos e conhece suas obras.\\n- **16.** Não é a superioridade militar que garante segurança definitiva.\\n- **17.** Um cavalo de guerra não assegura vitória nem livra por sua força.\\n- **18.** O olhar do Senhor está sobre os que o temem e esperam em seu amor leal.\\n- **19.** Ele é apresentado como libertador da morte e sustentador em tempos de fome.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "pericope-5",
@@ -138,9 +138,9 @@ export const psalm33Study: StudyContent = {
       "kind": "exposition",
       "confidence": "high",
       "scriptureRefs": [
-        "Salmos 33:21-22"
+        "Salmos 33:20-22"
       ],
-      "body": "**Trecho:** Salmos 33:21-22.\\n\\n**Lugar no argumento:** Espera, alegria e confiança comunitária. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **21.** A alegria nasce da confiança no santo nome de Deus.\\n- **22.** O salmo termina pedindo que o amor leal acompanhe o povo conforme sua esperança.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
+      "body": "**Trecho:** Salmos 33:20-22.\\n\\n**Lugar no argumento:** Espera, alegria e confiança comunitária. Leia esta unidade em conexão com o que vem antes e depois; não isole uma frase do movimento do salmo.\\n\\n**Observações versículo por versículo:**\\n- **20.** A comunidade declara que espera no Senhor, seu auxílio e escudo.\\n- **21.** A alegria nasce da confiança no santo nome de Deus.\\n- **22.** O salmo termina pedindo que o amor leal acompanhe o povo conforme sua esperança.\\n\\n**Interpretação responsável:** observe o gênero, a situação descrita, os destinatários e as imagens. Diferencie o que o salmista relata, o que pede e o que confessa sobre Deus. Não transforme a oração em autorização para vingança, fórmula de prosperidade ou promessa de ausência de sofrimento.\\n\\n**Aplicação:** responda com confiança, oração, justiça, humildade e cuidado com o próximo, conforme o sentido demonstrável do texto."
     },
     {
       "id": "sintese-teologica",
