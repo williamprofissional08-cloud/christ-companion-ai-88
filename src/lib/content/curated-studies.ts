@@ -196,6 +196,16 @@ import { joshua7Study } from "./joshua-7-study";
 import { joshua8Study } from "./joshua-8-study";
 import { joshua9Study } from "./joshua-9-study";
 import { joshua10Study } from "./joshua-10-study";
+import { joshua11Study } from "./joshua-11-study";
+import { joshua12Study } from "./joshua-12-study";
+import { joshua13Study } from "./joshua-13-study";
+import { joshua14Study } from "./joshua-14-study";
+import { joshua15Study } from "./joshua-15-study";
+import { joshua16Study } from "./joshua-16-study";
+import { joshua17Study } from "./joshua-17-study";
+import { joshua18Study } from "./joshua-18-study";
+import { joshua19Study } from "./joshua-19-study";
+import { joshua20Study } from "./joshua-20-study";
 
 /**
  * Estudos revisados manualmente. Têm prioridade sobre o conteúdo gerado por IA,
@@ -400,4 +410,14 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-josue-cap-8": joshua8Study,
   "biblia-josue-cap-9": joshua9Study,
   "biblia-josue-cap-10": joshua10Study,
+  "biblia-josue-cap-11": joshua11Study,
+  "biblia-josue-cap-12": joshua12Study,
+  "biblia-josue-cap-13": joshua13Study,
+  "biblia-josue-cap-14": joshua14Study,
+  "biblia-josue-cap-15": joshua15Study,
+  "biblia-josue-cap-16": joshua16Study,
+  "biblia-josue-cap-17": joshua17Study,
+  "biblia-josue-cap-18": joshua18Study,
+  "biblia-josue-cap-19": joshua19Study,
+  "biblia-josue-cap-20": joshua20Study,
 };
