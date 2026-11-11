@@ -81,13 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Caminhando com Cristo — companheiro espiritual cristão" },
+      { title: "Caminho Divino — estudos bíblicos e crescimento na Palavra" },
       {
         name: "description",
         content:
           "Devocional diário, planos de oração, estudos bíblicos e um assistente com IA fundamentado na Bíblia.",
       },
-      { name: "author", content: "Caminhando com Cristo" },
+      { name: "author", content: "Caminho Divino" },
       { property: "og:title", content: "Caminhando com Cristo" },
       {
         property: "og:description",
@@ -95,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@CaminhoDivino" },
     ],
     links: [
       {
@@ -119,7 +119,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>

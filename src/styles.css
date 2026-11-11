@@ -272,3 +272,53 @@ a[href*="lovable.dev"][style*="position: fixed"] {
   background-position: center;
   background-size: cover;
 }
+
+
+/* Comportamento responsivo global: evita rolagem horizontal e respeita telas pequenas. */
+@layer base {
+  html {
+    min-width: 320px;
+    width: 100%;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body, #root {
+    min-width: 320px;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: clip;
+  }
+
+  img, video, canvas, svg {
+    max-width: 100%;
+  }
+
+  input, textarea, select, button {
+    max-width: 100%;
+  }
+
+  :where(pre, code) {
+    overflow-wrap: anywhere;
+  }
+
+  :where(table) {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .app-ambient {
+    background-attachment: scroll;
+  }
+
+  :where([data-radix-popper-content-wrapper]) {
+    max-width: calc(100vw - 1rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-ambient {
+    background-attachment: fixed;
+  }
+}
