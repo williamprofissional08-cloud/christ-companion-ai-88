@@ -40,11 +40,15 @@ function Inicio() {
   const hour = new Date().getHours();
   const greeting = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
   const d = devotional.data;
+  const isSynthesis = Boolean(d && (d.verse.kind === "synthesis" || d.verse.text.startsWith("Síntese para meditação, não uma citação literal:")));
+  const displayedVerseText = d?.verse.text.replace(/^Síntese para meditação, não uma citação literal:\s*/i, "");
 
   async function shareVerse() {
-    const verseText = d?.verse.text ?? "A tua palavra é lâmpada para os meus pés e luz para o meu caminho.";
+    const verseText = displayedVerseText ?? "A tua palavra é lâmpada para os meus pés e luz para o meu caminho.";
     const reference = d?.verse.reference ?? "Salmos 119:105";
-    const text = `${verseText} — ${reference}\nCaminho Divino`;
+    const text = isSynthesis
+      ? `Síntese para meditação (não é citação literal): ${verseText} — Leitura bíblica: ${reference}\nCaminho Divino`
+      : `“${verseText}” — ${reference}\nCaminho Divino`;
     try {
       if (typeof navigator !== "undefined" && navigator.share) {
         await navigator.share({ title: isSynthesis ? "Leitura bíblica do dia" : "Versículo do dia", text });
@@ -70,14 +74,18 @@ function Inicio() {
         <Card className="overflow-hidden rounded-[1.65rem] border border-blue-100/80 bg-gradient-to-br from-[#dcecff] via-[#f5f9ff] to-[#fff8e9] p-0 shadow-[0_12px_30px_-20px_rgba(30,75,135,0.45)] dark:border-blue-900 dark:from-slate-900 dark:via-slate-900 dark:to-blue-950">
           <div className="p-5 sm:p-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#173f7c] px-3.5 py-2 text-[11px] font-bold tracking-[0.14em] text-white">
-              <BookOpen className="size-4" aria-hidden /> VERSÍCULO DO DIA
+              <BookOpen className="size-4" aria-hidden /> {isSynthesis ? "LEITURA BÍBLICA DO DIA" : "VERSÍCULO DO DIA"}
             </div>
             {devotional.isLoading ? (
               <div className="mt-5 space-y-3"><Skeleton className="h-7 w-full" /><Skeleton className="h-7 w-4/5" /><Skeleton className="h-4 w-28" /></div>
             ) : d ? (
               <>
-                <blockquote className="mt-5 font-display text-[1.45rem] font-semibold leading-snug text-[#142d59] dark:text-white sm:text-2xl">“{d.verse.text}”</blockquote>
-                <p className="mt-3 text-sm font-bold text-[#2462b5] dark:text-blue-300">{d.verse.reference}</p>
+                {isSynthesis ? (
+                  <p className="mt-5 text-base leading-relaxed text-[#142d59] dark:text-white">{displayedVerseText}</p>
+                ) : (
+                  <blockquote className="mt-5 font-display text-[1.45rem] font-semibold leading-snug text-[#142d59] dark:text-white sm:text-2xl">“{d.verse.text}”</blockquote>
+                )}
+                <p className="mt-3 text-sm font-bold text-[#2462b5] dark:text-blue-300">{isSynthesis ? "Leitura bíblica sugerida: " : ""}{d.verse.reference}</p>
                 <div className="mt-5 rounded-2xl border border-white/70 bg-white/75 p-4 text-sm leading-relaxed text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200">
                   <div className="flex items-start gap-3">
                     <Sparkles className="mt-0.5 size-5 shrink-0 text-[#2868c5]" aria-hidden />
