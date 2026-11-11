@@ -53,7 +53,7 @@ if not CATALOG_PATH.exists() or not BOOKS_PATH.exists():
 
 book_source = BOOKS_PATH.read_text(encoding="utf-8")
 catalog = CATALOG_PATH.read_text(encoding="utf-8")
-pattern = re.compile(r'\{\s*slug:\s*"([^"]+)",\s*name:\s*"([^"]+)",\s*chapters:\s*(\d+),\s*testament:\s*"([^"]+)",\s*category:\s*"([^"]+)"', re.M)
+pattern = re.compile(r'\{\s*slug:\s*"([^"]+)",\s*name:\s*"([^"]+)",\s*chapters:\s*(\d+),\s*category:\s*"([^"]+)",\s*testament:\s*"([^"]+)"', re.M)
 books = {m.group(1): {"name": m.group(2), "chapters": int(m.group(3)), "category": m.group(4), "testament": m.group(5)} for m in pattern.finditer(book_source)}
 if len(books) != 66:
     raise SystemExit(f"Índice bíblico deveria conter 66 livros; encontrados {len(books)}.")
