@@ -1,4 +1,14 @@
 import type { StudyContent } from "../types";
+import { firstChronicles1Study } from "./1-chronicles-1-study";
+import { firstChronicles2Study } from "./1-chronicles-2-study";
+import { firstChronicles3Study } from "./1-chronicles-3-study";
+import { firstChronicles4Study } from "./1-chronicles-4-study";
+import { firstChronicles5Study } from "./1-chronicles-5-study";
+import { firstChronicles6Study } from "./1-chronicles-6-study";
+import { firstChronicles7Study } from "./1-chronicles-7-study";
+import { firstChronicles8Study } from "./1-chronicles-8-study";
+import { firstChronicles9Study } from "./1-chronicles-9-study";
+import { firstChronicles10Study } from "./1-chronicles-10-study";
 import { firstSamuel1Study } from "./1-samuel-1-study";
 import { firstSamuel2Study } from "./1-samuel-2-study";
 import { firstSamuel3Study } from "./1-samuel-3-study";
@@ -350,6 +360,16 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-rute-cap-3": ruth3Study,
   "biblia-rute-cap-4": ruth4Study,
   "genesis-1-criacao": genesis1Study,
+  "biblia-1-cronicas-cap-1": firstChronicles1Study,
+  "biblia-1-cronicas-cap-2": firstChronicles2Study,
+  "biblia-1-cronicas-cap-3": firstChronicles3Study,
+  "biblia-1-cronicas-cap-4": firstChronicles4Study,
+  "biblia-1-cronicas-cap-5": firstChronicles5Study,
+  "biblia-1-cronicas-cap-6": firstChronicles6Study,
+  "biblia-1-cronicas-cap-7": firstChronicles7Study,
+  "biblia-1-cronicas-cap-8": firstChronicles8Study,
+  "biblia-1-cronicas-cap-9": firstChronicles9Study,
+  "biblia-1-cronicas-cap-10": firstChronicles10Study,
   "biblia-1-samuel-cap-1": firstSamuel1Study,
   "biblia-1-samuel-cap-2": firstSamuel2Study,
   "biblia-1-samuel-cap-3": firstSamuel3Study,
