@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useMutation } from "@tanstack/react-query";
-import { Search } from "lucide-react";
+import { ArrowRight, BookOpen, Heart, Search, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
@@ -59,91 +59,150 @@ function PesquisaPage() {
   }
 
   return (
-    <AppShell title="Pesquisa inteligente" subtitle="Versículos, aplicações e oração por tema.">
-      <form
-        className="flex flex-wrap gap-2"
-        onSubmit={(event) => {
-          event.preventDefault();
-          run(query);
-        }}
-      >
-        <Input
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder="Pesquise um tema, dúvida ou situação"
-          className="max-w-sm"
-        />
-        <Button type="submit" variant="hero" className="gap-2" disabled={search.isPending}>
-          <Search className="size-4" /> Pesquisar
-        </Button>
-      </form>
+    <AppShell
+      title="Pesquisa bíblica"
+      subtitle="Encontre orientação na Palavra para o seu momento."
+    >
+      <div className="mx-auto w-full max-w-5xl space-y-7 pb-8">
+        <section className="rounded-3xl border border-border/60 bg-gradient-to-br from-primary/[0.08] via-background to-amber-500/[0.06] p-5 shadow-soft sm:p-8">
+          <div className="mb-5 flex items-start gap-3">
+            <div className="rounded-2xl bg-primary/10 p-3 text-primary" aria-hidden="true">
+              <BookOpen className="size-6" />
+            </div>
+            <div>
+              <p className="font-display text-xl font-semibold text-foreground sm:text-2xl">
+                O que você busca hoje?
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Explore temas da Bíblia e receba versículos, aplicações e oração.
+              </p>
+            </div>
+          </div>
+          <form
+            className="flex flex-col gap-3 rounded-2xl border border-primary/20 bg-background p-2 shadow-sm sm:flex-row sm:items-center"
+            onSubmit={(event) => {
+              event.preventDefault();
+              run(query);
+            }}
+          >
+            <Search
+              className="ml-2 hidden size-5 shrink-0 text-muted-foreground sm:block"
+              aria-hidden="true"
+            />
+            <Input
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Ex.: O que a Bíblia ensina sobre perdão?"
+              aria-label="Pesquise um tema, dúvida ou situação"
+              className="h-12 min-w-0 flex-1 border-0 bg-transparent shadow-none focus-visible:ring-0"
+            />
+            <Button
+              type="submit"
+              variant="hero"
+              className="h-12 gap-2 rounded-xl px-6"
+              disabled={search.isPending}
+            >
+              <Search className="size-4" aria-hidden="true" />{" "}
+              {search.isPending ? "Pesquisando…" : "Pesquisar"}
+            </Button>
+          </form>
 
-      <div className="mt-4 flex flex-wrap gap-2">
-        {TEMAS.map((tema) => (
-          <Button key={tema} variant="outline" size="sm" onClick={() => run(tema)}>
-            {tema}
-          </Button>
-        ))}
-      </div>
-
-      {search.isPending ? (
-        <div className="mt-6 space-y-3">
-          {[0, 1, 2].map((i) => (
-            <Skeleton key={i} className="h-24 w-full" />
-          ))}
-        </div>
-      ) : search.data ? (
-        <div className="mt-6 flex flex-col gap-4">
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-              O que a Bíblia diz
+          <div className="mt-5">
+            <p className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+              <Sparkles className="size-4 text-amber-600" aria-hidden="true" /> Temas para explorar
             </p>
-            <p className="mt-2 text-sm leading-relaxed">{search.data.overview}</p>
-          </Card>
-
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">Versículos</p>
-            <div className="mt-3 flex flex-col gap-4">
-              {search.data.verses.map((verse) => (
-                <div key={verse.reference}>
-                  <p className="font-display text-base leading-relaxed">“{verse.text}”</p>
-                  <p className="mt-1 text-sm font-medium text-muted-foreground">
-                    {verse.reference}
-                  </p>
-                  <p className="mt-1 text-sm">{verse.note}</p>
-                </div>
+            <div className="flex flex-wrap gap-2">
+              {TEMAS.map((tema) => (
+                <Button
+                  key={tema}
+                  variant="outline"
+                  size="sm"
+                  onClick={() => run(tema)}
+                  disabled={search.isPending}
+                  className="rounded-full border-border/70 bg-background/80 px-4 capitalize transition-colors hover:border-primary/40 hover:bg-primary/5"
+                >
+                  {tema}
+                </Button>
               ))}
             </div>
-          </Card>
+          </div>
+        </section>
 
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-              Aplicações práticas
-            </p>
-            <ul className="mt-3 list-inside list-disc text-sm leading-relaxed">
-              {search.data.practical.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </Card>
+        {search.isPending ? (
+          <div className="space-y-4" aria-label="Carregando resultados" aria-live="polite">
+            {[0, 1, 2].map((i) => (
+              <Skeleton key={i} className="h-32 w-full rounded-2xl" />
+            ))}
+          </div>
+        ) : search.data ? (
+          <div className="flex flex-col gap-4">
+            <Card className="rounded-2xl border-border/60 bg-card p-5 shadow-soft sm:p-7">
+              <p className="flex items-center gap-2 text-xs font-semibold tracking-wide text-primary uppercase">
+                <Sparkles className="size-4" aria-hidden="true" />O que a Bíblia diz
+              </p>
+              <p className="mt-3 text-sm leading-7 text-foreground/90 sm:text-base">
+                {search.data.overview}
+              </p>
+            </Card>
 
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">Oração</p>
-            <p className="mt-2 text-sm leading-relaxed">{search.data.prayer}</p>
-          </Card>
+            <Card className="rounded-2xl border-border/60 p-5 shadow-soft sm:p-7">
+              <p className="flex items-center gap-2 text-xs font-semibold tracking-wide text-primary uppercase">
+                <BookOpen className="size-4" aria-hidden="true" /> Versículos
+              </p>
+              <div className="mt-3 flex flex-col gap-4">
+                {search.data.verses.map((verse) => (
+                  <div key={verse.reference} className="rounded-xl bg-muted/40 p-4 sm:p-5">
+                    <p className="font-display text-base leading-relaxed text-foreground sm:text-lg">
+                      “{verse.text}”
+                    </p>
+                    <p className="mt-2 text-sm font-semibold text-primary">{verse.reference}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {verse.note}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </Card>
 
-          <Card className="border-border/50 p-6 shadow-soft">
-            <p className="text-xs font-semibold tracking-wide text-primary uppercase">
-              Estudos sugeridos
-            </p>
-            <ul className="mt-3 list-inside list-disc text-sm leading-relaxed">
-              {search.data.studySuggestions.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </Card>
-        </div>
-      ) : null}
+            <Card className="rounded-2xl border-border/60 p-5 shadow-soft sm:p-7">
+              <p className="flex items-center gap-2 text-xs font-semibold tracking-wide text-primary uppercase">
+                <ArrowRight className="size-4" aria-hidden="true" />
+                Aplicações práticas
+              </p>
+              <ul className="mt-3 space-y-2 pl-5 text-sm leading-relaxed marker:text-amber-600">
+                {search.data.practical.map((item) => (
+                  <li key={item} className="pl-1">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card className="rounded-2xl border-amber-500/20 bg-amber-500/[0.04] p-5 shadow-soft sm:p-7">
+              <p className="flex items-center gap-2 text-xs font-semibold tracking-wide text-primary uppercase">
+                <Heart className="size-4 text-amber-600" aria-hidden="true" /> Oração
+              </p>
+              <p className="mt-3 text-sm leading-7 text-foreground/90 sm:text-base">
+                {search.data.prayer}
+              </p>
+            </Card>
+
+            <Card className="rounded-2xl border-border/60 p-5 shadow-soft sm:p-7">
+              <p className="flex items-center gap-2 text-xs font-semibold tracking-wide text-primary uppercase">
+                <BookOpen className="size-4" aria-hidden="true" />
+                Estudos sugeridos
+              </p>
+              <ul className="mt-3 space-y-2 pl-5 text-sm leading-relaxed marker:text-amber-600">
+                {search.data.studySuggestions.map((item) => (
+                  <li key={item} className="pl-1">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          </div>
+        ) : null}
+      </div>
     </AppShell>
   );
 }
