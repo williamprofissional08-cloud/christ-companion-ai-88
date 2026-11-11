@@ -50,11 +50,11 @@ export const firstChronicles15Study: StudyContent = {
   "sections": [
     {
       "id": "leitura-biblica",
-      "title": "Leitura bíblica orientada — 1 Crônicas 15:1-24",
+      "title": "Leitura bíblica orientada — 1 Crônicas 15:1-29",
       "kind": "scripture",
       "confidence": "high",
       "scriptureRefs": [
-        "1 Crônicas 15:1-24"
+        "1 Crônicas 15:1-29"
       ],
       "body": "Leia integralmente **1 Crônicas 15:1-24** em sua Bíblia antes de continuar. Esta seção não substitui a Escritura nem reproduz uma tradução protegida. Durante a leitura, marque os personagens, lugares, ações, repetições, mudanças de cena e avaliações do narrador. Registre dúvidas sem tentar resolvê-las antes de observar o contexto."
     },
