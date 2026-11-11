@@ -83,7 +83,7 @@ Produza um estudo bíblico exegético, profundo, didático e editorialmente resp
 PADRÃO OBRIGATÓRIO: use Gênesis 1 como referência editorial de profundidade, clareza, progressão pedagógica e organização. Ensine o aluno a compreender o texto, não apenas resuma. Desenvolva a leitura por perícopes/unidades literárias e explique cada unidade com rigor e linguagem acessível.
 Livro: {book["name"]}; testamento: {book["testament"]}; categoria: {book["category"]}; capítulo {chapter} de {book["chapters"]}. Respeite o gênero literário.
 Não invente fatos históricos, arqueológicos, linguísticos, datas, autoria ou referências. Distinga dados explícitos do texto, contexto provável, inferência, interpretação debatida e hipótese. Apresente divergências relevantes com justiça. Não alegorize detalhes sem base. Não force conexões com Cristo: use apenas quando sustentadas pelo texto e pelo cânon. Não transforme promessas particulares em garantias individuais. Não legitime violência, exploração ou abuso. Não reproduza longos trechos de traduções protegidas.
-Retorne SOMENTE JSON válido com: version (4), depth ("deep"), intro (mínimo 900 caracteres), historicalContext (700), keyPoints (mínimo 8 objetos title/text), application (800), crossReferences (mínimo 12 referências corretas com explicação), questions (mínimo 15 perguntas), conclusion (400), prayer (80), sections (mínimo 22 objetos com id, title, body, kind, scriptureRefs, confidence, collapsible).
+Retorne SOMENTE JSON válido com: version (4), depth ("deep"), intro (mínimo 900 caracteres), historicalContext (700), keyPoints (mínimo 8 objetos title/text), application (800), crossReferences (mínimo 12 strings no formato "Referência bíblica — explicação"), questions (mínimo 15 strings contendo perguntas completas). NÃO retorne objetos nessas duas listas; cada item deve ser string., conclusion (400), prayer (80), sections (mínimo 22 objetos com id, title, body, kind, scriptureRefs, confidence, collapsible).
 As seções devem cobrir: introdução e tese; contexto literário/histórico e limites da evidência; gênero; estrutura; exposição por perícope/versículos; termos importantes sem etimologia especulativa; teologia do capítulo; relação com o livro e cânon; debates interpretativos; erros de leitura; aplicações; método de interpretação; glossário; exercícios/avaliação; esboço expositivo; meditação e síntese. Cada body com pelo menos 250 caracteres. Evite repetição artificial.
 Use kinds: exegesis, context, theology, pastoral, application, method, glossary, exercise. confidence: high, probable, debated, uncertain. Identificadores únicos em kebab-case. Referências bíblicas verificáveis. Texto claro e específico ao capítulo.
 """
@@ -114,6 +114,7 @@ Use kinds: exegesis, context, theology, pastoral, application, method, glossary,
             raw = re.sub(r'^\s*`{3}(?:json)?\s*', '', raw.strip())
             raw = re.sub(r'\s*`{3}\s*$', '', raw)
             data = json.loads(raw)
+            normalize_study(data)
             validate(data)
             return data
         except urllib.error.HTTPError as error:
@@ -126,6 +127,52 @@ Use kinds: exegesis, context, theology, pastoral, application, method, glossary,
                 raise SystemExit(f"Resposta inválida para {reference}: {error}")
             time.sleep(10 * (2 ** attempt))
 
+def normalize_study(data):
+    """Adapt common Gemini object-shaped lists to the StudyContent string[] contract."""
+    if not isinstance(data, dict):
+        raise ValueError("A resposta principal do estudo precisa ser um objeto JSON.")
+
+    references = data.get("crossReferences")
+    if isinstance(references, list):
+        normalized = []
+        for item in references:
+            if isinstance(item, str):
+                normalized.append(item.strip())
+            elif isinstance(item, dict):
+                reference = item.get("ref") or item.get("reference") or item.get("verse") or item.get("title")
+                explanation = item.get("explanation") or item.get("note") or item.get("text") or item.get("reason")
+                if reference and explanation:
+                    normalized.append(f"{str(reference).strip()} — {str(explanation).strip()}")
+                elif reference:
+                    normalized.append(str(reference).strip())
+                elif explanation:
+                    normalized.append(str(explanation).strip())
+                else:
+                    raise ValueError("Referência cruzada em formato de objeto sem referência ou explicação.")
+            else:
+                raise ValueError("Cada referência cruzada precisa ser texto ou objeto reconhecível.")
+        data["crossReferences"] = normalized
+
+    questions = data.get("questions")
+    if isinstance(questions, list):
+        normalized = []
+        for item in questions:
+            if isinstance(item, str):
+                normalized.append(item.strip())
+            elif isinstance(item, dict):
+                question = item.get("question") or item.get("prompt") or item.get("title")
+                answer = item.get("answer") or item.get("response") or item.get("explanation")
+                if question and answer:
+                    normalized.append(f"{str(question).strip()} — Resposta orientadora: {str(answer).strip()}")
+                elif question:
+                    normalized.append(str(question).strip())
+                else:
+                    raise ValueError("Pergunta em formato de objeto sem campo question.")
+            else:
+                raise ValueError("Cada pergunta precisa ser texto ou objeto reconhecível.")
+        data["questions"] = normalized
+
+
 def validate(data):
     required = ["intro", "historicalContext", "keyPoints", "application", "crossReferences", "questions", "conclusion", "prayer", "sections"]
     if not isinstance(data, dict) or any(key not in data for key in required):
@@ -133,6 +180,10 @@ def validate(data):
     for key, minimum in {"intro": 900, "historicalContext": 700, "application": 800, "conclusion": 400, "prayer": 80}.items():
         if not isinstance(data[key], str) or len(data[key]) < minimum:
             raise ValueError(f"{key} abaixo do mínimo de {minimum} caracteres.")
+    if not all(isinstance(item, str) and item.strip() for item in data["crossReferences"]):
+        raise ValueError("crossReferences deve conter somente strings não vazias.")
+    if not all(isinstance(item, str) and item.strip() for item in data["questions"]):
+        raise ValueError("questions deve conter somente strings não vazias.")
     if data.get("depth") != "deep" or len(data["keyPoints"]) < 8 or len(data["crossReferences"]) < 12 or len(data["questions"]) < 15 or len(data["sections"]) < 22:
         raise ValueError("Profundidade ou quantidade mínima não atingida.")
     ids = set()
