@@ -111,17 +111,17 @@ export function AppShell({
 
   return (
     <div className="app-ambient min-h-screen bg-background">
-      <aside className="fixed inset-y-0 left-0 hidden w-64 flex-col border-r border-sidebar-border bg-sidebar px-4 py-6 lg:flex">
+      <aside className="fixed inset-y-0 left-0 hidden w-72 flex-col border-r border-sidebar-border bg-sidebar px-4 py-6 lg:flex">
         <Link to="/inicio" className="mb-8 flex items-center gap-3 px-2">
           <img src={logo} alt="" width={40} height={40} className="size-10" />
           <span className="font-display text-lg leading-tight font-semibold text-sidebar-foreground">
-            Caminhando
+            Caminho
             <br />
-            com Cristo
+            Divino
           </span>
         </Link>
-        <NavLinks />
-        <div className="mt-auto flex flex-col gap-2 pt-6">
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain pr-1 [scrollbar-width:thin]"><NavLinks /></div>
+        <div className="mt-4 flex shrink-0 flex-col gap-2 border-t border-sidebar-border pt-4">
           <Button variant="ghost" size="sm" onClick={toggle} className="justify-start gap-3">
             {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
             {theme === "dark" ? "Modo claro" : "Modo escuro"}
@@ -132,9 +132,9 @@ export function AppShell({
         </div>
       </aside>
 
-      <div className="lg:pl-64">
+      <div className="lg:pl-72">
         <header className="sticky top-0 z-30 border-b border-border/70 bg-background/85 backdrop-blur">
-          <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3.5 sm:px-6">
+          <div className="mx-auto flex w-full max-w-[1600px] items-center gap-3 px-4 py-3.5 sm:px-6 lg:px-8 2xl:px-10">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon-sm" className="lg:hidden" aria-label="Abrir menu">
@@ -179,7 +179,7 @@ export function AppShell({
             </Button>
           </div>
         </header>
-        <main className="mx-auto max-w-5xl px-4 pt-5 pb-24 sm:px-6 lg:pb-12">{children}</main>
+        <main className="mx-auto w-full max-w-[1600px] px-4 pt-6 pb-24 sm:px-6 lg:px-8 lg:pt-8 lg:pb-12 2xl:px-10">{children}</main>
       </div>
 
       <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-background/95 backdrop-blur lg:hidden">
