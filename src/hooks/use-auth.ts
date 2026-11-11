@@ -59,7 +59,7 @@ export function useAuth() {
     let pending = false;
     const storageKey = `caminho-divino:last-seen:${userId}`;
     const recordActivity = () => {
-      if (pending) return;
+      if (pending || document.visibilityState !== "visible") return;
       const now = Date.now();
       try {
         const previous = Number(window.localStorage.getItem(storageKey) ?? 0);
@@ -75,15 +75,15 @@ export function useAuth() {
           const { error } = await supabase.from("profiles")
             .update({ last_seen_at: new Date(now).toISOString() })
             .eq("id", userId);
-          if (error) {
-            console.warn("[Caminho Divino] Não foi possível registrar o último acesso:", error.message);
-            try {
-              if (window.localStorage.getItem(storageKey) === String(now)) {
-                window.localStorage.removeItem(storageKey);
-              }
-            } catch {
-              // Ignore storage restrictions; a later activity can retry.
+          if (error) throw error;
+        } catch (error) {
+          console.warn("[Caminho Divino] Não foi possível registrar o último acesso:", error);
+          try {
+            if (window.localStorage.getItem(storageKey) === String(now)) {
+              window.localStorage.removeItem(storageKey);
             }
+          } catch {
+            // Ignore storage restrictions; a later activity can retry.
           }
         } finally {
           pending = false;
