@@ -36,9 +36,9 @@ export const deuteronomy14Study: StudyContent = {
     kind: "scripture",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 14:14:1-2"
+      "Deuteronômio 14:1-2"
     ],
-    body: "**Leitura orientada — Deuteronômio 14:14:1-2**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nIsrael é chamado de filho do Senhor e povo separado. O texto proíbe práticas de mutilação corporal associadas ao luto e fundamenta a orientação na consagração do povo.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A passagem não despreza o sofrimento nem proíbe toda expressão cultural de luto. Ela regula práticas específicas no contexto religioso antigo e lembra que a identidade do povo pertence ao Senhor.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 14:1-2**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nIsrael é chamado de filho do Senhor e povo separado. O texto proíbe práticas de mutilação corporal associadas ao luto e fundamenta a orientação na consagração do povo.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A passagem não despreza o sofrimento nem proíbe toda expressão cultural de luto. Ela regula práticas específicas no contexto religioso antigo e lembra que a identidade do povo pertence ao Senhor.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-2",
@@ -46,9 +46,9 @@ export const deuteronomy14Study: StudyContent = {
     kind: "analysis",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 14:14:3-21"
+      "Deuteronômio 14:3-21"
     ],
-    body: "**Leitura orientada — Deuteronômio 14:14:3-21**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO capítulo apresenta categorias de animais permitidos e proibidos para alimentação, além de instruções sobre animais encontrados mortos e o preparo de um cabrito.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** As distinções alimentares pertencem à aliança mosaica. Jesus e o ensino apostólico conduzem a igreja a uma compreensão que não impõe essas regras como requisito de pureza cristã (Marcos 7:18-19; Atos 10; Romanos 14).\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 14:3-21**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nO capítulo apresenta categorias de animais permitidos e proibidos para alimentação, além de instruções sobre animais encontrados mortos e o preparo de um cabrito.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** As distinções alimentares pertencem à aliança mosaica. Jesus e o ensino apostólico conduzem a igreja a uma compreensão que não impõe essas regras como requisito de pureza cristã (Marcos 7:18-19; Atos 10; Romanos 14).\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-3",
@@ -56,9 +56,9 @@ export const deuteronomy14Study: StudyContent = {
     kind: "context",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 14:14:22-27"
+      "Deuteronômio 14:22-27"
     ],
-    body: "**Leitura orientada — Deuteronômio 14:14:22-27**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nIsrael deve separar o dízimo da produção e consumi-lo no lugar escolhido pelo Senhor, aprendendo a temê-lo. Quando a distância fosse grande, havia orientação para converter o produto em dinheiro e celebrar com a família.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O texto descreve uma prática agrícola e cultual específica. Não deve ser usado isoladamente para estabelecer um sistema financeiro obrigatório para todas as igrejas; princípios de generosidade e sustento do serviço comunitário aparecem no Novo Testamento.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 14:22-27**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nIsrael deve separar o dízimo da produção e consumi-lo no lugar escolhido pelo Senhor, aprendendo a temê-lo. Quando a distância fosse grande, havia orientação para converter o produto em dinheiro e celebrar com a família.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** O texto descreve uma prática agrícola e cultual específica. Não deve ser usado isoladamente para estabelecer um sistema financeiro obrigatório para todas as igrejas; princípios de generosidade e sustento do serviço comunitário aparecem no Novo Testamento.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   },
   {
     id: "secao-4",
@@ -66,9 +66,9 @@ export const deuteronomy14Study: StudyContent = {
     kind: "application",
     confidence: "high",
     scriptureRefs: [
-      "Deuteronômio 14:14:28-29"
+      "Deuteronômio 14:28-29"
     ],
-    body: "**Leitura orientada — Deuteronômio 14:14:28-29**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA cada terceiro ano, o dízimo deveria ficar nas cidades para que levitas, estrangeiros, órfãos e viúvas tivessem alimento suficiente.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A adoração inclui justiça concreta. A provisão para quem não tinha terra ou proteção familiar demonstra que a fidelidade ao Senhor não pode ser separada do cuidado com o próximo.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
+    body: "**Leitura orientada — Deuteronômio 14:28-29**\n\n**Texto de estudo em paráfrase explicativa, não uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\n\nA cada terceiro ano, o dízimo deveria ficar nas cidades para que levitas, estrangeiros, órfãos e viúvas tivessem alimento suficiente.\n\n**Observe no texto:** identifique o destinatário, a ação ou argumento principal, as palavras repetidas e a ligação com o restante do capítulo.\n\n**Interpretação:** A adoração inclui justiça concreta. A provisão para quem não tinha terra ou proteção familiar demonstra que a fidelidade ao Senhor não pode ser separada do cuidado com o próximo.\n\n**Aplicação:** receba o princípio à luz do conjunto das Escrituras e do ensino de Jesus, sem apagar a situação histórica original nem transformar uma instrução específica a Israel em mandamento civil automático para a igreja ou para os Estados atuais."
   }
 ]
 };
