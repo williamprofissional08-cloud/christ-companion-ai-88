@@ -16,7 +16,7 @@ export const deuteronomy32Study: StudyContent = {
   {
     id: "secao-1",
     title: "Convocação e caráter justo de Deus",
-    kind: scripture,
+    kind: "scripture",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 32:1-6"],
     body: "**Leitura orientada — Deuteronômio 32:1-6**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nCéus e terra são convocados como testemunhas. O Senhor é apresentado como Rocha, perfeito em suas obras e justo em seus caminhos; a corrupção pertence ao povo, não ao caráter de Deus.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** Céus e terra são convocados como testemunhas. O Senhor é apresentado como Rocha, perfeito em suas obras e justo em seus caminhos; a corrupção pertence ao povo, não ao caráter de Deus. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -24,7 +24,7 @@ export const deuteronomy32Study: StudyContent = {
   {
     id: "secao-2",
     title: "Deus forma e sustenta seu povo",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 32:7-14"],
     body: "**Leitura orientada — Deuteronômio 32:7-14**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nO cântico recorda a escolha, o cuidado e a provisão do Senhor. A imagem da águia comunica proteção e condução. A prosperidade recebida deveria gerar gratidão, não esquecimento.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** O cântico recorda a escolha, o cuidado e a provisão do Senhor. A imagem da águia comunica proteção e condução. A prosperidade recebida deveria gerar gratidão, não esquecimento. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -32,7 +32,7 @@ export const deuteronomy32Study: StudyContent = {
   {
     id: "secao-3",
     title: "A rebeldia contra a Rocha",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 32:15-18"],
     body: "**Leitura orientada — Deuteronômio 32:15-18**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nA abundância leva o povo a abandonar aquele que o gerou e sustentou. A linguagem de infidelidade denuncia a troca do Deus vivo por falsos deuses; o problema central é a ruptura da relação de aliança.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** A abundância leva o povo a abandonar aquele que o gerou e sustentou. A linguagem de infidelidade denuncia a troca do Deus vivo por falsos deuses; o problema central é a ruptura da relação de aliança. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -40,7 +40,7 @@ export const deuteronomy32Study: StudyContent = {
   {
     id: "secao-4",
     title: "Juízo e consequências da infidelidade",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 32:19-35"],
     body: "**Leitura orientada — Deuteronômio 32:19-35**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nO poema descreve a retirada de proteção e a chegada de calamidades. As imagens são poéticas e pactuais, dirigidas à história de Israel; não devem ser usadas para declarar que tragédias contemporâneas provam a culpa de suas vítimas.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** O poema descreve a retirada de proteção e a chegada de calamidades. As imagens são poéticas e pactuais, dirigidas à história de Israel; não devem ser usadas para declarar que tragédias contemporâneas provam a culpa de suas vítimas. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -48,7 +48,7 @@ export const deuteronomy32Study: StudyContent = {
   {
     id: "secao-5",
     title: "A compaixão e a soberania do Senhor",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 32:36-43"],
     body: "**Leitura orientada — Deuteronômio 32:36-43**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nO cântico anuncia que o Senhor julgará seu povo, terá compaixão e demonstrará que não há outro Deus. A justiça divina não depende da força dos ídolos ou das nações. O encerramento convoca os povos a reconhecerem a ação do Senhor.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** O cântico anuncia que o Senhor julgará seu povo, terá compaixão e demonstrará que não há outro Deus. A justiça divina não depende da força dos ídolos ou das nações. O encerramento convoca os povos a reconhecerem a ação do Senhor. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
@@ -56,7 +56,7 @@ export const deuteronomy32Study: StudyContent = {
   {
     id: "secao-6",
     title: "A exortação final de Moisés",
-    kind: analysis,
+    kind: "analysis",
     confidence: "high",
     scriptureRefs: ["Deuteronômio 32:44-52"],
     body: "**Leitura orientada — Deuteronômio 32:44-52**\\n\\n**Paráfrase explicativa para estudo; não é uma tradução bíblica oficial.** Leia a passagem integral em sua Bíblia antes de prosseguir.\\n\\nMoisés chama Israel a levar a sério as palavras do cântico, pois elas dizem respeito à vida do povo. Ele também recebe a notícia de que verá a terra de longe, mas não entrará nela. A liderança fiel permanece sujeita à palavra de Deus.\\n\\n**Observação do texto:** identifique quem fala, a quem se dirige, o gênero literário, as ações e a progressão do argumento.\\n\\n**Interpretação:** Moisés chama Israel a levar a sério as palavras do cântico, pois elas dizem respeito à vida do povo. Ele também recebe a notícia de que verá a terra de longe, mas não entrará nela. A liderança fiel permanece sujeita à palavra de Deus. O sentido deve ser estabelecido no contexto imediato, na aliança com Israel e no conjunto do livro.\\n\\n**Aplicação cristã:** leia à luz do conjunto das Escrituras e do ensino de Jesus Cristo. Distinga a norma dada a Israel do princípio teológico que pode orientar a igreja; não transforme poesia, promessa pactual ou lei antiga em fórmula automática para situações atuais."
