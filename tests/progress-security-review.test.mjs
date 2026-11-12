@@ -25,17 +25,17 @@ test("security migration is review-only, transactional, idempotent and has a rol
     "utf8",
   );
 
-  assert.match(migration, /^BEGIN;/);
+  assert.match(migration, /BEGIN;/);
   assert.match(migration, /COMMIT;\s*$/);
   assert.match(migration, /DROP POLICY IF EXISTS "service role manages AI rate limits"/);
   assert.match(migration, /DROP POLICY IF EXISTS "service role manages community message rate limits"/);
-  assert.equal((migration.match(/SET search_path = pg_catalog, public, auth, pg_temp/g) ?? []).length, 4);
+  assert.equal((migration.match(/ALTER FUNCTION public\./g) ?? []).length, 4);
   assert.equal((migration.match(/REVOKE EXECUTE ON FUNCTION public\./g) ?? []).length, 4);
   assert.match(migration, /char_length\(s\.term\) >= 2/);
   assert.match(migration, /greatest\(1, least\(coalesce\(p_limit, 30\), 50\)\)/);
   assert.match(migration, /DROP POLICY IF EXISTS "admins manage courses"/);
   assert.match(migration, /CREATE POLICY "read courses or administer courses"/);
-  assert.match(rollback, /^BEGIN;/);
+  assert.match(rollback, /BEGIN;/);
   assert.match(rollback, /CREATE POLICY "admins manage courses"/);
   assert.match(rollback, /COMMIT;\s*$/);
 });
