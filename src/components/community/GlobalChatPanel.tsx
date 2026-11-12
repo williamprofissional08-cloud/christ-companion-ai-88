@@ -129,8 +129,10 @@ export function GlobalChatPanel() {
 
   async function loadOlder() {
     if (loadingMore || !hasMore || !messages.length) return;
+    const oldestMessage = messages[0];
+    if (!oldestMessage) return;
     setLoadingMore(true);
-    const oldest = messages[0].criado_em;
+    const oldest = oldestMessage.criado_em;
     const { data, error: olderError } = await db.from("mensagens_globais")
       .select("id,user_id,conteudo,criado_em,apagada").lt("criado_em", oldest)
       .order("criado_em", { ascending: false }).limit(50);
