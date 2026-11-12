@@ -27,10 +27,26 @@ export const saveStudyCheckpoint = createServerFn({ method: "POST" })
   }).parse(input))
   .handler(async ({ data, context }) => {
     if (!getStudy(data.slug)) throw new Error("Estudo não encontrado.");
+    // Preserve the greatest reading percentage already stored. A delayed
+    // checkpoint (for example, a background tab flushing an older value) must
+    // never move the learner's reading progress backwards.
+    const { data: existing, error: readError } = await context.supabase
+      .from("study_progress")
+      .select("read_percent")
+      .eq("user_id", context.userId)
+      .eq("study_slug", data.slug)
+      .maybeSingle();
+    if (readError) throw new Error(readError.message);
+
+    const readPercent = Math.max(data.readPercent, existing?.read_percent ?? 0);
     const { error } = await context.supabase.from("study_progress").upsert({
-      user_id: context.userId, study_slug: data.slug, read_percent: data.readPercent,
-      last_section_index: data.lastSectionIndex, audio_chunk_index: data.audioChunkIndex,
-      playback_rate: data.playbackRate, updated_at: new Date().toISOString(),
+      user_id: context.userId,
+      study_slug: data.slug,
+      read_percent: readPercent,
+      last_section_index: data.lastSectionIndex,
+      audio_chunk_index: data.audioChunkIndex,
+      playback_rate: data.playbackRate,
+      updated_at: new Date().toISOString(),
     }, { onConflict: "user_id,study_slug" });
     if (error) throw new Error(error.message);
     return { ok: true };
