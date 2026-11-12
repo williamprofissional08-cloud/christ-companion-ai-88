@@ -33,8 +33,15 @@ jobs:
         run: |
           set -euo pipefail
           if git cat-file -e "$BEFORE:.github/bible-study-pipeline-bootstrap.json" 2>/dev/null; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "A configuração inicial já existia; nenhum reinício será feito."
+            old_config="$(git show "$BEFORE:.github/bible-study-pipeline-bootstrap.json")"
+            new_config="$(cat .github/bible-study-pipeline-bootstrap.json)"
+            if [ "$old_config" = "$new_config" ]; then
+              echo "run=false" >> "$GITHUB_OUTPUT"
+              echo "A configuração não mudou; nenhum reinício será feito."
+            else
+              echo "run=true" >> "$GITHUB_OUTPUT"
+              echo "A configuração mudou; a sequência será iniciada com os novos parâmetros."
+            fi
           else
             echo "run=true" >> "$GITHUB_OUTPUT"
           fi
@@ -55,14 +62,14 @@ jobs:
           set -euo pipefail
           for attempt in $(seq 1 120); do
             checks="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${HEAD_SHA}/check-runs?per_page=100")"
-            latest="$(jq '[.check_runs | group_by(.name)[] | max_by(.id)]' <<< "$checks")"
+            latest="$(jq '[.check_runs | group_by(.name)[] | max_by(.id) | select(.name != "bootstrap" and .name != "after_merge")]' <<< "$checks")"
             count="$(jq 'length' <<< "$latest")"
             pending="$(jq '[.[] | select(.status != "completed")] | length' <<< "$latest")"
-            failed="$(jq '[.[] | select(.status == "completed" and .conclusion != "success")] | length' <<< "$latest")"
+            failed="$(jq '[.[] | select(.status == "completed" and .conclusion != "success" and .conclusion != "skipped")] | length' <<< "$latest")"
 
             if [ "$count" -gt 0 ] && [ "$pending" -eq 0 ]; then
               if [ "$failed" -gt 0 ]; then
-                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "\(.name): \(.status)/\(.conclusion)"' <<< "$latest"
+                jq -r '.[] | select(.status != "completed" or (.conclusion != "success" and .conclusion != "skipped")) | "\(.name): \(.status)/\(.conclusion)"' <<< "$latest"
                 echo "::error::Bootstrap integrado sem todos os checks aprovados; geração não iniciada."
                 exit 1
               fi
@@ -137,14 +144,14 @@ jobs:
           set -euo pipefail
           for attempt in $(seq 1 120); do
             checks="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${HEAD_SHA}/check-runs?per_page=100")"
-            latest="$(jq '[.check_runs | group_by(.name)[] | max_by(.id)]' <<< "$checks")"
+            latest="$(jq '[.check_runs | group_by(.name)[] | max_by(.id) | select(.name != "bootstrap" and .name != "after_merge")]' <<< "$checks")"
             count="$(jq 'length' <<< "$latest")"
             pending="$(jq '[.[] | select(.status != "completed")] | length' <<< "$latest")"
-            failed="$(jq '[.[] | select(.status == "completed" and .conclusion != "success")] | length' <<< "$latest")"
+            failed="$(jq '[.[] | select(.status == "completed" and .conclusion != "success" and .conclusion != "skipped")] | length' <<< "$latest")"
 
             if [ "$count" -gt 0 ] && [ "$pending" -eq 0 ]; then
               if [ "$failed" -gt 0 ]; then
-                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "\(.name): \(.status)/\(.conclusion)"' <<< "$latest"
+                jq -r '.[] | select(.status != "completed" or (.conclusion != "success" and .conclusion != "skipped")) | "\(.name): \(.status)/\(.conclusion)"' <<< "$latest"
                 echo "::error::PR mesclada sem todos os checks aprovados; próximo lote bloqueado."
                 exit 1
               fi
