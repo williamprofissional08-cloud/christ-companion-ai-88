@@ -117,14 +117,26 @@ export function GlobalChatPanel() {
       return;
     }
     setSending(true);
-    const { error: sendError } = await db.from("mensagens_globais").insert({ user_id: user.id, conteudo });
-    setSending(false);
-    if (sendError) {
-      toast.error(sendError.message.includes("2 segundos") ? "Aguarde 2 segundos antes de enviar outra mensagem." : "Não foi possível enviar. Verifique sua conexão e tente novamente.");
-      return;
+    try {
+      const { error: sendError } = await db.from("mensagens_globais").insert({ user_id: user.id, conteudo });
+      if (sendError) {
+        console.error("[chat-global] Falha ao enviar mensagem:", sendError);
+        const message = sendError.message.includes("2 segundos")
+          ? "Aguarde 2 segundos antes de enviar outra mensagem."
+          : sendError.code === "42501"
+            ? "Sua sessão não tem autorização para enviar. Atualize a página e tente novamente."
+            : "O servidor recusou o envio da mensagem. Tente novamente; se persistir, informe o suporte.";
+        toast.error(message);
+        return;
+      }
+      setDraft("");
+      await loadLatest(user.id);
+    } catch (sendException) {
+      console.error("[chat-global] Erro inesperado no envio:", sendException);
+      toast.error("Não foi possível concluir o envio. Verifique sua conexão e tente novamente.");
+    } finally {
+      setSending(false);
     }
-    setDraft("");
-    await loadLatest(user.id);
   }
 
   async function loadOlder() {
