@@ -354,7 +354,7 @@ const curatedBatch = [
   { book: "Salmos", chapter: 52, verseCount: 9, slug: "biblia-salmos-cap-52", exportName: "psalm52Study", file: "psalm-52-study.ts" },
   { book: "Salmos", chapter: 53, verseCount: 6, slug: "biblia-salmos-cap-53", exportName: "psalm53Study", file: "psalm-53-study.ts" },
   { book: "Salmos", chapter: 54, verseCount: 7, slug: "biblia-salmos-cap-54", exportName: "psalm54Study", file: "psalm-54-study.ts" },
-  { book: "Salmos", chapter: 55, verseCount: 9, slug: "biblia-salmos-cap-55", exportName: "psalm55Study", file: "psalm-55-study.ts" },
+  { book: "Salmos", chapter: 55, verseCount: 23, slug: "biblia-salmos-cap-55", exportName: "psalm55Study", file: "psalm-55-study.ts" },
   { book: "Salmos", chapter: 56, verseCount: 13, slug: "biblia-salmos-cap-56", exportName: "psalm56Study", file: "psalm-56-study.ts" },
   { book: "Salmos", chapter: 57, verseCount: 11, slug: "biblia-salmos-cap-57", exportName: "psalm57Study", file: "psalm-57-study.ts" },
   { book: "Salmos", chapter: 58, verseCount: 11, slug: "biblia-salmos-cap-58", exportName: "psalm58Study", file: "psalm-58-study.ts" },
