@@ -1,4 +1,6 @@
-import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmos 117 no padrão didático de Gênesis 1. */\nexport const psalm117Study: StudyContent = {
+import type { StudyContent } from "../types";
+
+/** Estudo aprofundado de Salmos 117 no padrão didático de Gênesis 1. */\nexport const psalm117Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "Todas as nações são chamadas a louvar o Senhor",
@@ -42,7 +44,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 117:1-2"
       ],
-      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece paráfrases orientadoras para acompanhar a leitura. Compare cada síntese com o texto bíblico.\\n\\n**Salmos 117:1-2 — Convocação universal e fundamento do louvor**\\n\\n**1:** Todas as nações e povos são convocados a louvar o Senhor; a adoração ultrapassa fronteiras étnicas e nacionais.\\n\\n**2:** O amor leal de Deus é grande e sua fidelidade permanece; por isso o louvor é devido ao Senhor para sempre."
+      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece paráfrases orientadoras para acompanhar a leitura. Compare cada síntese com o texto bíblico.\n\n**Salmos 117:1-2 — Convocação universal e fundamento do louvor**\n\n**1:** Todas as nações e povos são convocados a louvar o Senhor; a adoração ultrapassa fronteiras étnicas e nacionais.\n\n**2:** O amor leal de Deus é grande e sua fidelidade permanece; por isso o louvor é devido ao Senhor para sempre."
     },
     {
       "id": "introducao",
@@ -52,7 +54,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 117:1-2"
       ],
-      "body": "**Tema central:** Todas as nações são chamadas a louvar o Senhor.\\n\\n**Gênero literário:** Hino breve de louvor universal.\\n\\nO objetivo é ler o capítulo em sua unidade, observar a forma poética, explicar cada perícope e preparar uma exposição fiel ao texto. A aplicação deve nascer do sentido original, não de associações livres."
+      "body": "**Tema central:** Todas as nações são chamadas a louvar o Senhor.\n\n**Gênero literário:** Hino breve de louvor universal.\n\nO objetivo é ler o capítulo em sua unidade, observar a forma poética, explicar cada perícope e preparar uma exposição fiel ao texto. A aplicação deve nascer do sentido original, não de associações livres."
     },
     {
       "id": "contexto-historico",
@@ -62,7 +64,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 117:1-2"
       ],
-      "body": "O Salmo 117 é o menor capítulo do Saltério, mas sua brevidade amplia o horizonte da adoração: povos e nações são convocados a louvar o Senhor. A razão é a firmeza do amor leal e da fidelidade divina. No Novo Testamento, Paulo cita o salmo em Romanos 15:11 para fundamentar a inclusão das nações no louvor a Deus.\\n\\nQuando autoria, data ou ocasião não forem explicitadas no próprio texto, mantenha a distinção entre informação textual e hipótese histórica. Leia o salmo em relação ao seu lugar no Saltério e ao conjunto dos cânticos de Israel."
+      "body": "O Salmo 117 é o menor capítulo do Saltério, mas sua brevidade amplia o horizonte da adoração: povos e nações são convocados a louvar o Senhor. A razão é a firmeza do amor leal e da fidelidade divina. No Novo Testamento, Paulo cita o salmo em Romanos 15:11 para fundamentar a inclusão das nações no louvor a Deus.\n\nQuando autoria, data ou ocasião não forem explicitadas no próprio texto, mantenha a distinção entre informação textual e hipótese histórica. Leia o salmo em relação ao seu lugar no Saltério e ao conjunto dos cânticos de Israel."
     },
     {
       "id": "estrutura",
@@ -72,7 +74,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 117:1-2"
       ],
-      "body": "**Movimento 1 — 1-2:** Convocação universal e fundamento do louvor.\\n\\nObserve repetições, mudanças de voz, imagens, contrastes e a progressão do argumento."
+      "body": "**Movimento 1 — 1-2:** Convocação universal e fundamento do louvor.\n\nObserve repetições, mudanças de voz, imagens, contrastes e a progressão do argumento."
     },
     {
       "id": "topico-1",
@@ -82,7 +84,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 117:1-2"
       ],
-      "body": "**Leia Salmos 117:1-2 integralmente.**\\n\\n**Sentido da unidade:** Convocação universal e fundamento do louvor.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 1 — Explicação:** Todas as nações e povos são convocados a louvar o Senhor; a adoração ultrapassa fronteiras étnicas e nacionais. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 2 — Explicação:** O amor leal de Deus é grande e sua fidelidade permanece; por isso o louvor é devido ao Senhor para sempre. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** Convocação universal e fundamento do louvor. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** Todas as nações são chamadas a louvar o Senhor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 117:1-2 integralmente.**\n\n**Sentido da unidade:** Convocação universal e fundamento do louvor.\n\n**Observações versículo por versículo**\n\n**Versículo 1 — Explicação:** Todas as nações e povos são convocados a louvar o Senhor; a adoração ultrapassa fronteiras étnicas e nacionais. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 2 — Explicação:** O amor leal de Deus é grande e sua fidelidade permanece; por isso o louvor é devido ao Senhor para sempre. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** Convocação universal e fundamento do louvor. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** Todas as nações são chamadas a louvar o Senhor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "palavras-chave",
@@ -112,7 +114,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 117:1-2"
       ],
-      "body": "- Romanos 15:8-12\\n- Salmos 96:1-3\\n- Salmos 100:1-5\\n- Isaías 49:6\\n\\nLeia cada referência em seu contexto. Compare temas e vocabulário sem apagar as diferenças entre os textos. Uma ligação temática não equivale automaticamente a citação direta."
+      "body": "- Romanos 15:8-12\n- Salmos 96:1-3\n- Salmos 100:1-5\n- Isaías 49:6\n\nLeia cada referência em seu contexto. Compare temas e vocabulário sem apagar as diferenças entre os textos. Uma ligação temática não equivale automaticamente a citação direta."
     },
     {
       "id": "cuidados",
@@ -142,7 +144,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 117:1-2"
       ],
-      "body": "**Pessoal:** examine como a mensagem forma sua confiança, arrependimento, gratidão, perseverança ou integridade.\\n\\n**Comunitária:** considere como orienta culto, justiça, memória, cuidado e responsabilidade coletiva.\\n\\n**Pastoral:** aplique com sensibilidade; não use o texto para culpabilizar quem sofre nem para prometer resultados que o contexto não promete.\\n\\n**Síntese aplicada:** Todas as nações são chamadas a louvar o Senhor."
+      "body": "**Pessoal:** examine como a mensagem forma sua confiança, arrependimento, gratidão, perseverança ou integridade.\n\n**Comunitária:** considere como orienta culto, justiça, memória, cuidado e responsabilidade coletiva.\n\n**Pastoral:** aplique com sensibilidade; não use o texto para culpabilizar quem sofre nem para prometer resultados que o contexto não promete.\n\n**Síntese aplicada:** Todas as nações são chamadas a louvar o Senhor."
     },
     {
       "id": "resumo",
@@ -152,7 +154,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 117:1-2"
       ],
-      "body": "**Mensagem central:** Todas as nações são chamadas a louvar o Senhor.\\n\\n**Gênero:** Hino breve de louvor universal.\\n\\n1) 1-2: Convocação universal e fundamento do louvor\\n\\nExplique como cada movimento contribui para a mensagem total e quais limites interpretativos precisam ser respeitados."
+      "body": "**Mensagem central:** Todas as nações são chamadas a louvar o Senhor.\n\n**Gênero:** Hino breve de louvor universal.\n\n1) 1-2: Convocação universal e fundamento do louvor\n\nExplique como cada movimento contribui para a mensagem total e quais limites interpretativos precisam ser respeitados."
     },
     {
       "id": "exercicios",
@@ -162,7 +164,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 117:1-2"
       ],
-      "body": "1. Resuma a mensagem do salmo em uma frase sem usar ideias que o texto não sustenta.\\n2. Delimite as perícopes e justifique a divisão.\\n3. Escolha três versículos e explique sua contribuição para o argumento.\\n4. Identifique uma imagem poética e explique seu efeito no contexto.\\n5. Diferencie uma afirmação explícita de uma inferência.\\n6. Escreva uma aplicação pessoal e outra comunitária que respeitem o sentido original."
+      "body": "1. Resuma a mensagem do salmo em uma frase sem usar ideias que o texto não sustenta.\n2. Delimite as perícopes e justifique a divisão.\n3. Escolha três versículos e explique sua contribuição para o argumento.\n4. Identifique uma imagem poética e explique seu efeito no contexto.\n5. Diferencie uma afirmação explícita de uma inferência.\n6. Escreva uma aplicação pessoal e outra comunitária que respeitem o sentido original."
     },
     {
       "id": "oficina-pregador",
@@ -172,7 +174,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 117:1-2"
       ],
-      "body": "**Proposição:** Todas as nações são chamadas a louvar o Senhor.\\n\\n**Objetivo:** conduzir a igreja a compreender o salmo em seu contexto e responder de maneira coerente com sua mensagem.\\n\\n**Roteiro:** introdução que apresenta a tensão ou convocação do texto; exposição progressiva de cada perícope; explicação das imagens e referências; conexão canônica responsável; aplicações que nascem do texto; conclusão que retoma a mensagem central.\\n\\nConfira se cada ponto deriva da passagem e se a aplicação não promete aquilo que o texto não promete."
+      "body": "**Proposição:** Todas as nações são chamadas a louvar o Senhor.\n\n**Objetivo:** conduzir a igreja a compreender o salmo em seu contexto e responder de maneira coerente com sua mensagem.\n\n**Roteiro:** introdução que apresenta a tensão ou convocação do texto; exposição progressiva de cada perícope; explicação das imagens e referências; conexão canônica responsável; aplicações que nascem do texto; conclusão que retoma a mensagem central.\n\nConfira se cada ponto deriva da passagem e se a aplicação não promete aquilo que o texto não promete."
     },
     {
       "id": "oracao-final",
