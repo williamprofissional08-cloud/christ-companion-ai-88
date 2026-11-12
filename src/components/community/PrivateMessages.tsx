@@ -290,14 +290,14 @@ export function PrivateConversationView({ conversaId }: { conversaId: string }) 
       setError("Você não tem acesso a esta conversa.");
       return;
     }
-    const [{ data, error: messagesError }, { data: people }] = await Promise.all([
+    const [{ data, error: messagesError }, { data: people, error: profileError }] = await Promise.all([
       db.from("mensagens_privadas").select("id,conversa_id,remetente_id,conteudo,lida,criado_em")
         .eq("conversa_id", conversaId).order("criado_em", { ascending: true }).limit(200),
-      db.from("community_member_profiles").select("id,display_name,avatar_url").eq("id", otherId).maybeSingle(),
+      db.rpc("search_community_members", { p_search: otherId, p_limit: 1 }),
     ]);
     if (messagesError) { setError("Não foi possível carregar as mensagens. Talvez exista um bloqueio ativo."); return; }
     setMessages((data || []) as PrivateMessage[]);
-    setMember((people || null) as Member | null);
+    setMember(!profileError ? (((people || []) as Member[])[0] || null) : null);
     await db.from("mensagens_privadas").update({ lida: true })
       .eq("conversa_id", conversaId).eq("lida", false).neq("remetente_id", current.id);
     setError(null);
