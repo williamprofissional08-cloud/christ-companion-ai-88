@@ -85,7 +85,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "5. Exposição — O clamor contra a arrogância dos opressores",
+      "title": "4. Exposição — O clamor contra a arrogância dos opressores",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -95,7 +95,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "topico-2",
-      "title": "6. Exposição — A insensatez de negar o conhecimento de Deus",
+      "title": "5. Exposição — A insensatez de negar o conhecimento de Deus",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -105,7 +105,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "topico-3",
-      "title": "7. Exposição — A disciplina, a justiça e o consolo divinos",
+      "title": "6. Exposição — A disciplina, a justiça e o consolo divinos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -115,7 +115,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "topico-4",
-      "title": "8. Exposição — O juízo contra os poderes injustos",
+      "title": "7. Exposição — O juízo contra os poderes injustos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -125,7 +125,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "palavras-chave",
-      "title": "9. Palavras-chave, imagens e recursos poéticos",
+      "title": "8. Palavras-chave, imagens e recursos poéticos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -135,7 +135,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "questoes-interpretativas",
-      "title": "10. Questões interpretativas e pontos de atenção",
+      "title": "9. Questões interpretativas e pontos de atenção",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -145,7 +145,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "referencias-explicadas",
-      "title": "11. Referências bíblicas relacionadas",
+      "title": "10. Referências bíblicas relacionadas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -155,7 +155,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "cuidados",
-      "title": "12. Cuidados contra interpretações indevidas",
+      "title": "11. Cuidados contra interpretações indevidas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -165,7 +165,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "cristo",
-      "title": "13. Leitura canônica e relação com Jesus Cristo",
+      "title": "12. Leitura canônica e relação com Jesus Cristo",
       "kind": "christology",
       "confidence": "high",
       "scriptureRefs": [
@@ -175,7 +175,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "aplicacao",
-      "title": "14. Aplicação pessoal, comunitária e pastoral",
+      "title": "13. Aplicação pessoal, comunitária e pastoral",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
@@ -185,7 +185,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "resumo",
-      "title": "15. Síntese e revisão do estudo",
+      "title": "14. Síntese e revisão do estudo",
       "kind": "conclusion",
       "confidence": "high",
       "scriptureRefs": [
@@ -195,7 +195,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "exercicios",
-      "title": "16. Exercícios de compreensão e interpretação",
+      "title": "15. Exercícios de compreensão e interpretação",
       "kind": "exercise",
       "confidence": "high",
       "scriptureRefs": [
@@ -205,7 +205,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "oficina-pregador",
-      "title": "17. Oficina de preparação da mensagem",
+      "title": "16. Oficina de preparação da mensagem",
       "kind": "sermon",
       "confidence": "high",
       "scriptureRefs": [
@@ -215,7 +215,7 @@ export const psalm94Study: StudyContent = {
     },
     {
       "id": "oracao-final",
-      "title": "18. Oração final",
+      "title": "17. Oração final",
       "kind": "prayer",
       "confidence": "high",
       "scriptureRefs": [
