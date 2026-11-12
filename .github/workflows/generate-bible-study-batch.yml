@@ -234,7 +234,7 @@ jobs:
 
             if [ "$count" -gt 0 ] && [ "$pending" -eq 0 ]; then
               if [ "$failed" -gt 0 ]; then
-                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "(.name): (.status)/(.conclusion)"' <<< "$latest"
+                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "\(.name): \(.status)/\(.conclusion)"' <<< "$latest"
                 echo "::error::A PR não passou em todas as verificações. Nenhuma continuação será agendada."
                 exit 1
               fi
