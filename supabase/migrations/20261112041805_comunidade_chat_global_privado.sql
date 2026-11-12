@@ -96,10 +96,37 @@ begin
   if actor is null then
     raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
   end if;
-  if tg_table_name = 'mensagens_globais' and actor <> new.user_id then
-    raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
-  elsif tg_table_name = 'mensagens_privadas' and actor <> new.remetente_id then
-    raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
+
+  -- Separar os campos por tabela: NEW.remetente_id não existe em mensagens_globais.
+  if tg_table_name = 'mensagens_globais' then
+    if actor <> new.user_id then
+      raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
+    end if;
+  elsif tg_table_name = 'mensagens_privadas' then
+    if actor <> new.remetente_id then
+      raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
+    end if;
+
+    select user_a, user_b into participant_a, participant_b
+    from public.conversas where id = new.conversa_id;
+
+    if not found or actor not in (participant_a, participant_b)
+      or not exists (
+        select 1 from public.amizades a
+        where a.user_a = participant_a and a.user_b = participant_b
+      ) then
+      raise exception 'Conversa privada exige amizade aceita.' using errcode = '42501';
+    end if;
+
+    if exists (
+      select 1 from public.bloqueios b
+      where (b.quem_bloqueou = participant_a and b.bloqueado = participant_b)
+         or (b.quem_bloqueou = participant_b and b.bloqueado = participant_a)
+    ) then
+      raise exception 'Não é possível enviar mensagens nesta conversa.' using errcode = '42501';
+    end if;
+  else
+    raise exception 'Tabela de mensagens não reconhecida.' using errcode = '22023';
   end if;
 
   new.conteudo := btrim(regexp_replace(
@@ -108,21 +135,6 @@ begin
   ));
   if char_length(new.conteudo) < 1 or char_length(new.conteudo) > 500 then
     raise exception 'A mensagem deve conter de 1 a 500 caracteres.' using errcode = '22023';
-  end if;
-
-  if tg_table_name = 'mensagens_privadas' then
-    select user_a, user_b into participant_a, participant_b
-    from public.conversas where id = new.conversa_id;
-    if not found or actor not in (participant_a, participant_b) then
-      raise exception 'Você não participa desta conversa.' using errcode = '42501';
-    end if;
-    if exists (
-      select 1 from public.bloqueios b
-      where (b.quem_bloqueou = participant_a and b.bloqueado = participant_b)
-         or (b.quem_bloqueou = participant_b and b.bloqueado = participant_a)
-    ) then
-      raise exception 'Não é possível enviar mensagens nesta conversa.' using errcode = '42501';
-    end if;
   end if;
 
   perform pg_advisory_xact_lock(hashtextextended(actor::text, 0));
