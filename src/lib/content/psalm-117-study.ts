@@ -1,6 +1,7 @@
 import type { StudyContent } from "../types";
 
-/** Estudo aprofundado de Salmos 117 no padrão didático de Gênesis 1. */\nexport const psalm117Study: StudyContent = {
+/** Estudo aprofundado de Salmos 117 no padrão didático de Gênesis 1. */
+export const psalm117Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "Todas as nações são chamadas a louvar o Senhor",
