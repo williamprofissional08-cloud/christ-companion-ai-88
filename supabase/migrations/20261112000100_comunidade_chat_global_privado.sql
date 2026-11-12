@@ -59,10 +59,15 @@ create index if not exists bloqueios_bloqueado_idx on public.bloqueios (bloquead
 create table if not exists public.denuncias (
   id uuid primary key default gen_random_uuid(),
   denunciante_id uuid not null references auth.users(id) on delete cascade,
-  mensagem_id uuid not null,
+  mensagem_id uuid,
+  perfil_denunciado_id uuid references auth.users(id) on delete cascade,
   tipo text not null check (tipo in ('global', 'privada')),
   motivo text not null check (char_length(motivo) between 5 and 500),
-  criado_em timestamptz not null default now()
+  criado_em timestamptz not null default now(),
+  constraint denuncias_single_target check (
+    (mensagem_id is not null and perfil_denunciado_id is null)
+    or (mensagem_id is null and perfil_denunciado_id is not null and tipo = 'privada')
+  )
 );
 create index if not exists denuncias_criado_idx on public.denuncias (criado_em desc);
 create index if not exists denuncias_denunciante_idx on public.denuncias (denunciante_id, criado_em desc);
