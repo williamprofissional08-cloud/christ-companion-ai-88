@@ -9,15 +9,11 @@ DROP POLICY IF EXISTS "service role manages AI rate limits" ON public.ai_rate_li
 CREATE POLICY "service role manages AI rate limits"
   ON public.ai_rate_limits FOR ALL TO service_role
   USING (true) WITH CHECK (true);
-REVOKE ALL ON TABLE public.ai_rate_limits FROM PUBLIC, anon, authenticated;
-GRANT ALL ON TABLE public.ai_rate_limits TO service_role;
 
 DROP POLICY IF EXISTS "service role manages community message rate limits" ON public.community_message_rate_limits;
 CREATE POLICY "service role manages community message rate limits"
   ON public.community_message_rate_limits FOR ALL TO service_role
   USING (true) WITH CHECK (true);
-REVOKE ALL ON TABLE public.community_message_rate_limits FROM PUBLIC, anon, authenticated;
-GRANT ALL ON TABLE public.community_message_rate_limits TO service_role;
 
 -- Harden SECURITY DEFINER resolution. All referenced objects in the
 -- implementations are schema-qualified; pg_temp is deliberately last.
@@ -34,6 +30,10 @@ REVOKE EXECUTE ON FUNCTION public.admin_question_has_answers(uuid) FROM PUBLIC, 
 REVOKE EXECUTE ON FUNCTION public.consume_ai_rate_limit(text) FROM PUBLIC, anon;
 REVOKE EXECUTE ON FUNCTION public.is_admin() FROM PUBLIC, anon;
 REVOKE EXECUTE ON FUNCTION public.search_community_members(text, integer) FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION public.admin_question_has_answers(uuid) TO authenticated, service_role;
+GRANT EXECUTE ON FUNCTION public.consume_ai_rate_limit(text) TO authenticated, service_role;
+GRANT EXECUTE ON FUNCTION public.is_admin() TO authenticated, service_role;
+GRANT EXECUTE ON FUNCTION public.search_community_members(text, integer) TO authenticated, service_role;
 
 -- Empty directory searches previously returned the entire member directory.
 -- Require at least two characters and retain the existing block exclusion,
