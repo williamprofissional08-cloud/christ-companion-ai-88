@@ -38,11 +38,11 @@ export function GlobalChatPanel() {
     setMembers((current) => ({ ...current, ...Object.fromEntries(((data || []) as Member[]).map((item) => [item.id, item])) }));
   }, []);
 
-  const loadLatest = useCallback(async () => {
+  const loadLatest = useCallback(async (currentUserId: string) => {
     const [messagesResult, blocksResult] = await Promise.all([
       db.from("mensagens_globais").select("id,user_id,conteudo,criado_em,apagada")
         .order("criado_em", { ascending: false }).limit(50),
-      db.from("bloqueios").select("bloqueado").eq("quem_bloqueou", current.id),
+      db.from("bloqueios").select("bloqueado").eq("quem_bloqueou", currentUserId),
     ]);
     if (messagesResult.error) {
       setError("Não foi possível carregar o chat global. Tente novamente.");
@@ -62,7 +62,7 @@ export function GlobalChatPanel() {
     void db.auth.getUser().then(async ({ data }) => {
       if (!active || !data.user) return;
       setUser(data.user);
-      await loadLatest();
+      await loadLatest(data.user.id);
       if (active) setLoading(false);
     }).catch(() => {
       if (active) { setError("Não foi possível validar sua sessão."); setLoading(false); }
@@ -87,7 +87,7 @@ export function GlobalChatPanel() {
         setOnline([...unique.values()]);
       })
       .on("postgres_changes", { event: "*", schema: "public", table: "mensagens_globais" }, () => {
-        if (active) void loadLatest();
+        if (active) void loadLatest(user.id);
       })
       .subscribe((status) => {
         if (status === "SUBSCRIBED") {
@@ -124,7 +124,7 @@ export function GlobalChatPanel() {
       return;
     }
     setDraft("");
-    await loadLatest();
+    await loadLatest(user.id);
   }
 
   async function loadOlder() {
@@ -196,7 +196,7 @@ export function GlobalChatPanel() {
       </div>
       <div className="max-h-[520px] min-h-[250px] space-y-3 overflow-y-auto p-4 sm:p-5" onScroll={(event) => { if (event.currentTarget.scrollTop <= 24 && !loadingMore && hasMore && !loading) void loadOlder(); }}>
         {loading ? <div className="flex items-center justify-center gap-2 py-12 text-sm text-muted-foreground"><Loader2 className="size-4 animate-spin" />Carregando mensagens...</div> : null}
-        {!loading && error ? <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-4 text-sm text-destructive">{error}<Button variant="outline" size="sm" className="ml-2" onClick={() => void loadLatest()}>Tentar novamente</Button></div> : null}
+        {!loading && error ? <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-4 text-sm text-destructive">{error}<Button variant="outline" size="sm" className="ml-2" onClick={() => user && void loadLatest(user.id)}>Tentar novamente</Button></div> : null}
         {!loading && !error && hasMore ? <div className="text-center"><Button variant="ghost" size="sm" disabled={loadingMore} onClick={() => void loadOlder()}>{loadingMore ? "Carregando..." : "Carregar mensagens anteriores"}</Button></div> : null}
         {!loading && !error && messages.length === 0 ? <div className="py-12 text-center"><MessageCircle className="mx-auto mb-3 size-9 text-primary/40" /><p className="font-medium">O chat está tranquilo por enquanto.</p><p className="mt-1 text-sm text-muted-foreground">Envie a primeira mensagem e dê início à conversa.</p></div> : null}
         {messages.map((message) => {
