@@ -14,6 +14,7 @@ import { supabase } from "@/integrations/supabase/client";
 const db = supabase as unknown as SupabaseClient;
 type Member = { id: string; display_name: string | null; avatar_url: string | null };
 type Conversation = { id: string; user_a: string; user_b: string; criado_em: string };
+type FriendRequest = { id: string; solicitante_id: string; destinatario_id: string; status: "pendente" | "aceito" | "recusado" };
 type PrivateMessage = { id: string; conversa_id: string; remetente_id: string; conteudo: string; lida: boolean; criado_em: string };
 type ConversationPreview = { conversation: Conversation; member: Member | undefined; lastMessage: PrivateMessage | null; unread: number };
 const sanitize = (value: string) => value.replace(/<[^>]*>/g, "").split("").filter((character) => { const code = character.charCodeAt(0); return code >= 32 && code !== 127; }).join("").trim();
@@ -47,6 +48,9 @@ export function PrivateMessagesList() {
   const [members, setMembers] = useState<Member[]>([]);
   const [previews, setPreviews] = useState<ConversationPreview[]>([]);
   const [blockedIds, setBlockedIds] = useState<string[]>([]);
+  const [friendIds, setFriendIds] = useState<string[]>([]);
+  const [incomingRequests, setIncomingRequests] = useState<FriendRequest[]>([]);
+  const [outgoingRequests, setOutgoingRequests] = useState<FriendRequest[]>([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -64,6 +68,15 @@ export function PrivateMessagesList() {
     }
     const blocked = ((blocks || []) as { bloqueado: string }[]).map((item) => item.bloqueado);
     setBlockedIds(blocked);
+    const [{ data: friendships }, { data: requests }] = await Promise.all([
+      db.from("amizades").select("user_a,user_b").or("user_a.eq." + current.id + ",user_b.eq." + current.id),
+      db.from("pedidos_amizade").select("id,solicitante_id,destinatario_id,status").or("solicitante_id.eq." + current.id + ",destinatario_id.eq." + current.id).eq("status", "pendente"),
+    ]);
+    const friends = ((friendships || []) as { user_a: string; user_b: string }[]).map((row) => row.user_a === current.id ? row.user_b : row.user_a);
+    setFriendIds(friends);
+    const requestRows = (requests || []) as FriendRequest[];
+    setIncomingRequests(requestRows.filter((row) => row.destinatario_id === current.id));
+    setOutgoingRequests(requestRows.filter((row) => row.solicitante_id === current.id));
     const rows = (conversations || []) as Conversation[];
     const otherIds = [...new Set(rows.map((row) => row.user_a === current.id ? row.user_b : row.user_a))];
     const { data: people } = await db.from("community_member_profiles").select("id,display_name,avatar_url").in("id", otherIds.length ? otherIds : ["00000000-0000-0000-0000-000000000000"]);
@@ -108,6 +121,12 @@ export function PrivateMessagesList() {
       })
       .on("postgres_changes", { event: "INSERT", schema: "public", table: "conversas" }, () => {
         if (active) void reload(user);
+      })
+      .on("postgres_changes", { event: "*", schema: "public", table: "pedidos_amizade" }, () => {
+        if (active) void reload(user);
+      })
+      .on("postgres_changes", { event: "*", schema: "public", table: "amizades" }, () => {
+        if (active) void reload(user);
       }).subscribe();
     return () => { active = false; void db.removeChannel(channel); };
   }, [user, reload]);
@@ -118,8 +137,38 @@ export function PrivateMessagesList() {
       (!query || (member.display_name || "Membro").toLocaleLowerCase("pt-BR").includes(query))).slice(0, 12);
   }, [members, search, blockedIds, user?.id]);
 
+  async function sendFriendRequest(member: Member) {
+    if (!user || starting) return;
+    setStarting(member.id);
+    const { error: requestError } = await db.from("pedidos_amizade").insert({
+      solicitante_id: user.id, destinatario_id: member.id,
+    });
+    setStarting(null);
+    if (requestError) {
+      toast.error(requestError.code === "23505" ? "Já existe um pedido pendente ou vocês já são amigos." : "Não foi possível enviar o pedido de amizade.");
+      return;
+    }
+    toast.success("Pedido de amizade enviado.");
+    await reload(user);
+  }
+
+  async function acceptFriendRequest(request: FriendRequest) {
+    if (!user || request.destinatario_id !== user.id || starting) return;
+    setStarting(request.solicitante_id);
+    const { error: acceptError } = await db.from("pedidos_amizade")
+      .update({ status: "aceito" }).eq("id", request.id).eq("status", "pendente");
+    setStarting(null);
+    if (acceptError) { toast.error("Não foi possível aceitar o pedido."); return; }
+    toast.success("Amizade aceita. A conversa privada está liberada.");
+    await reload(user);
+  }
+
   async function openConversation(member: Member) {
     if (!user || starting) return;
+    if (!friendIds.includes(member.id)) {
+      toast.error("Envie um pedido de amizade e aguarde o aceite para conversar no privado.");
+      return;
+    }
     setStarting(member.id);
     const [userA, userB] = [user.id, member.id].sort();
     let conversation: Conversation | null = null;
@@ -129,7 +178,7 @@ export function PrivateMessagesList() {
     else {
       const { error: insertError } = await db.from("conversas").insert({ user_a: userA, user_b: userB });
       if (insertError && !insertError.message.toLowerCase().includes("duplicate")) {
-        toast.error(insertError.message.includes("bloqueio") ? "Não é possível iniciar esta conversa." : "Não foi possível iniciar a conversa.");
+        toast.error("Não foi possível iniciar a conversa. Confirme a amizade e verifique se não há bloqueio.");
         setStarting(null);
         return;
       }
@@ -138,7 +187,7 @@ export function PrivateMessagesList() {
       conversation = created as Conversation | null;
     }
     setStarting(null);
-    if (conversation) window.location.href = `/comunidade/privado/${conversation.id}`;
+    if (conversation) window.location.href = "/comunidade/privado/" + conversation.id;
     else toast.error("A conversa não pôde ser aberta. Verifique se não há bloqueio entre as contas.");
   }
 
@@ -152,11 +201,12 @@ export function PrivateMessagesList() {
         <Card className="rounded-2xl border-primary/15 p-4 shadow-sm sm:p-5">
           <div className="mb-3 flex items-center gap-2"><UserRound className="size-5 text-primary" /><h2 className="font-display text-lg font-semibold">Encontrar membros</h2></div>
           <div className="relative mb-3"><Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" /><Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar pelo nome..." className="pl-9" /></div>
+          {incomingRequests.length > 0 ? <div className="mb-4 rounded-xl border border-primary/20 bg-primary/5 p-3"><h3 className="mb-2 text-sm font-semibold">Pedidos recebidos ({incomingRequests.length})</h3><div className="space-y-2">{incomingRequests.map((request) => { const sender = members.find((item) => item.id === request.solicitante_id); return <div key={request.id} className="flex items-center gap-2"><span className="min-w-0 flex-1 truncate text-sm">{sender?.display_name || "Membro da comunidade"}</span><Button size="sm" disabled={starting !== null} onClick={() => void acceptFriendRequest(request)}>{starting === request.solicitante_id ? <Loader2 className="size-4 animate-spin" /> : "Aceitar"}</Button></div>; })}</div></div> : null}
           <div className="grid gap-2 sm:grid-cols-2">
             {filteredMembers.map((member) => <div key={member.id} className="flex items-center gap-3 rounded-xl border border-border/70 p-3">
               <Avatar className="size-10"><AvatarImage src={member.avatar_url ?? undefined} /><AvatarFallback>{initials(member.display_name)}</AvatarFallback></Avatar>
               <span className="min-w-0 flex-1 truncate text-sm font-medium">{member.display_name || "Membro"}</span>
-              <Button size="sm" variant="outline" disabled={starting !== null} onClick={() => void openConversation(member)}>{starting === member.id ? <Loader2 className="size-4 animate-spin" /> : <MessageCircle className="mr-1 size-3.5" />} Conversar</Button>
+              <Button size="sm" variant="outline" disabled={starting !== null || outgoingRequests.some((request) => request.destinatario_id === member.id)} onClick={() => friendIds.includes(member.id) ? void openConversation(member) : incomingRequests.some((request) => request.solicitante_id === member.id) ? void acceptFriendRequest(incomingRequests.find((request) => request.solicitante_id === member.id)!) : void sendFriendRequest(member)}>{starting === member.id ? <Loader2 className="size-4 animate-spin" /> : friendIds.includes(member.id) ? <><MessageCircle className="mr-1 size-3.5" /> Conversar</> : incomingRequests.some((request) => request.solicitante_id === member.id) ? "Aceitar pedido" : outgoingRequests.some((request) => request.destinatario_id === member.id) ? "Pedido enviado" : "Adicionar amigo"}</Button>
               {user ? <div className="flex gap-1"><Button size="icon" variant="ghost" aria-label="Denunciar perfil" onClick={() => void sendProfileReport(user.id, member.id)}><Flag className="size-4" /></Button><Button size="icon" variant="ghost" aria-label="Bloquear membro" onClick={() => void blockMember(user.id, member.id)}><ShieldBan className="size-4" /></Button></div> : null}
             </div>)}
             {!loading && !filteredMembers.length ? <p className="col-span-full py-4 text-center text-sm text-muted-foreground">Nenhum membro encontrado.</p> : null}
