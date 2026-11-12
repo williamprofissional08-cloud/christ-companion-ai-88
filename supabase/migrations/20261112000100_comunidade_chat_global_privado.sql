@@ -93,7 +93,12 @@ declare
   participant_b uuid;
   previous_sent timestamptz;
 begin
-  if actor is null or actor <> case when tg_table_name = 'mensagens_globais' then new.user_id else new.remetente_id end then
+  if actor is null then
+    raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
+  end if;
+  if tg_table_name = 'mensagens_globais' and actor <> new.user_id then
+    raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
+  elsif tg_table_name = 'mensagens_privadas' and actor <> new.remetente_id then
     raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
   end if;
 
@@ -228,7 +233,8 @@ create policy "Receivers mark private messages read" on public.mensagens_privada
       where c.id = conversa_id and (select auth.uid()) in (c.user_a, c.user_b)
     )
   ) with check (
-    remetente_id <> (select auth.uid())
+    lida = true
+    and remetente_id <> (select auth.uid())
     and exists (
       select 1 from public.conversas c
       where c.id = conversa_id and (select auth.uid()) in (c.user_a, c.user_b)
