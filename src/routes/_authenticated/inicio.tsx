@@ -10,7 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { useAuth } from "@/hooks/use-auth";
 import { getDevotional } from "@/lib/ai.functions";
 import { loadDevotionalSafely } from "@/lib/devotional-loader";
-import { todayISO } from "@/lib/types";
+import { useBrazilDay } from "@/hooks/use-brazil-day";
 
 export const Route = createFileRoute("/_authenticated/inicio")({
   head: () => ({
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/_authenticated/inicio")({
 });
 
 function Inicio() {
-  const day = todayISO();
+  const day = useBrazilDay();
   const { user } = useAuth();
   const devotionalFn = useServerFn(getDevotional);
   const devotional = useQuery({
