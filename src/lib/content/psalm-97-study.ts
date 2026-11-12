@@ -48,7 +48,7 @@ export const psalm97Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 97:1-12"
       ],
-      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece uma paráfrase orientadora e comentários para acompanhar o texto.\n\n**Salmos 97:1-6 — A manifestação majestosa do Rei**\n\n**Salmos 97:7-9 — A vergonha dos ídolos e a alegria de Sião**\n\n**Salmos 97:10-12 — O chamado à fidelidade e à gratidão**\n\n**1:** O Senhor reina e a terra se alegra; até as ilhas distantes são convocadas à alegria. O reinado divino alcança além de Israel.\n**2:** Nuvens e escuridão o cercam, enquanto justiça e direito sustentam seu trono. O mistério da presença não elimina a retidão de seu governo.\n**3:** O fogo vai adiante dele e consome seus adversários. A imagem representa a força judicial da presença divina.\n**4:** Os relâmpagos iluminam o mundo e a terra treme diante do Senhor. A criação reage à manifestação do Rei.\n**5:** Os montes se derretem diante do Senhor de toda a terra. A imagem comunica que até aquilo que parece sólido é pequeno diante de Deus.\n**6:** Os céus anunciam sua justiça e os povos contemplam sua glória. A criação torna público o caráter justo do Rei.\n**7:** Os adoradores de imagens são envergonhados e os ídolos não podem competir com Deus. A crítica se dirige à idolatria, não a povos como etnias.\n**8:** Sião ouve e se alegra com os juízos do Senhor. A justiça divina é boa notícia para a comunidade que sofre.\n**9:** O Senhor é exaltado acima de toda a terra e de todos os deuses. A afirmação é de supremacia, não de uma disputa entre poderes equivalentes.\n**10:** Quem ama o Senhor deve rejeitar o mal. A adoração verdadeira inclui lealdade ética.\n**11:** Deus guarda a vida de seus fiéis e os livra das mãos dos perversos. A promessa expressa cuidado, sem apagar a realidade do sofrimento dos justos.\n**12:** A luz é semeada para o justo e a alegria para os retos de coração. A imagem da semente sugere esperança que amadurece no tempo.\n**13:** Os justos são chamados a alegrar-se no Senhor e agradecer por sua santidade. A resposta final é louvor, não orgulho próprio."
+      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece uma paráfrase orientadora e comentários para acompanhar o texto.\n\n**Salmos 97:1-6 — A manifestação majestosa do Rei**\n\n**Salmos 97:7-9 — A vergonha dos ídolos e a alegria de Sião**\n\n**Salmos 97:10-12 — O chamado à fidelidade e à gratidão**\n\n**1:** O Senhor reina e a terra se alegra; até as ilhas distantes são convocadas à alegria. O reinado divino alcança além de Israel.\n**2:** Nuvens e escuridão o cercam, enquanto justiça e direito sustentam seu trono. O mistério da presença não elimina a retidão de seu governo.\n**3:** O fogo vai adiante dele e consome seus adversários. A imagem representa a força judicial da presença divina.\n**4:** Os relâmpagos iluminam o mundo e a terra treme diante do Senhor. A criação reage à manifestação do Rei.\n**5:** Os montes se derretem diante do Senhor de toda a terra. A imagem comunica que até aquilo que parece sólido é pequeno diante de Deus.\n**6:** Os céus anunciam sua justiça e os povos contemplam sua glória. A criação torna público o caráter justo do Rei.\n**7:** Os adoradores de imagens são envergonhados e os ídolos não podem competir com Deus. A crítica se dirige à idolatria, não a povos como etnias.\n**8:** Sião ouve e se alegra com os juízos do Senhor. A justiça divina é boa notícia para a comunidade que sofre.\n**9:** O Senhor é exaltado acima de toda a terra e de todos os deuses. A afirmação é de supremacia, não de uma disputa entre poderes equivalentes.\n**10:** Quem ama o Senhor deve rejeitar o mal. A adoração verdadeira inclui lealdade ética. Deus guarda a vida de seus fiéis e os livra das mãos dos perversos. A promessa expressa cuidado, sem apagar a realidade do sofrimento dos justos.\n**11:** A luz é semeada para o justo e a alegria para os retos de coração. A imagem da semente sugere esperança que amadurece no tempo.\n**12:** Os justos são chamados a alegrar-se no Senhor e agradecer por sua santidade. A resposta final é louvor, não orgulho próprio."
     },
     {
       "id": "introducao",
@@ -84,7 +84,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "5. Exposição — A manifestação majestosa do Rei",
+      "title": "4. Exposição — A manifestação majestosa do Rei",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -94,7 +94,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "topico-2",
-      "title": "6. Exposição — A vergonha dos ídolos e a alegria de Sião",
+      "title": "5. Exposição — A vergonha dos ídolos e a alegria de Sião",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -104,17 +104,17 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "topico-3",
-      "title": "7. Exposição — O chamado à fidelidade e à gratidão",
+      "title": "6. Exposição — O chamado à fidelidade e à gratidão",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
         "Salmos 97:10-12"
       ],
-      "body": "**Leia Salmos 97:10-12 integralmente.**\n\n**Sentido da unidade:** O chamado à fidelidade e à gratidão. **Tema do capítulo:** O Senhor reina e a luz nasce para os justos.\n\n**Observações versículo por versículo**\n\n**Versículo 10 — Explicação:** Quem ama o Senhor deve rejeitar o mal. A adoração verdadeira inclui lealdade ética; Deus guarda a vida de seus fiéis e os livra das mãos dos perversos. A promessa expressa cuidado, sem apagar a realidade do sofrimento dos justos. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Versículo 11 — Explicação:** A luz é semeada para o justo e a alegria para os retos de coração. A imagem da semente sugere esperança que amadurece no tempo. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Versículo 12 — Explicação:** Os justos são chamados a alegrar-se no Senhor e agradecer por sua santidade. A resposta final é louvor, não orgulho próprio. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Síntese expositiva:** O salmo celebra o reinado do Senhor com imagens de nuvens, fogo, montes e relâmpagos, descrevendo a derrota dos ídolos e o chamado à alegria dos justos. A linguagem teofânica recorda manifestações divinas no Sinai e em outros textos. Não há data nem evento particular informado.\n\n**Aplicação responsável:** O Senhor reina e a luz nasce para os justos. Não transforme a linguagem poética em garantia automática nem use a experiência do salmista para acusar quem sofre."
+      "body": "**Leia Salmos 97:10-12 integralmente.**\n\n**Sentido da unidade:** O chamado à fidelidade e à gratidão. **Tema do capítulo:** O Senhor reina e a luz nasce para os justos.\n\n**Observações versículo por versículo**\n\n**Versículo 10 — Explicação:** Quem ama o Senhor deve rejeitar o mal. A adoração verdadeira inclui lealdade ética. Deus guarda a vida de seus fiéis e os livra das mãos dos perversos. A promessa expressa cuidado, sem apagar a realidade do sofrimento dos justos. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Versículo 11 — Explicação:** A luz é semeada para o justo e a alegria para os retos de coração. A imagem da semente sugere esperança que amadurece no tempo. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Versículo 12 — Explicação:** Os justos são chamados a alegrar-se no Senhor e agradecer por sua santidade. A resposta final é louvor, não orgulho próprio. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Síntese expositiva:** O salmo celebra o reinado do Senhor com imagens de nuvens, fogo, montes e relâmpagos, descrevendo a derrota dos ídolos e o chamado à alegria dos justos. A linguagem teofânica recorda manifestações divinas no Sinai e em outros textos. Não há data nem evento particular informado.\n\n**Aplicação responsável:** O Senhor reina e a luz nasce para os justos. Não transforme a linguagem poética em garantia automática nem use a experiência do salmista para acusar quem sofre."
     },
     {
       "id": "palavras-chave",
-      "title": "8. Palavras-chave, imagens e recursos poéticos",
+      "title": "7. Palavras-chave, imagens e recursos poéticos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -124,7 +124,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "questoes-interpretativas",
-      "title": "9. Questões interpretativas e pontos de atenção",
+      "title": "8. Questões interpretativas e pontos de atenção",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -134,7 +134,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "referencias-explicadas",
-      "title": "10. Referências bíblicas relacionadas",
+      "title": "9. Referências bíblicas relacionadas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -144,7 +144,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "cuidados",
-      "title": "11. Cuidados contra interpretações indevidas",
+      "title": "10. Cuidados contra interpretações indevidas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -154,7 +154,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "cristo",
-      "title": "12. Leitura canônica e relação com Jesus Cristo",
+      "title": "11. Leitura canônica e relação com Jesus Cristo",
       "kind": "christology",
       "confidence": "high",
       "scriptureRefs": [
@@ -164,7 +164,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "aplicacao",
-      "title": "13. Aplicação pessoal, comunitária e pastoral",
+      "title": "12. Aplicação pessoal, comunitária e pastoral",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
@@ -174,7 +174,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "resumo",
-      "title": "14. Síntese e revisão do estudo",
+      "title": "13. Síntese e revisão do estudo",
       "kind": "conclusion",
       "confidence": "high",
       "scriptureRefs": [
@@ -184,7 +184,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "exercicios",
-      "title": "15. Exercícios de compreensão e interpretação",
+      "title": "14. Exercícios de compreensão e interpretação",
       "kind": "exercise",
       "confidence": "high",
       "scriptureRefs": [
@@ -194,7 +194,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "oficina-pregador",
-      "title": "16. Oficina de preparação da mensagem",
+      "title": "15. Oficina de preparação da mensagem",
       "kind": "sermon",
       "confidence": "high",
       "scriptureRefs": [
@@ -204,7 +204,7 @@ export const psalm97Study: StudyContent = {
     },
     {
       "id": "oracao-final",
-      "title": "17. Oração final",
+      "title": "16. Oração final",
       "kind": "prayer",
       "confidence": "high",
       "scriptureRefs": [
