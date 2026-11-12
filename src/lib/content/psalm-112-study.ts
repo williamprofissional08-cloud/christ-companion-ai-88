@@ -1,6 +1,7 @@
 import type { StudyContent } from "../types";
 
-/** Estudo aprofundado de Salmos 112 no padrão didático de Gênesis 1. */\nexport const psalm112Study: StudyContent = {
+/** Estudo aprofundado de Salmos 112 no padrão didático de Gênesis 1. */
+export const psalm112Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "A vida de quem teme o Senhor",
