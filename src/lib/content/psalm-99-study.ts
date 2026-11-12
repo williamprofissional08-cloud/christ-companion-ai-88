@@ -48,7 +48,7 @@ export const psalm99Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 99:1-9"
       ],
-      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece uma paráfrase orientadora e comentários para acompanhar o texto.\n\n**Salmos 99:1-3 — O Rei santo acima dos povos**\n\n**Salmos 99:4-5 — O poder do Rei e o chamado à adoração**\n\n**Salmos 99:6-9 — Os mediadores, a resposta divina e a santidade**\n\n**1:** O Senhor reina e os povos tremem; ele está entronizado acima dos querubins e a terra se abala. A imagem une majestade real e presença ligada à arca.\n**2:** O Senhor é grande em Sião e exaltado acima de todos os povos. A centralidade de Sião não limita sua soberania universal.\n**3:** Seu nome grande e temível é santo. A santidade é a qualidade central que orienta o louvor.\n**4:** O Rei ama a justiça e estabelece a retidão. Seu poder não é arbitrário; está comprometido com o que é correto.\n**5:** Deus estabeleceu a justiça em Jacó e chama o povo a exaltá-lo e adorá-lo diante de seu estrado. Adoração e ordem justa pertencem juntas.\n**6:** Moisés e Arão estão entre seus sacerdotes, e Samuel entre os que invocam seu nome. O salmo recorda diferentes formas de liderança e intercessão.\n**7:** Eles clamaram ao Senhor, que lhes respondeu. A oração é apresentada como diálogo real, não como mecanismo de controle.\n**8:** Deus lhes falou na coluna de nuvem e eles guardaram seus testemunhos e estatutos. A revelação recebida exige obediência.\n**9:** O Senhor respondeu, foi perdoador e também tratou das consequências de suas ações. O perdão não transforma o pecado em algo sem importância.\n**10:** O povo é novamente chamado a exaltar o Senhor e adorá-lo em seu monte santo. A santidade de Deus sustenta a identidade da comunidade."
+      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece uma paráfrase orientadora e comentários para acompanhar o texto.\n\n**Salmos 99:1-3 — O Rei santo acima dos povos**\n\n**Salmos 99:4-5 — O poder do Rei e o chamado à adoração**\n\n**Salmos 99:6-9 — Os mediadores, a resposta divina e a santidade**\n\n**1:** O Senhor reina e os povos tremem; ele está entronizado acima dos querubins e a terra se abala. A imagem une majestade real e presença ligada à arca.\n**2:** O Senhor é grande em Sião e exaltado acima de todos os povos. A centralidade de Sião não limita sua soberania universal.\n**3:** Seu nome grande e temível é santo. A santidade é a qualidade central que orienta o louvor.\n**4:** O Rei ama a justiça e estabelece a retidão. Seu poder não é arbitrário; está comprometido com o que é correto.\n**5:** Deus estabeleceu a justiça em Jacó e chama o povo a exaltá-lo e adorá-lo diante de seu estrado. Adoração e ordem justa pertencem juntas.\n**6:** Moisés e Arão estão entre seus sacerdotes, e Samuel entre os que invocam seu nome. O salmo recorda diferentes formas de liderança e intercessão. Eles clamaram ao Senhor, que lhes respondeu. A oração é apresentada como diálogo real, não como mecanismo de controle.\n**7:** Deus lhes falou na coluna de nuvem e eles guardaram seus testemunhos e estatutos. A revelação recebida exige obediência.\n**8:** O Senhor respondeu, foi perdoador e também tratou das consequências de suas ações. O perdão não transforma o pecado em algo sem importância.\n**9:** O povo é novamente chamado a exaltar o Senhor e adorá-lo em seu monte santo. A santidade de Deus sustenta a identidade da comunidade."
     },
     {
       "id": "introducao",
@@ -84,7 +84,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "5. Exposição — O Rei santo acima dos povos",
+      "title": "4. Exposição — O Rei santo acima dos povos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -94,7 +94,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "topico-2",
-      "title": "6. Exposição — O poder do Rei e o chamado à adoração",
+      "title": "5. Exposição — O poder do Rei e o chamado à adoração",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -104,17 +104,17 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "topico-3",
-      "title": "7. Exposição — Os mediadores, a resposta divina e a santidade",
+      "title": "6. Exposição — Os mediadores, a resposta divina e a santidade",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
         "Salmos 99:6-9"
       ],
-      "body": "**Leia Salmos 99:6-9 integralmente.**\n\n**Sentido da unidade:** Os mediadores, a resposta divina e a santidade. **Tema do capítulo:** O Rei santo e o Deus que responde.\n\n**Observações versículo por versículo**\n\n**Versículo 6 — Explicação:** Moisés e Arão estão entre seus sacerdotes, e Samuel entre os que invocam seu nome. O salmo recorda diferentes formas de liderança e intercessão. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Versículo 7 — Explicação:** Eles clamaram ao Senhor, que lhes respondeu. A oração é apresentada como diálogo real, não como mecanismo de controle. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Versículo 8 — Explicação:** Deus lhes falou na coluna de nuvem e eles guardaram seus testemunhos e estatutos. A revelação recebida exige obediência. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Versículo 9 — Explicação:** O Senhor respondeu, foi perdoador e também tratou das consequências de suas ações. O perdão não transforma o pecado em algo sem importância. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Síntese expositiva:** O salmo conclui uma sequência de cânticos sobre o reinado do Senhor. Destaca sua santidade, justiça e respostas a Moisés, Arão e Samuel. A menção desses mediadores evoca a história de Israel e mostra que a proximidade com Deus inclui tanto perdão quanto responsabilidade.\n\n**Aplicação responsável:** O Rei santo e o Deus que responde. Não transforme a linguagem poética em garantia automática nem use a experiência do salmista para acusar quem sofre."
+      "body": "**Leia Salmos 99:6-9 integralmente.**\n\n**Sentido da unidade:** Os mediadores, a resposta divina e a santidade. **Tema do capítulo:** O Rei santo e o Deus que responde.\n\n**Observações versículo por versículo**\n\n**Versículo 6 — Explicação:** Moisés e Arão estão entre seus sacerdotes, e Samuel entre os que invocam seu nome. O salmo recorda diferentes formas de liderança e intercessão. Eles clamaram ao Senhor, que lhes respondeu. A oração é apresentada como diálogo real, não como mecanismo de controle. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Versículo 7 — Explicação:** Deus lhes falou na coluna de nuvem e eles guardaram seus testemunhos e estatutos. A revelação recebida exige obediência. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Versículo 8 — Explicação:** O Senhor respondeu, foi perdoador e também tratou das consequências de suas ações. O perdão não transforma o pecado em algo sem importância. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Versículo 9 — Explicação:** O povo é novamente chamado a exaltar o Senhor e adorá-lo em seu monte santo. A santidade de Deus sustenta a identidade da comunidade. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Síntese expositiva:** O salmo conclui uma sequência de cânticos sobre o reinado do Senhor. Destaca sua santidade, justiça e respostas a Moisés, Arão e Samuel. A menção desses mediadores evoca a história de Israel e mostra que a proximidade com Deus inclui tanto perdão quanto responsabilidade.\n\n**Aplicação responsável:** O Rei santo e o Deus que responde. Não transforme a linguagem poética em garantia automática nem use a experiência do salmista para acusar quem sofre."
     },
     {
       "id": "palavras-chave",
-      "title": "8. Palavras-chave, imagens e recursos poéticos",
+      "title": "7. Palavras-chave, imagens e recursos poéticos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -124,7 +124,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "questoes-interpretativas",
-      "title": "9. Questões interpretativas e pontos de atenção",
+      "title": "8. Questões interpretativas e pontos de atenção",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -134,7 +134,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "referencias-explicadas",
-      "title": "10. Referências bíblicas relacionadas",
+      "title": "9. Referências bíblicas relacionadas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -144,7 +144,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "cuidados",
-      "title": "11. Cuidados contra interpretações indevidas",
+      "title": "10. Cuidados contra interpretações indevidas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -154,7 +154,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "cristo",
-      "title": "12. Leitura canônica e relação com Jesus Cristo",
+      "title": "11. Leitura canônica e relação com Jesus Cristo",
       "kind": "christology",
       "confidence": "high",
       "scriptureRefs": [
@@ -164,7 +164,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "aplicacao",
-      "title": "13. Aplicação pessoal, comunitária e pastoral",
+      "title": "12. Aplicação pessoal, comunitária e pastoral",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
@@ -174,7 +174,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "resumo",
-      "title": "14. Síntese e revisão do estudo",
+      "title": "13. Síntese e revisão do estudo",
       "kind": "conclusion",
       "confidence": "high",
       "scriptureRefs": [
@@ -184,7 +184,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "exercicios",
-      "title": "15. Exercícios de compreensão e interpretação",
+      "title": "14. Exercícios de compreensão e interpretação",
       "kind": "exercise",
       "confidence": "high",
       "scriptureRefs": [
@@ -194,7 +194,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "oficina-pregador",
-      "title": "16. Oficina de preparação da mensagem",
+      "title": "15. Oficina de preparação da mensagem",
       "kind": "sermon",
       "confidence": "high",
       "scriptureRefs": [
@@ -204,7 +204,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "oracao-final",
-      "title": "17. Oração final",
+      "title": "16. Oração final",
       "kind": "prayer",
       "confidence": "high",
       "scriptureRefs": [
