@@ -1,4 +1,6 @@
-import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmos 120 no padrão didático de Gênesis 1. */\nexport const psalm120Study: StudyContent = {
+import type { StudyContent } from "../types";
+
+/** Estudo aprofundado de Salmos 120 no padrão didático de Gênesis 1. */\nexport const psalm120Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "O clamor de quem vive cercado pela mentira",
@@ -42,7 +44,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:1-7"
       ],
-      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece paráfrases orientadoras para acompanhar a leitura. Compare cada síntese com o texto bíblico.\\n\\n**Salmos 120:1-2 — O Senhor ouve o clamor contra a mentira**\\n\\n**1:** O salmista clama ao Senhor em sua angústia e testemunha que foi ouvido; a oração começa no sofrimento real.\\n\\n**2:** Ele pede livramento dos lábios mentirosos e da língua enganosa; a ameaça é verbal e relacional.\\n\\n**Salmos 120:3-4 — O juízo sobre a língua enganosa**\\n\\n**3:** A pergunta sobre o que será dado à língua enganosa introduz uma resposta poética de juízo.\\n\\n**4:** Flechas afiadas e brasas de zimbro simbolizam a severidade e a persistência das consequências da fala destrutiva.\\n\\n**Salmos 120:5-7 — O sofrimento de viver entre pessoas hostis à paz**\\n\\n**5:** O salmista lamenta habitar em Meseque e entre as tendas de Quedar; os nomes podem representar distância e ambiente estranho, sem fixar uma geografia incontestável.\\n\\n**6:** Sua alma vive tempo demais entre os que odeiam a paz; o lamento revela desgaste prolongado.\\n\\n**7:** Enquanto o salmista deseja paz, os outros parecem inclinados à guerra; o contraste prepara a coleção de peregrinação com um clamor por reconciliação."
+      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece paráfrases orientadoras para acompanhar a leitura. Compare cada síntese com o texto bíblico.\n\n**Salmos 120:1-2 — O Senhor ouve o clamor contra a mentira**\n\n**1:** O salmista clama ao Senhor em sua angústia e testemunha que foi ouvido; a oração começa no sofrimento real.\n\n**2:** Ele pede livramento dos lábios mentirosos e da língua enganosa; a ameaça é verbal e relacional.\n\n**Salmos 120:3-4 — O juízo sobre a língua enganosa**\n\n**3:** A pergunta sobre o que será dado à língua enganosa introduz uma resposta poética de juízo.\n\n**4:** Flechas afiadas e brasas de zimbro simbolizam a severidade e a persistência das consequências da fala destrutiva.\n\n**Salmos 120:5-7 — O sofrimento de viver entre pessoas hostis à paz**\n\n**5:** O salmista lamenta habitar em Meseque e entre as tendas de Quedar; os nomes podem representar distância e ambiente estranho, sem fixar uma geografia incontestável.\n\n**6:** Sua alma vive tempo demais entre os que odeiam a paz; o lamento revela desgaste prolongado.\n\n**7:** Enquanto o salmista deseja paz, os outros parecem inclinados à guerra; o contraste prepara a coleção de peregrinação com um clamor por reconciliação."
     },
     {
       "id": "introducao",
@@ -52,7 +54,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:1-7"
       ],
-      "body": "**Tema central:** O clamor de quem vive cercado pela mentira.\\n\\n**Gênero literário:** Cântico de romagem e lamento individual.\\n\\nO objetivo é ler o capítulo em sua unidade, observar a forma poética, explicar cada perícope e preparar uma exposição fiel ao texto. A aplicação deve nascer do sentido original, não de associações livres."
+      "body": "**Tema central:** O clamor de quem vive cercado pela mentira.\n\n**Gênero literário:** Cântico de romagem e lamento individual.\n\nO objetivo é ler o capítulo em sua unidade, observar a forma poética, explicar cada perícope e preparar uma exposição fiel ao texto. A aplicação deve nascer do sentido original, não de associações livres."
     },
     {
       "id": "contexto-historico",
@@ -62,7 +64,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:1-7"
       ],
-      "body": "O Salmo 120 inicia a coleção dos Cânticos de Romagem (Salmos 120–134), associados à peregrinação a Jerusalém. O primeiro poema apresenta alguém que vive em ambiente hostil, marcado por mentira e conflito. Meseque e Quedar evocam lugares distantes e podem funcionar como imagens de afastamento; a identificação exata do cenário não é necessária para compreender o lamento.\\n\\nQuando autoria, data ou ocasião não forem explicitadas no próprio texto, mantenha a distinção entre informação textual e hipótese histórica. Leia o salmo em relação ao seu lugar no Saltério e ao conjunto dos cânticos de Israel."
+      "body": "O Salmo 120 inicia a coleção dos Cânticos de Romagem (Salmos 120–134), associados à peregrinação a Jerusalém. O primeiro poema apresenta alguém que vive em ambiente hostil, marcado por mentira e conflito. Meseque e Quedar evocam lugares distantes e podem funcionar como imagens de afastamento; a identificação exata do cenário não é necessária para compreender o lamento.\n\nQuando autoria, data ou ocasião não forem explicitadas no próprio texto, mantenha a distinção entre informação textual e hipótese histórica. Leia o salmo em relação ao seu lugar no Saltério e ao conjunto dos cânticos de Israel."
     },
     {
       "id": "estrutura",
@@ -74,7 +76,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
         "Salmos 120:3-4",
         "Salmos 120:5-7"
       ],
-      "body": "**Movimento 1 — 1-2:** O Senhor ouve o clamor contra a mentira.\\n\\n**Movimento 2 — 3-4:** O juízo sobre a língua enganosa.\\n\\n**Movimento 3 — 5-7:** O sofrimento de viver entre pessoas hostis à paz.\\n\\nObserve repetições, mudanças de voz, imagens, contrastes e a progressão do argumento."
+      "body": "**Movimento 1 — 1-2:** O Senhor ouve o clamor contra a mentira.\n\n**Movimento 2 — 3-4:** O juízo sobre a língua enganosa.\n\n**Movimento 3 — 5-7:** O sofrimento de viver entre pessoas hostis à paz.\n\nObserve repetições, mudanças de voz, imagens, contrastes e a progressão do argumento."
     },
     {
       "id": "topico-1",
@@ -84,7 +86,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:1-2"
       ],
-      "body": "**Leia Salmos 120:1-2 integralmente.**\\n\\n**Sentido da unidade:** O Senhor ouve o clamor contra a mentira.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 1 — Explicação:** O salmista clama ao Senhor em sua angústia e testemunha que foi ouvido; a oração começa no sofrimento real. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 2 — Explicação:** Ele pede livramento dos lábios mentirosos e da língua enganosa; a ameaça é verbal e relacional. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** O Senhor ouve o clamor contra a mentira. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** O clamor de quem vive cercado pela mentira. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 120:1-2 integralmente.**\n\n**Sentido da unidade:** O Senhor ouve o clamor contra a mentira.\n\n**Observações versículo por versículo**\n\n**Versículo 1 — Explicação:** O salmista clama ao Senhor em sua angústia e testemunha que foi ouvido; a oração começa no sofrimento real. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 2 — Explicação:** Ele pede livramento dos lábios mentirosos e da língua enganosa; a ameaça é verbal e relacional. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** O Senhor ouve o clamor contra a mentira. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** O clamor de quem vive cercado pela mentira. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "topico-2",
@@ -94,7 +96,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:3-4"
       ],
-      "body": "**Leia Salmos 120:3-4 integralmente.**\\n\\n**Sentido da unidade:** O juízo sobre a língua enganosa.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 3 — Explicação:** A pergunta sobre o que será dado à língua enganosa introduz uma resposta poética de juízo. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 4 — Explicação:** Flechas afiadas e brasas de zimbro simbolizam a severidade e a persistência das consequências da fala destrutiva. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** O juízo sobre a língua enganosa. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** O clamor de quem vive cercado pela mentira. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 120:3-4 integralmente.**\n\n**Sentido da unidade:** O juízo sobre a língua enganosa.\n\n**Observações versículo por versículo**\n\n**Versículo 3 — Explicação:** A pergunta sobre o que será dado à língua enganosa introduz uma resposta poética de juízo. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 4 — Explicação:** Flechas afiadas e brasas de zimbro simbolizam a severidade e a persistência das consequências da fala destrutiva. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** O juízo sobre a língua enganosa. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** O clamor de quem vive cercado pela mentira. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "topico-3",
@@ -104,7 +106,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:5-7"
       ],
-      "body": "**Leia Salmos 120:5-7 integralmente.**\\n\\n**Sentido da unidade:** O sofrimento de viver entre pessoas hostis à paz.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 5 — Explicação:** O salmista lamenta habitar em Meseque e entre as tendas de Quedar; os nomes podem representar distância e ambiente estranho, sem fixar uma geografia incontestável. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 6 — Explicação:** Sua alma vive tempo demais entre os que odeiam a paz; o lamento revela desgaste prolongado. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 7 — Explicação:** Enquanto o salmista deseja paz, os outros parecem inclinados à guerra; o contraste prepara a coleção de peregrinação com um clamor por reconciliação. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** O sofrimento de viver entre pessoas hostis à paz. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** O clamor de quem vive cercado pela mentira. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 120:5-7 integralmente.**\n\n**Sentido da unidade:** O sofrimento de viver entre pessoas hostis à paz.\n\n**Observações versículo por versículo**\n\n**Versículo 5 — Explicação:** O salmista lamenta habitar em Meseque e entre as tendas de Quedar; os nomes podem representar distância e ambiente estranho, sem fixar uma geografia incontestável. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 6 — Explicação:** Sua alma vive tempo demais entre os que odeiam a paz; o lamento revela desgaste prolongado. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 7 — Explicação:** Enquanto o salmista deseja paz, os outros parecem inclinados à guerra; o contraste prepara a coleção de peregrinação com um clamor por reconciliação. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** O sofrimento de viver entre pessoas hostis à paz. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** O clamor de quem vive cercado pela mentira. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "palavras-chave",
@@ -134,7 +136,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:1-7"
       ],
-      "body": "- Salmos 121:1-2\\n- Jeremias 9:3-8\\n- Mateus 5:9\\n- Romanos 12:18\\n\\nLeia cada referência em seu contexto. Compare temas e vocabulário sem apagar as diferenças entre os textos. Uma ligação temática não equivale automaticamente a citação direta."
+      "body": "- Salmos 121:1-2\n- Jeremias 9:3-8\n- Mateus 5:9\n- Romanos 12:18\n\nLeia cada referência em seu contexto. Compare temas e vocabulário sem apagar as diferenças entre os textos. Uma ligação temática não equivale automaticamente a citação direta."
     },
     {
       "id": "cuidados",
@@ -164,7 +166,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:1-7"
       ],
-      "body": "**Pessoal:** examine como a mensagem forma sua confiança, arrependimento, gratidão, perseverança ou integridade.\\n\\n**Comunitária:** considere como orienta culto, justiça, memória, cuidado e responsabilidade coletiva.\\n\\n**Pastoral:** aplique com sensibilidade; não use o texto para culpabilizar quem sofre nem para prometer resultados que o contexto não promete.\\n\\n**Síntese aplicada:** O clamor de quem vive cercado pela mentira."
+      "body": "**Pessoal:** examine como a mensagem forma sua confiança, arrependimento, gratidão, perseverança ou integridade.\n\n**Comunitária:** considere como orienta culto, justiça, memória, cuidado e responsabilidade coletiva.\n\n**Pastoral:** aplique com sensibilidade; não use o texto para culpabilizar quem sofre nem para prometer resultados que o contexto não promete.\n\n**Síntese aplicada:** O clamor de quem vive cercado pela mentira."
     },
     {
       "id": "resumo",
@@ -174,7 +176,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:1-7"
       ],
-      "body": "**Mensagem central:** O clamor de quem vive cercado pela mentira.\\n\\n**Gênero:** Cântico de romagem e lamento individual.\\n\\n1) 1-2: O Senhor ouve o clamor contra a mentira\\n2) 3-4: O juízo sobre a língua enganosa\\n3) 5-7: O sofrimento de viver entre pessoas hostis à paz\\n\\nExplique como cada movimento contribui para a mensagem total e quais limites interpretativos precisam ser respeitados."
+      "body": "**Mensagem central:** O clamor de quem vive cercado pela mentira.\n\n**Gênero:** Cântico de romagem e lamento individual.\n\n1) 1-2: O Senhor ouve o clamor contra a mentira\n2) 3-4: O juízo sobre a língua enganosa\n3) 5-7: O sofrimento de viver entre pessoas hostis à paz\n\nExplique como cada movimento contribui para a mensagem total e quais limites interpretativos precisam ser respeitados."
     },
     {
       "id": "exercicios",
@@ -184,7 +186,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:1-7"
       ],
-      "body": "1. Resuma a mensagem do salmo em uma frase sem usar ideias que o texto não sustenta.\\n2. Delimite as perícopes e justifique a divisão.\\n3. Escolha três versículos e explique sua contribuição para o argumento.\\n4. Identifique uma imagem poética e explique seu efeito no contexto.\\n5. Diferencie uma afirmação explícita de uma inferência.\\n6. Escreva uma aplicação pessoal e outra comunitária que respeitem o sentido original."
+      "body": "1. Resuma a mensagem do salmo em uma frase sem usar ideias que o texto não sustenta.\n2. Delimite as perícopes e justifique a divisão.\n3. Escolha três versículos e explique sua contribuição para o argumento.\n4. Identifique uma imagem poética e explique seu efeito no contexto.\n5. Diferencie uma afirmação explícita de uma inferência.\n6. Escreva uma aplicação pessoal e outra comunitária que respeitem o sentido original."
     },
     {
       "id": "oficina-pregador",
@@ -194,7 +196,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 120:1-7"
       ],
-      "body": "**Proposição:** O clamor de quem vive cercado pela mentira.\\n\\n**Objetivo:** conduzir a igreja a compreender o salmo em seu contexto e responder de maneira coerente com sua mensagem.\\n\\n**Roteiro:** introdução que apresenta a tensão ou convocação do texto; exposição progressiva de cada perícope; explicação das imagens e referências; conexão canônica responsável; aplicações que nascem do texto; conclusão que retoma a mensagem central.\\n\\nConfira se cada ponto deriva da passagem e se a aplicação não promete aquilo que o texto não promete."
+      "body": "**Proposição:** O clamor de quem vive cercado pela mentira.\n\n**Objetivo:** conduzir a igreja a compreender o salmo em seu contexto e responder de maneira coerente com sua mensagem.\n\n**Roteiro:** introdução que apresenta a tensão ou convocação do texto; exposição progressiva de cada perícope; explicação das imagens e referências; conexão canônica responsável; aplicações que nascem do texto; conclusão que retoma a mensagem central.\n\nConfira se cada ponto deriva da passagem e se a aplicação não promete aquilo que o texto não promete."
     },
     {
       "id": "oracao-final",
