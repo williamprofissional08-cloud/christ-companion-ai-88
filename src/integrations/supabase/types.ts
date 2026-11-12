@@ -1578,27 +1578,6 @@ export type Database = {
         }
         Relationships: []
       }
-      track_image_assignments: {
-        Row: {
-          image_id: string
-          track_slug: string
-          updated_at: string
-          updated_by: string | null
-        }
-        Insert: {
-          image_id: string
-          track_slug: string
-          updated_at?: string
-          updated_by?: string | null
-        }
-        Update: {
-          image_id?: string
-          track_slug?: string
-          updated_at?: string
-          updated_by?: string | null
-        }
-        Relationships: []
-      }
       user_roles: {
         Row: {
           created_at: string
