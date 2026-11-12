@@ -390,6 +390,16 @@ const curatedBatch = [
   { book: "Salmos", chapter: 88, verseCount: 18, slug: "biblia-salmos-cap-88", exportName: "psalm88Study", file: "psalm-88-study.ts" },
   { book: "Salmos", chapter: 89, verseCount: 52, slug: "biblia-salmos-cap-89", exportName: "psalm89Study", file: "psalm-89-study.ts" },
   { book: "Salmos", chapter: 90, verseCount: 17, slug: "biblia-salmos-cap-90", exportName: "psalm90Study", file: "psalm-90-study.ts" },
+  { book: "Salmos", chapter: 91, verseCount: 16, slug: "biblia-salmos-cap-91", exportName: "psalm91Study", file: "psalm-91-study.ts" },
+  { book: "Salmos", chapter: 92, verseCount: 15, slug: "biblia-salmos-cap-92", exportName: "psalm92Study", file: "psalm-92-study.ts" },
+  { book: "Salmos", chapter: 93, verseCount: 5, slug: "biblia-salmos-cap-93", exportName: "psalm93Study", file: "psalm-93-study.ts" },
+  { book: "Salmos", chapter: 94, verseCount: 23, slug: "biblia-salmos-cap-94", exportName: "psalm94Study", file: "psalm-94-study.ts" },
+  { book: "Salmos", chapter: 95, verseCount: 11, slug: "biblia-salmos-cap-95", exportName: "psalm95Study", file: "psalm-95-study.ts" },
+  { book: "Salmos", chapter: 96, verseCount: 13, slug: "biblia-salmos-cap-96", exportName: "psalm96Study", file: "psalm-96-study.ts" },
+  { book: "Salmos", chapter: 97, verseCount: 12, slug: "biblia-salmos-cap-97", exportName: "psalm97Study", file: "psalm-97-study.ts" },
+  { book: "Salmos", chapter: 98, verseCount: 9, slug: "biblia-salmos-cap-98", exportName: "psalm98Study", file: "psalm-98-study.ts" },
+  { book: "Salmos", chapter: 99, verseCount: 9, slug: "biblia-salmos-cap-99", exportName: "psalm99Study", file: "psalm-99-study.ts" },
+  { book: "Salmos", chapter: 100, verseCount: 5, slug: "biblia-salmos-cap-100", exportName: "psalm100Study", file: "psalm-100-study.ts" },
 ]; 
 
 async function readContent(path) {
