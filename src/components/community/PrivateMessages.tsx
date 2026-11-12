@@ -16,7 +16,7 @@ type Member = { id: string; display_name: string | null; avatar_url: string | nu
 type Conversation = { id: string; user_a: string; user_b: string; criado_em: string };
 type PrivateMessage = { id: string; conversa_id: string; remetente_id: string; conteudo: string; lida: boolean; criado_em: string };
 type ConversationPreview = { conversation: Conversation; member: Member | undefined; lastMessage: PrivateMessage | null; unread: number };
-const sanitize = (value: string) => value.replace(/<[^>]*>/g, "").replace(/[\u0000-\u001F\u007F]/g, "").trim();
+const sanitize = (value: string) => value.replace(/<[^>]*>/g, "").split("").filter((character) => { const code = character.charCodeAt(0); return code >= 32 && code !== 127; }).join("").trim();
 const initials = (value?: string | null) => (value || "Membro").trim().split(/\s+/).slice(0, 2).map((part) => part[0]?.toUpperCase()).join("");
 
 async function sendProfileReport(reporterId: string, profileId: string) {
