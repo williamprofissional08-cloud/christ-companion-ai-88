@@ -1,4 +1,6 @@
-import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmos 112 no padrão didático de Gênesis 1. */\nexport const psalm112Study: StudyContent = {
+import type { StudyContent } from "../types";
+
+/** Estudo aprofundado de Salmos 112 no padrão didático de Gênesis 1. */\nexport const psalm112Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "A vida de quem teme o Senhor",
@@ -42,7 +44,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:1-10"
       ],
-      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece paráfrases orientadoras para acompanhar a leitura. Compare cada síntese com o texto bíblico.\\n\\n**Salmos 112:1-3 — O temor do Senhor e seus frutos**\\n\\n**1:** A felicidade é associada ao temor do Senhor e ao prazer em seus mandamentos, não a uma religiosidade meramente exterior.\\n\\n**2:** A descendência é descrita em linguagem de bênção pactual; não se deve transformar o verso em garantia automática de riqueza ou sucesso.\\n\\n**3:** A prosperidade e as riquezas aparecem como imagens de bênção, enquanto a justiça do justo permanece; o centro ético é a retidão.\\n\\n**Salmos 112:4-6 — Luz, justiça e firmeza**\\n\\n**4:** Mesmo em meio à escuridão, surge luz para o justo; Deus é apresentado como gracioso, compassivo e justo.\\n\\n**5:** A pessoa íntegra demonstra bondade e empresta com generosidade, administrando seus assuntos com justiça.\\n\\n**6:** A firmeza do justo é descrita como memória duradoura; sua estabilidade deriva da confiança em Deus.\\n\\n**Salmos 112:7-10 — Confiança, generosidade e contraste com a maldade**\\n\\n**7:** A notícia má não domina quem tem o coração firme e confiante no Senhor; o texto descreve coragem, não insensibilidade.\\n\\n**8:** O coração permanece seguro e não vive governado pelo medo, mesmo diante de adversários; a confiança é perseverante.\\n\\n**9:** A generosidade é concreta: repartir com os necessitados. A justiça é lembrada e a dignidade permanece.\\n\\n**10:** O perverso observa a honra do justo com indignação; seu desejo frustrado revela o destino da maldade."
+      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece paráfrases orientadoras para acompanhar a leitura. Compare cada síntese com o texto bíblico.\n\n**Salmos 112:1-3 — O temor do Senhor e seus frutos**\n\n**1:** A felicidade é associada ao temor do Senhor e ao prazer em seus mandamentos, não a uma religiosidade meramente exterior.\n\n**2:** A descendência é descrita em linguagem de bênção pactual; não se deve transformar o verso em garantia automática de riqueza ou sucesso.\n\n**3:** A prosperidade e as riquezas aparecem como imagens de bênção, enquanto a justiça do justo permanece; o centro ético é a retidão.\n\n**Salmos 112:4-6 — Luz, justiça e firmeza**\n\n**4:** Mesmo em meio à escuridão, surge luz para o justo; Deus é apresentado como gracioso, compassivo e justo.\n\n**5:** A pessoa íntegra demonstra bondade e empresta com generosidade, administrando seus assuntos com justiça.\n\n**6:** A firmeza do justo é descrita como memória duradoura; sua estabilidade deriva da confiança em Deus.\n\n**Salmos 112:7-10 — Confiança, generosidade e contraste com a maldade**\n\n**7:** A notícia má não domina quem tem o coração firme e confiante no Senhor; o texto descreve coragem, não insensibilidade.\n\n**8:** O coração permanece seguro e não vive governado pelo medo, mesmo diante de adversários; a confiança é perseverante.\n\n**9:** A generosidade é concreta: repartir com os necessitados. A justiça é lembrada e a dignidade permanece.\n\n**10:** O perverso observa a honra do justo com indignação; seu desejo frustrado revela o destino da maldade."
     },
     {
       "id": "introducao",
@@ -52,7 +54,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:1-10"
       ],
-      "body": "**Tema central:** A vida de quem teme o Senhor.\\n\\n**Gênero literário:** Salmo sapiencial alfabético de bem-aventurança.\\n\\nO objetivo é ler o capítulo em sua unidade, observar a forma poética, explicar cada perícope e preparar uma exposição fiel ao texto. A aplicação deve nascer do sentido original, não de associações livres."
+      "body": "**Tema central:** A vida de quem teme o Senhor.\n\n**Gênero literário:** Salmo sapiencial alfabético de bem-aventurança.\n\nO objetivo é ler o capítulo em sua unidade, observar a forma poética, explicar cada perícope e preparar uma exposição fiel ao texto. A aplicação deve nascer do sentido original, não de associações livres."
     },
     {
       "id": "contexto-historico",
@@ -62,7 +64,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:1-10"
       ],
-      "body": "O salmo forma um par temático com o Salmo 111: o anterior celebra o caráter e as obras do Senhor; este descreve a vida de quem o teme e encontra prazer em seus mandamentos. As imagens de luz, generosidade, justiça e estabilidade são sabedoria poética, não promessa de ausência de sofrimento.\\n\\nQuando autoria, data ou ocasião não forem explicitadas no próprio texto, mantenha a distinção entre informação textual e hipótese histórica. Leia o salmo em relação ao seu lugar no Saltério e ao conjunto dos cânticos de Israel."
+      "body": "O salmo forma um par temático com o Salmo 111: o anterior celebra o caráter e as obras do Senhor; este descreve a vida de quem o teme e encontra prazer em seus mandamentos. As imagens de luz, generosidade, justiça e estabilidade são sabedoria poética, não promessa de ausência de sofrimento.\n\nQuando autoria, data ou ocasião não forem explicitadas no próprio texto, mantenha a distinção entre informação textual e hipótese histórica. Leia o salmo em relação ao seu lugar no Saltério e ao conjunto dos cânticos de Israel."
     },
     {
       "id": "estrutura",
@@ -74,7 +76,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
         "Salmos 112:4-6",
         "Salmos 112:7-10"
       ],
-      "body": "**Movimento 1 — 1-3:** O temor do Senhor e seus frutos.\\n\\n**Movimento 2 — 4-6:** Luz, justiça e firmeza.\\n\\n**Movimento 3 — 7-10:** Confiança, generosidade e contraste com a maldade.\\n\\nObserve repetições, mudanças de voz, imagens, contrastes e a progressão do argumento."
+      "body": "**Movimento 1 — 1-3:** O temor do Senhor e seus frutos.\n\n**Movimento 2 — 4-6:** Luz, justiça e firmeza.\n\n**Movimento 3 — 7-10:** Confiança, generosidade e contraste com a maldade.\n\nObserve repetições, mudanças de voz, imagens, contrastes e a progressão do argumento."
     },
     {
       "id": "topico-1",
@@ -84,7 +86,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:1-3"
       ],
-      "body": "**Leia Salmos 112:1-3 integralmente.**\\n\\n**Sentido da unidade:** O temor do Senhor e seus frutos.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 1 — Explicação:** A felicidade é associada ao temor do Senhor e ao prazer em seus mandamentos, não a uma religiosidade meramente exterior. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 2 — Explicação:** A descendência é descrita em linguagem de bênção pactual; não se deve transformar o verso em garantia automática de riqueza ou sucesso. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 3 — Explicação:** A prosperidade e as riquezas aparecem como imagens de bênção, enquanto a justiça do justo permanece; o centro ético é a retidão. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** O temor do Senhor e seus frutos. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** A vida de quem teme o Senhor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 112:1-3 integralmente.**\n\n**Sentido da unidade:** O temor do Senhor e seus frutos.\n\n**Observações versículo por versículo**\n\n**Versículo 1 — Explicação:** A felicidade é associada ao temor do Senhor e ao prazer em seus mandamentos, não a uma religiosidade meramente exterior. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 2 — Explicação:** A descendência é descrita em linguagem de bênção pactual; não se deve transformar o verso em garantia automática de riqueza ou sucesso. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 3 — Explicação:** A prosperidade e as riquezas aparecem como imagens de bênção, enquanto a justiça do justo permanece; o centro ético é a retidão. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** O temor do Senhor e seus frutos. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** A vida de quem teme o Senhor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "topico-2",
@@ -94,7 +96,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:4-6"
       ],
-      "body": "**Leia Salmos 112:4-6 integralmente.**\\n\\n**Sentido da unidade:** Luz, justiça e firmeza.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 4 — Explicação:** Mesmo em meio à escuridão, surge luz para o justo; Deus é apresentado como gracioso, compassivo e justo. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 5 — Explicação:** A pessoa íntegra demonstra bondade e empresta com generosidade, administrando seus assuntos com justiça. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 6 — Explicação:** A firmeza do justo é descrita como memória duradoura; sua estabilidade deriva da confiança em Deus. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** Luz, justiça e firmeza. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** A vida de quem teme o Senhor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 112:4-6 integralmente.**\n\n**Sentido da unidade:** Luz, justiça e firmeza.\n\n**Observações versículo por versículo**\n\n**Versículo 4 — Explicação:** Mesmo em meio à escuridão, surge luz para o justo; Deus é apresentado como gracioso, compassivo e justo. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 5 — Explicação:** A pessoa íntegra demonstra bondade e empresta com generosidade, administrando seus assuntos com justiça. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 6 — Explicação:** A firmeza do justo é descrita como memória duradoura; sua estabilidade deriva da confiança em Deus. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** Luz, justiça e firmeza. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** A vida de quem teme o Senhor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "topico-3",
@@ -104,7 +106,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:7-10"
       ],
-      "body": "**Leia Salmos 112:7-10 integralmente.**\\n\\n**Sentido da unidade:** Confiança, generosidade e contraste com a maldade.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 7 — Explicação:** A notícia má não domina quem tem o coração firme e confiante no Senhor; o texto descreve coragem, não insensibilidade. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 8 — Explicação:** O coração permanece seguro e não vive governado pelo medo, mesmo diante de adversários; a confiança é perseverante. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 9 — Explicação:** A generosidade é concreta: repartir com os necessitados. A justiça é lembrada e a dignidade permanece. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 10 — Explicação:** O perverso observa a honra do justo com indignação; seu desejo frustrado revela o destino da maldade. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** Confiança, generosidade e contraste com a maldade. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** A vida de quem teme o Senhor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 112:7-10 integralmente.**\n\n**Sentido da unidade:** Confiança, generosidade e contraste com a maldade.\n\n**Observações versículo por versículo**\n\n**Versículo 7 — Explicação:** A notícia má não domina quem tem o coração firme e confiante no Senhor; o texto descreve coragem, não insensibilidade. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 8 — Explicação:** O coração permanece seguro e não vive governado pelo medo, mesmo diante de adversários; a confiança é perseverante. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 9 — Explicação:** A generosidade é concreta: repartir com os necessitados. A justiça é lembrada e a dignidade permanece. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 10 — Explicação:** O perverso observa a honra do justo com indignação; seu desejo frustrado revela o destino da maldade. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** Confiança, generosidade e contraste com a maldade. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** A vida de quem teme o Senhor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "palavras-chave",
@@ -134,7 +136,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:1-10"
       ],
-      "body": "- Salmos 1:1-3\\n- Salmos 111:10\\n- Provérbios 11:24-25\\n- 2 Coríntios 9:7-11\\n\\nLeia cada referência em seu contexto. Compare temas e vocabulário sem apagar as diferenças entre os textos. Uma ligação temática não equivale automaticamente a citação direta."
+      "body": "- Salmos 1:1-3\n- Salmos 111:10\n- Provérbios 11:24-25\n- 2 Coríntios 9:7-11\n\nLeia cada referência em seu contexto. Compare temas e vocabulário sem apagar as diferenças entre os textos. Uma ligação temática não equivale automaticamente a citação direta."
     },
     {
       "id": "cuidados",
@@ -164,7 +166,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:1-10"
       ],
-      "body": "**Pessoal:** examine como a mensagem forma sua confiança, arrependimento, gratidão, perseverança ou integridade.\\n\\n**Comunitária:** considere como orienta culto, justiça, memória, cuidado e responsabilidade coletiva.\\n\\n**Pastoral:** aplique com sensibilidade; não use o texto para culpabilizar quem sofre nem para prometer resultados que o contexto não promete.\\n\\n**Síntese aplicada:** A vida de quem teme o Senhor."
+      "body": "**Pessoal:** examine como a mensagem forma sua confiança, arrependimento, gratidão, perseverança ou integridade.\n\n**Comunitária:** considere como orienta culto, justiça, memória, cuidado e responsabilidade coletiva.\n\n**Pastoral:** aplique com sensibilidade; não use o texto para culpabilizar quem sofre nem para prometer resultados que o contexto não promete.\n\n**Síntese aplicada:** A vida de quem teme o Senhor."
     },
     {
       "id": "resumo",
@@ -174,7 +176,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:1-10"
       ],
-      "body": "**Mensagem central:** A vida de quem teme o Senhor.\\n\\n**Gênero:** Salmo sapiencial alfabético de bem-aventurança.\\n\\n1) 1-3: O temor do Senhor e seus frutos\\n2) 4-6: Luz, justiça e firmeza\\n3) 7-10: Confiança, generosidade e contraste com a maldade\\n\\nExplique como cada movimento contribui para a mensagem total e quais limites interpretativos precisam ser respeitados."
+      "body": "**Mensagem central:** A vida de quem teme o Senhor.\n\n**Gênero:** Salmo sapiencial alfabético de bem-aventurança.\n\n1) 1-3: O temor do Senhor e seus frutos\n2) 4-6: Luz, justiça e firmeza\n3) 7-10: Confiança, generosidade e contraste com a maldade\n\nExplique como cada movimento contribui para a mensagem total e quais limites interpretativos precisam ser respeitados."
     },
     {
       "id": "exercicios",
@@ -184,7 +186,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:1-10"
       ],
-      "body": "1. Resuma a mensagem do salmo em uma frase sem usar ideias que o texto não sustenta.\\n2. Delimite as perícopes e justifique a divisão.\\n3. Escolha três versículos e explique sua contribuição para o argumento.\\n4. Identifique uma imagem poética e explique seu efeito no contexto.\\n5. Diferencie uma afirmação explícita de uma inferência.\\n6. Escreva uma aplicação pessoal e outra comunitária que respeitem o sentido original."
+      "body": "1. Resuma a mensagem do salmo em uma frase sem usar ideias que o texto não sustenta.\n2. Delimite as perícopes e justifique a divisão.\n3. Escolha três versículos e explique sua contribuição para o argumento.\n4. Identifique uma imagem poética e explique seu efeito no contexto.\n5. Diferencie uma afirmação explícita de uma inferência.\n6. Escreva uma aplicação pessoal e outra comunitária que respeitem o sentido original."
     },
     {
       "id": "oficina-pregador",
@@ -194,7 +196,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 112:1-10"
       ],
-      "body": "**Proposição:** A vida de quem teme o Senhor.\\n\\n**Objetivo:** conduzir a igreja a compreender o salmo em seu contexto e responder de maneira coerente com sua mensagem.\\n\\n**Roteiro:** introdução que apresenta a tensão ou convocação do texto; exposição progressiva de cada perícope; explicação das imagens e referências; conexão canônica responsável; aplicações que nascem do texto; conclusão que retoma a mensagem central.\\n\\nConfira se cada ponto deriva da passagem e se a aplicação não promete aquilo que o texto não promete."
+      "body": "**Proposição:** A vida de quem teme o Senhor.\n\n**Objetivo:** conduzir a igreja a compreender o salmo em seu contexto e responder de maneira coerente com sua mensagem.\n\n**Roteiro:** introdução que apresenta a tensão ou convocação do texto; exposição progressiva de cada perícope; explicação das imagens e referências; conexão canônica responsável; aplicações que nascem do texto; conclusão que retoma a mensagem central.\n\nConfira se cada ponto deriva da passagem e se a aplicação não promete aquilo que o texto não promete."
     },
     {
       "id": "oracao-final",
