@@ -62,7 +62,7 @@ jobs:
           set -euo pipefail
           for attempt in $(seq 1 120); do
             checks="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${HEAD_SHA}/check-runs?per_page=100")"
-            latest="$(jq '[.check_runs | group_by(.name)[] | max_by(.id) | select(.name != "bootstrap" and .name != "after_merge")]' <<< "$checks")"
+            latest="$(jq '[.check_runs | map(select(((.pull_requests // []) | length) == 0)) | group_by(.name)[] | max_by(.id) | select(.name != "bootstrap" and .name != "after_merge")]' <<< "$checks")"
             count="$(jq 'length' <<< "$latest")"
             pending="$(jq '[.[] | select(.status != "completed")] | length' <<< "$latest")"
             failed="$(jq '[.[] | select(.status == "completed" and .conclusion != "success" and .conclusion != "skipped")] | length' <<< "$latest")"
