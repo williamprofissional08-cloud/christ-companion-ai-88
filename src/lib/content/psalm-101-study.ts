@@ -21,7 +21,12 @@ export const psalm101Study: StudyContent = {
     }
   ],
   "application": "Viver à luz da mensagem: Integridade no governo e na vida doméstica.",
-  "crossReferences": [],
+  "crossReferences": [
+    "1 Reis 9:4-5",
+    "Provérbios 20:7",
+    "Miqueias 6:8",
+    "Mateus 5:8"
+  ],
   "questions": [
     "Qual é a mensagem central do salmo?",
     "Como o gênero literário orienta a interpretação?",
