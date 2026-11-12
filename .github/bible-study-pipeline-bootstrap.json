@@ -1,0 +1,8 @@
+{
+  "book_slug": "numeros",
+  "start_chapter": "28",
+  "batch_size": "7",
+  "model": "gemini-3.8-flash",
+  "target_branch": "codex/bible-study-batches",
+  "auto_continue": true
+}

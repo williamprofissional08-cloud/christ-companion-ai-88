@@ -11,12 +11,12 @@ on:
       start_chapter:
         description: "Capítulo inicial a examinar"
         required: true
-        default: "21"
+        default: "28"
         type: string
       batch_size:
-        description: "Quantidade de capítulos a examinar (1 a 7)"
+        description: "Quantidade de capítulos por lote (1 a 7)"
         required: true
-        default: "3"
+        default: "7"
         type: string
       model:
         description: "Modelo Gemini API"
@@ -24,19 +24,20 @@ on:
         default: "gemini-3.8-flash"
         type: string
       auto_continue:
-        description: "Continuar automaticamente até o último capítulo do livro"
+        description: "Continuar após o merge validado de cada PR"
         required: true
         default: true
         type: boolean
       target_branch:
-        description: "Branch de trabalho já criada"
+        description: "Branch persistente de checkpoints"
         required: true
-        default: "codex/universal-bible-study-automation-rebased"
+        default: "codex/bible-study-batches"
         type: string
 
 permissions:
   contents: write
   pull-requests: write
+  checks: read
   actions: write
 
 concurrency:
@@ -46,86 +47,208 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
-      - name: Checkout branch de trabalho
+      - name: Checkout da main
         uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.target_branch }}
+          ref: main
           fetch-depth: 0
-      - name: Sincronizar branch com a versão atual da main
+
+      - name: Preparar branch persistente de checkpoints
+        env:
+          TARGET_BRANCH: ${{ inputs.target_branch }}
         run: |
           set -euo pipefail
           git fetch origin main
-          git merge --no-edit origin/main
-      - name: Diagnosticar versão do código
-        run: |
-          set -euo pipefail
-          echo "Branch: $(git branch --show-current)"
-          echo "Commit: $(git rev-parse HEAD)"
-          git log -1 --oneline
-          echo "Final do gerador:"
-          nl -ba scripts/generate-bible-study-batch.py | tail -n 12
+          if git ls-remote --exit-code --heads origin "$TARGET_BRANCH" >/dev/null 2>&1; then
+            git fetch origin "$TARGET_BRANCH"
+            git checkout -B "$TARGET_BRANCH" "origin/$TARGET_BRANCH"
+            git merge --no-edit origin/main
+          else
+            git checkout -b "$TARGET_BRANCH" origin/main
+            git push -u origin "$TARGET_BRANCH"
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Gerar somente capítulos ausentes
+
+      - name: Validar faixa e calcular limite do lote
+        id: range
+        env:
+          BOOK_SLUG: ${{ inputs.book_slug }}
+          START_CHAPTER: ${{ inputs.start_chapter }}
+          BATCH_SIZE: ${{ inputs.batch_size }}
+        run: |
+          set -euo pipefail
+          node scripts/next-bible-study-batch.mjs >> "$GITHUB_OUTPUT"
+
+      - name: Gerar capítulo por capítulo e salvar checkpoint sem sobrescrever
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           MODEL: ${{ inputs.model }}
           BOOK_SLUG: ${{ inputs.book_slug }}
           START_CHAPTER: ${{ inputs.start_chapter }}
-          BATCH_SIZE: ${{ inputs.batch_size }}
+          BATCH_END_CHAPTER: ${{ steps.range.outputs.BATCH_END_CHAPTER }}
+          TARGET_BRANCH: ${{ inputs.target_branch }}
         run: |
           set -euo pipefail
-          if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Cadastre GEMINI_API_KEY em Settings > Secrets and variables > Actions."; exit 1; fi
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::error::Cadastre GEMINI_API_KEY em Settings > Secrets and variables > Actions."
+            exit 1
+          fi
           python -m py_compile scripts/generate-bible-study-batch.py
-          python scripts/generate-bible-study-batch.py
-      - name: Validar alterações
+
+          for chapter in $(seq "$START_CHAPTER" "$BATCH_END_CHAPTER"); do
+            echo "::group::${BOOK_SLUG} capítulo ${chapter}"
+            START_CHAPTER="$chapter" BATCH_SIZE=1 python scripts/generate-bible-study-batch.py
+            git add src/lib/content
+            if git diff --cached --quiet; then
+              echo "Capítulo $chapter já existia; conteúdo preservado sem sobrescrita."
+            else
+              git commit -m "content(bible): checkpoint ${BOOK_SLUG} chapter ${chapter}"
+              git push origin "$TARGET_BRANCH"
+              echo "Checkpoint do capítulo $chapter enviado ao GitHub."
+            fi
+            echo "::endgroup::"
+          done
+
+      - name: Validar o lote completo
         run: |
           set -euo pipefail
-          git diff --check
+          git fetch origin main
+          git diff --check origin/main HEAD
           npm ci --no-audit --no-fund
           npx tsc --noEmit
           npm run lint -- --rule 'prettier/prettier: off'
           npm run build
           npm test
-      - name: Commit e push do lote
-        id: commit
+
+      - name: Detectar conteúdo pendente de integração
+        id: changes
         run: |
           set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/lib/content
-          if git diff --cached --quiet; then
-            echo "Nenhum estudo novo; nada para enviar."
+          git fetch origin main
+          if git diff --quiet origin/main HEAD -- src/lib/content; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
+            echo "Nenhum capítulo novo ou registro pendente; arquivos existentes preservados."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Há conteúdo validado aguardando PR e merge."
           fi
-          git commit -m "content(bible): add ${{ inputs.book_slug }} study batch"
-          git push origin "${{ inputs.target_branch }}"
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-      - name: Abrir ou atualizar PR do lote
-        if: steps.commit.outputs.changed == 'true'
+
+      - name: Abrir PR após validação geral
+        id: pr
+        if: steps.changes.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           TARGET_BRANCH: ${{ inputs.target_branch }}
           BOOK_SLUG: ${{ inputs.book_slug }}
           START_CHAPTER: ${{ inputs.start_chapter }}
+          BATCH_END_CHAPTER: ${{ steps.range.outputs.BATCH_END_CHAPTER }}
           BATCH_SIZE: ${{ inputs.batch_size }}
+          MODEL: ${{ inputs.model }}
+          AUTO_CONTINUE: ${{ inputs.auto_continue }}
         run: |
           set -euo pipefail
-          TITLE="Estudos bíblicos: ${BOOK_SLUG} — capítulos ${START_CHAPTER}+"
-          BODY=$(printf '## Lote de estudos bíblicos\n\n- Livro: %s\n- Faixa examinada: %s–%s\n- Capítulos existentes preservados; somente ausentes são criados.\n- Validações: TypeScript, ESLint, build e testes.\n- Revisão teológica/editorial humana obrigatória.\n\n**Aprovação humana para merge: obrigatória.** A geração do próximo lote não depende de aprovação nem de merge; só continua se todas as validações técnicas deste lote passarem.' "$BOOK_SLUG" "$START_CHAPTER" "$((START_CHAPTER + BATCH_SIZE - 1))")
-          EXISTING=$(gh pr list --head "$TARGET_BRANCH" --base main --json number --jq '.[0].number')
+          EXISTING="$(gh pr list --head "$TARGET_BRANCH" --base main --json number --jq '.[0].number // empty')"
           if [ -n "$EXISTING" ]; then
-            gh pr edit "$EXISTING" --title "$TITLE" --body "$BODY"
+            EXISTING_BODY="$(gh pr view "$EXISTING" --json body --jq '.body')"
+            if ! grep -Fq -- "- Livro: $BOOK_SLUG" <<< "$EXISTING_BODY" ||
+               ! grep -Fq -- "- Início: $START_CHAPTER" <<< "$EXISTING_BODY"; then
+              echo "::error::Já existe a PR #$EXISTING de outro lote nesta branch. Aguarde o merge antes de iniciar outro lote."
+              exit 1
+            fi
+            PR_NUMBER="$EXISTING"
+          else
+            PR_NUMBER=""
+          fi
+
+          MARKER=""
+          if [ "$AUTO_CONTINUE" = "true" ]; then
+            MARKER="$(cat <<EOF
+          <!-- BIBLE_STUDY_AUTO_CONTINUE
+          book_slug=$BOOK_SLUG
+          start_chapter=$START_CHAPTER
+          batch_size=$BATCH_SIZE
+          model=$MODEL
+          target_branch=$TARGET_BRANCH
+          -->
+          EOF
+          )"
+          fi
+
+          BODY="$(cat <<EOF
+          ## Lote de estudos bíblicos
+
+          - Livro: $BOOK_SLUG
+          - Início: $START_CHAPTER
+          - Fim examinado: $BATCH_END_CHAPTER
+          - Geração executada capítulo por capítulo.
+          - Cada capítulo novo passou pela validação individual antes de ser gravado.
+          - Checkpoint enviado ao GitHub após cada capítulo validado.
+          - Arquivos existentes foram preservados; nenhum estudo foi sobrescrito.
+          - Validação geral do lote: TypeScript, ESLint, build e testes.
+          - Revisão bíblica/editorial humana antes do merge.
+
+          **Faça o merge somente depois que todas as verificações da PR estiverem verdes.**
+          A próxima faixa só será iniciada depois do merge e de uma nova confirmação de que os checks passaram.
+
+          $MARKER
+          EOF
+          )"
+
+          TITLE="Estudos bíblicos: $BOOK_SLUG — capítulos $START_CHAPTER–$BATCH_END_CHAPTER"
+          if [ -n "$PR_NUMBER" ]; then
+            gh pr edit "$PR_NUMBER" --title "$TITLE" --body "$BODY"
           else
             gh pr create --base main --head "$TARGET_BRANCH" --title "$TITLE" --body "$BODY"
+            PR_NUMBER="$(gh pr list --head "$TARGET_BRANCH" --base main --json number --jq '.[0].number // empty')"
           fi
-      - name: Agendar próximo lote automaticamente
-        if: ${{ inputs.auto_continue }}
+
+          if [ -z "$PR_NUMBER" ]; then
+            echo "::error::Não foi possível confirmar o número da PR criada."
+            exit 1
+          fi
+          echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "PR #$PR_NUMBER aberta/atualizada. Aguardando validações."
+
+      - name: Aguardar todos os checks da PR
+        if: steps.pr.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+        run: |
+          set -euo pipefail
+          HEAD_SHA="$(gh pr view "$PR_NUMBER" --json headRefOid --jq '.headRefOid')"
+          for attempt in $(seq 1 120); do
+            checks="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${HEAD_SHA}/check-runs?per_page=100")"
+            latest="$(jq '[.check_runs | group_by(.name)[] | max_by(.id)]' <<< "$checks")"
+            count="$(jq 'length' <<< "$latest")"
+            pending="$(jq '[.[] | select(.status != "completed")] | length' <<< "$latest")"
+            failed="$(jq '[.[] | select(.status == "completed" and .conclusion != "success")] | length' <<< "$latest")"
+
+            if [ "$count" -gt 0 ] && [ "$pending" -eq 0 ]; then
+              if [ "$failed" -gt 0 ]; then
+                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "\(.name): \(.status)/\(.conclusion)"' <<< "$latest"
+                echo "::error::A PR não passou em todas as verificações. Nenhuma continuação será agendada."
+                exit 1
+              fi
+              echo "Todos os $count checks do commit $HEAD_SHA foram concluídos com sucesso."
+              exit 0
+            fi
+            sleep 15
+          done
+
+          echo "::error::Tempo esgotado aguardando os checks da PR. Não houve merge nem continuação."
+          exit 1
+
+      - name: Continuar quando todos os capítulos já estavam preservados
+        if: ${{ inputs.auto_continue && steps.changes.outputs.changed != 'true' }}
         env:
           GH_TOKEN: ${{ github.token }}
           BOOK_SLUG: ${{ inputs.book_slug }}
@@ -135,58 +258,7 @@ jobs:
           TARGET_BRANCH: ${{ inputs.target_branch }}
         run: |
           set -euo pipefail
-          python - <<'PY' > /tmp/next-batch.env
-          import os
-          import re
-          from pathlib import Path
-
-          source = Path("src/lib/content/bible-books.ts").read_text(encoding="utf-8")
-          books = []
-          for item in re.findall(r"\{([^{}]*\bslug\s*:[^{}]*)\}", source, re.S):
-              def field(pattern):
-                  match = re.search(pattern, item)
-                  return match.group(1) if match else None
-              slug = field(r'\bslug\s*:\s*"([^"]+)"')
-              chapters = field(r"\bchapters\s*:\s*(\d+)")
-              order = field(r"\border\s*:\s*(\d+)")
-              if slug and chapters and order:
-                  books.append({"slug": slug, "chapters": int(chapters), "order": int(order)})
-          books.sort(key=lambda book: book["order"])
-          if len(books) != 66:
-              raise SystemExit(f"Índice bíblico inválido: esperados 66 livros, encontrados {len(books)}.")
-
-          current_index = next((i for i, book in enumerate(books) if book["slug"] == os.environ["BOOK_SLUG"]), None)
-          if current_index is None:
-              raise SystemExit(f"Livro atual não encontrado: {os.environ['BOOK_SLUG']}.")
-          start = int(os.environ["START_CHAPTER"])
-          batch = int(os.environ["BATCH_SIZE"])
-          current = books[current_index]
-          if start < 1 or start > current["chapters"] or not 1 <= batch <= 7:
-              raise SystemExit("Faixa atual inválida; continuação interrompida.")
-
-          actual_end = min(start + batch - 1, current["chapters"])
-          print("BIBLE_FINISHED=false")
-          if actual_end < current["chapters"]:
-              next_book = current
-              next_start = actual_end + 1
-          elif current_index + 1 < len(books):
-              next_book = books[current_index + 1]
-              next_start = 1
-          else:
-              print("BIBLE_FINISHED=true")
-              print(f"NEXT_BOOK_SLUG={current['slug']}")
-              print("NEXT_START_CHAPTER=1")
-              print("NEXT_BATCH_SIZE=1")
-              print(f"echo='Bíblia concluída: {current['slug']} {current['chapters']}/ {current['chapters']}.'")
-              raise SystemExit(0)
-
-          next_batch = min(batch, next_book["chapters"] - next_start + 1)
-          print(f"NEXT_BOOK_SLUG={next_book['slug']}")
-          print(f"NEXT_START_CHAPTER={next_start}")
-          print(f"NEXT_BATCH_SIZE={next_batch}")
-          print(f"NEXT_BOOK_CHAPTERS={next_book['chapters']}")
-          print(f"NEXT_BOOK_ORDER={next_book['order']}")
-          PY
+          node scripts/next-bible-study-batch.mjs > /tmp/next-batch.env
           source /tmp/next-batch.env
 
           if [ "$BIBLE_FINISHED" = "true" ]; then
@@ -194,9 +266,9 @@ jobs:
             exit 0
           fi
 
-          echo "Próximo lote: $NEXT_BOOK_SLUG capítulos $NEXT_START_CHAPTER–$((NEXT_START_CHAPTER + NEXT_BATCH_SIZE - 1)) (total do livro: $NEXT_BOOK_CHAPTERS)."
+          echo "Faixa preservada. Próximo lote: $NEXT_BOOK_SLUG capítulos $NEXT_START_CHAPTER–$((NEXT_START_CHAPTER + NEXT_BATCH_SIZE - 1))."
           gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/workflows/generate-bible-study-batch.yml/dispatches" \
-            -f "ref=$TARGET_BRANCH" \
+            -f ref=main \
             -f "inputs[book_slug]=$NEXT_BOOK_SLUG" \
             -f "inputs[start_chapter]=$NEXT_START_CHAPTER" \
             -f "inputs[batch_size]=$NEXT_BATCH_SIZE" \
