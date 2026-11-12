@@ -1,6 +1,7 @@
 import type { StudyContent } from "../types";
 
-/** Estudo aprofundado de Salmos 118 no padrão didático de Gênesis 1. */\nexport const psalm118Study: StudyContent = {
+/** Estudo aprofundado de Salmos 118 no padrão didático de Gênesis 1. */
+export const psalm118Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "A misericórdia duradoura e a pedra rejeitada",
