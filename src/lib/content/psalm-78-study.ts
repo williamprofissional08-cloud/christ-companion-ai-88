@@ -154,7 +154,7 @@ export const psalm78Study: StudyContent = {
     },
     {
       "id": "palavras-chave",
-      "title": "15. Palavras-chave e imagens",
+      "title": "11. Palavras-chave e imagens",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -164,7 +164,7 @@ export const psalm78Study: StudyContent = {
     },
     {
       "id": "questoes-interpretativas",
-      "title": "16. Questões interpretativas",
+      "title": "12. Questões interpretativas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -174,7 +174,7 @@ export const psalm78Study: StudyContent = {
     },
     {
       "id": "referencias-explicadas",
-      "title": "17. Referências bíblicas",
+      "title": "13. Referências bíblicas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -184,7 +184,7 @@ export const psalm78Study: StudyContent = {
     },
     {
       "id": "erros-interpretacao",
-      "title": "18. Cuidados interpretativos",
+      "title": "14. Cuidados interpretativos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -194,7 +194,7 @@ export const psalm78Study: StudyContent = {
     },
     {
       "id": "cristo",
-      "title": "19. O salmo e Jesus Cristo",
+      "title": "15. O salmo e Jesus Cristo",
       "kind": "christology",
       "confidence": "high",
       "scriptureRefs": [
@@ -204,7 +204,7 @@ export const psalm78Study: StudyContent = {
     },
     {
       "id": "aplicacoes",
-      "title": "20. O que este salmo ensina para nossa vida?",
+      "title": "16. O que este salmo ensina para nossa vida?",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
@@ -214,7 +214,7 @@ export const psalm78Study: StudyContent = {
     },
     {
       "id": "resumo",
-      "title": "21. Resumo",
+      "title": "17. Resumo",
       "kind": "conclusion",
       "confidence": "high",
       "scriptureRefs": [
@@ -224,7 +224,7 @@ export const psalm78Study: StudyContent = {
     },
     {
       "id": "exercicios",
-      "title": "22. Exercícios",
+      "title": "18. Exercícios",
       "kind": "exercise",
       "confidence": "high",
       "scriptureRefs": [
@@ -234,7 +234,7 @@ export const psalm78Study: StudyContent = {
     },
     {
       "id": "oficina-pregador",
-      "title": "23. Oficina do pregador",
+      "title": "19. Oficina do pregador",
       "kind": "sermon",
       "confidence": "high",
       "scriptureRefs": [
@@ -244,7 +244,7 @@ export const psalm78Study: StudyContent = {
     },
     {
       "id": "oracao-final",
-      "title": "24. Oração final",
+      "title": "20. Oração final",
       "kind": "prayer",
       "confidence": "high",
       "scriptureRefs": [
