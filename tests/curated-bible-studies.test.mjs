@@ -107,3 +107,45 @@ test("todos os estudos curados mantêm profundidade e estrutura didática", () =
     );
   }
 });
+
+
+test("Salmos 23 mantém exposição completa e referências corretas", () => {
+  const source = readSource("src/lib/content/psalm-23-study.ts");
+
+  assert.match(source, /export const psalm23Study: StudyContent/);
+  assert.match(source, /depth:\s*"deep"/);
+  assert.match(source, /Salmos 23:4(?!-4)/);
+  assert.doesNotMatch(source, /Salmos 23:4-4/);
+  assert.doesNotMatch(source, /23:4-4/);
+
+  for (const verse of [1, 2, 3, 4, 5, 6]) {
+    assert.match(
+      source,
+      new RegExp(`\\*\\*Versículo ${verse} —`),
+      `a leitura orientada deve contemplar o versículo ${verse}`,
+    );
+  }
+
+  for (const sectionId of [
+    "contexto-historico",
+    "estrutura",
+    "palavras-chave",
+    "questoes-interpretativas",
+    "referencias-biblicas",
+    "cuidados",
+    "conexao-cristo",
+    "aplicacao",
+    "exercicios",
+    "preparacao-mensagem",
+    "oracao-final",
+  ]) {
+    assert.match(
+      source,
+      new RegExp(`id: "${sectionId}"`),
+      `Salmos 23 deve conter a seção ${sectionId}`,
+    );
+  }
+
+  assert.match(source, /João 10:1-18/);
+  assert.match(source, /não promete.*riqueza|não.*promessa de riqueza/i);
+});
