@@ -83,6 +83,20 @@ test("workflow gera um capítulo por chamada e envia checkpoint", () => {
   assert.match(workflow, /Abrir PR após validação geral/);
 });
 
+test("gera a árvore de rotas no build antes do TypeScript", () => {
+  const workflow = readFileSync(
+    path.join(root, ".github/workflows/generate-bible-study-batch.yml"),
+    "utf8",
+  );
+  const validation = workflow.slice(workflow.indexOf("name: Validar o lote completo"));
+  const lint = validation.indexOf("npm run lint -- --rule");
+  const build = validation.indexOf("npm run build");
+  const typecheck = validation.indexOf("npx tsc --noEmit");
+  const tests = validation.indexOf("npm test");
+
+  assert.ok(lint >= 0 && build > lint && typecheck > build && tests > typecheck);
+});
+
 test("continuação aguarda PR mesclada e checks concluídos", () => {
   const workflow = readFileSync(
     path.join(root, ".github/workflows/continue-bible-study-after-merge.yml"),
