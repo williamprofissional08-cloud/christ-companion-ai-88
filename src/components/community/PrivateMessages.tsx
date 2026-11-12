@@ -56,7 +56,7 @@ export function PrivateMessagesList() {
     const [{ data: conversations, error: conversationsError }, { data: blocks }] = await Promise.all([
       db.from("conversas").select("id,user_a,user_b,criado_em")
         .or(`user_a.eq.${current.id},user_b.eq.${current.id}`).order("criado_em", { ascending: false }),
-      db.from("bloqueios").select("bloqueado"),
+      db.from("bloqueios").select("bloqueado").eq("quem_bloqueou", current.id),
     ]);
     if (conversationsError) {
       setError("Não foi possível carregar suas conversas.");
