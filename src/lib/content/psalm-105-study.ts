@@ -21,7 +21,14 @@ export const psalm105Study: StudyContent = {
     }
   ],
   "application": "Viver à luz da mensagem: Lembrar as obras e a fidelidade de Deus à aliança.",
-  "crossReferences": [],
+  "crossReferences": [
+    "Gênesis 12:1-3",
+    "Gênesis 37:1-36",
+    "Gênesis 41:37-57",
+    "Êxodo 12:31-42",
+    "Êxodo 16:1-18",
+    "Deuteronômio 6:10-15"
+  ],
   "questions": [
     "Qual é a mensagem central do salmo?",
     "Como o gênero literário orienta a interpretação?",
