@@ -84,7 +84,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "5. Exposição — O Rei santo acima dos povos",
+      "title": "4. Exposição — O Rei santo acima dos povos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -94,7 +94,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "topico-2",
-      "title": "6. Exposição — O poder do Rei e o chamado à adoração",
+      "title": "5. Exposição — O poder do Rei e o chamado à adoração",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -104,7 +104,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "topico-3",
-      "title": "7. Exposição — Os mediadores, a resposta divina e a santidade",
+      "title": "6. Exposição — Os mediadores, a resposta divina e a santidade",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -114,7 +114,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "palavras-chave",
-      "title": "8. Palavras-chave, imagens e recursos poéticos",
+      "title": "7. Palavras-chave, imagens e recursos poéticos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -124,7 +124,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "questoes-interpretativas",
-      "title": "9. Questões interpretativas e pontos de atenção",
+      "title": "8. Questões interpretativas e pontos de atenção",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -134,7 +134,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "referencias-explicadas",
-      "title": "10. Referências bíblicas relacionadas",
+      "title": "9. Referências bíblicas relacionadas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -144,7 +144,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "cuidados",
-      "title": "11. Cuidados contra interpretações indevidas",
+      "title": "10. Cuidados contra interpretações indevidas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -154,7 +154,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "cristo",
-      "title": "12. Leitura canônica e relação com Jesus Cristo",
+      "title": "11. Leitura canônica e relação com Jesus Cristo",
       "kind": "christology",
       "confidence": "high",
       "scriptureRefs": [
@@ -164,7 +164,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "aplicacao",
-      "title": "13. Aplicação pessoal, comunitária e pastoral",
+      "title": "12. Aplicação pessoal, comunitária e pastoral",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
@@ -174,7 +174,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "resumo",
-      "title": "14. Síntese e revisão do estudo",
+      "title": "13. Síntese e revisão do estudo",
       "kind": "conclusion",
       "confidence": "high",
       "scriptureRefs": [
@@ -184,7 +184,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "exercicios",
-      "title": "15. Exercícios de compreensão e interpretação",
+      "title": "14. Exercícios de compreensão e interpretação",
       "kind": "exercise",
       "confidence": "high",
       "scriptureRefs": [
@@ -194,7 +194,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "oficina-pregador",
-      "title": "16. Oficina de preparação da mensagem",
+      "title": "15. Oficina de preparação da mensagem",
       "kind": "sermon",
       "confidence": "high",
       "scriptureRefs": [
@@ -204,7 +204,7 @@ export const psalm99Study: StudyContent = {
     },
     {
       "id": "oracao-final",
-      "title": "17. Oração final",
+      "title": "16. Oração final",
       "kind": "prayer",
       "confidence": "high",
       "scriptureRefs": [
