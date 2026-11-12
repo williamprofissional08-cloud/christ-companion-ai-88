@@ -109,6 +109,16 @@ import { psalm107Study } from "./psalm-107-study";
 import { psalm108Study } from "./psalm-108-study";
 import { psalm109Study } from "./psalm-109-study";
 import { psalm110Study } from "./psalm-110-study";
+import { psalm111Study } from "./psalm-111-study";
+import { psalm112Study } from "./psalm-112-study";
+import { psalm113Study } from "./psalm-113-study";
+import { psalm114Study } from "./psalm-114-study";
+import { psalm115Study } from "./psalm-115-study";
+import { psalm116Study } from "./psalm-116-study";
+import { psalm117Study } from "./psalm-117-study";
+import { psalm118Study } from "./psalm-118-study";
+import { psalm119Study } from "./psalm-119-study";
+import { psalm120Study } from "./psalm-120-study";
 import { job31Study } from "./job-31-study";
 import { job32Study } from "./job-32-study";
 import { job33Study } from "./job-33-study";
@@ -1185,4 +1195,14 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-salmos-cap-108": psalm108Study,
   "biblia-salmos-cap-109": psalm109Study,
   "biblia-salmos-cap-110": psalm110Study,
+  "biblia-salmos-cap-111": psalm111Study,
+  "biblia-salmos-cap-112": psalm112Study,
+  "biblia-salmos-cap-113": psalm113Study,
+  "biblia-salmos-cap-114": psalm114Study,
+  "biblia-salmos-cap-115": psalm115Study,
+  "biblia-salmos-cap-116": psalm116Study,
+  "biblia-salmos-cap-117": psalm117Study,
+  "biblia-salmos-cap-118": psalm118Study,
+  "biblia-salmos-cap-119": psalm119Study,
+  "biblia-salmos-cap-120": psalm120Study,
 };
