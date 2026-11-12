@@ -49,5 +49,6 @@ jobs:
           if-no-files-found: warn
           retention-days: 14
 
+      # Fail the PR only for unresolved high or critical findings; low/moderate items remain visible in the artifact.
       - name: Fail on high or critical vulnerabilities
         run: npm audit --audit-level=high
