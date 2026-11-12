@@ -1,0 +1,73 @@
+name: Safe dependency remediation
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: safe-dependency-remediation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  safe-remediation:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Apply non-breaking security updates only
+        run: |
+          npm audit fix --package-lock-only || true
+          npm ci
+
+      - name: Run automated tests
+        run: npm test
+
+      - name: Run production build
+        run: npm run build
+
+      - name: Capture remaining vulnerabilities
+        if: always()
+        run: |
+          npm audit --json > npm-audit-after-fix.json || true
+          node -e "const r=require('./npm-audit-after-fix.json'); console.log(JSON.stringify(r.metadata?.vulnerabilities ?? {}, null, 2))"
+
+      - name: Upload audit report and updated lockfile
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: safe-dependency-remediation
+          path: |
+            npm-audit-after-fix.json
+            package-lock.json
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Commit verified lockfile updates
+        if: success() && github.event_name == 'pull_request'
+        run: |
+          if git diff --quiet -- package-lock.json; then
+            echo "No safe lockfile updates were available."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "fix(deps): apply non-breaking security updates"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}

@@ -1,0 +1,54 @@
+name: Security audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "23 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  dependency-audit:
+    name: Audit npm dependencies
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Generate complete audit report
+        run: |
+          npm audit --json > npm-audit.json || AUDIT_EXIT=$?
+          echo "npm audit exit code: ${AUDIT_EXIT:-0}"
+          node -e "const r=require('./npm-audit.json'); console.log(JSON.stringify(r.metadata?.vulnerabilities ?? {}, null, 2))"
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-security-audit
+          path: npm-audit.json
+          if-no-files-found: warn
+          retention-days: 14
+
+      # Fail the PR only for unresolved high or critical findings; low/moderate items remain visible in the artifact.
+      - name: Fail on high or critical vulnerabilities
+        run: npm audit --audit-level=high
