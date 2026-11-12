@@ -71,8 +71,10 @@ function Inicio() {
           <p className="mt-1 text-sm text-slate-600 dark:text-muted-foreground">Que a Palavra guie o seu dia.</p>
         </section>
 
-        <Card className="overflow-hidden rounded-2xl border border-blue-100/80 bg-gradient-to-br from-[#dcecff] via-[#f5f9ff] to-[#fff8e9] p-0 shadow-[0_12px_30px_-20px_rgba(30,75,135,0.45)] dark:border-blue-900 dark:from-slate-900 dark:via-slate-900 dark:to-blue-950">
-          <div className="p-4 sm:p-5 lg:p-6">
+        <Card className="relative isolate overflow-hidden rounded-2xl border border-blue-100/80 bg-gradient-to-br from-[#dcecff] via-[#f5f9ff] to-[#fff8e9] p-0 shadow-[0_12px_30px_-20px_rgba(30,75,135,0.45)] dark:border-blue-900 dark:from-slate-900 dark:via-slate-900 dark:to-blue-950">
+          <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 z-0 h-full w-full object-cover object-right-bottom" />
+          <div aria-hidden="true" className="absolute inset-0 z-10 bg-gradient-to-r from-white/85 via-white/70 to-white/45 dark:from-slate-950/90 dark:via-slate-950/75 dark:to-slate-950/55" />
+          <div className="relative z-20 p-4 sm:p-5 lg:p-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#173f7c] px-3.5 py-2 text-[11px] font-bold tracking-[0.14em] text-white">
               <BookOpen className="size-4" aria-hidden /> {isSynthesis ? "LEITURA BÍBLICA DO DIA" : "VERSÍCULO DO DIA"}
             </div>
@@ -86,9 +88,7 @@ function Inicio() {
                   <blockquote className="mt-4 font-display text-xl font-semibold leading-snug text-[#142d59] dark:text-white sm:text-2xl">“{d.verse.text}”</blockquote>
                 )}
                 <p className="mt-3 text-sm font-bold text-[#2462b5] dark:text-blue-300">{isSynthesis ? "Leitura bíblica sugerida: " : ""}{d.verse.reference}</p>
-                <div className="relative isolate mt-4 overflow-hidden rounded-xl border border-white/70 bg-white/75 text-sm leading-relaxed text-slate-700 shadow-sm dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200">
-                  <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 z-0 h-full w-full object-cover object-right opacity-30 dark:opacity-15" />
-                  <div aria-hidden="true" className="absolute inset-0 z-10 bg-gradient-to-r from-white/95 via-white/85 to-white/65 dark:from-slate-900/90 dark:via-slate-900/80 dark:to-slate-900/55" />
+                <div className="relative mt-4 overflow-hidden rounded-xl border border-white/70 bg-white/55 text-sm leading-relaxed text-slate-700 shadow-sm backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/55 dark:text-slate-200">
                   <div className="relative z-20 flex items-start gap-3 p-4">
                     <Sparkles className="mt-0.5 size-5 shrink-0 text-[#2868c5]" aria-hidden />
                     <p>{d.motivational || "Deus ilumina cada passo quando caminhamos com confiança."}</p>
@@ -99,9 +99,7 @@ function Inicio() {
               <>
                 <blockquote className="mt-5 font-display text-[1.45rem] font-semibold leading-snug text-[#142d59] dark:text-white sm:text-2xl">“A tua palavra é lâmpada para os meus pés e luz para o meu caminho.”</blockquote>
                 <p className="mt-3 text-sm font-bold text-[#2462b5] dark:text-blue-300">Salmos 119:105</p>
-                <div className="relative isolate mt-5 overflow-hidden rounded-2xl border border-white/70 bg-white/75 text-sm leading-relaxed text-slate-700 dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-200">
-                  <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 z-0 h-full w-full object-cover object-right opacity-30 dark:opacity-15" />
-                  <div aria-hidden="true" className="absolute inset-0 z-10 bg-gradient-to-r from-white/95 via-white/85 to-white/65 dark:from-slate-900/90 dark:via-slate-900/80 dark:to-slate-900/55" />
+                <div className="relative mt-5 overflow-hidden rounded-2xl border border-white/70 bg-white/55 text-sm leading-relaxed text-slate-700 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/55 dark:text-slate-200">
                   <p className="relative z-20 p-4">Deus ilumina cada passo quando caminhamos com confiança.</p>
                 </div>
               </>
