@@ -1,6 +1,7 @@
 import type { StudyContent } from "../types";
 
-/** Estudo aprofundado de Salmos 114 no padrão didático de Gênesis 1. */\nexport const psalm114Study: StudyContent = {
+/** Estudo aprofundado de Salmos 114 no padrão didático de Gênesis 1. */
+export const psalm114Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "A criação treme diante do Deus que liberta seu povo",
