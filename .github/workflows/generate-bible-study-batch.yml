@@ -123,9 +123,9 @@ jobs:
           git fetch origin main
           git diff --check origin/main HEAD
           npm ci --no-audit --no-fund
-          npx tsc --noEmit
           npm run lint -- --rule 'prettier/prettier: off'
           npm run build
+          npx tsc --noEmit
           npm test
 
       - name: Detectar conteúdo pendente de integração
