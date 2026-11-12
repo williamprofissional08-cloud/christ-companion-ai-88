@@ -163,6 +163,17 @@ export function PrivateMessagesList() {
     await reload(user);
   }
 
+  async function rejectFriendRequest(request: FriendRequest) {
+    if (!user || request.destinatario_id !== user.id || starting) return;
+    setStarting(request.solicitante_id);
+    const { error: rejectError } = await db.from("pedidos_amizade")
+      .update({ status: "recusado" }).eq("id", request.id).eq("status", "pendente");
+    setStarting(null);
+    if (rejectError) { toast.error("Não foi possível recusar o pedido."); return; }
+    toast.success("Pedido de amizade recusado.");
+    await reload(user);
+  }
+
   async function openConversation(member: Member) {
     if (!user || starting) return;
     if (!friendIds.includes(member.id)) {
@@ -201,7 +212,7 @@ export function PrivateMessagesList() {
         <Card className="rounded-2xl border-primary/15 p-4 shadow-sm sm:p-5">
           <div className="mb-3 flex items-center gap-2"><UserRound className="size-5 text-primary" /><h2 className="font-display text-lg font-semibold">Encontrar membros</h2></div>
           <div className="relative mb-3"><Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" /><Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar pelo nome..." className="pl-9" /></div>
-          {incomingRequests.length > 0 ? <div className="mb-4 rounded-xl border border-primary/20 bg-primary/5 p-3"><h3 className="mb-2 text-sm font-semibold">Pedidos recebidos ({incomingRequests.length})</h3><div className="space-y-2">{incomingRequests.map((request) => { const sender = members.find((item) => item.id === request.solicitante_id); return <div key={request.id} className="flex items-center gap-2"><span className="min-w-0 flex-1 truncate text-sm">{sender?.display_name || "Membro da comunidade"}</span><Button size="sm" disabled={starting !== null} onClick={() => void acceptFriendRequest(request)}>{starting === request.solicitante_id ? <Loader2 className="size-4 animate-spin" /> : "Aceitar"}</Button></div>; })}</div></div> : null}
+          {incomingRequests.length > 0 ? <div className="mb-4 rounded-xl border border-primary/20 bg-primary/5 p-3"><h3 className="mb-2 text-sm font-semibold">Pedidos recebidos ({incomingRequests.length})</h3><div className="space-y-2">{incomingRequests.map((request) => { const sender = members.find((item) => item.id === request.solicitante_id); return <div key={request.id} className="flex items-center gap-2"><span className="min-w-0 flex-1 truncate text-sm">{sender?.display_name || "Membro da comunidade"}</span><Button size="sm" disabled={starting !== null} onClick={() => void acceptFriendRequest(request)}>{starting === request.solicitante_id ? <Loader2 className="size-4 animate-spin" /> : "Aceitar"}</Button><Button size="sm" variant="ghost" disabled={starting !== null} onClick={() => void rejectFriendRequest(request)}>Recusar</Button></div>; })}</div></div> : null}
           <div className="grid gap-2 sm:grid-cols-2">
             {filteredMembers.map((member) => <div key={member.id} className="flex items-center gap-3 rounded-xl border border-border/70 p-3">
               <Avatar className="size-10"><AvatarImage src={member.avatar_url ?? undefined} /><AvatarFallback>{initials(member.display_name)}</AvatarFallback></Avatar>
