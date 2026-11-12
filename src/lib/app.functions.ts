@@ -355,3 +355,15 @@ export const getWeeklySummary = createServerFn({ method: "GET" })
     };
   });
 
+const bibleChapterInputSchema = z.object({
+  bookId: z.string().regex(/^[a-z0-9-]{1,40}$/),
+  chapter: z.number().int().min(1).max(150),
+});
+
+export const getBibleChapter = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) => bibleChapterInputSchema.parse(input))
+  .handler(async ({ data }) => {
+    const { getBlivreChapterContent } = await import("./bible-content.server");
+    return getBlivreChapterContent(data.bookId, data.chapter);
+  });

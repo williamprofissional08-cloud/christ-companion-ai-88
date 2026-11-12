@@ -118,13 +118,15 @@ export function parseBibleReference(reference: string | undefined) {
     );
   if (!matchedBook) return undefined;
   const tail = normalized.slice(matchedBook.name.length).trim();
-  const match = /^(\d{1,3})(?::(\d{1,3}))?/.exec(tail);
+  const match = /^(\d{1,3})(?::(\d{1,3}))?$/.exec(tail);
   if (!match) return undefined;
   const chapter = Number(match[1]);
   if (chapter < 1 || chapter > matchedBook.chapters) return undefined;
+  const verse = match[2] ? Number(match[2]) : undefined;
+  if (verse !== undefined && verse < 1) return undefined;
   return {
     livro: matchedBook.id,
     capitulo: chapter,
-    ...(match[2] ? { versiculo: Number(match[2]) } : {}),
+    ...(verse !== undefined ? { versiculo: verse } : {}),
   };
 }
