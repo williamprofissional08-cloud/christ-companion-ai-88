@@ -44,7 +44,7 @@ jobs:
         if: steps.bootstrap.outputs.run == 'true'
         run: |
           set -euo pipefail
-          jq -r 'to_entries[] | "(.key)=(.value)"' .github/bible-study-pipeline-bootstrap.json >> "$GITHUB_OUTPUT"
+          jq -r 'to_entries[] | "\(.key)=\(.value)"' .github/bible-study-pipeline-bootstrap.json >> "$GITHUB_OUTPUT"
 
       - name: Confirmar checks do commit integrado
         if: steps.bootstrap.outputs.run == 'true'
@@ -62,7 +62,7 @@ jobs:
 
             if [ "$count" -gt 0 ] && [ "$pending" -eq 0 ]; then
               if [ "$failed" -gt 0 ]; then
-                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "(.name): (.status)/(.conclusion)"' <<< "$latest"
+                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "\(.name): \(.status)/\(.conclusion)"' <<< "$latest"
                 echo "::error::Bootstrap integrado sem todos os checks aprovados; geração não iniciada."
                 exit 1
               fi
@@ -144,7 +144,7 @@ jobs:
 
             if [ "$count" -gt 0 ] && [ "$pending" -eq 0 ]; then
               if [ "$failed" -gt 0 ]; then
-                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "(.name): (.status)/(.conclusion)"' <<< "$latest"
+                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "\(.name): \(.status)/\(.conclusion)"' <<< "$latest"
                 echo "::error::PR mesclada sem todos os checks aprovados; próximo lote bloqueado."
                 exit 1
               fi
