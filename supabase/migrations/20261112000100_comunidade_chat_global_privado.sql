@@ -236,8 +236,11 @@ create policy "Receivers mark private messages read" on public.mensagens_privada
   );
 
 drop policy if exists "Users read their own blocks" on public.bloqueios;
-create policy "Users read their own blocks" on public.bloqueios
-  for select to authenticated using (quem_bloqueou = (select auth.uid()));
+drop policy if exists "Users see block relationships involving them" on public.bloqueios;
+create policy "Users see block relationships involving them" on public.bloqueios
+  for select to authenticated using (
+    quem_bloqueou = (select auth.uid()) or bloqueado = (select auth.uid())
+  );
 drop policy if exists "Users create their own blocks" on public.bloqueios;
 create policy "Users create their own blocks" on public.bloqueios
   for insert to authenticated with check (
