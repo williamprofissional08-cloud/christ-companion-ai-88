@@ -21,7 +21,13 @@ export const psalm103Study: StudyContent = {
     }
   ],
   "application": "Viver à luz da mensagem: Bendizer ao Senhor por sua misericórdia e compaixão.",
-  "crossReferences": [],
+  "crossReferences": [
+    "Êxodo 34:6-7",
+    "Deuteronômio 8:2-5",
+    "Salmos 145:8-9",
+    "Lucas 1:50",
+    "Efésios 2:4-7"
+  ],
   "questions": [
     "Qual é a mensagem central do salmo?",
     "Como o gênero literário orienta a interpretação?",
