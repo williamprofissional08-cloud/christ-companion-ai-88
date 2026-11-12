@@ -1,0 +1,185 @@
+name: Continue Bible studies after validated merge
+
+"on":
+  push:
+    branches: [main]
+    paths:
+      - ".github/bible-study-pipeline-bootstrap.json"
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+permissions:
+  contents: read
+  checks: read
+  pull-requests: read
+  actions: write
+
+jobs:
+  bootstrap:
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout da main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Confirmar que o bootstrap foi adicionado agora
+        id: bootstrap
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+          if git cat-file -e "$BEFORE:.github/bible-study-pipeline-bootstrap.json" 2>/dev/null; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "A configuração inicial já existia; nenhum reinício será feito."
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Carregar configuração inicial
+        id: config
+        if: steps.bootstrap.outputs.run == 'true'
+        run: |
+          set -euo pipefail
+          jq -r 'to_entries[] | "(.key)=(.value)"' .github/bible-study-pipeline-bootstrap.json >> "$GITHUB_OUTPUT"
+
+      - name: Confirmar checks do commit integrado
+        if: steps.bootstrap.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.after }}
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 120); do
+            checks="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${HEAD_SHA}/check-runs?per_page=100")"
+            latest="$(jq '[.check_runs | group_by(.name)[] | max_by(.id)]' <<< "$checks")"
+            count="$(jq 'length' <<< "$latest")"
+            pending="$(jq '[.[] | select(.status != "completed")] | length' <<< "$latest")"
+            failed="$(jq '[.[] | select(.status == "completed" and .conclusion != "success")] | length' <<< "$latest")"
+
+            if [ "$count" -gt 0 ] && [ "$pending" -eq 0 ]; then
+              if [ "$failed" -gt 0 ]; then
+                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "(.name): (.status)/(.conclusion)"' <<< "$latest"
+                echo "::error::Bootstrap integrado sem todos os checks aprovados; geração não iniciada."
+                exit 1
+              fi
+              echo "Checks aprovados no commit $HEAD_SHA."
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "::error::Não foi possível confirmar os checks do commit de bootstrap."
+          exit 1
+
+      - name: Iniciar a sequência a partir de Números 28
+        if: steps.bootstrap.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BOOK_SLUG: ${{ steps.config.outputs.book_slug }}
+          START_CHAPTER: ${{ steps.config.outputs.start_chapter }}
+          BATCH_SIZE: ${{ steps.config.outputs.batch_size }}
+          MODEL: ${{ steps.config.outputs.model }}
+          TARGET_BRANCH: ${{ steps.config.outputs.target_branch }}
+          AUTO_CONTINUE: ${{ steps.config.outputs.auto_continue }}
+        run: |
+          set -euo pipefail
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/workflows/generate-bible-study-batch.yml/dispatches" \
+            -f ref=main \
+            -f "inputs[book_slug]=$BOOK_SLUG" \
+            -f "inputs[start_chapter]=$START_CHAPTER" \
+            -f "inputs[batch_size]=$BATCH_SIZE" \
+            -f "inputs[model]=$MODEL" \
+            -f "inputs[target_branch]=$TARGET_BRANCH" \
+            -f "inputs[auto_continue]=$AUTO_CONTINUE"
+
+  after_merge:
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged == true && contains(github.event.pull_request.body, '<!-- BIBLE_STUDY_AUTO_CONTINUE') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout da main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Ler os parâmetros do próximo lote
+        id: metadata
+        run: |
+          set -euo pipefail
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import os
+          import re
+
+          with open(os.environ["GITHUB_EVENT_PATH"], encoding="utf-8") as event_file:
+              event = json.load(event_file)
+          body = event["pull_request"].get("body") or ""
+          match = re.search(r"<!--\s*BIBLE_STUDY_AUTO_CONTINUE\s*(.*?)\s*-->", body, re.S)
+          if not match:
+              raise SystemExit("Marcador de continuação automática ausente.")
+          fields = dict(re.findall(r"(?m)^\s*([a-z_]+)=([^\r\n]+)\s*$", match.group(1)))
+          required = ("book_slug", "start_chapter", "batch_size", "model", "target_branch")
+          missing = [key for key in required if not fields.get(key)]
+          if missing:
+              raise SystemExit(f"Metadados incompletos: {', '.join(missing)}.")
+          for key in required:
+              print(f"{key.upper()}={fields[key]}")
+          PY
+
+      - name: Confirmar checks do commit da PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 120); do
+            checks="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${HEAD_SHA}/check-runs?per_page=100")"
+            latest="$(jq '[.check_runs | group_by(.name)[] | max_by(.id)]' <<< "$checks")"
+            count="$(jq 'length' <<< "$latest")"
+            pending="$(jq '[.[] | select(.status != "completed")] | length' <<< "$latest")"
+            failed="$(jq '[.[] | select(.status == "completed" and .conclusion != "success")] | length' <<< "$latest")"
+
+            if [ "$count" -gt 0 ] && [ "$pending" -eq 0 ]; then
+              if [ "$failed" -gt 0 ]; then
+                jq -r '.[] | select(.status != "completed" or .conclusion != "success") | "(.name): (.status)/(.conclusion)"' <<< "$latest"
+                echo "::error::PR mesclada sem todos os checks aprovados; próximo lote bloqueado."
+                exit 1
+              fi
+              echo "Todos os checks da PR foram aprovados."
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "::error::Não foi possível confirmar checks aprovados da PR mesclada."
+          exit 1
+
+      - name: Calcular e disparar a próxima faixa
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BOOK_SLUG: ${{ steps.metadata.outputs.BOOK_SLUG }}
+          START_CHAPTER: ${{ steps.metadata.outputs.START_CHAPTER }}
+          BATCH_SIZE: ${{ steps.metadata.outputs.BATCH_SIZE }}
+          MODEL: ${{ steps.metadata.outputs.MODEL }}
+          TARGET_BRANCH: ${{ steps.metadata.outputs.TARGET_BRANCH }}
+        run: |
+          set -euo pipefail
+          node scripts/next-bible-study-batch.mjs > /tmp/next-batch.env
+          source /tmp/next-batch.env
+
+          if [ "$BIBLE_FINISHED" = "true" ]; then
+            echo "Todos os 66 livros e 1.189 capítulos foram percorridos."
+            exit 0
+          fi
+
+          echo "Próximo lote: $NEXT_BOOK_SLUG capítulos $NEXT_START_CHAPTER–$((NEXT_START_CHAPTER + NEXT_BATCH_SIZE - 1))."
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/workflows/generate-bible-study-batch.yml/dispatches" \
+            -f ref=main \
+            -f "inputs[book_slug]=$NEXT_BOOK_SLUG" \
+            -f "inputs[start_chapter]=$NEXT_START_CHAPTER" \
+            -f "inputs[batch_size]=$NEXT_BATCH_SIZE" \
+            -f "inputs[model]=$MODEL" \
+            -f "inputs[target_branch]=$TARGET_BRANCH" \
+            -f "inputs[auto_continue]=true"
