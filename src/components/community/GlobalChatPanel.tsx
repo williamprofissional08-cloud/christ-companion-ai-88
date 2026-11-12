@@ -32,10 +32,19 @@ export function GlobalChatPanel() {
   const loadProfiles = useCallback(async (ids: string[]) => {
     const unique = [...new Set(ids)];
     if (!unique.length) return;
-    const { data, error: profileError } = await db.from("community_member_profiles")
-      .select("id,display_name,avatar_url").in("id", unique);
-    if (profileError) return;
-    setMembers((current) => ({ ...current, ...Object.fromEntries(((data || []) as Member[]).map((item) => [item.id, item])) }));
+    // Use the privacy-safe RPC: the profiles view intentionally exposes only the
+    // authenticated user's own row under RLS, so querying it cannot resolve authors.
+    const results = await Promise.all(unique.map((id) =>
+      db.rpc("search_community_members", { p_search: id, p_limit: 1 })
+    ));
+    const resolved = results.flatMap((result) =>
+      result.error ? [] : ((result.data || []) as Member[])
+    );
+    if (!resolved.length) return;
+    setMembers((current) => ({
+      ...current,
+      ...Object.fromEntries(resolved.map((item) => [item.id, item])),
+    }));
   }, []);
 
   const loadLatest = useCallback(async (currentUserId: string) => {
