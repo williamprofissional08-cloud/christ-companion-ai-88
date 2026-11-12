@@ -12,7 +12,7 @@ const db = supabase as unknown as SupabaseClient;
 type GlobalMessage = { id: string; user_id: string; conteudo: string; criado_em: string; apagada: boolean };
 type Member = { id: string; display_name: string | null; avatar_url: string | null };
 type PresenceMember = { user_id?: string; nome?: string; avatar_url?: string | null };
-const cleanText = (value: string) => value.replace(/<[^>]*>/g, "").replace(/[\u0000-\u001F\u007F]/g, "").trim();
+const cleanText = (value: string) => value.replace(/<[^>]*>/g, "").split("").filter((character) => { const code = character.charCodeAt(0); return code >= 32 && code !== 127; }).join("").trim();
 const initials = (value?: string | null) => (value || "Membro").trim().split(/\s+/).slice(0, 2).map((part) => part[0]?.toUpperCase()).join("");
 
 export function GlobalChatPanel() {
