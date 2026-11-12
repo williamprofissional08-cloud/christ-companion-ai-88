@@ -194,7 +194,7 @@ export function GlobalChatPanel() {
         )) : <span className="text-xs text-muted-foreground">Você está entre os primeiros por aqui.</span>}
         <a href="/comunidade/privado" className="ml-auto text-xs font-semibold text-primary hover:underline">Mensagens privadas →</a>
       </div>
-      <div className="max-h-[520px] min-h-[250px] space-y-3 overflow-y-auto p-4 sm:p-5">
+      <div className="max-h-[520px] min-h-[250px] space-y-3 overflow-y-auto p-4 sm:p-5" onScroll={(event) => { if (event.currentTarget.scrollTop <= 24 && !loadingMore && hasMore && !loading) void loadOlder(); }}>
         {loading ? <div className="flex items-center justify-center gap-2 py-12 text-sm text-muted-foreground"><Loader2 className="size-4 animate-spin" />Carregando mensagens...</div> : null}
         {!loading && error ? <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-4 text-sm text-destructive">{error}<Button variant="outline" size="sm" className="ml-2" onClick={() => void loadLatest()}>Tentar novamente</Button></div> : null}
         {!loading && !error && hasMore ? <div className="text-center"><Button variant="ghost" size="sm" disabled={loadingMore} onClick={() => void loadOlder()}>{loadingMore ? "Carregando..." : "Carregar mensagens anteriores"}</Button></div> : null}
