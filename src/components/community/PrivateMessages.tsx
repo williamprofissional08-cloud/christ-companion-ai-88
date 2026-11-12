@@ -288,7 +288,7 @@ export function PrivateConversationView({ conversaId }: { conversaId: string }) 
                   <p className="whitespace-pre-wrap break-words text-sm">{message.conteudo}</p>
                   <div className={`mt-1 flex items-center justify-end gap-2 text-[10px] ${mine ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
                     <time dateTime={message.criado_em}>{new Date(message.criado_em).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</time>
-                    {mine ? <span>{message.lida ? "Lida" : "Enviada"}</span> : <button type="button" onClick={() => void report(message)} className="inline-flex items-center gap-1 hover:underline"><Flag className="size-3" /> Denunciar</button><button type="button" onClick={() => void block()} className="ml-2 inline-flex items-center gap-1 hover:underline"><ShieldBan className="size-3" /> Bloquear</button>}
+                    {mine ? <span>{message.lida ? "Lida" : "Enviada"}</span> : <><button type="button" onClick={() => void report(message)} className="inline-flex items-center gap-1 hover:underline"><Flag className="size-3" /> Denunciar</button><button type="button" onClick={() => void block()} className="ml-2 inline-flex items-center gap-1 hover:underline"><ShieldBan className="size-3" /> Bloquear</button></>}
                   </div>
                 </div>
               </div>;
