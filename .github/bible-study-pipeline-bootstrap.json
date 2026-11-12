@@ -1,4 +1,5 @@
 {
+  "bootstrap_version": 2,
   "book_slug": "numeros",
   "start_chapter": "28",
   "batch_size": "7",
