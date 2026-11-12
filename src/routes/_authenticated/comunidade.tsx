@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import type { SupabaseClient, User } from "@supabase/supabase-js";
 import { BookOpen, Check, Download, FileText, Flag, Heart, LibraryBig, Loader2, MessageCircle, MessagesSquare, Plus, Send, ShieldCheck, Sparkles, Upload, UsersRound, X, ExternalLink } from "lucide-react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
+import { GlobalChatPanel } from "@/components/community/GlobalChatPanel";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -242,6 +243,9 @@ function ComunidadePage() {
                 <MessageCircle className="size-4" /> Grupo no WhatsApp{" "}
                 <ExternalLink className="size-3" />
               </a>
+              <Link to="/comunidade/privado" className="mt-2 inline-flex min-h-9 items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-2 text-xs font-semibold text-primary transition hover:bg-primary/10">
+                <MessagesSquare className="size-4" /> Mensagens privadas
+              </Link>
             </div>
             <div className="community-scripture relative flex min-h-[145px] flex-col justify-center overflow-hidden rounded-2xl p-5 text-white sm:min-h-[160px] lg:min-h-[180px] lg:p-7">
               <p className="max-w-lg font-display text-lg italic leading-snug sm:text-xl lg:text-2xl">
@@ -316,6 +320,8 @@ function ComunidadePage() {
             </button>
           ))}
         </section>
+
+        <GlobalChatPanel />
 
         <Tabs value={tab} onValueChange={setTab}>
           <TabsList className="flex h-auto w-full justify-start gap-1 overflow-x-auto rounded-2xl bg-muted/80 p-1">
