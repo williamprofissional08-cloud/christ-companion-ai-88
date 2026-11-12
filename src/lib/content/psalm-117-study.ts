@@ -187,4 +187,4 @@ import type { StudyContent } from "../types";
       "body": "Senhor Deus, ensina-nos a ouvir tua Palavra com humildade e atenção. Guarda-nos de interpretações apressadas e ajuda-nos a viver aquilo que o texto realmente ensina. Forma em nós fé, integridade, misericórdia e perseverança. Que nossa leitura conduza à adoração e à obediência a ti. Em nome de Jesus. Amém."
     }
   ]
-};\n
+};
