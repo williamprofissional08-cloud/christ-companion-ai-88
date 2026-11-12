@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import type { SupabaseClient, User } from "@supabase/supabase-js";
-import { ArrowLeft, Flag, Loader2, MessageCircle, Search, Send, ShieldBan, UserRound } from "lucide-react";
+import { ArrowLeft, Copy, Flag, Loader2, MessageCircle, Search, Send, ShieldBan, UserRound } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
@@ -52,6 +52,8 @@ export function PrivateMessagesList() {
   const [incomingRequests, setIncomingRequests] = useState<FriendRequest[]>([]);
   const [outgoingRequests, setOutgoingRequests] = useState<FriendRequest[]>([]);
   const [search, setSearch] = useState("");
+  const [searchingMembers, setSearchingMembers] = useState(false);
+  const [memberSearchError, setMemberSearchError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [starting, setStarting] = useState<string | null>(null);
@@ -79,8 +81,9 @@ export function PrivateMessagesList() {
     setOutgoingRequests(requestRows.filter((row) => row.solicitante_id === current.id));
     const rows = (conversations || []) as Conversation[];
     const otherIds = [...new Set(rows.map((row) => row.user_a === current.id ? row.user_b : row.user_a))];
-    const { data: people } = await db.from("community_member_profiles").select("id,display_name,avatar_url").in("id", otherIds.length ? otherIds : ["00000000-0000-0000-0000-000000000000"]);
-    const profileMap = Object.fromEntries(((people || []) as Member[]).map((person) => [person.id, person]));
+    const peopleResults = await Promise.all(otherIds.map((id) => db.rpc("search_community_members", { p_search: id, p_limit: 1 })));
+    const people = peopleResults.flatMap((result) => result.error ? [] : ((result.data || []) as Member[]));
+    const profileMap = Object.fromEntries(people.map((person) => [person.id, person]));
     const visibleRows = rows.filter((row) => !blocked.includes(row.user_a === current.id ? row.user_b : row.user_a));
     const data = await Promise.all(visibleRows.map(async (conversation) => {
       const otherId = conversation.user_a === current.id ? conversation.user_b : conversation.user_a;
@@ -101,11 +104,6 @@ export function PrivateMessagesList() {
     void db.auth.getUser().then(async ({ data }) => {
       if (!active || !data.user) return;
       setUser(data.user);
-      const { data: people, error: peopleError } = await db.from("community_member_profiles")
-        .select("id,display_name,avatar_url").neq("id", data.user.id).order("display_name").limit(100);
-      if (!active) return;
-      if (peopleError) setError("Não foi possível carregar os membros.");
-      else setMembers((people || []) as Member[]);
       await reload(data.user);
       if (active) setLoading(false);
     }).catch(() => { if (active) { setError("Não foi possível validar sua sessão."); setLoading(false); } });
@@ -131,11 +129,36 @@ export function PrivateMessagesList() {
     return () => { active = false; void db.removeChannel(channel); };
   }, [user, reload]);
 
-  const filteredMembers = useMemo(() => {
-    const query = search.trim().toLocaleLowerCase("pt-BR");
-    return members.filter((member) => member.id !== user?.id && !blockedIds.includes(member.id) &&
-      (!query || (member.display_name || "Membro").toLocaleLowerCase("pt-BR").includes(query))).slice(0, 12);
-  }, [members, search, blockedIds, user?.id]);
+  useEffect(() => {
+    if (!user) return;
+    let active = true;
+    const term = search.trim();
+    if (term.length === 1) {
+      setMembers([]);
+      setMemberSearchError("Digite pelo menos 2 caracteres do nome ou 6 caracteres do ID.");
+      setSearchingMembers(false);
+      return () => { active = false; };
+    }
+    setSearchingMembers(true);
+    setMemberSearchError(null);
+    const timeout = window.setTimeout(async () => {
+      const { data, error: searchError } = await db.rpc("search_community_members", { p_search: term, p_limit: 30 });
+      if (!active) return;
+      if (searchError) {
+        console.error("[community-friends] Falha ao buscar membros:", searchError);
+        setMembers([]);
+        setMemberSearchError("Não foi possível buscar membros. Atualize a página e tente novamente.");
+      } else {
+        setMembers((data || []) as Member[]);
+      }
+      setSearchingMembers(false);
+    }, 250);
+    return () => { active = false; window.clearTimeout(timeout); };
+  }, [user, search]);
+
+  const filteredMembers = useMemo(() => members.filter((member) =>
+    member.id !== user?.id && !blockedIds.includes(member.id)
+  ).slice(0, 30), [members, blockedIds, user?.id]);
 
   async function sendFriendRequest(member: Member) {
     if (!user || starting) return;
@@ -211,16 +234,20 @@ export function PrivateMessagesList() {
         </div>
         <Card className="rounded-2xl border-primary/15 p-4 shadow-sm sm:p-5">
           <div className="mb-3 flex items-center gap-2"><UserRound className="size-5 text-primary" /><h2 className="font-display text-lg font-semibold">Encontrar membros</h2></div>
-          <div className="relative mb-3"><Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" /><Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar pelo nome..." className="pl-9" /></div>
+          <div className="relative mb-2"><Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" /><Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar por nome ou colar ID do membro..." className="pl-9" /></div>
+          <p className="mb-3 text-xs text-muted-foreground">Pesquise pelo nome ou pelos primeiros 6 caracteres (ou mais) do ID. Somente nome, foto e ID público são usados na busca.</p>
           {incomingRequests.length > 0 ? <div className="mb-4 rounded-xl border border-primary/20 bg-primary/5 p-3"><h3 className="mb-2 text-sm font-semibold">Pedidos recebidos ({incomingRequests.length})</h3><div className="space-y-2">{incomingRequests.map((request) => { const sender = members.find((item) => item.id === request.solicitante_id); return <div key={request.id} className="flex items-center gap-2"><span className="min-w-0 flex-1 truncate text-sm">{sender?.display_name || "Membro da comunidade"}</span><Button size="sm" disabled={starting !== null} onClick={() => void acceptFriendRequest(request)}>{starting === request.solicitante_id ? <Loader2 className="size-4 animate-spin" /> : "Aceitar"}</Button><Button size="sm" variant="ghost" disabled={starting !== null} onClick={() => void rejectFriendRequest(request)}>Recusar</Button></div>; })}</div></div> : null}
+          {searchingMembers ? <div className="flex items-center justify-center gap-2 py-4 text-sm text-muted-foreground"><Loader2 className="size-4 animate-spin" />Buscando membros...</div> : null}
+          {memberSearchError ? <p className="py-3 text-center text-sm text-muted-foreground">{memberSearchError}</p> : null}
           <div className="grid gap-2 sm:grid-cols-2">
             {filteredMembers.map((member) => <div key={member.id} className="flex items-center gap-3 rounded-xl border border-border/70 p-3">
               <Avatar className="size-10"><AvatarImage src={member.avatar_url ?? undefined} /><AvatarFallback>{initials(member.display_name)}</AvatarFallback></Avatar>
-              <span className="min-w-0 flex-1 truncate text-sm font-medium">{member.display_name || "Membro"}</span>
+              <div className="min-w-0 flex-1"><p className="truncate text-sm font-medium">{member.display_name || "Membro"}</p><p className="truncate font-mono text-[10px] text-muted-foreground" title={member.id}>{member.id}</p></div>
+              <Button size="icon" variant="ghost" aria-label="Copiar ID do membro" title="Copiar ID" onClick={() => { void navigator.clipboard.writeText(member.id).then(() => toast.success("ID copiado.")).catch(() => toast.error("Não foi possível copiar o ID.")); }}><Copy className="size-4" /></Button>
               <Button size="sm" variant="outline" disabled={starting !== null || outgoingRequests.some((request) => request.destinatario_id === member.id)} onClick={() => friendIds.includes(member.id) ? void openConversation(member) : incomingRequests.some((request) => request.solicitante_id === member.id) ? void acceptFriendRequest(incomingRequests.find((request) => request.solicitante_id === member.id)!) : void sendFriendRequest(member)}>{starting === member.id ? <Loader2 className="size-4 animate-spin" /> : friendIds.includes(member.id) ? <><MessageCircle className="mr-1 size-3.5" /> Conversar</> : incomingRequests.some((request) => request.solicitante_id === member.id) ? "Aceitar pedido" : outgoingRequests.some((request) => request.destinatario_id === member.id) ? "Pedido enviado" : "Adicionar amigo"}</Button>
               {user ? <div className="flex gap-1"><Button size="icon" variant="ghost" aria-label="Denunciar perfil" onClick={() => void sendProfileReport(user.id, member.id)}><Flag className="size-4" /></Button><Button size="icon" variant="ghost" aria-label="Bloquear membro" onClick={() => void blockMember(user.id, member.id)}><ShieldBan className="size-4" /></Button></div> : null}
             </div>)}
-            {!loading && !filteredMembers.length ? <p className="col-span-full py-4 text-center text-sm text-muted-foreground">Nenhum membro encontrado.</p> : null}
+            {!loading && !searchingMembers && !memberSearchError && !filteredMembers.length ? <p className="col-span-full py-4 text-center text-sm text-muted-foreground">{search.trim() ? "Nenhum membro encontrado para esse nome ou ID." : "Ainda não há outros membros disponíveis para adicionar."}</p> : null}
           </div>
         </Card>
         <Card className="rounded-2xl border-primary/15 p-4 shadow-sm sm:p-5">
