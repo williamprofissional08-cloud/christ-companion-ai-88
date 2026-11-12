@@ -1,6 +1,7 @@
 import type { StudyContent } from "../types";
 
-/** Estudo aprofundado de Salmos 116 no padrão didático de Gênesis 1. */\nexport const psalm116Study: StudyContent = {
+/** Estudo aprofundado de Salmos 116 no padrão didático de Gênesis 1. */
+export const psalm116Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "Amor, gratidão e fidelidade em meio à aflição",
