@@ -47,7 +47,7 @@ export const psalm95Study: StudyContent = {
       "scriptureRefs": [
         "Salmos 95:1-11"
       ],
-      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece uma paráfrase orientadora e comentários para acompanhar o texto.\n\n**Salmos 95:1-5 — Convite ao louvor do Criador**\n\n**Salmos 95:6-7 — Adoração e pertencimento ao Pastor**\n\n**Salmos 95:8-11 — A memória do deserto e a advertência contra a incredulidade**\n\n**1:** O povo é convidado a cantar com alegria ao Senhor, sua rocha de salvação. O louvor nasce da experiência de Deus como libertador.\n**2:** A comunidade se aproxima com ações de graças e cânticos. A adoração é resposta pública e intencional.\n**3:** O Senhor é apresentado como grande Deus e Rei acima de todos os poderes. A linguagem rejeita qualquer rivalidade entre o Criador e as forças da natureza.\n**4:** As profundezas da terra e as alturas dos montes pertencem a Deus. Os extremos da paisagem expressam a totalidade de seu domínio.\n**5:** O mar e a terra seca são obra de suas mãos. O Criador é também aquele que sustenta o mundo.\n**6:** O povo é chamado a adorar, ajoelhar-se e reconhecer a autoridade do Senhor. Os gestos corporais expressam humildade e submissão.\n**7:** Deus é nosso Deus e nós somos o povo de seu pastoreio. A imagem do pastor combina cuidado, direção e responsabilidade de ouvir sua voz.\n**8:** A comunidade é advertida a não endurecer o coração como em Meribá e Massá. O problema histórico foi a contestação desconfiada diante da necessidade.\n**9:** Os antepassados tentaram a Deus e o provaram, apesar de terem visto suas obras. Experiência religiosa passada não substitui confiança obediente presente.\n**10:** Durante quarenta anos, aquela geração provocou tristeza em Deus. A referência resume uma trajetória de resistência e infidelidade no deserto.\n**11:** Deus declara que aquela geração tinha o coração desviado e não conhecia seus caminhos. O problema é relacional e moral, não mera falta de informação.\n**12:** Por causa da incredulidade e desobediência, Deus jurou que não entrariam em seu descanso. O descanso aponta para a herança prometida e, na leitura de Hebreus, ganha desenvolvimento teológico."
+      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece uma paráfrase orientadora e comentários para acompanhar o texto.\n\n**Salmos 95:1-5 — Convite ao louvor do Criador**\n\n**Salmos 95:6-7 — Adoração e pertencimento ao Pastor**\n\n**Salmos 95:8-11 — A memória do deserto e a advertência contra a incredulidade**\n\n**1:** O povo é convidado a cantar com alegria ao Senhor, sua rocha de salvação. O louvor nasce da experiência de Deus como libertador.\n**2:** A comunidade se aproxima com ações de graças e cânticos. A adoração é resposta pública e intencional.\n**3:** O Senhor é apresentado como grande Deus e Rei acima de todos os poderes. A linguagem rejeita qualquer rivalidade entre o Criador e as forças da natureza.\n**4:** As profundezas da terra e as alturas dos montes pertencem a Deus. Os extremos da paisagem expressam a totalidade de seu domínio.\n**5:** O mar e a terra seca são obra de suas mãos. O Criador é também aquele que sustenta o mundo.\n**6:** O povo é chamado a adorar, ajoelhar-se e reconhecer a autoridade do Senhor. Os gestos corporais expressam humildade e submissão.\n**7:** Deus é nosso Deus e nós somos o povo de seu pastoreio. A imagem do pastor combina cuidado, direção e responsabilidade de ouvir sua voz.\n**8:** A comunidade é advertida a não endurecer o coração como em Meribá e Massá. O problema histórico foi a contestação desconfiada diante da necessidade.\n**9:** Os antepassados tentaram a Deus e o provaram, apesar de terem visto suas obras. Experiência religiosa passada não substitui confiança obediente presente.\n**10:** Durante quarenta anos, aquela geração provocou tristeza em Deus. A referência resume uma trajetória de resistência e infidelidade no deserto. Deus declara que aquela geração tinha o coração desviado e não conhecia seus caminhos. O problema é relacional e moral, não mera falta de informação.\n**11:** Por causa da incredulidade e desobediência, Deus jurou que não entrariam em seu descanso. O descanso aponta para a herança prometida e, na leitura de Hebreus, ganha desenvolvimento teológico."
     },
     {
       "id": "introducao",
@@ -83,7 +83,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "5. Exposição — Convite ao louvor do Criador",
+      "title": "4. Exposição — Convite ao louvor do Criador",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -93,7 +93,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "topico-2",
-      "title": "6. Exposição — Adoração e pertencimento ao Pastor",
+      "title": "5. Exposição — Adoração e pertencimento ao Pastor",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -103,17 +103,17 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "topico-3",
-      "title": "7. Exposição — A memória do deserto e a advertência contra a incredulidade",
+      "title": "6. Exposição — A memória do deserto e a advertência contra a incredulidade",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
         "Salmos 95:8-11"
       ],
-      "body": "**Leia Salmos 95:8-11 integralmente.**\n\n**Sentido da unidade:** A memória do deserto e a advertência contra a incredulidade. **Tema do capítulo:** Hoje, se ouvirdes a sua voz.\n\n**Observações versículo por versículo**\n\n**Versículo 8 — Explicação:** A comunidade é advertida a não endurecer o coração como em Meribá e Massá. O problema histórico foi a contestação desconfiada diante da necessidade. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Versículo 9 — Explicação:** Os antepassados tentaram a Deus e o provaram, apesar de terem visto suas obras. Experiência religiosa passada não substitui confiança obediente presente. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Versículo 10 — Explicação:** Durante quarenta anos, aquela geração provocou tristeza em Deus. A referência resume uma trajetória de resistência e infidelidade no deserto. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Versículo 11 — Explicação:** Deus declara que aquela geração tinha o coração desviado e não conhecia seus caminhos. O problema é relacional e moral, não mera falta de informação. Observe como a imagem, a voz e a progressão do argumento contribuem para o sentido da perícope.\n\n**Síntese expositiva:** O salmo convoca a comunidade ao louvor do Criador e Rei, recorda a experiência de Israel no deserto e adverte contra a dureza de coração. O título não identifica autor. A referência a Meribá e Massá remete às narrativas de Êxodo 17 e Números 20, e Hebreus 3–4 retoma a advertência.\n\n**Aplicação responsável:** Hoje, se ouvirdes a sua voz. Não transforme a linguagem poética em garantia automática nem use a experiência do salmista para acusar quem sofre."
+      "body": "**Leia Salmos 95:8-11 integralmente.**\n\n**Sentido da unidade:** A memória do deserto e a advertência contra a incredulidade. **Tema do capítulo:** Hoje, se ouvirdes a sua voz.\n\n**Observações versículo por versículo**\n\n**Versículo 8 — Explicação:** A comunidade é advertida a não endurecer o coração como em Meribá e Massá. O problema histórico foi a contestação desconfiada diante da necessidade. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Versículo 9 — Explicação:** Os antepassados tentaram a Deus e o provaram, apesar de terem visto suas obras. Experiência religiosa passada não substitui confiança obediente presente. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Versículo 10 — Explicação:** Durante quarenta anos, aquela geração provocou tristeza em Deus. A referência resume uma trajetória de resistência e infidelidade no deserto. Deus declara que aquela geração tinha o coração desviado e não conhecia seus caminhos. O problema é relacional e moral, não mera falta de informação. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Versículo 11 — Explicação:** Por causa da incredulidade e desobediência, Deus jurou que não entrariam em seu descanso. O descanso aponta para a herança prometida e, na leitura de Hebreus, ganha desenvolvimento teológico. Observe como a afirmação contribui para o sentido da perícope e do salmo inteiro.\n\n**Síntese expositiva:** O salmo convoca a comunidade ao louvor do Criador e Rei, recorda a experiência de Israel no deserto e adverte contra a dureza de coração. O título não identifica autor. A referência a Meribá e Massá remete às narrativas de Êxodo 17 e Números 20, e Hebreus 3–4 retoma a advertência.\n\n**Aplicação responsável:** Hoje, se ouvirdes a sua voz. Não transforme a linguagem poética em garantia automática nem use a experiência do salmista para acusar quem sofre."
     },
     {
       "id": "palavras-chave",
-      "title": "8. Palavras-chave, imagens e recursos poéticos",
+      "title": "7. Palavras-chave, imagens e recursos poéticos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -123,7 +123,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "questoes-interpretativas",
-      "title": "9. Questões interpretativas e pontos de atenção",
+      "title": "8. Questões interpretativas e pontos de atenção",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -133,7 +133,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "referencias-explicadas",
-      "title": "10. Referências bíblicas relacionadas",
+      "title": "9. Referências bíblicas relacionadas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -143,7 +143,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "cuidados",
-      "title": "11. Cuidados contra interpretações indevidas",
+      "title": "10. Cuidados contra interpretações indevidas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -153,7 +153,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "cristo",
-      "title": "12. Leitura canônica e relação com Jesus Cristo",
+      "title": "11. Leitura canônica e relação com Jesus Cristo",
       "kind": "christology",
       "confidence": "high",
       "scriptureRefs": [
@@ -163,7 +163,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "aplicacao",
-      "title": "13. Aplicação pessoal, comunitária e pastoral",
+      "title": "12. Aplicação pessoal, comunitária e pastoral",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
@@ -173,7 +173,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "resumo",
-      "title": "14. Síntese e revisão do estudo",
+      "title": "13. Síntese e revisão do estudo",
       "kind": "conclusion",
       "confidence": "high",
       "scriptureRefs": [
@@ -183,7 +183,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "exercicios",
-      "title": "15. Exercícios de compreensão e interpretação",
+      "title": "14. Exercícios de compreensão e interpretação",
       "kind": "exercise",
       "confidence": "high",
       "scriptureRefs": [
@@ -193,7 +193,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "oficina-pregador",
-      "title": "16. Oficina de preparação da mensagem",
+      "title": "15. Oficina de preparação da mensagem",
       "kind": "sermon",
       "confidence": "high",
       "scriptureRefs": [
@@ -203,7 +203,7 @@ export const psalm95Study: StudyContent = {
     },
     {
       "id": "oracao-final",
-      "title": "17. Oração final",
+      "title": "16. Oração final",
       "kind": "prayer",
       "confidence": "high",
       "scriptureRefs": [
