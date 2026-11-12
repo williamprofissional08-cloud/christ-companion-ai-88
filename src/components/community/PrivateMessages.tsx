@@ -117,7 +117,7 @@ export function PrivateMessagesList() {
       .on("postgres_changes", { event: "*", schema: "public", table: "mensagens_privadas" }, () => {
         if (active) void reload(user);
       })
-      .on("postgres_changes", { event: "INSERT", schema: "public", table: "conversas" }, () => {
+      .on("postgres_changes", { event: "*", schema: "public", table: "conversas" }, () => {
         if (active) void reload(user);
       })
       .on("postgres_changes", { event: "*", schema: "public", table: "pedidos_amizade" }, () => {
