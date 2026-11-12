@@ -21,7 +21,12 @@ export const psalm104Study: StudyContent = {
     }
   ],
   "application": "Viver à luz da mensagem: A criação sustentada pela sabedoria e providência de Deus.",
-  "crossReferences": [],
+  "crossReferences": [
+    "Gênesis 1:1-31",
+    "Jó 38:1-41",
+    "Salmos 19:1-6",
+    "Colossenses 1:16-17"
+  ],
   "questions": [
     "Qual é a mensagem central do salmo?",
     "Como o gênero literário orienta a interpretação?",
