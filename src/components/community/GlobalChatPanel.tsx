@@ -42,7 +42,7 @@ export function GlobalChatPanel() {
     const [messagesResult, blocksResult] = await Promise.all([
       db.from("mensagens_globais").select("id,user_id,conteudo,criado_em,apagada")
         .order("criado_em", { ascending: false }).limit(50),
-      db.from("bloqueios").select("bloqueado"),
+      db.from("bloqueios").select("bloqueado").eq("quem_bloqueou", current.id),
     ]);
     if (messagesResult.error) {
       setError("Não foi possível carregar o chat global. Tente novamente.");
