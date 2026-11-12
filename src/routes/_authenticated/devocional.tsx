@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
@@ -10,7 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { getDevotional } from "@/lib/ai.functions";
 import { loadDevotionalSafely } from "@/lib/devotional-loader";
 import { fallbackDevotional, devotionalLibrarySize } from "@/lib/content/fallback-devotional";
-import { todayISO } from "@/lib/types";
+import { useBrazilDay } from "@/hooks/use-brazil-day";
 
 export const Route = createFileRoute("/_authenticated/devocional")({
   head: () => ({
@@ -30,8 +30,12 @@ export const Route = createFileRoute("/_authenticated/devocional")({
 });
 
 function DevocionalPage() {
-  const day = todayISO();
+  const day = useBrazilDay();
   const [draw, setDraw] = useState(0);
+
+  useEffect(() => {
+    setDraw(0);
+  }, [day]);
   const fn = useServerFn(getDevotional);
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["devotional", day],
@@ -67,7 +71,7 @@ function DevocionalPage() {
   const displayedData = draw === 0 ? data : fallbackDevotional(day, draw);
   const isSynthesis = displayedData.verse.kind === "synthesis" || displayedData.verse.text.startsWith("Síntese para meditação, não uma citação literal:");
   const verseText = displayedData.verse.text.replace(/^Síntese para meditação, não uma citação literal:\s*/i, "");
-  const dateLabel = new Date(`${day}T12:00:00`).toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  const dateLabel = new Date(`${day}T12:00:00-03:00`).toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo", weekday: "long", day: "numeric", month: "long", year: "numeric" });
   const blocks = [
     { label: "Reflexão", text: displayedData.reflection, icon: BookOpen, accent: "blue" },
     { label: "Aplicação prática", text: displayedData.application, icon: Lightbulb, accent: "gold" },
