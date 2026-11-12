@@ -1,6 +1,7 @@
 import type { StudyContent } from "../types";
 
-/** Estudo aprofundado de Salmos 115 no padrão didático de Gênesis 1. */\nexport const psalm115Study: StudyContent = {
+/** Estudo aprofundado de Salmos 115 no padrão didático de Gênesis 1. */
+export const psalm115Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "A glória pertence ao Senhor, não aos ídolos",
