@@ -14,3 +14,5 @@
 - Pass catalog study depth into generation and return structured reader sections for deep studies; preserve curated precedence and legacy caches so existing content and resume positions remain usable.
 - Store long curated chapter studies in dedicated content modules and register them under existing chapter slugs, because editorial additions must preserve chapter navigation and reading checkpoints.
 - Keep Lovable's VITE environment replacement enabled and explicitly define the two public backend values with project-bound public fallbacks in Vite config, because remote browser builds must not depend on server-only environment variables; never embed private credentials.
+- Keep community chat additive to the forum, use participant-scoped database policies and immutable private-message content, and expose only names/avatars through an authenticated directory function; this prevents cross-user disclosure and forged read receipts.
+- Mount private community routes outside the forum page's nesting and clean up private Presence and change subscriptions on unmount; this keeps navigation and connection lifetimes isolated.

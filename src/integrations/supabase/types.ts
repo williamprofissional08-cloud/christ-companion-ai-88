@@ -35,6 +35,27 @@ export type Database = {
         }
         Relationships: []
       }
+      bloqueios: {
+        Row: {
+          bloqueado: string
+          criado_em: string
+          id: string
+          quem_bloqueou: string
+        }
+        Insert: {
+          bloqueado: string
+          criado_em?: string
+          id?: string
+          quem_bloqueou: string
+        }
+        Update: {
+          bloqueado?: string
+          criado_em?: string
+          id?: string
+          quem_bloqueou?: string
+        }
+        Relationships: []
+      }
       book_chapters: {
         Row: {
           chapter_number: number
@@ -307,6 +328,27 @@ export type Database = {
           },
         ]
       }
+      conversas: {
+        Row: {
+          criado_em: string
+          id: string
+          user_a: string
+          user_b: string
+        }
+        Insert: {
+          criado_em?: string
+          id?: string
+          user_a: string
+          user_b: string
+        }
+        Update: {
+          criado_em?: string
+          id?: string
+          user_a?: string
+          user_b?: string
+        }
+        Relationships: []
+      }
       course_modules: {
         Row: {
           book_number: number | null
@@ -468,6 +510,33 @@ export type Database = {
           tier?: Database["public"]["Enums"]["access_tier"]
           title?: string
           updated_at?: string
+        }
+        Relationships: []
+      }
+      denuncias: {
+        Row: {
+          criado_em: string
+          denunciante_id: string
+          id: string
+          mensagem_id: string
+          motivo: string
+          tipo: string
+        }
+        Insert: {
+          criado_em?: string
+          denunciante_id: string
+          id?: string
+          mensagem_id: string
+          motivo: string
+          tipo: string
+        }
+        Update: {
+          criado_em?: string
+          denunciante_id?: string
+          id?: string
+          mensagem_id?: string
+          motivo?: string
+          tipo?: string
         }
         Relationships: []
       }
@@ -1307,6 +1376,65 @@ export type Database = {
         }
         Relationships: []
       }
+      mensagens_globais: {
+        Row: {
+          apagada: boolean
+          conteudo: string
+          criado_em: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          apagada?: boolean
+          conteudo: string
+          criado_em?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          apagada?: boolean
+          conteudo?: string
+          criado_em?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      mensagens_privadas: {
+        Row: {
+          conteudo: string
+          conversa_id: string
+          criado_em: string
+          id: string
+          lida: boolean
+          remetente_id: string
+        }
+        Insert: {
+          conteudo: string
+          conversa_id: string
+          criado_em?: string
+          id?: string
+          lida?: boolean
+          remetente_id: string
+        }
+        Update: {
+          conteudo?: string
+          conversa_id?: string
+          criado_em?: string
+          id?: string
+          lida?: boolean
+          remetente_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "mensagens_privadas_conversa_id_fkey"
+            columns: ["conversa_id"]
+            isOneToOne: false
+            referencedRelation: "conversas"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       plan_progress: {
         Row: {
           completed_days: number[]
@@ -1524,6 +1652,27 @@ export type Database = {
         }
         Relationships: []
       }
+      track_image_assignments: {
+        Row: {
+          image_id: string
+          track_slug: string
+          updated_at: string
+          updated_by: string | null
+        }
+        Insert: {
+          image_id: string
+          track_slug: string
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Update: {
+          image_id?: string
+          track_slug?: string
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Relationships: []
+      }
       track_progress: {
         Row: {
           checkpoints: Json
@@ -1680,6 +1829,22 @@ export type Database = {
     Functions: {
       admin_question_has_answers: {
         Args: { _question_id: string }
+        Returns: boolean
+      }
+      community_conversation_allowed: {
+        Args: { cid: string }
+        Returns: boolean
+      }
+      community_members: {
+        Args: never
+        Returns: {
+          avatar_url: string
+          display_name: string
+          id: string
+        }[]
+      }
+      community_pair_allowed: {
+        Args: { a: string; b: string }
         Returns: boolean
       }
       complete_lesson: { Args: { _lesson_id: string }; Returns: string }

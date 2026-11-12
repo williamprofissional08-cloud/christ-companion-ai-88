@@ -1,5 +1,12 @@
 # Formação de Pregadores
 
+## Chat da comunidade
+
+- [ ] Adicionar chat global e presença ao vivo, preservando o fórum existente
+- [ ] Adicionar conversas privadas, não lidas, bloqueios e denúncias protegidas
+- [ ] Aplicar migrações e validar envio, privacidade e experiência móvel
+- Intervalo personalizado de envio não será aplicado, conforme escolha do usuário.
+
 ## Correção de erros atuais
 
 - [x] Corrigir a falta de configuração pública da conexão na prévia

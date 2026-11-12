@@ -12,6 +12,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
 import { validateCommunityPdf } from "@/lib/community-pdf-validation";
+import { CommunityChat } from "@/components/community/CommunityChat";
 
 const db = supabase as unknown as SupabaseClient;
 type Category = "pergunta" | "debate" | "estudo" | "testemunho" | "oracao" | "reflexao";
@@ -37,7 +38,7 @@ function MemberAvatar({ profile, name, size = "size-11" }: { profile: Profile | 
 }
 
 export const Route = createFileRoute("/_authenticated/comunidade")({
-  head: () => ({ meta: [{ title: "Comunidade — Caminho Divino" }, { name: "description", content: "Cresça na Palavra, compartilhe estudos, ore e caminhe com a comunidade." }] }),
+  head: () => ({ meta: [{ title: "Comunidade — Caminho Divino" }, { name: "description", content: "Cresça na Palavra, compartilhe estudos, ore e caminhe com a comunidade." }, { property: "og:title", content: "Comunidade — Caminho Divino" }, { property: "og:description", content: "Chat, oração e estudos compartilhados entre membros." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }] }),
   component: ComunidadePage,
 });
 
@@ -220,6 +221,7 @@ function ComunidadePage() {
       title="Comunidade"
       subtitle="Crescendo juntos no conhecimento de Deus."
     >
+      <CommunityChat />
       <div className="mx-auto max-w-7xl space-y-4 pb-2 lg:space-y-5">
         <section className="overflow-hidden rounded-[1.75rem] border border-primary/10 bg-white shadow-soft dark:bg-card">
           <div className="grid min-h-[190px] items-center gap-4 p-5 sm:grid-cols-[1fr_0.82fr] sm:p-7 lg:min-h-[230px] lg:gap-8 lg:p-9">
