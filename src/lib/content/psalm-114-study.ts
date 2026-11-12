@@ -1,4 +1,6 @@
-import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmos 114 no padrão didático de Gênesis 1. */\nexport const psalm114Study: StudyContent = {
+import type { StudyContent } from "../types";
+
+/** Estudo aprofundado de Salmos 114 no padrão didático de Gênesis 1. */\nexport const psalm114Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "A criação treme diante do Deus que liberta seu povo",
@@ -42,7 +44,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:1-8"
       ],
-      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece paráfrases orientadoras para acompanhar a leitura. Compare cada síntese com o texto bíblico.\\n\\n**Salmos 114:1-2 — Israel sai do Egito e se torna povo de Deus**\\n\\n**1:** A saída de Israel do Egito e de uma terra de língua estrangeira marca o início da memória de libertação.\\n\\n**2:** Judá é apresentado como santuário e Israel como domínio de Deus; libertação estabelece relação de aliança.\\n\\n**Salmos 114:3-4 — Mar e montes reagem à presença divina**\\n\\n**3:** O mar foge e o Jordão recua, imagens que evocam o êxodo e a entrada na terra.\\n\\n**4:** Montes e colinas saltam como carneiros; a criação é personificada para expressar espanto diante de Deus.\\n\\n**Salmos 114:5-8 — A pergunta poética e a resposta: o Senhor da criação**\\n\\n**5:** A pergunta repetida interpela mar e rio: por que recuaram? O recurso poético conduz o leitor a reconhecer a ação divina.\\n\\n**6:** A imagem dos montes que saltam intensifica o retrato da criação respondendo ao Senhor.\\n\\n**7:** O poema convoca a terra a tremer diante do Senhor, Deus de Jacó; a presença divina é a razão da reação cósmica.\\n\\n**8:** Deus transforma rocha em água, recordando provisão no deserto; a imagem une poder libertador e cuidado concreto."
+      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece paráfrases orientadoras para acompanhar a leitura. Compare cada síntese com o texto bíblico.\n\n**Salmos 114:1-2 — Israel sai do Egito e se torna povo de Deus**\n\n**1:** A saída de Israel do Egito e de uma terra de língua estrangeira marca o início da memória de libertação.\n\n**2:** Judá é apresentado como santuário e Israel como domínio de Deus; libertação estabelece relação de aliança.\n\n**Salmos 114:3-4 — Mar e montes reagem à presença divina**\n\n**3:** O mar foge e o Jordão recua, imagens que evocam o êxodo e a entrada na terra.\n\n**4:** Montes e colinas saltam como carneiros; a criação é personificada para expressar espanto diante de Deus.\n\n**Salmos 114:5-8 — A pergunta poética e a resposta: o Senhor da criação**\n\n**5:** A pergunta repetida interpela mar e rio: por que recuaram? O recurso poético conduz o leitor a reconhecer a ação divina.\n\n**6:** A imagem dos montes que saltam intensifica o retrato da criação respondendo ao Senhor.\n\n**7:** O poema convoca a terra a tremer diante do Senhor, Deus de Jacó; a presença divina é a razão da reação cósmica.\n\n**8:** Deus transforma rocha em água, recordando provisão no deserto; a imagem une poder libertador e cuidado concreto."
     },
     {
       "id": "introducao",
@@ -52,7 +54,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:1-8"
       ],
-      "body": "**Tema central:** A criação treme diante do Deus que liberta seu povo.\\n\\n**Gênero literário:** Hino histórico de celebração do êxodo.\\n\\nO objetivo é ler o capítulo em sua unidade, observar a forma poética, explicar cada perícope e preparar uma exposição fiel ao texto. A aplicação deve nascer do sentido original, não de associações livres."
+      "body": "**Tema central:** A criação treme diante do Deus que liberta seu povo.\n\n**Gênero literário:** Hino histórico de celebração do êxodo.\n\nO objetivo é ler o capítulo em sua unidade, observar a forma poética, explicar cada perícope e preparar uma exposição fiel ao texto. A aplicação deve nascer do sentido original, não de associações livres."
     },
     {
       "id": "contexto-historico",
@@ -62,7 +64,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:1-8"
       ],
-      "body": "O salmo relembra a saída do Egito e a travessia rumo à terra prometida. Em poucas imagens poéticas, transforma a criação em testemunha da presença do Deus de Jacó. O texto não pretende oferecer descrição meteorológica; usa personificação e linguagem cósmica para celebrar o êxodo como ato de soberania.\\n\\nQuando autoria, data ou ocasião não forem explicitadas no próprio texto, mantenha a distinção entre informação textual e hipótese histórica. Leia o salmo em relação ao seu lugar no Saltério e ao conjunto dos cânticos de Israel."
+      "body": "O salmo relembra a saída do Egito e a travessia rumo à terra prometida. Em poucas imagens poéticas, transforma a criação em testemunha da presença do Deus de Jacó. O texto não pretende oferecer descrição meteorológica; usa personificação e linguagem cósmica para celebrar o êxodo como ato de soberania.\n\nQuando autoria, data ou ocasião não forem explicitadas no próprio texto, mantenha a distinção entre informação textual e hipótese histórica. Leia o salmo em relação ao seu lugar no Saltério e ao conjunto dos cânticos de Israel."
     },
     {
       "id": "estrutura",
@@ -74,7 +76,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
         "Salmos 114:3-4",
         "Salmos 114:5-8"
       ],
-      "body": "**Movimento 1 — 1-2:** Israel sai do Egito e se torna povo de Deus.\\n\\n**Movimento 2 — 3-4:** Mar e montes reagem à presença divina.\\n\\n**Movimento 3 — 5-8:** A pergunta poética e a resposta: o Senhor da criação.\\n\\nObserve repetições, mudanças de voz, imagens, contrastes e a progressão do argumento."
+      "body": "**Movimento 1 — 1-2:** Israel sai do Egito e se torna povo de Deus.\n\n**Movimento 2 — 3-4:** Mar e montes reagem à presença divina.\n\n**Movimento 3 — 5-8:** A pergunta poética e a resposta: o Senhor da criação.\n\nObserve repetições, mudanças de voz, imagens, contrastes e a progressão do argumento."
     },
     {
       "id": "topico-1",
@@ -84,7 +86,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:1-2"
       ],
-      "body": "**Leia Salmos 114:1-2 integralmente.**\\n\\n**Sentido da unidade:** Israel sai do Egito e se torna povo de Deus.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 1 — Explicação:** A saída de Israel do Egito e de uma terra de língua estrangeira marca o início da memória de libertação. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 2 — Explicação:** Judá é apresentado como santuário e Israel como domínio de Deus; libertação estabelece relação de aliança. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** Israel sai do Egito e se torna povo de Deus. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** A criação treme diante do Deus que liberta seu povo. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 114:1-2 integralmente.**\n\n**Sentido da unidade:** Israel sai do Egito e se torna povo de Deus.\n\n**Observações versículo por versículo**\n\n**Versículo 1 — Explicação:** A saída de Israel do Egito e de uma terra de língua estrangeira marca o início da memória de libertação. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 2 — Explicação:** Judá é apresentado como santuário e Israel como domínio de Deus; libertação estabelece relação de aliança. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** Israel sai do Egito e se torna povo de Deus. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** A criação treme diante do Deus que liberta seu povo. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "topico-2",
@@ -94,7 +96,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:3-4"
       ],
-      "body": "**Leia Salmos 114:3-4 integralmente.**\\n\\n**Sentido da unidade:** Mar e montes reagem à presença divina.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 3 — Explicação:** O mar foge e o Jordão recua, imagens que evocam o êxodo e a entrada na terra. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 4 — Explicação:** Montes e colinas saltam como carneiros; a criação é personificada para expressar espanto diante de Deus. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** Mar e montes reagem à presença divina. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** A criação treme diante do Deus que liberta seu povo. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 114:3-4 integralmente.**\n\n**Sentido da unidade:** Mar e montes reagem à presença divina.\n\n**Observações versículo por versículo**\n\n**Versículo 3 — Explicação:** O mar foge e o Jordão recua, imagens que evocam o êxodo e a entrada na terra. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 4 — Explicação:** Montes e colinas saltam como carneiros; a criação é personificada para expressar espanto diante de Deus. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** Mar e montes reagem à presença divina. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** A criação treme diante do Deus que liberta seu povo. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "topico-3",
@@ -104,7 +106,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:5-8"
       ],
-      "body": "**Leia Salmos 114:5-8 integralmente.**\\n\\n**Sentido da unidade:** A pergunta poética e a resposta: o Senhor da criação.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 5 — Explicação:** A pergunta repetida interpela mar e rio: por que recuaram? O recurso poético conduz o leitor a reconhecer a ação divina. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 6 — Explicação:** A imagem dos montes que saltam intensifica o retrato da criação respondendo ao Senhor. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 7 — Explicação:** O poema convoca a terra a tremer diante do Senhor, Deus de Jacó; a presença divina é a razão da reação cósmica. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 8 — Explicação:** Deus transforma rocha em água, recordando provisão no deserto; a imagem une poder libertador e cuidado concreto. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** A pergunta poética e a resposta: o Senhor da criação. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** A criação treme diante do Deus que liberta seu povo. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 114:5-8 integralmente.**\n\n**Sentido da unidade:** A pergunta poética e a resposta: o Senhor da criação.\n\n**Observações versículo por versículo**\n\n**Versículo 5 — Explicação:** A pergunta repetida interpela mar e rio: por que recuaram? O recurso poético conduz o leitor a reconhecer a ação divina. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 6 — Explicação:** A imagem dos montes que saltam intensifica o retrato da criação respondendo ao Senhor. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 7 — Explicação:** O poema convoca a terra a tremer diante do Senhor, Deus de Jacó; a presença divina é a razão da reação cósmica. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 8 — Explicação:** Deus transforma rocha em água, recordando provisão no deserto; a imagem une poder libertador e cuidado concreto. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** A pergunta poética e a resposta: o Senhor da criação. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** A criação treme diante do Deus que liberta seu povo. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "palavras-chave",
@@ -134,7 +136,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:1-8"
       ],
-      "body": "- Êxodo 14:21-31\\n- Êxodo 19:16-19\\n- Josué 3:14-17\\n- Salmos 77:16-20\\n\\nLeia cada referência em seu contexto. Compare temas e vocabulário sem apagar as diferenças entre os textos. Uma ligação temática não equivale automaticamente a citação direta."
+      "body": "- Êxodo 14:21-31\n- Êxodo 19:16-19\n- Josué 3:14-17\n- Salmos 77:16-20\n\nLeia cada referência em seu contexto. Compare temas e vocabulário sem apagar as diferenças entre os textos. Uma ligação temática não equivale automaticamente a citação direta."
     },
     {
       "id": "cuidados",
@@ -164,7 +166,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:1-8"
       ],
-      "body": "**Pessoal:** examine como a mensagem forma sua confiança, arrependimento, gratidão, perseverança ou integridade.\\n\\n**Comunitária:** considere como orienta culto, justiça, memória, cuidado e responsabilidade coletiva.\\n\\n**Pastoral:** aplique com sensibilidade; não use o texto para culpabilizar quem sofre nem para prometer resultados que o contexto não promete.\\n\\n**Síntese aplicada:** A criação treme diante do Deus que liberta seu povo."
+      "body": "**Pessoal:** examine como a mensagem forma sua confiança, arrependimento, gratidão, perseverança ou integridade.\n\n**Comunitária:** considere como orienta culto, justiça, memória, cuidado e responsabilidade coletiva.\n\n**Pastoral:** aplique com sensibilidade; não use o texto para culpabilizar quem sofre nem para prometer resultados que o contexto não promete.\n\n**Síntese aplicada:** A criação treme diante do Deus que liberta seu povo."
     },
     {
       "id": "resumo",
@@ -174,7 +176,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:1-8"
       ],
-      "body": "**Mensagem central:** A criação treme diante do Deus que liberta seu povo.\\n\\n**Gênero:** Hino histórico de celebração do êxodo.\\n\\n1) 1-2: Israel sai do Egito e se torna povo de Deus\\n2) 3-4: Mar e montes reagem à presença divina\\n3) 5-8: A pergunta poética e a resposta: o Senhor da criação\\n\\nExplique como cada movimento contribui para a mensagem total e quais limites interpretativos precisam ser respeitados."
+      "body": "**Mensagem central:** A criação treme diante do Deus que liberta seu povo.\n\n**Gênero:** Hino histórico de celebração do êxodo.\n\n1) 1-2: Israel sai do Egito e se torna povo de Deus\n2) 3-4: Mar e montes reagem à presença divina\n3) 5-8: A pergunta poética e a resposta: o Senhor da criação\n\nExplique como cada movimento contribui para a mensagem total e quais limites interpretativos precisam ser respeitados."
     },
     {
       "id": "exercicios",
@@ -184,7 +186,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:1-8"
       ],
-      "body": "1. Resuma a mensagem do salmo em uma frase sem usar ideias que o texto não sustenta.\\n2. Delimite as perícopes e justifique a divisão.\\n3. Escolha três versículos e explique sua contribuição para o argumento.\\n4. Identifique uma imagem poética e explique seu efeito no contexto.\\n5. Diferencie uma afirmação explícita de uma inferência.\\n6. Escreva uma aplicação pessoal e outra comunitária que respeitem o sentido original."
+      "body": "1. Resuma a mensagem do salmo em uma frase sem usar ideias que o texto não sustenta.\n2. Delimite as perícopes e justifique a divisão.\n3. Escolha três versículos e explique sua contribuição para o argumento.\n4. Identifique uma imagem poética e explique seu efeito no contexto.\n5. Diferencie uma afirmação explícita de uma inferência.\n6. Escreva uma aplicação pessoal e outra comunitária que respeitem o sentido original."
     },
     {
       "id": "oficina-pregador",
@@ -194,7 +196,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 114:1-8"
       ],
-      "body": "**Proposição:** A criação treme diante do Deus que liberta seu povo.\\n\\n**Objetivo:** conduzir a igreja a compreender o salmo em seu contexto e responder de maneira coerente com sua mensagem.\\n\\n**Roteiro:** introdução que apresenta a tensão ou convocação do texto; exposição progressiva de cada perícope; explicação das imagens e referências; conexão canônica responsável; aplicações que nascem do texto; conclusão que retoma a mensagem central.\\n\\nConfira se cada ponto deriva da passagem e se a aplicação não promete aquilo que o texto não promete."
+      "body": "**Proposição:** A criação treme diante do Deus que liberta seu povo.\n\n**Objetivo:** conduzir a igreja a compreender o salmo em seu contexto e responder de maneira coerente com sua mensagem.\n\n**Roteiro:** introdução que apresenta a tensão ou convocação do texto; exposição progressiva de cada perícope; explicação das imagens e referências; conexão canônica responsável; aplicações que nascem do texto; conclusão que retoma a mensagem central.\n\nConfira se cada ponto deriva da passagem e se a aplicação não promete aquilo que o texto não promete."
     },
     {
       "id": "oracao-final",
