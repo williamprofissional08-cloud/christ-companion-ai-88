@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
+import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import test from "node:test";
@@ -68,4 +69,28 @@ test("rejeita lotes maiores que sete capítulos", () => {
   const result = run("numeros", 28, 8);
   assert.notEqual(result.status, 0);
   assert.match(result.stderr, /1 a 7 capítulos/);
+});
+
+test("workflow gera um capítulo por chamada e envia checkpoint", () => {
+  const workflow = readFileSync(
+    path.join(root, ".github/workflows/generate-bible-study-batch.yml"),
+    "utf8",
+  );
+
+  assert.match(workflow, /START_CHAPTER="\$chapter" BATCH_SIZE=1 python/);
+  assert.match(workflow, /git push origin "\$TARGET_BRANCH"/);
+  assert.match(workflow, /Validar o lote completo/);
+  assert.match(workflow, /Abrir PR após validação geral/);
+});
+
+test("continuação aguarda PR mesclada e checks concluídos", () => {
+  const workflow = readFileSync(
+    path.join(root, ".github/workflows/continue-bible-study-after-merge.yml"),
+    "utf8",
+  );
+
+  assert.match(workflow, /types: \[closed\]/);
+  assert.match(workflow, /pull_request\.merged == true/);
+  assert.match(workflow, /check-runs/);
+  assert.match(workflow, /conclusion != "success"/);
 });
