@@ -132,7 +132,7 @@ export const psalm73Study: StudyContent = {
     },
     {
       "id": "palavras-chave",
-      "title": "13. Palavras-chave e imagens",
+      "title": "9. Palavras-chave e imagens",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -142,7 +142,7 @@ export const psalm73Study: StudyContent = {
     },
     {
       "id": "questoes-interpretativas",
-      "title": "14. Questões interpretativas",
+      "title": "10. Questões interpretativas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -152,7 +152,7 @@ export const psalm73Study: StudyContent = {
     },
     {
       "id": "referencias-explicadas",
-      "title": "15. Referências bíblicas",
+      "title": "11. Referências bíblicas",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -162,7 +162,7 @@ export const psalm73Study: StudyContent = {
     },
     {
       "id": "erros-interpretacao",
-      "title": "16. Cuidados interpretativos",
+      "title": "12. Cuidados interpretativos",
       "kind": "analysis",
       "confidence": "high",
       "scriptureRefs": [
@@ -172,7 +172,7 @@ export const psalm73Study: StudyContent = {
     },
     {
       "id": "cristo",
-      "title": "17. O salmo e Jesus Cristo",
+      "title": "13. O salmo e Jesus Cristo",
       "kind": "christology",
       "confidence": "high",
       "scriptureRefs": [
@@ -182,7 +182,7 @@ export const psalm73Study: StudyContent = {
     },
     {
       "id": "aplicacoes",
-      "title": "18. O que este salmo ensina para nossa vida?",
+      "title": "14. O que este salmo ensina para nossa vida?",
       "kind": "application",
       "confidence": "high",
       "scriptureRefs": [
@@ -192,7 +192,7 @@ export const psalm73Study: StudyContent = {
     },
     {
       "id": "resumo",
-      "title": "19. Resumo",
+      "title": "15. Resumo",
       "kind": "conclusion",
       "confidence": "high",
       "scriptureRefs": [
@@ -202,7 +202,7 @@ export const psalm73Study: StudyContent = {
     },
     {
       "id": "exercicios",
-      "title": "20. Exercícios",
+      "title": "16. Exercícios",
       "kind": "exercise",
       "confidence": "high",
       "scriptureRefs": [
@@ -212,7 +212,7 @@ export const psalm73Study: StudyContent = {
     },
     {
       "id": "oficina-pregador",
-      "title": "21. Oficina do pregador",
+      "title": "17. Oficina do pregador",
       "kind": "sermon",
       "confidence": "high",
       "scriptureRefs": [
@@ -222,7 +222,7 @@ export const psalm73Study: StudyContent = {
     },
     {
       "id": "oracao-final",
-      "title": "22. Oração final",
+      "title": "18. Oração final",
       "kind": "prayer",
       "confidence": "high",
       "scriptureRefs": [
