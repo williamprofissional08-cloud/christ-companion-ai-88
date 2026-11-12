@@ -290,3 +290,223 @@ $$;
 
 alter table public.mensagens_globais replica identity full;
 alter table public.mensagens_privadas replica identity full;
+
+
+-- Pedidos de amizade e autorização explícita para conversas privadas.
+create table if not exists public.pedidos_amizade (
+  id uuid primary key default gen_random_uuid(),
+  solicitante_id uuid not null references auth.users(id) on delete cascade,
+  destinatario_id uuid not null references auth.users(id) on delete cascade,
+  status text not null default 'pendente' check (status in ('pendente','aceito','recusado')),
+  criado_em timestamptz not null default now(),
+  respondido_em timestamptz,
+  constraint pedidos_amizade_distintos check (solicitante_id <> destinatario_id)
+);
+create index if not exists pedidos_amizade_destinatario_idx
+  on public.pedidos_amizade (destinatario_id, status, criado_em desc);
+create index if not exists pedidos_amizade_solicitante_idx
+  on public.pedidos_amizade (solicitante_id, status, criado_em desc);
+create unique index if not exists pedidos_amizade_pendente_par_idx
+  on public.pedidos_amizade (least(solicitante_id, destinatario_id), greatest(solicitante_id, destinatario_id))
+  where status = 'pendente';
+
+create table if not exists public.amizades (
+  id uuid primary key default gen_random_uuid(),
+  user_a uuid not null references auth.users(id) on delete cascade,
+  user_b uuid not null references auth.users(id) on delete cascade,
+  criado_em timestamptz not null default now(),
+  constraint amizades_distinct_users check (user_a < user_b),
+  constraint amizades_unique_pair unique (user_a, user_b)
+);
+create index if not exists amizades_user_b_idx on public.amizades (user_b, criado_em desc);
+
+alter table public.pedidos_amizade enable row level security;
+alter table public.amizades enable row level security;
+
+create policy "Members read own friendship requests" on public.pedidos_amizade
+  for select to authenticated using (
+    solicitante_id = (select auth.uid()) or destinatario_id = (select auth.uid())
+  );
+create policy "Members send friendship requests" on public.pedidos_amizade
+  for insert to authenticated with check (
+    solicitante_id = (select auth.uid())
+    and destinatario_id <> (select auth.uid())
+    and not exists (
+      select 1 from public.bloqueios b
+      where (b.quem_bloqueou = solicitante_id and b.bloqueado = destinatario_id)
+         or (b.quem_bloqueou = destinatario_id and b.bloqueado = solicitante_id)
+    )
+    and not exists (
+      select 1 from public.amizades a
+      where a.user_a = least(solicitante_id, destinatario_id)
+        and a.user_b = greatest(solicitante_id, destinatario_id)
+    )
+  );
+create policy "Recipients respond to pending friendship requests" on public.pedidos_amizade
+  for update to authenticated
+  using (destinatario_id = (select auth.uid()) and status = 'pendente')
+  with check (
+    destinatario_id = (select auth.uid())
+    and status in ('aceito','recusado')
+  );
+
+create policy "Members read their friendships" on public.amizades
+  for select to authenticated using ((select auth.uid()) in (user_a, user_b));
+-- A amizade só pode ser criada pelo gatilho de aceite; clientes não recebem INSERT.
+revoke insert, update on public.amizades from anon, authenticated;
+grant select, delete on public.amizades to authenticated;
+create policy "Members end their own friendships" on public.amizades
+  for delete to authenticated using ((select auth.uid()) in (user_a, user_b));
+
+create or replace function public.materialize_accepted_friendship()
+returns trigger
+language plpgsql
+security definer
+set search_path = public, pg_temp
+as $$
+begin
+  if old.status <> 'pendente' or new.status not in ('aceito','recusado')
+     or new.solicitante_id <> old.solicitante_id
+     or new.destinatario_id <> old.destinatario_id then
+    raise exception 'Pedido de amizade não pode ser alterado.' using errcode = '42501';
+  end if;
+  new.respondido_em := now();
+  if new.status = 'aceito' then
+    insert into public.amizades (user_a, user_b)
+    values (least(new.solicitante_id, new.destinatario_id), greatest(new.solicitante_id, new.destinatario_id))
+    on conflict (user_a, user_b) do nothing;
+  end if;
+  return new;
+end;
+$$;
+revoke all on function public.materialize_accepted_friendship() from public, anon, authenticated;
+drop trigger if exists pedidos_amizade_materialize_accept on public.pedidos_amizade;
+create trigger pedidos_amizade_materialize_accept
+before update of status on public.pedidos_amizade
+for each row execute function public.materialize_accepted_friendship();
+
+-- Conversas e mensagens privadas exigem amizade aceita e ausência de bloqueio.
+drop policy if exists "Members create conversations without blocks" on public.conversas;
+create policy "Friends create conversations without blocks" on public.conversas
+  for insert to authenticated with check (
+    (select auth.uid()) in (user_a, user_b)
+    and user_a < user_b
+    and exists (select 1 from public.amizades a where a.user_a = user_a and a.user_b = user_b)
+    and not exists (
+      select 1 from public.bloqueios b
+      where (b.quem_bloqueou = user_a and b.bloqueado = user_b)
+         or (b.quem_bloqueou = user_b and b.bloqueado = user_a)
+    )
+  );
+drop policy if exists "Participants read their conversations" on public.conversas;
+create policy "Friends read their conversations" on public.conversas
+  for select to authenticated using (
+    (select auth.uid()) in (user_a, user_b)
+    and exists (select 1 from public.amizades a where a.user_a = user_a and a.user_b = user_b)
+    and not exists (
+      select 1 from public.bloqueios b
+      where (b.quem_bloqueou = user_a and b.bloqueado = user_b)
+         or (b.quem_bloqueou = user_b and b.bloqueado = user_a)
+    )
+  );
+
+drop policy if exists "Participants read private messages" on public.mensagens_privadas;
+create policy "Friends read private messages" on public.mensagens_privadas
+  for select to authenticated using (
+    exists (
+      select 1 from public.conversas c
+      join public.amizades a on a.user_a = c.user_a and a.user_b = c.user_b
+      where c.id = conversa_id
+        and (select auth.uid()) in (c.user_a, c.user_b)
+        and not exists (
+          select 1 from public.bloqueios b
+          where (b.quem_bloqueou = c.user_a and b.bloqueado = c.user_b)
+             or (b.quem_bloqueou = c.user_b and b.bloqueado = c.user_a)
+        )
+    )
+  );
+drop policy if exists "Participants send private messages" on public.mensagens_privadas;
+create policy "Friends send private messages" on public.mensagens_privadas
+  for insert to authenticated with check (
+    remetente_id = (select auth.uid())
+    and exists (
+      select 1 from public.conversas c
+      join public.amizades a on a.user_a = c.user_a and a.user_b = c.user_b
+      where c.id = conversa_id
+        and (select auth.uid()) in (c.user_a, c.user_b)
+        and not exists (
+          select 1 from public.bloqueios b
+          where (b.quem_bloqueou = c.user_a and b.bloqueado = c.user_b)
+             or (b.quem_bloqueou = c.user_b and b.bloqueado = c.user_a)
+        )
+    )
+  );
+
+-- Defesa adicional no trigger: mesmo uma inserção privilegiada não contorna a amizade.
+create or replace function public.enforce_community_message_rules()
+returns trigger
+language plpgsql
+security definer
+set search_path = public, pg_temp
+as $$
+declare
+  actor uuid := auth.uid();
+  participant_a uuid;
+  participant_b uuid;
+  previous_sent timestamptz;
+begin
+  if actor is null then
+    raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
+  end if;
+  if tg_table_name = 'mensagens_globais' and actor <> new.user_id then
+    raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
+  elsif tg_table_name = 'mensagens_privadas' and actor <> new.remetente_id then
+    raise exception 'Sessão inválida para enviar mensagem.' using errcode = '42501';
+  end if;
+  new.conteudo := btrim(regexp_replace(regexp_replace(coalesce(new.conteudo, ''), '<[^>]*>', '', 'g'), '[[:cntrl:]]', '', 'g'));
+  if char_length(new.conteudo) < 1 or char_length(new.conteudo) > 500 then
+    raise exception 'A mensagem deve conter de 1 a 500 caracteres.' using errcode = '22023';
+  end if;
+  if tg_table_name = 'mensagens_privadas' then
+    select user_a, user_b into participant_a, participant_b
+    from public.conversas where id = new.conversa_id;
+    if not found or actor not in (participant_a, participant_b)
+      or not exists (
+        select 1 from public.amizades a
+        where a.user_a = participant_a and a.user_b = participant_b
+      ) then
+      raise exception 'Conversa privada exige amizade aceita.' using errcode = '42501';
+    end if;
+    if exists (
+      select 1 from public.bloqueios b
+      where (b.quem_bloqueou = participant_a and b.bloqueado = participant_b)
+         or (b.quem_bloqueou = participant_b and b.bloqueado = participant_a)
+    ) then
+      raise exception 'Não é possível enviar mensagens nesta conversa.' using errcode = '42501';
+    end if;
+  end if;
+  perform pg_advisory_xact_lock(hashtextextended(actor::text, 0));
+  select last_sent_at into previous_sent from public.community_message_rate_limits where user_id = actor for update;
+  if previous_sent is not null and previous_sent > now() - interval '2 seconds' then
+    raise exception 'Aguarde 2 segundos antes de enviar outra mensagem.' using errcode = 'P0001';
+  end if;
+  insert into public.community_message_rate_limits (user_id, last_sent_at)
+  values (actor, now())
+  on conflict (user_id) do update set last_sent_at = excluded.last_sent_at;
+  return new;
+end;
+$$;
+revoke all on function public.enforce_community_message_rules() from public, anon, authenticated;
+
+do $$
+begin
+  if not exists (select 1 from pg_publication_tables where pubname='supabase_realtime' and schemaname='public' and tablename='pedidos_amizade') then
+    alter publication supabase_realtime add table public.pedidos_amizade;
+  end if;
+  if not exists (select 1 from pg_publication_tables where pubname='supabase_realtime' and schemaname='public' and tablename='amizades') then
+    alter publication supabase_realtime add table public.amizades;
+  end if;
+end;
+$$;
+alter table public.pedidos_amizade replica identity full;
+alter table public.amizades replica identity full;
