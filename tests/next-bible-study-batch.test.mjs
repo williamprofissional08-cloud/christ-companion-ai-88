@@ -94,5 +94,6 @@ test("continuação aguarda PR mesclada e checks concluídos", () => {
   assert.match(workflow, /check-runs/);
   assert.match(workflow, /conclusion != "success"/);
   assert.match(workflow, /select\(\.name != "bootstrap" and \.name != "after_merge"\)/);
+  assert.ok(workflow.includes("map(select(((.pull_requests // []) | length) == 0))"));
   assert.match(workflow, /conclusion != "skipped"/);
 });
