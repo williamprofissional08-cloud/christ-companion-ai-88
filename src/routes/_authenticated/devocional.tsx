@@ -93,7 +93,7 @@ function DevocionalPage() {
           <div className="flex items-center gap-3 rounded-2xl border border-border/70 bg-card px-4 py-3 shadow-sm">
             <span className="flex size-10 items-center justify-center rounded-xl bg-blue-50 text-primary dark:bg-primary/15"><BookOpen className="size-5" aria-hidden="true" /></span>
             <div className="min-w-0"><p className="text-sm font-semibold">Biblioteca bíblica</p><p className="text-xs text-muted-foreground">{devotionalLibrarySize().toLocaleString("pt-BR")} combinações</p></div>
-            <button type="button" onClick={() => setDraw((current) => current + 1)} className="ml-1 inline-flex min-h-10 items-center gap-1 rounded-xl bg-primary px-3 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:px-4 sm:text-sm">
+            <button type="button" onClick={() => setDraw(Math.floor(Math.random() * devotionalLibrarySize()) + 1)} className="ml-1 inline-flex min-h-10 items-center gap-1 rounded-xl bg-primary px-3 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:px-4 sm:text-sm">
               <span className="hidden sm:inline">Sortear outro</span><span className="sm:hidden">Outro</span><ChevronRight className="size-4" aria-hidden="true" />
             </button>
           </div>
