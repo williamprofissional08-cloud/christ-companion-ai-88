@@ -1524,6 +1524,35 @@ export type Database = {
         }
         Relationships: []
       }
+      track_image_assignments: {
+        Row: {
+          image_id: string
+          track_slug: string
+          updated_at: string
+          updated_by: string | null
+        }
+        Insert: {
+          image_id: string
+          track_slug: string
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Update: {
+          image_id?: string
+          track_slug?: string
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "track_image_assignments_updated_by_fkey"
+            columns: ["updated_by"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       track_progress: {
         Row: {
           checkpoints: Json
