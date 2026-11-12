@@ -1,4 +1,6 @@
-import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmos 111 no padrão didático de Gênesis 1. */\nexport const psalm111Study: StudyContent = {
+import type { StudyContent } from "../types";
+
+/** Estudo aprofundado de Salmos 111 no padrão didático de Gênesis 1. */\nexport const psalm111Study: StudyContent = {
   "version": 4,
   "depth": "deep",
   "intro": "As obras do Senhor e a sabedoria que começa no temor",
@@ -42,7 +44,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:1-10"
       ],
-      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece paráfrases orientadoras para acompanhar a leitura. Compare cada síntese com o texto bíblico.\\n\\n**Salmos 111:1-4 — O louvor pelas obras grandiosas do Senhor**\\n\\n**1:** O salmista declara louvor de todo o coração, na assembleia e também diante de Deus em devoção íntegra.\\n\\n**2:** As obras do Senhor são grandes; devem ser examinadas por quem encontra nelas prazer reverente.\\n\\n**3:** A obra divina é descrita como gloriosa e majestosa, e sua justiça permanece; o louvor contempla caráter e ação.\\n\\n**4:** As maravilhas do Senhor são lembradas como dádiva de sua graça e compaixão, não como mérito humano.\\n\\n**Salmos 111:5-6 — A fidelidade de Deus à aliança**\\n\\n**5:** Deus provê alimento aos que o temem e se lembra de sua aliança; a provisão é vinculada à fidelidade pactual.\\n\\n**6:** O poder de suas obras é manifestado ao povo, inclusive na dádiva da herança das nações; o texto recorda a história de Israel.\\n\\n**Salmos 111:7-10 — A permanência de suas obras e o temor do Senhor**\\n\\n**7:** As mãos do Senhor realizam verdade e justiça; seus preceitos são confiáveis e coerentes com seu caráter.\\n\\n**8:** Seus mandamentos permanecem firmes e foram estabelecidos com fidelidade e retidão.\\n\\n**9:** A redenção enviada ao povo e a aliança duradoura fundamentam a reverência ao nome santo de Deus.\\n\\n**10:** O temor do Senhor é princípio da sabedoria; quem pratica seus preceitos demonstra entendimento, e o louvor de Deus permanece."
+      "body": "Leia o capítulo integralmente em sua Bíblia. Este estudo não reproduz uma tradução protegida; oferece paráfrases orientadoras para acompanhar a leitura. Compare cada síntese com o texto bíblico.\n\n**Salmos 111:1-4 — O louvor pelas obras grandiosas do Senhor**\n\n**1:** O salmista declara louvor de todo o coração, na assembleia e também diante de Deus em devoção íntegra.\n\n**2:** As obras do Senhor são grandes; devem ser examinadas por quem encontra nelas prazer reverente.\n\n**3:** A obra divina é descrita como gloriosa e majestosa, e sua justiça permanece; o louvor contempla caráter e ação.\n\n**4:** As maravilhas do Senhor são lembradas como dádiva de sua graça e compaixão, não como mérito humano.\n\n**Salmos 111:5-6 — A fidelidade de Deus à aliança**\n\n**5:** Deus provê alimento aos que o temem e se lembra de sua aliança; a provisão é vinculada à fidelidade pactual.\n\n**6:** O poder de suas obras é manifestado ao povo, inclusive na dádiva da herança das nações; o texto recorda a história de Israel.\n\n**Salmos 111:7-10 — A permanência de suas obras e o temor do Senhor**\n\n**7:** As mãos do Senhor realizam verdade e justiça; seus preceitos são confiáveis e coerentes com seu caráter.\n\n**8:** Seus mandamentos permanecem firmes e foram estabelecidos com fidelidade e retidão.\n\n**9:** A redenção enviada ao povo e a aliança duradoura fundamentam a reverência ao nome santo de Deus.\n\n**10:** O temor do Senhor é princípio da sabedoria; quem pratica seus preceitos demonstra entendimento, e o louvor de Deus permanece."
     },
     {
       "id": "introducao",
@@ -52,7 +54,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:1-10"
       ],
-      "body": "**Tema central:** As obras do Senhor e a sabedoria que começa no temor.\\n\\n**Gênero literário:** Hino alfabético de louvor e sabedoria.\\n\\nO objetivo é ler o capítulo em sua unidade, observar a forma poética, explicar cada perícope e preparar uma exposição fiel ao texto. A aplicação deve nascer do sentido original, não de associações livres."
+      "body": "**Tema central:** As obras do Senhor e a sabedoria que começa no temor.\n\n**Gênero literário:** Hino alfabético de louvor e sabedoria.\n\nO objetivo é ler o capítulo em sua unidade, observar a forma poética, explicar cada perícope e preparar uma exposição fiel ao texto. A aplicação deve nascer do sentido original, não de associações livres."
     },
     {
       "id": "contexto-historico",
@@ -62,7 +64,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:1-10"
       ],
-      "body": "Salmo de louvor organizado alfabeticamente no hebraico. A forma ajuda a apresentar de modo abrangente as obras, a aliança e a fidelidade do Senhor. O poema aproxima adoração e sabedoria: conhecer as obras de Deus conduz à reverência e à prática obediente.\\n\\nQuando autoria, data ou ocasião não forem explicitadas no próprio texto, mantenha a distinção entre informação textual e hipótese histórica. Leia o salmo em relação ao seu lugar no Saltério e ao conjunto dos cânticos de Israel."
+      "body": "Salmo de louvor organizado alfabeticamente no hebraico. A forma ajuda a apresentar de modo abrangente as obras, a aliança e a fidelidade do Senhor. O poema aproxima adoração e sabedoria: conhecer as obras de Deus conduz à reverência e à prática obediente.\n\nQuando autoria, data ou ocasião não forem explicitadas no próprio texto, mantenha a distinção entre informação textual e hipótese histórica. Leia o salmo em relação ao seu lugar no Saltério e ao conjunto dos cânticos de Israel."
     },
     {
       "id": "estrutura",
@@ -74,7 +76,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
         "Salmos 111:5-6",
         "Salmos 111:7-10"
       ],
-      "body": "**Movimento 1 — 1-4:** O louvor pelas obras grandiosas do Senhor.\\n\\n**Movimento 2 — 5-6:** A fidelidade de Deus à aliança.\\n\\n**Movimento 3 — 7-10:** A permanência de suas obras e o temor do Senhor.\\n\\nObserve repetições, mudanças de voz, imagens, contrastes e a progressão do argumento."
+      "body": "**Movimento 1 — 1-4:** O louvor pelas obras grandiosas do Senhor.\n\n**Movimento 2 — 5-6:** A fidelidade de Deus à aliança.\n\n**Movimento 3 — 7-10:** A permanência de suas obras e o temor do Senhor.\n\nObserve repetições, mudanças de voz, imagens, contrastes e a progressão do argumento."
     },
     {
       "id": "topico-1",
@@ -84,7 +86,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:1-4"
       ],
-      "body": "**Leia Salmos 111:1-4 integralmente.**\\n\\n**Sentido da unidade:** O louvor pelas obras grandiosas do Senhor.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 1 — Explicação:** O salmista declara louvor de todo o coração, na assembleia e também diante de Deus em devoção íntegra. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 2 — Explicação:** As obras do Senhor são grandes; devem ser examinadas por quem encontra nelas prazer reverente. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 3 — Explicação:** A obra divina é descrita como gloriosa e majestosa, e sua justiça permanece; o louvor contempla caráter e ação. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 4 — Explicação:** As maravilhas do Senhor são lembradas como dádiva de sua graça e compaixão, não como mérito humano. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** O louvor pelas obras grandiosas do Senhor. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** As obras do Senhor e a sabedoria que começa no temor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 111:1-4 integralmente.**\n\n**Sentido da unidade:** O louvor pelas obras grandiosas do Senhor.\n\n**Observações versículo por versículo**\n\n**Versículo 1 — Explicação:** O salmista declara louvor de todo o coração, na assembleia e também diante de Deus em devoção íntegra. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 2 — Explicação:** As obras do Senhor são grandes; devem ser examinadas por quem encontra nelas prazer reverente. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 3 — Explicação:** A obra divina é descrita como gloriosa e majestosa, e sua justiça permanece; o louvor contempla caráter e ação. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 4 — Explicação:** As maravilhas do Senhor são lembradas como dádiva de sua graça e compaixão, não como mérito humano. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** O louvor pelas obras grandiosas do Senhor. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** As obras do Senhor e a sabedoria que começa no temor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "topico-2",
@@ -94,7 +96,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:5-6"
       ],
-      "body": "**Leia Salmos 111:5-6 integralmente.**\\n\\n**Sentido da unidade:** A fidelidade de Deus à aliança.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 5 — Explicação:** Deus provê alimento aos que o temem e se lembra de sua aliança; a provisão é vinculada à fidelidade pactual. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 6 — Explicação:** O poder de suas obras é manifestado ao povo, inclusive na dádiva da herança das nações; o texto recorda a história de Israel. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** A fidelidade de Deus à aliança. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** As obras do Senhor e a sabedoria que começa no temor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 111:5-6 integralmente.**\n\n**Sentido da unidade:** A fidelidade de Deus à aliança.\n\n**Observações versículo por versículo**\n\n**Versículo 5 — Explicação:** Deus provê alimento aos que o temem e se lembra de sua aliança; a provisão é vinculada à fidelidade pactual. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 6 — Explicação:** O poder de suas obras é manifestado ao povo, inclusive na dádiva da herança das nações; o texto recorda a história de Israel. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** A fidelidade de Deus à aliança. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** As obras do Senhor e a sabedoria que começa no temor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "topico-3",
@@ -104,7 +106,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:7-10"
       ],
-      "body": "**Leia Salmos 111:7-10 integralmente.**\\n\\n**Sentido da unidade:** A permanência de suas obras e o temor do Senhor.\\n\\n**Observações versículo por versículo**\\n\\n**Versículo 7 — Explicação:** As mãos do Senhor realizam verdade e justiça; seus preceitos são confiáveis e coerentes com seu caráter. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 8 — Explicação:** Seus mandamentos permanecem firmes e foram estabelecidos com fidelidade e retidão. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 9 — Explicação:** A redenção enviada ao povo e a aliança duradoura fundamentam a reverência ao nome santo de Deus. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Versículo 10 — Explicação:** O temor do Senhor é princípio da sabedoria; quem pratica seus preceitos demonstra entendimento, e o louvor de Deus permanece. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\\n\\n**Síntese expositiva:** A permanência de suas obras e o temor do Senhor. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\\n\\n**Aplicação responsável:** As obras do Senhor e a sabedoria que começa no temor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
+      "body": "**Leia Salmos 111:7-10 integralmente.**\n\n**Sentido da unidade:** A permanência de suas obras e o temor do Senhor.\n\n**Observações versículo por versículo**\n\n**Versículo 7 — Explicação:** As mãos do Senhor realizam verdade e justiça; seus preceitos são confiáveis e coerentes com seu caráter. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 8 — Explicação:** Seus mandamentos permanecem firmes e foram estabelecidos com fidelidade e retidão. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 9 — Explicação:** A redenção enviada ao povo e a aliança duradoura fundamentam a reverência ao nome santo de Deus. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Versículo 10 — Explicação:** O temor do Senhor é princípio da sabedoria; quem pratica seus preceitos demonstra entendimento, e o louvor de Deus permanece. Observe sua função na perícope, a relação com os versos vizinhos e a contribuição para a mensagem do capítulo.\n\n**Síntese expositiva:** A permanência de suas obras e o temor do Senhor. Explique primeiro o sentido no contexto original e depois formule aplicações coerentes.\n\n**Aplicação responsável:** As obras do Senhor e a sabedoria que começa no temor. Não transforme poesia em promessa automática nem a experiência do salmista em regra universal."
     },
     {
       "id": "palavras-chave",
@@ -134,7 +136,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:1-10"
       ],
-      "body": "- Salmos 19:7-11\\n- Salmos 112:1\\n- Deuteronômio 4:5-8\\n- Apocalipse 15:3-4\\n\\nLeia cada referência em seu contexto. Compare temas e vocabulário sem apagar as diferenças entre os textos. Uma ligação temática não equivale automaticamente a citação direta."
+      "body": "- Salmos 19:7-11\n- Salmos 112:1\n- Deuteronômio 4:5-8\n- Apocalipse 15:3-4\n\nLeia cada referência em seu contexto. Compare temas e vocabulário sem apagar as diferenças entre os textos. Uma ligação temática não equivale automaticamente a citação direta."
     },
     {
       "id": "cuidados",
@@ -164,7 +166,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:1-10"
       ],
-      "body": "**Pessoal:** examine como a mensagem forma sua confiança, arrependimento, gratidão, perseverança ou integridade.\\n\\n**Comunitária:** considere como orienta culto, justiça, memória, cuidado e responsabilidade coletiva.\\n\\n**Pastoral:** aplique com sensibilidade; não use o texto para culpabilizar quem sofre nem para prometer resultados que o contexto não promete.\\n\\n**Síntese aplicada:** As obras do Senhor e a sabedoria que começa no temor."
+      "body": "**Pessoal:** examine como a mensagem forma sua confiança, arrependimento, gratidão, perseverança ou integridade.\n\n**Comunitária:** considere como orienta culto, justiça, memória, cuidado e responsabilidade coletiva.\n\n**Pastoral:** aplique com sensibilidade; não use o texto para culpabilizar quem sofre nem para prometer resultados que o contexto não promete.\n\n**Síntese aplicada:** As obras do Senhor e a sabedoria que começa no temor."
     },
     {
       "id": "resumo",
@@ -174,7 +176,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:1-10"
       ],
-      "body": "**Mensagem central:** As obras do Senhor e a sabedoria que começa no temor.\\n\\n**Gênero:** Hino alfabético de louvor e sabedoria.\\n\\n1) 1-4: O louvor pelas obras grandiosas do Senhor\\n2) 5-6: A fidelidade de Deus à aliança\\n3) 7-10: A permanência de suas obras e o temor do Senhor\\n\\nExplique como cada movimento contribui para a mensagem total e quais limites interpretativos precisam ser respeitados."
+      "body": "**Mensagem central:** As obras do Senhor e a sabedoria que começa no temor.\n\n**Gênero:** Hino alfabético de louvor e sabedoria.\n\n1) 1-4: O louvor pelas obras grandiosas do Senhor\n2) 5-6: A fidelidade de Deus à aliança\n3) 7-10: A permanência de suas obras e o temor do Senhor\n\nExplique como cada movimento contribui para a mensagem total e quais limites interpretativos precisam ser respeitados."
     },
     {
       "id": "exercicios",
@@ -184,7 +186,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:1-10"
       ],
-      "body": "1. Resuma a mensagem do salmo em uma frase sem usar ideias que o texto não sustenta.\\n2. Delimite as perícopes e justifique a divisão.\\n3. Escolha três versículos e explique sua contribuição para o argumento.\\n4. Identifique uma imagem poética e explique seu efeito no contexto.\\n5. Diferencie uma afirmação explícita de uma inferência.\\n6. Escreva uma aplicação pessoal e outra comunitária que respeitem o sentido original."
+      "body": "1. Resuma a mensagem do salmo em uma frase sem usar ideias que o texto não sustenta.\n2. Delimite as perícopes e justifique a divisão.\n3. Escolha três versículos e explique sua contribuição para o argumento.\n4. Identifique uma imagem poética e explique seu efeito no contexto.\n5. Diferencie uma afirmação explícita de uma inferência.\n6. Escreva uma aplicação pessoal e outra comunitária que respeitem o sentido original."
     },
     {
       "id": "oficina-pregador",
@@ -194,7 +196,7 @@ import type { StudyContent } from "../types";\n\n/** Estudo aprofundado de Salmo
       "scriptureRefs": [
         "Salmos 111:1-10"
       ],
-      "body": "**Proposição:** As obras do Senhor e a sabedoria que começa no temor.\\n\\n**Objetivo:** conduzir a igreja a compreender o salmo em seu contexto e responder de maneira coerente com sua mensagem.\\n\\n**Roteiro:** introdução que apresenta a tensão ou convocação do texto; exposição progressiva de cada perícope; explicação das imagens e referências; conexão canônica responsável; aplicações que nascem do texto; conclusão que retoma a mensagem central.\\n\\nConfira se cada ponto deriva da passagem e se a aplicação não promete aquilo que o texto não promete."
+      "body": "**Proposição:** As obras do Senhor e a sabedoria que começa no temor.\n\n**Objetivo:** conduzir a igreja a compreender o salmo em seu contexto e responder de maneira coerente com sua mensagem.\n\n**Roteiro:** introdução que apresenta a tensão ou convocação do texto; exposição progressiva de cada perícope; explicação das imagens e referências; conexão canônica responsável; aplicações que nascem do texto; conclusão que retoma a mensagem central.\n\nConfira se cada ponto deriva da passagem e se a aplicação não promete aquilo que o texto não promete."
     },
     {
       "id": "oracao-final",
