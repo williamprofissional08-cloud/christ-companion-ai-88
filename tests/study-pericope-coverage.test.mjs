@@ -400,6 +400,16 @@ const curatedBatch = [
   { book: "Salmos", chapter: 98, verseCount: 9, slug: "biblia-salmos-cap-98", exportName: "psalm98Study", file: "psalm-98-study.ts" },
   { book: "Salmos", chapter: 99, verseCount: 9, slug: "biblia-salmos-cap-99", exportName: "psalm99Study", file: "psalm-99-study.ts" },
   { book: "Salmos", chapter: 100, verseCount: 5, slug: "biblia-salmos-cap-100", exportName: "psalm100Study", file: "psalm-100-study.ts" },
+  { book: "Salmos", chapter: 101, verseCount: 8, slug: "biblia-salmos-cap-101", exportName: "psalm101Study", file: "psalm-101-study.ts" },
+  { book: "Salmos", chapter: 102, verseCount: 28, slug: "biblia-salmos-cap-102", exportName: "psalm102Study", file: "psalm-102-study.ts" },
+  { book: "Salmos", chapter: 103, verseCount: 22, slug: "biblia-salmos-cap-103", exportName: "psalm103Study", file: "psalm-103-study.ts" },
+  { book: "Salmos", chapter: 104, verseCount: 35, slug: "biblia-salmos-cap-104", exportName: "psalm104Study", file: "psalm-104-study.ts" },
+  { book: "Salmos", chapter: 105, verseCount: 45, slug: "biblia-salmos-cap-105", exportName: "psalm105Study", file: "psalm-105-study.ts" },
+  { book: "Salmos", chapter: 106, verseCount: 48, slug: "biblia-salmos-cap-106", exportName: "psalm106Study", file: "psalm-106-study.ts" },
+  { book: "Salmos", chapter: 107, verseCount: 43, slug: "biblia-salmos-cap-107", exportName: "psalm107Study", file: "psalm-107-study.ts" },
+  { book: "Salmos", chapter: 108, verseCount: 13, slug: "biblia-salmos-cap-108", exportName: "psalm108Study", file: "psalm-108-study.ts" },
+  { book: "Salmos", chapter: 109, verseCount: 31, slug: "biblia-salmos-cap-109", exportName: "psalm109Study", file: "psalm-109-study.ts" },
+  { book: "Salmos", chapter: 110, verseCount: 7, slug: "biblia-salmos-cap-110", exportName: "psalm110Study", file: "psalm-110-study.ts" },
 ]; 
 
 async function readContent(path) {
