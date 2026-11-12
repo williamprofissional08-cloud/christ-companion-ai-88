@@ -21,7 +21,13 @@ export const psalm102Study: StudyContent = {
     }
   ],
   "application": "Viver à luz da mensagem: Oração do aflito e esperança na permanência de Deus.",
-  "crossReferences": [],
+  "crossReferences": [
+    "Salmos 22:24",
+    "Isaías 40:6-8",
+    "Isaías 60:1-3",
+    "Hebreus 1:10-12",
+    "Hebreus 13:14"
+  ],
   "questions": [
     "Qual é a mensagem central do salmo?",
     "Como o gênero literário orienta a interpretação?",
