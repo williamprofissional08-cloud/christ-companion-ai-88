@@ -1,13 +1,19 @@
 # Música ambiente — Agnus Dei
 
-O player global utiliza a gravação **“Missa Papae Marcelli - VI. Agnus Dei II”**, de Giovanni Pierluigi da Palestrina / European Archive Music.
+O aplicativo incorpora o lançamento oficial **“Agnus Dei”**, de **Depths of Worship**, por meio do player oficial do Spotify.
 
-- **Licença da gravação:** Creative Commons CC0 1.0 (dedicação ao domínio público).
-- **Duração:** aproximadamente 2 minutos e 27 segundos.
-- **Formato:** FLAC.
-- **Fonte e registro da licença:** https://commons.wikimedia.org/wiki/File:Missa_Papae_Marcelli_-_VI._Agnus_Dei_II.flac
-- **Arquivo de áudio:** https://upload.wikimedia.org/wikipedia/commons/6/63/Missa_Papae_Marcelli_-_VI._Agnus_Dei_II.flac
+- **Artista:** Depths of Worship.
+- **Lançamento oficial:** https://open.spotify.com/album/37WOTFMwBPcaY5REpVEApw
+- **Página oficial de distribuição do artista:** https://distrokid.com/hyperfollow/depthsofworship/agnus-dei
+- **Vídeo de referência escolhido:** https://www.youtube.com/watch?v=HR9coYxhYKw
 
-A gravação é servida pelo Wikimedia Commons, evitando adicionar custo de armazenamento/streaming ao projeto. O player repete a faixa, tenta iniciar automaticamente quando o navegador permite e oferece controle manual quando o autoplay é bloqueado.
+O áudio não é baixado, extraído do YouTube nem hospedado pelo aplicativo. A reprodução é fornecida pelo Spotify, respeitando os controles e as condições da plataforma. O player permanece montado no layout autenticado para continuar disponível durante a navegação entre as áreas do app.
 
-A obra musical é uma interpretação renascentista de Agnus Dei, não a gravação contemporânea eventualmente encontrada em vídeos do YouTube. A licença CC0 desta gravação específica não concede direitos sobre outras interpretações ou gravações.
+## Comportamento e limitações
+
+- O atalho compacto “Agnus Dei” fica fixo no canto inferior direito, sem manter um cartão grande sobre textos, imagens ou estudos.
+- Ao tocar no atalho, abre-se o player oficial do Spotify, onde a pessoa inicia ou pausa a música.
+- O navegador e o player de terceiros podem bloquear reprodução automática. Portanto, não é possível prometer início automático confiável com esse embed; a pessoa precisa tocar em Reproduzir no player.
+- A versão distribuída oficialmente pelo artista é o lançamento “Agnus Dei”. A duração do álbum nas plataformas pode diferir da versão estendida do vídeo de referência.
+
+A gravação clássica de Palestrina anteriormente usada foi removida deste componente.
