@@ -27,6 +27,8 @@ export function GlobalChatPanel() {
   const [sending, setSending] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [joined, setJoined] = useState<boolean | null>(null);
+  const [joining, setJoining] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
 
   const loadProfiles = useCallback(async (ids: string[]) => {
@@ -71,7 +73,14 @@ export function GlobalChatPanel() {
     void db.auth.getUser().then(async ({ data }) => {
       if (!active || !data.user) return;
       setUser(data.user);
-      await loadLatest(data.user.id);
+      const { data: participation } = await db
+        .from("comunidade_participantes")
+        .select("user_id")
+        .eq("user_id", data.user.id)
+        .maybeSingle();
+      const isParticipant = !!participation;
+      if (active) setJoined(isParticipant);
+      if (isParticipant) await loadLatest(data.user.id);
       if (active) setLoading(false);
     }).catch(() => {
       if (active) { setError("Não foi possível validar sua sessão."); setLoading(false); }
@@ -80,7 +89,7 @@ export function GlobalChatPanel() {
   }, [loadLatest]);
 
   useEffect(() => {
-    if (!user) return;
+    if (!user || joined !== true) return;
     let active = true;
     const metadata = user.user_metadata ?? {};
     const displayName = String(metadata["display_name"] ?? metadata["full_name"] ?? metadata["name"] ?? user.email?.split("@")[0] ?? "Membro");
@@ -108,7 +117,7 @@ export function GlobalChatPanel() {
       setOnline([]);
       void db.removeChannel(channel);
     };
-  }, [user, loadLatest]);
+  }, [user, joined, loadLatest]);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
@@ -116,6 +125,23 @@ export function GlobalChatPanel() {
 
   const onlineMembers = useMemo(() => online.filter((item) => item.user_id !== user?.id), [online, user?.id]);
   const myName = String(user?.user_metadata?.["display_name"] ?? user?.user_metadata?.["full_name"] ?? user?.email?.split("@")[0] ?? "Você");
+
+  async function joinCommunity() {
+    if (!user || joining) return;
+    setJoining(true);
+    const { error: joinError } = await db
+      .from("comunidade_participantes")
+      .insert({ user_id: user.id });
+    setJoining(false);
+    if (joinError) {
+      toast.error("Não foi possível entrar na comunidade. Tente novamente.");
+      return;
+    }
+    setJoined(true);
+    setLoading(true);
+    await loadLatest(user.id);
+    setLoading(false);
+  }
 
   async function send(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -194,6 +220,29 @@ export function GlobalChatPanel() {
     const { error: deleteError } = await db.from("mensagens_globais").update({ apagada: true }).eq("id", message.id).eq("user_id", user?.id);
     if (deleteError) toast.error("Não foi possível apagar a mensagem.");
     else setMessages((current) => current.filter((item) => item.id !== message.id));
+  }
+
+  if (joined === false) {
+    return (
+      <Card className="overflow-hidden rounded-2xl border-primary/15 bg-white shadow-sm dark:bg-card">
+        <div className="flex flex-col items-center gap-4 p-8 text-center sm:p-12">
+          <span className="flex size-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+            <UsersRound className="size-7" />
+          </span>
+          <div>
+            <h2 className="font-display text-lg font-semibold text-[#142d59] dark:text-foreground">Participe da comunidade</h2>
+            <p className="mt-1 max-w-sm text-sm text-muted-foreground">
+              O chat global é um espaço da comunidade Caminho Divino. Para ler e enviar mensagens, confirme sua participação.
+            </p>
+          </div>
+          <Button onClick={() => void joinCommunity()} disabled={joining || !user} className="rounded-xl px-6">
+            {joining ? <Loader2 className="size-4 animate-spin" /> : null}
+            Entrar na comunidade
+          </Button>
+          <p className="text-xs text-muted-foreground">Seja respeitoso. Mensagens podem ser denunciadas e membros bloqueados.</p>
+        </div>
+      </Card>
+    );
   }
 
   return (

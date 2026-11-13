@@ -271,6 +271,29 @@ export type Database = {
         }
         Relationships: []
       }
+      comunidade_participantes: {
+        Row: {
+          entrou_em: string
+          user_id: string
+        }
+        Insert: {
+          entrou_em?: string
+          user_id: string
+        }
+        Update: {
+          entrou_em?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "comunidade_participantes_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       content_sources: {
         Row: {
           author: string
@@ -1848,6 +1871,7 @@ export type Database = {
         Returns: boolean
       }
       complete_lesson: { Args: { _lesson_id: string }; Returns: string }
+      comunidade_participa: { Args: never; Returns: boolean }
       consume_ai_rate_limit: {
         Args: { p_endpoint: string }
         Returns: {
