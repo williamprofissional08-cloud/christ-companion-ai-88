@@ -8,8 +8,8 @@ const YOUTUBE_EMBED_URL =
   "?controls=1&loop=1&playlist=" + YOUTUBE_VIDEO_ID + "&playsinline=1&rel=0";
 
 /**
- * Persistent Agnus Dei player. The minimized launcher sits at the upper-left;
- * the iframe remains mounted and clipped so minimizing does not unmount it.
+ * Persistent Agnus Dei player. The minimized launcher stays beside the
+ * mobile vertical-menu button; the iframe remains mounted while minimized.
  */
 export function GlobalBackgroundMusic() {
   const [isMinimized, setIsMinimized] = useState(true);
@@ -17,10 +17,10 @@ export function GlobalBackgroundMusic() {
   return (
     <aside
       aria-label="Música ambiente Agnus Dei"
-      className={`fixed left-3 right-auto z-40 overflow-hidden rounded-2xl border border-blue-200/80 bg-white shadow-xl transition-[width,top] duration-200 dark:border-slate-700 dark:bg-slate-900 ${
+      className={`fixed left-[3.75rem] right-auto z-40 overflow-hidden rounded-2xl border border-blue-200/80 bg-white shadow-xl transition-[width,top] duration-200 dark:border-slate-700 dark:bg-slate-900 ${
         isMinimized
-          ? "top-[calc(env(safe-area-inset-top)+5.25rem)] w-11 rounded-full"
-          : "top-[calc(env(safe-area-inset-top)+5.25rem)] w-[min(22rem,calc(100vw-1.5rem))] sm:left-5"
+          ? "top-[calc(env(safe-area-inset-top)+0.5rem)] w-11 rounded-full"
+          : "top-[calc(env(safe-area-inset-top)+0.5rem)] w-[min(22rem,calc(100vw-5rem))]"
       }`}
     >
       <div className={`relative z-10 flex items-center gap-2 bg-white dark:bg-slate-900 ${isMinimized ? "justify-center p-0.5" : "px-3 py-2"}`}>
