@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp, Music2 } from "lucide-react";
+import { ChevronDown, Play } from "lucide-react";
 
 const YOUTUBE_VIDEO_ID = "HR9coYxhYKw";
 const YOUTUBE_EMBED_URL =
@@ -47,7 +47,7 @@ export function GlobalBackgroundMusic() {
 
       <div
         className={`relative transition-[height] duration-200 ${
-          isMinimized ? "h-0" : "h-[200px]"
+          isMinimized ? "max-h-0 overflow-hidden" : "h-[200px]"
         }`}
         aria-hidden={isMinimized}
       >
