@@ -41,6 +41,8 @@ function AuthPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
+  const [resending, setResending] = useState(false);
   const [checking, setChecking] = useState(true);
   const [sent, setSent] = useState(false);
 
@@ -134,7 +136,31 @@ function AuthPage() {
     }
   }
 
+  async function resendConfirmation() {
+    const normalizedEmail = email.trim().toLowerCase();
+    if (!normalizedEmail) {
+      toast.error("Informe o e-mail usado no cadastro.");
+      return;
+    }
+    setResending(true);
+    try {
+      const { error } = await supabase.auth.resend({
+        type: "signup",
+        email: normalizedEmail,
+        options: { emailRedirectTo: `${window.location.origin}/auth-callback` },
+      });
+      if (error) throw error;
+      toast.success("Se houver um cadastro aguardando confirmação, enviaremos um novo link. Confira também o spam.");
+    } catch (error) {
+      toast.error(friendlyAuthError(error));
+    } finally {
+      setResending(false);
+    }
+  }
+
   async function google() {
+    if (googleLoading || loading) return;
+    setGoogleLoading(true);
     try {
       const result = await lovable.auth.signInWithOAuth("google", {
         // Precisa ser uma URL pública same-origin; a rota de callback conclui a sessão.
@@ -148,6 +174,8 @@ function AuthPage() {
       navigate({ to: "/inicio", replace: true });
     } catch (error) {
       toast.error(friendlyAuthError(error));
+    } finally {
+      setGoogleLoading(false);
     }
   }
 
@@ -186,10 +214,12 @@ function AuthPage() {
         </div>
 
         {sent ? (
-          <p className="rounded-xl bg-muted p-4 text-sm text-muted-foreground">
-            Se este endereço puder receber um novo cadastro, você receberá um e-mail com as
-            instruções para ativar sua conta. Verifique também a caixa de spam.
-          </p>
+          <div className="space-y-3 rounded-xl bg-muted p-4 text-sm text-muted-foreground">
+            <p>Se este endereço puder receber um novo cadastro, enviaremos um link para confirmar seu e-mail. Abra a mensagem e toque em confirmar antes de entrar. Confira também a caixa de spam ou lixo eletrônico.</p>
+            <Button type="button" variant="outline" className="w-full" onClick={resendConfirmation} disabled={resending}>
+              {resending ? "Enviando..." : "Reenviar e-mail de confirmação"}
+            </Button>
+          </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             {mode === "signup" ? (
@@ -267,8 +297,8 @@ function AuthPage() {
           <span className="h-px flex-1 bg-border" />
         </div>
 
-        <Button variant="outline" size="lg" className="w-full" onClick={google}>
-          Continuar com Google
+        <Button variant="outline" size="lg" className="w-full" onClick={google} disabled={googleLoading || loading}>
+          {googleLoading ? "Conectando ao Google..." : "Continuar com Google"}
         </Button>
 
         <div className="mt-6 flex flex-col items-center gap-2 text-sm">
