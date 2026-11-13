@@ -1,31 +1,63 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
 
 const YOUTUBE_VIDEO_ID = "HR9coYxhYKw";
 const YOUTUBE_EMBED_URL =
   "https://www.youtube-nocookie.com/embed/" +
   YOUTUBE_VIDEO_ID +
-  "?autoplay=1&controls=0&loop=1&playlist=" +
+  "?controls=0&loop=1&playlist=" +
   YOUTUBE_VIDEO_ID +
-  "&playsinline=1&rel=0";
+  "&playsinline=1&rel=0&enablejsapi=1";
 
 /**
- * Compact background-music control kept beside the mobile menu.
- * Playback starts only after an explicit user gesture. Unmounting the
- * iframe stops playback, so the same button reliably toggles play/pause.
+ * Compact background music control.
+ * Keep the YouTube iframe mounted so playback commands are sent from the
+ * actual user click, which is more reliable on Safari/iOS than mounting an
+ * autoplay iframe after a React state update.
  */
 export function GlobalBackgroundMusic() {
+  const playerRef = useRef<HTMLIFrameElement>(null);
+  const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  function togglePlayback() {
+    const player = playerRef.current?.contentWindow;
+    if (!player || !isReady) return;
+
+    const nextIsPlaying = !isPlaying;
+    player.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: nextIsPlaying ? "playVideo" : "pauseVideo",
+        args: [],
+      }),
+      "https://www.youtube-nocookie.com",
+    );
+    setIsPlaying(nextIsPlaying);
+  }
 
   return (
     <aside aria-label="Música ambiente Agnus Dei" className="lg:hidden">
       <button
         type="button"
-        onClick={() => setIsPlaying((playing) => !playing)}
-        aria-label={isPlaying ? "Pausar música ambiente" : "Reproduzir música ambiente"}
+        onClick={togglePlayback}
+        disabled={!isReady}
+        aria-label={
+          !isReady
+            ? "Carregando música ambiente"
+            : isPlaying
+              ? "Pausar música ambiente"
+              : "Reproduzir música ambiente"
+        }
         aria-pressed={isPlaying}
-        title={isPlaying ? "Pausar música" : "Reproduzir música"}
-        className="fixed left-[3.75rem] top-[calc(env(safe-area-inset-top)+0.5rem)] z-50 inline-flex size-10 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
+        title={
+          !isReady
+            ? "Carregando música"
+            : isPlaying
+              ? "Pausar música"
+              : "Reproduzir música"
+        }
+        className="fixed left-[3.75rem] top-[calc(env(safe-area-inset-top)+0.5rem)] z-50 inline-flex size-10 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
       >
         {isPlaying ? (
           <Pause className="size-5" aria-hidden="true" />
@@ -34,19 +66,18 @@ export function GlobalBackgroundMusic() {
         )}
       </button>
 
-      {isPlaying ? (
-        <iframe
-          key="agnus-dei-background-audio"
-          title="Música ambiente Agnus Dei"
-          src={YOUTUBE_EMBED_URL}
-          className="pointer-events-none fixed -left-[9999px] -top-[9999px] h-[200px] w-[200px] opacity-0"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          referrerPolicy="strict-origin-when-cross-origin"
-          loading="eager"
-          tabIndex={-1}
-          aria-hidden="true"
-        />
-      ) : null}
+      <iframe
+        ref={playerRef}
+        title="Música ambiente Agnus Dei"
+        src={YOUTUBE_EMBED_URL}
+        onLoad={() => setIsReady(true)}
+        className="pointer-events-none fixed -left-[9999px] -top-[9999px] h-[200px] w-[200px] opacity-0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        referrerPolicy="strict-origin-when-cross-origin"
+        loading="eager"
+        tabIndex={-1}
+        aria-hidden="true"
+      />
     </aside>
   );
 }
