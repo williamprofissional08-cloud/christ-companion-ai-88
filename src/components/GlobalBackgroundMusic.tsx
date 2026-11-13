@@ -39,7 +39,7 @@ export function GlobalBackgroundMusic() {
           key="agnus-dei-background-audio"
           title="Música ambiente Agnus Dei"
           src={YOUTUBE_EMBED_URL}
-          className="pointer-events-none fixed -left-10 top-0 h-px w-px opacity-0"
+          className="pointer-events-none fixed -left-[9999px] -top-[9999px] h-[200px] w-[200px] opacity-0"
           allow="autoplay; encrypted-media; picture-in-picture"
           referrerPolicy="strict-origin-when-cross-origin"
           loading="eager"
