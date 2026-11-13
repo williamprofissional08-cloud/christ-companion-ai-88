@@ -76,12 +76,13 @@ async function complete(prompt: string, system: string) {
     if (status === 402) {
       throw new Error(
         "O conteúdo gerado por IA está temporariamente indisponível. Tente novamente em instantes.",
+        { cause: error },
       );
     }
     if (status === 429) {
-      throw new Error("Muitas solicitações agora. Aguarde alguns instantes e tente novamente.");
+      throw new Error("Muitas solicitações agora. Aguarde alguns instantes e tente novamente.", { cause: error });
     }
-    throw new Error("Não foi possível gerar o conteúdo com a IA agora. Tente novamente em instantes.");
+    throw new Error("Não foi possível gerar o conteúdo com a IA agora. Tente novamente em instantes.", { cause: error });
   }
 }
 
