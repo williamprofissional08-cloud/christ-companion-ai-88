@@ -29,6 +29,20 @@
       "when": 1794533362991,
       "tag": "0003_comunidade_participacao_obrigatoria",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1794533613857,
+      "tag": "0004_remover_politicas_antigas_chat_global",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1794533635449,
+      "tag": "0005_politicas_autor_chat_global",
+      "breakpoints": true
     }
   ]
 }
