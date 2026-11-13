@@ -1,3 +1,4 @@
+import { mark4Study } from "./mark-4-study";
 import type { StudyContent } from "../types";
 import { psalm1Study } from "./psalm-1-study";
 import { psalm2Study } from "./psalm-2-study";
@@ -607,6 +608,7 @@ import { joshua24Study } from "./joshua-24-study";
  * Rótulos: [TEXTO BÍBLICO] [CONTEXTO] [INFERÊNCIA] [INTERPRETAÇÃO] [ESPECULAÇÃO].
  */
 export const CURATED_STUDIES: Record<string, StudyContent> = {
+  "biblia-marcos-cap-4": mark4Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
   "biblia-rute-cap-3": ruth3Study,
