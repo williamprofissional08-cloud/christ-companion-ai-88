@@ -32,7 +32,43 @@ export const Route = createFileRoute("/_authenticated/devocional")({
 
 
 const bibleBookPattern = BIBLE_BOOKS
-  .map((book) => book.name.replace(/[.*+?^${}()|[\]\\]/g, "\\
+  .map((book) => book.name)
+  .sort((a, b) => b.length - a.length)
+  .join("|");
+const scriptureReferencePattern = new RegExp(
+  "((?:" + bibleBookPattern + ")\\s+\\d{1,3}(?::\\d{1,3}(?:\\s*[-–]\\s*\\d{1,3})?)?(?:\\s*[-–]\\s*\\d{1,3})?)",
+  "gi",
+);
+
+function ScriptureText({ text }: { text: string }) {
+  const parts = text.split(scriptureReferencePattern);
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (index % 2 === 0) return <span key={index}>{part}</span>;
+        const firstReference = part.split(/[-–]/)[0]?.trim() ?? part;
+        const parsed = parseBibleReference(firstReference);
+        if (!parsed) return <span key={index}>{part}</span>;
+        return (
+          <Link
+            key={index}
+            to="/biblia"
+            search={{
+              livro: parsed.livro,
+              capitulo: parsed.capitulo,
+              ...(parsed.versiculo ? { versiculo: parsed.versiculo } : {}),
+            }}
+            className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-blue-800 dark:hover:text-blue-300"
+            title={"Abrir " + part + " na Bíblia"}
+          >
+            {part}
+          </Link>
+        );
+      })}
+    </>
+  );
+}
+
 function ScriptureReferenceChips({ references }: { references: string[] }) {
   const all = references.flatMap((value) => {
     scriptureReferencePattern.lastIndex = 0;
