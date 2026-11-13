@@ -37,7 +37,7 @@ export function GlobalBackgroundMusic() {
   }
 
   return (
-    <aside aria-label="Música ambiente Agnus Dei" className="lg:hidden">
+    <aside aria-label="Música ambiente Agnus Dei" className="contents">
       <button
         type="button"
         onClick={togglePlayback}
@@ -57,7 +57,7 @@ export function GlobalBackgroundMusic() {
               ? "Pausar música"
               : "Reproduzir música"
         }
-        className="fixed left-[3.75rem] top-[calc(env(safe-area-inset-top)+0.5rem)] z-50 inline-flex size-10 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
+        className="fixed right-3 bottom-[calc(env(safe-area-inset-bottom)+4.5rem)] z-40 lg:right-4 lg:bottom-[calc(env(safe-area-inset-bottom)+1rem)] inline-flex size-10 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
       >
         {isPlaying ? (
           <Pause className="size-5" aria-hidden="true" />
