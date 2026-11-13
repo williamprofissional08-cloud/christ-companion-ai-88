@@ -126,10 +126,14 @@ export function fallbackDevotional(day: string, selection = 0): DevotionalConten
       text: bookContext,
       kind: "synthesis",
     },
+    context:
+      "Esta é uma orientação de leitura para " + reference + ", não uma reconstrução detalhada de cada capítulo. " + bookContext + ". Leia o trecho completo na Bíblia e observe quem fala, a quem se dirige, o que acontece antes e depois e qual é o gênero literário. Não atribua a todos os capítulos o mesmo cenário ou argumento.",
+    biblicalMeaning:
+      "O enfoque proposto — " + theme.title.toLowerCase() + " — é uma pergunta para orientar a leitura, não uma conclusão automática sobre cada versículo. Confira no próprio texto quais palavras, ações e motivos sustentam essa ênfase. " + theme.focus + " Se a passagem não sustentar essa aplicação, dê prioridade ao sentido do texto.",
     reflection:
-      "A leitura de " + reference + " apresenta " + bookContext.toLowerCase() + ". Esse contexto nos ajuda a não tratar a passagem como uma frase isolada: primeiro precisamos observar o que o texto comunicou aos seus primeiros leitores e como se encaixa no testemunho das Escrituras.\n\n" +
-      theme.focus + "\n\n" +
-      "Ao ler, observe o que a passagem revela sobre Deus, sobre a condição humana e sobre a resposta de fé esperada. A aplicação cristã deve permanecer ligada ao sentido do texto e encontrar seu centro na revelação de Deus, plenamente anunciada em Jesus Cristo.",
+      "Leia " + reference + " sem isolar frases do seu contexto. Identifique o assunto principal, os personagens ou destinatários, a situação apresentada e a progressão do texto.\\n\\n" +
+      "Observe o que a passagem afirma diretamente sobre Deus e sobre a condição humana. Diferencie o que o texto diz daquilo que estamos inferindo; não transforme uma experiência narrativa em promessa universal nem uma aplicação possível em mandamento que a passagem não apresenta.\\n\\n" +
+      theme.focus + " A reflexão cristã deve respeitar o gênero, o contexto e o lugar desta passagem no conjunto das Escrituras. Aponte para Cristo quando a ligação for sustentada pelo próprio texto ou pelo testemunho bíblico, sem forçar alegorias.",
     application: theme.action + " Volte ao texto de " + reference + " e confira se sua aplicação respeita o contexto.",
     prayer: theme.prayer,
     challenge: "Leia " + reference + " com atenção, anote uma verdade sobre Deus e pratique hoje uma atitude coerente com ela.",
