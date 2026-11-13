@@ -37,6 +37,7 @@ import { Route as AuthenticatedAdminAlunosRouteImport } from './routes/_authenti
 import { Route as AuthenticatedAdminConteudoRouteImport } from './routes/_authenticated/admin.conteudo'
 import { Route as AuthenticatedAssistenteIndexRouteImport } from './routes/_authenticated/assistente.index'
 import { Route as AuthenticatedAssistenteThreadIdRouteImport } from './routes/_authenticated/assistente.$threadId'
+import { Route as AuthenticatedComunidadeIndexRouteImport } from './routes/_authenticated/comunidade.index'
 import { Route as AuthenticatedEscolaIndexRouteImport } from './routes/_authenticated/escola.index'
 import { Route as AuthenticatedEscolaSlugRouteImport } from './routes/_authenticated/escola.$slug'
 import { Route as AuthenticatedEstudosIndexRouteImport } from './routes/_authenticated/estudos.index'
@@ -50,6 +51,8 @@ import { Route as ApiEscolaProfessorTtsRouteImport } from './routes/api/escola/p
 import { Route as AuthenticatedAdminAulasLessonIdRouteImport } from './routes/_authenticated/admin.aulas.$lessonId'
 import { Route as AuthenticatedAdminCursosIndexRouteImport } from './routes/_authenticated/admin.cursos.index'
 import { Route as AuthenticatedAdminCursosIdRouteImport } from './routes/_authenticated/admin.cursos.$id'
+import { Route as AuthenticatedComunidadePrivadoIndexRouteImport } from './routes/_authenticated/comunidade.privado.index'
+import { Route as AuthenticatedComunidadePrivadoConversaIdRouteImport } from './routes/_authenticated/comunidade.privado.$conversaId'
 import { Route as AuthenticatedEscolaSlugIndexRouteImport } from './routes/_authenticated/escola.$slug.index'
 import { Route as AuthenticatedEscolaSlugAulaLessonSlugRouteImport } from './routes/_authenticated/escola.$slug.aula.$lessonSlug'
 
@@ -198,6 +201,12 @@ const AuthenticatedAssistenteThreadIdRoute =
     path: '/$threadId',
     getParentRoute: () => AuthenticatedAssistenteRoute,
   } as any)
+const AuthenticatedComunidadeIndexRoute =
+  AuthenticatedComunidadeIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedComunidadeRoute,
+  } as any)
 const AuthenticatedEscolaIndexRoute =
   AuthenticatedEscolaIndexRouteImport.update({
     id: '/',
@@ -272,6 +281,18 @@ const AuthenticatedAdminCursosIdRoute =
     path: '/cursos/$id',
     getParentRoute: () => AuthenticatedAdminRoute,
   } as any)
+const AuthenticatedComunidadePrivadoIndexRoute =
+  AuthenticatedComunidadePrivadoIndexRouteImport.update({
+    id: '/privado/',
+    path: '/privado/',
+    getParentRoute: () => AuthenticatedComunidadeRoute,
+  } as any)
+const AuthenticatedComunidadePrivadoConversaIdRoute =
+  AuthenticatedComunidadePrivadoConversaIdRouteImport.update({
+    id: '/privado/$conversaId',
+    path: '/privado/$conversaId',
+    getParentRoute: () => AuthenticatedComunidadeRoute,
+  } as any)
 const AuthenticatedEscolaSlugIndexRoute =
   AuthenticatedEscolaSlugIndexRouteImport.update({
     id: '/',
@@ -293,7 +314,7 @@ export interface FileRoutesByFullPath {
   '/admin': typeof AuthenticatedAdminRouteWithChildren
   '/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/biblia': typeof AuthenticatedBibliaRoute
-  '/comunidade': typeof AuthenticatedComunidadeRoute
+  '/comunidade': typeof AuthenticatedComunidadeRouteWithChildren
   '/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
@@ -319,13 +340,16 @@ export interface FileRoutesByFullPath {
   '/api/escola/professor-tts': typeof ApiEscolaProfessorTtsRoute
   '/admin/': typeof AuthenticatedAdminIndexRoute
   '/assistente/': typeof AuthenticatedAssistenteIndexRoute
+  '/comunidade/': typeof AuthenticatedComunidadeIndexRoute
   '/escola/': typeof AuthenticatedEscolaIndexRoute
   '/estudos/': typeof AuthenticatedEstudosIndexRoute
   '/planos/': typeof AuthenticatedPlanosIndexRoute
   '/trilhas/': typeof AuthenticatedTrilhasIndexRoute
   '/admin/aulas/$lessonId': typeof AuthenticatedAdminAulasLessonIdRoute
   '/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
+  '/comunidade/privado/$conversaId': typeof AuthenticatedComunidadePrivadoConversaIdRoute
   '/admin/cursos/': typeof AuthenticatedAdminCursosIndexRoute
+  '/comunidade/privado/': typeof AuthenticatedComunidadePrivadoIndexRoute
   '/escola/$slug/': typeof AuthenticatedEscolaSlugIndexRoute
   '/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
@@ -335,7 +359,6 @@ export interface FileRoutesByTo {
   '/auth-callback': typeof AuthCallbackRoute
   '/reset-password': typeof ResetPasswordRoute
   '/biblia': typeof AuthenticatedBibliaRoute
-  '/comunidade': typeof AuthenticatedComunidadeRoute
   '/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/devocional': typeof AuthenticatedDevocionalRoute
   '/diario': typeof AuthenticatedDiarioRoute
@@ -356,13 +379,16 @@ export interface FileRoutesByTo {
   '/api/escola/professor-tts': typeof ApiEscolaProfessorTtsRoute
   '/admin': typeof AuthenticatedAdminIndexRoute
   '/assistente': typeof AuthenticatedAssistenteIndexRoute
+  '/comunidade': typeof AuthenticatedComunidadeIndexRoute
   '/escola': typeof AuthenticatedEscolaIndexRoute
   '/estudos': typeof AuthenticatedEstudosIndexRoute
   '/planos': typeof AuthenticatedPlanosIndexRoute
   '/trilhas': typeof AuthenticatedTrilhasIndexRoute
   '/admin/aulas/$lessonId': typeof AuthenticatedAdminAulasLessonIdRoute
   '/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
+  '/comunidade/privado/$conversaId': typeof AuthenticatedComunidadePrivadoConversaIdRoute
   '/admin/cursos': typeof AuthenticatedAdminCursosIndexRoute
+  '/comunidade/privado': typeof AuthenticatedComunidadePrivadoIndexRoute
   '/escola/$slug': typeof AuthenticatedEscolaSlugIndexRoute
   '/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
@@ -376,7 +402,7 @@ export interface FileRoutesById {
   '/_authenticated/admin': typeof AuthenticatedAdminRouteWithChildren
   '/_authenticated/assistente': typeof AuthenticatedAssistenteRouteWithChildren
   '/_authenticated/biblia': typeof AuthenticatedBibliaRoute
-  '/_authenticated/comunidade': typeof AuthenticatedComunidadeRoute
+  '/_authenticated/comunidade': typeof AuthenticatedComunidadeRouteWithChildren
   '/_authenticated/configuracoes': typeof AuthenticatedConfiguracoesRoute
   '/_authenticated/devocional': typeof AuthenticatedDevocionalRoute
   '/_authenticated/diario': typeof AuthenticatedDiarioRoute
@@ -402,13 +428,16 @@ export interface FileRoutesById {
   '/api/escola/professor-tts': typeof ApiEscolaProfessorTtsRoute
   '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
   '/_authenticated/assistente/': typeof AuthenticatedAssistenteIndexRoute
+  '/_authenticated/comunidade/': typeof AuthenticatedComunidadeIndexRoute
   '/_authenticated/escola/': typeof AuthenticatedEscolaIndexRoute
   '/_authenticated/estudos/': typeof AuthenticatedEstudosIndexRoute
   '/_authenticated/planos/': typeof AuthenticatedPlanosIndexRoute
   '/_authenticated/trilhas/': typeof AuthenticatedTrilhasIndexRoute
   '/_authenticated/admin/aulas/$lessonId': typeof AuthenticatedAdminAulasLessonIdRoute
   '/_authenticated/admin/cursos/$id': typeof AuthenticatedAdminCursosIdRoute
+  '/_authenticated/comunidade/privado/$conversaId': typeof AuthenticatedComunidadePrivadoConversaIdRoute
   '/_authenticated/admin/cursos/': typeof AuthenticatedAdminCursosIndexRoute
+  '/_authenticated/comunidade/privado/': typeof AuthenticatedComunidadePrivadoIndexRoute
   '/_authenticated/escola/$slug/': typeof AuthenticatedEscolaSlugIndexRoute
   '/_authenticated/escola/$slug/aula/$lessonSlug': typeof AuthenticatedEscolaSlugAulaLessonSlugRoute
 }
@@ -448,13 +477,16 @@ export interface FileRouteTypes {
     | '/api/escola/professor-tts'
     | '/admin/'
     | '/assistente/'
+    | '/comunidade/'
     | '/escola/'
     | '/estudos/'
     | '/planos/'
     | '/trilhas/'
     | '/admin/aulas/$lessonId'
     | '/admin/cursos/$id'
+    | '/comunidade/privado/$conversaId'
     | '/admin/cursos/'
+    | '/comunidade/privado/'
     | '/escola/$slug/'
     | '/escola/$slug/aula/$lessonSlug'
   fileRoutesByTo: FileRoutesByTo
@@ -464,7 +496,6 @@ export interface FileRouteTypes {
     | '/auth-callback'
     | '/reset-password'
     | '/biblia'
-    | '/comunidade'
     | '/configuracoes'
     | '/devocional'
     | '/diario'
@@ -485,13 +516,16 @@ export interface FileRouteTypes {
     | '/api/escola/professor-tts'
     | '/admin'
     | '/assistente'
+    | '/comunidade'
     | '/escola'
     | '/estudos'
     | '/planos'
     | '/trilhas'
     | '/admin/aulas/$lessonId'
     | '/admin/cursos/$id'
+    | '/comunidade/privado/$conversaId'
     | '/admin/cursos'
+    | '/comunidade/privado'
     | '/escola/$slug'
     | '/escola/$slug/aula/$lessonSlug'
   id:
@@ -530,13 +564,16 @@ export interface FileRouteTypes {
     | '/api/escola/professor-tts'
     | '/_authenticated/admin/'
     | '/_authenticated/assistente/'
+    | '/_authenticated/comunidade/'
     | '/_authenticated/escola/'
     | '/_authenticated/estudos/'
     | '/_authenticated/planos/'
     | '/_authenticated/trilhas/'
     | '/_authenticated/admin/aulas/$lessonId'
     | '/_authenticated/admin/cursos/$id'
+    | '/_authenticated/comunidade/privado/$conversaId'
     | '/_authenticated/admin/cursos/'
+    | '/_authenticated/comunidade/privado/'
     | '/_authenticated/escola/$slug/'
     | '/_authenticated/escola/$slug/aula/$lessonSlug'
   fileRoutesById: FileRoutesById
@@ -750,6 +787,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAssistenteThreadIdRouteImport
       parentRoute: typeof AuthenticatedAssistenteRoute
     }
+    '/_authenticated/comunidade/': {
+      id: '/_authenticated/comunidade/'
+      path: '/'
+      fullPath: '/comunidade/'
+      preLoaderRoute: typeof AuthenticatedComunidadeIndexRouteImport
+      parentRoute: typeof AuthenticatedComunidadeRoute
+    }
     '/_authenticated/escola/': {
       id: '/_authenticated/escola/'
       path: '/'
@@ -841,6 +885,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminCursosIdRouteImport
       parentRoute: typeof AuthenticatedAdminRoute
     }
+    '/_authenticated/comunidade/privado/': {
+      id: '/_authenticated/comunidade/privado/'
+      path: '/privado'
+      fullPath: '/comunidade/privado/'
+      preLoaderRoute: typeof AuthenticatedComunidadePrivadoIndexRouteImport
+      parentRoute: typeof AuthenticatedComunidadeRoute
+    }
+    '/_authenticated/comunidade/privado/$conversaId': {
+      id: '/_authenticated/comunidade/privado/$conversaId'
+      path: '/privado/$conversaId'
+      fullPath: '/comunidade/privado/$conversaId'
+      preLoaderRoute: typeof AuthenticatedComunidadePrivadoConversaIdRouteImport
+      parentRoute: typeof AuthenticatedComunidadeRoute
+    }
     '/_authenticated/escola/$slug/': {
       id: '/_authenticated/escola/$slug/'
       path: '/'
@@ -893,6 +951,26 @@ const AuthenticatedAssistenteRouteChildren: AuthenticatedAssistenteRouteChildren
 const AuthenticatedAssistenteRouteWithChildren =
   AuthenticatedAssistenteRoute._addFileChildren(
     AuthenticatedAssistenteRouteChildren,
+  )
+
+interface AuthenticatedComunidadeRouteChildren {
+  AuthenticatedComunidadeIndexRoute: typeof AuthenticatedComunidadeIndexRoute
+  AuthenticatedComunidadePrivadoConversaIdRoute: typeof AuthenticatedComunidadePrivadoConversaIdRoute
+  AuthenticatedComunidadePrivadoIndexRoute: typeof AuthenticatedComunidadePrivadoIndexRoute
+}
+
+const AuthenticatedComunidadeRouteChildren: AuthenticatedComunidadeRouteChildren =
+  {
+    AuthenticatedComunidadeIndexRoute: AuthenticatedComunidadeIndexRoute,
+    AuthenticatedComunidadePrivadoConversaIdRoute:
+      AuthenticatedComunidadePrivadoConversaIdRoute,
+    AuthenticatedComunidadePrivadoIndexRoute:
+      AuthenticatedComunidadePrivadoIndexRoute,
+  }
+
+const AuthenticatedComunidadeRouteWithChildren =
+  AuthenticatedComunidadeRoute._addFileChildren(
+    AuthenticatedComunidadeRouteChildren,
   )
 
 interface AuthenticatedEscolaSlugRouteChildren {
@@ -968,7 +1046,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedAdminRoute: typeof AuthenticatedAdminRouteWithChildren
   AuthenticatedAssistenteRoute: typeof AuthenticatedAssistenteRouteWithChildren
   AuthenticatedBibliaRoute: typeof AuthenticatedBibliaRoute
-  AuthenticatedComunidadeRoute: typeof AuthenticatedComunidadeRoute
+  AuthenticatedComunidadeRoute: typeof AuthenticatedComunidadeRouteWithChildren
   AuthenticatedConfiguracoesRoute: typeof AuthenticatedConfiguracoesRoute
   AuthenticatedDevocionalRoute: typeof AuthenticatedDevocionalRoute
   AuthenticatedDiarioRoute: typeof AuthenticatedDiarioRoute
@@ -988,7 +1066,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAdminRoute: AuthenticatedAdminRouteWithChildren,
   AuthenticatedAssistenteRoute: AuthenticatedAssistenteRouteWithChildren,
   AuthenticatedBibliaRoute: AuthenticatedBibliaRoute,
-  AuthenticatedComunidadeRoute: AuthenticatedComunidadeRoute,
+  AuthenticatedComunidadeRoute: AuthenticatedComunidadeRouteWithChildren,
   AuthenticatedConfiguracoesRoute: AuthenticatedConfiguracoesRoute,
   AuthenticatedDevocionalRoute: AuthenticatedDevocionalRoute,
   AuthenticatedDiarioRoute: AuthenticatedDiarioRoute,

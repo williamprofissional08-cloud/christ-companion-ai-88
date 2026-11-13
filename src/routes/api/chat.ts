@@ -105,6 +105,21 @@ export const Route = createFileRoute("/api/chat")({
             .maybeSingle();
           if (!thread.data) return new Response("Conversa não encontrada", { status: 404 });
 
+          // Nunca confiar em mensagens de assistente enviadas pelo cliente:
+          // o histórico é reconstruído a partir do banco e só a última
+          // mensagem do usuário vem da requisição.
+          const { data: historyRows } = await auth.supabase
+            .from("chat_messages")
+            .select("message")
+            .eq("thread_id", threadId)
+            .eq("user_id", auth.userId)
+            .order("created_at", { ascending: true })
+            .limit(MAX_CHAT_MESSAGES);
+          const trustedHistory = (historyRows ?? []).map(
+            (row) => row.message as unknown as UIMessage,
+          );
+          const conversationMessages = [...trustedHistory, last];
+
           const { error: saveUserError } = await auth.supabase.from("chat_messages").insert({
             user_id: auth.userId,
             thread_id: threadId,
@@ -132,7 +147,7 @@ export const Route = createFileRoute("/api/chat")({
           const result = streamText({
             model: aiResponsesModel((request.headers.get("authorization") ?? "").slice(7)),
             system: BIBLICAL_SYSTEM_PROMPT,
-            messages: await convertToModelMessages(uiMessages),
+            messages: await convertToModelMessages(conversationMessages),
             maxRetries: 2,
             onError: ({ error }) => {
               console.error("chat stream error", error);
@@ -140,7 +155,7 @@ export const Route = createFileRoute("/api/chat")({
           });
 
           return result.toUIMessageStreamResponse({
-            originalMessages: uiMessages,
+            originalMessages: conversationMessages,
             sendReasoning: true,
             onError: (error) => aiErrorMessage(error),
             onFinish: async ({ responseMessage }) => {

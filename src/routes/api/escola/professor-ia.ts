@@ -89,10 +89,14 @@ export const Route = createFileRoute("/api/escola/professor-ia")({
           const context = await loadLessonContext(auth.supabase, auth.userId, lessonId);
           if (!context) return new Response("Aula não disponível", { status: 404 });
 
+          // Descartar mensagens de assistente enviadas pelo cliente para
+          // impedir injeção de respostas falsas no contexto do modelo.
+          const safeMessages = messages.filter((message) => message.role === "user");
+
           const result = streamText({
             model: aiResponsesModel((request.headers.get("authorization") ?? "").slice(7)),
             system: buildProfessorSystemPrompt(context),
-            messages: await convertToModelMessages(messages),
+            messages: await convertToModelMessages(safeMessages),
             maxRetries: 2,
             onError: ({ error }) => {
               console.error("professor-ia stream error", error);
