@@ -18,7 +18,7 @@ export function GlobalBackgroundMusic() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <aside aria-label="Música ambiente Agnus Dei">
+    <aside aria-label="Música ambiente Agnus Dei" className="lg:hidden">
       <button
         type="button"
         onClick={() => setIsPlaying((playing) => !playing)}
