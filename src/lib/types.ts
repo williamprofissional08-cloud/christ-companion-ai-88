@@ -1,6 +1,8 @@
 export type DevotionalContent = {
   theme: string;
   verse: { reference: string; text: string; kind?: "verse" | "synthesis" };
+  context: string;
+  biblicalMeaning: string;
   reflection: string;
   application: string;
   prayer: string;
