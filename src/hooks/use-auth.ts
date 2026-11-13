@@ -109,13 +109,14 @@ export function useAuth() {
 }
 
 export function useTheme() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    if (typeof window === "undefined") return "light";
+    return localStorage.getItem("ccc-theme") === "dark" ? "dark" : "light";
+  });
 
   useEffect(() => {
-    const stored = (localStorage.getItem("ccc-theme") as "light" | "dark" | null) ?? "light";
-    setTheme(stored);
-    document.documentElement.classList.toggle("dark", stored === "dark");
-  }, []);
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
 
   const toggle = () => {
     const next = theme === "dark" ? "light" : "dark";
