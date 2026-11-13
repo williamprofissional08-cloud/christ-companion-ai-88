@@ -2,7 +2,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import {
   BookOpen, Compass, Flame, GraduationCap, HeartHandshake, Home, LogOut,
   MessageCircleHeart, Moon, NotebookPen, FilePenLine, Route as RouteIcon,
-  Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreHorizontal, UserRound,
+  Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreVertical, UserRound,
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -101,8 +101,8 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
             <div className="lg:hidden">
               <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="sm" className="gap-2 rounded-full" aria-label="Abrir menu Mais">
-                    <MoreHorizontal className="size-4" /> Mais
+                  <Button variant="outline" size="icon" className="rounded-full" aria-label="Abrir menu">
+                    <MoreVertical className="size-5" />
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="flex w-[min(21rem,88vw)] flex-col overflow-y-auto border-sidebar-border bg-sidebar px-4 py-6 dark:border-slate-800 dark:bg-[#08182c]">
