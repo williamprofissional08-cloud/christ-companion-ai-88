@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { Music2, X } from "lucide-react";
 
-const SPOTIFY_EMBED_URL =
-  "https://open.spotify.com/embed/album/37WOTFMwBPcaY5REpVEApw?utm_source=generator&theme=0";
+const YOUTUBE_VIDEO_ID = "HR9coYxhYKw";
+const YOUTUBE_EMBED_URL =
+  "https://www.youtube-nocookie.com/embed/" +
+  YOUTUBE_VIDEO_ID +
+  "?controls=1&loop=1&playlist=" + YOUTUBE_VIDEO_ID + "&playsinline=1&rel=0";
 
 /**
- * Compact, persistent music launcher for the official Depths of Worship release.
+ * Compact, persistent launcher for the artist's official Agnus Dei video.
  *
- * The player is supplied by Spotify's official embed, not copied or re-hosted.
- * It stays mounted in the authenticated layout so route changes do not interrupt
- * playback. Spotify/browser policy requires the listener to press Play; autoplay
- * cannot be guaranteed from a third-party embed.
+ * YouTube's official embed handles playback and looping; the app does not
+ * download, extract, or re-host the recording. The player remains mounted in
+ * the authenticated layout while the user navigates between app routes.
+ * The listener must press Play because browser autoplay is not guaranteed.
  */
 export function GlobalBackgroundMusic() {
   const [expanded, setExpanded] = useState(false);
@@ -30,7 +33,7 @@ export function GlobalBackgroundMusic() {
                   Agnus Dei
                 </p>
                 <p className="truncate text-[11px] text-slate-500 dark:text-slate-400">
-                  Depths of Worship
+                  Depths of Worship · reprodução contínua
                 </p>
               </div>
             </div>
@@ -44,13 +47,15 @@ export function GlobalBackgroundMusic() {
             </button>
           </div>
           <iframe
-            title="Agnus Dei — Depths of Worship no Spotify"
-            src={SPOTIFY_EMBED_URL}
+            title="Agnus Dei — Depths of Worship no YouTube"
+            src={YOUTUBE_EMBED_URL}
             width="100%"
-            height="152"
+            height="200"
             style={{ border: 0, display: "block" }}
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
             loading="lazy"
+            allowFullScreen
           />
         </section>
       ) : null}
