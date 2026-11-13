@@ -107,7 +107,10 @@ export function devotionalLibrarySize(): number {
 }
 
 export function fallbackDevotional(day: string, selection = 0): DevotionalContent {
-  const dayNumber = Math.floor(Date.parse(`${day}T00:00:00Z`) / 86_400_000);\n  const rotationBase = Number.isFinite(dayNumber) ? dayNumber : hash(day);\n  const size = devotionalLibrarySize();\n  const index = ((rotationBase + selection) % size + size) % size;
+  const dayNumber = Math.floor(Date.parse(`${day}T00:00:00Z`) / 86_400_000);
+  const rotationBase = Number.isFinite(dayNumber) ? dayNumber : hash(day);
+  const size = devotionalLibrarySize();
+  const index = ((rotationBase + selection) % size + size) % size;
   const book = BOOKS[Math.floor(index / THEMES.length)]!;
   const theme = THEMES[index % THEMES.length]!;
   const reference = book[1]
