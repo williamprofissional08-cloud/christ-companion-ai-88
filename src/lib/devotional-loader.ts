@@ -10,6 +10,8 @@ function isCompleteDevotional(value: unknown): value is DevotionalContent {
     typeof content.theme === "string" && content.theme.trim() &&
     content.verse && typeof content.verse.reference === "string" && content.verse.reference.trim() &&
     typeof content.verse.text === "string" && content.verse.text.trim() &&
+    typeof content.context === "string" && content.context.trim() &&
+    typeof content.biblicalMeaning === "string" && content.biblicalMeaning.trim() &&
     typeof content.reflection === "string" && content.reflection.trim() &&
     typeof content.application === "string" && content.application.trim() &&
     typeof content.prayer === "string" && content.prayer.trim() &&
