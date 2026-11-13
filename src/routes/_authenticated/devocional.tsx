@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
 import { BookOpen, CalendarDays, Check, ChevronRight, Flame, Lightbulb, MessageCircle, Sparkles } from "lucide-react";
@@ -11,6 +11,7 @@ import { getDevotional } from "@/lib/ai.functions";
 import { loadDevotionalSafely } from "@/lib/devotional-loader";
 import { fallbackDevotional, devotionalLibrarySize } from "@/lib/content/fallback-devotional";
 import { useBrazilDay } from "@/hooks/use-brazil-day";
+import { BIBLE_BOOKS, parseBibleReference } from "@/lib/bible-catalog";
 
 export const Route = createFileRoute("/_authenticated/devocional")({
   head: () => ({
@@ -28,6 +29,79 @@ export const Route = createFileRoute("/_authenticated/devocional")({
   }),
   component: DevocionalPage,
 });
+
+
+const bibleBookPattern = BIBLE_BOOKS
+  .map((book) => book.name.replace(/[.*+?^${}()|[\]\\]/g, "\\
+function ScriptureReferenceChips({ references }: { references: string[] }) {
+  const all = references.flatMap((value) => {
+    scriptureReferencePattern.lastIndex = 0;
+    return Array.from(value.matchAll(scriptureReferencePattern), (match) => match[1] ?? "");
+  });
+  const unique = [...new Set(all.map((value) => value.trim()).filter(Boolean))];
+  if (!unique.length) {
+    return <span className="text-xs text-muted-foreground">A passagem principal está indicada acima.</span>;
+  }
+  return (
+    <>
+      {unique.map((reference) => {
+        const parsed = parseBibleReference(reference.split(/[-–]/)[0]?.trim());
+        if (!parsed) return null;
+        return (
+          <Link
+            key={reference}
+            to="/biblia"
+            search={{
+              livro: parsed.livro,
+              capitulo: parsed.capitulo,
+              ...(parsed.versiculo ? { versiculo: parsed.versiculo } : {}),
+            }}
+            className="inline-flex min-h-9 items-center rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-800 shadow-sm transition-colors hover:bg-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring dark:border-blue-800 dark:bg-slate-900 dark:text-blue-200 dark:hover:bg-blue-950"
+          >
+            {reference}
+          </Link>
+        );
+      })}
+    </>
+  );
+}
+
+function DevocionalPage() {"))
+  .sort((a, b) => b.length - a.length)
+  .join("|");
+const scriptureReferencePattern = new RegExp(
+  `((?:${bibleBookPattern})\\s+\\d{1,3}(?::\\d{1,3}(?:\\s*[-–]\\s*\\d{1,3})?)?(?:\\s*[-–]\\s*\\d{1,3})?)`,
+  "gi",
+);
+
+function ScriptureText({ text }: { text: string }) {
+  const parts = text.split(scriptureReferencePattern);
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (index % 2 === 0) return <span key={index}>{part}</span>;
+        const firstReference = part.split(/[-–]/)[0]?.trim() ?? part;
+        const parsed = parseBibleReference(firstReference);
+        if (!parsed) return <span key={index}>{part}</span>;
+        return (
+          <Link
+            key={index}
+            to="/biblia"
+            search={{
+              livro: parsed.livro,
+              capitulo: parsed.capitulo,
+              ...(parsed.versiculo ? { versiculo: parsed.versiculo } : {}),
+            }}
+            className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-blue-800 dark:hover:text-blue-300"
+            title={`Abrir ${part} na Bíblia`}
+          >
+            {part}
+          </Link>
+        );
+      })}
+    </>
+  );
+}
 
 function DevocionalPage() {
   const day = useBrazilDay();
@@ -107,7 +181,7 @@ function DevocionalPage() {
             <div className="max-w-3xl">
               <p id="verse-heading" className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary dark:text-blue-300"><span className="h-1 w-8 rounded-full bg-amber-400" />{isSynthesis ? "Síntese para meditação" : "Palavra do dia"}</p>
               <p className="mt-6 font-display text-2xl font-semibold leading-snug tracking-tight text-[#142d59] dark:text-white sm:text-3xl lg:text-4xl">“{verseText}”</p>
-              <p className="mt-6 flex items-center gap-2 text-sm font-bold uppercase tracking-[0.16em] text-slate-600 dark:text-slate-300"><span className="h-1 w-6 rounded-full bg-amber-400" />{displayedData.verse.reference}</p>
+              <p className="mt-6 flex items-center gap-2 text-sm font-bold uppercase tracking-[0.16em] text-slate-600 dark:text-slate-300"><span className="h-1 w-6 rounded-full bg-amber-400" /><ScriptureText text={displayedData.verse.reference} /></p>
             </div>
             <div className="mt-8 flex items-center gap-2 border-t border-blue-900/10 pt-4 text-sm italic text-slate-600 dark:border-white/10 dark:text-slate-300"><Sparkles className="size-4 shrink-0 text-amber-500" aria-hidden="true" />{displayedData.theme}</div>
           </section>
@@ -125,7 +199,7 @@ function DevocionalPage() {
                         <h2 className="font-display text-lg font-semibold text-[#142d59] dark:text-foreground">{block.label}</h2>
                         {index === 0 ? <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary dark:text-blue-300">Hoje</span> : null}
                       </div>
-                      <p className="mt-2 text-sm leading-7 text-muted-foreground sm:text-[15px]">{block.text}</p>
+                      <p className="mt-2 whitespace-pre-line text-sm leading-7 text-muted-foreground sm:text-[15px]"><ScriptureText text={block.text} /></p>
                     </div>
                     {index === 0 ? <ChevronRight className="mt-2 size-5 shrink-0 text-primary" aria-hidden="true" /> : null}
                   </div>
@@ -133,7 +207,7 @@ function DevocionalPage() {
               );
             })}
           </section>
-          <p className="mt-5 flex items-center justify-center gap-2 text-center text-xs text-muted-foreground"><Check className="size-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />Reserve alguns minutos para caminhar com esta mensagem.</p>
+          <section aria-label="Referências bíblicas deste devocional" className="mt-5 rounded-2xl border border-blue-100 bg-blue-50/60 p-4 dark:border-blue-900/60 dark:bg-blue-950/25 sm:p-5"><div className="flex items-center gap-2"><BookOpen className="size-4 text-primary" aria-hidden="true" /><h2 className="text-sm font-semibold text-[#142d59] dark:text-foreground">Leia também na Bíblia</h2></div><p className="mt-1 text-xs leading-relaxed text-muted-foreground">Toque em qualquer referência para abrir diretamente o livro, capítulo e versículo na Bíblia do aplicativo. Quando houver um intervalo, a leitura será aberta no primeiro versículo indicado.</p><div className="mt-3 flex flex-wrap gap-2"><ScriptureReferenceChips references={[displayedData.verse.reference, displayedData.readingSuggestion, displayedData.reflection, displayedData.application, displayedData.prayer, displayedData.challenge, displayedData.question]} /></div></section><p className="mt-5 flex items-center justify-center gap-2 text-center text-xs text-muted-foreground"><Check className="size-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />Reserve alguns minutos para caminhar com esta mensagem.</p>
         </ExportCard>
       </div>
     </AppShell>
