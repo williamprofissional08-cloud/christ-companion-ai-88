@@ -17,7 +17,8 @@ export const getDashboard = createServerFn({ method: "GET" })
       supabase.from("goals").select("*").eq("user_id", userId).order("created_at", { ascending: true }),
       supabase.from("plan_progress").select("*").eq("user_id", userId).order("updated_at", { ascending: false }),
       supabase.from("journal_entries").select("*").eq("user_id", userId).order("created_at", { ascending: false }).limit(5),
-      supabase.from("habit_days").select("day, habits").eq("user_id", userId).order("day", { ascending: false }).limit(30),\n      supabase.from("track_progress").select("track_slug, completed_steps, updated_at").eq("user_id", userId).order("updated_at", { ascending: false }),
+      supabase.from("habit_days").select("day, habits").eq("user_id", userId).order("day", { ascending: false }).limit(30),
+      supabase.from("track_progress").select("track_slug, completed_steps, updated_at").eq("user_id", userId).order("updated_at", { ascending: false }),
     ]);
     for (const result of [devotional, habits, goals, plans, journal, streakRows, trackProgress]) {
       if (result.error) throw new Error("Não foi possível carregar os dados do painel.");
@@ -28,7 +29,8 @@ export const getDashboard = createServerFn({ method: "GET" })
       goals: goals.data ?? [],
       plans: plans.data ?? [],
       journal: journal.data ?? [],
-      history: (streakRows.data ?? []) as { day: string; habits: Record<string, boolean> }[],\n      trackProgress: trackProgress.data ?? [],
+      history: (streakRows.data ?? []) as { day: string; habits: Record<string, boolean> }[],
+      trackProgress: trackProgress.data ?? [],
     };
   });
 
