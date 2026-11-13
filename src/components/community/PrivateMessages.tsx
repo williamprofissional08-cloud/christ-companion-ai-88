@@ -205,11 +205,10 @@ export function PrivateMessagesList() {
     }
     setStarting(member.id);
     const [userA, userB] = [user.id, member.id].sort();
-    let conversation: Conversation | null = null;
     const { data: existing } = await db.from("conversas").select("id,user_a,user_b,criado_em")
       .eq("user_a", userA).eq("user_b", userB).maybeSingle();
-    if (existing) conversation = existing as Conversation;
-    else {
+    let conversation: Conversation | null = existing as Conversation | null;
+    if (!conversation) {
       const { error: insertError } = await db.from("conversas").insert({ user_a: userA, user_b: userB });
       if (insertError && !insertError.message.toLowerCase().includes("duplicate")) {
         toast.error("Não foi possível iniciar a conversa. Confirme a amizade e verifique se não há bloqueio.");
@@ -221,7 +220,7 @@ export function PrivateMessagesList() {
       conversation = created as Conversation | null;
     }
     setStarting(null);
-    if (conversation) window.location.href = "/comunidade/privado/" + conversation.id;
+    if (conversation) window.location.assign("/comunidade/privado/" + conversation.id);
     else toast.error("A conversa não pôde ser aberta. Verifique se não há bloqueio entre as contas.");
   }
 
