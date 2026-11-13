@@ -55,7 +55,13 @@ function preferencesPrompt(prefs?: GenerationPreferences) {
 function missingReferenceFields(value: unknown, fields: string[]): string[] {
   const obj = value as Record<string, unknown>;
   return fields.filter((field) => {
-    const raw = obj?.[field];
+    const raw = field.split(".").reduce<unknown>(
+      (current, key) =>
+        current && typeof current === "object"
+          ? (current as Record<string, unknown>)[key]
+          : undefined,
+      obj,
+    );
     const text = Array.isArray(raw) ? raw.join(" ") : typeof raw === "string" ? raw : "";
     return !hasReference(text);
   });
@@ -99,6 +105,12 @@ async function generateJson<T>(prompt: string, requiredRefFields: string[] = [])
         system,
       );
       parsed = parseJsonLoose<T>(text);
+      const stillMissing = missingReferenceFields(parsed, requiredRefFields);
+      if (stillMissing.length) {
+        throw new Error(
+          `O conteúdo gerado não apresentou referências bíblicas completas nos campos: ${stillMissing.join(", ")}.`,
+        );
+      }
     }
   }
   return parsed;
@@ -119,9 +131,9 @@ ${recentHistory}
 Regra obrigatória de variedade: não reutilize o mesmo livro bíblico + capítulo, a mesma passagem principal, o mesmo tema central nem apenas troque palavras de um devocional recente. Evite também escolher um texto que seja apenas uma continuação imediata da mesma passagem. Considere os últimos 14 dias como janela de bloqueio; depois desse período, uma passagem pode voltar a ser usada ocasionalmente, desde que o enfoque e a aplicação sejam realmente diferentes.
 Alterne deliberadamente entre livros e gêneros bíblicos (Evangelhos, Lei, históricos, poesia/sabedoria, profetas, cartas), personagens, contextos e temas. Escolha uma passagem adequada e pouco recente, com contexto interpretado corretamente; não escolha sempre Mateus ou Salmos. Cada dia deve trazer uma abordagem bíblica distinta e substancial, não um texto genérico reciclado.
 Responda em JSON com as chaves:
-{"theme":"tema curto e específico","verse":{"reference":"Livro capítulo:versículo","text":"texto do versículo (tradução em domínio público, estilo Almeida)"},"reflection":"3 a 5 parágrafos curtos explicando o contexto e a mensagem do texto","application":"aplicação prática concreta para hoje","prayer":"oração em primeira pessoa coerente com a passagem","challenge":"desafio espiritual do dia, uma frase","question":"pergunta específica para reflexão","motivational":"frase fundamentada na passagem com referência","readingSuggestion":"sugestão complementar de leitura diferente da passagem principal"}
+{"theme":"tema curto e específico","verse":{"reference":"Livro capítulo:versículo completo (por exemplo, João 3:16)","text":"texto do versículo (tradução em domínio público, estilo Almeida)"},"reflection":"3 a 5 parágrafos curtos explicando o contexto e a mensagem do texto","application":"aplicação prática concreta para hoje","prayer":"oração em primeira pessoa coerente com a passagem","challenge":"desafio espiritual do dia, uma frase","question":"pergunta específica para reflexão","motivational":"frase fundamentada na passagem com referência","readingSuggestion":"sugestão complementar com pelo menos uma referência completa Livro capítulo:versículo, diferente da passagem principal"}
 Use apenas ensino fiel às Escrituras, cite referências completas e diferencie o sentido original do texto da aplicação atual. Não invente citações bíblicas.${preferencesPrompt(prefs)}`,
-    ["reflection", "application", "prayer", "challenge", "motivational", "readingSuggestion"],
+    ["verse.reference", "reflection", "application", "prayer", "challenge", "motivational", "readingSuggestion"],
   );
 }
 

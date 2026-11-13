@@ -110,7 +110,10 @@ export function fallbackDevotional(day: string, selection = 0): DevotionalConten
   const index = hash(day + ":" + selection) % devotionalLibrarySize();
   const book = BOOKS[Math.floor(index / THEMES.length)]!;
   const theme = THEMES[index % THEMES.length]!;
-  const reference = book[0] + " " + book[1];
+  const reference = book[1]
+    .split(";")
+    .map((passage) => book[0] + " " + passage.trim())
+    .join("; ");
   const bookContext = book[2];
 
   return {
