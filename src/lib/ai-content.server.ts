@@ -105,6 +105,12 @@ async function generateJson<T>(prompt: string, requiredRefFields: string[] = [])
         system,
       );
       parsed = parseJsonLoose<T>(text);
+      const stillMissing = missingReferenceFields(parsed, requiredRefFields);
+      if (stillMissing.length) {
+        throw new Error(
+          `O conteúdo gerado não apresentou referências bíblicas completas nos campos: ${stillMissing.join(", ")}.`,
+        );
+      }
     }
   }
   return parsed;
