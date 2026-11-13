@@ -55,7 +55,13 @@ function preferencesPrompt(prefs?: GenerationPreferences) {
 function missingReferenceFields(value: unknown, fields: string[]): string[] {
   const obj = value as Record<string, unknown>;
   return fields.filter((field) => {
-    const raw = field.split(".").reduce<unknown>((current, key) =>\n      current && typeof current === "object" ? (current as Record<string, unknown>)[key] : undefined,\n      obj,\n    );
+    const raw = field.split(".").reduce<unknown>(
+      (current, key) =>
+        current && typeof current === "object"
+          ? (current as Record<string, unknown>)[key]
+          : undefined,
+      obj,
+    );
     const text = Array.isArray(raw) ? raw.join(" ") : typeof raw === "string" ? raw : "";
     return !hasReference(text);
   });
