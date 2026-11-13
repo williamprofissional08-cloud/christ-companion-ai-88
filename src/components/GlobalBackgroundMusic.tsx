@@ -32,9 +32,12 @@ export function GlobalBackgroundMusic() {
 
     try {
       shouldPlay = window.localStorage.getItem(PLAYBACK_KEY) !== "false";
-      const storedVolume = Number(window.localStorage.getItem(VOLUME_KEY));
-      if (Number.isFinite(storedVolume) && storedVolume >= 0 && storedVolume <= 1) {
-        initialVolume = storedVolume;
+      const storedVolumeValue = window.localStorage.getItem(VOLUME_KEY);
+      if (storedVolumeValue !== null) {
+        const storedVolume = Number(storedVolumeValue);
+        if (Number.isFinite(storedVolume) && storedVolume >= 0 && storedVolume <= 1) {
+          initialVolume = storedVolume;
+        }
       }
     } catch {
       // O player continua funcional mesmo quando o armazenamento está indisponível.
