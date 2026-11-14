@@ -152,6 +152,11 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
             )}
             {homeHeader && (
               <div className="flex shrink-0 items-center gap-1">
+                <span
+                  id="home-music-control-slot-desktop"
+                  className="hidden size-10 shrink-0 items-center justify-center lg:inline-flex"
+                  aria-label="Controle de música ambiente"
+                />
                 <Link to="/pesquisa" aria-label="Pesquisar" className="flex size-8 sm:size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Search className="size-5" /></Link>
                 <Link to="/configuracoes" aria-label="Notificações e preferências" className="flex size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Bell className="size-5" /></Link>
               </div>
