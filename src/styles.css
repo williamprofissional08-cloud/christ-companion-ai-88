@@ -322,3 +322,88 @@ a[href*="lovable.dev"][style*="position: fixed"] {
     background-attachment: fixed;
   }
 }
+
+
+/* Home dashboard — compact first-view composition, scoped only to /inicio.
+   Never clip cards: very short viewports may scroll for accessibility. */
+.home-dash { display: grid; gap: clamp(6px, 0.85vh, 12px); width: 100%; }
+.home-hero { min-height: 112px; padding: clamp(12px, 1.7vh, 24px) clamp(14px, 1.7vw, 28px); }
+.home-hero h1 { font-size: clamp(1.15rem, 2.2vw, 2rem); line-height: 1.15; }
+.home-hero blockquote { margin-top: 7px; font-size: clamp(.78rem, 1.25vw, 1rem); line-height: 1.35; }
+.home-hero p { margin-top: 4px; font-size: .75rem; }
+.home-summary { gap: clamp(5px, .6vw, 12px); }
+.home-stat { min-height: 90px; padding: clamp(8px, 1.1vw, 15px); }
+.home-stat svg { height: 24px; width: 24px; margin-bottom: 5px; flex-shrink: 0; }
+.home-stat h2 { font-size: clamp(.72rem, .9vw, .95rem); line-height: 1.2; }
+.home-stat p { padding-top: 5px; font-size: clamp(.7rem, .9vw, .9rem); line-height: 1.2; }
+.home-middle { min-width: 0; gap: clamp(6px, .75vw, 12px); }
+.home-devotional, .home-continue { min-height: 135px; padding: clamp(12px, 1.2vw, 20px); }
+.home-devotional p.font-serif { margin-top: 8px; font-size: clamp(1.1rem, 1.65vw, 1.45rem); line-height: 1.22; }
+.home-devotional a { margin-top: 10px; }
+.home-continue h2 { font-size: clamp(.9rem, 1.3vw, 1.2rem); }
+.home-continue > div:nth-child(2) { margin-top: 9px; padding: 10px; gap: 8px; }
+.home-access { padding: clamp(10px, 1vw, 18px); }
+.home-access h2 { margin-bottom: 8px; font-size: clamp(.95rem, 1.2vw, 1.2rem); }
+.home-shortcuts { gap: clamp(4px, .65vw, 10px); }
+.home-shortcut { min-height: 70px; padding: 6px 3px; gap: 4px; }
+.home-shortcut svg { width: 24px; height: 24px; flex-shrink: 0; }
+.home-shortcut span { font-size: clamp(.65rem, .85vw, .84rem); line-height: 1.15; overflow-wrap: anywhere; }
+.home-course { padding: clamp(10px, 1.1vw, 18px); }
+.home-course h2 { font-size: clamp(.95rem, 1.3vw, 1.35rem); line-height: 1.2; }
+.home-course p { margin-top: 4px; font-size: .75rem; }
+.home-course a { min-height: 40px; font-size: .8rem; }
+
+@media (min-width: 1024px) {
+  .home-dash { gap: clamp(8px, 1vh, 13px); }
+  .home-hero { min-height: 105px; }
+  .home-summary { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .home-shortcuts { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .home-course > div:last-child { align-items: center; }
+}
+@media (max-width: 639px) {
+  .home-dash { gap: 6px; }
+  .home-hero { min-height: 87px; padding: 10px 12px; border-radius: 16px; }
+  .home-hero h1 { font-size: 1.12rem; }
+  .home-hero blockquote { margin-top: 3px; font-size: .73rem; line-height: 1.18; }
+  .home-hero p { margin-top: 2px; font-size: .66rem; }
+  .home-summary { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 4px; }
+  .home-stat { min-height: 78px; border-radius: 12px; padding: 7px 5px; }
+  .home-stat svg { width: 19px; height: 19px; margin-bottom: 3px; }
+  .home-stat h2 { font-size: .62rem; line-height: 1.12; }
+  .home-stat p { font-size: .61rem; line-height: 1.15; padding-top: 4px; overflow-wrap: anywhere; }
+  .home-middle { grid-template-columns: minmax(0,1fr); gap: 6px; }
+  .home-devotional, .home-continue { min-height: 0; border-radius: 14px; padding: 9px 11px; }
+  .home-devotional h2 { font-size: .75rem; }
+  .home-devotional p.font-serif { margin-top: 4px; font-size: .97rem; line-height: 1.2; }
+  .home-devotional p.text-sm { margin-top: 2px; font-size: .65rem; }
+  .home-devotional a { margin-top: 5px; min-height: 34px; padding: 4px 12px; font-size: .72rem; }
+  .home-continue h2 { font-size: .8rem; }
+  .home-continue h2 svg { width: 17px; height: 17px; }
+  .home-continue > div:nth-child(2) { margin-top: 5px; padding: 6px 8px; gap: 4px; }
+  .home-continue > div:nth-child(2) p { font-size: .7rem; line-height: 1.2; margin-top: 0; }
+  .home-continue > div:nth-child(2) a { min-height: 32px; padding: 5px 10px; font-size: .7rem; }
+  .home-access { border-radius: 14px; padding: 8px; }
+  .home-access h2 { margin-bottom: 6px; font-size: .83rem; }
+  .home-access h2 svg { width: 17px; height: 17px; }
+  .home-shortcuts { grid-template-columns: repeat(5, minmax(0,1fr)); gap: 4px; }
+  .home-shortcut { min-height: 65px; padding: 4px 2px; border-radius: 10px; gap: 3px; }
+  .home-shortcut svg { width: 20px; height: 20px; }
+  .home-shortcut span { font-size: .57rem; line-height: 1.13; }
+  .home-course { border-radius: 14px; padding: 8px 11px; }
+  .home-course > div:last-child { gap: 5px; }
+  .home-course h2 { font-size: .88rem; }
+  .home-course p { font-size: .61rem; }
+  .home-course a { min-height: 32px; padding: 5px 10px; font-size: .7rem; }
+}
+@media (max-width: 359px) {
+  .home-summary { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .home-shortcuts { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .home-shortcut span { font-size: .67rem; }
+}
+@media (max-height: 680px) and (min-width: 360px) {
+  /* Keep all sections accessible instead of clipping for undersized displays. */
+  .home-dash { gap: 5px; }
+  .home-hero { min-height: 75px; }
+  .home-stat { min-height: 68px; }
+  .home-shortcut { min-height: 57px; }
+}
