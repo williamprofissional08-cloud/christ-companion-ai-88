@@ -18,6 +18,42 @@ export const proverbs28Study: StudyContent = {
     {
       "title": "Confissão e generosidade",
       "text": "Misericórdia acompanha abandono do erro, e o cuidado aos pobres exige ação (28:13,27)."
+    },
+    {
+      "title": "Consciência e coragem",
+      "text": "Provérbios 28:1 contrapõe fuga de quem pratica o mal e confiança do justo, sem culpar quem sente medo."
+    },
+    {
+      "title": "Governantes responsáveis",
+      "text": "Provérbios 28:2–3 denuncia instabilidade e opressão e valoriza liderança prudente."
+    },
+    {
+      "title": "Instrução e discernimento",
+      "text": "Provérbios 28:4–5 associa a busca do Senhor ao compromisso com justiça, sem exigir onisciência."
+    },
+    {
+      "title": "Trabalho e honestidade",
+      "text": "Provérbios 28:6–8 e 19–22 adverte contra exploração, riqueza apressada e ganhos desonestos."
+    },
+    {
+      "title": "Oração e coerência",
+      "text": "Provérbios 28:9–10 relaciona religiosidade exterior à responsabilidade pelo próximo."
+    },
+    {
+      "title": "Confissão e mudança",
+      "text": "Provérbios 28:13 insiste em reconhecer e abandonar erros, sem dispensar reparação."
+    },
+    {
+      "title": "Poder e medo público",
+      "text": "Provérbios 28:12,15–16 e 28 confronta o domínio dos opressores."
+    },
+    {
+      "title": "Humildade e correção",
+      "text": "Provérbios 28:14,23,25–26 recomenda ouvir e corrigir atitudes, não agir com arrogância."
+    },
+    {
+      "title": "Generosidade",
+      "text": "Provérbios 28:27 conclama ao cuidado concreto dos pobres sem garantir retorno financeiro."
     }
   ],
   "application": "**Examine o contexto:** Justiça, integridade e poder. **Evite conclusões mecânicas:** uma máxima não garante riqueza ou proteção física para todos, e uma observação de sofrimento não recomenda resignação diante de abuso. Os contrastes entre justo e perverso não permitem identificar pobreza com culpa, nem afirmar que governantes atuais são julgados por Deus de maneira que o leitor possa certificar. Pergunte como a comunidade pode praticar justiça e apoiar quem está em situação vulnerável. Procure uma ação verificável — ouvir antes de julgar, recusar corrupção, ajudar alguém em necessidade, cultivar prudência nas decisões —, mas não a apresente como se estivesse escrita literalmente em cada versículo. A aplicação cristã deve reconhecer a complexidade das circunstâncias e a necessidade de ajuda profissional quando houver risco ou violência.\n\nA sabedoria de Provérbios 28 pode ser relacionada à ética de Jesus e ao chamado apostólico à justiça e à humildade. O ensino de **Mateus 5–7** questiona a aparência de piedade sem retidão, e **Marcos 10:42–45** rejeita o poder usado para dominar. **Tiago 3:13–18** associa sabedoria à mansidão e à paz. Esses textos não apagam o sentido próprio da literatura sapiencial de Israel, nem autorizam tratar todas as metáforas como códigos secretos sobre Jesus. Os contrastes entre justo e perverso não permitem identificar pobreza com culpa, nem afirmar que governantes atuais são julgados por Deus de maneira que o leitor possa certificar. A conexão cristã deve aparecer depois de explicar o contexto original e respeitar o que cada passagem realmente afirma.",
@@ -99,7 +135,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-1",
-      "title": "Versículo 1 — Consciência e coragem",
+      "title": "4. Versículo 1 — Consciência e coragem",
       "body": "**Paráfrase livre:** O perverso pode fugir sem perseguidor, enquanto o justo age com coragem.\n\n**Exegese e limite interpretativo:** O contraste associa a consciência inquieta à fuga e a integridade à confiança; não afirma que toda ansiedade revela culpa nem que pessoas íntegras nunca sentem medo.\n\n**Ampliação contextual e ética:** Esta máxima contrapõe estados de consciência e conduta, não exames clínicos. Pessoas honestas podem sentir medo devido a trauma ou risco real. A coragem do justo é horizonte sapiencial, não diagnóstico de quem vive ansiedade.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -110,7 +146,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-2",
-      "title": "Versículo 2 — Governo instável",
+      "title": "5. Versículo 2 — Governo instável",
       "body": "**Paráfrase livre:** Uma terra em conflito troca governantes, mas discernimento favorece estabilidade.\n\n**Exegese e limite interpretativo:** A observação relaciona desordem política e liderança prudente; não define um modelo de governo obrigatório nem condena toda alternância democrática.\n\n**Ampliação contextual e ética:** A observação sobre muitos chefes se relaciona a instabilidade política e não condena alternância democrática ou participação popular. O texto elogia discernimento no governo, não uma dinastia específica ou líder infalível.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -121,7 +157,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-3",
-      "title": "Versículo 3 — Opressor vulnerável",
+      "title": "6. Versículo 3 — Opressor vulnerável",
       "body": "**Paráfrase livre:** O pobre que oprime outros necessitados age como chuva que destrói a colheita.\n\n**Exegese e limite interpretativo:** A figura denuncia exploração praticada mesmo por quem conhece a privação. Não responsabiliza todos os pobres pela desigualdade.\n\n**Ampliação contextual e ética:** A metáfora da chuva devastadora é especialmente crítica quando alguém que conhece a pobreza explora seus semelhantes. Não atribua aos pobres, como grupo, responsabilidade pela própria opressão; a denúncia recai sobre o agente injusto.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -132,7 +168,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-4",
-      "title": "Versículo 4 — Lei e cumplicidade",
+      "title": "7. Versículo 4 — Lei e cumplicidade",
       "body": "**Paráfrase livre:** Abandonar a instrução justa favorece o perverso; guardá-la exige resistir ao mal.\n\n**Exegese e limite interpretativo:** O paralelismo liga fidelidade ética à oposição à injustiça; não autoriza perseguição nem violência contra discordantes.\n\n**Ampliação contextual e ética:** A Lei representa instrução moral e justiça no contexto de Israel. Resistir ao perverso não autoriza agressão a pessoas de outra religião ou opinião; exige uma postura ética contra práticas que prejudicam a comunidade.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -143,7 +179,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-5",
-      "title": "Versículo 5 — Buscar justiça",
+      "title": "8. Versículo 5 — Buscar justiça",
       "body": "**Paráfrase livre:** Quem pratica o mal perde discernimento sobre justiça; quem busca o Senhor aprende a reconhecê-la.\n\n**Exegese e limite interpretativo:** 'Entender tudo' é linguagem sapiencial enfática, não onisciência do fiel. A busca de Deus requer humildade e atenção aos fatos.\n\n**Ampliação contextual e ética:** A busca de Deus é ligada ao discernimento da justiça, mas a expressão ampla sobre entender não concede onisciência a religiosos. Avalie evidências, escute vítimas e evite afirmar conhecer todas as intenções dos envolvidos.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -154,7 +190,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-6",
-      "title": "Versículo 6 — Integridade na pobreza",
+      "title": "9. Versículo 6 — Integridade na pobreza",
       "body": "**Paráfrase livre:** Melhor viver com poucos recursos e integridade que enriquecer por caminhos desonestos.\n\n**Exegese e limite interpretativo:** A comparação avalia caráter, não idealiza miséria nem condena riqueza obtida justamente.\n\n**Ampliação contextual e ética:** O provérbio não romantiza a escassez nem rejeita todo patrimônio; compara honestidade e riqueza obtida de modo perverso. A dignidade de uma pessoa com renda baixa não depende de considerá-la moralmente superior a outras.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -165,7 +201,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-7",
-      "title": "Versículo 7 — Formação e companhia",
+      "title": "10. Versículo 7 — Formação e companhia",
       "body": "**Paráfrase livre:** Quem guarda a instrução demonstra prudência; companhias de excessos podem envergonhar a família.\n\n**Exegese e limite interpretativo:** O dito trata de escolhas e influência, não de rejeitar pessoas com dificuldades alimentares ou dependência.\n\n**Ampliação contextual e ética:** A imagem de companhias ligadas à gula ou excesso trata de influência e hábitos, não de desprezo por pessoas com necessidades alimentares ou dependência. A relação filial deve ser ensinada com cuidado, sem humilhação familiar.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -176,7 +212,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-8",
-      "title": "Versículo 8 — Juros e injustiça",
+      "title": "11. Versículo 8 — Juros e injustiça",
       "body": "**Paráfrase livre:** Lucros obtidos pela exploração podem acabar beneficiando quem cuida dos pobres.\n\n**Exegese e limite interpretativo:** O alvo são ganhos injustos; discussões sobre juros legítimos exigem distinguir práticas antigas de sistemas financeiros atuais.\n\n**Ampliação contextual e ética:** O enriquecimento mediante cobrança opressiva deve ser examinado no contexto das práticas econômicas antigas. Não se pode declarar toda operação de crédito moderna idêntica ao abuso condenado, nem justificar exploração financeira.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -187,7 +223,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-9",
-      "title": "Versículo 9 — Oração e obediência",
+      "title": "12. Versículo 9 — Oração e obediência",
       "body": "**Paráfrase livre:** Quem rejeita ouvir a instrução divina não deve usar oração como máscara de piedade.\n\n**Exegese e limite interpretativo:** O provérbio confronta incoerência moral; não autoriza declarar que Deus jamais escuta pessoas em crise ou dúvida.\n\n**Ampliação contextual e ética:** A crítica à oração acompanha recusa consciente da instrução moral. Não permite a líderes dizer que uma pessoa em sofrimento, confusão ou dúvida é incapaz de ser ouvida por Deus; o alvo é hipocrisia deliberada.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -198,7 +234,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-10",
-      "title": "Versículo 10 — Desviar o íntegro",
+      "title": "13. Versículo 10 — Desviar o íntegro",
       "body": "**Paráfrase livre:** Quem induz outra pessoa a um caminho mau pode cair na própria armadilha.\n\n**Exegese e limite interpretativo:** O paralelismo valoriza responsabilidade pela influência e aponta riscos do engano; não garante punição imediata.\n\n**Ampliação contextual e ética:** Induzir outros a caminhos injustos exige responsabilidade, mas o poema não garante que a pessoa enganadora cairá imediatamente numa armadilha literal. A aplicação pode incluir transparência em aconselhamento e educação.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -209,7 +245,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-11",
-      "title": "Versículo 11 — Riqueza e presunção",
+      "title": "14. Versículo 11 — Riqueza e presunção",
       "body": "**Paráfrase livre:** O rico pode considerar-se sábio, mas alguém pobre e perspicaz percebe suas falhas.\n\n**Exegese e limite interpretativo:** O contraste denuncia arrogância ligada a status e reconhece discernimento independentemente de renda.\n\n**Ampliação contextual e ética:** A riqueza pode provocar falsa autoconfiança, enquanto discernimento não depende de renda. Esse contraste não autoriza presumir que qualquer rico seja tolo ou que todo pobre seja justo; o critério é a capacidade de reconhecer a verdade.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -220,7 +256,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-12",
-      "title": "Versículo 12 — Poder e medo",
+      "title": "15. Versículo 12 — Poder e medo",
       "body": "**Paráfrase livre:** Quando pessoas justas prevalecem há alegria; sob poder perverso muitos se escondem.\n\n**Exegese e limite interpretativo:** A máxima avalia o impacto social da liderança; não oferece diagnóstico infalível de governos contemporâneos.\n\n**Ampliação contextual e ética:** O efeito coletivo da liderança aparece de modo observável: o poder injusto constrange a vida pública. O verso não oferece um método infalível de rotular governos atuais; a avaliação requer fatos e responsabilidade social.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -231,7 +267,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-13",
-      "title": "Versículo 13 — Confissão e mudança",
+      "title": "16. Versículo 13 — Confissão e mudança",
       "body": "**Paráfrase livre:** Esconder transgressões não conduz à restauração; confessá-las e abandoná-las abre caminho à misericórdia.\n\n**Exegese e limite interpretativo:** Confissão é acompanhada de mudança real, não simples exposição pública. Em casos de abuso, a proteção da vítima e a responsabilização permanecem essenciais.\n\n**Ampliação contextual e ética:** Confessar e abandonar transgressões inclui reconhecer dano e buscar reparação possível. Em situações de abuso ou crime, uma declaração de arrependimento não substitui responsabilização legal nem exige perdão imediato da vítima.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -242,7 +278,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-14",
-      "title": "Versículo 14 — Coração sensível",
+      "title": "17. Versículo 14 — Coração sensível",
       "body": "**Paráfrase livre:** É feliz quem permanece atento ao que é justo; endurecer-se diante da correção leva ao mal.\n\n**Exegese e limite interpretativo:** 'Temor' aqui envolve vigilância moral e reverência, não ansiedade paralisante ou terror psicológico.\n\n**Ampliação contextual e ética:** O temor ou reverência constante é atenção moral, não um estado permanente de pânico. O coração endurecido se refere à recusa de ouvir correção responsável, não a pessoas que procuram ajuda diante de medo ou sofrimento.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -253,7 +289,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-15",
-      "title": "Versículo 15 — Governante predatório",
+      "title": "18. Versículo 15 — Governante predatório",
       "body": "**Paráfrase livre:** Um governante injusto sobre os pobres é como leão rugidor ou urso faminto.\n\n**Exegese e limite interpretativo:** As feras figuram poder que ameaça e explora; o texto condena opressão, sem convocar violência contra autoridades.\n\n**Ampliação contextual e ética:** O leão e o urso faminto retratam o governante como ameaça aos pobres. A metáfora denuncia abuso do poder, mas não autoriza incitar violência física contra um político contemporâneo ou identificar um inimigo por mera discordância.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -264,7 +300,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-16",
-      "title": "Versículo 16 — Liderança sem ganância",
+      "title": "19. Versículo 16 — Liderança sem ganância",
       "body": "**Paráfrase livre:** Um dirigente sem discernimento multiplica abusos; rejeitar ganho desonesto favorece governo duradouro.\n\n**Exegese e limite interpretativo:** A duração é expectativa sapiencial, não promessa de longevidade pessoal a todo líder honesto.\n\n**Ampliação contextual e ética:** A rejeição do ganho desonesto é qualidade de administração responsável. A frase sobre prolongar dias pertence ao gênero de tendência sapiencial e não promete mandato político longo a toda pessoa honesta.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -275,7 +311,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-17",
-      "title": "Versículo 17 — Culpa de sangue",
+      "title": "20. Versículo 17 — Culpa de sangue",
       "body": "**Paráfrase livre:** Quem carrega culpa por tirar uma vida enfrenta inquietação e consequências graves.\n\n**Exegese e limite interpretativo:** O texto usa linguagem severa sobre homicídio; não deve impedir proteção legal, devido processo ou cuidado pastoral.\n\n**Ampliação contextual e ética:** O verso sobre sangue e cova tem linguagem judicial antiga intensa. Ele não substitui processo legal, não autoriza linchamento e não deve impedir proteção de uma pessoa em crise. O homicídio continua assunto sério de justiça e cuidado às vítimas.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -286,7 +322,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-18",
-      "title": "Versículo 18 — Caminho íntegro",
+      "title": "21. Versículo 18 — Caminho íntegro",
       "body": "**Paráfrase livre:** Quem vive com integridade encontra segurança moral; a duplicidade traz queda.\n\n**Exegese e limite interpretativo:** Segurança é imagem de resultado típico da sabedoria, não garantia de imunidade a acidentes ou perseguição.\n\n**Ampliação contextual e ética:** O contraste de caminhos íntegros e tortuosos recomenda coerência moral. Não deve ser isolado para garantir ausência de acidentes a quem age corretamente, pois outras passagens bíblicas reconhecem sofrimento de justos.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -297,7 +333,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-19",
-      "title": "Versículo 19 — Trabalho e sustento",
+      "title": "22. Versículo 19 — Trabalho e sustento",
       "body": "**Paráfrase livre:** Quem cultiva a terra tende a colher alimento; perseguir fantasias pode produzir necessidade.\n\n**Exegese e limite interpretativo:** O dito valoriza trabalho responsável, sem atribuir desemprego ou fome a falhas morais individuais.\n\n**Ampliação contextual e ética:** O trabalho agrícola é mencionado num cenário em que terra e colheita sustentavam famílias. A aplicação moderna deve distinguir diligência de condições estruturais como desemprego, doença, falta de terra ou exploração.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -308,7 +344,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-20",
-      "title": "Versículo 20 — Fidelidade e pressa",
+      "title": "23. Versículo 20 — Fidelidade e pressa",
       "body": "**Paráfrase livre:** A pessoa fiel recebe reconhecimento; quem busca enriquecimento a qualquer custo corre risco.\n\n**Exegese e limite interpretativo:** O contraste critica atalhos e corrupção, não promete riqueza como prêmio de fidelidade.\n\n**Ampliação contextual e ética:** O provérbio contrasta confiabilidade e busca apressada de riqueza por atalhos. ‘Muitas bênçãos’ não é autorização de prometer enriquecimento financeiro a doadores, nem prova de que pessoas pobres seriam infiéis.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -319,7 +355,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-21",
-      "title": "Versículo 21 — Favoritismo barato",
+      "title": "24. Versículo 21 — Favoritismo barato",
       "body": "**Paráfrase livre:** Favorecer pessoas no julgamento é errado; até pequena vantagem pode corromper.\n\n**Exegese e limite interpretativo:** A imagem do pedaço de pão mostra que a injustiça não exige grande suborno.\n\n**Ampliação contextual e ética:** A parcialidade é condenada mesmo quando a vantagem parece pequena. A imagem do pão revela como interesses imediatos podem corromper justiça; não autoriza culpar alguém que aceita comida por necessidade vital.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -330,7 +366,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-22",
-      "title": "Versículo 22 — Ganância apressada",
+      "title": "25. Versículo 22 — Ganância apressada",
       "body": "**Paráfrase livre:** A busca impaciente de riqueza pode esconder avareza e conduzir à perda.\n\n**Exegese e limite interpretativo:** 'Olho mau' refere-se à disposição gananciosa no contexto; não é característica física nem maldição ocular.\n\n**Ampliação contextual e ética:** O ‘olho mau’ está ligado à atitude avarenta, não a uma característica biológica ou superstição ocular. A pressa de enriquecer precisa ser examinada também diante de pressões econômicas, sem humilhar quem luta para sobreviver.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -341,7 +377,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-23",
-      "title": "Versículo 23 — Correção e lisonja",
+      "title": "26. Versículo 23 — Correção e lisonja",
       "body": "**Paráfrase livre:** Uma repreensão verdadeira pode produzir estima mais duradoura que elogio enganoso.\n\n**Exegese e limite interpretativo:** A correção deve ser justa e respeitosa; o provérbio não autoriza humilhação.\n\n**Ampliação contextual e ética:** A repreensão justa pode produzir respeito futuro, mas ela precisa ser verdadeira, proporcional e oferecida sem violência. Elogio não é errado por si; a crítica recai sobre lisonja manipuladora.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -352,7 +388,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-24",
-      "title": "Versículo 24 — Roubo familiar",
+      "title": "27. Versículo 24 — Roubo familiar",
       "body": "**Paráfrase livre:** Roubar pai ou mãe e negar o erro é participar da lógica destrutiva.\n\n**Exegese e limite interpretativo:** A proximidade familiar não torna a apropriação legítima. O ensino protege direitos e confiança intergeracional.\n\n**Ampliação contextual e ética:** O direito e o patrimônio dos pais não se tornam disponíveis para apropriação sem consentimento por causa da proximidade familiar. O verso pede honestidade, sem impedir que membros de família enfrentem abusos por vias legais.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -363,7 +399,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-25",
-      "title": "Versículo 25 — Orgulho e confiança",
+      "title": "28. Versículo 25 — Orgulho e confiança",
       "body": "**Paráfrase livre:** A arrogância provoca contendas; confiar no Senhor orienta vida mais estável.\n\n**Exegese e limite interpretativo:** A confiança não é técnica para obter prosperidade garantida; humildade inclui ouvir outras pessoas.\n\n**Ampliação contextual e ética:** A arrogância pode alimentar disputas porque dificulta reconhecer o ponto de vista de outras pessoas. Confiar no Senhor não é garantir enriquecimento: a prosperidade da máxima deve ser lida em seu contexto e com cautela.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -374,7 +410,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-26",
-      "title": "Versículo 26 — Limites do próprio juízo",
+      "title": "29. Versículo 26 — Limites do próprio juízo",
       "body": "**Paráfrase livre:** Confiar apenas no próprio coração é insensato; caminhar com sabedoria traz proteção.\n\n**Exegese e limite interpretativo:** A crítica é à autossuficiência, não à consciência ou aos sentimentos como tais.\n\n**Ampliação contextual e ética:** Não confiar apenas no próprio coração significa reconhecer limites de julgamento, não desprezar emoções ou consciência. Sabedoria inclui ouvir pessoas confiáveis, corrigir erros e buscar informação verdadeira.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -385,7 +421,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-27",
-      "title": "Versículo 27 — Generosidade ao pobre",
+      "title": "30. Versículo 27 — Generosidade ao pobre",
       "body": "**Paráfrase livre:** Repartir com quem necessita expressa cuidado; fechar os olhos perpetua injustiça.\n\n**Exegese e limite interpretativo:** O dito encoraja generosidade concreta e não promete que doadores nunca enfrentarão dificuldades.\n\n**Ampliação contextual e ética:** A responsabilidade de partilhar com pobres é ética e comunitária, não contrato de lucro garantido para quem doa. O verso pode motivar generosidade e justiça concreta, respeitando os recursos e as necessidades da própria família.",
       "kind": "exegesis",
       "scriptureRefs": [
@@ -396,7 +432,7 @@ export const proverbs28Study: StudyContent = {
     },
     {
       "id": "versiculo-28",
-      "title": "Versículo 28 — Poder e visibilidade",
+      "title": "31. Versículo 28 — Poder e visibilidade",
       "body": "**Paráfrase livre:** Quando perversos dominam, pessoas se escondem; com sua queda, os justos voltam a agir.\n\n**Exegese e limite interpretativo:** O final retoma o tema do v. 12: governo afeta a liberdade pública e o bem-estar dos vulneráveis.\n\n**Ampliação contextual e ética:** O fechamento retoma o tema político do verso 12. O medo público revela efeito de governos opressores; a multiplicação de justos representa esperança social, não previsão precisa do destino de um partido ou governo contemporâneo.",
       "kind": "exegesis",
       "scriptureRefs": [
