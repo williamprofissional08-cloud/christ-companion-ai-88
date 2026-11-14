@@ -27,6 +27,7 @@ test("community rejects videos longer than one minute", async () => {
   const oldCreateObjectURL=URL.createObjectURL;
   const oldRevokeObjectURL=URL.revokeObjectURL;
   const oldDocument=globalThis.document;
+  const oldWindow=globalThis.window;
   const video={
     duration:61,
     onloadedmetadata:null,
@@ -38,6 +39,7 @@ test("community rejects videos longer than one minute", async () => {
   try {
     URL.createObjectURL=()=> "blob:mock";
     URL.revokeObjectURL=()=> {};
+    globalThis.window=globalThis;
     globalThis.document={createElement:(tag)=> {
       assert.equal(tag,"video");
       return video;
@@ -53,5 +55,6 @@ test("community rejects videos longer than one minute", async () => {
     URL.createObjectURL=oldCreateObjectURL;
     URL.revokeObjectURL=oldRevokeObjectURL;
     globalThis.document=oldDocument;
+    globalThis.window=oldWindow;
   }
 });
