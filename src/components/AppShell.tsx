@@ -16,6 +16,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logo from "@/assets/logo.png";
+import { MusicControlButton } from "@/components/GlobalBackgroundMusic";
 
 const PRIMARY_NAV = [
   { to: "/inicio", label: "Início", icon: Home },
@@ -104,16 +105,15 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
       </aside>
 
       <div className="flex min-h-screen min-w-0 flex-1 flex-col">
-        <header className="sticky top-0 z-30 border-b border-border/60 bg-white/90 backdrop-blur dark:bg-background/90">
+        <header
+          data-home-header={homeHeader ? "true" : undefined}
+          className={homeHeader
+            ? "fixed inset-x-0 top-0 z-40 border-b border-border/60 bg-white/90 pt-[env(safe-area-inset-top)] backdrop-blur lg:left-52 dark:bg-background/90"
+            : "sticky top-0 z-30 border-b border-border/60 bg-white/90 backdrop-blur dark:bg-background/90"}
+        >
           <div className={`mx-auto flex min-h-14 w-full max-w-screen-2xl items-center gap-1.5 py-1.5 sm:gap-3 ${homeHeader ? "pl-2 pr-2 sm:pl-3 sm:pr-3 lg:px-5" : "pl-3 pr-16 sm:pl-5 sm:pr-16 lg:pl-8 lg:pr-16"}`}>
             <div className={homeHeader ? "flex shrink-0 items-center gap-1 lg:hidden" : "lg:hidden"}>
-              {homeHeader && (
-                <span
-                  id="home-music-control-slot"
-                  className="inline-flex size-9 shrink-0 items-center justify-center"
-                  aria-label="Controle de música ambiente"
-                />
-              )}
+              {homeHeader && <MusicControlButton className="size-9" />}
               <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild>
                   <Button variant="outline" size="icon" className={homeHeader ? "size-9 rounded-full" : "rounded-full"} aria-label="Abrir menu">
@@ -152,11 +152,7 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
             )}
             {homeHeader && (
               <div className="flex shrink-0 items-center gap-1">
-                <span
-                  id="home-music-control-slot-desktop"
-                  className="hidden size-10 shrink-0 items-center justify-center lg:inline-flex"
-                  aria-label="Controle de música ambiente"
-                />
+                <MusicControlButton className="hidden size-10 lg:inline-flex" />
                 <Link to="/pesquisa" aria-label="Pesquisar" className="flex size-8 sm:size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Search className="size-5" /></Link>
                 <Link to="/configuracoes" aria-label="Notificações e preferências" className="flex size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Bell className="size-5" /></Link>
               </div>
@@ -173,7 +169,7 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
           </div>
         </header>
 
-        <main className={`mx-auto w-full max-w-screen-2xl min-w-0 flex-1 ${homeHeader ? "px-2 pt-2 pb-[calc(3.75rem+env(safe-area-inset-bottom)+0.5rem)] sm:px-3 sm:pt-3 lg:px-5 lg:pb-3" : "px-3 pt-4 pb-24 sm:px-5 sm:pt-5 lg:px-8 lg:pb-10"}`}>{children}</main>
+        <main className={`mx-auto w-full max-w-screen-2xl min-w-0 flex-1 ${homeHeader ? "px-2 pt-[calc(3.5rem+env(safe-area-inset-top)+0.5rem)] pb-[calc(3.75rem+env(safe-area-inset-bottom)+0.5rem)] sm:px-3 lg:px-5 lg:pb-3" : "px-3 pt-4 pb-24 sm:px-5 sm:pt-5 lg:px-8 lg:pb-10"}`}>{children}</main>
 
         <nav aria-label="Navegação rápida" className="fixed inset-x-0 bottom-0 z-30 pb-[env(safe-area-inset-bottom)] border-t border-border/70 bg-white/95 backdrop-blur dark:bg-background/95 lg:hidden">
           <div className={homeHeader || !isAdmin ? "mx-auto grid max-w-2xl grid-cols-6" : "mx-auto grid max-w-2xl grid-cols-5"}>

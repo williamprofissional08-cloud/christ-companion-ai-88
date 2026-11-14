@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 import { useLocation } from "@tanstack/react-router";
 import { Pause, Play } from "lucide-react";
 
@@ -11,56 +10,78 @@ const YOUTUBE_EMBED_URL =
   YOUTUBE_VIDEO_ID +
   "&playsinline=1&rel=0&enablejsapi=1";
 
+type MusicControls = {
+  isReady: boolean;
+  isPlaying: boolean;
+  togglePlayback: () => void;
+};
+
+const MusicContext = createContext<MusicControls | null>(null);
+
+const MUSIC_BUTTON_CLASSES =
+  "inline-flex shrink-0 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800";
+
+/** The control lives in the actual header, not in a detached fixed-position portal. */
+export function MusicControlButton({ className = "" }: { className?: string }) {
+  const music = useContext(MusicContext);
+  if (!music) return null;
+
+  return (
+    <button
+      type="button"
+      onClick={music.togglePlayback}
+      disabled={!music.isReady}
+      aria-label={
+        !music.isReady
+          ? "Carregando música ambiente"
+          : music.isPlaying
+            ? "Pausar música ambiente"
+            : "Reproduzir música ambiente"
+      }
+      aria-pressed={music.isPlaying}
+      title={
+        !music.isReady
+          ? "Carregando música"
+          : music.isPlaying
+            ? "Pausar música"
+            : "Reproduzir música"
+      }
+      className={`${MUSIC_BUTTON_CLASSES} ${className}`}
+    >
+      {music.isPlaying ? (
+        <Pause className="size-5" aria-hidden="true" />
+      ) : (
+        <Play className="ml-0.5 size-5 fill-current" aria-hidden="true" />
+      )}
+    </button>
+  );
+}
+
 /**
- * Compact background music control.
- * Keep the YouTube iframe mounted so playback commands are sent from the
- * actual user click, which is more reliable on Safari/iOS than mounting an
- * autoplay iframe after a React state update.
+ * One persistent YouTube iframe for the entire authenticated route tree.
+ * Controls may appear in the home header or elsewhere without remounting
+ * the player or attempting playback before a user interaction.
  */
-export function GlobalBackgroundMusic() {
+export function GlobalBackgroundMusic({ children }: { children: ReactNode }) {
   const playerRef = useRef<HTMLIFrameElement>(null);
   const location = useLocation();
   const isHome = location.pathname === "/inicio";
-  const [headerSlot, setHeaderSlot] = useState<HTMLElement | null>(null);
-
-  // The player stays mounted across navigation; only its control moves into
-  // the home header. This avoids duplicate iframes and preserves playback.
-  useEffect(() => {
-    if (!isHome) {
-      setHeaderSlot(null);
-      return;
-    }
-
-    // The header has separate mobile/desktop slots. Moving the portal never
-    // unmounts the iframe, so changing pages or resizing preserves playback.
-    const mediaQuery = window.matchMedia("(min-width: 1024px)");
-    const syncSlot = () => {
-      setHeaderSlot(
-        document.getElementById(
-          mediaQuery.matches
-            ? "home-music-control-slot-desktop"
-            : "home-music-control-slot",
-        ),
-      );
-    };
-    syncSlot();
-    mediaQuery.addEventListener("change", syncSlot);
-    return () => mediaQuery.removeEventListener("change", syncSlot);
-  }, [isHome]);
   const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const onYouTubeMessage = (event: MessageEvent) => {
-      if (event.origin !== "https://www.youtube-nocookie.com" ||
-          event.source !== playerRef.current?.contentWindow) return;
+      if (
+        event.origin !== "https://www.youtube-nocookie.com" ||
+        event.source !== playerRef.current?.contentWindow
+      ) return;
       try {
         const message = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
         if (message?.event !== "onStateChange") return;
         if (message.info === 1) setIsPlaying(true);
         if (message.info === 0 || message.info === 2) setIsPlaying(false);
       } catch {
-        // Ignore non-player messages.
+        // Ignore unrelated player messages.
       }
     };
     window.addEventListener("message", onYouTubeMessage);
@@ -83,44 +104,12 @@ export function GlobalBackgroundMusic() {
     setIsPlaying(nextIsPlaying);
   }
 
-  const musicButton = (
-      <button
-        type="button"
-        onClick={togglePlayback}
-        disabled={!isReady}
-        aria-label={
-          !isReady
-            ? "Carregando música ambiente"
-            : isPlaying
-              ? "Pausar música ambiente"
-              : "Reproduzir música ambiente"
-        }
-        aria-pressed={isPlaying}
-        title={
-          !isReady
-            ? "Carregando música"
-            : isPlaying
-              ? "Pausar música"
-              : "Reproduzir música"
-        }
-        className={
-          isHome
-            ? "inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
-            : "global-music-button fixed right-3 top-[calc(env(safe-area-inset-top)+0.75rem)] z-40 lg:right-4 inline-flex size-10 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
-        }
-      >
-        {isPlaying ? (
-          <Pause className="size-5" aria-hidden="true" />
-        ) : (
-          <Play className="ml-0.5 size-5 fill-current" aria-hidden="true" />
-        )}
-      </button>
-  );
-
   return (
-    <aside aria-label="Música ambiente Agnus Dei" className="contents">
-      {isHome ? (headerSlot ? createPortal(musicButton, headerSlot) : null) : musicButton}
-
+    <MusicContext.Provider value={{ isReady, isPlaying, togglePlayback }}>
+      {children}
+      {!isHome && (
+        <MusicControlButton className="global-music-button fixed right-3 top-[calc(env(safe-area-inset-top)+0.75rem)] z-40 size-10 lg:right-4" />
+      )}
       <iframe
         ref={playerRef}
         title="Música ambiente Agnus Dei"
@@ -133,6 +122,6 @@ export function GlobalBackgroundMusic() {
         tabIndex={-1}
         aria-hidden="true"
       />
-    </aside>
+    </MusicContext.Provider>
   );
 }
