@@ -2,7 +2,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import {
   BookOpen, Compass, Flame, GraduationCap, HeartHandshake, Home, LogOut,
   MessageCircleHeart, Moon, NotebookPen, FilePenLine, Route as RouteIcon,
-  Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreVertical, UserRound,
+  Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreVertical, UserRound, Menu, Bell,
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -110,7 +110,7 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
               <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild>
                   <Button variant="outline" size="icon" className="rounded-full" aria-label="Abrir menu">
-                    <MoreVertical className="size-5" />
+                    <Menu className="size-5" />
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="flex w-[min(21rem,88vw)] flex-col overflow-y-auto border-sidebar-border bg-sidebar px-4 py-6 dark:border-slate-800 dark:bg-[#08182c]">
@@ -134,13 +134,19 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
                 <img src={logo} alt="" width={34} height={34} className="size-9 shrink-0 object-contain" />
                 <div className="min-w-0 text-center lg:text-left">
                   <p className="truncate font-display text-base font-bold tracking-tight text-[#142d59] dark:text-foreground">Caminho Divino</p>
-                  <p className="truncate text-[10px] text-slate-500 dark:text-muted-foreground">A Palavra sempre com você</p>
+                  <p className="truncate text-[10px] text-slate-500 dark:text-muted-foreground">Estudo • Ensino • Comunhão</p>
                 </div>
               </div>
             ) : (
               <div className="min-w-0 flex-1 text-right lg:text-left">
                 <p className="truncate text-sm font-semibold">{title || "Caminho Divino"}</p>
                 {subtitle ? <p className="truncate text-xs text-muted-foreground">{subtitle}</p> : null}
+              </div>
+            )}
+            {homeHeader && (
+              <div className="flex shrink-0 items-center gap-1">
+                <Link to="/pesquisa" aria-label="Pesquisar" className="flex size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Search className="size-5" /></Link>
+                <Link to="/configuracoes" aria-label="Notificações e preferências" className="flex size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Bell className="size-5" /></Link>
               </div>
             )}
             {homeHeader ? (
@@ -158,15 +164,17 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
         <main className="mx-auto w-full max-w-screen-2xl min-w-0 flex-1 px-3 pt-4 pb-24 sm:px-5 sm:pt-5 lg:px-8 lg:pb-10">{children}</main>
 
         <nav aria-label="Navegação rápida" className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-white/95 backdrop-blur dark:bg-background/95 lg:hidden">
-          <div className={homeHeader || !isAdmin ? "mx-auto grid max-w-lg grid-cols-4" : "mx-auto grid max-w-lg grid-cols-5"}>
+          <div className={homeHeader || !isAdmin ? "mx-auto grid max-w-2xl grid-cols-6" : "mx-auto grid max-w-2xl grid-cols-5"}>
             {(homeHeader ? [
               { to: "/inicio" as const, label: "Início", icon: Home },
-              { to: "/estudos" as const, label: "Estudo", icon: BookOpen },
-              { to: "/trilhas" as const, label: "Trilhas", icon: RouteIcon },
+              { to: "/biblia" as const, label: "Bíblia", icon: BookOpen },
+              { to: "/trilhas" as const, label: "Cursos", icon: RouteIcon },
+              { to: "/comunidade" as const, label: "Comunidade", icon: UsersRound },
+              { to: "/metas" as const, label: "Minha Jornada", icon: Target },
               { to: "/configuracoes" as const, label: "Perfil", icon: UserRound },
             ] : isAdmin ? [...PRIMARY_NAV, { to: "/admin" as const, label: "Admin", icon: ShieldCheck }] : PRIMARY_NAV).map((item) => (
-              <Link key={item.to} to={item.to} className="flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[10px] text-muted-foreground"
-                activeProps={{ className: "flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[10px] font-semibold text-primary" }}>
+              <Link key={item.to} to={item.to} className="flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[9px] text-center leading-tight text-muted-foreground"
+                activeProps={{ className: "flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[9px] text-center leading-tight font-semibold text-primary" }}>
                 <item.icon className="size-[18px]" aria-hidden />{item.label}
               </Link>
             ))}
