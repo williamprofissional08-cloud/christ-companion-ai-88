@@ -1,0 +1,20 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+const root = new URL("../", import.meta.url);
+const source = readFileSync(new URL("src/lib/content/psalm-147-study.ts", root), "utf8");
+const catalog = readFileSync(new URL("src/lib/content/curated-studies.ts", root), "utf8");
+const bible = JSON.parse(readFileSync(new URL("src/lib/bible-livre/salmos.json", root), "utf8"));
+test("Psalm 147 has a complete indexed free paraphrase and exposition", () => {
+  const count = bible.chapters["147"].length;
+  assert.equal(count, 20);
+  const verses = [...source.matchAll(/\\n\\n\\*\\*(\\d+)\\.\\*\\*/g)].map(m => Number(m[1]));
+  assert.deepEqual(verses, Array.from({length: count}, (_,i) => i+1));
+  const ids = [...source.matchAll(/"id": "versiculo-(\\d+)"/g)].map(m => Number(m[1]));
+  assert.deepEqual(ids, Array.from({length: count}, (_,i) => i+1));
+  assert.match(source, /Paráfrase livre para estudo, não tradução oficial/);
+  assert.match(source, /Oficina do pregador/);
+  assert.match(source, /Exercícios com respostas orientadoras/);
+  assert.equal((catalog.match(/"biblia-salmos-cap-147":/g) ?? []).length, 1);
+  assert.match(catalog, /import \\{ psalm147Study \\} from "\\.\\/psalm-147-study";/);
+});
