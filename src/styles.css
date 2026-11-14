@@ -425,3 +425,21 @@ a[href*="lovable.dev"][style*="position: fixed"] {
     top: calc(env(safe-area-inset-top) + 0.5rem);
   }
 }
+
+/* Match the reference's dark scenic header on the home dashboard only. */
+body:has(.home-dash) .app-ambient header.sticky {
+  background-color: #11375c;
+  background-image: linear-gradient(90deg, rgba(9,34,66,.92), rgba(15,56,89,.75)), url("/images/home-daily-phrase-background.webp");
+  background-size: cover;
+  background-position: center 40%;
+  border-color: rgba(255,255,255,.2);
+}
+body:has(.home-dash) .app-ambient header.sticky p,
+body:has(.home-dash) .app-ambient header.sticky a,
+body:has(.home-dash) .app-ambient header.sticky button {
+  color: #fff;
+}
+body:has(.home-dash) .app-ambient header.sticky button {
+  background: rgba(15,48,87,.6);
+  border-color: rgba(255,255,255,.4);
+}
