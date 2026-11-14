@@ -67,3 +67,23 @@ test("reviewed local chapter studies cannot be hidden by archived managed catalo
   assert.match(catalogSource, /if \(!managed \|\| isCurated\) return local/);
   assert.match(catalogSource, /if \(managed\.status === "archived"\) return undefined/);
 });
+
+// Execute the same resolver used by both pages; source assertions alone do not prove behavior.
+import { resolveManagedStudy } from "../src/lib/content/managed-study-catalog.ts";
+
+test("curated archived study stays in listing and detail; uncurated archived study is hidden", () => {
+  const listingRoute = readFileSync(new URL("../src/routes/_authenticated/estudos.index.tsx", import.meta.url), "utf8");
+  const detailRoute = readFileSync(new URL("../src/routes/_authenticated/estudos.$slug.tsx", import.meta.url), "utf8");
+  assert.match(listingRoute, /resolveManagedStudy\\(catalog\\.get\\(item\\.slug\\), item, Boolean\\(CURATED_STUDIES\\[item\\.slug\\]\\)\\)/);
+  assert.match(detailRoute, /resolveManagedStudy\\(legacyStudy, managedStudy, Boolean\\(CURATED_STUDIES\\[slug\\]\\)\\)/);
+
+  const local = { slug: "genesis-1-criacao", title: "Gênesis 1", category: "Bíblia", reference: "Gênesis 1", summary: "Criação", depth: "deep" };
+  const archived = { slug: local.slug, status: "archived", metadata: { title: "Ocultado" } };
+  const catalog = new Map([[local.slug, local]]);
+  const listed = resolveManagedStudy(catalog.get(archived.slug), archived, true);
+  if (listed) catalog.set(archived.slug, listed);
+  else catalog.delete(archived.slug);
+  assert.deepEqual(catalog.get(local.slug), local, "listagem preserva o estudo curado");
+  assert.deepEqual(resolveManagedStudy(local, archived, true), local, "detalhe preserva o estudo curado");
+  assert.equal(resolveManagedStudy(undefined, { ...archived, slug: "sem-local" }, false), undefined);
+});
