@@ -22,7 +22,9 @@ test("a missing local session is normal for a first-time visitor", async () => {
 
 test("a thrown missing-session error does not show a network outage", async () => {
   const result = await checkExistingAccountSession(async () => {
-    throw { name: "AuthSessionMissingError", message: "Auth session missing!" };
+    const error = new Error("Auth session missing!");
+    error.name = "AuthSessionMissingError";
+    throw error;
   });
   assert.equal(result, "signed-out");
 });
