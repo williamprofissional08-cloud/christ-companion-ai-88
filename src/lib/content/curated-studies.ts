@@ -3,6 +3,7 @@ import { proverbs9Study } from "./proverbs-9-study";
 import { proverbs11Study } from "./proverbs-11-study";
 import { proverbs12Study } from "./proverbs-12-study";
 import { proverbs13Study } from "./proverbs-13-study";
+import { proverbs14Study } from "./proverbs-14-study";
 import { proverbs8Study } from "./proverbs-8-study";
 import { proverbs7Study } from "./proverbs-7-study";
 import { proverbs6Study } from "./proverbs-6-study";
@@ -1292,5 +1293,6 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-proverbios-cap-11": proverbs11Study,
   "biblia-proverbios-cap-12": proverbs12Study,
   "biblia-proverbios-cap-13": proverbs13Study,
+  "biblia-proverbios-cap-14": proverbs14Study,
   "biblia-proverbios-cap-10": proverbs10Study,
 };
