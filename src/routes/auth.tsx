@@ -60,6 +60,7 @@ function AuthPage() {
   const [sessionUnavailable, setSessionUnavailable] = useState(false);
   const [checking, setChecking] = useState(true);
   const [sent, setSent] = useState(false);
+  const [confirmationRequired, setConfirmationRequired] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -104,6 +105,7 @@ function AuthPage() {
       return;
     }
     setLoading(true);
+    setConfirmationRequired(false);
     try {
       if (mode === "signup") {
         const { data, error } = await supabase.auth.signUp({
@@ -135,6 +137,9 @@ function AuthPage() {
       }
     } catch (error) {
       logAuthApiKeyError(error);
+      const failure = error as { code?: unknown; message?: unknown };
+      const reason = `${typeof failure?.code === "string" ? failure.code : ""} ${typeof failure?.message === "string" ? failure.message : ""}`.toLowerCase();
+      if (mode === "login" && /email[_ ]not[_ ]confirmed/.test(reason)) setConfirmationRequired(true);
       toast.error(friendlyAuthError(error));
     } finally {
       setLoading(false);
@@ -295,10 +300,17 @@ function AuthPage() {
             </form>
           )}
           {mode === "login" && !sent && (
-            <button type="button" onClick={forgot} disabled={recovering} className="mx-auto mt-4 block rounded text-sm font-medium text-[#075dcc] underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-blue-600 disabled:opacity-60">{recovering ? "Solicitando recuperação..." : "Esqueceu sua senha?"}</button>
+            <div className="mt-4 flex flex-col items-center gap-3">
+              <button type="button" onClick={forgot} disabled={recovering} className="rounded text-sm font-medium text-[#075dcc] underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-blue-600 disabled:opacity-60">{recovering ? "Solicitando recuperação..." : "Esqueceu sua senha?"}</button>
+              {confirmationRequired && (
+                <button type="button" onClick={resendConfirmation} disabled={resending} className="rounded text-sm font-medium text-[#075dcc] underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-blue-600 disabled:opacity-60">
+                  {resending ? "Enviando novo link..." : "Reenviar confirmação por e-mail"}
+                </button>
+              )}
+            </div>
           )}
           <div className="my-5 flex items-center gap-4 text-[#687b9a]"><span className="h-px flex-1 bg-[#c6d2e6]" /><span>Ou</span><span className="h-px flex-1 bg-[#c6d2e6]" /></div>
-          <button type="button" onClick={() => { setMode(mode === "login" ? "signup" : "login"); setConfirmPassword(""); setShowPassword(false); setSent(false); }} className="flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border-2 border-[#0762c9] bg-white/50 px-3 text-center text-sm font-bold text-[#0750aa] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 sm:text-base">
+          <button type="button" onClick={() => { setMode(mode === "login" ? "signup" : "login"); setConfirmPassword(""); setShowPassword(false); setSent(false); setConfirmationRequired(false); }} className="flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border-2 border-[#0762c9] bg-white/50 px-3 text-center text-sm font-bold text-[#0750aa] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 sm:text-base">
             <UserRoundPlus aria-hidden="true" className="size-5 shrink-0" />{mode === "login" ? "Criar uma nova conta" : "Já tenho conta, quero entrar"}
           </button>
           <div className="mt-7 grid grid-cols-3 divide-x divide-[#c6d2e6] text-center">
