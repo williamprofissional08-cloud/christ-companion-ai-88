@@ -1,660 +1,493 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { SupabaseClient, User, RealtimeChannel } from "@supabase/supabase-js";
+import type { RealtimeChannel, User } from "@supabase/supabase-js";
 import { Camera, CameraOff, Loader2, Mic, MicOff, Play, Plus, Radio, ShieldBan, UsersRound, X } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-import { checkLiveBackendReady, explainLiveBackendError, explainLiveMediaError, isMissingMediaDevice } from "@/lib/live-startup-errors";
-
-// The SQL migration creates these tables; the generated Supabase types are
-// refreshed after deployment, so use the same untyped adapter as existing community code.
-const db = supabase as unknown as SupabaseClient;
-const ICE: RTCConfiguration = {
-  iceServers: [
-    { urls: "stun:stun.l.google.com:19302" },
-    { urls: "stun:stun1.l.google.com:19302" },
-  ],
-};
-
-type Session = {
-  id: string;
-  host_id: string;
-  title: string;
-  room_name: string;
-  status: string;
-  last_heartbeat_at: string;
-};
-type Member = { user_id: string; status: "joined" | "left" | "kicked"; joined_at: string };
-type Signal = {
-  id: string;
-  session_id: string;
-  sender_id: string;
-  receiver_id: string;
-  kind: "join" | "offer" | "answer" | "candidate" | "leave";
-  payload: Record<string, unknown>;
-  created_at: string;
-};
-type Room = { session: Session; role: "host" | "viewer" };
-
-function errorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : "Não foi possível conectar à transmissão.";
-}
+import { explainLiveMediaError, isMissingMediaDevice } from "@/lib/live-startup-errors";
 
 /**
- * Small-room WebRTC live broadcast with authenticated Supabase signaling.
- * There is no Jitsi moderator or third-party host login. This is P2P:
- * an SFU/TURN service will be needed for large broadcasts or restrictive NATs.
+ * Pilot livestreams using the project's EXISTING Supabase Realtime service.
+ * Presence discovers real, currently connected hosts; Broadcast carries
+ * WebRTC SDP/ICE. No database writes, new tables or paid video service.
+ *
+ * P2P + STUN is suitable for SMALL rooms only. Some NATs need TURN.
+ * Public Realtime channels do not provide enforceable identity-based moderation:
+ * the host blocks removed peers locally, but hardened multi-device bans require
+ * authenticated, server-enforced Realtime authorization.
  */
+const LOBBY_TOPIC = "caminho-divino:live:lobby:v3";
+const MAX_VIEWERS = 4;
+const RTC_CONFIG: RTCConfiguration = {
+  iceServers: [{ urls: "stun:stun.l.google.com:19302" }, { urls: "stun:stun1.l.google.com:19302" }],
+};
+
+type Live = {
+  kind: "live";
+  sessionId: string;
+  hostPeerId: string;
+  hostUserId: string;
+  hostName: string;
+  title: string;
+  started: number;
+};
+
+type SignalKind = "join" | "offer" | "answer" | "candidate" | "leave" | "kicked" | "ended" | "full";
+type Signal = {
+  sessionId: string;
+  from: string;
+  to?: string;
+  userId: string;
+  name: string;
+  kind: SignalKind;
+  sdp?: RTCSessionDescriptionInit;
+  candidate?: RTCIceCandidateInit;
+};
+
+type Room = { live: Live; role: "host" | "viewer" };
+type ViewerInfo = { id: string; name: string; userId: string };
+
+function getDisplayName(user: User): string {
+  const meta = user.user_metadata ?? {};
+  const raw = meta["full_name"] ?? meta["display_name"] ?? meta["name"] ?? user.email?.split("@")[0];
+  return typeof raw === "string" && raw.trim() ? raw.trim().slice(0, 48) : "Membro";
+}
+
+function readActiveLives(channel: RealtimeChannel): Live[] {
+  const state = channel.presenceState() as Record<string, unknown[]>;
+  const now = Date.now();
+  const unique = new Map<string, Live>();
+  for (const peers of Object.values(state)) {
+    for (const raw of peers) {
+      if (!raw || typeof raw !== "object") continue;
+      const item = raw as Partial<Live>;
+      if (item.kind !== "live" || typeof item.sessionId !== "string" ||
+        typeof item.hostPeerId !== "string" || typeof item.hostUserId !== "string" ||
+        typeof item.title !== "string" || typeof item.started !== "number" ||
+        item.started > now + 60_000 || item.started < now - 4 * 60 * 60 * 1000) continue;
+      unique.set(item.sessionId, {
+        kind: "live", sessionId: item.sessionId, hostPeerId: item.hostPeerId,
+        hostUserId: item.hostUserId, hostName: typeof item.hostName === "string" ? item.hostName.slice(0, 48) : "Membro",
+        title: item.title.slice(0, 90), started: item.started,
+      });
+    }
+  }
+  return Array.from(unique.values()).sort((a, b) => b.started - a.started).slice(0, 30);
+}
+
 export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
   user: User | null;
   requestOpen: boolean;
   onRequestHandled: () => void;
 }) {
-  const [sessions, setSessions] = useState<Session[]>([]);
-  const [topic, setTopic] = useState("");
+  const myPeerId = useRef(crypto.randomUUID());
+  const [retryKey, setRetryKey] = useState(0);
+  const [lobbyStatus, setLobbyStatus] = useState<"connecting" | "ready" | "error">("connecting");
+  const [lives, setLives] = useState<Live[]>([]);
+  const [title, setTitle] = useState("");
   const [createOpen, setCreateOpen] = useState(false);
   const [room, setRoom] = useState<Room | null>(null);
-  const [members, setMembers] = useState<Member[]>([]);
-  const [memberNames, setMemberNames] = useState<Record<string, string>>({});
+  const [viewers, setViewers] = useState<ViewerInfo[]>([]);
   const [busy, setBusy] = useState(false);
-  const [joining, setJoining] = useState(false);
-  const [connected, setConnected] = useState(false);
-  const [playBlocked, setPlayBlocked] = useState(false);
+  const [connectionStatus, setConnectionStatus] = useState("");
+  const [playingBlocked, setPlayingBlocked] = useState(false);
   const [micOn, setMicOn] = useState(true);
   const [cameraOn, setCameraOn] = useState(true);
-  const [hasVideoTrack, setHasVideoTrack] = useState(true);
+  const [hasVideo, setHasVideo] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [backendStatus, setBackendStatus] = useState<"checking" | "ready" | "unavailable">("checking");
-  const [backendIssue, setBackendIssue] = useState<string | null>(null);
 
-  const liveRoom = useRef<Room | null>(null);
-  const localMedia = useRef<MediaStream | null>(null);
-  const localVideo = useRef<HTMLVideoElement>(null);
-  const remoteVideo = useRef<HTMLVideoElement>(null);
-  const channel = useRef<RealtimeChannel | null>(null);
+  const lobbyRef = useRef<RealtimeChannel | null>(null);
+  const roomRef = useRef<RealtimeChannel | null>(null);
+  const activeRef = useRef<Room | null>(null);
+  const localStream = useRef<MediaStream | null>(null);
+  const remoteStream = useRef<MediaStream | null>(null);
+  const localVideo = useRef<HTMLVideoElement | null>(null);
+  const remoteVideo = useRef<HTMLVideoElement | null>(null);
   const peers = useRef<Map<string, RTCPeerConnection>>(new Map());
-  const pendingCandidates = useRef<Map<string, RTCIceCandidateInit[]>>(new Map());
-  const heartbeatTimer = useRef<number | null>(null);
-  const memberTimer = useRef<number | null>(null);
-  const processed = useRef<Set<string>>(new Set());
+  const viewersRef = useRef<Map<string, ViewerInfo>>(new Map());
+  const blockedPeers = useRef<Set<string>>(new Set());
+  const blockedUsers = useRef<Set<string>>(new Set());
+  const candidates = useRef<Map<string, RTCIceCandidateInit[]>>(new Map());
 
-  const verifyInfrastructure = useCallback(async () => {
-    setBackendStatus("checking");
-    try {
-      const problem = await checkLiveBackendReady(async (table) => {
-        const { error: tableError } = await db.from(table)
-          .select("id", { head: true }).limit(1);
-        return tableError;
-      });
-      setBackendIssue(problem);
-      setBackendStatus(problem ? "unavailable" : "ready");
-    } catch (problem) {
-      setBackendIssue(explainLiveBackendError(problem));
-      setBackendStatus("unavailable");
-    }
-  }, []);
-
-  useEffect(() => {
-    if (user) void verifyInfrastructure();
-  }, [user?.id, verifyInfrastructure]);
-
-  const loadSessions = useCallback(async () => {
-    const after = new Date(Date.now() - 50_000).toISOString();
-    const { data, error: readError } = await db.from("community_live_sessions")
-      .select("id,host_id,title,room_name,status,last_heartbeat_at")
-      .eq("status", "live").gt("last_heartbeat_at", after)
-      .order("started_at", { ascending: false }).limit(20);
-    if (!readError) setSessions((data ?? []) as Session[]);
-  }, []);
-
-  const loadMembers = useCallback(async (sessionId: string) => {
-    const { data, error: readError } = await db.from("community_live_participants")
-      .select("user_id,status,joined_at").eq("session_id", sessionId);
-    if (!readError) setMembers((data ?? []) as Member[]);
-  }, []);
-
-  useEffect(() => {
-    if (room?.role !== "host") return;
-    let cancelled = false;
-    const missing = members.filter((member) =>
-      member.status === "joined" && !(member.user_id in memberNames)
-    ).map((member) => member.user_id);
-    if (!missing.length) return;
-    void Promise.all(missing.map(async (id) => {
-      const { data } = await db.rpc("search_community_members", {
-        p_search: id, p_limit: 1,
-      });
-      const name = (data as { display_name?: string | null }[] | null)?.[0]?.display_name;
-      return [id, name?.trim() || "Membro " + id.slice(0, 8)] as const;
-    })).then((resolved) => {
-      if (!cancelled) setMemberNames((previous) =>
-        ({ ...previous, ...Object.fromEntries(resolved) }));
-    });
-    return () => { cancelled = true; };
-  }, [members, memberNames, room?.role]);
-
+  const myUserId = user?.id ?? "";
+  const myName = user ? getDisplayName(user) : "Membro";
 
   useEffect(() => {
     if (!user) return;
-    void loadSessions();
-    const timer = window.setInterval(() => void loadSessions(), 10_000);
-    return () => window.clearInterval(timer);
-  }, [user?.id, loadSessions]);
+    let active = true;
+    const channel = supabase.channel(LOBBY_TOPIC, {
+      config: { presence: { key: myPeerId.current } },
+    });
+    lobbyRef.current = channel;
+    channel.on("presence", { event: "sync" }, () => {
+      if (active) setLives(readActiveLives(channel));
+    });
+    channel.subscribe((status) => {
+      if (!active) return;
+      if (status === "SUBSCRIBED") {
+        setLobbyStatus("ready");
+        setLives(readActiveLives(channel));
+      } else if (status === "CHANNEL_ERROR" || status === "TIMED_OUT") {
+        setLobbyStatus("error");
+      }
+    });
+    return () => {
+      active = false;
+      if (lobbyRef.current === channel) lobbyRef.current = null;
+      void supabase.removeChannel(channel);
+    };
+  }, [myUserId, retryKey]);
 
   useEffect(() => {
-    if (!requestOpen) return;
-    setCreateOpen(true);
-    onRequestHandled();
+    if (requestOpen) {
+      setCreateOpen(true);
+      onRequestHandled();
+    }
   }, [requestOpen, onRequestHandled]);
 
   useEffect(() => {
-    if (room?.role === "host" && localVideo.current && localMedia.current) {
-      localVideo.current.srcObject = localMedia.current;
+    if (room?.role === "host" && localVideo.current && localStream.current) {
+      localVideo.current.srcObject = localStream.current;
       void localVideo.current.play().catch(() => {});
     }
-  }, [room?.session.id, room?.role]);
+    if (room?.role === "viewer" && remoteVideo.current && remoteStream.current) {
+      remoteVideo.current.srcObject = remoteStream.current;
+      void remoteVideo.current.play().then(() => setPlayingBlocked(false))
+        .catch(() => setPlayingBlocked(true));
+    }
+  }, [room?.live.sessionId, room?.role]);
 
-  function closePeers() {
-    for (const peer of peers.current.values()) peer.close();
-    peers.current.clear();
-    pendingCandidates.current.clear();
+  function closePeer(id: string) {
+    peers.current.get(id)?.close();
+    peers.current.delete(id);
+    candidates.current.delete(id);
+    viewersRef.current.delete(id);
+    setViewers(Array.from(viewersRef.current.values()));
   }
 
-  function tearDown() {
-    if (heartbeatTimer.current !== null) window.clearInterval(heartbeatTimer.current);
-    if (memberTimer.current !== null) window.clearInterval(memberTimer.current);
-    heartbeatTimer.current = null;
-    memberTimer.current = null;
-    if (channel.current) {
-      void db.removeChannel(channel.current);
-      channel.current = null;
-    }
-    closePeers();
-    localMedia.current?.getTracks().forEach((track) => track.stop());
-    localMedia.current = null;
+  function tearDownMediaAndRoom() {
+    for (const peer of peers.current.values()) peer.close();
+    peers.current.clear();
+    candidates.current.clear();
+    viewersRef.current.clear();
+    blockedPeers.current.clear();
+    blockedUsers.current.clear();
+    localStream.current?.getTracks().forEach((track) => track.stop());
+    localStream.current = null;
+    remoteStream.current = null;
+    if (localVideo.current) localVideo.current.srcObject = null;
     if (remoteVideo.current) remoteVideo.current.srcObject = null;
-    processed.current.clear();
+    if (roomRef.current) {
+      const channel = roomRef.current;
+      roomRef.current = null;
+      void supabase.removeChannel(channel);
+    }
+  }
+
+  function send(signal: Omit<Signal, "sessionId" | "from" | "userId" | "name">) {
+    const active = activeRef.current;
+    const channel = roomRef.current;
+    if (!active || !channel) return Promise.resolve("error");
+    return channel.send({
+      type: "broadcast", event: "signal",
+      payload: {
+        ...signal,
+        sessionId: active.live.sessionId,
+        from: myPeerId.current,
+        userId: myUserId,
+        name: myName,
+      } satisfies Signal,
+    });
   }
 
   async function leaveRoom() {
-    const active = liveRoom.current;
-    if (!active || !user) return;
-    liveRoom.current = null;
-    tearDown();
-    setRoom(null);
-    setConnected(false);
-    setJoining(false);
-    setPlayBlocked(false);
-    setMembers([]);
-    if (active.role === "host") {
-      const { error: endError } = await db.from("community_live_sessions")
-        .update({ status: "ended", ended_at: new Date().toISOString() })
-        .eq("id", active.session.id).eq("host_id", user.id);
-      if (endError) {
-        toast.error("Falha ao encerrar a transmissão no servidor.");
-      } else {
-        // ICE candidates and descriptions can include network information.
-        // Erase them promptly when the session ends.
-        void db.from("community_live_signals").delete()
-          .eq("session_id", active.session.id);
-      }
+    const current = activeRef.current;
+    if (!current) return;
+    if (current.role === "host") {
+      await send({ kind: "ended" }).catch(() => {});
+      await lobbyRef.current?.untrack().catch(() => {});
     } else {
-      await db.from("community_live_participants")
-        .update({ status: "left", updated_at: new Date().toISOString() })
-        .eq("session_id", active.session.id).eq("user_id", user.id)
-        .eq("status", "joined");
+      await send({ kind: "leave", to: current.live.hostPeerId }).catch(() => {});
     }
-    await loadSessions();
+    activeRef.current = null;
+    tearDownMediaAndRoom();
+    setRoom(null);
+    setViewers([]);
+    setConnectionStatus("");
+    setError(null);
+    setPlayingBlocked(false);
+    setLives((existing) => existing.filter((live) => live.sessionId !== current.live.sessionId));
+  }
+
+  // On navigation, release camera and both Realtime channels even if the user
+  // doesn't press "Encerrar". Presence automatically clears disconnected hosts.
+  useEffect(() => () => {
+    activeRef.current = null;
+    for (const peer of peers.current.values()) peer.close();
+    peers.current.clear();
+    localStream.current?.getTracks().forEach((track) => track.stop());
+    if (roomRef.current) void supabase.removeChannel(roomRef.current);
+  }, []);
+
+  async function flushCandidates(peerId: string, pc: RTCPeerConnection) {
+    const pending = candidates.current.get(peerId) ?? [];
+    candidates.current.delete(peerId);
+    for (const item of pending) await pc.addIceCandidate(item);
+  }
+
+  function establishPeer(otherPeerId: string, hosting: boolean) {
+    closePeer(otherPeerId);
+    const pc = new RTCPeerConnection(RTC_CONFIG);
+    peers.current.set(otherPeerId, pc);
+    pc.onicecandidate = (event) => {
+      if (event.candidate) {
+        void send({ kind: "candidate", to: otherPeerId, candidate: event.candidate.toJSON() });
+      }
+    };
+    pc.onconnectionstatechange = () => {
+      if (pc.connectionState === "failed") {
+        setError("Esta conexão de vídeo precisa de um servidor TURN ou de outra rede. Tente Wi-Fi ou dados móveis.");
+      } else if (!hosting && pc.connectionState === "connected") {
+        setConnectionStatus("Conectado à transmissão.");
+        setError(null);
+      }
+    };
+    if (hosting) {
+      localStream.current?.getTracks().forEach((track) => {
+        if (localStream.current) pc.addTrack(track, localStream.current);
+      });
+    } else {
+      pc.ontrack = (event) => {
+        const stream = event.streams[0] ?? new MediaStream([event.track]);
+        remoteStream.current = stream;
+        if (remoteVideo.current) {
+          remoteVideo.current.srcObject = stream;
+          void remoteVideo.current.play().then(() => {
+            setPlayingBlocked(false);
+          }).catch(() => setPlayingBlocked(true));
+        }
+        setConnectionStatus("Conectado à transmissão.");
+      };
+    }
+    return pc;
+  }
+
+  async function handleSignal(raw: unknown) {
+    const active = activeRef.current;
+    if (!active || typeof raw !== "object" || raw === null) return;
+    const s = raw as Partial<Signal>;
+    if (s.sessionId !== active.live.sessionId || typeof s.from !== "string" ||
+      s.from === myPeerId.current || (s.to && s.to !== myPeerId.current) ||
+      typeof s.kind !== "string") return;
+    const from = s.from;
+    const host = active.role === "host";
+    if (!host && from !== active.live.hostPeerId) return;
+
+    try {
+      if (s.kind === "ended" && !host) {
+        toast.info("A live foi encerrada pelo organizador.");
+        await leaveRoom();
+        return;
+      }
+      if (s.kind === "kicked" && !host && s.to === myPeerId.current) {
+        toast.error("O organizador removeu você desta live.");
+        await leaveRoom();
+        return;
+      }
+      if (s.kind === "full" && !host && s.to === myPeerId.current) {
+        setError("Esta live já atingiu o limite inicial de quatro espectadores simultâneos.");
+        await leaveRoom();
+        return;
+      }
+      if (host && s.kind === "join") {
+        const viewerId = typeof s.userId === "string" ? s.userId : "";
+        if (blockedPeers.current.has(from) || (viewerId && blockedUsers.current.has(viewerId))) {
+          await send({ kind: "kicked", to: from }); return;
+        }
+        if (peers.current.size >= MAX_VIEWERS && !peers.current.has(from)) {
+          await send({ kind: "full", to: from }); return;
+        }
+        const name = typeof s.name === "string" ? s.name.slice(0, 48) : "Membro";
+        const pc = establishPeer(from, true);
+        viewersRef.current.set(from, { id: from, userId: viewerId, name });
+        setViewers(Array.from(viewersRef.current.values()));
+        await pc.setLocalDescription(await pc.createOffer());
+        await send({ kind: "offer", to: from, sdp: pc.localDescription!.toJSON() });
+      } else if (!host && s.kind === "offer" && s.sdp?.type === "offer") {
+        const pc = establishPeer(from, false);
+        await pc.setRemoteDescription(s.sdp);
+        await flushCandidates(from, pc);
+        await pc.setLocalDescription(await pc.createAnswer());
+        await send({ kind: "answer", to: from, sdp: pc.localDescription!.toJSON() });
+      } else if (host && s.kind === "answer" && s.sdp?.type === "answer") {
+        const pc = peers.current.get(from);
+        if (!pc) return;
+        await pc.setRemoteDescription(s.sdp);
+        await flushCandidates(from, pc);
+      } else if (s.kind === "candidate" && s.candidate &&
+        typeof s.candidate.candidate === "string") {
+        const pc = peers.current.get(from);
+        if (pc?.remoteDescription) await pc.addIceCandidate(s.candidate);
+        else candidates.current.set(from, [...(candidates.current.get(from) ?? []), s.candidate]);
+      } else if (host && s.kind === "leave") {
+        closePeer(from);
+      }
+    } catch {
+      setError("Falha na negociação do vídeo. Saia da transmissão e tente entrar novamente.");
+    }
+  }
+
+  async function joinRoom(live: Live, role: Room["role"], stream?: MediaStream) {
+    if (activeRef.current) return;
+    const newRoom = { live, role };
+    activeRef.current = newRoom;
+    if (stream) localStream.current = stream;
+    setRoom(newRoom);
+    setError(null);
+    setConnectionStatus(role === "host" ? "Preparando transmissão…" : "Conectando à live…");
+    const roomChannel = supabase.channel("caminho-divino:live:room:" + live.sessionId, {
+      config: { broadcast: { ack: true } },
+    });
+    roomRef.current = roomChannel;
+    roomChannel.on("broadcast", { event: "signal" }, ({ payload }) => {
+      void handleSignal(payload);
+    });
+    roomChannel.subscribe((status) => {
+      if (activeRef.current?.live.sessionId !== live.sessionId) return;
+      if (status === "SUBSCRIBED") {
+        if (role === "host") {
+          void (async () => {
+            const result = await lobbyRef.current?.track(live);
+            if (result !== "ok") {
+              setError("O servidor de comunidade não conseguiu anunciar a transmissão.");
+              await leaveRoom();
+              return;
+            }
+            setConnectionStatus("Ao vivo — aguardando participantes.");
+          })();
+        } else {
+          void send({ kind: "join", to: live.hostPeerId })
+            .then((statusResult) => {
+              if (statusResult !== "ok") setError("Não foi possível entrar na transmissão. Tente novamente.");
+            });
+        }
+      } else if (status === "CHANNEL_ERROR" || status === "TIMED_OUT") {
+        setError("A comunicação em tempo real falhou. Verifique sua conexão.");
+        void leaveRoom();
+      }
+    });
   }
 
   async function startLive() {
-    if (!user || busy || liveRoom.current) return;
-    const name = topic.trim();
+    if (!user || busy || activeRef.current || lobbyStatus !== "ready") return;
+    const name = title.trim();
     if (name.length < 5 || name.length > 90) {
-      toast.error("Escreva um título entre 5 e 90 caracteres.");
+      toast.error("Escolha um título de 5 a 90 caracteres para sua live.");
       return;
     }
     setBusy(true);
     setError(null);
     let stream: MediaStream | null = null;
-    let stage: "server" | "device" = "server";
     try {
-      // First check the three server tables. A failed migration or RLS rule
-      // must not become a misleading camera permission prompt.
-      const unavailable = await checkLiveBackendReady(async (table) => {
-        const { error: tableError } = await db.from(table)
-          .select("id", { head: true }).limit(1);
-        return tableError;
-      });
-      if (unavailable) {
-        setBackendIssue(unavailable);
-        setBackendStatus("unavailable");
-        return;
-      }
-
-      stage = "device";
       if (!navigator.mediaDevices?.getUserMedia) {
-        throw Object.assign(new Error("A captura de vídeo não está disponível nesta aba."), { name: "SecurityError" });
+        throw Object.assign(new Error("Captura de vídeo não disponível."), { name: "SecurityError" });
       }
-
-      // Simple constraints work better in Safari/iOS than device-specific
-      // camera/facing-mode requirements. Existing browser grants are reused.
       try {
         stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
       } catch (deviceError) {
         if (!isMissingMediaDevice(deviceError)) throw deviceError;
         try {
-          stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
-          toast.info("Microfone indisponível. A live será iniciada somente com vídeo.");
-        } catch (cameraError) {
-          if (!isMissingMediaDevice(cameraError)) throw cameraError;
           stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
-          toast.info("Câmera indisponível. A live será iniciada somente com áudio.");
+          toast.info("Câmera indisponível. Iniciando apenas com áudio.");
+        } catch (audioError) {
+          if (!isMissingMediaDevice(audioError)) throw audioError;
+          stream = await navigator.mediaDevices.getUserMedia({ audio: false, video: true });
+          toast.info("Microfone indisponível. Iniciando apenas com vídeo.");
         }
       }
-
-      stage = "server";
-      const { data, error: insertError } = await db.from("community_live_sessions")
-        .insert({
-          host_id: user.id, title: name, room_name: "CaminhoDivino-" + crypto.randomUUID(),
-          status: "live",
-          // Do not display a not-yet-connected stream as live.
-          last_heartbeat_at: new Date(Date.now() - 120_000).toISOString(),
-        })
-        .select("id,host_id,title,room_name,status,last_heartbeat_at").single();
-      if (insertError || !data) throw insertError ?? new Error("Não foi possível registrar a live.");
-
-      localMedia.current = stream;
+      setCameraOn(stream.getVideoTracks().length > 0);
+      setMicOn(stream.getAudioTracks().length > 0);
+      setHasVideo(stream.getVideoTracks().length > 0);
+      const live: Live = {
+        kind: "live", sessionId: crypto.randomUUID(), hostPeerId: myPeerId.current,
+        hostUserId: user.id, hostName: getDisplayName(user), title: name, started: Date.now(),
+      };
+      await joinRoom(live, "host", stream);
       stream = null;
-      const newRoom: Room = { session: data as Session, role: "host" };
-      liveRoom.current = newRoom;
-      setRoom(newRoom);
-      setConnected(false);
       setCreateOpen(false);
-      setMicOn((localMedia.current?.getAudioTracks().length ?? 0) > 0);
-      setCameraOn((localMedia.current?.getVideoTracks().length ?? 0) > 0);
-      setHasVideoTrack((localMedia.current?.getVideoTracks().length ?? 0) > 0);
     } catch (issue) {
       stream?.getTracks().forEach((track) => track.stop());
-      const message = stage === "device"
-        ? explainLiveMediaError(issue)
-        : explainLiveBackendError(issue);
+      const message = explainLiveMediaError(issue);
       setError(message);
       toast.error(message);
-    } finally {
-      setBusy(false);
-    }
+    } finally { setBusy(false); }
   }
 
-  async function joinLive(session: Session) {
-    if (!user || busy || liveRoom.current) return;
-    setBusy(true);
-    setError(null);
-    try {
-      if (session.host_id === user.id) {
-        throw new Error("Esta live foi iniciada por você em outra janela. Volte à janela da transmissão.");
-      }
-      const { data: existing, error: readError } = await db.from("community_live_participants")
-        .select("status").eq("session_id", session.id).eq("user_id", user.id).maybeSingle();
-      if (readError) throw readError;
-      if (existing?.status === "kicked") {
-        throw new Error("O organizador removeu sua participação nesta transmissão.");
-      }
-      const result = existing
-        ? await db.from("community_live_participants")
-          .update({ status: "joined", updated_at: new Date().toISOString() })
-          .eq("session_id", session.id).eq("user_id", user.id)
-          .eq("status", "left")
-        : await db.from("community_live_participants")
-          .insert({ session_id: session.id, user_id: user.id, status: "joined" });
-      if (result.error) throw result.error;
-      const newRoom: Room = { session, role: "viewer" };
-      liveRoom.current = newRoom;
-      setRoom(newRoom);
-      setConnected(false);
-      setJoining(true);
-    } catch (issue) {
-      setError(errorMessage(issue));
-      toast.error(explainLiveBackendError(issue));
-    } finally {
-      setBusy(false);
-    }
+  function kickViewer(viewer: ViewerInfo) {
+    if (activeRef.current?.role !== "host") return;
+    if (!window.confirm("Remover esta pessoa da live? Ela não poderá retornar nesta sessão.")) return;
+    blockedPeers.current.add(viewer.id);
+    if (viewer.userId) blockedUsers.current.add(viewer.userId);
+    void send({ kind: "kicked", to: viewer.id });
+    closePeer(viewer.id);
+    toast.success("Participante removido desta transmissão.");
   }
 
-  function toggleMicrophone() {
-    const audio = localMedia.current?.getAudioTracks() ?? [];
-    if (!audio.length) return;
-    const next = !audio[0]?.enabled;
-    audio.forEach((track) => { track.enabled = next; });
-    setMicOn(next);
+  function toggleAudio() {
+    const tracks = localStream.current?.getAudioTracks() ?? [];
+    const next = !tracks[0]?.enabled;
+    tracks.forEach((track) => { track.enabled = next; });
+    if (tracks.length) setMicOn(next);
   }
 
-  function toggleCamera() {
-    const video = localMedia.current?.getVideoTracks() ?? [];
-    if (!video.length) return;
-    const next = !video[0]?.enabled;
-    video.forEach((track) => { track.enabled = next; });
-    setCameraOn(next);
-  }
-
-  async function kickMember(memberId: string) {
-    const active = liveRoom.current;
-    if (!active || active.role !== "host" || !user) return;
-    if (!window.confirm("Remover esta pessoa da transmissão? Ela não poderá voltar nesta live.")) return;
-    const { error: kickError } = await db.from("community_live_participants")
-      .update({ status: "kicked", updated_at: new Date().toISOString() })
-      .eq("session_id", active.session.id).eq("user_id", memberId).eq("status", "joined");
-    if (kickError) { toast.error("Não foi possível remover o participante."); return; }
-    peers.current.get(memberId)?.close();
-    peers.current.delete(memberId);
-    await loadMembers(active.session.id);
-    toast.success("Participante removido da transmissão.");
-  }
-
-  useEffect(() => {
-    if (!room || !user) return;
-    let cancelled = false;
-    const { session, role } = room;
-    const myId = user.id;
-    const currentRoomId = session.id;
-    const amHost = role === "host";
-    const signalChannel = db.channel("cd-native-live-" + currentRoomId + "-" + myId);
-    channel.current = signalChannel;
-
-    async function send(kind: Signal["kind"], to: string, payload: Record<string, unknown> = {}) {
-      if (cancelled || liveRoom.current?.session.id !== currentRoomId) return;
-      const { error: signalError } = await db.from("community_live_signals").insert({
-        session_id: currentRoomId,
-        sender_id: myId,
-        receiver_id: to,
-        kind,
-        payload,
-      });
-      if (signalError) throw signalError;
-    }
-
-    async function flushCandidates(peerId: string, peer: RTCPeerConnection) {
-      const queued = pendingCandidates.current.get(peerId) ?? [];
-      pendingCandidates.current.delete(peerId);
-      for (const ice of queued) await peer.addIceCandidate(ice);
-    }
-
-    function createPeer(peerId: string, host: boolean) {
-      peers.current.get(peerId)?.close();
-      const peer = new RTCPeerConnection(ICE);
-      peers.current.set(peerId, peer);
-      peer.onicecandidate = (event) => {
-        if (event.candidate && !cancelled) {
-          void send("candidate", peerId, { candidate: event.candidate.toJSON() })
-            .catch(() => setError("Falha na negociação de vídeo. Verifique sua conexão."));
-        }
-      };
-      peer.onconnectionstatechange = () => {
-        if (cancelled) return;
-        if (peer.connectionState === "failed") {
-          setError("Não foi possível estabelecer o vídeo nesta rede. Uma conexão TURN pode ser necessária.");
-          if (!host) setJoining(false);
-        } else if (peer.connectionState === "connected" && !host) {
-          setJoining(false);
-          setConnected(true);
-          setError(null);
-        }
-      };
-      if (host) {
-        localMedia.current?.getTracks().forEach((track) => {
-          if (localMedia.current) peer.addTrack(track, localMedia.current);
-        });
-      } else {
-        peer.ontrack = (event) => {
-          if (!remoteVideo.current) return;
-          remoteVideo.current.srcObject = event.streams[0] ?? new MediaStream([event.track]);
-          void remoteVideo.current.play().then(() => setPlayBlocked(false))
-            .catch(() => setPlayBlocked(true));
-          setJoining(false);
-          setConnected(true);
-        };
-      }
-      return peer;
-    }
-
-    async function isJoined(viewerId: string) {
-      const { data, error: resultError } = await db.from("community_live_participants")
-        .select("status").eq("session_id", currentRoomId).eq("user_id", viewerId).maybeSingle();
-      return !resultError && data?.status === "joined";
-    }
-
-    async function processSignal(signal: Signal) {
-      if (cancelled || liveRoom.current?.session.id !== currentRoomId) return;
-      if (signal.session_id !== currentRoomId || signal.receiver_id !== myId) return;
-      if (processed.current.has(signal.id)) return;
-      processed.current.add(signal.id);
-      if (processed.current.size > 1000) processed.current.clear();
-      const from = signal.sender_id;
-      const payload = signal.payload ?? {};
-      if (!amHost && from !== session.host_id) return;
-      if (amHost && !(await isJoined(from))) return;
-
-      try {
-        if (signal.kind === "join" && amHost) {
-          const peer = createPeer(from, true);
-          await peer.setLocalDescription(await peer.createOffer());
-          await send("offer", from, { sdp: peer.localDescription?.toJSON() });
-          void loadMembers(currentRoomId);
-        } else if (signal.kind === "offer" && !amHost) {
-          const sdp = payload["sdp"] as RTCSessionDescriptionInit | undefined;
-          if (!sdp || sdp.type !== "offer" || typeof sdp.sdp !== "string") return;
-          const peer = createPeer(from, false);
-          await peer.setRemoteDescription(sdp);
-          await flushCandidates(from, peer);
-          await peer.setLocalDescription(await peer.createAnswer());
-          await send("answer", from, { sdp: peer.localDescription?.toJSON() });
-        } else if (signal.kind === "answer" && amHost) {
-          const sdp = payload["sdp"] as RTCSessionDescriptionInit | undefined;
-          const peer = peers.current.get(from);
-          if (peer && sdp?.type === "answer" && typeof sdp.sdp === "string") {
-            await peer.setRemoteDescription(sdp);
-            await flushCandidates(from, peer);
-          }
-        } else if (signal.kind === "candidate") {
-          const candidate = payload["candidate"] as RTCIceCandidateInit | undefined;
-          if (!candidate || typeof candidate.candidate !== "string") return;
-          const peer = peers.current.get(from);
-          if (peer?.remoteDescription) await peer.addIceCandidate(candidate);
-          else pendingCandidates.current.set(from, [...(pendingCandidates.current.get(from) ?? []), candidate]);
-        } else if (signal.kind === "leave" && amHost) {
-          peers.current.get(from)?.close();
-          peers.current.delete(from);
-          void loadMembers(currentRoomId);
-        }
-      } catch (issue) {
-        if (!cancelled) setError("Falha ao conectar vídeo: " + errorMessage(issue));
-      }
-    }
-
-    signalChannel
-      .on("postgres_changes", {
-        event: "INSERT", schema: "public", table: "community_live_signals",
-        filter: "receiver_id=eq." + myId,
-      }, (message) => {
-        void processSignal(message.new as Signal);
-      })
-      .on("postgres_changes", {
-        event: "*", schema: "public", table: "community_live_participants",
-        filter: "session_id=eq." + currentRoomId,
-      }, (change) => {
-        if (cancelled || liveRoom.current?.session.id !== currentRoomId) return;
-        const member = change.new as Member | undefined;
-        if (amHost) {
-          void loadMembers(currentRoomId);
-          if (member?.status === "kicked" || member?.status === "left") {
-            peers.current.get(member.user_id)?.close();
-            peers.current.delete(member.user_id);
-          }
-        } else if (member?.user_id === myId && member.status === "kicked") {
-          toast.error("O organizador removeu você desta live.");
-          void leaveRoom();
-        }
-      })
-      .subscribe((status) => {
-        if (cancelled) return;
-        if (status === "SUBSCRIBED") {
-          if (amHost) {
-            void (async () => {
-              const { error: activationError } = await db.from("community_live_sessions")
-                .update({ last_heartbeat_at: new Date().toISOString() })
-                .eq("id", currentRoomId).eq("host_id", myId);
-              if (cancelled) return;
-              if (activationError) {
-                setError("A live não pôde ser ativada. Verifique as tabelas e as permissões do Supabase.");
-                return;
-              }
-              setConnected(true);
-              setJoining(false);
-              void loadSessions();
-              void loadMembers(currentRoomId);
-              heartbeatTimer.current = window.setInterval(() => {
-                void db.from("community_live_sessions")
-                  .update({ last_heartbeat_at: new Date().toISOString() })
-                  .eq("id", currentRoomId).eq("host_id", myId);
-              }, 15_000);
-            })();
-          } else {
-            void send("join", session.host_id).catch(() => {
-              setError("Não foi possível comunicar sua entrada ao anfitrião.");
-              setJoining(false);
-            });
-          }
-        } else if (status === "CHANNEL_ERROR" || status === "TIMED_OUT") {
-          setError("A conexão em tempo real falhou. Verifique sua internet.");
-          setJoining(false);
-        }
-      });
-
-    memberTimer.current = window.setInterval(() => {
-      if (cancelled) return;
-      if (amHost) {
-        void (async () => {
-          await loadMembers(currentRoomId);
-          const { data } = await db.from("community_live_participants")
-            .select("user_id,status").eq("session_id",currentRoomId);
-          const joined = new Set(((data ?? []) as Member[]).filter(p => p.status === "joined").map(p => p.user_id));
-          for (const [id, peer] of peers.current) {
-            if (!joined.has(id)) { peer.close(); peers.current.delete(id); }
-          }
-        })();
-      } else {
-        void (async () => {
-          const [membership, activeSession] = await Promise.all([
-            db.from("community_live_participants").select("status")
-              .eq("session_id", currentRoomId).eq("user_id", myId).maybeSingle(),
-            db.from("community_live_sessions").select("status,last_heartbeat_at")
-              .eq("id", currentRoomId).maybeSingle(),
-          ]);
-          if (cancelled) return;
-          const currentState = membership.data?.status;
-          const liveStatus = activeSession.data;
-          if (currentState === "kicked") {
-            toast.error("O organizador removeu você desta live.");
-            void leaveRoom();
-          } else if (!liveStatus || liveStatus.status !== "live" ||
-            Date.now() - new Date(liveStatus.last_heartbeat_at).getTime() > 55_000) {
-            toast.info("A transmissão foi encerrada.");
-            void leaveRoom();
-          }
-        })();
-      }
-    }, 5_000);
-
-    return () => {
-      cancelled = true;
-      if (heartbeatTimer.current !== null) window.clearInterval(heartbeatTimer.current);
-      if (memberTimer.current !== null) window.clearInterval(memberTimer.current);
-      heartbeatTimer.current = null;
-      memberTimer.current = null;
-      void db.removeChannel(signalChannel);
-      if (channel.current === signalChannel) channel.current = null;
-      closePeers();
-      // Also handle browser navigation away from the live without leaving a ghost session.
-      if (liveRoom.current?.session.id === currentRoomId) {
-        liveRoom.current = null;
-        localMedia.current?.getTracks().forEach((track) => track.stop());
-        localMedia.current = null;
-        if (amHost) {
-          void (async () => {
-            const { error: endError } = await db.from("community_live_sessions")
-              .update({ status: "ended", ended_at: new Date().toISOString() })
-              .eq("id", currentRoomId).eq("host_id", myId);
-            if (!endError) {
-              await db.from("community_live_signals").delete()
-                .eq("session_id", currentRoomId);
-            }
-          })();
-        } else {
-          void db.from("community_live_participants")
-            .update({ status: "left", updated_at: new Date().toISOString() })
-            .eq("session_id", currentRoomId).eq("user_id", myId).eq("status", "joined");
-        }
-      }
-    };
-    // The signaling session starts once per room and is not remounted by UI updates.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [room?.session.id, room?.role, user?.id]);
-
-  async function enablePlayback() {
-    if (!remoteVideo.current) return;
-    try {
-      await remoteVideo.current.play();
-      setPlayBlocked(false);
-    } catch {
-      toast.error("Toque no controle de reprodução do vídeo para ativar o som.");
-    }
+  function toggleVideo() {
+    const tracks = localStream.current?.getVideoTracks() ?? [];
+    const next = !tracks[0]?.enabled;
+    tracks.forEach((track) => { track.enabled = next; });
+    if (tracks.length) setCameraOn(next);
   }
 
   return (
     <section id="community-live" className="space-y-3">
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <h3 className="flex items-center gap-2 text-lg font-bold text-[#102c55] dark:text-foreground">
-          <Radio className="size-5 text-amber-500" /> Lives da Comunidade
+          <Radio className="size-5 text-amber-500" aria-hidden="true" /> Lives da Comunidade
         </h3>
         <button type="button" onClick={() => setCreateOpen((value) => !value)}
-          disabled={Boolean(room) || backendStatus !== "ready"}
-          aria-describedby={backendStatus === "unavailable" ? "community-live-infrastructure-notice" : undefined}
+          disabled={!user || lobbyStatus !== "ready" || Boolean(room)}
           className="inline-flex min-h-11 items-center gap-2 rounded-full border border-blue-300 bg-white px-4 text-sm font-semibold text-blue-800 shadow-sm hover:bg-blue-50 disabled:opacity-50 dark:bg-card dark:text-blue-300">
-          <Plus className="size-4" /> Iniciar minha live
+          <Plus className="size-4" aria-hidden="true" /> Iniciar minha live
         </button>
       </div>
 
-      {backendStatus === "checking" && (
-        <p className="text-sm text-slate-600 dark:text-slate-300" role="status">
-          Verificando a disponibilidade das transmissões…
+      {lobbyStatus === "connecting" && (
+        <p role="status" className="flex items-center gap-2 text-sm text-slate-600">
+          <Loader2 className="size-4 animate-spin" /> Conectando à comunidade…
         </p>
       )}
-      {backendStatus === "unavailable" && backendIssue && (
-        <div id="community-live-infrastructure-notice"
-          className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-950 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-100"
-          role="status">
-          <span className="min-w-0 flex-1">{backendIssue}</span>
-          <button type="button" onClick={() => void verifyInfrastructure()}
-            className="min-h-10 shrink-0 rounded-full border border-amber-500 px-4 font-semibold hover:bg-amber-100 dark:hover:bg-amber-900/40">
-            Verificar novamente
-          </button>
+      {lobbyStatus === "error" && (
+        <div className="flex flex-wrap items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900" role="alert">
+          A conexão da comunidade falhou.
+          <button type="button" onClick={() => { setLobbyStatus("connecting"); setRetryKey((v) => v + 1); }}
+            className="min-h-10 rounded-full border border-amber-400 px-3 font-semibold">Tentar novamente</button>
         </div>
       )}
 
-      {createOpen && !room && backendStatus === "ready" && (
+      {createOpen && !room && lobbyStatus === "ready" && (
         <form onSubmit={(event) => { event.preventDefault(); void startLive(); }}
           className="space-y-3 rounded-2xl border border-blue-200 bg-blue-50 p-4 dark:bg-slate-900">
           <label className="block space-y-2 text-sm font-semibold">
             Qual é o tema da sua live?
-            <input value={topic} onChange={(event) => setTopic(event.target.value)}
-              minLength={5} maxLength={90} required
-              placeholder="Pregação, Culto da Comunhão, Oração, Testemunho..."
+            <input required minLength={5} maxLength={90} value={title}
+              onChange={(event) => setTitle(event.target.value)}
+              placeholder="Culto da Comunhão, Pregação, Oração, Testemunho…"
               className="min-h-12 w-full rounded-xl border border-blue-200 bg-white px-3 text-base text-slate-900 focus-visible:outline-2 focus-visible:outline-blue-600" />
           </label>
           <p className="text-xs text-slate-600 dark:text-slate-300">
-            Sua conta do Caminho Divino é suficiente. Se a câmera e o microfone já estão autorizados, o navegador reutiliza essa permissão. Não há login externo de anfitrião.
+            Use sua conta do Caminho Divino. Não há login de anfitrião externo nem alteração no banco.
+            Esta versão inicial aceita até quatro espectadores simultâneos e requer uma conexão direta entre dispositivos.
           </p>
           <div className="flex gap-2">
-            <button type="submit" disabled={busy || !user}
+            <button type="submit" disabled={busy}
               className="inline-flex min-h-11 items-center gap-2 rounded-full bg-blue-700 px-5 text-sm font-semibold text-white hover:bg-blue-800 disabled:opacity-50">
               {busy ? <Loader2 className="size-4 animate-spin" /> : <Radio className="size-4" />}
               {busy ? "Iniciando…" : "Iniciar transmissão"}
@@ -665,20 +498,25 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
         </form>
       )}
 
-      {sessions.length > 0 && (
+      {lives.length > 0 && (
         <div className="space-y-2">
           <p className="flex items-center gap-2 text-sm font-bold text-red-700 dark:text-red-300">
             <span className="size-2 animate-pulse rounded-full bg-red-600" /> AO VIVO AGORA
           </p>
           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {sessions.map((session) => (
-              <button key={session.id} type="button" disabled={busy || Boolean(room)}
-                onClick={() => void joinLive(session)}
+            {lives.map((live) => (
+              <button key={live.sessionId} type="button"
+                disabled={busy || Boolean(room)}
+                onClick={() => {
+                  if (!user) return;
+                  if (live.hostPeerId === myPeerId.current) return;
+                  void joinRoom(live, "viewer");
+                }}
                 className="flex min-h-20 items-center gap-3 rounded-2xl border border-blue-200 bg-gradient-to-r from-[#0b3768] to-[#0b67a9] p-4 text-left text-white shadow-md disabled:opacity-60">
-                <Radio className="size-7 shrink-0 text-amber-300" />
+                <Radio className="size-6 shrink-0 text-amber-300" />
                 <span className="min-w-0 flex-1">
-                  <span className="block break-words font-bold">{session.title}</span>
-                  <span className="text-xs text-blue-100">Entrar e assistir · sem pedir autorização</span>
+                  <span className="block break-words font-bold">{live.title}</span>
+                  <span className="text-xs text-blue-100">{live.hostName} · Assistir ao vivo</span>
                 </span>
                 <Play className="size-5 shrink-0" />
               </button>
@@ -691,31 +529,29 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
         <div className="space-y-3 rounded-2xl border border-blue-200 bg-[#092342] p-3 text-white">
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0">
-              <p className="truncate text-sm font-bold">{room.session.title}</p>
+              <p className="truncate text-sm font-bold">{room.live.title}</p>
               <p className="text-xs text-blue-100">
-                {room.role === "host" ? "Você está transmitindo" : "Assistindo à live"}
+                {room.role === "host" ? "Sua transmissão" : "Assistindo à transmissão"}
               </p>
             </div>
             <button type="button" onClick={() => void leaveRoom()}
               className="inline-flex min-h-11 items-center gap-2 rounded-full border border-white/40 px-3 text-sm hover:bg-white/10">
-              <X className="size-4" />
-              {room.role === "host" ? "Encerrar live" : "Sair da live"}
+              <X className="size-4" /> {room.role === "host" ? "Encerrar live" : "Sair"}
             </button>
           </div>
           {room.role === "host" ? (
             <>
-              {!hasVideoTrack && (
-                <p className="rounded-xl border border-white/20 p-3 text-sm text-white">Transmissão apenas com áudio — câmera indisponível neste dispositivo.</p>
-              )}
+              {!hasVideo && <p className="text-xs text-blue-100">Transmissão somente com áudio.</p>}
               <video ref={localVideo} muted playsInline autoPlay
-                aria-label="Prévia da sua câmera" className="aspect-video max-h-[65svh] w-full rounded-xl bg-black object-contain" />
+                aria-label="Prévia da sua câmera"
+                className="aspect-video max-h-[65svh] w-full rounded-xl bg-black object-contain" />
               <div className="flex flex-wrap gap-2">
-                <button type="button" onClick={toggleMicrophone}
+                <button type="button" onClick={toggleAudio}
                   className="flex min-h-11 items-center gap-2 rounded-full border border-white/30 px-4 text-sm">
                   {micOn ? <Mic className="size-4" /> : <MicOff className="size-4" />}
                   {micOn ? "Desligar microfone" : "Ligar microfone"}
                 </button>
-                <button type="button" onClick={toggleCamera}
+                <button type="button" onClick={toggleVideo}
                   className="flex min-h-11 items-center gap-2 rounded-full border border-white/30 px-4 text-sm">
                   {cameraOn ? <Camera className="size-4" /> : <CameraOff className="size-4" />}
                   {cameraOn ? "Desligar câmera" : "Ligar câmera"}
@@ -723,15 +559,15 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
               </div>
               <div className="space-y-2 rounded-xl border border-white/20 p-3">
                 <h4 className="flex items-center gap-2 text-sm font-semibold">
-                  <UsersRound className="size-4" /> Participantes ({members.filter((item) => item.status === "joined").length})
+                  <UsersRound className="size-4" /> Participantes ({viewers.length}/{MAX_VIEWERS})
                 </h4>
-                {members.filter((item) => item.status === "joined").length === 0 ? (
-                  <p className="text-xs text-blue-100">Aguardando a entrada de participantes.</p>
-                ) : members.filter((item) => item.status === "joined").map((member) => (
-                  <div key={member.user_id} className="flex items-center justify-between gap-3 rounded-lg bg-white/10 p-2">
-                    <span className="min-w-0 truncate text-xs">{memberNames[member.user_id] || "Membro " + member.user_id.slice(0, 8)}</span>
-                    <button type="button" onClick={() => void kickMember(member.user_id)}
-                      className="flex min-h-10 items-center gap-1 rounded-lg border border-red-200/40 px-3 text-xs text-white hover:bg-red-700">
+                {viewers.length === 0 ? (
+                  <p className="text-xs text-blue-100">Aguardando pessoas entrarem na live…</p>
+                ) : viewers.map((viewer) => (
+                  <div key={viewer.id} className="flex items-center justify-between gap-3 rounded-lg bg-white/10 p-2">
+                    <span className="min-w-0 truncate text-xs">{viewer.name}</span>
+                    <button type="button" onClick={() => kickViewer(viewer)}
+                      className="flex min-h-10 items-center gap-1 rounded-lg border border-red-200/40 px-3 text-xs hover:bg-red-700">
                       <ShieldBan className="size-4" /> Remover
                     </button>
                   </div>
@@ -741,21 +577,18 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
           ) : (
             <>
               <video ref={remoteVideo} playsInline autoPlay controls
-                aria-label="Vídeo da transmissão" className="aspect-video max-h-[65svh] w-full rounded-xl bg-black object-contain" />
-              {joining && <p className="flex items-center gap-2 text-xs text-blue-100">
-                <Loader2 className="size-4 animate-spin" /> Entrando automaticamente na transmissão…
-              </p>}
-              {playBlocked && <button type="button" onClick={() => void enablePlayback()}
-                className="min-h-11 rounded-full bg-blue-600 px-5 text-sm font-semibold text-white">
-                <Play className="mr-2 inline size-4" /> Ativar som e vídeo
-              </button>}
+                aria-label="Vídeo da live" className="aspect-video max-h-[65svh] w-full rounded-xl bg-black object-contain" />
+              {playingBlocked && (
+                <button type="button" onClick={() => {
+                  void remoteVideo.current?.play().then(() => setPlayingBlocked(false))
+                    .catch(() => toast.error("Não foi possível iniciar o vídeo. Toque em reproduzir no player."));
+                }} className="min-h-11 rounded-full bg-blue-600 px-4 text-sm font-semibold">
+                  <Play className="mr-1 inline size-4" /> Ativar vídeo e som
+                </button>
+              )}
             </>
           )}
-          {connected && <p className="text-xs text-blue-100">
-            {room.role === "host"
-              ? "Transmissão ativa. Os participantes podem entrar sem aguardar aprovação."
-              : "Conexão estabelecida. O microfone e a câmera do espectador permanecem desativados."}
-          </p>}
+          {connectionStatus && <p role="status" className="text-xs text-blue-100">{connectionStatus}</p>}
         </div>
       )}
       {error && <p role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{error}</p>}
