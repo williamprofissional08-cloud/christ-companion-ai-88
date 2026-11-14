@@ -45,7 +45,7 @@ export function friendlyAuthError(error: unknown): string {
   if (isAuthApiKeyError(error)) return AUTH_API_KEY_CONFIGURATION_MESSAGE;
 
   if (message.includes("invalid login credentials") || message.includes("invalid_credentials"))
-    return "Não foi possível entrar com esses dados. Confira o e-mail e a senha. Se você acabou de criar a conta, confirme primeiro o endereço pelo link enviado por e-mail; depois volte para entrar. Se não recebeu a mensagem, use a opção de reenviar confirmação.";
+    return "Não foi possível entrar com esses dados. Confira o e-mail e a senha ou use “Esqueceu sua senha?” para recuperar o acesso. Se acabou de criar a conta, confira a confirmação por e-mail. Esse erro não significa que sua conta foi apagada.";
   if (message.includes("email not confirmed") || message.includes("email_not_confirmed"))
     return "Seu e-mail ainda não foi confirmado. Abra o link enviado para sua caixa de entrada ou spam e tente entrar novamente.";
   if (message.includes("already registered") || message.includes("already exists") || message.includes("user already registered"))
