@@ -61,6 +61,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
   const [playBlocked, setPlayBlocked] = useState(false);
   const [micOn, setMicOn] = useState(true);
   const [cameraOn, setCameraOn] = useState(true);
+  const [hasVideoTrack, setHasVideoTrack] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const liveRoom = useRef<Room | null>(null);
@@ -249,6 +250,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
       setCreateOpen(false);
       setMicOn((localMedia.current?.getAudioTracks().length ?? 0) > 0);
       setCameraOn((localMedia.current?.getVideoTracks().length ?? 0) > 0);
+      setHasVideoTrack((localMedia.current?.getVideoTracks().length ?? 0) > 0);
     } catch (issue) {
       stream?.getTracks().forEach((track) => track.stop());
       const message = stage === "device"
@@ -662,7 +664,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
           </div>
           {room.role === "host" ? (
             <>
-              {!cameraOn && (localMedia.current?.getVideoTracks().length ?? 0) === 0 && (
+              {!hasVideoTrack && (
                 <p className="rounded-xl border border-white/20 p-3 text-sm text-white">Transmissão apenas com áudio — câmera indisponível neste dispositivo.</p>
               )}
               <video ref={localVideo} muted playsInline autoPlay
