@@ -12,6 +12,21 @@ test("no current user is signed out of the screen, without touching stored crede
   assert.equal(result, "signed-out");
 });
 
+test("a missing local session is normal for a first-time visitor", async () => {
+  const result = await checkExistingAccountSession(async () => ({
+    data: { user: null },
+    error: { name: "AuthSessionMissingError", code: "session_not_found", message: "Auth session missing!" },
+  }));
+  assert.equal(result, "signed-out");
+});
+
+test("a thrown missing-session error does not show a network outage", async () => {
+  const result = await checkExistingAccountSession(async () => {
+    throw { name: "AuthSessionMissingError", message: "Auth session missing!" };
+  });
+  assert.equal(result, "signed-out");
+});
+
 test("temporary network/API errors never mean that an existing account is gone", async () => {
   const result = await checkExistingAccountSession(async () => ({
     data: { user: null },
