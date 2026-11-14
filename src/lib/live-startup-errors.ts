@@ -9,32 +9,32 @@ function shape(error: LiveIssue) {
   const issue = typeof error === "object" && error !== null
     ? error as Record<string, unknown> : {};
   return {
-    code: typeof issue.code === "string" ? issue.code : "",
-    status: typeof issue.status === "number" ? issue.status : 0,
-    name: typeof issue.name === "string" ? issue.name : "",
-    message: typeof issue.message === "string" ? issue.message : "",
+    code: typeof issue['code'] === "string" ? issue['code'] : "",
+    status: typeof issue['status'] === "number" ? issue['status'] : 0,
+    name: typeof issue['name'] === "string" ? issue['name'] : "",
+    message: typeof issue['message'] === "string" ? issue['message'] : "",
   };
 }
 
 export function explainLiveBackendError(error: LiveIssue): string {
   const issue = shape(error);
-  const message = issue.message.toLowerCase();
+  const message = issue['message'].toLowerCase();
 
-  if (issue.code === "PGRST205" || issue.code === "42P01" ||
+  if (issue['code'] === "PGRST205" || issue['code'] === "42P01" ||
     (message.includes("schema cache") && message.includes("table")) ||
     message.includes("relation does not exist")) {
     return "O servidor ainda não tem as tabelas necessárias para as lives. A equipe precisa ativar a infraestrutura no Supabase. Não é um problema de autorização da câmera.";
   }
-  if (issue.code === "42501" || issue.status === 403 ||
+  if (issue['code'] === "42501" || issue['status'] === 403 ||
     message.includes("permission denied")) {
     return "O servidor bloqueou esta operação na live. É preciso revisar as permissões de acesso (RLS) no Supabase. A câmera não é a causa.";
   }
-  if (issue.code === "PGRST301" || issue.status === 401 ||
+  if (issue['code'] === "PGRST301" || issue['status'] === 401 ||
     message.includes("jwt expired") || message.includes("invalid jwt")) {
     return "Sua sessão não foi aceita pelo servidor. Saia e entre novamente na sua conta do Caminho Divino.";
   }
   if (message.includes("failed to fetch") || message.includes("networkerror") ||
-    issue.status === 503 || issue.status === 502) {
+    issue['status'] === 503 || issue['status'] === 502) {
     return "Não foi possível alcançar o servidor de lives. Confira sua conexão e tente novamente.";
   }
   return "O servidor não conseguiu preparar a live. Verifique a conexão com o Supabase e tente novamente. Não é necessário autorizar a câmera outra vez.";
@@ -42,7 +42,7 @@ export function explainLiveBackendError(error: LiveIssue): string {
 
 export function explainLiveMediaError(error: LiveIssue): string {
   const issue = shape(error);
-  switch (issue.name) {
+  switch (issue['name']) {
     case "NotAllowedError":
     case "PermissionDeniedError":
     case "SecurityError":
