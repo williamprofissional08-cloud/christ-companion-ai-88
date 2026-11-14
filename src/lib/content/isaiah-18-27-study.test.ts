@@ -28,7 +28,7 @@ describe("Estudos Isaías 18–27", () => {
   for (const [chapter, verseCount, study] of chapters) {
     it(`Isaías ${chapter}: catálogo, leitura e comentários`, () => {
       expect(CURATED_STUDIES[`biblia-isaias-cap-${chapter}`]).toBe(study);
-      const sections = study.sections;
+      const sections = study.sections ?? [];
       expect(sections).toBeDefined();
       const reading = sections.find((s) => s.id === "leitura-biblica");
       expect(reading?.body).toContain("BLIVRE");
