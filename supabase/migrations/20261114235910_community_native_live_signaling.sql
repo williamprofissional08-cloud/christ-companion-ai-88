@@ -110,8 +110,18 @@ CREATE POLICY "Host and joined participants may signal each other"
   )
  );
 
+-- The authenticated host may erase signaling metadata (including ICE network
+-- information) once the room has ended. Keep access to other users' signals denied.
+DROP POLICY IF EXISTS "Host may erase signaling from ended room" ON public.community_live_signals;
+CREATE POLICY "Host may erase signaling from ended room"
+ ON public.community_live_signals FOR DELETE TO authenticated
+ USING (EXISTS (
+  SELECT 1 FROM public.community_live_sessions s
+  WHERE s.id=session_id AND s.host_id=(select auth.uid()) AND s.status='ended'
+ ));
+
 GRANT SELECT,INSERT,UPDATE ON public.community_live_participants TO authenticated;
-GRANT SELECT,INSERT ON public.community_live_signals TO authenticated;
+GRANT SELECT,INSERT,DELETE ON public.community_live_signals TO authenticated;
 
 -- Listen to authorized, sender-authenticated inserts. RLS is enforced on
 -- Postgres Changes according to the receiver's authenticated session.
