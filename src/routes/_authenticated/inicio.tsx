@@ -45,12 +45,12 @@ function Inicio() {
     { to: "/comunidade", label: "Comunidade (Chat)", icon: UsersRound },
     { to: "/favoritos", label: "Meus Favoritos", icon: Heart },
     { to: "/diario", label: "Minhas Anotações", icon: NotebookPen },
-    { to: "/estudos", label: "Ouvir (Áudio/TTS)", icon: Headphones },
-    { to: "/planos", label: "Planos de Estudo", icon: ListChecks },
-    { to: "/escola", label: "Certificados", icon: Award },
+    { to: "/estudos", label: "Estudos com áudio", icon: Headphones },
+    { to: "/planos", label: "Planos de oração", icon: ListChecks },
+    { to: "/escola", label: "Escola e certificados", icon: Award },
   ] as const;
   const summary = [
-    { label: "Minha Jornada Bíblica", icon: BookOpen, to: "/metas", description: "Acompanhar capítulos" },
+    { label: "Minha Jornada Bíblica", icon: BookOpen, to: "/metas", description: "Acompanhar suas metas" },
     { label: "Estudos Concluídos", icon: BarChart3, to: "/estudos", description: "Ver meus estudos" },
     { label: "Favoritos", icon: Heart, to: "/favoritos", description: "Itens salvos" },
     { label: "Minhas Pregações", icon: Bookmark, to: "/minhas-mensagens", description: "Minhas mensagens" },
@@ -83,7 +83,7 @@ function Inicio() {
           <h2 className="flex items-center gap-2 text-sm font-semibold"><CalendarDays className="size-5" aria-hidden="true" /> Devocional de Hoje</h2>
           {devotional.isLoading ? <Skeleton className="mt-5 h-16 w-2/3" /> : (
             <>
-              <p className="mt-4 max-w-lg font-serif text-2xl font-bold leading-tight sm:text-3xl">{"Medite na Palavra de Deus"}</p>
+              <p className="mt-4 max-w-lg font-serif text-2xl font-bold leading-tight sm:text-3xl">{d?.verse.text?.replace(/^Síntese para meditação, não uma citação literal:\\s*/i, "") || "Medite na Palavra de Deus"}</p>
               <p className="mt-2 text-sm">{d?.verse.reference || "Salmos 119:105"}</p>
             </>
           )}
