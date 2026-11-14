@@ -4,7 +4,8 @@ import { BookOpen, Check, Download, FileText, Flag, Heart, LibraryBig, Loader2, 
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
-import { GlobalChatPanel } from "@/components/community/GlobalChatPanel";
+import { CommunitySocialHub } from "@/components/community/CommunitySocialHub";
+import { COMMUNITY_MEDIA_BUCKET, validateCommunityMedia } from "@/lib/community-media";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -16,7 +17,7 @@ import { validateCommunityPdf } from "@/lib/community-pdf-validation";
 
 const db = supabase as unknown as SupabaseClient;
 type Category = "pergunta" | "debate" | "estudo" | "testemunho" | "oracao" | "reflexao";
-type Post = { id: string; user_id: string; category: Category; title: string; body: string; scripture_reference: string | null; created_at: string };
+type Post = { id: string; user_id: string; category: Category; title: string; body: string; scripture_reference: string | null; created_at: string; media_path?: string | null; media_kind?: "image" | "video" | null; media_seconds?: number | null; promo_consent?: boolean };
 type Resource = { id: string; user_id: string; title: string; author: string; description: string; category: string; storage_path: string; file_name: string; file_size: number; status: "pending" | "approved" | "rejected"; course_candidate?: boolean; created_at: string };
 type Profile = { id: string; display_name: string | null; avatar_url: string | null };
 type Comment = { id: string; post_id: string; user_id: string; body: string; created_at: string };
@@ -62,7 +63,11 @@ function ComunidadePage() {
   const [pollVoted, setPollVoted] = useState(false);
   const [composer, setComposer] = useState(false);
   const [libraryForm, setLibraryForm] = useState(false);
-  const [category, setCategory] = useState<Category>("pergunta");
+  const [category, setCategory] = useState<Category>("reflexao");
+  const [media, setMedia] = useState<File | null>(null);
+  const [mediaPreference, setMediaPreference] = useState<"image" | "video" | null>(null);
+  const [promoConsent, setPromoConsent] = useState(false);
+  const [mediaUrls, setMediaUrls] = useState<Record<string, string>>({});
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [reference, setReference] = useState("");
@@ -86,6 +91,11 @@ function ComunidadePage() {
     if (p.error) toast.error("Não foi possível carregar as publicações.");
     const rows = (p.data || []) as Post[];
     setPosts(rows); setResources((r.data || []) as Resource[]);
+    const urls = await Promise.all(rows.filter(row=>row.media_path).map(async(row) => {
+      const result = await db.storage.from(COMMUNITY_MEDIA_BUCKET).createSignedUrl(row.media_path!, 3600);
+      return result.data?.signedUrl ? [row.id, result.data.signedUrl] as const : null;
+    }));
+    setMediaUrls(Object.fromEntries(urls.filter((url): url is readonly [string,string] => url!==null)));
     const counts: Record<string, { count: number; mine: boolean }> = {};
     for (const item of (l.data || []) as { post_id: string; user_id: string }[]) {
       const currentCount = counts[item.post_id] ?? { count: 0, mine: false };
@@ -132,15 +142,45 @@ function ComunidadePage() {
   }, [posts, tab]);
 
   async function publish(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault(); if (!user) return; setBusy(true);
-    const { count, error: countError } = await db.from("community_posts").select("id", { count: "exact", head: true }).eq("user_id", user.id);
-    if (countError) { setBusy(false); toast.error("Não foi possível verificar sua primeira publicação."); return; }
-    const status = count === 0 ? "pending" : "published";
-    const { error } = await db.from("community_posts").insert({ user_id: user.id, category, title: title.trim(), body: body.trim(), scripture_reference: reference.trim() || null, status });
-    setBusy(false);
-    if (error) { toast.error("Não foi possível publicar. Confira os campos e tente novamente."); return; }
-    toast.success(status === "pending" ? "Sua primeira publicação foi enviada para aprovação da equipe." : "Publicação compartilhada. Que ela edifique a comunidade!");
-    setTitle(""); setBody(""); setReference(""); setComposer(false); await reload(user);
+    event.preventDefault();
+    if (!user || busy) return;
+    setBusy(true);
+    let mediaPath: string | null = null;
+    try {
+      const { count, error: countError } = await db.from("community_posts")
+        .select("id", { count:"exact", head:true }).eq("user_id",user.id);
+      if (countError) throw new Error("Não foi possível verificar a moderação da primeira publicação.");
+      const status = count===0 ? "pending" : "published";
+      let mediaInfo: Awaited<ReturnType<typeof validateCommunityMedia>> | null = null;
+      if (media) {
+        mediaInfo = await validateCommunityMedia(media);
+        mediaPath = `${user.id}/posts/${crypto.randomUUID()}.${mediaInfo.extension}`;
+        const { error: uploadError } = await db.storage.from(COMMUNITY_MEDIA_BUCKET)
+          .upload(mediaPath,media,{contentType:media.type,upsert:false});
+        if(uploadError) throw uploadError;
+      }
+      const payload = {
+        user_id:user.id, category, title:title.trim(), body:body.trim(),
+        scripture_reference:reference.trim()||null, status,
+        ...(mediaInfo && mediaPath ? {
+          media_path:mediaPath,media_kind:mediaInfo.kind,media_seconds:mediaInfo.seconds,
+        } : {}),
+        ...(promoConsent ? { promo_consent: true } : {}),
+      };
+      const { error } = await db.from("community_posts").insert(payload);
+      if (error) throw error;
+      mediaPath = null;
+      toast.success(status==="pending"
+        ? "Sua primeira publicação foi enviada à moderação."
+        : "Publicação compartilhada com a comunidade!");
+      setTitle("");setBody("");setReference("");setMedia(null);setMediaPreference(null);
+      setPromoConsent(false);setComposer(false);await reload(user);
+    } catch (error) {
+      if(mediaPath) await db.storage.from(COMMUNITY_MEDIA_BUCKET).remove([mediaPath]);
+      toast.error(error instanceof Error ? error.message : "Não foi possível publicar.");
+    } finally {
+      setBusy(false);
+    }
   }
 
   async function react(postId: string) {
@@ -219,109 +259,19 @@ function ComunidadePage() {
   return (
     <AppShell
       title="Comunidade"
-      subtitle="Crescendo juntos no conhecimento de Deus."
+      subtitle="Conectados pela fé."
+      homeHeader
     >
-      <div className="mx-auto max-w-7xl space-y-4 pb-2 lg:space-y-5">
-        <section className="overflow-hidden rounded-[1.75rem] border border-primary/10 bg-white shadow-soft dark:bg-card">
-          <div className="grid min-h-[190px] items-center gap-4 p-5 sm:grid-cols-[1fr_0.82fr] sm:p-7 lg:min-h-[230px] lg:gap-8 lg:p-9">
-            <div className="min-w-0">
-              <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-                <UsersRound className="size-3.5" /> Crescendo juntos
-              </span>
-              <h2 className="mt-3 font-display text-4xl font-semibold leading-none tracking-tight text-[#142d59] dark:text-foreground sm:text-5xl lg:text-6xl">
-                Comunidade
-              </h2>
-              <p className="mt-2 text-sm text-slate-600 dark:text-muted-foreground sm:text-base">
-                Crescendo juntos no conhecimento de Deus
-              </p>
-              <a
-                href="https://chat.whatsapp.com/KXe3BvJqUyJ2sX5NAShfPi?s=cl&p=i&mlu=4&ilr=4&iam=2"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-3 inline-flex min-h-9 items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-800 transition hover:bg-emerald-100"
-              >
-                <MessageCircle className="size-4" /> Grupo no WhatsApp{" "}
-                <ExternalLink className="size-3" />
-              </a>
-              <Link to="/comunidade/privado" className="mt-2 inline-flex min-h-9 items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-2 text-xs font-semibold text-primary transition hover:bg-primary/10">
-                <MessagesSquare className="size-4" /> Mensagens privadas
-              </Link>
-            </div>
-            <div className="community-scripture relative flex min-h-[145px] flex-col justify-center overflow-hidden rounded-2xl p-5 text-white sm:min-h-[160px] lg:min-h-[180px] lg:p-7">
-              <p className="max-w-lg font-display text-lg italic leading-snug sm:text-xl lg:text-2xl">
-                “Onde há dois ou três reunidos em meu nome, eu estou no meio
-                deles.”
-              </p>
-              <p className="mt-2 text-xs font-bold uppercase tracking-wider text-amber-200">
-                Mateus 18:20
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section
-          aria-label="Formas de participar"
-          className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:gap-4"
-        >
-          {[
-            {
-              label: "Perguntas Bíblicas",
-              detail: "Tire suas dúvidas e aprenda",
-              icon: MessagesSquare,
-              action: () => {
-                setTab("forum");
-                setCategory("pergunta");
-                setComposer(true);
-              },
-            },
-            {
-              label: "Debates da Fé",
-              detail: "Converse e compartilhe",
-              icon: MessageCircle,
-              action: () => {
-                setTab("forum");
-                setCategory("debate");
-                setComposer(true);
-              },
-            },
-            {
-              label: "Compartilhar Livros e Recursos",
-              detail: "Enriqueça a biblioteca",
-              icon: LibraryBig,
-              action: () => {
-                setTab("arquivos");
-                setLibraryForm(true);
-              },
-            },
-            {
-              label: "Testemunhos",
-              detail: "Compartilhe o que Deus fez",
-              icon: Heart,
-              action: () => {
-                setTab("testemunhos");
-                setCategory("testemunho");
-                setComposer(true);
-              },
-            },
-          ].map(({ label, detail, icon: Icon, action }) => (
-            <button
-              key={label}
-              type="button"
-              onClick={action}
-              className="community-category-card flex min-h-[132px] flex-col items-center justify-center rounded-2xl border border-border/70 bg-white p-4 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md dark:bg-card lg:min-h-[172px] lg:p-6"
-            >
-              <Icon className="mb-2 size-9 text-primary" strokeWidth={1.8} />
-              <span className="max-w-[15rem] font-semibold leading-tight text-[#142d59] dark:text-foreground">
-                {label}
-              </span>
-              <span className="mt-1 text-xs leading-snug text-muted-foreground">
-                {detail}
-              </span>
-            </button>
-          ))}
-        </section>
-
-        <GlobalChatPanel />
+      <div className="community-dash mx-auto max-w-7xl space-y-4 pb-2 lg:space-y-5">
+        <CommunitySocialHub user={user} onCompose={(kind, requested) => {
+          setTab("todos");
+          setCategory(kind);
+          setMediaPreference(requested ?? null);
+          setComposer(true);
+          window.requestAnimationFrame(() => {
+            document.getElementById("community-composer")?.scrollIntoView({behavior:"smooth",block:"center"});
+          });
+        }} />
 
         <Tabs value={tab} onValueChange={setTab}>
           <TabsList className="flex h-auto w-full justify-start gap-1 overflow-x-auto rounded-2xl bg-muted/80 p-1">
@@ -431,7 +381,7 @@ function ComunidadePage() {
                 </button>
 
                 {composer && (
-                  <Card className="border-primary/20 p-4 shadow-sm sm:p-5">
+                  <Card id="community-composer" className="scroll-mt-28 border-primary/20 p-4 shadow-sm sm:p-5">
                     <form onSubmit={publish} className="space-y-3">
                       <div>
                         <h3 className="font-semibold">Nova publicação</h3>
@@ -479,6 +429,28 @@ function ComunidadePage() {
                         maxLength={120}
                         placeholder="Referência bíblica (opcional) — Ex.: João 15:1–8"
                       />
+                      <div className="space-y-2 rounded-2xl border border-blue-100 bg-blue-50/60 p-3 dark:bg-slate-900">
+                        <label className="block space-y-1 text-sm font-semibold">
+                          Foto ou vídeo (opcional)
+                          <input type="file" accept={mediaPreference === "video"
+                            ? "video/mp4,video/webm,video/quicktime"
+                            : mediaPreference === "image"
+                              ? "image/jpeg,image/png,image/webp"
+                              : "image/jpeg,image/png,image/webp,video/mp4,video/webm,video/quicktime"}
+                            onChange={(e)=>setMedia(e.target.files?.[0]??null)}
+                            className="block w-full text-xs file:mr-2 file:rounded-full file:border-0 file:bg-blue-700 file:px-3 file:py-2 file:text-white" />
+                        </label>
+                        <p className="text-xs text-slate-600 dark:text-slate-300">
+                          Vídeos de até 60 segundos e arquivos de até 49 MB. Foto ou vídeo ficará visível somente após a publicação ser aprovada, se necessário.
+                        </p>
+                        {media && <p className="break-all text-xs text-blue-900 dark:text-blue-300">Selecionado: {media.name}</p>}
+                        <label className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
+                          <input type="checkbox" checked={promoConsent} onChange={e=>setPromoConsent(e.target.checked)}
+                            className="mt-0.5 size-4 accent-blue-700" />
+                          Autorizo que a equipe do Caminho Divino avalie este conteúdo para possível divulgação em redes sociais.
+                          Isso não envia arquivos automaticamente por e-mail.
+                        </label>
+                      </div>
                       <div className="flex flex-wrap items-center justify-between gap-2">
                         <p className="max-w-md text-xs text-muted-foreground">
                           Diferencie o que o texto bíblico afirma da sua
@@ -621,6 +593,15 @@ function ComunidadePage() {
                               )}
                             </p>
                           </div>
+                          {post.media_path && (
+                            <div className="mt-3 overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-900">
+                              {mediaUrls[post.id]
+                                ? post.media_kind==="video"
+                                  ? <video className="max-h-[480px] w-full bg-black object-contain" src={mediaUrls[post.id]} controls playsInline preload="metadata" aria-label={post.title} />
+                                  : <img src={mediaUrls[post.id]} alt={post.title} loading="lazy" className="max-h-[480px] w-full object-contain" />
+                                : <p className="p-3 text-sm text-slate-600 dark:text-slate-300">Mídia indisponível ou aguardando aprovação.</p>}
+                            </div>
+                          )}
                           {post.scripture_reference && (
                             <div className="mt-3 flex items-center gap-3 rounded-xl border border-primary/10 bg-primary/[0.035] p-3">
                               <BookOpen className="size-5 shrink-0 text-primary" />
