@@ -5,16 +5,19 @@ const root = new URL("../", import.meta.url);
 const source = readFileSync(new URL("src/lib/content/psalm-147-study.ts", root), "utf8");
 const catalog = readFileSync(new URL("src/lib/content/curated-studies.ts", root), "utf8");
 const bible = JSON.parse(readFileSync(new URL("src/lib/bible-livre/salmos.json", root), "utf8"));
-test("Psalm 147 has a complete indexed free paraphrase and exposition", () => {
+const study = JSON.parse(source.slice(source.indexOf("= {") + 2, source.lastIndexOf(";")).trim());
+test("Psalm 147 has complete paraphrase, exposition and catalog entry", () => {
   const count = bible.chapters["147"].length;
   assert.equal(count, 20);
-  const verses = [...source.matchAll(/\\n\\n\\*\\*(\\d+)\\.\\*\\*/g)].map(m => Number(m[1]));
-  assert.deepEqual(verses, Array.from({length: count}, (_,i) => i+1));
-  const ids = [...source.matchAll(/"id": "versiculo-(\\d+)"/g)].map(m => Number(m[1]));
-  assert.deepEqual(ids, Array.from({length: count}, (_,i) => i+1));
-  assert.match(source, /Paráfrase livre para estudo, não tradução oficial/);
-  assert.match(source, /Oficina do pregador/);
-  assert.match(source, /Exercícios com respostas orientadoras/);
-  assert.equal((catalog.match(/"biblia-salmos-cap-147":/g) ?? []).length, 1);
-  assert.match(catalog, /import \\{ psalm147Study \\} from "\\.\\/psalm-147-study";/);
+  const reading = study.sections.find(s => s.id === "leitura-biblica");
+  for (let i = 1; i <= count; i++) {
+    assert.ok(reading.body.includes("**" + i + ".**"), "missing verse " + i);
+    assert.ok(study.sections.some(s => s.id === "versiculo-" + i && s.scriptureRefs.includes("Salmos 147:" + i)));
+  }
+  assert.equal(study.sections.filter(s => s.id.startsWith("versiculo-")).length, count);
+  assert.match(reading.body, /Paráfrase livre para estudo, não tradução oficial/);
+  assert.ok(study.sections.some(s => s.title.includes("Oficina do pregador")));
+  assert.ok(study.sections.some(s => s.title.includes("Exercícios com respostas orientadoras")));
+  assert.equal(catalog.split('"biblia-salmos-cap-147":').length - 1, 1);
+  assert.ok(catalog.includes('import { psalm147Study } from "./psalm-147-study";'));
 });
