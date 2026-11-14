@@ -17,6 +17,7 @@ import { getStudy } from "@/lib/content/studies";
 import { getPublishedManagedCatalog } from "@/lib/admin.functions";
 import { getBibleBook, getChapterStudy, getChapterStudySlug } from "@/lib/content/bible-books";
 import { CURATED_STUDIES } from "@/lib/content/curated-studies";
+import { resolveManagedStudy } from "@/lib/content/managed-study-catalog";
 
 export const Route = createFileRoute("/_authenticated/estudos/$slug")({
   head: ({ params }) => {
@@ -48,17 +49,8 @@ function EstudoDetalhe() {
     queryFn: () => catalogFn({ data: { kind: "study" } }),
   });
   const managedStudy = managedStudies.find((item) => item.slug === slug);
-  const metadata = managedStudy?.metadata as Record<string, unknown> | undefined;
   const legacyStudy = getStudy(slug);
-  // Reviewed local studies are canonical and cannot be hidden by stale admin catalog rows.
-  const study = CURATED_STUDIES[slug] ? legacyStudy : managedStudy?.status === "archived" ? undefined : managedStudy ? {
-    slug,
-    title: String(metadata?.["title"] ?? legacyStudy?.title ?? slug),
-    category: String(metadata?.["category"] ?? legacyStudy?.category ?? "Estudos bíblicos"),
-    reference: String(metadata?.["reference"] ?? legacyStudy?.reference ?? ""),
-    summary: String(metadata?.["summary"] ?? legacyStudy?.summary ?? ""),
-    depth: metadata?.["depth"] === "deep" ? "deep" as const : legacyStudy?.depth ?? "simple" as const,
-  } : legacyStudy;
+  const study = resolveManagedStudy(legacyStudy, managedStudy, Boolean(CURATED_STUDIES[slug]));
   const genesis = getBibleBook("genesis");
   const chapterStudy = getChapterStudy(slug)
     ?? (slug === "genesis-1-criacao" && genesis ? { book: genesis, chapter: 1 } : null);

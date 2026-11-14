@@ -10,6 +10,7 @@ import { getPublishedManagedCatalog } from "@/lib/admin.functions";
 import { BIBLE_BOOKS, BIBLE_CHAPTER_TOTAL, getChapterStudySlug } from "@/lib/content/bible-books";
 import { deduplicateStudies, STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
 import { CURATED_STUDIES } from "@/lib/content/curated-studies";
+import { resolveManagedStudy } from "@/lib/content/managed-study-catalog";
 
 export const Route = createFileRoute("/_authenticated/estudos/")({
   head: () => ({
@@ -31,7 +32,7 @@ export const Route = createFileRoute("/_authenticated/estudos/")({
 
 function EstudosPage() {
   const catalogFn = useServerFn(getPublishedManagedCatalog);
-  const { data: managedStudies = [] } = useQuery({
+  const { data: managedStudies = [], isError: catalogError, refetch: retryCatalog } = useQuery({
     queryKey: ["published-managed-catalog", "study"],
     queryFn: () => catalogFn({ data: { kind: "study" } }),
   });
@@ -41,21 +42,9 @@ function EstudosPage() {
 
   const catalog = new Map(STUDIES.map((item) => [item.slug, item]));
   for (const item of managedStudies) {
-    if (item.status === "archived") {
-      catalog.delete(item.slug);
-      continue;
-    }
-
-    const previous = catalog.get(item.slug);
-    const metadata = item.metadata as Record<string, unknown>;
-    catalog.set(item.slug, {
-      slug: item.slug,
-      title: String(metadata["title"] ?? previous?.title ?? item.slug),
-      category: String(metadata["category"] ?? previous?.category ?? "Estudos bíblicos"),
-      reference: String(metadata["reference"] ?? previous?.reference ?? ""),
-      summary: String(metadata["summary"] ?? previous?.summary ?? ""),
-      depth: metadata["depth"] === "deep" ? "deep" : previous?.depth ?? "simple",
-    });
+    const resolved = resolveManagedStudy(catalog.get(item.slug), item, Boolean(CURATED_STUDIES[item.slug]));
+    if (resolved) catalog.set(item.slug, resolved);
+    else catalog.delete(item.slug);
   }
 
   const studies = deduplicateStudies([...catalog.values()]).filter((study) => {
@@ -82,6 +71,12 @@ function EstudosPage() {
   return (
     <AppShell title="Estudos bíblicos" subtitle="Aprofunde seu conhecimento da Palavra de Deus.">
       <div className="mx-auto w-full max-w-6xl space-y-8 pb-8">
+        {catalogError ? (
+          <div role="alert" className="flex flex-wrap items-center gap-3 rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-100">
+            <span>Não foi possível carregar os estudos administrados. Os estudos locais continuam disponíveis.</span>
+            <Button type="button" variant="outline" size="sm" onClick={() => void retryCatalog()}>Tentar novamente</Button>
+          </div>
+        ) : null}
         <section aria-label="Buscar e filtrar estudos" className="space-y-4">
           <label className="sr-only" htmlFor="study-search">Buscar livro ou tema</label>
           <Input
