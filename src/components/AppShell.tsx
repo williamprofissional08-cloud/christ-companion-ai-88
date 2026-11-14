@@ -70,6 +70,7 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
     queryKey: ["admin-permission", user?.id],
     queryFn: () => checkAdmin(),
     enabled: Boolean(user?.id),
+    staleTime: 5 * 60 * 1000,
     retry: false,
   });
   const { data: settings } = useQuery({ queryKey: ["settings"], queryFn: () => fetchSettings() });
