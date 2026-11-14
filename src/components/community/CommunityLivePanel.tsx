@@ -311,13 +311,13 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
         viewersRef.current.set(from, { id: from, userId: viewerId, name });
         setViewers(Array.from(viewersRef.current.values()));
         await pc.setLocalDescription(await pc.createOffer());
-        await send({ kind: "offer", to: from, sdp: pc.localDescription?.toJSON() });
+        await send({ kind: "offer", to: from, sdp: pc.localDescription!.toJSON() });
       } else if (!host && s.kind === "offer" && s.sdp?.type === "offer") {
         const pc = establishPeer(from, false);
         await pc.setRemoteDescription(s.sdp);
         await flushCandidates(from, pc);
         await pc.setLocalDescription(await pc.createAnswer());
-        await send({ kind: "answer", to: from, sdp: pc.localDescription?.toJSON() });
+        await send({ kind: "answer", to: from, sdp: pc.localDescription!.toJSON() });
       } else if (host && s.kind === "answer" && s.sdp?.type === "answer") {
         const pc = peers.current.get(from);
         if (!pc) return;
