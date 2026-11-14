@@ -106,10 +106,17 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
       <div className="flex min-h-screen min-w-0 flex-1 flex-col">
         <header className="sticky top-0 z-30 border-b border-border/60 bg-white/90 backdrop-blur dark:bg-background/90">
           <div className={`mx-auto flex min-h-14 w-full max-w-screen-2xl items-center gap-1.5 py-1.5 sm:gap-3 ${homeHeader ? "pl-2 pr-2 sm:pl-3 sm:pr-3 lg:px-5" : "pl-3 pr-16 sm:pl-5 sm:pr-16 lg:pl-8 lg:pr-16"}`}>
-            <div className={homeHeader ? "pl-10 lg:hidden" : "lg:hidden"}>
+            <div className={homeHeader ? "flex shrink-0 items-center gap-1 lg:hidden" : "lg:hidden"}>
+              {homeHeader && (
+                <span
+                  id="home-music-control-slot"
+                  className="inline-flex size-9 shrink-0 items-center justify-center"
+                  aria-label="Controle de música ambiente"
+                />
+              )}
               <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="icon" className="rounded-full" aria-label="Abrir menu">
+                  <Button variant="outline" size="icon" className={homeHeader ? "size-9 rounded-full" : "rounded-full"} aria-label="Abrir menu">
                     {homeHeader ? <MoreVertical className="size-5" /> : <Menu className="size-5" />}
                   </Button>
                 </SheetTrigger>
