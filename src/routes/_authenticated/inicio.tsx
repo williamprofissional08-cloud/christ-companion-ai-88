@@ -1,11 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
-import { BookOpen, GraduationCap, Route as RouteIcon, Share2, Sparkles, Trophy } from "lucide-react";
-import { toast } from "sonner";
+import { BookOpen, GraduationCap, Route as RouteIcon, Sparkles, UsersRound, Heart, NotebookPen, Headphones, ListChecks, Award, BarChart3, Bookmark, CalendarDays, ChevronRight, Clock3, Play, LayoutGrid } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuth } from "@/hooks/use-auth";
 import { getDevotional } from "@/lib/ai.functions";
@@ -40,104 +37,89 @@ function Inicio() {
   const hour = new Date().getHours();
   const greeting = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
   const d = devotional.data;
-  const isSynthesis = Boolean(d && (d.verse.kind === "synthesis" || d.verse.text.startsWith("Síntese para meditação, não uma citação literal:")));
-  const displayedVerseText = d?.verse.text.replace(/^Síntese para meditação, não uma citação literal:\s*/i, "");
-
-  async function shareVerse() {
-    const verseText = displayedVerseText ?? "A tua palavra é lâmpada para os meus pés e luz para o meu caminho.";
-    const reference = d?.verse.reference ?? "Salmos 119:105";
-    const text = isSynthesis
-      ? `Síntese para meditação (não é citação literal): ${verseText} — Leitura bíblica: ${reference}\nCaminho Divino`
-      : `“${verseText}” — ${reference}\nCaminho Divino`;
-    try {
-      if (typeof navigator !== "undefined" && navigator.share) {
-        await navigator.share({ title: isSynthesis ? "Leitura bíblica do dia" : "Versículo do dia", text });
-      } else if (typeof navigator !== "undefined" && navigator.clipboard) {
-        await navigator.clipboard.writeText(text);
-        toast.success(isSynthesis ? "Leitura copiada para compartilhar." : "Versículo copiado para compartilhar.");
-      } else {
-        toast.error("O compartilhamento não está disponível neste dispositivo.");
-      }
-    } catch (error) {
-      if (error instanceof Error && error.name !== "AbortError") toast.error("Não foi possível compartilhar agora.");
-    }
-  }
+  const shortcuts = [
+    { to: "/estudos", label: "Estudar a Bíblia", icon: BookOpen },
+    { to: "/trilhas", label: "Cursos e Trilhas", icon: RouteIcon },
+    { to: "/escola", label: "Escola Bíblica", icon: GraduationCap },
+    { to: "/assistente", label: "Professor IA (Assistente)", icon: Sparkles },
+    { to: "/comunidade", label: "Comunidade (Chat)", icon: UsersRound },
+    { to: "/favoritos", label: "Meus Favoritos", icon: Heart },
+    { to: "/diario", label: "Minhas Anotações", icon: NotebookPen },
+    { to: "/estudos", label: "Ouvir (Áudio/TTS)", icon: Headphones },
+    { to: "/planos", label: "Planos de Estudo", icon: ListChecks },
+    { to: "/escola", label: "Certificados", icon: Award },
+  ] as const;
+  const summary = [
+    { label: "Minha Jornada Bíblica", icon: BookOpen, to: "/metas", description: "Acompanhar capítulos" },
+    { label: "Estudos Concluídos", icon: BarChart3, to: "/estudos", description: "Ver meus estudos" },
+    { label: "Favoritos", icon: Heart, to: "/favoritos", description: "Itens salvos" },
+    { label: "Minhas Pregações", icon: Bookmark, to: "/minhas-mensagens", description: "Minhas mensagens" },
+  ] as const;
 
   return (
     <AppShell title="Caminho Divino" homeHeader>
-      <div className="mx-auto w-full max-w-5xl space-y-4 pb-3 sm:space-y-5">
-        <section className="px-1 pt-0.5">
-          <h1 className="font-display text-2xl font-bold tracking-tight text-[#142d59] dark:text-foreground sm:text-3xl">{greeting}, {displayName}</h1>
-          <p className="mt-1 text-sm text-slate-600 dark:text-muted-foreground">Que a Palavra guie o seu dia.</p>
+      <div className="mx-auto w-full max-w-6xl space-y-4 pb-4 text-[#10264a] sm:space-y-5">
+        <section className="relative isolate overflow-hidden rounded-3xl bg-[#143b62] px-5 py-8 text-white shadow-lg sm:px-8 sm:py-12">
+          <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 -z-20 size-full object-cover object-center" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#092543]/95 via-[#123858]/75 to-[#153c56]/20" />
+          <h1 className="text-2xl font-bold sm:text-4xl">{greeting}, {displayName}! <span aria-hidden="true">👋</span></h1>
+          <blockquote className="mt-3 max-w-xl text-base leading-relaxed sm:text-xl">“A tua palavra é lâmpada para os meus pés e luz para o meu caminho.”</blockquote>
+          <p className="mt-1 text-sm font-medium">Salmos 119:105</p>
         </section>
 
-        <Card className="relative isolate overflow-hidden rounded-2xl border border-blue-100/80 bg-gradient-to-br from-[#dcecff] via-[#f5f9ff] to-[#fff8e9] p-0 shadow-[0_12px_30px_-20px_rgba(30,75,135,0.45)] dark:border-blue-900 dark:from-slate-900 dark:via-slate-900 dark:to-blue-950">
-          <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 z-0 h-full w-full object-cover object-right-bottom" />
-          <div aria-hidden="true" className="absolute inset-0 z-10 bg-gradient-to-r from-white/85 via-white/70 to-white/45 dark:from-slate-950/90 dark:via-slate-950/75 dark:to-slate-950/55" />
-          <div className="relative z-20 p-4 sm:p-5 lg:p-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#173f7c] px-3.5 py-2 text-[11px] font-bold tracking-[0.14em] text-white">
-              <BookOpen className="size-4" aria-hidden /> {isSynthesis ? "LEITURA BÍBLICA DO DIA" : "VERSÍCULO DO DIA"}
-            </div>
-            {devotional.isLoading ? (
-              <div className="mt-5 space-y-3"><Skeleton className="h-7 w-full" /><Skeleton className="h-7 w-4/5" /><Skeleton className="h-4 w-28" /></div>
-            ) : d ? (
-              <>
-                {isSynthesis ? (
-                  <p className="mt-4 text-sm leading-relaxed text-[#142d59] dark:text-white">{displayedVerseText}</p>
-                ) : (
-                  <blockquote className="mt-4 font-display text-xl font-semibold leading-snug text-[#142d59] dark:text-white sm:text-2xl">“{d.verse.text}”</blockquote>
-                )}
-                <p className="mt-3 text-sm font-bold text-[#2462b5] dark:text-blue-300">{isSynthesis ? "Leitura bíblica sugerida: " : ""}{d.verse.reference}</p>
-                <div className="relative mt-4 overflow-hidden rounded-xl border border-white/70 bg-white/55 text-sm leading-relaxed text-slate-700 shadow-sm backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/55 dark:text-slate-200">
-                  <div className="relative z-20 flex items-start gap-3 p-4">
-                    <Sparkles className="mt-0.5 size-5 shrink-0 text-[#2868c5]" aria-hidden />
-                    <p>{d.motivational || "Deus ilumina cada passo quando caminhamos com confiança."}</p>
-                  </div>
-                </div>
-              </>
-            ) : (
-              <>
-                <blockquote className="mt-5 font-display text-[1.45rem] font-semibold leading-snug text-[#142d59] dark:text-white sm:text-2xl">“A tua palavra é lâmpada para os meus pés e luz para o meu caminho.”</blockquote>
-                <p className="mt-3 text-sm font-bold text-[#2462b5] dark:text-blue-300">Salmos 119:105</p>
-                <div className="relative mt-5 overflow-hidden rounded-2xl border border-white/70 bg-white/55 text-sm leading-relaxed text-slate-700 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/55 dark:text-slate-200">
-                  <p className="relative z-20 p-4">Deus ilumina cada passo quando caminhamos com confiança.</p>
-                </div>
-              </>
-            )}
-            <div className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-[1.15fr_0.85fr]">
-              <Button asChild className="h-10 rounded-xl bg-[#2464c5] text-sm font-semibold text-white shadow-sm hover:bg-[#1c52a5]">
-                <Link to="/devocional"><BookOpen className="mr-2 size-4" aria-hidden />Ler reflexão</Link>
-              </Button>
-              <Button type="button" variant="outline" onClick={shareVerse} className="h-12 rounded-xl border-blue-200 bg-white/80 text-sm font-semibold text-[#173f7c] hover:bg-blue-50 dark:border-slate-600 dark:bg-slate-800 dark:text-blue-100">
-                <Share2 className="mr-2 size-4" aria-hidden />Compartilhar
-              </Button>
-            </div>
-          </div>
-        </Card>
+        <section aria-label="Resumo da jornada" className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+          {summary.map((item) => (
+            <Link key={item.label} to={item.to} className="min-w-0 rounded-2xl border border-blue-100 bg-white p-4 shadow-sm transition hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-600 dark:border-slate-700 dark:bg-card">
+              <item.icon aria-hidden="true" className={`mb-3 size-7 ${item.label === "Favoritos" ? "text-rose-600" : "text-blue-700"}`} />
+              <h2 className="text-sm font-bold leading-snug sm:text-base">{item.label}</h2>
+              <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">{item.description}</p>
+            </Link>
+          ))}
+        </section>
 
-        <Card className="flex items-center gap-3 rounded-xl border border-blue-100 bg-white p-3 sm:p-4 shadow-sm dark:border-slate-700 dark:bg-card">
-          <div className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-[#2464c5] dark:bg-blue-950"><Trophy className="size-6" aria-hidden /></div>
-          <div className="min-w-0 flex-1">
-            <h2 className="font-display text-base font-bold text-[#142d59] dark:text-foreground">Desafio de hoje</h2>
-            <p className="mt-1 text-sm leading-relaxed text-slate-600 dark:text-muted-foreground">Leia o versículo e pratique uma atitude de fé.</p>
-          </div>
-        </Card>
+        <section className="relative isolate overflow-hidden rounded-3xl bg-[#173b60] p-5 text-white shadow-md sm:p-8">
+          <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 -z-20 size-full object-cover object-right" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#102d4a]/95 via-[#173b60]/80 to-[#173b60]/15" />
+          <h2 className="flex items-center gap-2 text-sm font-semibold"><CalendarDays className="size-5" aria-hidden="true" /> Devocional de Hoje</h2>
+          {devotional.isLoading ? <Skeleton className="mt-5 h-16 w-2/3" /> : (
+            <>
+              <p className="mt-4 max-w-lg font-serif text-2xl font-bold leading-tight sm:text-3xl">{"Medite na Palavra de Deus"}</p>
+              <p className="mt-2 text-sm">{d?.verse.reference || "Salmos 119:105"}</p>
+            </>
+          )}
+          {devotional.isError && <p role="status" className="mt-2 text-sm">Não foi possível carregar o devocional. Você pode abrir a leitura diretamente.</p>}
+          <Link to="/devocional" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border-2 border-white px-5 font-semibold hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Ler Devocional <ChevronRight className="size-4" aria-hidden="true" /></Link>
+        </section>
 
-        <section className="space-y-2.5">
-          <h2 className="font-display text-lg font-bold tracking-tight text-[#142d59] dark:text-foreground">Continue sua jornada</h2>
-          <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3">
-            <Link to="/estudos" className="group flex min-h-24 flex-col items-center justify-center gap-2 rounded-xl border border-blue-100 bg-white px-2 py-4 text-center shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-card">
-              <span className="flex size-9 items-center justify-center rounded-xl bg-blue-50 text-[#2464c5] dark:bg-blue-950"><BookOpen className="size-5" aria-hidden /></span>
-              <span className="text-[11px] font-semibold text-[#17345f] dark:text-foreground sm:text-sm">Estudos bíblicos</span>
-            </Link>
-            <Link to="/trilhas" className="group flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl border border-blue-100 bg-white px-2 py-4 text-center shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-card">
-              <span className="flex size-11 items-center justify-center rounded-2xl bg-blue-50 text-[#2464c5] dark:bg-blue-950"><RouteIcon className="size-6" aria-hidden /></span>
-              <span className="text-xs font-semibold text-[#17345f] dark:text-foreground sm:text-sm">Trilhas guiadas</span>
-            </Link>
-            <Link to="/escola" className="group flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl border border-blue-100 bg-white px-2 py-4 text-center shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-700 dark:bg-card">
-              <span className="flex size-11 items-center justify-center rounded-2xl bg-blue-50 text-[#2464c5] dark:bg-blue-950"><GraduationCap className="size-6" aria-hidden /></span>
-              <span className="text-xs font-semibold text-[#17345f] dark:text-foreground sm:text-sm">Escola Bíblica</span>
-            </Link>
+        <section className="rounded-3xl border border-blue-100 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-card sm:p-6">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h2 className="flex items-center gap-2 text-lg font-bold sm:text-xl"><Clock3 aria-hidden="true" className="size-6 text-blue-700" /> Continuar de onde parou</h2>
+            <Link to="/estudos" className="text-sm font-semibold text-blue-700 underline-offset-2 hover:underline">Ver tudo</Link>
+          </div>
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-blue-100 bg-blue-50/60 p-4 dark:border-slate-700 dark:bg-slate-900">
+            <div><p className="font-semibold">Sua jornada bíblica</p><p className="mt-1 text-sm text-slate-600 dark:text-slate-300">Acesse seus estudos e continue sua leitura.</p></div>
+            <Link to="/estudos" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-blue-700 px-5 font-semibold text-blue-700 hover:bg-blue-100 dark:text-blue-300"><Play className="size-4" aria-hidden="true" /> Continuar</Link>
+          </div>
+        </section>
+
+        <section className="rounded-3xl border border-blue-100 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-card sm:p-6">
+          <h2 className="mb-4 flex items-center gap-2 text-lg font-bold sm:text-xl"><LayoutGrid className="size-6 text-blue-700" aria-hidden="true" /> Acesso rápido</h2>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
+            {shortcuts.map((item) => (
+              <Link key={item.label} to={item.to} className="flex min-h-28 min-w-0 flex-col items-center justify-center gap-2 rounded-2xl border border-blue-100 bg-white p-3 text-center shadow-sm transition hover:border-blue-300 hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600 dark:border-slate-700 dark:bg-slate-900">
+                <item.icon aria-hidden="true" className={`size-8 ${item.to === "/favoritos" ? "text-rose-600" : "text-blue-700"}`} />
+                <span className="text-xs font-semibold leading-snug sm:text-sm">{item.label}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="relative isolate overflow-hidden rounded-3xl border border-blue-100 bg-[#e9f3ff] p-5 shadow-sm sm:p-7">
+          <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 -z-20 size-full object-cover object-center opacity-40" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-white/95 via-white/85 to-white/40" />
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div><h2 className="font-serif text-xl font-bold sm:text-2xl">Formação de Pregadores<br />Gênesis ao Apocalipse</h2><p className="mt-2 text-sm">Um seminário bíblico completo, livro por livro.</p></div>
+            <Link to="/escola" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#123b69] px-5 font-semibold text-white hover:bg-[#0c2c51]">Acessar Curso <ChevronRight className="size-4" aria-hidden="true" /></Link>
           </div>
         </section>
       </div>
