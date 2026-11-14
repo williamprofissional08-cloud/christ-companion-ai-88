@@ -1,3 +1,4 @@
+import { songOfSolomon2Study } from "./song-of-solomon-2-study";
 import { songOfSolomon1Study } from "./song-of-solomon-1-study";
 import { ecclesiastes12Study } from "./ecclesiastes-12-study";
 import { ecclesiastes11Study } from "./ecclesiastes-11-study";
@@ -699,6 +700,7 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-eclesiastes-cap-11": ecclesiastes11Study,
   "biblia-eclesiastes-cap-12": ecclesiastes12Study,
   "biblia-cantico-dos-canticos-cap-1": songOfSolomon1Study,
+  "biblia-cantico-dos-canticos-cap-2": songOfSolomon2Study,
   "biblia-marcos-cap-4": mark4Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
