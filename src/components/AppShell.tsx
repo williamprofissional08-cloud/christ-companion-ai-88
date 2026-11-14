@@ -113,7 +113,7 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
         >
           <div className={`mx-auto flex min-h-14 w-full max-w-screen-2xl items-center gap-1.5 py-1.5 sm:gap-3 ${homeHeader ? "pl-2 pr-2 sm:pl-3 sm:pr-3 lg:px-5" : "pl-3 pr-16 sm:pl-5 sm:pr-16 lg:pl-8 lg:pr-16"}`}>
             <div className={homeHeader ? "flex shrink-0 items-center gap-1 lg:hidden" : "lg:hidden"}>
-              {homeHeader && <MusicControlButton className="size-9" />}
+              {homeHeader && <MusicControlButton className="inline-flex size-9 lg:hidden" />}
               <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild>
                   <Button variant="outline" size="icon" className={homeHeader ? "size-9 rounded-full" : "rounded-full"} aria-label="Abrir menu">

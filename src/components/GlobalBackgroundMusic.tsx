@@ -19,7 +19,7 @@ type MusicControls = {
 const MusicContext = createContext<MusicControls | null>(null);
 
 const MUSIC_BUTTON_CLASSES =
-  "inline-flex shrink-0 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800";
+  "shrink-0 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800";
 
 /** The control lives in the actual header, not in a detached fixed-position portal. */
 export function MusicControlButton({ className = "" }: { className?: string }) {
@@ -108,7 +108,7 @@ export function GlobalBackgroundMusic({ children }: { children: ReactNode }) {
     <MusicContext.Provider value={{ isReady, isPlaying, togglePlayback }}>
       {children}
       {!isHome && (
-        <MusicControlButton className="global-music-button fixed right-3 top-[calc(env(safe-area-inset-top)+0.75rem)] z-40 size-10 lg:right-4" />
+        <MusicControlButton className="global-music-button inline-flex fixed right-3 top-[calc(env(safe-area-inset-top)+0.75rem)] z-40 size-10 lg:right-4" />
       )}
       <iframe
         ref={playerRef}
