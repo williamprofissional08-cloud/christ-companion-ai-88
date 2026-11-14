@@ -11,6 +11,18 @@ import { Card } from "@/components/ui/card";
 import logo from "@/assets/logo.png";
 import { friendlyAuthError, isAuthApiKeyError } from "@/lib/auth-redirect";
 
+function logAuthApiKeyError(error: unknown): void {
+  if (!isAuthApiKeyError(error)) return;
+  // Log only diagnostic fields: never include email, password or request payloads.
+  const authError = error as { name?: string; message?: string; code?: string; status?: number };
+  console.error("[Auth] Supabase API key configuration error", {
+    name: authError?.name,
+    message: authError?.message,
+    code: authError?.code,
+    status: authError?.status,
+  });
+}
+
 export const Route = createFileRoute("/auth")({
   ssr: false,
   head: () => ({
@@ -130,16 +142,7 @@ function AuthPage() {
         if (error) throw error;
       }
     } catch (error) {
-      if (isAuthApiKeyError(error)) {
-        // Log only diagnostic fields: never include email, password or request payloads.
-        const authError = error as { name?: string; message?: string; code?: string; status?: number };
-        console.error("[Auth] Supabase API key configuration error", {
-          name: authError?.name,
-          message: authError?.message,
-          code: authError?.code,
-          status: authError?.status,
-        });
-      }
+      logAuthApiKeyError(error);
       toast.error(friendlyAuthError(error));
     } finally {
       setLoading(false);
@@ -162,16 +165,7 @@ function AuthPage() {
       if (error) throw error;
       toast.success("Se houver um cadastro aguardando confirmação, enviaremos um novo link. Confira também o spam.");
     } catch (error) {
-      if (isAuthApiKeyError(error)) {
-        // Log only diagnostic fields: never include email, password or request payloads.
-        const authError = error as { name?: string; message?: string; code?: string; status?: number };
-        console.error("[Auth] Supabase API key configuration error", {
-          name: authError?.name,
-          message: authError?.message,
-          code: authError?.code,
-          status: authError?.status,
-        });
-      }
+      logAuthApiKeyError(error);
       toast.error(friendlyAuthError(error));
     } finally {
       setResending(false);
@@ -193,16 +187,7 @@ function AuthPage() {
       if (result.redirected) return;
       navigate({ to: "/inicio", replace: true });
     } catch (error) {
-      if (isAuthApiKeyError(error)) {
-        // Log only diagnostic fields: never include email, password or request payloads.
-        const authError = error as { name?: string; message?: string; code?: string; status?: number };
-        console.error("[Auth] Supabase API key configuration error", {
-          name: authError?.name,
-          message: authError?.message,
-          code: authError?.code,
-          status: authError?.status,
-        });
-      }
+      logAuthApiKeyError(error);
       toast.error(friendlyAuthError(error));
     } finally {
       setGoogleLoading(false);
