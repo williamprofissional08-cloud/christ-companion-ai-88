@@ -39,8 +39,17 @@ export function isAuthApiKeyError(error: unknown): boolean {
 
 /** Traduz erros de autenticação em mensagens amigáveis. */
 export function friendlyAuthError(error: unknown): string {
-  const raw = error instanceof Error ? error.message : String(error ?? "");
-  const message = raw.toLowerCase();
+  const raw = error instanceof Error
+    ? error.message
+    : typeof error === "string"
+      ? error
+      : error && typeof error === "object" && "message" in error && typeof error.message === "string"
+        ? error.message
+        : "";
+  const code = error && typeof error === "object" && "code" in error && typeof error.code === "string"
+    ? error.code
+    : "";
+  const message = `${raw} ${code}`.toLowerCase();
 
   if (isAuthApiKeyError(error)) return AUTH_API_KEY_CONFIGURATION_MESSAGE;
 
@@ -48,18 +57,24 @@ export function friendlyAuthError(error: unknown): string {
     return "Não foi possível entrar com esses dados. Confira o e-mail e a senha ou use “Esqueceu sua senha?” para recuperar o acesso. Se acabou de criar a conta, confira a confirmação por e-mail. Esse erro não significa que sua conta foi apagada.";
   if (message.includes("email not confirmed") || message.includes("email_not_confirmed"))
     return "Seu e-mail ainda não foi confirmado. Abra o link enviado para sua caixa de entrada ou spam e tente entrar novamente.";
-  if (message.includes("already registered") || message.includes("already exists") || message.includes("user already registered"))
-    return "Este e-mail já possui uma conta. Entre com sua senha ou use a recuperação de acesso.";
-  if (message.includes("password") && (message.includes("at least") || message.includes("short") || message.includes("weak") || message.includes("characters")))
+  if (message.includes("already registered") || message.includes("already exists") || message.includes("user_already_exists") || message.includes("email_exists"))
+    return "Se já tem uma conta, entre com sua senha ou use “Esqueceu sua senha?” para recuperar o acesso. Não é necessário criar outra conta.";
+  if (message.includes("weak_password") || (message.includes("password") && (message.includes("at least") || message.includes("short") || message.includes("weak") || message.includes("characters"))))
     return "A senha não atende aos requisitos de segurança do cadastro. Verifique o tamanho mínimo e tente outra senha.";
   if (message.includes("email_address_invalid") || (message.includes("email") && (message.includes("invalid") || message.includes("format"))))
     return "O endereço de e-mail parece inválido. Confira se foi digitado corretamente, sem espaços, e tente novamente.";
-  if (message.includes("signup_disabled") || message.includes("signups not allowed"))
+  if (message.includes("signup_disabled") || message.includes("signups not allowed") || message.includes("email_provider_disabled"))
     return "O cadastro por e-mail está temporariamente desativado no serviço de autenticação. Tente entrar com Google ou avise o suporte.";
   if (message.includes("redirect") && (message.includes("allow") || message.includes("url")))
     return "O endereço de retorno do cadastro não está autorizado nas configurações de autenticação. Entre em contato com o suporte.";
   if (message.includes("rate limit") || message.includes("too many") || message.includes("over_email_send_rate_limit"))
     return "Muitas tentativas em pouco tempo. Aguarde alguns minutos e tente novamente.";
+  if (message.includes("email_address_not_authorized"))
+    return "O serviço de e-mail do aplicativo não autorizou esse envio. Avise o administrador para verificar a configuração de e-mails.";
+  if (message.includes("otp_expired") || message.includes("token has expired"))
+    return "O link de acesso expirou. Volte à tela de login e solicite um novo e-mail.";
+  if (message.includes("session_not_found") || message.includes("auth session missing"))
+    return "Sua sessão não está ativa. Entre novamente ou solicite um novo link de recuperação.";
   if (message.includes("failed to fetch") || message.includes("network") || message.includes("fetch"))
     return "Não foi possível conectar ao serviço de cadastro. Verifique sua internet e tente novamente.";
   if (message.includes("access_denied") || message.includes("cancel"))
