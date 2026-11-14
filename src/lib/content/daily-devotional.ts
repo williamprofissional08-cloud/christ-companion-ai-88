@@ -1,6 +1,6 @@
 import type { DevotionalContent } from "@/lib/types";
-import { curatedDevotionalsA } from "./curated-devotionals-a";
-import { curatedDevotionalsB } from "./curated-devotionals-b";
+import { curatedDevotionalsA } from "./curated-devotionals-a.ts";
+import { curatedDevotionalsB } from "./curated-devotionals-b.ts";
 
 /**
  * Devocionais autorais completos, preparados para o Caminho Divino.
