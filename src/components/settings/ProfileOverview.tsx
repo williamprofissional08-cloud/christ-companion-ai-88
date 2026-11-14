@@ -4,7 +4,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
 import {
   BookOpen, Camera, ChevronRight, Crown, GraduationCap, Heart,
-  Mic2, NotebookPen, Pencil, ShieldCheck, UserRound, UsersRound,
+  Mic2, NotebookPen, Pencil, UserRound, UsersRound,
   ChartNoAxesColumnIncreasing, Cross, Settings2,
 } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
