@@ -1,3 +1,13 @@
+import { proverbs28Study } from "./proverbs-28-study";
+import { proverbs29Study } from "./proverbs-29-study";
+import { proverbs30Study } from "./proverbs-30-study";
+import { proverbs31Study } from "./proverbs-31-study";
+import { ecclesiastes1Study } from "./ecclesiastes-1-study";
+import { ecclesiastes2Study } from "./ecclesiastes-2-study";
+import { ecclesiastes3Study } from "./ecclesiastes-3-study";
+import { ecclesiastes4Study } from "./ecclesiastes-4-study";
+import { ecclesiastes5Study } from "./ecclesiastes-5-study";
+import { ecclesiastes6Study } from "./ecclesiastes-6-study";
 import { proverbs27Study } from "./proverbs-27-study";
 import { proverbs26Study } from "./proverbs-26-study";
 import { proverbs25Study } from "./proverbs-25-study";
@@ -665,6 +675,16 @@ import { joshua24Study } from "./joshua-24-study";
  * Rótulos: [TEXTO BÍBLICO] [CONTEXTO] [INFERÊNCIA] [INTERPRETAÇÃO] [ESPECULAÇÃO].
  */
 export const CURATED_STUDIES: Record<string, StudyContent> = {
+  "biblia-proverbios-cap-28": proverbs28Study,
+  "biblia-proverbios-cap-29": proverbs29Study,
+  "biblia-proverbios-cap-30": proverbs30Study,
+  "biblia-proverbios-cap-31": proverbs31Study,
+  "biblia-eclesiastes-cap-1": ecclesiastes1Study,
+  "biblia-eclesiastes-cap-2": ecclesiastes2Study,
+  "biblia-eclesiastes-cap-3": ecclesiastes3Study,
+  "biblia-eclesiastes-cap-4": ecclesiastes4Study,
+  "biblia-eclesiastes-cap-5": ecclesiastes5Study,
+  "biblia-eclesiastes-cap-6": ecclesiastes6Study,
   "biblia-marcos-cap-4": mark4Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
