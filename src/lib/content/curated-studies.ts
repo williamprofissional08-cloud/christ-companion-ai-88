@@ -130,6 +130,8 @@ import { psalm127Study } from "./psalm-127-study";
 import { psalm128Study } from "./psalm-128-study";
 import { psalm129Study } from "./psalm-129-study";
 import { psalm130Study } from "./psalm-130-study";
+import { psalm131Study } from "./psalm-131-study";
+import { psalm132Study } from "./psalm-132-study";
 import { job31Study } from "./job-31-study";
 import { job32Study } from "./job-32-study";
 import { job33Study } from "./job-33-study";
@@ -1227,4 +1229,6 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-salmos-cap-128": psalm128Study,
   "biblia-salmos-cap-129": psalm129Study,
   "biblia-salmos-cap-130": psalm130Study,
+  "biblia-salmos-cap-131": psalm131Study,
+  "biblia-salmos-cap-132": psalm132Study,
 };
