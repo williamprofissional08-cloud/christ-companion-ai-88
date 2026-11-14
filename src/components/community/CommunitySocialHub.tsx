@@ -1,14 +1,14 @@
 import { useCallback, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 import {
-  BookOpen, Camera, HeartHandshake, MessageCircle, PenLine, Play, Radio,
+  BookOpen, Camera, HeartHandshake, MessageCircle, PenLine, Radio,
   UsersRound, UserRoundPlus, Video, ChevronRight, Sparkles, HandHeart,
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { GlobalChatPanel } from "@/components/community/GlobalChatPanel";
 import { CommunityStories } from "@/components/community/CommunityStories";
 import { CommunityLivePanel } from "@/components/community/CommunityLivePanel";
-import { CommunityGroupsPanel } from "@/components/community/CommunityGroupsPanel";
+
 
 type ComposerKind = "reflexao" | "testemunho" | "oracao" | "debate";
 const shortcutClass = "flex min-h-20 min-w-0 flex-col items-center justify-center gap-2 rounded-[1.2rem] border border-blue-300/30 bg-gradient-to-b from-[#124f88] to-[#082b55] px-2 py-3 text-center text-white shadow-[0_3px_12px_rgba(4,52,103,.25)] transition hover:-translate-y-0.5 hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400";
@@ -120,13 +120,8 @@ export function CommunitySocialHub({ user, onCompose }: {
         </div>
       </section>
 
-      <CommunityGroupsPanel user={user}/>
 
-      <button type="button" onClick={goStories}
-        className="flex w-full items-center justify-between rounded-2xl border border-blue-100 bg-gradient-to-r from-[#0b376c] to-[#095d9b] p-3 text-left text-white shadow-sm">
-        <span className="flex items-center gap-2"><Play className="size-4 text-amber-300" /> Histórias e momentos da comunidade</span>
-        <ChevronRight className="size-5"/>
-      </button>
+
     </div>
   );
 }
