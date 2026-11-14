@@ -53,6 +53,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
   const [createOpen, setCreateOpen] = useState(false);
   const [room, setRoom] = useState<Room | null>(null);
   const [members, setMembers] = useState<Member[]>([]);
+  const [memberNames, setMemberNames] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState(false);
   const [joining, setJoining] = useState(false);
   const [connected, setConnected] = useState(false);
@@ -86,6 +87,27 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
       .select("user_id,status,joined_at").eq("session_id", sessionId);
     if (!readError) setMembers((data ?? []) as Member[]);
   }, []);
+
+  useEffect(() => {
+    if (room?.role !== "host") return;
+    let cancelled = false;
+    const missing = members.filter((member) =>
+      member.status === "joined" && !(member.user_id in memberNames)
+    ).map((member) => member.user_id);
+    if (!missing.length) return;
+    void Promise.all(missing.map(async (id) => {
+      const { data } = await db.rpc("search_community_members", {
+        p_search: id, p_limit: 1,
+      });
+      const name = (data as { display_name?: string | null }[] | null)?.[0]?.display_name;
+      return [id, name?.trim() || "Membro " + id.slice(0, 8)] as const;
+    })).then((resolved) => {
+      if (!cancelled) setMemberNames((previous) =>
+        ({ ...previous, ...Object.fromEntries(resolved) }));
+    });
+    return () => { cancelled = true; };
+  }, [members, memberNames, room?.role]);
+
 
   useEffect(() => {
     if (!user) return;
@@ -143,7 +165,14 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
       const { error: endError } = await db.from("community_live_sessions")
         .update({ status: "ended", ended_at: new Date().toISOString() })
         .eq("id", active.session.id).eq("host_id", user.id);
-      if (endError) toast.error("Falha ao encerrar a transmissão no servidor.");
+      if (endError) {
+        toast.error("Falha ao encerrar a transmissão no servidor.");
+      } else {
+        // ICE candidates and descriptions can include network information.
+        // Erase them promptly when the session ends.
+        void db.from("community_live_signals").delete()
+          .eq("session_id", active.session.id);
+      }
     } else {
       await db.from("community_live_participants")
         .update({ status: "left", updated_at: new Date().toISOString() })
@@ -476,9 +505,15 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
         localMedia.current?.getTracks().forEach((track) => track.stop());
         localMedia.current = null;
         if (amHost) {
-          void db.from("community_live_sessions")
-            .update({ status: "ended", ended_at: new Date().toISOString() })
-            .eq("id", currentRoomId).eq("host_id", myId);
+          void (async () => {
+            const { error: endError } = await db.from("community_live_sessions")
+              .update({ status: "ended", ended_at: new Date().toISOString() })
+              .eq("id", currentRoomId).eq("host_id", myId);
+            if (!endError) {
+              await db.from("community_live_signals").delete()
+                .eq("session_id", currentRoomId);
+            }
+          })();
         } else {
           void db.from("community_live_participants")
             .update({ status: "left", updated_at: new Date().toISOString() })
@@ -599,7 +634,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
                   <p className="text-xs text-blue-100">Aguardando a entrada de participantes.</p>
                 ) : members.filter((item) => item.status === "joined").map((member) => (
                   <div key={member.user_id} className="flex items-center justify-between gap-3 rounded-lg bg-white/10 p-2">
-                    <span className="min-w-0 truncate text-xs">Membro {member.user_id.slice(0, 8)}</span>
+                    <span className="min-w-0 truncate text-xs">{memberNames[member.user_id] || "Membro " + member.user_id.slice(0, 8)}</span>
                     <button type="button" onClick={() => void kickMember(member.user_id)}
                       className="flex min-h-10 items-center gap-1 rounded-lg border border-red-200/40 px-3 text-xs text-white hover:bg-red-700">
                       <ShieldBan className="size-4" /> Remover
