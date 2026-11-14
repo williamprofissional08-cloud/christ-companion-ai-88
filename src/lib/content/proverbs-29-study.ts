@@ -168,7 +168,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "7. Versículo 4 — Suborno e estabilidade",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:4):** Governo e suborno.\n\n**Observação e interpretação:** O rei estabiliza a terra ao julgar justamente; a aceitação de presentes interessados corrompe decisões e desorganiza a sociedade. A imagem é política e jurídica.\n\n**Aplicação contemporânea (distinta do texto):** Recuse vantagens que comprometam a imparcialidade.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:4):** Governo e suborno.\n\n**Observação e interpretação:** O rei estabiliza a terra ao julgar justamente; a aceitação de presentes interessados corrompe decisões e desorganiza a sociedade. A imagem é política e jurídica.\n\n**Aplicação contemporânea (distinta do texto):** Recuse vantagens que comprometam a imparcialidade.\n\n**Contexto e limite ético:** A estabilidade que o verso celebra depende da justiça na administração, não da riqueza pessoal de um governante. Presentes oferecidos para comprar decisões comprometem a confiança nas instituições e ferem os mais vulneráveis.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:4"
@@ -179,7 +179,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "8. Versículo 5 — Lisonja como rede",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:5):** Lisonja como armadilha.\n\n**Observação e interpretação:** O elogio manipulador parece favorável, mas prepara uma rede para o próximo. O problema não é encorajar alguém sinceramente, e sim usar palavras agradáveis para obter controle.\n\n**Aplicação contemporânea (distinta do texto):** Prefira elogios verdadeiros a promessas interessadas.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:5):** Lisonja como armadilha.\n\n**Observação e interpretação:** O elogio manipulador parece favorável, mas prepara uma rede para o próximo. O problema não é encorajar alguém sinceramente, e sim usar palavras agradáveis para obter controle.\n\n**Aplicação contemporânea (distinta do texto):** Prefira elogios verdadeiros a promessas interessadas.\n\n**Contexto e limite ético:** A lisonja de que fala o provérbio tem a intenção de manipular o próximo. Encorajamento verdadeiro pode ser bom, mas elogios interessados usados para obter vantagem escondem a armadilha que o texto denuncia.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:5"
@@ -190,7 +190,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "9. Versículo 6 — Transgressão e armadilha",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:6):** Transgressão e liberdade.\n\n**Observação e interpretação:** A maldade é comparada a uma armadilha que aprisiona o próprio agente; o justo pode alegrar-se por viver de modo íntegro. Não é garantia de imunidade a sofrimentos.\n\n**Aplicação contemporânea (distinta do texto):** Considere as consequências ocultas de uma vantagem ilícita.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:6):** Transgressão e liberdade.\n\n**Observação e interpretação:** A maldade é comparada a uma armadilha que aprisiona o próprio agente; o justo pode alegrar-se por viver de modo íntegro. Não é garantia de imunidade a sofrimentos.\n\n**Aplicação contemporânea (distinta do texto):** Considere as consequências ocultas de uma vantagem ilícita.\n\n**Contexto e limite ético:** A metáfora da armadilha ajuda a perceber que escolhas perversas aprisionam por suas consequências. O texto não garante ausência de sofrimento a todos os justos; compara a direção moral de condutas opostas.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:6"
@@ -212,7 +212,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "11. Versículo 8 — Zombaria e conflito urbano",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:8):** Escárnio e paz social.\n\n**Observação e interpretação:** O zombador inflama a cidade; o sábio pode desviar a ira. A oposição destaca a responsabilidade pública da linguagem e da mediação de conflitos.\n\n**Aplicação contemporânea (distinta do texto):** Desarme uma discussão sem silenciar denúncias legítimas.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:8):** Escárnio e paz social.\n\n**Observação e interpretação:** O zombador inflama a cidade; o sábio pode desviar a ira. A oposição destaca a responsabilidade pública da linguagem e da mediação de conflitos.\n\n**Aplicação contemporânea (distinta do texto):** Desarme uma discussão sem silenciar denúncias legítimas.\n\n**Contexto e limite ético:** A zombaria que incendeia uma cidade pode ser lida como incitação a conflito, não como toda crítica pública. Quem busca paz com sabedoria pode contestar injustiças sem espalhar mentiras ou estimular violência.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:8"
@@ -245,7 +245,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "14. Versículo 11 — Controle das emoções",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:11):** Domínio da ira.\n\n**Observação e interpretação:** A pessoa insensata despeja todo impulso; a sábia retém e governa sua reação. Controlar a ira não significa esconder abusos nem negar sentimentos.\n\n**Aplicação contemporânea (distinta do texto):** Antes de responder, identifique o problema e escolha uma ação proporcional.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:11):** Domínio da ira.\n\n**Observação e interpretação:** A pessoa insensata despeja todo impulso; a sábia retém e governa sua reação. Controlar a ira não significa esconder abusos nem negar sentimentos.\n\n**Aplicação contemporânea (distinta do texto):** Antes de responder, identifique o problema e escolha uma ação proporcional.\n\n**Contexto e limite ético:** Expressar emoções não é erro em si. O problema da máxima é despejar impulsos sem discernimento, ferindo pessoas. A pessoa sábia pode reconhecer ira legítima e buscar modos seguros de responder.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:11"
@@ -256,7 +256,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "15. Versículo 12 — Liderança e mentira",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:12):** Mentira no poder.\n\n**Observação e interpretação:** Um governante que acolhe mentiras incentiva uma cultura de desonestidade entre seus subordinados. O efeito da liderança é sistêmico.\n\n**Aplicação contemporânea (distinta do texto):** Exija evidências e transparência de quem decide.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:12):** Mentira no poder.\n\n**Observação e interpretação:** Um governante que acolhe mentiras incentiva uma cultura de desonestidade entre seus subordinados. O efeito da liderança é sistêmico.\n\n**Aplicação contemporânea (distinta do texto):** Exija evidências e transparência de quem decide.\n\n**Contexto e limite ético:** Quando um governante recompensa mentiras, cria incentivos para que subordinados ocultem fatos ou adularem o poder. A responsabilidade institucional alcança regras, ambiente de trabalho e proteção de quem relata a verdade.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:12"
@@ -267,7 +267,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "16. Versículo 13 — Dignidade diante de Deus",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:13):** Dignidade compartilhada.\n\n**Observação e interpretação:** Pobre e opressor ou enganador se encontram sob o mesmo Criador, que dá luz aos olhos de ambos. A dignidade comum não torna a opressão aceitável.\n\n**Aplicação contemporânea (distinta do texto):** Reconheça a humanidade de todos sem relativizar injustiças.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:13):** Dignidade compartilhada.\n\n**Observação e interpretação:** Pobre e opressor ou enganador se encontram sob o mesmo Criador, que dá luz aos olhos de ambos. A dignidade comum não torna a opressão aceitável.\n\n**Aplicação contemporânea (distinta do texto):** Reconheça a humanidade de todos sem relativizar injustiças.\n\n**Contexto e limite ético:** O Senhor é apresentado como Criador e sustentador de todos, sem aprovar o comportamento do opressor. Reconhecer humanidade compartilhada não significa tornar crimes moralmente equivalentes ao sofrimento das vítimas.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:13"
@@ -300,7 +300,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "19. Versículo 16 — Perversidade crescente",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:16):** Injustiça disseminada.\n\n**Observação e interpretação:** Quando pessoas perversas ganham influência, multiplicam-se transgressões; a esperança de sua queda é confiança na justiça, não licença para perseguição.\n\n**Aplicação contemporânea (distinta do texto):** Não normalize pequenas fraudes por serem comuns.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:16):** Injustiça disseminada.\n\n**Observação e interpretação:** Quando pessoas perversas ganham influência, multiplicam-se transgressões; a esperança de sua queda é confiança na justiça, não licença para perseguição.\n\n**Aplicação contemporânea (distinta do texto):** Não normalize pequenas fraudes por serem comuns.\n\n**Contexto e limite ético:** A palavra sobre a queda dos perversos expressa confiança na justiça, mas não prevê data nem autoriza alguém a executar vingança. O crescimento de transgressões sob poder injusto exige resposta legítima e proteção social.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:16"
@@ -311,7 +311,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "20. Versículo 17 — Educação sem violência",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:17):** Cuidado com filhos.\n\n**Observação e interpretação:** A instrução antiga relaciona correção ao descanso familiar. A forma imperativa deve ser lida no contexto da sabedoria antiga e não autoriza agressão a crianças.\n\n**Aplicação contemporânea (distinta do texto):** Ensine responsabilidade com paciência, proteção e consistência.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:17):** Cuidado com filhos.\n\n**Observação e interpretação:** A instrução antiga relaciona correção ao descanso familiar. A forma imperativa deve ser lida no contexto da sabedoria antiga e não autoriza agressão a crianças.\n\n**Aplicação contemporânea (distinta do texto):** Ensine responsabilidade com paciência, proteção e consistência.\n\n**Contexto e limite ético:** A educação de filhos exige paciência, segurança e limites proporcionais. O texto antigo não dá licença a pais ou responsáveis para agredir; aplicar o provérbio hoje requer reconhecer a dignidade e os direitos da criança.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:17"
@@ -344,7 +344,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "23. Versículo 20 — Precipitação verbal",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:20):** Pressa ao falar.\n\n**Observação e interpretação:** A fala precipitada é descrita como mais difícil de corrigir que a insensatez reconhecida. O foco é a falta de escuta e reflexão.\n\n**Aplicação contemporânea (distinta do texto):** Confira fatos e consequências antes de publicar ou acusar.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:20):** Pressa ao falar.\n\n**Observação e interpretação:** A fala precipitada é descrita como mais difícil de corrigir que a insensatez reconhecida. O foco é a falta de escuta e reflexão.\n\n**Aplicação contemporânea (distinta do texto):** Confira fatos e consequências antes de publicar ou acusar.\n\n**Contexto e limite ético:** A precipitação pode conduzir a acusações que não podem ser facilmente reparadas. A sabedoria pede verificação e escuta. O provérbio não proíbe falar diante de abusos comprovados, mas estimula precisão.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:20"
@@ -366,7 +366,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "25. Versículo 22 — Ira e brigas",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:22):** Ira e conflitos.\n\n**Observação e interpretação:** A pessoa dominada pela ira produz brigas e multiplica ofensas. A repetição reforça o efeito social da impulsividade.\n\n**Aplicação contemporânea (distinta do texto):** Procure estratégias de regulação emocional e reparação de danos.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:22):** Ira e conflitos.\n\n**Observação e interpretação:** A pessoa dominada pela ira produz brigas e multiplica ofensas. A repetição reforça o efeito social da impulsividade.\n\n**Aplicação contemporânea (distinta do texto):** Procure estratégias de regulação emocional e reparação de danos.\n\n**Contexto e limite ético:** A ira alimentada sem controle pode transformar discordâncias em agressões. Buscar reconciliação quando segura e responsabilização por violência são coisas diferentes; o texto não culpa a vítima pela irritação do agressor.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:22"
@@ -377,7 +377,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "26. Versículo 23 — Humildade e honra",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:23):** Orgulho e humildade.\n\n**Observação e interpretação:** A arrogância pode derrubar uma pessoa, enquanto humildade abre espaço à honra. Não é promessa automática de promoção social.\n\n**Aplicação contemporânea (distinta do texto):** Reconheça limites e peça orientação quando necessário.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:23):** Orgulho e humildade.\n\n**Observação e interpretação:** A arrogância pode derrubar uma pessoa, enquanto humildade abre espaço à honra. Não é promessa automática de promoção social.\n\n**Aplicação contemporânea (distinta do texto):** Reconheça limites e peça orientação quando necessário.\n\n**Contexto e limite ético:** A honra obtida pela humildade não é garantia de promoção ou prosperidade. O contraste dirige o caráter humano e a disposição de escutar correção, inclusive em pessoas que exercem autoridade.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:23"
@@ -399,7 +399,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "28. Versículo 25 — Medo de pessoas",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:25):** Medo da opinião alheia.\n\n**Observação e interpretação:** O temor das pessoas pode tornar-se armadilha; confiança no Senhor oferece orientação mais firme. Não significa ignorar perigos concretos ou abandonar medidas de proteção.\n\n**Aplicação contemporânea (distinta do texto):** Não sacrifique princípios por aprovação social.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:25):** Medo da opinião alheia.\n\n**Observação e interpretação:** O temor das pessoas pode tornar-se armadilha; confiança no Senhor oferece orientação mais firme. Não significa ignorar perigos concretos ou abandonar medidas de proteção.\n\n**Aplicação contemporânea (distinta do texto):** Não sacrifique princípios por aprovação social.\n\n**Contexto e limite ético:** A preocupação excessiva com aprovação alheia pode aprisionar decisões, mas a prudência de evitar perigo real não é falta de confiança. O temor do Senhor convida a agir com coragem e segurança.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:25"
@@ -410,7 +410,7 @@ export const proverbs29Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "29. Versículo 26 — Justiça além dos poderosos",
-      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:26):** Justiça além do favoritismo.\n\n**Observação e interpretação:** Muitos buscam favor do governante, mas a justiça última pertence ao Senhor. O texto não elimina a importância de tribunais humanos imparciais.\n\n**Aplicação contemporânea (distinta do texto):** Busque direitos por meios legítimos sem depender de favores pessoais.",
+      "body": "**Leitura do versículo (paráfrase livre de Provérbios 29:26):** Justiça além do favoritismo.\n\n**Observação e interpretação:** Muitos buscam favor do governante, mas a justiça última pertence ao Senhor. O texto não elimina a importância de tribunais humanos imparciais.\n\n**Aplicação contemporânea (distinta do texto):** Busque direitos por meios legítimos sem depender de favores pessoais.\n\n**Contexto e limite ético:** O favor de um governante pode ser útil em relações públicas, mas não determina o valor moral da causa. Buscar justiça exige meios legítimos, sem suborno nem expectativa de influência ilimitada.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Provérbios 29:26"
