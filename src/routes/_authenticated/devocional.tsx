@@ -1,15 +1,12 @@
-import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
 import { BookOpen, CalendarDays, Check, ChevronRight, Flame, Lightbulb, MessageCircle, Sparkles } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { ExportCard } from "@/components/ExportCard";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getDevotional } from "@/lib/ai.functions";
 import { loadDevotionalSafely } from "@/lib/devotional-loader";
-import { fallbackDevotional, devotionalLibrarySize } from "@/lib/content/fallback-devotional";
+import { curatedDevotionalCount } from "@/lib/content/daily-devotional";
 import { useBrazilDay } from "@/hooks/use-brazil-day";
 import { BIBLE_BOOKS, parseBibleReference } from "@/lib/bible-catalog";
 
@@ -104,15 +101,9 @@ function ScriptureReferenceChips({ references }: { references: string[] }) {
 
 function DevocionalPage() {
   const day = useBrazilDay();
-  const [draw, setDraw] = useState(0);
-
-  useEffect(() => {
-    setDraw(0);
-  }, [day]);
-  const fn = useServerFn(getDevotional);
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["devotional", day],
-    queryFn: () => loadDevotionalSafely(day, () => fn({ data: { day } })),
+    queryFn: () => loadDevotionalSafely(day),
     retry: false,
     staleTime: Infinity,
   });
@@ -141,7 +132,7 @@ function DevocionalPage() {
     );
   }
 
-  const displayedData = draw === 0 ? data : fallbackDevotional(day, draw);
+  const displayedData = data;
   const isSynthesis = displayedData.verse.kind === "synthesis" || displayedData.verse.text.startsWith("Síntese para meditação, não uma citação literal:");
   const verseText = displayedData.verse.text.replace(/^Síntese para meditação, não uma citação literal:\s*/i, "");
   const dateLabel = new Date(`${day}T12:00:00-03:00`).toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo", weekday: "long", day: "numeric", month: "long", year: "numeric" });
@@ -167,21 +158,19 @@ function DevocionalPage() {
           </div>
           <div className="flex items-center gap-3 rounded-2xl border border-border/70 bg-card px-4 py-3 shadow-sm">
             <span className="flex size-10 items-center justify-center rounded-xl bg-blue-50 text-primary dark:bg-primary/15"><BookOpen className="size-5" aria-hidden="true" /></span>
-            <div className="min-w-0"><p className="text-sm font-semibold">Acervo de leituras</p><p className="text-xs text-muted-foreground">{devotionalLibrarySize().toLocaleString("pt-BR")} combinações de leitura</p></div>
-            <button type="button" onClick={() => setDraw(Math.floor(Math.random() * devotionalLibrarySize()) + 1)} className="ml-1 inline-flex min-h-10 items-center gap-1 rounded-xl bg-primary px-3 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:px-4 sm:text-sm">
-              <span className="hidden sm:inline">Sortear outro</span><span className="sm:hidden">Outro</span><ChevronRight className="size-4" aria-hidden="true" />
-            </button>
+            <div className="min-w-0"><p className="text-sm font-semibold">Acervo de leituras</p><p className="text-xs text-muted-foreground">{curatedDevotionalCount().toLocaleString("pt-BR")} devocionais completos</p></div>
+            <span className="ml-1 rounded-lg bg-blue-50 px-3 py-2 text-xs font-semibold text-primary dark:bg-primary/15 dark:text-blue-200">Novo às 00h</span>
           </div>
         </section>
 
-        <ExportCard filename={`devocional-${day}-${draw}`} title={`Devocional — ${displayedData.theme}`}>
+        <ExportCard filename={`devocional-${day}`} title={`Devocional — ${displayedData.theme}`}>
           <section aria-labelledby="verse-heading" className="relative isolate overflow-hidden rounded-3xl border border-blue-900/10 bg-gradient-to-br from-[#f5f9ff] via-white to-[#e7f1ff] p-6 shadow-sm dark:border-white/10 dark:from-[#162743] dark:via-[#13223a] dark:to-[#1a3150] sm:p-9 lg:p-11">
             <img src="/images/devotional-reflection.webp" alt="" aria-hidden="true" className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25 dark:opacity-15" />
             <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-white/90 via-white/80 to-white/55 dark:from-[#162743]/95 dark:via-[#13223a]/90 dark:to-[#1a3150]/75" />
             <div className="absolute -right-12 -top-16 -z-10 size-64 rounded-full bg-amber-300/20 blur-3xl dark:bg-amber-300/10" />
             <div className="max-w-3xl">
               <p id="verse-heading" className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary dark:text-blue-300"><span className="h-1 w-8 rounded-full bg-amber-400" />{isSynthesis ? "Síntese para meditação" : "Palavra do dia"}</p>
-              <p className="mt-6 font-display text-2xl font-semibold leading-snug tracking-tight text-[#142d59] dark:text-white sm:text-3xl lg:text-4xl">“{verseText}”</p>
+              <p className="mt-6 font-display text-2xl font-semibold leading-snug tracking-tight text-[#142d59] dark:text-white sm:text-3xl lg:text-4xl">{isSynthesis ? verseText : `“${verseText}”`}</p>
               <p className="mt-6 flex items-center gap-2 text-sm font-bold uppercase tracking-[0.16em] text-slate-600 dark:text-slate-300"><span className="h-1 w-6 rounded-full bg-amber-400" /><ScriptureText text={displayedData.verse.reference} /></p>
             </div>
             <div className="mt-8 flex items-center gap-2 border-t border-blue-900/10 pt-4 text-sm italic text-slate-600 dark:border-white/10 dark:text-slate-300"><Sparkles className="size-4 shrink-0 text-amber-500" aria-hidden="true" />{displayedData.theme}</div>

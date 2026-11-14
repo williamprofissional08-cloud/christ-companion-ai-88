@@ -5,7 +5,6 @@ import { BookOpen, GraduationCap, Route as RouteIcon, Sparkles, UsersRound, Hear
 import { AppShell } from "@/components/AppShell";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuth } from "@/hooks/use-auth";
-import { getDevotional } from "@/lib/ai.functions";
 import { loadDevotionalSafely } from "@/lib/devotional-loader";
 import { useBrazilDay } from "@/hooks/use-brazil-day";
 import { listFavorites, listGoals } from "@/lib/app.functions";
@@ -24,14 +23,13 @@ export const Route = createFileRoute("/_authenticated/inicio")({
 function Inicio() {
   const day = useBrazilDay();
   const { user } = useAuth();
-  const devotionalFn = useServerFn(getDevotional);
   const fetchFavorites = useServerFn(listFavorites);
   const fetchGoals = useServerFn(listGoals);
   const favorites = useQuery({ queryKey: ["home-favorites", user?.id], queryFn: () => fetchFavorites(), enabled: !!user?.id, retry: false });
   const goals = useQuery({ queryKey: ["home-goals", user?.id], queryFn: () => fetchGoals(), enabled: !!user?.id, retry: false });
   const devotional = useQuery({
     queryKey: ["devotional", day],
-    queryFn: () => loadDevotionalSafely(day, () => devotionalFn({ data: { day } })),
+    queryFn: () => loadDevotionalSafely(day),
     retry: false,
     staleTime: Infinity,
   });
@@ -85,7 +83,7 @@ function Inicio() {
         <div className="home-middle grid gap-3 lg:grid-cols-2 lg:items-stretch"><section className="home-devotional relative isolate overflow-hidden rounded-3xl bg-[#173b60] p-5 text-white shadow-md sm:p-8">
           <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 -z-20 size-full object-cover object-right" />
           <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#102d4a]/95 via-[#173b60]/80 to-[#173b60]/15" />
-          <h2 className="flex items-center gap-2 text-sm font-semibold"><CalendarDays className="size-5" aria-hidden="true" /> Devocional de Hoje</h2>
+          <h2 className="flex items-center gap-2 text-sm font-semibold"><CalendarDays className="size-5" aria-hidden="true" /> Devocional de Hoje · renova às 00h</h2>
           {devotional.isLoading ? <Skeleton className="mt-5 h-16 w-2/3" /> : (
             <>
               <p className="mt-4 max-w-lg font-serif text-2xl font-bold leading-tight sm:text-3xl">{d?.verse.text?.replace(/^Síntese para meditação, não uma citação literal:\\s*/i, "") || "Medite na Palavra de Deus"}</p>

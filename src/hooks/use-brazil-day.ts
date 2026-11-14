@@ -3,7 +3,7 @@ import { getBrazilDateISO } from "@/lib/brazil-date";
 
 /**
  * Tracks the Brazilian calendar day while the app remains open.
- * The short interval handles the midnight boundary; focus/visibility
+ * A one-second interval handles the midnight boundary; focus/visibility
  * listeners also recover immediately after a suspended background tab.
  */
 export function useBrazilDay(): string {
@@ -15,7 +15,7 @@ export function useBrazilDay(): string {
       setDay((previousDay) => previousDay === currentDay ? previousDay : currentDay);
     };
 
-    const intervalId = window.setInterval(refreshDay, 15_000);
+    const intervalId = window.setInterval(refreshDay, 1_000);
     window.addEventListener("focus", refreshDay);
     document.addEventListener("visibilitychange", refreshDay);
 
