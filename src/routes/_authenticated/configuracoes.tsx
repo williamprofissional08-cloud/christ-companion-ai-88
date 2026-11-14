@@ -26,6 +26,8 @@ import { requestNotificationPermission, sendTestReminder } from "@/hooks/use-rem
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
 import { ProfileEditor } from "@/components/settings/ProfileEditor";
+import { ProfileOverview } from "@/components/settings/ProfileOverview";
+import { SettingsOverview } from "@/components/settings/SettingsOverview";
 
 
 export const Route = createFileRoute("/_authenticated/configuracoes")({
@@ -50,6 +52,11 @@ function ConfiguracoesPage() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const [signingOut, setSigningOut] = useState(false);
+  const [view, setView] = useState<"perfil" | "configuracoes">("perfil");
+  const switchView = (next: "perfil" | "configuracoes") => {
+    setView(next);
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
   const [newEmail, setNewEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmNewPassword, setConfirmNewPassword] = useState("");
@@ -147,7 +154,7 @@ function ConfiguracoesPage() {
   }, [data]);
 
   const mutation = useMutation({
-    mutationFn: (overrides?: { reminder_paused_until?: string | null }) =>
+    mutationFn: (overrides?: { reminder_paused_until?: string | null; reminders_enabled?: boolean }) =>
       persist({
         data: {
           interests,
@@ -180,9 +187,9 @@ function ConfiguracoesPage() {
   const pauseActive = pausedUntil && new Date(pausedUntil).getTime() > Date.now();
 
 
-  if (isLoading) {
+  if (isLoading && view === "configuracoes") {
     return (
-      <AppShell title="Configurações">
+      <AppShell title="Configurações" profileHeader profileView="configuracoes" onProfileAction={() => switchView("perfil")}>
         <div className="space-y-3">
           {[0, 1, 2].map((i) => (
             <Skeleton key={i} className="h-28 w-full" />
@@ -193,10 +200,31 @@ function ConfiguracoesPage() {
   }
 
   return (
-    <AppShell title="Configurações" subtitle="Sua rotina, seus lembretes, seu ritmo">
+    <AppShell
+      title={view === "perfil" ? "Caminho Divino" : "Configurações"}
+      profileHeader
+      profileView={view}
+      onProfileAction={() => switchView(view === "perfil" ? "configuracoes" : "perfil")}
+    >
+      {view === "perfil" ? (
+        <ProfileOverview onOpenSettings={() => switchView("configuracoes")} />
+      ) : (
       <div className="mx-auto w-full max-w-6xl space-y-5 pb-8 sm:space-y-6">
+        <SettingsOverview
+          reminders={reminders}
+          savingReminders={mutation.isPending}
+          onRemindersChange={(enabled) => {
+            setReminders(enabled);
+            mutation.mutate({ reminders_enabled: enabled });
+          }}
+        />
+        <button type="button" onClick={switchAccount} disabled={signingOut}
+          className="mx-auto block w-full max-w-3xl rounded-2xl border border-rose-300 bg-rose-50 px-5 py-3 text-center font-semibold text-rose-700 hover:bg-rose-100 disabled:opacity-60 dark:border-rose-800 dark:bg-rose-950/30 dark:text-rose-300">
+          {signingOut ? "Saindo..." : "Sair da Conta"}
+        </button>
+        <h2 className="border-t border-slate-200 pt-5 text-lg font-bold text-[#0d2c55] dark:text-foreground">Ajustes detalhados</h2>
         <div className="grid gap-4 lg:grid-cols-2">
-        <div className="lg:col-span-2"><ProfileEditor /></div>
+        <div id="profile-editor-details" className="scroll-mt-24 lg:col-span-2"><ProfileEditor /></div>
         <Card className="border-primary/20 bg-gradient-to-br from-primary/10 via-background to-background p-5 shadow-soft sm:p-6 lg:col-span-2">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-start gap-3">
@@ -217,7 +245,7 @@ function ConfiguracoesPage() {
               </Button>
             </div>
         </Card>
-        <Card className="overflow-hidden rounded-2xl border-border/60 bg-card p-5 shadow-soft sm:p-6">
+        <Card id="reminders-detail" className="scroll-mt-24 overflow-hidden rounded-2xl border-border/60 bg-card p-5 shadow-soft sm:p-6">
           <div className="mb-4 border-b border-border/60 pb-4">
           <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-primary">Sua rotina diária</p>
           <h2 className="font-display text-xl font-semibold">Lembretes</h2>
@@ -423,7 +451,7 @@ function ConfiguracoesPage() {
           {mutation.isPending ? "Salvando..." : "Salvar configurações"}
         </Button>
 
-        <Card className="overflow-hidden rounded-2xl border-border/60 bg-card p-5 shadow-soft sm:p-6 lg:col-span-2">
+        <Card id="account-access" className="scroll-mt-24 overflow-hidden rounded-2xl border-border/60 bg-card p-5 shadow-soft sm:p-6 lg:col-span-2">
           <div className="mb-4 border-b border-border/60 pb-4">
           <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-primary">Segurança</p>
           <h2 className="font-display text-xl font-semibold">Conta e acesso</h2>
@@ -465,6 +493,7 @@ function ConfiguracoesPage() {
         </Card>
         </div>
       </div>
+      )}
     </AppShell>
   );
 }
