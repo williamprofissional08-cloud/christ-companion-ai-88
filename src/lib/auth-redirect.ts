@@ -28,10 +28,21 @@ export function takeRedirect(): string {
   }
 }
 
+export const AUTH_API_KEY_CONFIGURATION_MESSAGE = "Problema de configuração do aplicativo. Não foi possível conectar ao serviço de login. Sua conta e sua senha estão corretas e não precisam ser alteradas. Avise o administrador do app.";
+
+export function isAuthApiKeyError(error: unknown): boolean {
+  const raw = error instanceof Error ? error.message : String(error ?? "");
+  const code = error && typeof error === "object" && "code" in error && typeof error.code === "string" ? error.code : "";
+  const message = `${raw} ${code}`.toLowerCase();
+  return /invalid[ _]api[ _]key|no[ _]api[ _]key[ _]found|apikey[^\\n]{0,50}(?:invalid|missing|not found|required)|(?:invalid|missing|not found|required)[^\\n]{0,50}apikey/.test(message);
+}
+
 /** Traduz erros de autenticação em mensagens amigáveis. */
 export function friendlyAuthError(error: unknown): string {
   const raw = error instanceof Error ? error.message : String(error ?? "");
   const message = raw.toLowerCase();
+
+  if (isAuthApiKeyError(error)) return AUTH_API_KEY_CONFIGURATION_MESSAGE;
 
   if (message.includes("invalid login credentials") || message.includes("invalid_credentials"))
     return "Não foi possível entrar com esses dados. Confira o e-mail e a senha. Se você acabou de criar a conta, confirme primeiro o endereço pelo link enviado por e-mail; depois volte para entrar. Se não recebeu a mensagem, use a opção de reenviar confirmação.";
