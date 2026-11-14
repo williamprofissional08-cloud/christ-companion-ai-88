@@ -1,23 +1,24 @@
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
+import assert from "node:assert/strict";
 import { proverbs10Study } from "./proverbs-10-study";
 import { CURATED_STUDIES } from "./curated-studies";
 
+/** Node's built-in test runner: no Vitest dependency required. */
 describe("Provérbios 10 — integridade do estudo", () => {
-  it("está registrado sob o ID canônico", () => {
-    expect(CURATED_STUDIES["biblia-proverbios-cap-10"]).toBe(proverbs10Study);
+  const sections = proverbs10Study.sections ?? [];
+  it("preserva o registro no catálogo", () => {
+    assert.equal(CURATED_STUDIES["biblia-proverbios-cap-10"], proverbs10Study);
   });
-  it("contém 32 versículos em paráfrase livre e exposição individual", () => {
-    const reading = proverbs10Study.sections.find((section) => section.id === "leitura-biblica");
-    expect(reading?.body).toContain("Paráfrase livre");
+  it("mantém os 32 versículos e seus comentários", () => {
+    const reading = sections.find((section) => section.id === "leitura-biblica");
+    assert.ok(reading?.body?.includes("Paráfrase livre"));
     for (let verse = 1; verse <= 32; verse++) {
-      expect(reading?.body).toContain(`**${verse}.**`);
-      expect(proverbs10Study.sections.some((section) => section.id === `versiculo-${verse}`)).toBe(true);
+      assert.ok(reading?.body?.includes(`**${verse}.**`));
+      assert.ok(sections.some((section) => section.id === `versiculo-${verse}`));
     }
   });
-  it("apresenta os recursos editoriais obrigatórios", () => {
-    for (const id of ["contexto", "estrutura", "paralelismo", "termos", "referencias", "interpretacoes", "cristo", "exercicios", "oficina-pregador", "oracao"]) {
-      expect(proverbs10Study.sections.some((section) => section.id === id)).toBe(true);
-    }
-    expect(new Set(proverbs10Study.sections.map((section) => section.id)).size).toBe(proverbs10Study.sections.length);
+  it("preserva recursos editoriais e IDs únicos", () => {
+    for (const id of ["contexto","estrutura","paralelismo","termos","referencias","interpretacoes","cristo","exercicios","oficina-pregador","oracao"]) assert.ok(sections.some((section) => section.id === id));
+    assert.equal(new Set(sections.map((section) => section.id)).size, sections.length);
   });
 });
