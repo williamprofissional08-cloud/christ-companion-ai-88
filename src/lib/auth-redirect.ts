@@ -2,6 +2,19 @@
 
 const KEY = "ccc-auth-redirect";
 
+/**
+ * Authentication links in emails must lead to a stable, published HTTPS
+ * origin. Preview/embedded Lovable hosts change between sessions and may not
+ * be present in Supabase Auth's redirect allowlist.
+ *
+ * Add these two URLs under Supabase Auth > URL Configuration.
+ */
+const PUBLISHED_AUTH_ORIGIN = "https://christ-companion-ai-88.lovable.app";
+
+export function getAuthEmailRedirectUrl(path: "/auth-callback" | "/reset-password"): string {
+  return PUBLISHED_AUTH_ORIGIN + path;
+}
+
 export function sanitizeRedirect(value: unknown): string | null {
   if (typeof value !== "string" || !value.startsWith("/") || value.startsWith("//")) return null;
   if (value.startsWith("/auth") || value.startsWith("/reset-password")) return null;
