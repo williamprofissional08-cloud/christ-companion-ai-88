@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { User } from "@supabase/supabase-js";
+import type { SupabaseClient, User } from "@supabase/supabase-js";
 import { Radio, Video, X, Play, Loader2, Plus, UsersRound } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+const db = supabase as unknown as SupabaseClient;
 
 type Session = {
   id: string;
@@ -69,7 +70,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
 
   const load = useCallback(async () => {
     const threshold = new Date(Date.now() - 50_000).toISOString();
-    const { data, error } = await supabase.from("community_live_sessions")
+    const { data, error } = await db.from("community_live_sessions")
       .select("id,host_id,title,room_name,last_heartbeat_at,status")
       .eq("status", "live").gt("last_heartbeat_at", threshold)
       .order("started_at", { ascending: false }).limit(10);
@@ -102,7 +103,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
     const id = sessionIdRef.current;
     sessionIdRef.current = null;
     if (id && hostIdRef.current === user?.id) {
-      await supabase.from("community_live_sessions")
+      await db.from("community_live_sessions")
         .update({ status: "ended", ended_at: new Date().toISOString() })
         .eq("id", id).eq("host_id", user.id);
     }
@@ -137,7 +138,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
           setConnecting(false);
           if (!host) return;
           void (async () => {
-            const { data, error } = await supabase.from("community_live_sessions")
+            const { data, error } = await db.from("community_live_sessions")
               .insert({ host_id: user.id, title: title.trim(), room_name: room, status: "live" })
               .select("id").single();
             if (error || !data) {
@@ -150,7 +151,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
             hostIdRef.current = user.id;
             void load();
             heartbeatRef.current = window.setInterval(() => {
-              if (sessionIdRef.current) void supabase.from("community_live_sessions")
+              if (sessionIdRef.current) void db.from("community_live_sessions")
                 .update({ last_heartbeat_at: new Date().toISOString() })
                 .eq("id", sessionIdRef.current).eq("host_id", user.id);
             }, 15_000);
@@ -177,7 +178,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
       heartbeatRef.current = null;
       const id = sessionIdRef.current;
       sessionIdRef.current = null;
-      if (host && id) void supabase.from("community_live_sessions")
+      if (host && id) void db.from("community_live_sessions")
         .update({ status: "ended", ended_at: new Date().toISOString() })
         .eq("id", id).eq("host_id", user.id);
     };
