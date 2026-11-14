@@ -66,3 +66,24 @@ test("Critical editorial distinctions are not silently removed", () => {
   assert.match(all(p146), /viúvas/);
   assert.equal(bible.chapters["145"].length, 21, "Do not invent missing alphabetic line in Psalm 145");
 });
+
+test("Psalms 137–146 editorial headings and sections are discoverable without padding", () => {
+  const required = [
+    ["leitura", ["leitura", "tradução livre"]],
+    ["contexto", ["contexto"]],
+    ["interpretação", ["interpreta", "exegese", "exposição"]],
+    ["aplicação", ["aplica"]],
+    ["exercícios", ["exercício", "perguntas"]],
+    ["oficina", ["pregador", "pregação", "mensagem"]],
+    ["oração", ["oração", "oracao"]],
+  ];
+  for (let n = 137; n <= 146; n++) {
+    const source = readFileSync(new URL("../src/lib/content/psalm-" + n + "-study.ts", import.meta.url), "utf8");
+    const study = JSON.parse(source.slice(source.indexOf(" = {\n") + 3, source.lastIndexOf(";\n")));
+    assert.ok(study.sections.length >= 18, "Psalm " + n + ": depth below flagged heuristic");
+    const headings = study.sections.map(s => s.title).join(" ").toLowerCase();
+    for (const [category, terms] of required) {
+      assert.ok(terms.some(term => headings.includes(term)), "Psalm " + n + ": missing labeled " + category);
+    }
+  }
+});
