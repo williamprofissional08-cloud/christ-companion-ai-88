@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import logo from "@/assets/logo.png";
-import { friendlyAuthError, isAuthApiKeyError } from "@/lib/auth-redirect";
+import { friendlyAuthError, getAuthEmailRedirectUrl, isAuthApiKeyError } from "@/lib/auth-redirect";
 import { checkExistingAccountSession } from "@/lib/auth-flow";
 
 function logAuthApiKeyError(error: unknown): void {
@@ -112,7 +112,7 @@ function AuthPage() {
           email: normalizedEmail,
           password,
           options: {
-            emailRedirectTo: `${window.location.origin}/auth-callback`,
+            emailRedirectTo: getAuthEmailRedirectUrl("/auth-callback"),
             data: { full_name: name.trim(), display_name: name.trim() },
           },
         });
@@ -157,7 +157,7 @@ function AuthPage() {
       const { error } = await supabase.auth.resend({
         type: "signup",
         email: normalizedEmail,
-        options: { emailRedirectTo: `${window.location.origin}/auth-callback` },
+        options: { emailRedirectTo: getAuthEmailRedirectUrl("/auth-callback") },
       });
       if (error) throw error;
       toast.success("Se houver um cadastro aguardando confirmação, enviaremos um novo link. Confira também o spam.");
@@ -201,7 +201,7 @@ function AuthPage() {
     setRecovering(true);
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(normalizedEmail, {
-        redirectTo: `${window.location.origin}/reset-password`,
+        redirectTo: getAuthEmailRedirectUrl("/reset-password"),
       });
       if (error) throw error;
       // Do not expose whether an account exists for this email address.
