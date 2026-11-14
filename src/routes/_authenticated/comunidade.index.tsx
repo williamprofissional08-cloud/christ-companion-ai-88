@@ -5,6 +5,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
 import { CommunitySocialHub } from "@/components/community/CommunitySocialHub";
+import { CommunityGroupsPanel } from "@/components/community/CommunityGroupsPanel";
 import { COMMUNITY_MEDIA_BUCKET, validateCommunityMedia } from "@/lib/community-media";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -1126,6 +1127,7 @@ function ComunidadePage() {
             </div>
           </div>
         </Card>
+        <CommunityGroupsPanel user={user}/>
       </div>
     </AppShell>
   );
