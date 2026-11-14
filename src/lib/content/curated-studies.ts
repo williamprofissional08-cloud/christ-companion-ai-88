@@ -1,3 +1,8 @@
+import { ecclesiastes12Study } from "./ecclesiastes-12-study";
+import { ecclesiastes11Study } from "./ecclesiastes-11-study";
+import { ecclesiastes10Study } from "./ecclesiastes-10-study";
+import { ecclesiastes9Study } from "./ecclesiastes-9-study";
+import { ecclesiastes8Study } from "./ecclesiastes-8-study";
 import { ecclesiastes7Study } from "./ecclesiastes-7-study";
 import { proverbs28Study } from "./proverbs-28-study";
 import { proverbs29Study } from "./proverbs-29-study";
@@ -687,6 +692,11 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-eclesiastes-cap-5": ecclesiastes5Study,
   "biblia-eclesiastes-cap-6": ecclesiastes6Study,
   "biblia-eclesiastes-cap-7": ecclesiastes7Study,
+  "biblia-eclesiastes-cap-8": ecclesiastes8Study,
+  "biblia-eclesiastes-cap-9": ecclesiastes9Study,
+  "biblia-eclesiastes-cap-10": ecclesiastes10Study,
+  "biblia-eclesiastes-cap-11": ecclesiastes11Study,
+  "biblia-eclesiastes-cap-12": ecclesiastes12Study,
   "biblia-marcos-cap-4": mark4Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
