@@ -194,7 +194,7 @@ export const psalm141Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "11. Contexto, gênero e estrutura",
+      "title": "11. Contexto e interpretação — gênero e estrutura",
       "body": "O Salmo 141 pertence aos poemas de súplica. O título tradicional o associa a Davi, mas não fornece data de composição. Os versos 1–2 apresentam oração com imagens cultuais; os versos 3–5 pedem guarda da própria fala, coração e atitudes; os versos 6–7 contêm imagens especialmente difíceis; os versos 8–10 terminam com confiança e pedido de escape. O gênero impede transformar os pedidos em fatos já realizados. A tensão central é que quem enfrenta inimigos também precisa examinar sua própria conduta. O professor deve apresentar os debates de tradução sem inventar histórias, rituais ou autorizações de violência.",
       "kind": "context",
       "scriptureRefs": [

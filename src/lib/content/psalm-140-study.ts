@@ -227,7 +227,7 @@ export const psalm140Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "14. Estrutura, autoria tradicional e linguagem poética",
+      "title": "14. Contexto e interpretação — Estrutura, autoria tradicional e linguagem poética",
       "body": "O título tradicional de Salmos 140 o relaciona a Davi, sem informar episódio datado. O poema abre com ameaças e comparações sobre línguas e armadilhas (vv. 1–5), passa à confissão e ao pedido de proteção (vv. 6–8), apresenta imprecações (vv. 9–11) e termina em confiança na justiça de Deus pelos aflitos (vv. 12–13). O termo ‘Selá’ aparece em posições estruturais e sua função exata pode ser debatida; não é código esotérico. O uso de serpentes, redes e brasas pertence ao gênero de súplica, e não a um relatório de uma batalha ou conspiração identificável.",
       "kind": "context",
       "scriptureRefs": [

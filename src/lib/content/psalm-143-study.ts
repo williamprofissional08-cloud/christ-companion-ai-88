@@ -222,7 +222,7 @@ export const psalm143Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "13. Estrutura do lamento e da esperança",
+      "title": "13. Contexto e interpretação — estrutura do lamento e da esperança",
       "body": "Salmos 143 passa por quatro movimentos: **vv. 1–2**, pedido de resposta e reconhecimento da insuficiência moral humana; **vv. 3–4**, perseguição e desolação; **vv. 5–6**, memória das obras divinas e anseio pela presença do Senhor; **vv. 7–12**, pedidos de livramento, orientação e preservação. As imagens de trevas, cova e terra seca não devem ser tomadas como relatório de viagem ou diagnóstico médico. O salmo tradicionalmente é contado entre os penitenciais, embora também possua linguagem de perseguição. A inscrição ligada a Davi não fornece data comprovada.",
       "kind": "context",
       "scriptureRefs": [

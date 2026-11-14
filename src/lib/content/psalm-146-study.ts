@@ -199,7 +199,7 @@ export const psalm146Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "11. Estrutura: de governantes mortais ao reinado duradouro",
+      "title": "11. Contexto e interpretação — de governantes mortais ao reinado duradouro",
       "body": "O hino pode ser organizado em **vv. 1–2**, convocação pessoal ao louvor; **vv. 3–4**, advertência contra confiança absoluta em governantes humanos; **vv. 5–6**, bem-aventurança do povo que espera no Deus Criador e fiel; **vv. 7–9**, enumeração do cuidado com pessoas vulneráveis; **v. 10**, conclusão sobre o reinado do Senhor. A moldura de Aleluia une começo e fim. A ausência de nome do autor ou data no corpo do texto impede reconstruir um episódio político específico. O contraste entre poder humano e justiça divina deve organizar toda a explicação, evitando uso partidário ou tratamento de líderes como salvadores.",
       "kind": "context",
       "scriptureRefs": [
@@ -265,7 +265,7 @@ export const psalm146Study: StudyContent = {
     },
     {
       "id": "topico-7",
-      "title": "17. Oficina do pregador — Louvor que protege os vulneráveis",
+      "title": "17. Oficina do pregador e oração — Louvor que protege os vulneráveis",
       "body": "**Tema:** O Rei fiel e a fragilidade do poder humano. **Proposição:** a esperança última pertence ao Senhor Criador, cujo reinado se expressa em justiça e cuidado com vulneráveis. **I (vv. 1–2):** louvor sem performance obrigatória. **II (vv. 3–4):** limites de príncipes e líderes, sem abandonar responsabilidade pública. **III (vv. 5–6):** esperança no Deus de Jacó, Criador fiel. **IV (vv. 7–9):** justiça a oprimidos, pão a famintos e cuidado com estrangeiros, órfãos e viúvas. **V (v. 10):** reinado duradouro. **Cristo:** Lucas 4, sem prometer cura instantânea. **Oração:** Senhor, ajuda-nos a confiar em ti e a cuidar dos vulneráveis com ações concretas. Amém.",
       "kind": "pastoral",
       "scriptureRefs": [

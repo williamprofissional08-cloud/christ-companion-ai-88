@@ -326,7 +326,7 @@ export const psalm145Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "22. Forma alfabética e questão textual do verso ausente",
+      "title": "22. Contexto e interpretação — forma alfabética e questão textual do verso ausente",
       "body": "Salmos 145 é tradicionalmente reconhecido como hino acróstico, isto é, organizado em linhas relacionadas às letras do alfabeto hebraico. A edição BLIVRE no projeto possui vinte e um versículos, e algumas tradições textuais apresentam uma linha adicional associada à letra *nun* que não está presente na forma massorética comum. Essa diferença textual não autoriza inventar um versículo na paráfrase nem afirmar que a ausência invalida o poema. O estudante pode comparar edições criticamente, respeitando a fonte usada pelo aplicativo. A estrutura temática inclui exaltação (vv. 1–7), compaixão (vv. 8–9), reino (vv. 10–13), cuidado (vv. 14–20) e louvor final (v. 21).",
       "kind": "context",
       "scriptureRefs": [

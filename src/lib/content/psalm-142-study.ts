@@ -235,6 +235,39 @@ export const psalm142Study: StudyContent = {
       ],
       "confidence": "high",
       "collapsible": true
+    },
+    {
+      "id": "interpretacao-solidão",
+      "title": "15. Interpretação da solidão — o abandono não é culpa da vítima",
+      "kind": "analysis",
+      "scriptureRefs": [
+        "Salmos 142:3-5"
+      ],
+      "body": "O verso 4 expressa uma experiência de desamparo que merece atenção em si mesma: olhar em busca de apoio e não encontrar pessoas disponíveis. A confissão de que o Senhor é refúgio no verso 5 não declara que a comunidade pode continuar indiferente. É legítimo reconhecer a dimensão relacional do sofrimento e perguntar por que o poeta espera voltar a estar entre os justos no verso 7. Essa esperança não exige que uma vítima exponha publicamente suas experiências ou mantenha convívio com pessoas violentas. O estudo deve distinguir a voz de lamento, a possibilidade de apoio humano e o pedido ainda aberto por livramento. A experiência de isolamento não é uma prova de incapacidade espiritual.",
+      "confidence": "high",
+      "collapsible": true
+    },
+    {
+      "id": "oracao-acolhimento",
+      "title": "16. Oração de lamento — pedir ajuda sem fingir felicidade",
+      "kind": "meditation",
+      "scriptureRefs": [
+        "Salmos 142:1-7"
+      ],
+      "body": "O salmo fornece uma oração que inclui queixa e angústia, não apenas palavras de celebração. O estudante pode reler os versos 1–2 para aprender a formular pedidos verdadeiros, depois observar no verso 4 a dor de não ser visto. Uma meditação responsável não promete que todo isolamento desaparecerá ao final do exercício. É possível orar: ‘Senhor, vê minha situação e ensina-me a procurar ajuda segura’, reconhecendo que pessoas podem precisar também de acompanhamento profissional e suporte da comunidade. A oração deve respeitar privacidade e nunca ser usada para exigir confissão diante de líderes. O verso 7 encerra com esperança, e não com a descrição de um milagre já ocorrido.",
+      "confidence": "high",
+      "collapsible": true
+    },
+    {
+      "id": "cuidado-concreto",
+      "title": "17. Resposta comunitária — refúgio de Deus e ajuda responsável",
+      "kind": "application",
+      "scriptureRefs": [
+        "Salmos 142:4-7"
+      ],
+      "body": "A falta de pessoas que se interessem pela vida do orante no verso 4 fornece uma pergunta pastoral importante: nossa comunidade percebe quem está isolado ou ameaçado? Uma resposta adequada pode incluir visita voluntária, escuta respeitosa, acesso a alimentação e abrigo, apoio a vítimas e encaminhamento a serviços competentes. Isso é aplicação ética, não significado literal de uma palavra hebraica isolada. O poeta chama o Senhor de porção na terra dos viventes, mas não diz que ajuda humana é inútil. A imagem final de justos reunidos convida a imaginar vínculos seguros e não a forçar reconciliação com agressores. Cuidar concretamente preserva a dignidade das pessoas.",
+      "confidence": "high",
+      "collapsible": true
     }
   ]
 };

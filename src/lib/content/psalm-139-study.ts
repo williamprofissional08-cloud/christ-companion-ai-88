@@ -359,7 +359,7 @@ export const psalm139Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "25. Estrutura literária — Presença, criação e exame moral",
+      "title": "25. Contexto e estrutura literária — Presença, criação e exame moral",
       "body": "A composição pode ser dividida em **vv. 1–6**, conhecimento profundo do Senhor; **vv. 7–12**, presença em todos os lugares; **vv. 13–18**, conhecimento da vida em formação e pensamentos divinos; **vv. 19–22**, imprecação contra adversários; **vv. 23–24**, oração de exame e orientação. A passagem dos versos contemplativos para a hostilidade é real e não pode ser omitida para produzir uma mensagem sentimental. O verbo examinar nos extremos dos versos 1 e 23 forma uma moldura que convida a interpretar o todo. O título tradicional associa o salmo a Davi, mas não permite situar uma data ou ocasião biográfica específica.",
       "kind": "context",
       "scriptureRefs": [

@@ -257,7 +257,7 @@ export const psalm144Study: StudyContent = {
     },
     {
       "id": "topico-1",
-      "title": "16. Estrutura e cenário poético régio",
+      "title": "16. Contexto e interpretação — estrutura e cenário poético régio",
       "body": "O salmo pode ser dividido em **vv. 1–2**, louvor ao Senhor protetor e preparador do rei; **vv. 3–4**, reflexão sobre fragilidade humana; **vv. 5–8**, pedido de socorro descrito em linguagem de teofania; **vv. 9–11**, canção e repetição da busca de livramento; **vv. 12–15**, ideal de bem-estar comunitário. A inscrição tradicional e a referência a Davi situam o poema no horizonte régio, mas não datam uma batalha. É necessário distinguir verbos de louvor, pedidos ainda abertos e imagens de prosperidade desejada. Essa estrutura impede extrair o último verso como promessa isolada de riqueza.",
       "kind": "context",
       "scriptureRefs": [
@@ -323,7 +323,7 @@ export const psalm144Study: StudyContent = {
     },
     {
       "id": "topico-7",
-      "title": "22. Oficina do pregador — Do poder à paz comunitária",
+      "title": "22. Oficina do pregador e oração — Do poder à paz comunitária",
       "body": "**Tema:** Dependência do Senhor e bem comum. **Proposição:** o rei limitado reconhece a proteção do Senhor e deseja vida estável para sua comunidade. **I (vv. 1–4):** proteção divina e fragilidade humana, sem glorificar militarismo. **II (vv. 5–11):** pedidos de livramento em imagens teofânicas, sem xenofobia. **III (vv. 12–15):** prosperidade comunitária como desejo de segurança e sustento, não contrato de riqueza. **Cristo:** liderança servidora em Marcos 10 e ética do inimigo em Mateus 5. **Alertas:** não impor papéis de gênero com base nas metáforas. **Oração:** Senhor, dá-nos humildade e trabalha por paz, alimento e proteção das pessoas. Amém.",
       "kind": "pastoral",
       "scriptureRefs": [

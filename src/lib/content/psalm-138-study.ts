@@ -258,6 +258,17 @@ export const psalm138Study: StudyContent = {
       ],
       "confidence": "high",
       "collapsible": true
+    },
+    {
+      "id": "contexto-louvor",
+      "title": "17. Contexto histórico e literário — da gratidão individual aos reis da terra",
+      "body": "O cântico distingue a adoração pessoal da expectativa de que reis de toda a terra reconheçam a glória do Senhor. A associação tradicional a Davi não permite datar a oração nem inventar uma audiência régia. A reverência dirigida ao santuário situa a fala no ambiente cultual de Israel, enquanto a referência aos governantes amplia o horizonte poético. A confiança lembrada no verso 3 é experiência narrada pelo orante, não uma promessa cronológica dirigida a todos. O verso 6 dá critério moral ao tema do poder: o Deus elevado considera pessoas humildes. Por isso, a exegese não deve reduzir o texto à glorificação de reis. O verso final conserva uma súplica, mostrando que gratidão e necessidade coexistem.",
+      "kind": "context",
+      "scriptureRefs": [
+        "Salmos 138:1-8"
+      ],
+      "confidence": "high",
+      "collapsible": true
     }
   ]
 };
