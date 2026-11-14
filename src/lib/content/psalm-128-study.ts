@@ -117,8 +117,19 @@ export const psalm128Study: StudyContent = {
     },
     {
       "id": "versiculo-4",
-      "title": "4. Versículo 4 — Filhos como brotos de oliveira ao redor da mesa",
+      "title": "4. Versículo 3 — Filhos como brotos de oliveira ao redor da mesa",
       "body": "A segunda imagem do verso 3 aproxima os filhos de brotos de oliveira, planta associada à continuidade e ao futuro. O entorno da mesa sugere convivência, alimento e pertencimento no quadro familiar celebrado. Essa figura não garante que todas as relações entre pais e filhos serão pacíficas nem que a presença de crianças prova aprovação divina superior à de outros lares. A imagem é poética, não descrição de uma mesa que conheçamos historicamente. A aplicação pode incentivar cuidado com crianças, partilha de refeições e transmissão da fé, mas precisa evitar censurar quem não tem filhos ou os perdeu. O verso pertence à apresentação de um ideal de bem-estar, não a uma lista de requisitos para ter valor perante Deus.",
+      "kind": "exegesis",
+      "scriptureRefs": [
+        "Salmos 128:3"
+      ],
+      "confidence": "high",
+      "collapsible": true
+    },
+    {
+      "id": "versiculo-5",
+      "title": "5. Versículo 4 — A bênção vinculada ao temor, não à superioridade social",
+      "body": "O verso 4 retoma o início do cântico e reafirma que o temor do Senhor é o centro da vida bem-aventurada que se descreve. A repetição é estrutural: impede reduzir os frutos do trabalho e as imagens familiares a objetivos autossuficientes, desconectados de Deus. Todavia, não significa que toda pessoa com família grande seja mais fiel, que todo casamento sem filhos seja uma desobediência ou que os sofrimentos sejam castigos verificáveis pelo leitor. A bem-aventurança pertence a um gênero de sabedoria e precisa ser cotejada com passagens que descrevem justos em sofrimento. É uma convocação à reverência e à vida íntegra, não uma ferramenta para julgar a prosperidade dos outros.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Salmos 128:4"
@@ -127,9 +138,9 @@ export const psalm128Study: StudyContent = {
       "collapsible": true
     },
     {
-      "id": "versiculo-5",
-      "title": "5. Versículo 5 — A bênção vinculada ao temor, não à superioridade social",
-      "body": "O verso 4 retoma o início do cântico e reafirma que o temor do Senhor é o centro da vida bem-aventurada que se descreve. A repetição é estrutural: impede reduzir os frutos do trabalho e as imagens familiares a objetivos autossuficientes, desconectados de Deus. Todavia, não significa que toda pessoa com família grande seja mais fiel, que todo casamento sem filhos seja uma desobediência ou que os sofrimentos sejam castigos verificáveis pelo leitor. A bem-aventurança pertence a um gênero de sabedoria e precisa ser cotejada com passagens que descrevem justos em sofrimento. É uma convocação à reverência e à vida íntegra, não uma ferramenta para julgar a prosperidade dos outros.",
+      "id": "versiculo-6",
+      "title": "6. Versículo 5 — Bênção desde Sião e bem de Jerusalém",
+      "body": "O verso 5 desloca o foco do lar para Sião e Jerusalém. O bem da família não é isolado do bem da comunidade que adora o Senhor. A referência a Sião se relaciona com a centralidade de Jerusalém na vida de Israel, mas não revela uma cerimônia histórica específica. O voto de contemplar o bem da cidade faz o leitor perceber que estabilidade familiar e paz pública se encontram. É inadequado usar esse verso para declarar que toda escolha política atual é respaldada por Deus ou para reduzir a bênção a turismo na cidade. A aplicação pode incluir oração pelo bem comum, justiça e proteção dos vulneráveis, distinguindo a Sião histórica das comunidades cristãs contemporâneas.",
       "kind": "exegesis",
       "scriptureRefs": [
         "Salmos 128:5"
@@ -138,23 +149,12 @@ export const psalm128Study: StudyContent = {
       "collapsible": true
     },
     {
-      "id": "versiculo-6",
-      "title": "6. Versículo 6 — Bênção desde Sião e bem de Jerusalém",
-      "body": "O verso 5 desloca o foco do lar para Sião e Jerusalém. O bem da família não é isolado do bem da comunidade que adora o Senhor. A referência a Sião se relaciona com a centralidade de Jerusalém na vida de Israel, mas não revela uma cerimônia histórica específica. O voto de contemplar o bem da cidade faz o leitor perceber que estabilidade familiar e paz pública se encontram. É inadequado usar esse verso para declarar que toda escolha política atual é respaldada por Deus ou para reduzir a bênção a turismo na cidade. A aplicação pode incluir oração pelo bem comum, justiça e proteção dos vulneráveis, distinguindo a Sião histórica das comunidades cristãs contemporâneas.",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Salmos 128:6"
-      ],
-      "confidence": "high",
-      "collapsible": true
-    },
-    {
       "id": "versiculo-7",
-      "title": "7. Versículo 7 — Netos, continuidade geracional e paz sobre Israel",
+      "title": "7. Versículo 6 — Netos, continuidade geracional e paz sobre Israel",
       "body": "O último verso deseja que o destinatário viva para ver os filhos de seus filhos e conclui com paz sobre Israel. Na sociedade do cântico, a longevidade e a continuidade da família eram sinais desejáveis de bem-estar. Essa linguagem não garante a todos vida longa, netos ou relações familiares sem perdas. Pessoas que morrem cedo ou não se tornam avós não devem ser tratadas como menos amadas por Deus. A paz final amplia a esperança para toda a comunidade de Israel, reforçando que a bênção do lar é inseparável do bem coletivo. Uma aplicação cristã pode valorizar relações entre gerações e compromisso com justiça, mas não deve prometer resultados biológicos ou históricos certos.",
       "kind": "exegesis",
       "scriptureRefs": [
-        "Salmos 128:7"
+        "Salmos 128:6"
       ],
       "confidence": "high",
       "collapsible": true
