@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
 
 const YOUTUBE_VIDEO_ID = "HR9coYxhYKw";
@@ -19,6 +19,23 @@ export function GlobalBackgroundMusic() {
   const playerRef = useRef<HTMLIFrameElement>(null);
   const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    const onYouTubeMessage = (event: MessageEvent) => {
+      if (event.origin !== "https://www.youtube-nocookie.com" ||
+          event.source !== playerRef.current?.contentWindow) return;
+      try {
+        const message = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
+        if (message?.event !== "onStateChange") return;
+        if (message.info === 1) setIsPlaying(true);
+        if (message.info === 0 || message.info === 2) setIsPlaying(false);
+      } catch {
+        // Ignore non-player messages.
+      }
+    };
+    window.addEventListener("message", onYouTubeMessage);
+    return () => window.removeEventListener("message", onYouTubeMessage);
+  }, []);
 
   function togglePlayback() {
     const player = playerRef.current?.contentWindow;
