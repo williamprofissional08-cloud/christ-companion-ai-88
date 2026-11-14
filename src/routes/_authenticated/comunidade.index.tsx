@@ -49,6 +49,7 @@ function ComunidadePage() {
   const [admin, setAdmin] = useState(false);
   const [posts, setPosts] = useState<Post[]>([]);
   const [pendingPosts, setPendingPosts] = useState<Post[]>([]);
+  const [promoPosts, setPromoPosts] = useState<Post[]>([]);
   const [resources, setResources] = useState<Resource[]>([]);
   const [pending, setPending] = useState<Resource[]>([]);
   const [profiles, setProfiles] = useState<Record<string, Profile>>({});
@@ -121,7 +122,11 @@ function ComunidadePage() {
       ]);
       setPending((pendingResources || []) as Resource[]);
       setPendingPosts((postsAwaitingReview || []) as Post[]);
-    } else { setPending([]); setPendingPosts([]); }
+      const { data: authorizedMedia } = await db.from("community_posts")
+        .select("*").eq("status","published").eq("promo_consent",true)
+        .not("media_path","is",null).order("created_at",{ascending:false}).limit(50);
+      setPromoPosts((authorizedMedia ?? []) as Post[]);
+    } else { setPending([]); setPendingPosts([]);setPromoPosts([]); }
     setLoading(false);
   }, []);
 
@@ -257,6 +262,18 @@ function ComunidadePage() {
     const { error } = await db.from("community_resources").update({ status, moderation_note: notes[resource.id]?.trim() || null, reviewed_by: user.id, reviewed_at: new Date().toISOString() }).eq("id", resource.id);
     if (error) { toast.error("Não foi possível concluir a análise."); return; }
     toast.success(status === "approved" ? "Material aprovado e disponível na biblioteca." : "Material recusado."); await reload(user);
+  }
+
+  async function openPromoMedia(post: Post) {
+    if (!admin || !post.promo_consent || !post.media_path) return;
+    const { data, error } = await db.storage.from(COMMUNITY_MEDIA_BUCKET)
+      .createSignedUrl(post.media_path, 90, { download:true });
+    if(error || !data?.signedUrl){ toast.error("Não foi possível baixar esta mídia.");return; }
+    const link=document.createElement("a");
+    link.href=data.signedUrl;
+    link.target="_blank";
+    link.rel="noopener noreferrer";
+    link.click();
   }
 
   async function download(resource: Resource) {
@@ -827,6 +844,28 @@ function ComunidadePage() {
                       </Button>
                     </Card>
                   ))
+                )}
+                {admin && (
+                  <section className="space-y-3 rounded-2xl border border-blue-100 bg-blue-50/60 p-4 dark:bg-slate-900">
+                    <h3 className="flex items-center gap-2 font-semibold text-blue-900 dark:text-blue-200">
+                      <Download className="size-5" /> Conteúdos autorizados para divulgação
+                    </h3>
+                    <p className="text-xs text-slate-600 dark:text-slate-300">
+                      Somente fotos e vídeos publicados cujos autores autorizaram avaliação para divulgação.
+                      A seleção e o download são feitos pela equipe. Envio automático por e-mail ainda depende de um serviço configurado.
+                    </p>
+                    {promoPosts.length===0 ? <p className="text-sm text-slate-500">Nenhum conteúdo autorizado até agora.</p>
+                      : promoPosts.map(post=>(
+                        <div key={post.id} className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-blue-100 bg-white p-3 dark:bg-card">
+                          <div className="min-w-0"><strong className="block truncate text-sm">{post.title}</strong>
+                            <span className="text-xs text-slate-500">{post.media_kind==="video"?"Vídeo":"Foto"} · {age(post.created_at)}</span>
+                          </div>
+                          <Button size="sm" variant="outline" onClick={()=>void openPromoMedia(post)}>
+                            <Download className="mr-2 size-4" /> Baixar
+                          </Button>
+                        </div>
+                      ))}
+                  </section>
                 )}
                 {admin && (
                   <section className="space-y-3 border-t border-border pt-5">
