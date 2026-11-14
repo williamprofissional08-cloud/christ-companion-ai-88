@@ -151,13 +151,16 @@ export function AppShell({
                 </p>
                 {profileView === "perfil" && <p className="truncate text-xs text-blue-100">Estudo · Discipulado · Comunhão</p>}
               </div>
-              {profileView === "perfil" ? (
-                <button type="button" onClick={onProfileAction}
-                  aria-label="Abrir configurações"
-                  className="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                  <Settings className="size-5" aria-hidden="true" />
-                </button>
-              ) : <span aria-hidden="true" className="size-10 shrink-0" />}
+              <div className="flex shrink-0 items-center gap-1">
+                <MusicControlButton className="inline-flex size-9 border-white/30 bg-white/15 text-white hover:bg-white/25" />
+                {profileView === "perfil" ? (
+                  <button type="button" onClick={onProfileAction}
+                    aria-label="Abrir configurações"
+                    className="flex size-9 shrink-0 items-center justify-center rounded-full hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                    <Settings className="size-5" aria-hidden="true" />
+                  </button>
+                ) : <span aria-hidden="true" className="size-9 shrink-0" />}
+              </div>
             </div>
           ) : (
           <div className={`mx-auto flex min-h-14 w-full max-w-screen-2xl items-center gap-1.5 py-1.5 sm:gap-3 ${homeHeader ? "pl-2 pr-2 sm:pl-3 sm:pr-3 lg:px-5" : "pl-3 pr-16 sm:pl-5 sm:pr-16 lg:pl-8 lg:pr-16"}`}>
