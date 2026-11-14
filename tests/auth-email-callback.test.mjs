@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { finishAuthCallback } from "../src/lib/auth-callback-flow.ts";
+import { getAuthEmailRedirectUrl } from "../src/lib/auth-redirect.ts";
 
 function client(overrides = {}) {
   const calls = [];
@@ -74,4 +75,9 @@ test("locally stored sessions require a valid user response from the server", as
     getUser: async () => ({ data: { user: null }, error: { message: "invalid JWT" } }),
   });
   await assert.rejects(finishAuthCallback(auth, "", ""), { message: "invalid JWT" });
+});
+
+test("email links use the published URL, not a temporary preview host", () => {
+  assert.equal(getAuthEmailRedirectUrl("/auth-callback"), "https://christ-companion-ai-88.lovable.app/auth-callback");
+  assert.equal(getAuthEmailRedirectUrl("/reset-password"), "https://christ-companion-ai-88.lovable.app/reset-password");
 });
