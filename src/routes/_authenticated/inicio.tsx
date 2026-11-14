@@ -83,7 +83,7 @@ function Inicio() {
           <h2 className="flex items-center gap-2 text-sm font-semibold"><CalendarDays className="size-5" aria-hidden="true" /> Devocional de Hoje</h2>
           {devotional.isLoading ? <Skeleton className="mt-5 h-16 w-2/3" /> : (
             <>
-              <p className="mt-4 max-w-lg font-serif text-2xl font-bold leading-tight sm:text-3xl">{d?.title || "Medite na Palavra de Deus"}</p>
+              <p className="mt-4 max-w-lg font-serif text-2xl font-bold leading-tight sm:text-3xl">{"Medite na Palavra de Deus"}</p>
               <p className="mt-2 text-sm">{d?.verse.reference || "Salmos 119:105"}</p>
             </>
           )}
