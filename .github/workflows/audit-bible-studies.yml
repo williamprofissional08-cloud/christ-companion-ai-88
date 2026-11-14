@@ -1,0 +1,49 @@
+name: Audit Bible study coverage
+
+on:
+  pull_request:
+    paths:
+      - "src/lib/content/**"
+      - "scripts/audit-bible-studies.py"
+      - "scripts/generate-bible-study-batch.py"
+      - "docs/PADRAO-EDITORIAL-ESTUDOS-BIBLICOS.md"
+      - ".github/workflows/audit-bible-studies.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/lib/content/**"
+      - "scripts/audit-bible-studies.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Audit 66 books and 1189 chapters without changing content
+        run: |
+          python3 -m py_compile scripts/audit-bible-studies.py
+          python3 scripts/audit-bible-studies.py \
+            --fail-on-structural \
+            --output "$RUNNER_TEMP/bible-study-audit.md" \
+            --json-output "$RUNNER_TEMP/bible-study-audit.json"
+          cat "$RUNNER_TEMP/bible-study-audit.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish editorial triage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: bible-study-coverage-report
+          path: |
+            ${{ runner.temp }}/bible-study-audit.md
+            ${{ runner.temp }}/bible-study-audit.json
+          retention-days: 30
