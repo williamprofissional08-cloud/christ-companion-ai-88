@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "slug": "enoque-historia-contexto-caminho-com-deus",
+  "title": "Enoque: a história, o contexto e o caminho com Deus",
+  "subtitle": "Uma investigação bíblica sobre fé, tradição e os limites do que sabemos",
+  "description": "O que a Bíblia realmente revela sobre Enoque? Um percurso de oito aulas por Gênesis 4–5, Hebreus 11 e Judas, com leitura passo a passo, investigação das genealogias, estudo da expressão 'andou com Deus', comparação criteriosa com tradições antigas e aplicações atuais sem biografias inventadas. Inclui glossário, linha do tempo com datas incertas, quadro de evidências, dois planos de sete dias e avaliação comentada. Linguagem acessível, conteúdo aprofundado e respeito às diferentes tradições cristãs.",
+  "welcome": "Bem-vindo à Escola Bíblica do Caminho Divino! Neste curso, investigaremos com cuidado quem é Enoque, onde sua história aparece e o que os autores bíblicos realmente dizem. Você não precisa conhecer hebraico ou história antiga: os termos serão explicados à medida que surgirem. Tenha uma Bíblia por perto e prepare-se para fazer perguntas. Nossa regra será sempre distinguir aquilo que está escrito, o que pode ser interpretado, o que pertence a uma tradição antiga e como podemos aplicar a Palavra hoje. O objetivo não é inventar detalhes do passado, mas compreender melhor o texto e fortalecer uma fé consciente, voltada para Cristo.",
+  "duration_minutes": 210,
+  "lessons_count": 8,
+  "level": "intermediario",
+  "tier": "free",
+  "objectives": [
+    "Distinguir os dois Enoques em Gênesis e entender as genealogias.",
+    "Analisar Gênesis 5:21–24 com atenção literária e linguística.",
+    "Entender a leitura de Enoque em Hebreus 11:5–6 e Judas 14–15.",
+    "Identificar tradições extrabíblicas sem confundi-las com o texto bíblico.",
+    "Diferenciar fatos, interpretações, hipóteses e aplicações atuais.",
+    "Formular uma caminhada de fé contemporânea com referência bíblica e centralidade em Cristo."
+  ],
+  "recommended_path": "Uma aula por dia ou por semana, com leitura da passagem, análise guiada, perguntas e tarefa. O tempo inclui leitura e reflexão: 25 minutos nas aulas 1–5 e 7; 30 minutos nas aulas 6 e 8.",
+  "alternate_titles": [
+    {
+      "title": "Enoque: a história, o contexto e o caminho com Deus",
+      "subtitle": "Investigando o testemunho bíblico sem acrescentar o que não sabemos."
+    },
+    {
+      "title": "Enoque à luz das Escrituras",
+      "subtitle": "Gênesis, Hebreus, Judas e o cuidado com as interpretações."
+    },
+    {
+      "title": "Andou com Deus: investigando Enoque",
+      "subtitle": "Fé, genealogias, tradição e aplicações para hoje."
+    },
+    {
+      "title": "Enoque: entre o texto e a tradição",
+      "subtitle": "Uma jornada de estudo bíblico com contexto e discernimento."
+    }
+  ],
+  "biblical_primary": [
+    "Gênesis 4:17",
+    "Gênesis 5:18–24",
+    "Hebreus 11:5–6",
+    "Judas 14–15"
+  ],
+  "academic_source": {
+    "author": "Filipe Guimarães",
+    "title": "A influência narratológica enoqueana no desenvolvimento epistemológico do cristianismo primitivo",
+    "publisher": "UNIFAP",
+    "year": 2018,
+    "source_type": "pesquisa acadêmica complementar; não é Escritura"
+  },
+  "editorial_rules": [
+    "Não inventar rituais, orações, horários, roupas, aparições, viagens ou conversas de Enoque.",
+    "Diferenciar afirmação textual, inferência, tradição extrabíblica e aplicação contemporânea.",
+    "Não sugerir que 1 Enoque seja texto de Gênesis nem pressupor cânon cristão uniforme.",
+    "Não reproduzir extensamente traduções bíblicas protegidas nem a obra acadêmica.",
+    "Não oferecer promessas de riqueza, proteção ou resultados garantidos.",
+    "Deixar claro quando uma datação ou interpretação é discutida."
+  ]
+}
