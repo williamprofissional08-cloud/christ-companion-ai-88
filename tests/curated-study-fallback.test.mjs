@@ -14,8 +14,10 @@ test("Genesis 1 is registered and contains a structured, didactic study", () => 
   assert.match(genesis1Source, /title: "2\. Contexto histórico/);
   assert.match(genesis1Source, /title: "4\. Tópico 1/);
   assert.match(genesis1Source, /title: "12\. Tópico 9/);
-  assert.match(genesis1Source, /title: "17\. Exercícios/);
-  assert.match(genesis1Source, /title: "18\. Oficina do pregador/);
+  assert.match(genesis1Source, /title: "21\. Exercícios/);
+  assert.match(genesis1Source, /title: "22\. Oficina do pregador/);
+  const numberedTitles = [...genesis1Source.matchAll(/title: "(\d+)\./g)].map((match) => Number(match[1]));
+  assert.equal(new Set(numberedTitles).size, numberedTitles.length, "Genesis 1 section numbers must not repeat");
   assert.equal((genesis1Source.match(/id: "topico-/g) ?? []).length, 9);
   assert.match(genesis1Source, /id: "leitura-biblica-completa"/);
   assert.match(genesis1Source, /id: "palavras-chave"/);
@@ -66,4 +68,38 @@ test("reviewed local chapter studies cannot be hidden by archived managed catalo
   const catalogSource = readFileSync(new URL("../src/lib/content/managed-study-catalog.ts", import.meta.url), "utf8");
   assert.match(catalogSource, /if \(!managed \|\| isCurated\) return local/);
   assert.match(catalogSource, /if \(managed\.status === "archived"\) return undefined/);
+});
+
+
+test("Psalm 121 is integrated and passes the deep-study structural baseline", () => {
+  assert.match(curatedSource, /"biblia-salmos-cap-121": psalm121Study/);
+  assert.match(curatedSource, /from "\.\/psalm-121-study"/);
+  const source = readFileSync(new URL("../src/lib/content/psalm-121-study.ts", import.meta.url), "utf8");
+  const start = source.indexOf(" = {\n");
+  const end = source.lastIndexOf(";\n");
+  assert.ok(start >= 0 && end > start, "The study should be stored as a static JSON-like object");
+  const study = JSON.parse(source.slice(start + 3, end));
+  assert.equal(study.version, 5);
+  assert.equal(study.depth, "deep");
+  assert.ok(study.sections.length >= 26);
+  assert.ok(study.keyPoints.length >= 8);
+  assert.ok(study.crossReferences.length >= 12);
+  assert.ok(study.questions.length >= 15);
+  for (const [field, minimum] of Object.entries({
+    intro: 1200,
+    historicalContext: 900,
+    application: 1000,
+    conclusion: 500,
+    prayer: 100,
+  })) {
+    assert.ok(study[field].length >= minimum, field + " must include sufficient original teaching");
+  }
+  const ids = study.sections.map((section) => section.id);
+  assert.equal(new Set(ids).size, ids.length);
+  assert.ok(study.sections.every((section) => section.body.length >= 500));
+  const reading = study.sections.find((section) => section.id === "leitura-biblica");
+  assert.ok(reading);
+  for (let verse = 1; verse <= 8; verse += 1) {
+    assert.ok(reading.body.includes("**" + verse + "**"), "Psalm 121 verse " + verse + " must be included");
+  }
 });

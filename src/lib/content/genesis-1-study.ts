@@ -628,7 +628,7 @@ Tiago critica o uso da língua para louvar a Deus e amaldiçoar pessoas feitas �
     },
     {
       id: "debate-dias",
-      title: "13. Uma pergunta importante: os dias da criação eram dias de 24 horas?",
+      title: "17. Uma pergunta importante: os dias da criação eram dias de 24 horas?",
       kind: "theology",
       confidence: "debated",
       scriptureRefs: ["Gênesis 1:5-31", "Gênesis 2:4", "Êxodo 20:8-11"],
@@ -646,7 +646,7 @@ Este estudo não apresenta uma dessas posições como se não houvesse debate en
     },
     {
       id: "cristo",
-      title: "14. Gênesis 1 e Jesus Cristo — A criação no restante da Bíblia",
+      title: "18. Gênesis 1 e Jesus Cristo — A criação no restante da Bíblia",
       kind: "theology",
       confidence: "high",
       scriptureRefs: ["João 1:1-3", "Colossenses 1:15-17", "Hebreus 1:1-3"],
@@ -666,7 +666,7 @@ Essa conexão é fundamentada em passagens explícitas do Novo Testamento. Não 
     },
     {
       id: "aplicacoes",
-      title: "15. O que Gênesis 1 ensina para nossa vida?",
+      title: "19. O que Gênesis 1 ensina para nossa vida?",
       kind: "application",
       confidence: "probable",
       scriptureRefs: ["Gênesis 1:26-28", "Gênesis 2:15", "Tiago 3:9"],
@@ -682,7 +682,7 @@ Essa conexão é fundamentada em passagens explícitas do Novo Testamento. Não 
     },
     {
       id: "resumo",
-      title: "16. Resumo — O que precisamos guardar deste capítulo",
+      title: "20. Resumo — O que precisamos guardar deste capítulo",
       kind: "summary",
       confidence: "high",
       body: `- **Quem criou?** Deus.
@@ -696,7 +696,7 @@ Essa conexão é fundamentada em passagens explícitas do Novo Testamento. Não 
     },
     {
       id: "exercicios",
-      title: "17. Exercícios — Vamos conferir se você compreendeu?",
+      title: "21. Exercícios — Vamos conferir se você compreendeu?",
       kind: "reflection",
       confidence: "high",
       scriptureRefs: ["Gênesis 1:1-31"],
@@ -724,7 +724,7 @@ Essa conexão é fundamentada em passagens explícitas do Novo Testamento. Não 
     },
     {
       id: "oficina-pregador",
-      title: "18. Oficina do pregador — Como ensinar Gênesis 1 de maneira clara",
+      title: "22. Oficina do pregador — Como ensinar Gênesis 1 de maneira clara",
       kind: "application",
       confidence: "probable",
       scriptureRefs: ["Gênesis 1:1-31", "João 1:1-3"],
@@ -748,7 +748,7 @@ Essa conexão é fundamentada em passagens explícitas do Novo Testamento. Não 
     },
     {
       id: "oracao-final",
-      title: "19. Oração final",
+      title: "23. Oração final",
       kind: "summary",
       confidence: "high",
       body: `Senhor Deus, Criador dos céus e da terra, obrigado porque tua Palavra nos ensina que tudo está debaixo da tua autoridade. Ajuda-me a compreender a Bíblia com clareza, respeitar cada pessoa como tua imagem e cuidar da criação com responsabilidade. Que o conhecimento deste capítulo me leve a te adorar e a conhecer melhor Jesus Cristo. Amém.`

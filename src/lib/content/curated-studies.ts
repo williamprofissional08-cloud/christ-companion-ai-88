@@ -1,3 +1,41 @@
+import { ecclesiastes7Study } from "./ecclesiastes-7-study";
+import { proverbs28Study } from "./proverbs-28-study";
+import { proverbs29Study } from "./proverbs-29-study";
+import { proverbs30Study } from "./proverbs-30-study";
+import { proverbs31Study } from "./proverbs-31-study";
+import { ecclesiastes1Study } from "./ecclesiastes-1-study";
+import { ecclesiastes2Study } from "./ecclesiastes-2-study";
+import { ecclesiastes3Study } from "./ecclesiastes-3-study";
+import { ecclesiastes4Study } from "./ecclesiastes-4-study";
+import { ecclesiastes5Study } from "./ecclesiastes-5-study";
+import { ecclesiastes6Study } from "./ecclesiastes-6-study";
+import { proverbs27Study } from "./proverbs-27-study";
+import { proverbs26Study } from "./proverbs-26-study";
+import { proverbs25Study } from "./proverbs-25-study";
+import { proverbs24Study } from "./proverbs-24-study";
+import { proverbs23Study } from "./proverbs-23-study";
+import { proverbs22Study } from "./proverbs-22-study";
+import { proverbs21Study } from "./proverbs-21-study";
+import { proverbs20Study } from "./proverbs-20-study";
+import { proverbs19Study } from "./proverbs-19-study";
+import { proverbs18Study } from "./proverbs-18-study";
+import { proverbs10Study } from "./proverbs-10-study";
+import { proverbs9Study } from "./proverbs-9-study";
+import { proverbs11Study } from "./proverbs-11-study";
+import { proverbs12Study } from "./proverbs-12-study";
+import { proverbs13Study } from "./proverbs-13-study";
+import { proverbs14Study } from "./proverbs-14-study";
+import { proverbs15Study } from "./proverbs-15-study";
+import { proverbs16Study } from "./proverbs-16-study";
+import { proverbs17Study } from "./proverbs-17-study";
+import { proverbs8Study } from "./proverbs-8-study";
+import { proverbs7Study } from "./proverbs-7-study";
+import { proverbs6Study } from "./proverbs-6-study";
+import { proverbs5Study } from "./proverbs-5-study";
+import { proverbs4Study } from "./proverbs-4-study";
+import { proverbs3Study } from "./proverbs-3-study";
+import { proverbs1Study } from "./proverbs-1-study";
+import { proverbs2Study } from "./proverbs-2-study";
 import { mark4Study } from "./mark-4-study";
 import type { StudyContent } from "../types";
 import { psalm1Study } from "./psalm-1-study";
@@ -120,6 +158,36 @@ import { psalm117Study } from "./psalm-117-study";
 import { psalm118Study } from "./psalm-118-study";
 import { psalm119Study } from "./psalm-119-study";
 import { psalm120Study } from "./psalm-120-study";
+import { psalm121Study } from "./psalm-121-study";
+import { psalm122Study } from "./psalm-122-study";
+import { psalm123Study } from "./psalm-123-study";
+import { psalm124Study } from "./psalm-124-study";
+import { psalm125Study } from "./psalm-125-study";
+import { psalm126Study } from "./psalm-126-study";
+import { psalm127Study } from "./psalm-127-study";
+import { psalm128Study } from "./psalm-128-study";
+import { psalm129Study } from "./psalm-129-study";
+import { psalm130Study } from "./psalm-130-study";
+import { psalm131Study } from "./psalm-131-study";
+import { psalm132Study } from "./psalm-132-study";
+import { psalm133Study } from "./psalm-133-study";
+import { psalm134Study } from "./psalm-134-study";
+import { psalm135Study } from "./psalm-135-study";
+import { psalm136Study } from "./psalm-136-study";
+import { psalm137Study } from "./psalm-137-study";
+import { psalm138Study } from "./psalm-138-study";
+import { psalm139Study } from "./psalm-139-study";
+import { psalm140Study } from "./psalm-140-study";
+import { psalm141Study } from "./psalm-141-study";
+import { psalm142Study } from "./psalm-142-study";
+import { psalm143Study } from "./psalm-143-study";
+import { psalm144Study } from "./psalm-144-study";
+import { psalm145Study } from "./psalm-145-study";
+import { psalm146Study } from "./psalm-146-study";
+import { psalm147Study } from "./psalm-147-study";
+import { psalm148Study } from "./psalm-148-study";
+import { psalm149Study } from "./psalm-149-study";
+import { psalm150Study } from "./psalm-150-study";
 import { job31Study } from "./job-31-study";
 import { job32Study } from "./job-32-study";
 import { job33Study } from "./job-33-study";
@@ -608,6 +676,17 @@ import { joshua24Study } from "./joshua-24-study";
  * Rótulos: [TEXTO BÍBLICO] [CONTEXTO] [INFERÊNCIA] [INTERPRETAÇÃO] [ESPECULAÇÃO].
  */
 export const CURATED_STUDIES: Record<string, StudyContent> = {
+  "biblia-proverbios-cap-28": proverbs28Study,
+  "biblia-proverbios-cap-29": proverbs29Study,
+  "biblia-proverbios-cap-30": proverbs30Study,
+  "biblia-proverbios-cap-31": proverbs31Study,
+  "biblia-eclesiastes-cap-1": ecclesiastes1Study,
+  "biblia-eclesiastes-cap-2": ecclesiastes2Study,
+  "biblia-eclesiastes-cap-3": ecclesiastes3Study,
+  "biblia-eclesiastes-cap-4": ecclesiastes4Study,
+  "biblia-eclesiastes-cap-5": ecclesiastes5Study,
+  "biblia-eclesiastes-cap-6": ecclesiastes6Study,
+  "biblia-eclesiastes-cap-7": ecclesiastes7Study,
   "biblia-marcos-cap-4": mark4Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
@@ -1207,4 +1286,61 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-salmos-cap-118": psalm118Study,
   "biblia-salmos-cap-119": psalm119Study,
   "biblia-salmos-cap-120": psalm120Study,
+  "biblia-salmos-cap-121": psalm121Study,
+  "biblia-salmos-cap-122": psalm122Study,
+  "biblia-salmos-cap-123": psalm123Study,
+  "biblia-salmos-cap-124": psalm124Study,
+  "biblia-salmos-cap-125": psalm125Study,
+  "biblia-salmos-cap-126": psalm126Study,
+  "biblia-salmos-cap-127": psalm127Study,
+  "biblia-salmos-cap-128": psalm128Study,
+  "biblia-salmos-cap-129": psalm129Study,
+  "biblia-salmos-cap-130": psalm130Study,
+  "biblia-salmos-cap-131": psalm131Study,
+  "biblia-salmos-cap-132": psalm132Study,
+  "biblia-salmos-cap-133": psalm133Study,
+  "biblia-salmos-cap-134": psalm134Study,
+  "biblia-salmos-cap-135": psalm135Study,
+  "biblia-salmos-cap-136": psalm136Study,
+  "biblia-salmos-cap-137": psalm137Study,
+  "biblia-salmos-cap-138": psalm138Study,
+  "biblia-salmos-cap-139": psalm139Study,
+  "biblia-salmos-cap-140": psalm140Study,
+  "biblia-salmos-cap-141": psalm141Study,
+  "biblia-salmos-cap-142": psalm142Study,
+  "biblia-salmos-cap-143": psalm143Study,
+  "biblia-salmos-cap-144": psalm144Study,
+  "biblia-salmos-cap-145": psalm145Study,
+  "biblia-salmos-cap-146": psalm146Study,
+  "biblia-salmos-cap-147": psalm147Study,
+  "biblia-salmos-cap-148": psalm148Study,
+  "biblia-salmos-cap-149": psalm149Study,
+  "biblia-salmos-cap-150": psalm150Study,
+  "biblia-proverbios-cap-1": proverbs1Study,
+  "biblia-proverbios-cap-2": proverbs2Study,
+  "biblia-proverbios-cap-3": proverbs3Study,
+  "biblia-proverbios-cap-4": proverbs4Study,
+  "biblia-proverbios-cap-5": proverbs5Study,
+  "biblia-proverbios-cap-6": proverbs6Study,
+  "biblia-proverbios-cap-7": proverbs7Study,
+  "biblia-proverbios-cap-8": proverbs8Study,
+  "biblia-proverbios-cap-9": proverbs9Study,
+  "biblia-proverbios-cap-11": proverbs11Study,
+  "biblia-proverbios-cap-12": proverbs12Study,
+  "biblia-proverbios-cap-13": proverbs13Study,
+  "biblia-proverbios-cap-14": proverbs14Study,
+  "biblia-proverbios-cap-15": proverbs15Study,
+  "biblia-proverbios-cap-16": proverbs16Study,
+  "biblia-proverbios-cap-17": proverbs17Study,
+  "biblia-proverbios-cap-18": proverbs18Study,
+  "biblia-proverbios-cap-19": proverbs19Study,
+  "biblia-proverbios-cap-20": proverbs20Study,
+  "biblia-proverbios-cap-21": proverbs21Study,
+  "biblia-proverbios-cap-22": proverbs22Study,
+  "biblia-proverbios-cap-23": proverbs23Study,
+  "biblia-proverbios-cap-24": proverbs24Study,
+  "biblia-proverbios-cap-25": proverbs25Study,
+  "biblia-proverbios-cap-26": proverbs26Study,
+  "biblia-proverbios-cap-27": proverbs27Study,
+  "biblia-proverbios-cap-10": proverbs10Study,
 };

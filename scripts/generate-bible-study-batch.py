@@ -27,7 +27,7 @@ PREFIX = {
     "2-samuel": "2-samuel", "1-reis": "1-kings", "2-reis": "2-kings",
     "1-cronicas": "1-chronicles", "2-cronicas": "2-chronicles",
     "esdras": "ezra", "neemias": "nehemiah", "ester": "esther",
-    "jo": "job", "salmos": "psalms", "proverbios": "proverbs",
+    "jo": "job", "salmos": "psalm", "proverbios": "proverbs",
     "eclesiastes": "ecclesiastes", "cantico-dos-canticos": "song-of-solomon",
     "isaias": "isaiah", "jeremias": "jeremiah", "lamentacoes": "lamentations",
     "ezequiel": "ezekiel", "daniel": "daniel", "oseias": "hosea",
@@ -240,7 +240,7 @@ def validate(data):
             raise ValueError("Cada seção precisa conter referências bíblicas específicas e não vazias.")
         if len(section["body"]) < 500 or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", section["id"]) or section["id"] in ids:
             raise ValueError("Seção superficial (mínimo 500 caracteres) ou ID inválido/duplicado.")
-        if section.get("kind") not in ("scripture", "introduction", "context", "exegesis", "theology", "pastoral", "application", "method", "glossary", "exercise", "analysis", "meditation", "reference"):
+        if section.get("kind") not in ("scripture", "introduction", "context", "exegesis", "theology", "pastoral", "application", "method", "glossary", "exercise", "analysis", "meditation", "reference", "summary", "prayer", "sermon"):
             raise ValueError("Tipo de seção inválido ou não reconhecido.")
         if section["confidence"] not in ("high", "probable", "debated", "uncertain"):
             raise ValueError("Nível de confiança inválido.")
