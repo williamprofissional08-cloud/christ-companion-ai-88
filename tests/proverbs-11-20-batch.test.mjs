@@ -4,7 +4,7 @@ import test from "node:test";
 
 const catalog = readFileSync(new URL("../src/lib/content/curated-studies.ts", import.meta.url), "utf8");
 const bible = JSON.parse(readFileSync(new URL("../src/lib/bible-livre/proverbios.json", import.meta.url), "utf8"));
-const chapters = [11, 12, 13, 14, 15];
+const chapters = [11, 12, 13, 14, 15, 16];
 for (const n of chapters) {
   test("Provérbios " + n + ": paráfrase, exegese, recursos e catálogo", () => {
     const source = readFileSync(new URL("../src/lib/content/proverbs-" + n + "-study.ts", import.meta.url), "utf8");
