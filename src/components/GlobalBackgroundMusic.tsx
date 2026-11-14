@@ -26,7 +26,26 @@ export function GlobalBackgroundMusic() {
   // The player stays mounted across navigation; only its control moves into
   // the home header. This avoids duplicate iframes and preserves playback.
   useEffect(() => {
-    setHeaderSlot(isHome ? document.getElementById("home-music-control-slot") : null);
+    if (!isHome) {
+      setHeaderSlot(null);
+      return;
+    }
+
+    // The header has separate mobile/desktop slots. Moving the portal never
+    // unmounts the iframe, so changing pages or resizing preserves playback.
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const syncSlot = () => {
+      setHeaderSlot(
+        document.getElementById(
+          mediaQuery.matches
+            ? "home-music-control-slot-desktop"
+            : "home-music-control-slot",
+        ),
+      );
+    };
+    syncSlot();
+    mediaQuery.addEventListener("change", syncSlot);
+    return () => mediaQuery.removeEventListener("change", syncSlot);
   }, [isHome]);
   const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
