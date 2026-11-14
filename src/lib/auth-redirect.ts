@@ -28,13 +28,13 @@ export function takeRedirect(): string {
   }
 }
 
-export const AUTH_API_KEY_CONFIGURATION_MESSAGE = "Problema de configuração do aplicativo. Não foi possível conectar ao serviço de login. Sua conta e sua senha estão corretas e não precisam ser alteradas. Avise o administrador do app.";
+export const AUTH_API_KEY_CONFIGURATION_MESSAGE = "Problema de configuração do aplicativo. Não foi possível conectar ao serviço de login. Isso não indica erro no seu e-mail ou na sua senha. Avise o administrador do app.";
 
 export function isAuthApiKeyError(error: unknown): boolean {
   const raw = error instanceof Error ? error.message : String(error ?? "");
   const code = error && typeof error === "object" && "code" in error && typeof error.code === "string" ? error.code : "";
   const message = `${raw} ${code}`.toLowerCase();
-  return /invalid[ _]api[ _]key|no[ _]api[ _]key[ _]found|apikey[^\\n]{0,50}(?:invalid|missing|not found|required)|(?:invalid|missing|not found|required)[^\\n]{0,50}apikey/.test(message);
+  return /invalid[\s_]+api[\s_]+key|no[\s_]+api[\s_]+key[\s_]+found|apikey[^\n]{0,50}(?:invalid|missing|not found|required|not valid)|(?:invalid|missing|not found|required)[^\n]{0,50}apikey/.test(message);
 }
 
 /** Traduz erros de autenticação em mensagens amigáveis. */
