@@ -148,6 +148,7 @@ import { psalm145Study } from "./psalm-145-study";
 import { psalm146Study } from "./psalm-146-study";
 import { psalm147Study } from "./psalm-147-study";
 import { psalm148Study } from "./psalm-148-study";
+import { psalm149Study } from "./psalm-149-study";
 import { job31Study } from "./job-31-study";
 import { job32Study } from "./job-32-study";
 import { job33Study } from "./job-33-study";
@@ -1263,4 +1264,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-salmos-cap-146": psalm146Study,
   "biblia-salmos-cap-147": psalm147Study,
   "biblia-salmos-cap-148": psalm148Study,
+  "biblia-salmos-cap-149": psalm149Study,
 };
