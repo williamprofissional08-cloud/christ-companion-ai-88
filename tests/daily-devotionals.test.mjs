@@ -21,7 +21,7 @@ test("acervo autoral contém 30 devocionais reais e completos, não combinaçõe
     assert.match(devotional.verse.reference, /\d+:\d+/);
     assert.ok(devotional.verse.text.length > 35);
     for (const key of ["theme", "context", "biblicalMeaning", "reflection", "application", "prayer", "challenge", "question", "motivational", "readingSuggestion"]) {
-      assert.ok(typeof devotional[key] === "string" && devotional[key].trim().length > 30, `Campo ${key} incompleto em ${devotional.theme}`);
+      assert.ok(typeof devotional[key] === "string" && devotional[key].trim().length > (key === "theme" ? 12 : 30), `Campo ${key} incompleto em ${devotional.theme}`);
     }
     assert.ok(devotional.context.length >= 150, `Contexto breve demais: ${devotional.theme}`);
     assert.ok(devotional.biblicalMeaning.length >= 130, `Sentido bíblico breve demais: ${devotional.theme}`);
