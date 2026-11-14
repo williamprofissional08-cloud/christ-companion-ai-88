@@ -71,7 +71,8 @@ export function MusicControlButton({ className = "" }: { className?: string }) {
 export function GlobalBackgroundMusic({ children }: { children: ReactNode }) {
   const playerRef = useRef<HTMLIFrameElement>(null);
   const location = useLocation();
-  const isHome = location.pathname === "/inicio";
+  const headerPath = location.pathname.replace(/\/+$/, "");
+  const isHome = headerPath === "/inicio" || headerPath === "/comunidade";
   const isProfile = location.pathname === "/configuracoes";
   const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
