@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
 
 const YOUTUBE_VIDEO_ID = "HR9coYxhYKw";
@@ -19,6 +19,23 @@ export function GlobalBackgroundMusic() {
   const playerRef = useRef<HTMLIFrameElement>(null);
   const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    const onYouTubeMessage = (event: MessageEvent) => {
+      if (event.origin !== "https://www.youtube-nocookie.com" ||
+          event.source !== playerRef.current?.contentWindow) return;
+      try {
+        const message = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
+        if (message?.event !== "onStateChange") return;
+        if (message.info === 1) setIsPlaying(true);
+        if (message.info === 0 || message.info === 2) setIsPlaying(false);
+      } catch {
+        // Ignore non-player messages.
+      }
+    };
+    window.addEventListener("message", onYouTubeMessage);
+    return () => window.removeEventListener("message", onYouTubeMessage);
+  }, []);
 
   function togglePlayback() {
     const player = playerRef.current?.contentWindow;
@@ -57,7 +74,7 @@ export function GlobalBackgroundMusic() {
               ? "Pausar música"
               : "Reproduzir música"
         }
-        className="fixed right-3 top-[calc(env(safe-area-inset-top)+0.75rem)] z-40 lg:right-4 inline-flex size-10 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
+        className="global-music-button fixed right-3 top-[calc(env(safe-area-inset-top)+0.75rem)] z-40 lg:right-4 inline-flex size-10 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
       >
         {isPlaying ? (
           <Pause className="size-5" aria-hidden="true" />

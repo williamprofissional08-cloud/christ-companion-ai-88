@@ -88,7 +88,7 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
 
   return (
     <div className="app-ambient flex min-h-screen min-w-0 bg-sky-50/70 dark:bg-background">
-      <aside className="hidden w-72 shrink-0 flex-col border-r border-sidebar-border bg-sidebar px-4 py-6 dark:border-slate-800 dark:bg-[#08182c] lg:sticky lg:top-0 lg:flex lg:h-screen">
+      <aside className={`${homeHeader ? "w-52" : "w-72"} hidden shrink-0 flex-col border-r border-sidebar-border bg-sidebar px-4 py-6 dark:border-slate-800 dark:bg-[#08182c] lg:sticky lg:top-0 lg:flex lg:h-screen`}>
         <Link to="/inicio" className="mb-7 flex items-center gap-3 rounded-xl px-2 py-1">
           <img src={logo} alt="" width={42} height={42} className="size-10 shrink-0 object-contain" />
           <span className="font-display text-base font-semibold tracking-tight">Caminho Divino</span>
@@ -105,12 +105,12 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
 
       <div className="flex min-h-screen min-w-0 flex-1 flex-col">
         <header className="sticky top-0 z-30 border-b border-border/60 bg-white/90 backdrop-blur dark:bg-background/90">
-          <div className="mx-auto flex min-h-16 w-full max-w-screen-2xl items-center gap-3 pl-3 pr-16 py-2 sm:pl-5 sm:pr-16 lg:pl-8 lg:pr-16">
-            <div className="lg:hidden">
+          <div className={`mx-auto flex min-h-14 w-full max-w-screen-2xl items-center gap-1.5 py-1.5 sm:gap-3 ${homeHeader ? "pl-2 pr-2 sm:pl-3 sm:pr-3 lg:px-5" : "pl-3 pr-16 sm:pl-5 sm:pr-16 lg:pl-8 lg:pr-16"}`}>
+            <div className={homeHeader ? "pl-10 lg:hidden" : "lg:hidden"}>
               <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild>
                   <Button variant="outline" size="icon" className="rounded-full" aria-label="Abrir menu">
-                    <Menu className="size-5" />
+                    {homeHeader ? <MoreVertical className="size-5" /> : <Menu className="size-5" />}
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="flex w-[min(21rem,88vw)] flex-col overflow-y-auto border-sidebar-border bg-sidebar px-4 py-6 dark:border-slate-800 dark:bg-[#08182c]">
@@ -145,12 +145,12 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
             )}
             {homeHeader && (
               <div className="flex shrink-0 items-center gap-1">
-                <Link to="/pesquisa" aria-label="Pesquisar" className="flex size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Search className="size-5" /></Link>
+                <Link to="/pesquisa" aria-label="Pesquisar" className="flex size-8 sm:size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Search className="size-5" /></Link>
                 <Link to="/configuracoes" aria-label="Notificações e preferências" className="flex size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Bell className="size-5" /></Link>
               </div>
             )}
             {homeHeader ? (
-              <Link to="/configuracoes" aria-label="Abrir perfil" className="flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-blue-200 bg-blue-700 text-sm font-semibold text-white shadow-sm">
+              <Link to="/configuracoes" aria-label="Abrir perfil" className="flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-full border border-blue-200 bg-blue-700 text-sm font-semibold text-white shadow-sm">
                 {avatarUrl ? <img src={avatarUrl} alt="" className="size-full object-cover" /> : displayName.slice(0, 1).toLocaleUpperCase("pt-BR")}
               </Link>
             ) : (
@@ -161,9 +161,9 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
           </div>
         </header>
 
-        <main className="mx-auto w-full max-w-screen-2xl min-w-0 flex-1 px-3 pt-4 pb-24 sm:px-5 sm:pt-5 lg:px-8 lg:pb-10">{children}</main>
+        <main className={`mx-auto w-full max-w-screen-2xl min-w-0 flex-1 ${homeHeader ? "px-2 pt-2 pb-[calc(3.75rem+env(safe-area-inset-bottom)+0.5rem)] sm:px-3 sm:pt-3 lg:px-5 lg:pb-3" : "px-3 pt-4 pb-24 sm:px-5 sm:pt-5 lg:px-8 lg:pb-10"}`}>{children}</main>
 
-        <nav aria-label="Navegação rápida" className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-white/95 backdrop-blur dark:bg-background/95 lg:hidden">
+        <nav aria-label="Navegação rápida" className="fixed inset-x-0 bottom-0 z-30 pb-[env(safe-area-inset-bottom)] border-t border-border/70 bg-white/95 backdrop-blur dark:bg-background/95 lg:hidden">
           <div className={homeHeader || !isAdmin ? "mx-auto grid max-w-2xl grid-cols-6" : "mx-auto grid max-w-2xl grid-cols-5"}>
             {(homeHeader ? [
               { to: "/inicio" as const, label: "Início", icon: Home },
@@ -173,9 +173,9 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
               { to: "/metas" as const, label: "Minha Jornada", icon: Target },
               { to: "/configuracoes" as const, label: "Perfil", icon: UserRound },
             ] : isAdmin ? [...PRIMARY_NAV, { to: "/admin" as const, label: "Admin", icon: ShieldCheck }] : PRIMARY_NAV).map((item) => (
-              <Link key={item.to} to={item.to} className="flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[9px] text-center leading-tight text-muted-foreground"
+              <Link key={item.to} to={item.to} className="flex min-h-12 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[9px] text-center leading-tight text-muted-foreground"
                 activeProps={{ className: "flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[9px] text-center leading-tight font-semibold text-primary" }}>
-                <item.icon className="size-[18px]" aria-hidden />{item.label}
+                <item.icon className="size-[19px]" aria-hidden />{item.label}
               </Link>
             ))}
           </div>
