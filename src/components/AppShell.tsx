@@ -88,7 +88,7 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
 
   return (
     <div className="app-ambient flex min-h-screen min-w-0 bg-sky-50/70 dark:bg-background">
-      <aside className={`${homeHeader ? "w-52" : "w-72"} hidden shrink-0 flex-col border-r border-sidebar-border bg-sidebar px-4 py-6 dark:border-slate-800 dark:bg-[#08182c] lg:sticky lg:top-0 lg:flex lg:h-screen">
+      <aside className={`${homeHeader ? "w-52" : "w-72"} hidden shrink-0 flex-col border-r border-sidebar-border bg-sidebar px-4 py-6 dark:border-slate-800 dark:bg-[#08182c] lg:sticky lg:top-0 lg:flex lg:h-screen`}>
         <Link to="/inicio" className="mb-7 flex items-center gap-3 rounded-xl px-2 py-1">
           <img src={logo} alt="" width={42} height={42} className="size-10 shrink-0 object-contain" />
           <span className="font-display text-base font-semibold tracking-tight">Caminho Divino</span>
