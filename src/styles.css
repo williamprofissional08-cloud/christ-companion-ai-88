@@ -409,7 +409,8 @@ a[href*="lovable.dev"][style*="position: fixed"] {
 }
 
 /* Match the reference's dark scenic header on the home dashboard only. */
-body:has(.home-dash) .app-ambient header[data-home-header="true"] {
+body:has(.home-dash) .app-ambient header[data-home-header="true"],
+body:has(.community-dash) .app-ambient header[data-home-header="true"] {
   background-color: #11375c;
   background-image: linear-gradient(90deg, rgba(9,34,66,.92), rgba(15,56,89,.75)), url("/images/home-daily-phrase-background.webp");
   background-size: cover;
@@ -425,3 +426,10 @@ body:has(.home-dash) .app-ambient header.sticky button {
   background: rgba(15,48,87,.6);
   border-color: rgba(255,255,255,.4);
 }
+
+/* Community retains its own navy/gold visual identity without a second fixed music button. */
+body:has(.community-dash) .app-ambient header[data-home-header="true"] {
+  background-image: linear-gradient(90deg,rgba(4,34,77,.98),rgba(7,65,116,.82)), url("/images/prayer-sunrise.webp");
+  background-position: center 48%;
+}
+.community-dash [id^="community-"] { scroll-margin-top: 5rem; }
