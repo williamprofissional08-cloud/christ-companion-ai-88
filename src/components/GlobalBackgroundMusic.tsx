@@ -72,6 +72,7 @@ export function GlobalBackgroundMusic({ children }: { children: ReactNode }) {
   const playerRef = useRef<HTMLIFrameElement>(null);
   const location = useLocation();
   const isHome = location.pathname === "/inicio";
+  const isProfile = location.pathname === "/configuracoes";
   const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -113,7 +114,7 @@ export function GlobalBackgroundMusic({ children }: { children: ReactNode }) {
   return (
     <MusicContext.Provider value={{ isReady, isPlaying, togglePlayback }}>
       {children}
-      {!isHome && (
+      {!isHome && !isProfile && (
         <MusicControlButton className="global-music-button inline-flex fixed right-3 top-[calc(env(safe-area-inset-top)+0.75rem)] z-40 size-10 lg:right-4" />
       )}
       <iframe
