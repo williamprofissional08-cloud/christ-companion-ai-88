@@ -407,3 +407,21 @@ a[href*="lovable.dev"][style*="position: fixed"] {
   .home-stat { min-height: 68px; }
   .home-shortcut { min-height: 57px; }
 }
+
+/* Place the existing music control immediately to the left of the home ⋮ menu.
+   The player component remains mounted once and remains on the right elsewhere. */
+@media (max-width: 1023px) {
+  body:has(.home-dash) .global-music-button {
+    left: 0.5rem;
+    right: auto;
+    top: calc(env(safe-area-inset-top) + 0.5rem);
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  body:has(.home-dash) .global-music-button {
+    right: 1rem;
+    top: calc(env(safe-area-inset-top) + 0.5rem);
+  }
+}
