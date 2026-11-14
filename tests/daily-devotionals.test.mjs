@@ -18,7 +18,7 @@ test("acervo autoral contém 30 devocionais reais e completos, não combinaçõe
   const themes = new Set();
   for (const devotional of CURATED_DEVOTIONALS) {
     assert.equal(devotional.verse.kind, "synthesis", "síntese não deve parecer citação bíblica literal");
-    assert.match(devotional.verse.reference, /\\d+:\\d+/);
+    assert.match(devotional.verse.reference, /\d+:\d+/);
     assert.ok(devotional.verse.text.length > 35);
     for (const key of ["theme", "context", "biblicalMeaning", "reflection", "application", "prayer", "challenge", "question", "motivational", "readingSuggestion"]) {
       assert.ok(typeof devotional[key] === "string" && devotional[key].trim().length > 30, `Campo ${key} incompleto em ${devotional.theme}`);
@@ -26,9 +26,9 @@ test("acervo autoral contém 30 devocionais reais e completos, não combinaçõe
     assert.ok(devotional.context.length >= 150, `Contexto breve demais: ${devotional.theme}`);
     assert.ok(devotional.biblicalMeaning.length >= 130, `Sentido bíblico breve demais: ${devotional.theme}`);
     assert.ok(devotional.reflection.length >= 650, `Reflexão breve demais: ${devotional.theme}`);
-    assert.ok(devotional.reflection.split("\\n\\n").length >= 3, `Reflexão não desenvolvida em três parágrafos: ${devotional.theme}`);
+    assert.ok(devotional.reflection.split("\n\n").length >= 3, `Reflexão não desenvolvida em três parágrafos: ${devotional.theme}`);
     assert.ok(devotional.prayer.length >= 130, `Oração breve demais: ${devotional.theme}`);
-    assert.match(devotional.readingSuggestion, /\\d+:\\d+/);
+    assert.match(devotional.readingSuggestion, /\d+:\d+/);
     references.add(devotional.verse.reference);
     themes.add(devotional.theme);
   }
@@ -78,10 +78,10 @@ test("início e página devocional usam o mesmo acervo fixo, sem sorteio manual 
   const home = readFileSync(new URL("../src/routes/_authenticated/inicio.tsx", import.meta.url), "utf8");
   const route = readFileSync(new URL("../src/routes/_authenticated/devocional.tsx", import.meta.url), "utf8");
   const loader = readFileSync(new URL("../src/lib/devotional-loader.ts", import.meta.url), "utf8");
-  assert.match(home, /loadDevotionalSafely\\(day\\)/);
-  assert.match(route, /loadDevotionalSafely\\(day\\)/);
-  assert.match(loader, /getDailyDevotional\\(day\\)/);
-  assert.doesNotMatch(route, /Sortear outro|Math\\.random/);
+  assert.match(home, /loadDevotionalSafely\(day\)/);
+  assert.match(route, /loadDevotionalSafely\(day\)/);
+  assert.match(loader, /getDailyDevotional\(day\)/);
+  assert.doesNotMatch(route, /Sortear outro|Math\.random/);
   assert.doesNotMatch(home, /getDevotional/);
   assert.doesNotMatch(route, /getDevotional/);
 });
