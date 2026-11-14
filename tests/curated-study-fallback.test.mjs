@@ -14,8 +14,10 @@ test("Genesis 1 is registered and contains a structured, didactic study", () => 
   assert.match(genesis1Source, /title: "2\. Contexto histórico/);
   assert.match(genesis1Source, /title: "4\. Tópico 1/);
   assert.match(genesis1Source, /title: "12\. Tópico 9/);
-  assert.match(genesis1Source, /title: "17\. Exercícios/);
-  assert.match(genesis1Source, /title: "18\. Oficina do pregador/);
+  assert.match(genesis1Source, /title: "21\. Exercícios/);
+  assert.match(genesis1Source, /title: "22\. Oficina do pregador/);
+  const numberedTitles = [...genesis1Source.matchAll(/title: "(\d+)\./g)].map((match) => Number(match[1]));
+  assert.equal(new Set(numberedTitles).size, numberedTitles.length, "Genesis 1 section numbers must not repeat");
   assert.equal((genesis1Source.match(/id: "topico-/g) ?? []).length, 9);
   assert.match(genesis1Source, /id: "leitura-biblica-completa"/);
   assert.match(genesis1Source, /id: "palavras-chave"/);
