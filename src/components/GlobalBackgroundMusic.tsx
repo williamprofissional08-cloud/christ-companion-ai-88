@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { useLocation } from "@tanstack/react-router";
 import { Pause, Play } from "lucide-react";
 
 const YOUTUBE_VIDEO_ID = "HR9coYxhYKw";
@@ -17,6 +19,34 @@ const YOUTUBE_EMBED_URL =
  */
 export function GlobalBackgroundMusic() {
   const playerRef = useRef<HTMLIFrameElement>(null);
+  const location = useLocation();
+  const isHome = location.pathname === "/inicio";
+  const [headerSlot, setHeaderSlot] = useState<HTMLElement | null>(null);
+
+  // The player stays mounted across navigation; only its control moves into
+  // the home header. This avoids duplicate iframes and preserves playback.
+  useEffect(() => {
+    if (!isHome) {
+      setHeaderSlot(null);
+      return;
+    }
+
+    // The header has separate mobile/desktop slots. Moving the portal never
+    // unmounts the iframe, so changing pages or resizing preserves playback.
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const syncSlot = () => {
+      setHeaderSlot(
+        document.getElementById(
+          mediaQuery.matches
+            ? "home-music-control-slot-desktop"
+            : "home-music-control-slot",
+        ),
+      );
+    };
+    syncSlot();
+    mediaQuery.addEventListener("change", syncSlot);
+    return () => mediaQuery.removeEventListener("change", syncSlot);
+  }, [isHome]);
   const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -53,8 +83,7 @@ export function GlobalBackgroundMusic() {
     setIsPlaying(nextIsPlaying);
   }
 
-  return (
-    <aside aria-label="Música ambiente Agnus Dei" className="contents">
+  const musicButton = (
       <button
         type="button"
         onClick={togglePlayback}
@@ -74,7 +103,11 @@ export function GlobalBackgroundMusic() {
               ? "Pausar música"
               : "Reproduzir música"
         }
-        className="global-music-button fixed right-3 top-[calc(env(safe-area-inset-top)+0.75rem)] z-40 lg:right-4 inline-flex size-10 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
+        className={
+          isHome
+            ? "inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
+            : "global-music-button fixed right-3 top-[calc(env(safe-area-inset-top)+0.75rem)] z-40 lg:right-4 inline-flex size-10 items-center justify-center rounded-full border border-blue-200/80 bg-white text-blue-700 shadow-md transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:cursor-wait disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
+        }
       >
         {isPlaying ? (
           <Pause className="size-5" aria-hidden="true" />
@@ -82,6 +115,11 @@ export function GlobalBackgroundMusic() {
           <Play className="ml-0.5 size-5 fill-current" aria-hidden="true" />
         )}
       </button>
+  );
+
+  return (
+    <aside aria-label="Música ambiente Agnus Dei" className="contents">
+      {isHome ? (headerSlot ? createPortal(musicButton, headerSlot) : null) : musicButton}
 
       <iframe
         ref={playerRef}
