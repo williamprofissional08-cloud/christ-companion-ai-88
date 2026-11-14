@@ -7,6 +7,7 @@ import { lovable } from "@/integrations/lovable/index";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import logo from "@/assets/logo.png";
 import { friendlyAuthError, isAuthApiKeyError } from "@/lib/auth-redirect";
 
 function logAuthApiKeyError(error: unknown): void {
@@ -218,22 +219,32 @@ function AuthPage() {
 
   return (
     <main className="relative min-h-[100svh] overflow-x-hidden bg-[#d9e9fa] text-[#092451]">
-      <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(218,236,253,.35)_0%,rgba(255,231,183,.25)_34%,rgba(172,204,233,.75)_100%)]" />
-      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[640px] flex-col items-center px-4 pb-6 pt-8 sm:px-8">
-        <header className="mb-8 flex w-full flex-col items-center text-center">
-          <div className="relative mb-1 flex flex-col items-center">
-            <span aria-hidden="true" className="absolute -top-2 h-14 w-28 rounded-t-full border-t-[5px] border-[#e8ab16]" />
-            <div className="relative mt-2 flex flex-col items-center text-[#0756b9]">
-              <span aria-hidden="true" className="text-5xl font-bold leading-none">✝</span>
-              <BookOpen aria-hidden="true" className="-mt-1 size-20 stroke-[1.7]" />
-            </div>
-          </div>
-          <h1 className="font-serif text-[clamp(2.35rem,9vw,4rem)] font-bold leading-tight tracking-tight text-[#092451]">
+      <img
+        src="/images/prayer-sunrise.webp"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[60%_center]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(230,241,254,.70)_0%,rgba(230,242,253,.32)_38%,rgba(212,231,249,.72)_100%)]"
+      />
+      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[640px] flex-col items-center px-4 pb-6 pt-6 sm:px-8 sm:pt-8">
+        <header className="mb-7 flex w-full flex-col items-center text-center">
+          <img
+            src={logo}
+            alt=""
+            aria-hidden="true"
+            width={128}
+            height={128}
+            className="mb-2 h-24 w-24 object-contain drop-shadow-[0_2px_10px_rgba(255,255,255,.9)] sm:h-28 sm:w-28"
+          />
+          <h1 className="font-serif text-[clamp(2.35rem,9vw,4rem)] font-bold leading-tight tracking-tight text-[#092451] drop-shadow-[0_1px_3px_rgba(255,255,255,.9)]">
             Caminho <span className="italic text-[#0766ce]">Divino</span>
           </h1>
           <div aria-hidden="true" className="mt-1 h-[3px] w-52 rounded-full bg-[#e5aa20]" />
           <p className="mt-3 text-[clamp(.78rem,3.1vw,1rem)] font-medium">Estudo · Crescimento · Comunhão · Serviço</p>
-          <p className="mt-7 max-w-[330px] text-center text-[clamp(1rem,4vw,1.3rem)] italic leading-relaxed">
+          <p className="mt-6 max-w-[330px] text-center text-[clamp(1rem,4vw,1.3rem)] italic leading-relaxed">
             Aproxime-se de Deus por meio do<br className="hidden min-[380px]:block" /> estudo da Sua Palavra.
           </p>
         </header>
