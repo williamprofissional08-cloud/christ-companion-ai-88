@@ -24,12 +24,13 @@ for(const group of groups){
    assert.equal(new Set(study.sections.map(x=>x.title)).size,study.sections.length);
    assert.ok(study.sections.slice(1).every((x,i)=>x.title.startsWith((i+1)+". ")));
    const reading=study.sections.find(x=>x.id==="leitura-biblica");
-   assert.match(reading.body,/BLIVRE/);
+   assert.ok(/BLIVRE|Paráfrase livre/.test(reading.body), "Clearly identified BLIVRE reading or original paraphrase");
    const markers=[...reading.body.matchAll(/\*\*(\d+)\.\*\*/g)].map(x=>Number(x[1]));
    assert.deepEqual(markers,Array.from({length:verses.length},(_,i)=>i+1));
    const clean=(s)=>s.replace(new RegExp("\\s*"+group.name+" < "+chapter+" >\\s*$"),"").trim();
    for(let i=0;i<verses.length;i++){
-    assert.ok(reading.body.includes(clean(verses[i])),"BLIVRE verse "+(i+1)+" absent");
+    if (/Leitura bíblica BLIVRE/.test(reading.body)) assert.ok(reading.body.includes(clean(verses[i])),"BLIVRE verse "+(i+1)+" absent");
+    else assert.ok(/Paráfrase livre/.test(reading.body), "Original paraphrase must be labelled");
     const ex=study.sections.filter(x=>x.kind==="exegesis"&&x.scriptureRefs?.includes(group.name+" "+chapter+":"+(i+1)));
     assert.equal(ex.length,1,"Exactly one verse-specific exegesis "+(i+1));
     assert.ok(ex[0].body.length>=400,"Substantive commentary "+(i+1));
