@@ -83,7 +83,7 @@ export function SettingsOverview({ reminders, savingReminders, onRemindersChange
   }, [fontSize]);
 
   function cycleFontSize() {
-    const next = FONT_SIZES[(FONT_SIZES.indexOf(fontSize as (typeof FONT_SIZES)[number]) + 1) % FONT_SIZES.length];
+    const next = FONT_SIZES[(FONT_SIZES.indexOf(fontSize as (typeof FONT_SIZES)[number]) + 1) % FONT_SIZES.length] ?? 16;
     setFontSize(next);
     try { window.localStorage.setItem(FONT_KEY, String(next)); } catch { /* Storage may be disabled. */ }
   }
