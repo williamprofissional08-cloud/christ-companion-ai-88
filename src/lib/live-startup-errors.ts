@@ -3,19 +3,16 @@
  * permissions when the failure comes from the Supabase schema or RLS.
  * Never include database detail messages or tokens in the interface.
  */
-export type LiveIssue = {
-  code?: string | null;
-  status?: number | null;
-  name?: string | null;
-  message?: string | null;
-} | null | undefined;
+export type LiveIssue = unknown;
 
 function shape(error: LiveIssue) {
+  const issue = typeof error === "object" && error !== null
+    ? error as Record<string, unknown> : {};
   return {
-    code: typeof error?.code === "string" ? error.code : "",
-    status: typeof error?.status === "number" ? error.status : 0,
-    name: typeof error?.name === "string" ? error.name : "",
-    message: typeof error?.message === "string" ? error.message : "",
+    code: typeof issue.code === "string" ? issue.code : "",
+    status: typeof issue.status === "number" ? issue.status : 0,
+    name: typeof issue.name === "string" ? issue.name : "",
+    message: typeof issue.message === "string" ? issue.message : "",
   };
 }
 
