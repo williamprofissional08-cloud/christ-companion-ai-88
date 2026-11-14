@@ -147,6 +147,12 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
               setRoom(null);
               return;
             }
+            if (cancelled || apiRef.current === null) {
+              await db.from("community_live_sessions").update({
+                status:"ended",ended_at:new Date().toISOString(),
+              }).eq("id",data.id).eq("host_id",user.id);
+              return;
+            }
             sessionIdRef.current = data.id;
             hostIdRef.current = user.id;
             void load();
