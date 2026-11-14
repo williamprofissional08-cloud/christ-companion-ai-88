@@ -1,23 +1,26 @@
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
+import assert from "node:assert/strict";
 import { proverbs3Study } from "./proverbs-3-study";
 import { CURATED_STUDIES } from "./curated-studies";
 
+/** Zero extra test dependencies: Node's built-in test runner, aligned to npm test. */
 describe("Provérbios 3 — integridade do estudo", () => {
-  it("integra o estudo no identificador canônico", () => {
-    expect(CURATED_STUDIES["biblia-proverbios-cap-3"]).toBe(proverbs3Study);
+  const sections = proverbs3Study.sections ?? [];
+  it("mantém o identificador canônico do catálogo", () => {
+    assert.equal(CURATED_STUDIES["biblia-proverbios-cap-3"], proverbs3Study);
   });
-  it("contém os 35 versículos em leitura e exposição", () => {
-    const reading = proverbs3Study.sections.find((section) => section.id === "leitura-biblica");
-    expect(reading?.body).toContain("Paráfrase livre");
+  it("cobre os 35 versículos com paráfrase e explicação", () => {
+    const reading = sections.find((section) => section.id === "leitura-biblica");
+    assert.ok(reading?.body?.includes("Paráfrase livre"));
     for (let verse = 1; verse <= 35; verse++) {
-      expect(reading?.body).toContain(`**${verse}.**`);
-      expect(proverbs3Study.sections.some((section) => section.id === `versiculo-${verse}`)).toBe(true);
+      assert.ok(reading?.body?.includes(`**${verse}.**`), `Ausente Provérbios 3:${verse}`);
+      assert.ok(sections.some((section) => section.id === `versiculo-${verse}`));
     }
   });
-  it("oferece exercícios, pregação e oração", () => {
-    for (const id of ["exercicios", "oficina-pregador", "oracao", "interpretacoes", "cristo"]) {
-      expect(proverbs3Study.sections.some((section) => section.id === id)).toBe(true);
+  it("preserva todas as seções editoriais e os IDs", () => {
+    for (const id of ["exercicios","oficina-pregador","oracao","interpretacoes","cristo"]) {
+      assert.ok(sections.some((section) => section.id === id), `Seção ausente: ${id}`);
     }
-    expect(new Set(proverbs3Study.sections.map((section) => section.id)).size).toBe(proverbs3Study.sections.length);
+    assert.equal(new Set(sections.map((section) => section.id)).size, sections.length);
   });
 });

@@ -1,23 +1,26 @@
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
+import assert from "node:assert/strict";
 import { proverbs8Study } from "./proverbs-8-study";
 import { CURATED_STUDIES } from "./curated-studies";
 
+/** Zero extra test dependencies: Node's built-in test runner, aligned to npm test. */
 describe("Provérbios 8 — integridade do estudo", () => {
-  it("usa o identificador canônico", () => {
-    expect(CURATED_STUDIES["biblia-proverbios-cap-8"]).toBe(proverbs8Study);
+  const sections = proverbs8Study.sections ?? [];
+  it("mantém o identificador canônico do catálogo", () => {
+    assert.equal(CURATED_STUDIES["biblia-proverbios-cap-8"], proverbs8Study);
   });
-  it("inclui 36 versículos em paráfrase livre e exposição", () => {
-    const reading = proverbs8Study.sections.find((section) => section.id === "leitura-biblica");
-    expect(reading?.body).toContain("Paráfrase livre");
+  it("cobre os 36 versículos com paráfrase e explicação", () => {
+    const reading = sections.find((section) => section.id === "leitura-biblica");
+    assert.ok(reading?.body?.includes("Paráfrase livre"));
     for (let verse = 1; verse <= 36; verse++) {
-      expect(reading?.body).toContain(`**${verse}.**`);
-      expect(proverbs8Study.sections.some((section) => section.id === `versiculo-${verse}`)).toBe(true);
+      assert.ok(reading?.body?.includes(`**${verse}.**`), `Ausente Provérbios 8:${verse}`);
+      assert.ok(sections.some((section) => section.id === `versiculo-${verse}`));
     }
   });
-  it("aborda o debate cristológico e os recursos editoriais", () => {
-    for (const id of ["estrutura", "termos", "debate-criacao", "referencias", "cristo", "interpretacoes", "exercicios", "oficina-pregador", "oracao"]) {
-      expect(proverbs8Study.sections.some((section) => section.id === id)).toBe(true);
+  it("preserva todas as seções editoriais e os IDs", () => {
+    for (const id of ["estrutura","termos","debate-criacao","referencias","cristo","interpretacoes","exercicios","oficina-pregador","oracao"]) {
+      assert.ok(sections.some((section) => section.id === id), `Seção ausente: ${id}`);
     }
-    expect(new Set(proverbs8Study.sections.map((section) => section.id)).size).toBe(proverbs8Study.sections.length);
+    assert.equal(new Set(sections.map((section) => section.id)).size, sections.length);
   });
 });

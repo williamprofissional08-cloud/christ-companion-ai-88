@@ -1,23 +1,26 @@
-import { describe, expect, it } from "vitest";
+import { describe, it } from "node:test";
+import assert from "node:assert/strict";
 import { proverbs6Study } from "./proverbs-6-study";
 import { CURATED_STUDIES } from "./curated-studies";
 
+/** Zero extra test dependencies: Node's built-in test runner, aligned to npm test. */
 describe("Provérbios 6 — integridade do estudo", () => {
-  it("está integrado sob o ID canônico", () => {
-    expect(CURATED_STUDIES["biblia-proverbios-cap-6"]).toBe(proverbs6Study);
+  const sections = proverbs6Study.sections ?? [];
+  it("mantém o identificador canônico do catálogo", () => {
+    assert.equal(CURATED_STUDIES["biblia-proverbios-cap-6"], proverbs6Study);
   });
-  it("contém 35 versículos em paráfrase e exposição individual", () => {
-    const reading = proverbs6Study.sections.find((section) => section.id === "leitura-biblica");
-    expect(reading?.body).toContain("Paráfrase livre");
+  it("cobre os 35 versículos com paráfrase e explicação", () => {
+    const reading = sections.find((section) => section.id === "leitura-biblica");
+    assert.ok(reading?.body?.includes("Paráfrase livre"));
     for (let verse = 1; verse <= 35; verse++) {
-      expect(reading?.body).toContain(`**${verse}.**`);
-      expect(proverbs6Study.sections.some((section) => section.id === `versiculo-${verse}`)).toBe(true);
+      assert.ok(reading?.body?.includes(`**${verse}.**`), `Ausente Provérbios 6:${verse}`);
+      assert.ok(sections.some((section) => section.id === `versiculo-${verse}`));
     }
   });
-  it("contempla todas as perícopes, exercícios e oficina", () => {
-    for (const id of ["estrutura", "referencias", "interpretacoes", "cristo", "exercicios", "oficina-pregador", "oracao"]) {
-      expect(proverbs6Study.sections.some((section) => section.id === id)).toBe(true);
+  it("preserva todas as seções editoriais e os IDs", () => {
+    for (const id of ["estrutura","referencias","interpretacoes","cristo","exercicios","oficina-pregador","oracao"]) {
+      assert.ok(sections.some((section) => section.id === id), `Seção ausente: ${id}`);
     }
-    expect(new Set(proverbs6Study.sections.map((section) => section.id)).size).toBe(proverbs6Study.sections.length);
+    assert.equal(new Set(sections.map((section) => section.id)).size, sections.length);
   });
 });

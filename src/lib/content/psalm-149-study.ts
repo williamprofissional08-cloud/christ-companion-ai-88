@@ -105,7 +105,7 @@ export const psalm149Study: StudyContent = {
       "id": "versiculo-6",
       "title": "6. Versículo 6 — Louvor e espada: a virada decisiva",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 149:6"
       ],
@@ -115,7 +115,7 @@ export const psalm149Study: StudyContent = {
       "id": "versiculo-7",
       "title": "7. Versículo 7 — Vingança sobre nações",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 149:7"
       ],
@@ -125,7 +125,7 @@ export const psalm149Study: StudyContent = {
       "id": "versiculo-8",
       "title": "8. Versículo 8 — Reis em cadeias",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 149:8"
       ],
@@ -135,7 +135,7 @@ export const psalm149Study: StudyContent = {
       "id": "versiculo-9",
       "title": "9. Versículo 9 — Sentença escrita e honra",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 149:9"
       ],
@@ -175,7 +175,7 @@ export const psalm149Study: StudyContent = {
       "id": "topico-4",
       "title": "13. Questão debatida: quem executa o juízo?",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 149:1-9"
       ],
@@ -185,7 +185,7 @@ export const psalm149Study: StudyContent = {
       "id": "topico-5",
       "title": "14. Comparação bíblica e limites éticos",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 149:1-9"
       ],

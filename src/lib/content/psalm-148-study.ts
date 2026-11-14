@@ -238,7 +238,7 @@ export const psalm148Study: StudyContent = {
       "id": "topico-5",
       "title": "19. Questões interpretativas e limites",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 148:1-14"
       ],

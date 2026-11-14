@@ -84,7 +84,7 @@ export const psalm150Study: StudyContent = {
       "id": "versiculo-1",
       "title": "Versículo 1 — Santuário e firmamento",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 150:1"
       ],
@@ -144,7 +144,7 @@ export const psalm150Study: StudyContent = {
       "id": "termos",
       "title": "Termos hebraicos e limites de tradução",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 150:1-6",
         "Gênesis 2:7"
@@ -155,7 +155,7 @@ export const psalm150Study: StudyContent = {
       "id": "questoes",
       "title": "Questões interpretativas e leituras responsáveis",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 150:1-6",
         "Habacuque 2:20"
@@ -180,7 +180,7 @@ export const psalm150Study: StudyContent = {
       "id": "cristo",
       "title": "Cristo e a unidade da Escritura",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 150:1-6",
         "Apocalipse 5:9-13"

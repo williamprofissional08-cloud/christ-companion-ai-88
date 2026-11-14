@@ -287,7 +287,7 @@ export const psalm147Study: StudyContent = {
       "id": "topico-4",
       "title": "24. Interpretações e limites",
       "kind": "exegesis",
-      "confidence": "medium",
+      "confidence": "probable",
       "scriptureRefs": [
         "Salmos 147:1-20"
       ],
