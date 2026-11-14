@@ -8,6 +8,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { getDevotional } from "@/lib/ai.functions";
 import { loadDevotionalSafely } from "@/lib/devotional-loader";
 import { useBrazilDay } from "@/hooks/use-brazil-day";
+import { listFavorites, listGoals } from "@/lib/app.functions";
 
 export const Route = createFileRoute("/_authenticated/inicio")({
   head: () => ({
@@ -24,6 +25,10 @@ function Inicio() {
   const day = useBrazilDay();
   const { user } = useAuth();
   const devotionalFn = useServerFn(getDevotional);
+  const fetchFavorites = useServerFn(listFavorites);
+  const fetchGoals = useServerFn(listGoals);
+  const favorites = useQuery({ queryKey: ["home-favorites", user?.id], queryFn: () => fetchFavorites(), enabled: !!user?.id, retry: false });
+  const goals = useQuery({ queryKey: ["home-goals", user?.id], queryFn: () => fetchGoals(), enabled: !!user?.id, retry: false });
   const devotional = useQuery({
     queryKey: ["devotional", day],
     queryFn: () => loadDevotionalSafely(day, () => devotionalFn({ data: { day } })),
@@ -32,8 +37,8 @@ function Inicio() {
   });
 
   const metadata = user?.user_metadata ?? {};
-  const rawDisplayName = String(metadata["full_name"] ?? metadata["name"] ?? user?.email?.split("@")[0] ?? "William");
-  const displayName = rawDisplayName.trim().split(/\s+/)[0] || "William";
+  const rawDisplayName = String(metadata["full_name"] ?? metadata["name"] ?? user?.email?.split("@")[0] ?? "Amigo");
+  const displayName = rawDisplayName.trim().split(/\s+/)[0] || "Amigo";
   const hour = new Date().getHours();
   const greeting = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
   const d = devotional.data;
@@ -50,9 +55,9 @@ function Inicio() {
     { to: "/escola", label: "Escola e certificados", icon: Award },
   ] as const;
   const summary = [
-    { label: "Minha Jornada Bíblica", icon: BookOpen, to: "/metas", description: "Acompanhar suas metas" },
+    { label: "Minha Jornada Bíblica", icon: BookOpen, to: "/metas", description: goals.isLoading ? "Carregando..." : goals.isError ? "Indisponível" : `${goals.data?.filter((goal) => goal.completed).length ?? 0} de ${goals.data?.length ?? 0} metas concluídas` },
     { label: "Estudos Concluídos", icon: BarChart3, to: "/estudos", description: "Ver meus estudos" },
-    { label: "Favoritos", icon: Heart, to: "/favoritos", description: "Itens salvos" },
+    { label: "Favoritos", icon: Heart, to: "/favoritos", description: favorites.isLoading ? "Carregando..." : favorites.isError ? "Indisponível" : `${favorites.data?.length ?? 0} itens salvos` },
     { label: "Minhas Pregações", icon: Bookmark, to: "/minhas-mensagens", description: "Minhas mensagens" },
   ] as const;
 
