@@ -1,3 +1,13 @@
+import { jeremiah8Study } from "./jeremiah-8-study";
+import { jeremiah7Study } from "./jeremiah-7-study";
+import { jeremiah6Study } from "./jeremiah-6-study";
+import { jeremiah5Study } from "./jeremiah-5-study";
+import { jeremiah4Study } from "./jeremiah-4-study";
+import { jeremiah3Study } from "./jeremiah-3-study";
+import { jeremiah2Study } from "./jeremiah-2-study";
+import { jeremiah1Study } from "./jeremiah-1-study";
+import { isaiah66Study } from "./isaiah-66-study";
+import { isaiah65Study } from "./isaiah-65-study";
 import { isaiah64Study } from "./isaiah-64-study";
 import { isaiah63Study } from "./isaiah-63-study";
 import { isaiah62Study } from "./isaiah-62-study";
@@ -841,6 +851,16 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-isaias-cap-62": isaiah62Study,
   "biblia-isaias-cap-63": isaiah63Study,
   "biblia-isaias-cap-64": isaiah64Study,
+  "biblia-isaias-cap-65": isaiah65Study,
+  "biblia-isaias-cap-66": isaiah66Study,
+  "biblia-jeremias-cap-1": jeremiah1Study,
+  "biblia-jeremias-cap-2": jeremiah2Study,
+  "biblia-jeremias-cap-3": jeremiah3Study,
+  "biblia-jeremias-cap-4": jeremiah4Study,
+  "biblia-jeremias-cap-5": jeremiah5Study,
+  "biblia-jeremias-cap-6": jeremiah6Study,
+  "biblia-jeremias-cap-7": jeremiah7Study,
+  "biblia-jeremias-cap-8": jeremiah8Study,
   "biblia-marcos-cap-4": mark4Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
