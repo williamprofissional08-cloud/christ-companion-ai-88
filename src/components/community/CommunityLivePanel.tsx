@@ -248,12 +248,6 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
           </div>
         </div>
       )}
-      {sessions.length === 0 && !room && (
-        <p className="rounded-xl border border-blue-100 bg-white/80 px-3 py-3 text-sm text-slate-600 dark:bg-card dark:text-slate-300">
-          Nenhuma live acontecendo agora. Quando um membro iniciar uma transmissão, ela aparecerá aqui.
-        </p>
-      )}
-
       {room && (
         <div className="space-y-3 rounded-2xl border border-blue-200 bg-[#081f3a] p-3 text-white">
           <div className="flex items-center justify-between gap-2">
