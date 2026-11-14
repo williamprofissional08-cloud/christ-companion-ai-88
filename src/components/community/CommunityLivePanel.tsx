@@ -3,6 +3,7 @@ import type { SupabaseClient, User, RealtimeChannel } from "@supabase/supabase-j
 import { Camera, CameraOff, Loader2, Mic, MicOff, Play, Plus, Radio, ShieldBan, UsersRound, X } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import { checkLiveBackendReady, explainLiveBackendError, explainLiveMediaError, isMissingMediaDevice } from "@/lib/live-startup-errors";
 
 // The SQL migration creates these tables; the generated Supabase types are
 // refreshed after deployment, so use the same untyped adapter as existing community code.
@@ -60,6 +61,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
   const [playBlocked, setPlayBlocked] = useState(false);
   const [micOn, setMicOn] = useState(true);
   const [cameraOn, setCameraOn] = useState(true);
+  const [hasVideoTrack, setHasVideoTrack] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const liveRoom = useRef<Room | null>(null);
@@ -192,15 +194,43 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
     setBusy(true);
     setError(null);
     let stream: MediaStream | null = null;
+    let stage: "server" | "device" = "server";
     try {
-      if (!navigator.mediaDevices?.getUserMedia) {
-        throw new Error("Este navegador não permite usar câmera e microfone. Use HTTPS em um navegador atualizado.");
-      }
-      // The only device prompt is the normal browser permission, not host authentication.
-      stream = await navigator.mediaDevices.getUserMedia({
-        audio: { echoCancellation: true, noiseSuppression: true },
-        video: { facingMode: "user", width: { ideal: 720 }, height: { ideal: 480 } },
+      // First check the three server tables. A failed migration or RLS rule
+      // must not become a misleading camera permission prompt.
+      const unavailable = await checkLiveBackendReady(async (table) => {
+        const { error: tableError } = await db.from(table)
+          .select("id", { head: true }).limit(1);
+        return tableError;
       });
+      if (unavailable) {
+        setError(unavailable);
+        toast.error("A infraestrutura da live precisa ser corrigida no servidor.");
+        return;
+      }
+
+      stage = "device";
+      if (!navigator.mediaDevices?.getUserMedia) {
+        throw Object.assign(new Error("A captura de vídeo não está disponível nesta aba."), { name: "SecurityError" });
+      }
+
+      // Simple constraints work better in Safari/iOS than device-specific
+      // camera/facing-mode requirements. Existing browser grants are reused.
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+      } catch (deviceError) {
+        if (!isMissingMediaDevice(deviceError)) throw deviceError;
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+          toast.info("Microfone indisponível. A live será iniciada somente com vídeo.");
+        } catch (cameraError) {
+          if (!isMissingMediaDevice(cameraError)) throw cameraError;
+          stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+          toast.info("Câmera indisponível. A live será iniciada somente com áudio.");
+        }
+      }
+
+      stage = "server";
       const { data, error: insertError } = await db.from("community_live_sessions")
         .insert({
           host_id: user.id, title: name, room_name: "CaminhoDivino-" + crypto.randomUUID(),
@@ -210,6 +240,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
         })
         .select("id,host_id,title,room_name,status,last_heartbeat_at").single();
       if (insertError || !data) throw insertError ?? new Error("Não foi possível registrar a live.");
+
       localMedia.current = stream;
       stream = null;
       const newRoom: Room = { session: data as Session, role: "host" };
@@ -217,12 +248,16 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
       setRoom(newRoom);
       setConnected(false);
       setCreateOpen(false);
-      setMicOn(true);
-      setCameraOn(true);
+      setMicOn((localMedia.current?.getAudioTracks().length ?? 0) > 0);
+      setCameraOn((localMedia.current?.getVideoTracks().length ?? 0) > 0);
+      setHasVideoTrack((localMedia.current?.getVideoTracks().length ?? 0) > 0);
     } catch (issue) {
       stream?.getTracks().forEach((track) => track.stop());
-      setError(errorMessage(issue));
-      toast.error("Não foi possível iniciar a live. Confira câmera, microfone e conexão.");
+      const message = stage === "device"
+        ? explainLiveMediaError(issue)
+        : explainLiveBackendError(issue);
+      setError(message);
+      toast.error(message);
     } finally {
       setBusy(false);
     }
@@ -257,7 +292,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
       setJoining(true);
     } catch (issue) {
       setError(errorMessage(issue));
-      toast.error("Não foi possível entrar na live. Atualize e tente novamente.");
+      toast.error(explainLiveBackendError(issue));
     } finally {
       setBusy(false);
     }
@@ -576,7 +611,7 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
               className="min-h-12 w-full rounded-xl border border-blue-200 bg-white px-3 text-base text-slate-900 focus-visible:outline-2 focus-visible:outline-blue-600" />
           </label>
           <p className="text-xs text-slate-600 dark:text-slate-300">
-            Basta sua conta do Caminho Divino. Autorize câmera e microfone quando o navegador solicitar; não há login de anfitrião externo.
+            Sua conta do Caminho Divino é suficiente. Se a câmera e o microfone já estão autorizados, o navegador reutiliza essa permissão. Não há login externo de anfitrião.
           </p>
           <div className="flex gap-2">
             <button type="submit" disabled={busy || !user}
@@ -629,6 +664,9 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
           </div>
           {room.role === "host" ? (
             <>
+              {!hasVideoTrack && (
+                <p className="rounded-xl border border-white/20 p-3 text-sm text-white">Transmissão apenas com áudio — câmera indisponível neste dispositivo.</p>
+              )}
               <video ref={localVideo} muted playsInline autoPlay
                 aria-label="Prévia da sua câmera" className="aspect-video max-h-[65svh] w-full rounded-xl bg-black object-contain" />
               <div className="flex flex-wrap gap-2">
