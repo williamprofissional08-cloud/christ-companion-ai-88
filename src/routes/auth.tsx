@@ -2,7 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Eye, EyeOff, Mail, LockKeyhole, LogIn, UserRoundPlus, BookOpen, Mountain, UsersRound } from "lucide-react";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
+import { getSupabaseDiagnostics, supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +14,7 @@ function logAuthApiKeyError(error: unknown): void {
   // Log only diagnostic fields: never include email, password or request payloads.
   const authError = error as { name?: string; message?: string; code?: string; status?: number };
   console.error("[Auth] Supabase API key configuration error", {
+    ...getSupabaseDiagnostics(),
     name: authError?.name,
     message: authError?.message,
     code: authError?.code,

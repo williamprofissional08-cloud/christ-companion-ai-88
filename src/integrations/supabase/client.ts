@@ -92,6 +92,19 @@ function createProjectBoundAuthStorage(storage: Storage, supabaseUrl: string): P
   };
 }
 
+/** Safe browser configuration fingerprint; never expose the full public key in diagnostics. */
+export function getSupabaseDiagnostics(): { project: string; keyLast4: string } {
+  const url = import.meta.env['VITE_SUPABASE_URL'] || process.env['SUPABASE_URL'];
+  const key = import.meta.env['VITE_SUPABASE_PUBLISHABLE_KEY'] || process.env['SUPABASE_PUBLISHABLE_KEY'];
+  let project = '';
+  try {
+    project = url ? new URL(url).hostname.split('.')[0] ?? '' : '';
+  } catch {
+    // Do not include malformed URLs in logs.
+  }
+  return { project, keyLast4: key?.slice(-4) ?? '' };
+}
+
 function createSupabaseClient() {
   // Use import.meta.env for client-side (Vite build-time replacement)
   // Fall back to process.env for SSR (server-side rendering)
