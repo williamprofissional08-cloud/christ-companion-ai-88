@@ -26,6 +26,7 @@ import { requestNotificationPermission, sendTestReminder } from "@/hooks/use-rem
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
 import { ProfileEditor } from "@/components/settings/ProfileEditor";
+import { amIAdmin } from "@/lib/admin.functions";
 import { ProfileOverview } from "@/components/settings/ProfileOverview";
 import { SettingsOverview } from "@/components/settings/SettingsOverview";
 
@@ -51,6 +52,13 @@ function ConfiguracoesPage() {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const { user } = useAuth();
+  const checkAdmin = useServerFn(amIAdmin);
+  const { data: isAdmin = false } = useQuery({
+    queryKey: ["admin-permission", user?.id],
+    queryFn: () => checkAdmin(),
+    enabled: Boolean(user?.id),
+    retry: false,
+  });
   const [signingOut, setSigningOut] = useState(false);
   const [view, setView] = useState<"perfil" | "configuracoes">("perfil");
   const switchView = (next: "perfil" | "configuracoes") => {
@@ -225,6 +233,7 @@ function ConfiguracoesPage() {
         <h2 className="border-t border-slate-200 pt-5 text-lg font-bold text-[#0d2c55] dark:text-foreground">Ajustes detalhados</h2>
         <div className="grid gap-4 lg:grid-cols-2">
         <div id="profile-editor-details" className="scroll-mt-24 lg:col-span-2"><ProfileEditor /></div>
+        {isAdmin && (
         <Card className="border-primary/20 bg-gradient-to-br from-primary/10 via-background to-background p-5 shadow-soft sm:p-6 lg:col-span-2">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-start gap-3">
@@ -245,6 +254,7 @@ function ConfiguracoesPage() {
               </Button>
             </div>
         </Card>
+        )}
         <Card id="reminders-detail" className="scroll-mt-24 overflow-hidden rounded-2xl border-border/60 bg-card p-5 shadow-soft sm:p-6">
           <div className="mb-4 border-b border-border/60 pb-4">
           <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-primary">Sua rotina diária</p>
