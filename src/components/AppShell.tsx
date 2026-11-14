@@ -105,7 +105,7 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
 
       <div className="flex min-h-screen min-w-0 flex-1 flex-col">
         <header className="sticky top-0 z-30 border-b border-border/60 bg-white/90 backdrop-blur dark:bg-background/90">
-          <div className="mx-auto flex min-h-16 w-full max-w-screen-2xl items-center gap-3 px-3 py-2 sm:px-5 lg:px-8">
+          <div className="mx-auto flex min-h-16 w-full max-w-screen-2xl items-center gap-3 pl-3 pr-16 py-2 sm:pl-5 sm:pr-16 lg:pl-8 lg:pr-16">
             <div className="lg:hidden">
               <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild>
