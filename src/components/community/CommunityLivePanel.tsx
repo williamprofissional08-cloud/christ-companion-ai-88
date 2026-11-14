@@ -1,54 +1,47 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { SupabaseClient, User } from "@supabase/supabase-js";
-import { Radio, Video, X, Play, Loader2, Plus, UsersRound } from "lucide-react";
+import type { SupabaseClient, User, RealtimeChannel } from "@supabase/supabase-js";
+import { Camera, CameraOff, Loader2, Mic, MicOff, Play, Plus, Radio, ShieldBan, UsersRound, X } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+
+// The SQL migration creates these tables; the generated Supabase types are
+// refreshed after deployment, so use the same untyped adapter as existing community code.
 const db = supabase as unknown as SupabaseClient;
+const ICE: RTCConfiguration = {
+  iceServers: [
+    { urls: "stun:stun.l.google.com:19302" },
+    { urls: "stun:stun1.l.google.com:19302" },
+  ],
+};
 
 type Session = {
   id: string;
   host_id: string;
   title: string;
   room_name: string;
-  last_heartbeat_at: string;
   status: string;
+  last_heartbeat_at: string;
 };
-type JitsiInstance = {
-  addListener: (event: string, callback: () => void) => void;
-  dispose: () => void;
+type Member = { user_id: string; status: "joined" | "left" | "kicked"; joined_at: string };
+type Signal = {
+  id: string;
+  session_id: string;
+  sender_id: string;
+  receiver_id: string;
+  kind: "join" | "offer" | "answer" | "candidate" | "leave";
+  payload: Record<string, unknown>;
+  created_at: string;
 };
-type JitsiCtor = new (domain: string, options: {
-  roomName: string; parentNode: HTMLElement; width: string; height: number;
-  userInfo: { displayName: string };
-  configOverwrite: { prejoinPageEnabled: boolean };
-}) => JitsiInstance;
-type WithJitsi = Window & { JitsiMeetExternalAPI?: JitsiCtor };
-let loadingScript: Promise<void> | null = null;
+type Room = { session: Session; role: "host" | "viewer" };
 
-function loadJitsi() {
-  if (typeof window === "undefined") return Promise.reject(new Error("Navegador indisponível."));
-  if ((window as WithJitsi).JitsiMeetExternalAPI) return Promise.resolve();
-  if (loadingScript) return loadingScript;
-  loadingScript = new Promise<void>((resolve, reject) => {
-    const script = document.createElement("script");
-    script.src = "https://meet.jit.si/external_api.js";
-    script.async = true;
-    script.onload = () => (window as WithJitsi).JitsiMeetExternalAPI
-      ? resolve()
-      : reject(new Error("A sala de transmissão não pôde ser carregada."));
-    script.onerror = () => reject(new Error("Não foi possível conectar ao serviço de transmissão."));
-    document.head.appendChild(script);
-  }).catch((error: unknown) => {
-    loadingScript = null;
-    throw error;
-  });
-  return loadingScript;
+function errorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : "Não foi possível conectar à transmissão.";
 }
 
 /**
- * “Ao vivo” is conditional on an authenticated host joining a real conference.
- * A heartbeat expires after 50 seconds if they disconnect without ending it.
- * The public Jitsi service is third-party and may require its own host login.
+ * Small-room WebRTC live broadcast with authenticated Supabase signaling.
+ * There is no Jitsi moderator or third-party host login. This is P2P:
+ * an SFU/TURN service will be needed for large broadcasts or restrictive NATs.
  */
 export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
   user: User | null;
@@ -56,218 +49,586 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
   onRequestHandled: () => void;
 }) {
   const [sessions, setSessions] = useState<Session[]>([]);
-  const [title, setTitle] = useState("");
+  const [topic, setTopic] = useState("");
   const [createOpen, setCreateOpen] = useState(false);
-  const [room, setRoom] = useState<string | null>(null);
-  const [mode, setMode] = useState<"host" | "viewer">("viewer");
-  const [connecting, setConnecting] = useState(false);
+  const [room, setRoom] = useState<Room | null>(null);
+  const [members, setMembers] = useState<Member[]>([]);
+  const [busy, setBusy] = useState(false);
+  const [joining, setJoining] = useState(false);
   const [connected, setConnected] = useState(false);
-  const frameRef = useRef<HTMLDivElement>(null);
-  const apiRef = useRef<JitsiInstance | null>(null);
-  const heartbeatRef = useRef<number | null>(null);
-  const hostIdRef = useRef<string | null>(null);
-  const sessionIdRef = useRef<string | null>(null);
+  const [playBlocked, setPlayBlocked] = useState(false);
+  const [micOn, setMicOn] = useState(true);
+  const [cameraOn, setCameraOn] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const load = useCallback(async () => {
-    const threshold = new Date(Date.now() - 50_000).toISOString();
-    const { data, error } = await db.from("community_live_sessions")
-      .select("id,host_id,title,room_name,last_heartbeat_at,status")
-      .eq("status", "live").gt("last_heartbeat_at", threshold)
-      .order("started_at", { ascending: false }).limit(10);
-    if (!error) setSessions((data ?? []) as Session[]);
-    else setSessions([]);
+  const liveRoom = useRef<Room | null>(null);
+  const localMedia = useRef<MediaStream | null>(null);
+  const localVideo = useRef<HTMLVideoElement>(null);
+  const remoteVideo = useRef<HTMLVideoElement>(null);
+  const channel = useRef<RealtimeChannel | null>(null);
+  const peers = useRef<Map<string, RTCPeerConnection>>(new Map());
+  const pendingCandidates = useRef<Map<string, RTCIceCandidateInit[]>>(new Map());
+  const heartbeatTimer = useRef<number | null>(null);
+  const memberTimer = useRef<number | null>(null);
+  const processed = useRef<Set<string>>(new Set());
+
+  const loadSessions = useCallback(async () => {
+    const after = new Date(Date.now() - 50_000).toISOString();
+    const { data, error: readError } = await db.from("community_live_sessions")
+      .select("id,host_id,title,room_name,status,last_heartbeat_at")
+      .eq("status", "live").gt("last_heartbeat_at", after)
+      .order("started_at", { ascending: false }).limit(20);
+    if (!readError) setSessions((data ?? []) as Session[]);
+  }, []);
+
+  const loadMembers = useCallback(async (sessionId: string) => {
+    const { data, error: readError } = await db.from("community_live_participants")
+      .select("user_id,status,joined_at").eq("session_id", sessionId);
+    if (!readError) setMembers((data ?? []) as Member[]);
   }, []);
 
   useEffect(() => {
     if (!user) return;
-    void load();
-    const timer = window.setInterval(() => void load(), 12_000);
+    void loadSessions();
+    const timer = window.setInterval(() => void loadSessions(), 10_000);
     return () => window.clearInterval(timer);
-  }, [user, load]);
+  }, [user?.id, loadSessions]);
 
   useEffect(() => {
-    if (requestOpen) {
-      setCreateOpen(true);
-      onRequestHandled();
-    }
+    if (!requestOpen) return;
+    setCreateOpen(true);
+    onRequestHandled();
   }, [requestOpen, onRequestHandled]);
 
-  function clearRoom() {
-    if (heartbeatRef.current !== null) window.clearInterval(heartbeatRef.current);
-    heartbeatRef.current = null;
-    apiRef.current?.dispose();
-    apiRef.current = null;
+  useEffect(() => {
+    if (room?.role === "host" && localVideo.current && localMedia.current) {
+      localVideo.current.srcObject = localMedia.current;
+      void localVideo.current.play().catch(() => {});
+    }
+  }, [room?.session.id, room?.role]);
+
+  function closePeers() {
+    for (const peer of peers.current.values()) peer.close();
+    peers.current.clear();
+    pendingCandidates.current.clear();
   }
 
-  async function endHost() {
-    const id = sessionIdRef.current;
-    sessionIdRef.current = null;
-    if (id && hostIdRef.current === user?.id) {
-      await db.from("community_live_sessions")
-        .update({ status: "ended", ended_at: new Date().toISOString() })
-        .eq("id", id).eq("host_id", user.id);
+  function tearDown() {
+    if (heartbeatTimer.current !== null) window.clearInterval(heartbeatTimer.current);
+    if (memberTimer.current !== null) window.clearInterval(memberTimer.current);
+    heartbeatTimer.current = null;
+    memberTimer.current = null;
+    if (channel.current) {
+      void db.removeChannel(channel.current);
+      channel.current = null;
     }
-    clearRoom();
+    closePeers();
+    localMedia.current?.getTracks().forEach((track) => track.stop());
+    localMedia.current = null;
+    if (remoteVideo.current) remoteVideo.current.srcObject = null;
+    processed.current.clear();
+  }
+
+  async function leaveRoom() {
+    const active = liveRoom.current;
+    if (!active || !user) return;
+    liveRoom.current = null;
+    tearDown();
     setRoom(null);
     setConnected(false);
-    setConnecting(false);
-    await load();
+    setJoining(false);
+    setPlayBlocked(false);
+    setMembers([]);
+    if (active.role === "host") {
+      const { error: endError } = await db.from("community_live_sessions")
+        .update({ status: "ended", ended_at: new Date().toISOString() })
+        .eq("id", active.session.id).eq("host_id", user.id);
+      if (endError) toast.error("Falha ao encerrar a transmissão no servidor.");
+    } else {
+      await db.from("community_live_participants")
+        .update({ status: "left", updated_at: new Date().toISOString() })
+        .eq("session_id", active.session.id).eq("user_id", user.id)
+        .eq("status", "joined");
+    }
+    await loadSessions();
+  }
+
+  async function startLive() {
+    if (!user || busy || liveRoom.current) return;
+    const name = topic.trim();
+    if (name.length < 5 || name.length > 90) {
+      toast.error("Escreva um título entre 5 e 90 caracteres.");
+      return;
+    }
+    setBusy(true);
+    setError(null);
+    let stream: MediaStream | null = null;
+    try {
+      if (!navigator.mediaDevices?.getUserMedia) {
+        throw new Error("Este navegador não permite usar câmera e microfone. Use HTTPS em um navegador atualizado.");
+      }
+      // The only device prompt is the normal browser permission, not host authentication.
+      stream = await navigator.mediaDevices.getUserMedia({
+        audio: { echoCancellation: true, noiseSuppression: true },
+        video: { facingMode: "user", width: { ideal: 720 }, height: { ideal: 480 } },
+      });
+      const { data, error: insertError } = await db.from("community_live_sessions")
+        .insert({
+          host_id: user.id, title: name, room_name: "CaminhoDivino-" + crypto.randomUUID(),
+          status: "live",
+          // Do not display a not-yet-connected stream as live.
+          last_heartbeat_at: new Date(Date.now() - 120_000).toISOString(),
+        })
+        .select("id,host_id,title,room_name,status,last_heartbeat_at").single();
+      if (insertError || !data) throw insertError ?? new Error("Não foi possível registrar a live.");
+      localMedia.current = stream;
+      stream = null;
+      const newRoom: Room = { session: data as Session, role: "host" };
+      liveRoom.current = newRoom;
+      setRoom(newRoom);
+      setConnected(false);
+      setCreateOpen(false);
+      setMicOn(true);
+      setCameraOn(true);
+    } catch (issue) {
+      stream?.getTracks().forEach((track) => track.stop());
+      setError(errorMessage(issue));
+      toast.error("Não foi possível iniciar a live. Confira câmera, microfone e conexão.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function joinLive(session: Session) {
+    if (!user || busy || liveRoom.current) return;
+    setBusy(true);
+    setError(null);
+    try {
+      if (session.host_id === user.id) {
+        throw new Error("Esta live foi iniciada por você em outra janela. Volte à janela da transmissão.");
+      }
+      const { data: existing, error: readError } = await db.from("community_live_participants")
+        .select("status").eq("session_id", session.id).eq("user_id", user.id).maybeSingle();
+      if (readError) throw readError;
+      if (existing?.status === "kicked") {
+        throw new Error("O organizador removeu sua participação nesta transmissão.");
+      }
+      const result = existing
+        ? await db.from("community_live_participants")
+          .update({ status: "joined", updated_at: new Date().toISOString() })
+          .eq("session_id", session.id).eq("user_id", user.id)
+          .eq("status", "left")
+        : await db.from("community_live_participants")
+          .insert({ session_id: session.id, user_id: user.id, status: "joined" });
+      if (result.error) throw result.error;
+      const newRoom: Room = { session, role: "viewer" };
+      liveRoom.current = newRoom;
+      setRoom(newRoom);
+      setConnected(false);
+      setJoining(true);
+    } catch (issue) {
+      setError(errorMessage(issue));
+      toast.error("Não foi possível entrar na live. Atualize e tente novamente.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  function toggleMicrophone() {
+    const audio = localMedia.current?.getAudioTracks() ?? [];
+    if (!audio.length) return;
+    const next = !audio[0]?.enabled;
+    audio.forEach((track) => { track.enabled = next; });
+    setMicOn(next);
+  }
+
+  function toggleCamera() {
+    const video = localMedia.current?.getVideoTracks() ?? [];
+    if (!video.length) return;
+    const next = !video[0]?.enabled;
+    video.forEach((track) => { track.enabled = next; });
+    setCameraOn(next);
+  }
+
+  async function kickMember(memberId: string) {
+    const active = liveRoom.current;
+    if (!active || active.role !== "host" || !user) return;
+    if (!window.confirm("Remover esta pessoa da transmissão? Ela não poderá voltar nesta live.")) return;
+    const { error: kickError } = await db.from("community_live_participants")
+      .update({ status: "kicked", updated_at: new Date().toISOString() })
+      .eq("session_id", active.session.id).eq("user_id", memberId).eq("status", "joined");
+    if (kickError) { toast.error("Não foi possível remover o participante."); return; }
+    peers.current.get(memberId)?.close();
+    peers.current.delete(memberId);
+    await loadMembers(active.session.id);
+    toast.success("Participante removido da transmissão.");
   }
 
   useEffect(() => {
-    if (!room || !frameRef.current || !user) return;
+    if (!room || !user) return;
     let cancelled = false;
-    let instance: JitsiInstance | null = null;
-    const host = mode === "host";
-    setConnecting(true);
-    void (async () => {
-      try {
-        await loadJitsi();
-        if (cancelled || !frameRef.current) return;
-        const API = (window as WithJitsi).JitsiMeetExternalAPI;
-        if (!API) throw new Error("Transmissão não disponível.");
-        instance = new API("meet.jit.si", {
-          roomName: room, parentNode: frameRef.current, width: "100%", height: 450,
-          userInfo: { displayName: String(user.user_metadata?.["full_name"] ?? user.email?.split("@")[0] ?? "Membro") },
-          configOverwrite: { prejoinPageEnabled: true },
-        });
-        apiRef.current = instance;
-        instance.addListener("videoConferenceJoined", () => {
-          if (cancelled) return;
-          setConnected(true);
-          setConnecting(false);
-          if (!host) return;
-          void (async () => {
-            const { data, error } = await db.from("community_live_sessions")
-              .insert({ host_id: user.id, title: title.trim(), room_name: room, status: "live" })
-              .select("id").single();
-            if (error || !data) {
-              toast.error("A live conectou, mas não pôde ser publicada. Verifique a configuração da comunidade.");
-              clearRoom();
-              setRoom(null);
-              return;
-            }
-            if (cancelled || apiRef.current === null) {
-              await db.from("community_live_sessions").update({
-                status:"ended",ended_at:new Date().toISOString(),
-              }).eq("id",data.id).eq("host_id",user.id);
-              return;
-            }
-            sessionIdRef.current = data.id;
-            hostIdRef.current = user.id;
-            void load();
-            heartbeatRef.current = window.setInterval(() => {
-              if (sessionIdRef.current) void db.from("community_live_sessions")
-                .update({ last_heartbeat_at: new Date().toISOString() })
-                .eq("id", sessionIdRef.current).eq("host_id", user.id);
-            }, 15_000);
-          })();
-        });
-        instance.addListener("videoConferenceLeft", () => {
-          if (!cancelled) void endHost();
-        });
-        instance.addListener("readyToClose", () => {
-          if (!cancelled) void endHost();
-        });
-      } catch (error) {
-        if (!cancelled) {
-          toast.error(error instanceof Error ? error.message : "Não foi possível abrir a transmissão.");
-          setRoom(null);
-          setConnecting(false);
+    const { session, role } = room;
+    const myId = user.id;
+    const currentRoomId = session.id;
+    const amHost = role === "host";
+    const signalChannel = db.channel("cd-native-live-" + currentRoomId + "-" + myId);
+    channel.current = signalChannel;
+
+    async function send(kind: Signal["kind"], to: string, payload: Record<string, unknown> = {}) {
+      if (cancelled || liveRoom.current?.session.id !== currentRoomId) return;
+      const { error: signalError } = await db.from("community_live_signals").insert({
+        session_id: currentRoomId,
+        sender_id: myId,
+        receiver_id: to,
+        kind,
+        payload,
+      });
+      if (signalError) throw signalError;
+    }
+
+    async function flushCandidates(peerId: string, peer: RTCPeerConnection) {
+      const queued = pendingCandidates.current.get(peerId) ?? [];
+      pendingCandidates.current.delete(peerId);
+      for (const ice of queued) await peer.addIceCandidate(ice);
+    }
+
+    function createPeer(peerId: string, host: boolean) {
+      peers.current.get(peerId)?.close();
+      const peer = new RTCPeerConnection(ICE);
+      peers.current.set(peerId, peer);
+      peer.onicecandidate = (event) => {
+        if (event.candidate && !cancelled) {
+          void send("candidate", peerId, { candidate: event.candidate.toJSON() })
+            .catch(() => setError("Falha na negociação de vídeo. Verifique sua conexão."));
         }
+      };
+      peer.onconnectionstatechange = () => {
+        if (cancelled) return;
+        if (peer.connectionState === "failed") {
+          setError("Não foi possível estabelecer o vídeo nesta rede. Uma conexão TURN pode ser necessária.");
+          if (!host) setJoining(false);
+        } else if (peer.connectionState === "connected" && !host) {
+          setJoining(false);
+          setConnected(true);
+          setError(null);
+        }
+      };
+      if (host) {
+        localMedia.current?.getTracks().forEach((track) => {
+          if (localMedia.current) peer.addTrack(track, localMedia.current);
+        });
+      } else {
+        peer.ontrack = (event) => {
+          if (!remoteVideo.current) return;
+          remoteVideo.current.srcObject = event.streams[0] ?? new MediaStream([event.track]);
+          void remoteVideo.current.play().then(() => setPlayBlocked(false))
+            .catch(() => setPlayBlocked(true));
+          setJoining(false);
+          setConnected(true);
+        };
       }
-    })();
+      return peer;
+    }
+
+    async function isJoined(viewerId: string) {
+      const { data, error: resultError } = await db.from("community_live_participants")
+        .select("status").eq("session_id", currentRoomId).eq("user_id", viewerId).maybeSingle();
+      return !resultError && data?.status === "joined";
+    }
+
+    async function processSignal(signal: Signal) {
+      if (cancelled || liveRoom.current?.session.id !== currentRoomId) return;
+      if (signal.session_id !== currentRoomId || signal.receiver_id !== myId) return;
+      if (processed.current.has(signal.id)) return;
+      processed.current.add(signal.id);
+      if (processed.current.size > 1000) processed.current.clear();
+      const from = signal.sender_id;
+      const payload = signal.payload ?? {};
+      if (!amHost && from !== session.host_id) return;
+      if (amHost && !(await isJoined(from))) return;
+
+      try {
+        if (signal.kind === "join" && amHost) {
+          const peer = createPeer(from, true);
+          await peer.setLocalDescription(await peer.createOffer());
+          await send("offer", from, { sdp: peer.localDescription?.toJSON() });
+          void loadMembers(currentRoomId);
+        } else if (signal.kind === "offer" && !amHost) {
+          const sdp = payload["sdp"] as RTCSessionDescriptionInit | undefined;
+          if (!sdp || sdp.type !== "offer" || typeof sdp.sdp !== "string") return;
+          const peer = createPeer(from, false);
+          await peer.setRemoteDescription(sdp);
+          await flushCandidates(from, peer);
+          await peer.setLocalDescription(await peer.createAnswer());
+          await send("answer", from, { sdp: peer.localDescription?.toJSON() });
+        } else if (signal.kind === "answer" && amHost) {
+          const sdp = payload["sdp"] as RTCSessionDescriptionInit | undefined;
+          const peer = peers.current.get(from);
+          if (peer && sdp?.type === "answer" && typeof sdp.sdp === "string") {
+            await peer.setRemoteDescription(sdp);
+            await flushCandidates(from, peer);
+          }
+        } else if (signal.kind === "candidate") {
+          const candidate = payload["candidate"] as RTCIceCandidateInit | undefined;
+          if (!candidate || typeof candidate.candidate !== "string") return;
+          const peer = peers.current.get(from);
+          if (peer?.remoteDescription) await peer.addIceCandidate(candidate);
+          else pendingCandidates.current.set(from, [...(pendingCandidates.current.get(from) ?? []), candidate]);
+        } else if (signal.kind === "leave" && amHost) {
+          peers.current.get(from)?.close();
+          peers.current.delete(from);
+          void loadMembers(currentRoomId);
+        }
+      } catch (issue) {
+        if (!cancelled) setError("Falha ao conectar vídeo: " + errorMessage(issue));
+      }
+    }
+
+    signalChannel
+      .on("postgres_changes", {
+        event: "INSERT", schema: "public", table: "community_live_signals",
+        filter: "receiver_id=eq." + myId,
+      }, (message) => {
+        void processSignal(message.new as Signal);
+      })
+      .subscribe((status) => {
+        if (cancelled) return;
+        if (status === "SUBSCRIBED") {
+          if (amHost) {
+            void (async () => {
+              const { error: activationError } = await db.from("community_live_sessions")
+                .update({ last_heartbeat_at: new Date().toISOString() })
+                .eq("id", currentRoomId).eq("host_id", myId);
+              if (cancelled) return;
+              if (activationError) {
+                setError("A live não pôde ser ativada. Verifique as tabelas e as permissões do Supabase.");
+                return;
+              }
+              setConnected(true);
+              setJoining(false);
+              void loadSessions();
+              void loadMembers(currentRoomId);
+              heartbeatTimer.current = window.setInterval(() => {
+                void db.from("community_live_sessions")
+                  .update({ last_heartbeat_at: new Date().toISOString() })
+                  .eq("id", currentRoomId).eq("host_id", myId);
+              }, 15_000);
+            })();
+          } else {
+            void send("join", session.host_id).catch(() => {
+              setError("Não foi possível comunicar sua entrada ao anfitrião.");
+              setJoining(false);
+            });
+          }
+        } else if (status === "CHANNEL_ERROR" || status === "TIMED_OUT") {
+          setError("A conexão em tempo real falhou. Verifique sua internet.");
+          setJoining(false);
+        }
+      });
+
+    memberTimer.current = window.setInterval(() => {
+      if (cancelled) return;
+      if (amHost) {
+        void (async () => {
+          await loadMembers(currentRoomId);
+          const { data } = await db.from("community_live_participants")
+            .select("user_id,status").eq("session_id",currentRoomId);
+          const joined = new Set(((data ?? []) as Member[]).filter(p => p.status === "joined").map(p => p.user_id));
+          for (const [id, peer] of peers.current) {
+            if (!joined.has(id)) { peer.close(); peers.current.delete(id); }
+          }
+        })();
+      } else {
+        void (async () => {
+          const [membership, activeSession] = await Promise.all([
+            db.from("community_live_participants").select("status")
+              .eq("session_id", currentRoomId).eq("user_id", myId).maybeSingle(),
+            db.from("community_live_sessions").select("status,last_heartbeat_at")
+              .eq("id", currentRoomId).maybeSingle(),
+          ]);
+          if (cancelled) return;
+          const currentState = membership.data?.status;
+          const liveStatus = activeSession.data;
+          if (currentState === "kicked") {
+            toast.error("O organizador removeu você desta live.");
+            void leaveRoom();
+          } else if (!liveStatus || liveStatus.status !== "live" ||
+            Date.now() - new Date(liveStatus.last_heartbeat_at).getTime() > 55_000) {
+            toast.info("A transmissão foi encerrada.");
+            void leaveRoom();
+          }
+        })();
+      }
+    }, 5_000);
+
     return () => {
       cancelled = true;
-      instance?.dispose();
-      if (heartbeatRef.current !== null) window.clearInterval(heartbeatRef.current);
-      heartbeatRef.current = null;
-      const id = sessionIdRef.current;
-      sessionIdRef.current = null;
-      if (host && id) void db.from("community_live_sessions")
-        .update({ status: "ended", ended_at: new Date().toISOString() })
-        .eq("id", id).eq("host_id", user.id);
+      if (heartbeatTimer.current !== null) window.clearInterval(heartbeatTimer.current);
+      if (memberTimer.current !== null) window.clearInterval(memberTimer.current);
+      heartbeatTimer.current = null;
+      memberTimer.current = null;
+      void db.removeChannel(signalChannel);
+      if (channel.current === signalChannel) channel.current = null;
+      closePeers();
+      // Also handle browser navigation away from the live without leaving a ghost session.
+      if (liveRoom.current?.session.id === currentRoomId) {
+        liveRoom.current = null;
+        localMedia.current?.getTracks().forEach((track) => track.stop());
+        localMedia.current = null;
+        if (amHost) {
+          void db.from("community_live_sessions")
+            .update({ status: "ended", ended_at: new Date().toISOString() })
+            .eq("id", currentRoomId).eq("host_id", myId);
+        } else {
+          void db.from("community_live_participants")
+            .update({ status: "left", updated_at: new Date().toISOString() })
+            .eq("session_id", currentRoomId).eq("user_id", myId).eq("status", "joined");
+        }
+      }
     };
-    // Room is intentionally not restarted by title/connection state changes.
+    // The signaling session starts once per room and is not remounted by UI updates.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [room, mode, user?.id]);
+  }, [room?.session.id, room?.role, user?.id]);
 
-  function startLive() {
-    if (!user) return;
-    const trimmed = title.trim();
-    if (trimmed.length < 5 || trimmed.length > 90) {
-      toast.error("Escolha um tema de 5 a 90 caracteres, como 'Culto da Comunhão'.");
-      return;
+  async function enablePlayback() {
+    if (!remoteVideo.current) return;
+    try {
+      await remoteVideo.current.play();
+      setPlayBlocked(false);
+    } catch {
+      toast.error("Toque no controle de reprodução do vídeo para ativar o som.");
     }
-    setCreateOpen(false);
-    setMode("host");
-    setRoom("CaminhoDivino-" + crypto.randomUUID());
-  }
-
-  function watch(item: Session) {
-    setMode("viewer");
-    setTitle(item.title);
-    setRoom(item.room_name);
   }
 
   return (
     <section id="community-live" className="space-y-3">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h3 className="flex items-center gap-2 text-lg font-bold text-[#102c55] dark:text-foreground">
-          <Radio className="size-5 text-amber-500" /> Transmissões da Comunidade
+          <Radio className="size-5 text-amber-500" /> Lives da Comunidade
         </h3>
-        <button type="button" onClick={() => setCreateOpen((v) => !v)}
-          className="inline-flex min-h-10 items-center gap-2 rounded-full border border-blue-300 bg-white px-4 text-sm font-semibold text-blue-800 shadow-sm hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600 dark:bg-card dark:text-blue-300">
+        <button type="button" onClick={() => setCreateOpen((value) => !value)}
+          disabled={Boolean(room)}
+          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-blue-300 bg-white px-4 text-sm font-semibold text-blue-800 shadow-sm hover:bg-blue-50 disabled:opacity-50 dark:bg-card dark:text-blue-300">
           <Plus className="size-4" /> Iniciar minha live
         </button>
       </div>
 
-      {createOpen && (
-        <div className="space-y-3 rounded-2xl border border-blue-200 bg-blue-50 p-4 text-[#132a4b] dark:bg-slate-900 dark:text-foreground">
+      {createOpen && !room && (
+        <form onSubmit={(event) => { event.preventDefault(); void startLive(); }}
+          className="space-y-3 rounded-2xl border border-blue-200 bg-blue-50 p-4 dark:bg-slate-900">
           <label className="block space-y-2 text-sm font-semibold">
-            Qual será o tema da sua transmissão?
-            <input value={title} onChange={(e) => setTitle(e.target.value)}
-              minLength={5} maxLength={90} placeholder="Ex.: Culto da Comunhão, Oração, Testemunho"
+            Qual é o tema da sua live?
+            <input value={topic} onChange={(event) => setTopic(event.target.value)}
+              minLength={5} maxLength={90} required
+              placeholder="Pregação, Culto da Comunhão, Oração, Testemunho..."
               className="min-h-12 w-full rounded-xl border border-blue-200 bg-white px-3 text-base text-slate-900 focus-visible:outline-2 focus-visible:outline-blue-600" />
           </label>
-          <p className="text-xs text-slate-600 dark:text-slate-300">Sua live só aparecerá para outras pessoas quando você entrar na sala de vídeo. Serviço externo de reuniões, sujeito às regras do provedor.</p>
+          <p className="text-xs text-slate-600 dark:text-slate-300">
+            Basta sua conta do Caminho Divino. Autorize câmera e microfone quando o navegador solicitar; não há login de anfitrião externo.
+          </p>
           <div className="flex gap-2">
-            <button type="button" onClick={startLive} disabled={!user}
-              className="min-h-11 rounded-full bg-blue-700 px-5 text-sm font-semibold text-white hover:bg-blue-800">Abrir transmissão</button>
-            <button type="button" onClick={() => setCreateOpen(false)} className="min-h-11 rounded-full border px-4 text-sm">Cancelar</button>
+            <button type="submit" disabled={busy || !user}
+              className="inline-flex min-h-11 items-center gap-2 rounded-full bg-blue-700 px-5 text-sm font-semibold text-white hover:bg-blue-800 disabled:opacity-50">
+              {busy ? <Loader2 className="size-4 animate-spin" /> : <Radio className="size-4" />}
+              {busy ? "Iniciando…" : "Iniciar transmissão"}
+            </button>
+            <button type="button" onClick={() => setCreateOpen(false)}
+              className="min-h-11 rounded-full border border-blue-200 px-4 text-sm">Cancelar</button>
           </div>
-        </div>
+        </form>
       )}
 
       {sessions.length > 0 && (
         <div className="space-y-2">
-          <p className="inline-flex items-center gap-2 text-sm font-semibold text-red-700 dark:text-red-300"><span className="size-2 animate-pulse rounded-full bg-red-500" /> AO VIVO AGORA</p>
+          <p className="flex items-center gap-2 text-sm font-bold text-red-700 dark:text-red-300">
+            <span className="size-2 animate-pulse rounded-full bg-red-600" /> AO VIVO AGORA
+          </p>
           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {sessions.map((item) => (
-              <button key={item.id} type="button" onClick={() => watch(item)}
-                className="flex min-h-20 items-center gap-3 rounded-2xl border border-blue-200 bg-gradient-to-r from-[#0b3768] to-[#0b67a9] p-4 text-left text-white shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
-                <Video className="size-7 shrink-0 text-amber-300" />
-                <span className="min-w-0 flex-1"><span className="block truncate font-bold">{item.title}</span><span className="text-xs text-blue-100">Assistir ao vivo</span></span>
+            {sessions.map((session) => (
+              <button key={session.id} type="button" disabled={busy || Boolean(room)}
+                onClick={() => void joinLive(session)}
+                className="flex min-h-20 items-center gap-3 rounded-2xl border border-blue-200 bg-gradient-to-r from-[#0b3768] to-[#0b67a9] p-4 text-left text-white shadow-md disabled:opacity-60">
+                <Radio className="size-7 shrink-0 text-amber-300" />
+                <span className="min-w-0 flex-1">
+                  <span className="block break-words font-bold">{session.title}</span>
+                  <span className="text-xs text-blue-100">Entrar e assistir · sem pedir autorização</span>
+                </span>
                 <Play className="size-5 shrink-0" />
               </button>
             ))}
           </div>
         </div>
       )}
+
       {room && (
-        <div className="space-y-3 rounded-2xl border border-blue-200 bg-[#081f3a] p-3 text-white">
+        <div className="space-y-3 rounded-2xl border border-blue-200 bg-[#092342] p-3 text-white">
           <div className="flex items-center justify-between gap-2">
-            <p className="flex items-center gap-2 text-sm font-semibold"><UsersRound className="size-4" /> {mode === "host" ? "Sua transmissão" : "Participando da transmissão"}</p>
-            <button type="button" onClick={() => void endHost()}
-              className="flex min-h-10 items-center gap-1 rounded-full border border-white/40 px-3 text-sm hover:bg-white/10" aria-label="Sair da transmissão">
-              <X className="size-4" /> Encerrar / Sair
+            <div className="min-w-0">
+              <p className="truncate text-sm font-bold">{room.session.title}</p>
+              <p className="text-xs text-blue-100">
+                {room.role === "host" ? "Você está transmitindo" : "Assistindo à live"}
+              </p>
+            </div>
+            <button type="button" onClick={() => void leaveRoom()}
+              className="inline-flex min-h-11 items-center gap-2 rounded-full border border-white/40 px-3 text-sm hover:bg-white/10">
+              <X className="size-4" />
+              {room.role === "host" ? "Encerrar live" : "Sair da live"}
             </button>
           </div>
-          {connecting && <p className="flex items-center gap-2 text-sm"><Loader2 className="size-4 animate-spin" /> Conectando à sala…</p>}
-          {connected && <p className="text-xs text-blue-100">Conexão estabelecida. Respeite a privacidade e obtenha consentimento de todos os participantes.</p>}
-          <div ref={frameRef} className="min-h-[300px] overflow-hidden rounded-xl bg-black" />
+          {room.role === "host" ? (
+            <>
+              <video ref={localVideo} muted playsInline autoPlay
+                aria-label="Prévia da sua câmera" className="aspect-video max-h-[65svh] w-full rounded-xl bg-black object-contain" />
+              <div className="flex flex-wrap gap-2">
+                <button type="button" onClick={toggleMicrophone}
+                  className="flex min-h-11 items-center gap-2 rounded-full border border-white/30 px-4 text-sm">
+                  {micOn ? <Mic className="size-4" /> : <MicOff className="size-4" />}
+                  {micOn ? "Desligar microfone" : "Ligar microfone"}
+                </button>
+                <button type="button" onClick={toggleCamera}
+                  className="flex min-h-11 items-center gap-2 rounded-full border border-white/30 px-4 text-sm">
+                  {cameraOn ? <Camera className="size-4" /> : <CameraOff className="size-4" />}
+                  {cameraOn ? "Desligar câmera" : "Ligar câmera"}
+                </button>
+              </div>
+              <div className="space-y-2 rounded-xl border border-white/20 p-3">
+                <h4 className="flex items-center gap-2 text-sm font-semibold">
+                  <UsersRound className="size-4" /> Participantes ({members.filter((item) => item.status === "joined").length})
+                </h4>
+                {members.filter((item) => item.status === "joined").length === 0 ? (
+                  <p className="text-xs text-blue-100">Aguardando a entrada de participantes.</p>
+                ) : members.filter((item) => item.status === "joined").map((member) => (
+                  <div key={member.user_id} className="flex items-center justify-between gap-3 rounded-lg bg-white/10 p-2">
+                    <span className="min-w-0 truncate text-xs">Membro {member.user_id.slice(0, 8)}</span>
+                    <button type="button" onClick={() => void kickMember(member.user_id)}
+                      className="flex min-h-10 items-center gap-1 rounded-lg border border-red-200/40 px-3 text-xs text-white hover:bg-red-700">
+                      <ShieldBan className="size-4" /> Remover
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <>
+              <video ref={remoteVideo} playsInline autoPlay controls
+                aria-label="Vídeo da transmissão" className="aspect-video max-h-[65svh] w-full rounded-xl bg-black object-contain" />
+              {joining && <p className="flex items-center gap-2 text-xs text-blue-100">
+                <Loader2 className="size-4 animate-spin" /> Entrando automaticamente na transmissão…
+              </p>}
+              {playBlocked && <button type="button" onClick={() => void enablePlayback()}
+                className="min-h-11 rounded-full bg-blue-600 px-5 text-sm font-semibold text-white">
+                <Play className="mr-2 inline size-4" /> Ativar som e vídeo
+              </button>}
+            </>
+          )}
+          {connected && <p className="text-xs text-blue-100">
+            {room.role === "host"
+              ? "Transmissão ativa. Os participantes podem entrar sem aguardar aprovação."
+              : "Conexão estabelecida. O microfone e a câmera do espectador permanecem desativados."}
+          </p>}
         </div>
       )}
+      {error && <p role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{error}</p>}
     </section>
   );
 }
