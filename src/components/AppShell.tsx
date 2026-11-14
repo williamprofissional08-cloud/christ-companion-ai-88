@@ -192,8 +192,8 @@ export function AppShell({
               <div className="flex min-w-0 flex-1 items-center justify-center gap-2 lg:justify-start">
                 <img src={logo} alt="" width={34} height={34} className="size-9 shrink-0 object-contain" />
                 <div className="min-w-0 text-center lg:text-left">
-                  <p className="truncate font-display text-base font-bold tracking-tight text-[#142d59] dark:text-foreground">Caminho Divino</p>
-                  <p className="truncate text-[10px] text-slate-500 dark:text-muted-foreground">Estudo • Ensino • Comunhão</p>
+                  <p className="truncate font-display text-base font-bold tracking-tight text-white">Caminho Divino</p>
+                  <p className="truncate text-[10px] text-blue-100">Estudo • Ensino • Comunhão</p>
                 </div>
               </div>
             ) : (
@@ -205,8 +205,8 @@ export function AppShell({
             {homeHeader && (
               <div className="flex shrink-0 items-center gap-1">
                 <MusicControlButton className="hidden size-10 lg:inline-flex" />
-                <Link to="/pesquisa" aria-label="Pesquisar" className="flex size-8 sm:size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Search className="size-5" /></Link>
-                <Link to="/configuracoes" aria-label="Notificações e preferências" className="flex size-10 items-center justify-center rounded-full text-[#173f7c] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600"><Bell className="size-5" /></Link>
+                <Link to="/pesquisa" aria-label="Pesquisar" className="flex size-8 sm:size-10 items-center justify-center rounded-full text-white hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-blue-600"><Search className="size-5" /></Link>
+                <Link to="/configuracoes" aria-label="Notificações e preferências" className="flex size-10 items-center justify-center rounded-full text-white hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-blue-600"><Bell className="size-5" /></Link>
               </div>
             )}
             {homeHeader ? (
