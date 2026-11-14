@@ -60,8 +60,6 @@ function ComunidadePage() {
   const [busy, setBusy] = useState(false);
   const [tab, setTab] = useState("todos");
   const [expandedText, setExpandedText] = useState<string | null>(null);
-  const [pollChoice, setPollChoice] = useState("");
-  const [pollVoted, setPollVoted] = useState(false);
   const [composer, setComposer] = useState(false);
   const [libraryForm, setLibraryForm] = useState(false);
   const [category, setCategory] = useState<Category>("reflexao");
@@ -133,12 +131,24 @@ function ComunidadePage() {
     return () => { alive = false; };
   }, [reload]);
 
+  useEffect(() => {
+    if (!user) return;
+    const channel=db.channel("community-social-feed-" + user.id)
+      .on("postgres_changes",{event:"*",schema:"public",table:"community_posts"},
+        () => { void reload(user); })
+      .on("postgres_changes",{event:"*",schema:"public",table:"community_reactions"},
+        () => { void reload(user); })
+      .subscribe();
+    const timer=window.setInterval(()=>void reload(user),45000);
+    return () => { window.clearInterval(timer);void db.removeChannel(channel); };
+  },[user?.id,reload]);
+
   const shownPosts = useMemo(() => {
     if (tab === "forum") return posts.filter((p) => p.category === "pergunta" || p.category === "debate");
     if (tab === "estudos") return posts.filter((p) => p.category === "estudo");
     if (tab === "testemunhos") return posts.filter((p) => p.category === "testemunho");
+    if (tab === "oracoes") return posts.filter((p) => p.category === "oracao");
     if (tab === "arquivos") return [];
-    if (tab === "forum") return posts.filter((p) => p.category === "pergunta" || p.category === "debate" || p.category === "reflexao");
     return posts;
   }, [posts, tab]);
 
@@ -276,91 +286,23 @@ function ComunidadePage() {
 
         <Tabs value={tab} onValueChange={setTab}>
           <TabsList className="flex h-auto w-full justify-start gap-1 overflow-x-auto rounded-2xl bg-muted/80 p-1">
-            <TabsTrigger
-              value="todos"
-              className="min-h-11 shrink-0 rounded-xl px-4"
-            >
-              {" "}
-              <UsersRound className="mr-2 size-4" />
-              Todos
-            </TabsTrigger>
-            <TabsTrigger
-              value="forum"
-              className="min-h-11 shrink-0 rounded-xl px-4"
-            >
-              <MessagesSquare className="mr-2 size-4" />
-              Fórum
-            </TabsTrigger>
-            <TabsTrigger
-              value="estudos"
-              className="min-h-11 shrink-0 rounded-xl px-4"
-            >
-              <BookOpen className="mr-2 size-4" />
-              Estudos
-            </TabsTrigger>
-            <TabsTrigger
-              value="arquivos"
-              className="min-h-11 shrink-0 rounded-xl px-4"
-            >
-              <FileText className="mr-2 size-4" />
-              Arquivos
-            </TabsTrigger>
-            <TabsTrigger
-              value="testemunhos"
-              className="min-h-11 shrink-0 rounded-xl px-4"
-            >
-              <Heart className="mr-2 size-4" />
-              Testemunhos
-            </TabsTrigger>
+            {[
+              { key:"todos",name:"Publicações",Icon:MessagesSquare },
+              { key:"testemunhos",name:"Testemunhos",Icon:Heart },
+              { key:"oracoes",name:"Pedidos de oração",Icon:Heart },
+              { key:"forum",name:"Conversas",Icon:MessageCircle },
+              { key:"estudos",name:"Estudos",Icon:BookOpen },
+              { key:"arquivos",name:"Biblioteca",Icon:FileText },
+            ].map(({ key,name,Icon }) => (
+              <TabsTrigger key={key} value={key} className="min-h-11 shrink-0 rounded-xl px-3 text-xs sm:px-4 sm:text-sm">
+                <Icon className="mr-1.5 size-4" aria-hidden="true" />{name}
+              </TabsTrigger>
+            ))}
           </TabsList>
 
           <TabsContent value={tab} className="mt-4 space-y-4">
             {tab !== "arquivos" && (
               <>
-                <section className="community-hero relative overflow-hidden rounded-[1.6rem] border border-primary/20 p-5 text-white shadow-sm sm:p-6">
-                  <div className="relative z-10 max-w-3xl">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-300 px-2.5 py-1 text-xs font-bold text-slate-900">
-                      <Sparkles className="size-3.5" /> Em Destaque
-                    </span>
-                    <h3 className="mt-2 font-display text-xl font-semibold sm:text-2xl">
-                      Tema do Dia: A Fé que Move Montanhas
-                    </h3>
-                    <p className="mt-2 max-w-2xl text-sm leading-relaxed text-blue-50">
-                      “Porque, em verdade, se tiverdes fé e não duvidardes,
-                      direis a este monte: Ergue-te e lança-te no mar, e assim
-                      será feito.”{" "}
-                      <span className="font-semibold text-white">
-                        — Marcos 11:23
-                      </span>
-                    </p>
-                    <Button
-                      size="sm"
-                      variant="secondary"
-                      className="mt-4 rounded-full px-5"
-                      onClick={() => {
-                        const target = posts.find((p) =>
-                          /fé que move montanhas/i.test(p.title),
-                        );
-                        if (target) {
-                          setExpanded(target.id);
-                          document
-                            .getElementById(`community-post-${target.id}`)
-                            ?.scrollIntoView({
-                              behavior: "smooth",
-                              block: "center",
-                            });
-                        } else {
-                          setCategory("debate");
-                          setTitle("A Fé que Move Montanhas");
-                          setReference("Marcos 11:23");
-                          setComposer(true);
-                        }
-                      }}
-                    >
-                      Participar <span aria-hidden>→</span>
-                    </Button>
-                  </div>
-                </section>
 
                 <button
                   type="button"
@@ -487,10 +429,10 @@ function ComunidadePage() {
                   <div className="flex items-end justify-between gap-3 px-1">
                     <div>
                       <h3 className="font-display text-xl font-semibold">
-                        Publicações da comunidade
+                        Vozes da Comunidade
                       </h3>
                       <p className="text-xs text-muted-foreground">
-                        Perguntas, estudos e testemunhos compartilhados.
+                        Fotos, vídeos, testemunhos, reflexões e orações.
                       </p>
                     </div>
                     {!loading && (
@@ -686,105 +628,7 @@ function ComunidadePage() {
                   )}
                 </div>
 
-                <div className="grid gap-4 lg:grid-cols-2">
-                  <Card className="space-y-3 rounded-2xl p-4 sm:p-5">
-                    <div className="flex items-center justify-between gap-2">
-                      <h3 className="font-display text-lg font-semibold">
-                        Enquetes da Comunidade
-                      </h3>
-                      <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-semibold text-emerald-700">
-                        Ativa até 12/11
-                      </span>
-                    </div>
-                    <p className="text-sm font-medium">
-                      Qual livro da Bíblia você mais ama?
-                    </p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {["João", "Salmos", "Romanos", "Provérbios"].map(
-                        (option) => (
-                          <label
-                            key={option}
-                            className="flex cursor-pointer items-center gap-2 rounded-xl border border-border bg-background px-3 py-2.5 text-sm transition hover:border-primary/40"
-                          >
-                            <input
-                              type="radio"
-                              name="community-poll"
-                              value={option}
-                              checked={pollChoice === option}
-                              onChange={(e) => {
-                                setPollChoice(e.target.value);
-                                setPollVoted(false);
-                              }}
-                              className="accent-primary"
-                            />
-                            {option}
-                          </label>
-                        ),
-                      )}
-                    </div>
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-                        <UsersRound className="size-4" />
-                        142 participantes
-                      </span>
-                      <Button
-                        size="sm"
-                        disabled={!pollChoice || pollVoted}
-                        onClick={() => {
-                          setPollVoted(true);
-                          toast.success("Voto registrado nesta sessão.");
-                        }}
-                      >
-                        {pollVoted ? "Voto registrado" : "Votar →"}
-                      </Button>
-                    </div>
-                  </Card>
-                  <Card className="space-y-3 rounded-2xl border-amber-200/70 bg-gradient-to-br from-amber-50 to-white p-4 dark:from-amber-950/20 dark:to-card sm:p-5">
-                    <div className="flex items-center gap-3">
-                      <div className="rounded-xl bg-amber-100 p-2 text-amber-700">
-                        <Sparkles className="size-5" />
-                      </div>
-                      <div>
-                        <span className="text-xs font-semibold uppercase tracking-wide text-amber-800">
-                          Desafio Bíblico da Semana
-                        </span>
-                        <h3 className="font-display text-lg font-semibold">
-                          Leia e medite em Salmos 23
-                        </h3>
-                      </div>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Compartilhe sua reflexão e receba encorajamento da
-                      comunidade.
-                    </p>
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="font-semibold text-primary">
-                        68% concluído
-                      </span>
-                      <span className="text-muted-foreground">
-                        Progresso da comunidade
-                      </span>
-                    </div>
-                    <div className="h-2 overflow-hidden rounded-full bg-primary/10">
-                      <div className="h-full w-[68%] rounded-full bg-primary" />
-                    </div>
-                    <Button
-                      size="sm"
-                      onClick={() => {
-                        setTab("estudos");
-                        setCategory("estudo");
-                        setTitle("Minha reflexão sobre Salmos 23");
-                        setReference("Salmos 23");
-                        setComposer(true);
-                        setBody(
-                          "O que mais chamou minha atenção neste salmo foi...",
-                        );
-                      }}
-                    >
-                      Participar →
-                    </Button>
-                  </Card>
-                </div>
+
               </>
             )}
 
