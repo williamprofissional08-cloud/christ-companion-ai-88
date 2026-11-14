@@ -63,6 +63,8 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
   const [cameraOn, setCameraOn] = useState(true);
   const [hasVideoTrack, setHasVideoTrack] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [backendStatus, setBackendStatus] = useState<"checking" | "ready" | "unavailable">("checking");
+  const [backendIssue, setBackendIssue] = useState<string | null>(null);
 
   const liveRoom = useRef<Room | null>(null);
   const localMedia = useRef<MediaStream | null>(null);
@@ -74,6 +76,26 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
   const heartbeatTimer = useRef<number | null>(null);
   const memberTimer = useRef<number | null>(null);
   const processed = useRef<Set<string>>(new Set());
+
+  const verifyInfrastructure = useCallback(async () => {
+    setBackendStatus("checking");
+    try {
+      const problem = await checkLiveBackendReady(async (table) => {
+        const { error: tableError } = await db.from(table)
+          .select("id", { head: true }).limit(1);
+        return tableError;
+      });
+      setBackendIssue(problem);
+      setBackendStatus(problem ? "unavailable" : "ready");
+    } catch (problem) {
+      setBackendIssue(explainLiveBackendError(problem));
+      setBackendStatus("unavailable");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (user) void verifyInfrastructure();
+  }, [user?.id, verifyInfrastructure]);
 
   const loadSessions = useCallback(async () => {
     const after = new Date(Date.now() - 50_000).toISOString();
@@ -204,8 +226,8 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
         return tableError;
       });
       if (unavailable) {
-        setError(unavailable);
-        toast.error("A infraestrutura da live precisa ser corrigida no servidor.");
+        setBackendIssue(unavailable);
+        setBackendStatus("unavailable");
         return;
       }
 
@@ -594,13 +616,31 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
           <Radio className="size-5 text-amber-500" /> Lives da Comunidade
         </h3>
         <button type="button" onClick={() => setCreateOpen((value) => !value)}
-          disabled={Boolean(room)}
+          disabled={Boolean(room) || backendStatus !== "ready"}
+          aria-describedby={backendStatus === "unavailable" ? "community-live-infrastructure-notice" : undefined}
           className="inline-flex min-h-11 items-center gap-2 rounded-full border border-blue-300 bg-white px-4 text-sm font-semibold text-blue-800 shadow-sm hover:bg-blue-50 disabled:opacity-50 dark:bg-card dark:text-blue-300">
           <Plus className="size-4" /> Iniciar minha live
         </button>
       </div>
 
-      {createOpen && !room && (
+      {backendStatus === "checking" && (
+        <p className="text-sm text-slate-600 dark:text-slate-300" role="status">
+          Verificando a disponibilidade das transmissões…
+        </p>
+      )}
+      {backendStatus === "unavailable" && backendIssue && (
+        <div id="community-live-infrastructure-notice"
+          className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-950 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-100"
+          role="status">
+          <span className="min-w-0 flex-1">{backendIssue}</span>
+          <button type="button" onClick={() => void verifyInfrastructure()}
+            className="min-h-10 shrink-0 rounded-full border border-amber-500 px-4 font-semibold hover:bg-amber-100 dark:hover:bg-amber-900/40">
+            Verificar novamente
+          </button>
+        </div>
+      )}
+
+      {createOpen && !room && backendStatus === "ready" && (
         <form onSubmit={(event) => { event.preventDefault(); void startLive(); }}
           className="space-y-3 rounded-2xl border border-blue-200 bg-blue-50 p-4 dark:bg-slate-900">
           <label className="block space-y-2 text-sm font-semibold">
