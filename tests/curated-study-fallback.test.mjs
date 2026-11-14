@@ -69,3 +69,37 @@ test("reviewed local chapter studies cannot be hidden by archived managed catalo
   assert.match(catalogSource, /if \(!managed \|\| isCurated\) return local/);
   assert.match(catalogSource, /if \(managed\.status === "archived"\) return undefined/);
 });
+
+
+test("Psalm 121 is integrated and passes the deep-study structural baseline", () => {
+  assert.match(curatedSource, /"biblia-salmos-cap-121": psalm121Study/);
+  assert.match(curatedSource, /from "\.\/psalm-121-study"/);
+  const source = readFileSync(new URL("../src/lib/content/psalm-121-study.ts", import.meta.url), "utf8");
+  const start = source.indexOf(" = {\n");
+  const end = source.lastIndexOf(";\n");
+  assert.ok(start >= 0 && end > start, "The study should be stored as a static JSON-like object");
+  const study = JSON.parse(source.slice(start + 3, end));
+  assert.equal(study.version, 5);
+  assert.equal(study.depth, "deep");
+  assert.ok(study.sections.length >= 26);
+  assert.ok(study.keyPoints.length >= 8);
+  assert.ok(study.crossReferences.length >= 12);
+  assert.ok(study.questions.length >= 15);
+  for (const [field, minimum] of Object.entries({
+    intro: 1200,
+    historicalContext: 900,
+    application: 1000,
+    conclusion: 500,
+    prayer: 100,
+  })) {
+    assert.ok(study[field].length >= minimum, field + " must include sufficient original teaching");
+  }
+  const ids = study.sections.map((section) => section.id);
+  assert.equal(new Set(ids).size, ids.length);
+  assert.ok(study.sections.every((section) => section.body.length >= 500));
+  const reading = study.sections.find((section) => section.id === "leitura-biblica");
+  assert.ok(reading);
+  for (let verse = 1; verse <= 8; verse += 1) {
+    assert.ok(reading.body.includes("**" + verse + "**"), "Psalm 121 verse " + verse + " must be included");
+  }
+});
