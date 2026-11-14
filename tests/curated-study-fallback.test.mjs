@@ -62,5 +62,8 @@ test("reviewed local chapter studies cannot be hidden by archived managed catalo
     "utf8",
   );
 
-  assert.match(detailRoute, /CURATED_STUDIES\[slug\] \? legacyStudy : managedStudy\?\.status === "archived"/);
+  assert.match(detailRoute, /resolveManagedStudy\(legacyStudy, managedStudy, Boolean\(CURATED_STUDIES\[slug\]\)\)/);
+  const catalogSource = readFileSync(new URL("../src/lib/content/managed-study-catalog.ts", import.meta.url), "utf8");
+  assert.match(catalogSource, /if \(!managed \|\| isCurated\) return local/);
+  assert.match(catalogSource, /if \(managed\.status === "archived"\) return undefined/);
 });
