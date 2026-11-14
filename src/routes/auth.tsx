@@ -1,14 +1,12 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff, Mail, LockKeyhole, LogIn, UserRoundPlus, BookOpen, Mountain, UsersRound } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card } from "@/components/ui/card";
-import logo from "@/assets/logo.png";
 import { friendlyAuthError, isAuthApiKeyError } from "@/lib/auth-redirect";
 
 export const Route = createFileRoute("/auth")({
@@ -233,131 +231,83 @@ function AuthPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-heaven px-4 py-10">
-      <Card className="w-full max-w-md animate-rise border-border/50 p-7 shadow-soft">
-        <div className="mb-6 flex flex-col items-center text-center">
-          <img src={logo} alt="Caminhando com Cristo" width={64} height={64} className="size-16" />
-          <h1 className="mt-3 font-display text-2xl font-semibold">Caminhando com Cristo</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
-            {mode === "login" ? "Bem-vindo de volta." : "Comece sua jornada hoje."}
-          </p>
-        </div>
-
-        {sent ? (
-          <div className="space-y-3 rounded-xl bg-muted p-4 text-sm text-muted-foreground">
-            <p>Se este endereço puder receber um novo cadastro, enviaremos um link para confirmar seu e-mail. Abra a mensagem e toque em confirmar antes de entrar. Confira também a caixa de spam ou lixo eletrônico.</p>
-            <Button type="button" variant="outline" className="w-full" onClick={resendConfirmation} disabled={resending}>
-              {resending ? "Enviando..." : "Reenviar e-mail de confirmação"}
-            </Button>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            {mode === "signup" ? (
-              <div className="grid gap-2">
-                <Label htmlFor="name">Nome</Label>
-                <Input
-                  id="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Como podemos te chamar?"
-                  autoComplete="name"
-                  required
-                />
-              </div>
-            ) : null}
-            <div className="grid gap-2">
-              <Label htmlFor="email">E-mail</Label>
-              <Input
-                id="email"
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                autoComplete="email"
-              />
+    <main className="relative min-h-[100svh] overflow-x-hidden bg-[#d9e9fa] text-[#092451]">
+      <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(218,236,253,.35)_0%,rgba(255,231,183,.25)_34%,rgba(172,204,233,.75)_100%)]" />
+      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[640px] flex-col items-center px-4 pb-6 pt-8 sm:px-8">
+        <header className="mb-8 flex w-full flex-col items-center text-center">
+          <div className="relative mb-1 flex flex-col items-center">
+            <span aria-hidden="true" className="absolute -top-2 h-14 w-28 rounded-t-full border-t-[5px] border-[#e8ab16]" />
+            <div className="relative mt-2 flex flex-col items-center text-[#0756b9]">
+              <span aria-hidden="true" className="text-5xl font-bold leading-none">✝</span>
+              <BookOpen aria-hidden="true" className="-mt-1 size-20 stroke-[1.7]" />
             </div>
-            <div className="grid gap-2">
-              <Label htmlFor="password">Senha</Label>
-              <div className="relative">
-                <Input
-                  id="password"
-                  type={showPassword ? "text" : "password"}
-                  required
-                  minLength={6}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  autoComplete={mode === "login" ? "current-password" : "new-password"}
-                  autoCapitalize="none"
-                  autoCorrect="off"
-                  spellCheck={false}
-                  className="pr-12"
-                />
-                <button type="button" onClick={() => setShowPassword((value) => !value)} className="absolute inset-y-0 right-3 flex items-center text-muted-foreground" aria-label={showPassword ? "Ocultar senha" : "Mostrar senha"}>
-                  {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
-                </button>
-              </div>
-              <p className="text-xs text-muted-foreground">Mínimo de 6 caracteres. Pode usar somente números ou letras minúsculas; não exigimos maiúsculas nem símbolos.</p>
+          </div>
+          <h1 className="font-serif text-[clamp(2.35rem,9vw,4rem)] font-bold leading-tight tracking-tight text-[#092451]">
+            Caminho <span className="italic text-[#0766ce]">Divino</span>
+          </h1>
+          <div aria-hidden="true" className="mt-1 h-[3px] w-52 rounded-full bg-[#e5aa20]" />
+          <p className="mt-3 text-[clamp(.78rem,3.1vw,1rem)] font-medium">Estudo · Crescimento · Comunhão · Serviço</p>
+          <p className="mt-7 max-w-[330px] text-center text-[clamp(1rem,4vw,1.3rem)] italic leading-relaxed">
+            Aproxime-se de Deus por meio do<br className="hidden min-[380px]:block" /> estudo da Sua Palavra.
+          </p>
+        </header>
+
+        <section className="mt-auto w-full rounded-[2.6rem] border border-white/70 bg-[rgba(250,252,255,.94)] px-5 py-7 shadow-[0_18px_55px_rgba(12,54,111,.15)] backdrop-blur-md sm:px-9 sm:py-9" aria-labelledby="auth-heading">
+          <h2 id="auth-heading" className="text-center text-[clamp(1.7rem,6vw,2.2rem)] font-bold">Acesse sua conta</h2>
+          <p className="mb-6 mt-1 text-center text-sm text-[#687b9a] sm:text-base">Continue sua jornada no Caminho Divino.</p>
+
+          {sent ? (
+            <div className="space-y-3 rounded-2xl bg-blue-50 p-4 text-sm">
+              <p>Se este endereço puder receber um novo cadastro, enviaremos um link para confirmar seu e-mail. Abra a mensagem e toque em confirmar antes de entrar. Confira também a caixa de spam ou lixo eletrônico.</p>
+              <Button type="button" variant="outline" className="w-full" onClick={resendConfirmation} disabled={resending}>{resending ? "Enviando..." : "Reenviar e-mail de confirmação"}</Button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-3.5">
               {mode === "signup" && (
-                <div className="grid gap-2">
-                  <Label htmlFor="confirm-password">Confirme sua senha</Label>
-                  <Input
-                    id="confirm-password"
-                    type={showPassword ? "text" : "password"}
-                    required
-                    minLength={6}
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    autoComplete="new-password"
-                    autoCapitalize="none"
-                    autoCorrect="off"
-                    spellCheck={false}
-                  />
+                <div>
+                  <Label htmlFor="name" className="sr-only">Nome</Label>
+                  <Input id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Nome" autoComplete="name" required className="h-14 rounded-2xl border-[#c6d2e6] bg-white/60 px-5 text-base focus-visible:ring-2 focus-visible:ring-blue-600" />
                 </div>
               )}
-            </div>
-            <Button type="submit" variant="hero" size="lg" disabled={loading}>
-              {loading ? "Aguarde..." : mode === "login" ? "Entrar" : "Criar conta"}
-            </Button>
-          </form>
-        )}
-
-        <div className="my-5 flex items-center gap-3 text-xs text-muted-foreground">
-          <span className="h-px flex-1 bg-border" />
-          ou
-          <span className="h-px flex-1 bg-border" />
-        </div>
-
-        <Button variant="outline" size="lg" className="w-full" onClick={google} disabled={googleLoading || loading}>
-          {googleLoading ? "Conectando ao Google..." : "Continuar com Google"}
-        </Button>
-
-        <div className="mt-6 flex flex-col items-center gap-2 text-sm">
-          <button
-            type="button"
-            className="text-primary underline-offset-4 hover:underline"
-            onClick={() => {
-              setMode(mode === "login" ? "signup" : "login");
-              setConfirmPassword("");
-              setShowPassword(false);
-              setSent(false);
-            }}
-          >
-            {mode === "login" ? "Não tenho conta, quero criar" : "Já tenho conta, quero entrar"}
+              <div className="relative">
+                <Label htmlFor="email" className="sr-only">E-mail</Label>
+                <Mail aria-hidden="true" className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2" />
+                <Input id="email" type="email" placeholder="E-mail" required value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" className="h-14 rounded-2xl border-[#c6d2e6] bg-white/60 pl-12 pr-4 text-base focus-visible:ring-2 focus-visible:ring-blue-600" />
+              </div>
+              <div className="relative">
+                <Label htmlFor="password" className="sr-only">Senha</Label>
+                <LockKeyhole aria-hidden="true" className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2" />
+                <Input id="password" type={showPassword ? "text" : "password"} placeholder="Senha" required minLength={6} value={password} onChange={(e) => setPassword(e.target.value)} autoComplete={mode === "login" ? "current-password" : "new-password"} autoCapitalize="none" autoCorrect="off" spellCheck={false} className="h-14 rounded-2xl border-[#c6d2e6] bg-white/60 pl-12 pr-12 text-base focus-visible:ring-2 focus-visible:ring-blue-600" />
+                <button type="button" onClick={() => setShowPassword(v => !v)} className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-2 focus-visible:outline-2 focus-visible:outline-blue-600" aria-label={showPassword ? "Ocultar senha" : "Mostrar senha"}>{showPassword ? <EyeOff className="size-5" /> : <Eye className="size-5" />}</button>
+              </div>
+              {mode === "signup" && (
+                <div>
+                  <Label htmlFor="confirm-password" className="sr-only">Confirme sua senha</Label>
+                  <Input id="confirm-password" type={showPassword ? "text" : "password"} placeholder="Confirme sua senha" required minLength={6} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} autoComplete="new-password" className="h-14 rounded-2xl border-[#c6d2e6] bg-white/60 px-5 text-base focus-visible:ring-2 focus-visible:ring-blue-600" />
+                </div>
+              )}
+              <Button type="submit" disabled={loading} className="h-14 w-full rounded-2xl bg-gradient-to-b from-[#0879e4] to-[#073c86] text-lg font-bold text-white shadow-md hover:from-[#086bd0] hover:to-[#052f70]">
+                <LogIn aria-hidden="true" className="mr-2 size-5" />{loading ? "Aguarde..." : mode === "login" ? "Entrar" : "Criar conta"}
+              </Button>
+            </form>
+          )}
+          {mode === "login" && !sent && (
+            <button type="button" onClick={forgot} className="mx-auto mt-4 block rounded text-sm font-medium text-[#075dcc] underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-blue-600">Esqueceu sua senha?</button>
+          )}
+          <div className="my-5 flex items-center gap-4 text-[#687b9a]"><span className="h-px flex-1 bg-[#c6d2e6]" /><span>Ou</span><span className="h-px flex-1 bg-[#c6d2e6]" /></div>
+          <button type="button" onClick={() => { setMode(mode === "login" ? "signup" : "login"); setConfirmPassword(""); setShowPassword(false); setSent(false); }} className="flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border-2 border-[#0762c9] bg-white/50 px-3 text-center text-sm font-bold text-[#0750aa] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 sm:text-base">
+            <UserRoundPlus aria-hidden="true" className="size-5 shrink-0" />{mode === "login" ? "Criar uma nova conta" : "Já tenho conta, quero entrar"}
           </button>
-          {mode === "login" ? (
-            <button
-              type="button"
-              onClick={forgot}
-              className="text-xs text-muted-foreground hover:underline"
-            >
-              Esqueci minha senha
-            </button>
-          ) : null}
-          <Link to="/" className="text-xs text-muted-foreground hover:underline">
-            Voltar ao início
-          </Link>
-        </div>
-      </Card>
-    </div>
+          <div className="mt-7 grid grid-cols-3 divide-x divide-[#c6d2e6] text-center">
+            <div className="flex flex-col items-center gap-1 px-1"><BookOpen aria-hidden="true" className="size-7 text-[#0758b8]" /><span className="text-xs leading-tight sm:text-sm">Estudos<br />Bíblicos</span></div>
+            <div className="flex flex-col items-center gap-1 px-1"><Mountain aria-hidden="true" className="size-7 text-[#0758b8]" /><span className="text-xs leading-tight sm:text-sm">Trilhas<br />Guiadas</span></div>
+            <div className="flex flex-col items-center gap-1 px-1"><UsersRound aria-hidden="true" className="size-7 text-[#0758b8]" /><span className="text-xs leading-tight sm:text-sm">Comunidade<br />Cristã</span></div>
+          </div>
+          <div className="mt-5 text-center">
+            <button type="button" onClick={google} disabled={googleLoading || loading} className="text-xs text-[#315c91] underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-blue-600">{googleLoading ? "Conectando ao Google..." : "Continuar com Google"}</button>
+          </div>
+        </section>
+      </div>
+    </main>
   );
 }
