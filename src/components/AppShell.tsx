@@ -2,9 +2,9 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import {
   BookOpen, Compass, Flame, GraduationCap, HeartHandshake, Home, LogOut,
   MessageCircleHeart, Moon, NotebookPen, FilePenLine, Route as RouteIcon,
-  Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreVertical, UserRound, Menu, Bell,
+  Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreVertical, UserRound, Menu, Bell, ChevronLeft,
 } from "lucide-react";
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
@@ -56,8 +56,27 @@ function NavLinks({ onNavigate, isAdmin }: { onNavigate?: () => void; isAdmin: b
   );
 }
 
-export function AppShell({ children, title, subtitle, homeHeader = false }: { children: ReactNode; title: string; subtitle?: string; homeHeader?: boolean }) {
+export function AppShell({
+  children, title, subtitle, homeHeader = false,
+  profileHeader = false, profileView = "perfil", onProfileAction,
+}: {
+  children: ReactNode;
+  title: string;
+  subtitle?: string;
+  homeHeader?: boolean;
+  profileHeader?: boolean;
+  profileView?: "perfil" | "configuracoes";
+  onProfileAction?: () => void;
+}) {
   const { theme, toggle } = useTheme();
+  useEffect(() => {
+    try {
+      const size = Number(window.localStorage.getItem("caminho-divino-font-size"));
+      if ([16, 18, 20].includes(size)) document.documentElement.style.fontSize = `${size}px`;
+    } catch {
+      // Reading preferences must not block the application.
+    }
+  }, []);
   const { user } = useAuth();
   const metadata = user?.user_metadata ?? {};
   const displayName = String(metadata["full_name"] ?? metadata["name"] ?? user?.email?.split("@")[0] ?? "Usuário").trim().split(/\s+/)[0] || "Usuário";
@@ -109,8 +128,41 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
           data-home-header={homeHeader ? "true" : undefined}
           className={homeHeader
             ? "fixed inset-x-0 top-0 z-40 border-b border-border/60 bg-white/90 pt-[env(safe-area-inset-top)] backdrop-blur lg:left-52 dark:bg-background/90"
-            : "sticky top-0 z-30 border-b border-border/60 bg-white/90 backdrop-blur dark:bg-background/90"}
+            : profileHeader
+              ? "sticky top-0 z-30 border-b border-blue-900/15 bg-gradient-to-r from-[#07366d] to-[#005b96] text-white"
+              : "sticky top-0 z-30 border-b border-border/60 bg-white/90 backdrop-blur dark:bg-background/90"}
         >
+          {profileHeader ? (
+            <div className="mx-auto flex min-h-16 w-full max-w-screen-2xl items-center gap-3 px-4 py-2 sm:px-6">
+              {profileView === "configuracoes" ? (
+                <button type="button" onClick={onProfileAction}
+                  className="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  aria-label="Voltar ao perfil">
+                  <ChevronLeft className="size-6" aria-hidden="true" />
+                </button>
+              ) : (
+                <Link to="/inicio" aria-label="Voltar ao início" className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                  <img src={logo} alt="" className="size-9 object-contain" />
+                </Link>
+              )}
+              <div className={`min-w-0 flex-1 ${profileView === "configuracoes" ? "text-center" : ""}`}>
+                <p className="truncate text-lg font-bold tracking-tight sm:text-xl">
+                  {profileView === "configuracoes" ? "Configurações" : "Caminho Divino"}
+                </p>
+                {profileView === "perfil" && <p className="truncate text-xs text-blue-100">Estudo · Discipulado · Comunhão</p>}
+              </div>
+              <div className="flex shrink-0 items-center gap-1">
+                <MusicControlButton className="inline-flex size-9 border-white/30 bg-white/15 text-white hover:bg-white/25" />
+                {profileView === "perfil" ? (
+                  <button type="button" onClick={onProfileAction}
+                    aria-label="Abrir configurações"
+                    className="flex size-9 shrink-0 items-center justify-center rounded-full hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                    <Settings className="size-5" aria-hidden="true" />
+                  </button>
+                ) : <span aria-hidden="true" className="size-9 shrink-0" />}
+              </div>
+            </div>
+          ) : (
           <div className={`mx-auto flex min-h-14 w-full max-w-screen-2xl items-center gap-1.5 py-1.5 sm:gap-3 ${homeHeader ? "pl-2 pr-2 sm:pl-3 sm:pr-3 lg:px-5" : "pl-3 pr-16 sm:pl-5 sm:pr-16 lg:pl-8 lg:pr-16"}`}>
             <div className={homeHeader ? "flex shrink-0 items-center gap-1 lg:hidden" : "lg:hidden"}>
               {homeHeader && <MusicControlButton className="inline-flex size-9 lg:hidden" />}
@@ -167,13 +219,20 @@ export function AppShell({ children, title, subtitle, homeHeader = false }: { ch
               </Button>
             )}
           </div>
+          )}
         </header>
 
         <main className={`mx-auto w-full max-w-screen-2xl min-w-0 flex-1 ${homeHeader ? "px-2 pt-[calc(3.5rem+env(safe-area-inset-top)+0.5rem)] pb-[calc(3.75rem+env(safe-area-inset-bottom)+0.5rem)] sm:px-3 lg:px-5 lg:pb-3" : "px-3 pt-4 pb-24 sm:px-5 sm:pt-5 lg:px-8 lg:pb-10"}`}>{children}</main>
 
         <nav aria-label="Navegação rápida" className="fixed inset-x-0 bottom-0 z-30 pb-[env(safe-area-inset-bottom)] border-t border-border/70 bg-white/95 backdrop-blur dark:bg-background/95 lg:hidden">
-          <div className={homeHeader || !isAdmin ? "mx-auto grid max-w-2xl grid-cols-6" : "mx-auto grid max-w-2xl grid-cols-5"}>
-            {(homeHeader ? [
+          <div className={profileHeader ? "mx-auto grid max-w-2xl grid-cols-5" : homeHeader || !isAdmin ? "mx-auto grid max-w-2xl grid-cols-6" : "mx-auto grid max-w-2xl grid-cols-5"}>
+            {(profileHeader ? [
+              { to: "/inicio" as const, label: "Início", icon: Home },
+              { to: "/estudos" as const, label: "Estudos", icon: BookOpen },
+              { to: "/escola" as const, label: "Cursos", icon: GraduationCap },
+              { to: "/comunidade" as const, label: "Comunidade", icon: UsersRound },
+              { to: "/configuracoes" as const, label: "Perfil", icon: UserRound },
+            ] : homeHeader ? [
               { to: "/inicio" as const, label: "Início", icon: Home },
               { to: "/biblia" as const, label: "Bíblia", icon: BookOpen },
               { to: "/trilhas" as const, label: "Cursos", icon: RouteIcon },
