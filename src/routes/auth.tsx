@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import logo from "@/assets/logo.png";
 import { friendlyAuthError, isAuthApiKeyError } from "@/lib/auth-redirect";
+import { checkExistingAccountSession } from "@/lib/auth-flow";
 
 function logAuthApiKeyError(error: unknown): void {
   if (!isAuthApiKeyError(error)) return;
@@ -55,43 +56,31 @@ function AuthPage() {
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
   const [resending, setResending] = useState(false);
+  const [recovering, setRecovering] = useState(false);
+  const [sessionUnavailable, setSessionUnavailable] = useState(false);
   const [checking, setChecking] = useState(true);
   const [sent, setSent] = useState(false);
 
   useEffect(() => {
     let active = true;
-    const go = () => navigate({ to: "/inicio", replace: true });
 
-    // Never trust a persisted session until Supabase validates the user.
-    // After signing-key rotation, an old JWT can remain in localStorage and
-    // make the protected route bounce back to this page forever.
-    void (async () => {
-      try {
-        const { data, error } = await supabase.auth.getUser();
+    // A failed user check may be a temporary network/Auth outage, not a missing
+    // account. Never erase a persisted session just because verification fails.
+    void checkExistingAccountSession(() => supabase.auth.getUser())
+      .then((status) => {
         if (!active) return;
-        if (!error && data.user) {
-          go();
+        if (status === "authenticated") {
+          navigate({ to: "/inicio", replace: true });
           return;
         }
-
-        // Clear only this browser's invalid session; do not revoke other devices.
-        const { data: stored } = await supabase.auth.getSession();
-        if (stored.session) {
-          await supabase.auth.signOut({ scope: "local" });
-        }
-      } catch {
-        // Keep the login form available if session validation is temporarily unavailable.
-      } finally {
+        setSessionUnavailable(status === "unavailable");
+      })
+      .finally(() => {
         if (active) setChecking(false);
-      }
-    })();
+      });
 
-    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
-      if (session && event === "SIGNED_IN") go();
-    });
     return () => {
       active = false;
-      sub.subscription.unsubscribe();
     };
   }, [navigate]);
 
@@ -131,15 +120,18 @@ function AuthPage() {
         // from a normal confirmation-required signup to prevent account enumeration.
         if (data.session) {
           toast.success("Seu cadastro foi concluído com sucesso!");
+          navigate({ to: "/inicio", replace: true });
         } else if (data.user) {
           setSent(true);
-          toast.success("Se o cadastro puder ser realizado, você receberá as instruções por e-mail.");
+          toast.success("Confira as orientações de acesso. Se este for um novo cadastro, poderá chegar um e-mail de confirmação.");
         } else {
           throw new Error("Não recebemos a confirmação do cadastro. Tente novamente.");
         }
       } else {
-        const { error } = await supabase.auth.signInWithPassword({ email: normalizedEmail, password });
+        const { data, error } = await supabase.auth.signInWithPassword({ email: normalizedEmail, password });
         if (error) throw error;
+        if (!data.session || !data.user) throw new Error("Não foi possível iniciar a sessão. Tente entrar novamente.");
+        navigate({ to: "/inicio", replace: true });
       }
     } catch (error) {
       logAuthApiKeyError(error);
@@ -195,15 +187,26 @@ function AuthPage() {
   }
 
   async function forgot() {
-    if (!email) {
-      toast.error("Informe seu e-mail primeiro.");
+    if (recovering) return;
+    const normalizedEmail = email.trim().toLowerCase();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
+      toast.error("Informe um e-mail válido para recuperar o acesso.");
       return;
     }
-    const { error } = await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
-      redirectTo: `${window.location.origin}/reset-password`,
-    });
-    if (error) toast.error(friendlyAuthError(error));
-    else toast.success("Enviamos um link de redefinição para seu e-mail.");
+    setRecovering(true);
+    try {
+      const { error } = await supabase.auth.resetPasswordForEmail(normalizedEmail, {
+        redirectTo: `${window.location.origin}/reset-password`,
+      });
+      if (error) throw error;
+      // Do not expose whether an account exists for this email address.
+      toast.success("Se houver uma conta para este e-mail, enviaremos instruções para recuperar o acesso. Confira também o spam.");
+    } catch (error) {
+      logAuthApiKeyError(error);
+      toast.error(friendlyAuthError(error));
+    } finally {
+      setRecovering(false);
+    }
   }
 
   if (checking) {
@@ -252,11 +255,14 @@ function AuthPage() {
         <section className="mt-auto w-full rounded-[2.6rem] border border-white/70 bg-[rgba(250,252,255,.94)] px-5 py-7 shadow-[0_18px_55px_rgba(12,54,111,.15)] backdrop-blur-md sm:px-9 sm:py-9" aria-labelledby="auth-heading">
           <h2 id="auth-heading" className="text-center text-[clamp(1.7rem,6vw,2.2rem)] font-bold">Acesse sua conta</h2>
           <p className="mb-6 mt-1 text-center text-sm text-[#687b9a] sm:text-base">Continue sua jornada no Caminho Divino.</p>
+          {sessionUnavailable && <p role="status" className="mb-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">Não conseguimos verificar sua sessão agora. Sua conta não foi apagada. Você pode tentar entrar novamente ou recuperar seu acesso.</p>}
 
           {sent ? (
             <div className="space-y-3 rounded-2xl bg-blue-50 p-4 text-sm">
-              <p>Se este endereço puder receber um novo cadastro, enviaremos um link para confirmar seu e-mail. Abra a mensagem e toque em confirmar antes de entrar. Confira também a caixa de spam ou lixo eletrônico.</p>
-              <Button type="button" variant="outline" className="w-full" onClick={resendConfirmation} disabled={resending}>{resending ? "Enviando..." : "Reenviar e-mail de confirmação"}</Button>
+              <p>Se este for um novo cadastro, confira seu e-mail (inclusive spam) para confirmar a conta. Se você já se cadastrou, entre com sua senha ou recupere o acesso. Por segurança, não informamos nesta tela se um endereço já estava cadastrado.</p>
+              <Button type="button" className="w-full" onClick={() => { setSent(false); setMode("login"); setPassword(""); setConfirmPassword(""); }}>Já tenho uma conta — entrar</Button>
+              <Button type="button" variant="outline" className="w-full" onClick={forgot} disabled={recovering}>{recovering ? "Solicitando..." : "Esqueci minha senha"}</Button>
+              <Button type="button" variant="outline" className="w-full" onClick={resendConfirmation} disabled={resending}>{resending ? "Enviando..." : "Reenviar confirmação"}</Button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-3.5">
@@ -269,7 +275,7 @@ function AuthPage() {
               <div className="relative">
                 <Label htmlFor="email" className="sr-only">E-mail</Label>
                 <Mail aria-hidden="true" className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2" />
-                <Input id="email" type="email" placeholder="E-mail" required value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" className="h-14 rounded-2xl border-[#c6d2e6] bg-white/60 pl-12 pr-4 text-base focus-visible:ring-2 focus-visible:ring-blue-600" />
+                <Input id="email" type="email" placeholder="E-mail" required value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" autoCapitalize="none" autoCorrect="off" spellCheck={false} className="h-14 rounded-2xl border-[#c6d2e6] bg-white/60 pl-12 pr-4 text-base focus-visible:ring-2 focus-visible:ring-blue-600" />
               </div>
               <div className="relative">
                 <Label htmlFor="password" className="sr-only">Senha</Label>
@@ -289,7 +295,7 @@ function AuthPage() {
             </form>
           )}
           {mode === "login" && !sent && (
-            <button type="button" onClick={forgot} className="mx-auto mt-4 block rounded text-sm font-medium text-[#075dcc] underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-blue-600">Esqueceu sua senha?</button>
+            <button type="button" onClick={forgot} disabled={recovering} className="mx-auto mt-4 block rounded text-sm font-medium text-[#075dcc] underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-blue-600 disabled:opacity-60">{recovering ? "Solicitando recuperação..." : "Esqueceu sua senha?"}</button>
           )}
           <div className="my-5 flex items-center gap-4 text-[#687b9a]"><span className="h-px flex-1 bg-[#c6d2e6]" /><span>Ou</span><span className="h-px flex-1 bg-[#c6d2e6]" /></div>
           <button type="button" onClick={() => { setMode(mode === "login" ? "signup" : "login"); setConfirmPassword(""); setShowPassword(false); setSent(false); }} className="flex min-h-14 w-full items-center justify-center gap-3 rounded-2xl border-2 border-[#0762c9] bg-white/50 px-3 text-center text-sm font-bold text-[#0750aa] hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 sm:text-base">
