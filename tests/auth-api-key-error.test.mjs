@@ -22,3 +22,14 @@ test("unconfirmed email and network failures retain existing messages", () => {
   assert.equal(isAuthApiKeyError(new Error("Failed to fetch")), false);
   assert.equal(friendlyAuthError(new Error("Failed to fetch")), "Não foi possível conectar ao serviço de cadastro. Verifique sua internet e tente novamente.");
 });
+
+test("structured auth email codes get clear recovery instructions instead of object errors", () => {
+  assert.match(friendlyAuthError({ code: "email_exists" }), /recuperar o acesso/);
+  assert.match(friendlyAuthError({ code: "user_already_exists" }), /recuperar o acesso/);
+  assert.match(friendlyAuthError({ code: "email_not_confirmed" }), /ainda não foi confirmado/);
+  assert.match(friendlyAuthError({ code: "email_address_not_authorized" }), /serviço de e-mail/);
+  assert.match(friendlyAuthError({ code: "over_email_send_rate_limit" }), /Muitas tentativas/);
+  assert.match(friendlyAuthError({ code: "otp_expired" }), /expirou/);
+  assert.match(friendlyAuthError({ code: "session_not_found" }), /sessão não está ativa/);
+  assert.equal(friendlyAuthError({ code: "unexpected" }), "Não foi possível concluir o cadastro. Tente novamente.");
+});
