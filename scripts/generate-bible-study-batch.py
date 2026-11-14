@@ -27,7 +27,7 @@ PREFIX = {
     "2-samuel": "2-samuel", "1-reis": "1-kings", "2-reis": "2-kings",
     "1-cronicas": "1-chronicles", "2-cronicas": "2-chronicles",
     "esdras": "ezra", "neemias": "nehemiah", "ester": "esther",
-    "jo": "job", "salmos": "psalms", "proverbios": "proverbs",
+    "jo": "job", "salmos": "psalm", "proverbios": "proverbs",
     "eclesiastes": "ecclesiastes", "cantico-dos-canticos": "song-of-solomon",
     "isaias": "isaiah", "jeremias": "jeremiah", "lamentacoes": "lamentations",
     "ezequiel": "ezekiel", "daniel": "daniel", "oseias": "hosea",
