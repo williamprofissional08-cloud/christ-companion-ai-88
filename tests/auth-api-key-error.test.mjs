@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { AUTH_API_KEY_CONFIGURATION_MESSAGE, friendlyAuthError, isAuthApiKeyError } from "../src/lib/auth-redirect.ts";
 
-const credentialsMessage = "Não foi possível entrar com esses dados. Confira o e-mail e a senha. Se você acabou de criar a conta, confirme primeiro o endereço pelo link enviado por e-mail; depois volte para entrar. Se não recebeu a mensagem, use a opção de reenviar confirmação.";
+const credentialsMessage = "Não foi possível entrar com esses dados. Confira o e-mail e a senha ou use “Esqueceu sua senha?” para recuperar o acesso. Se acabou de criar a conta, confira a confirmação por e-mail. Esse erro não significa que sua conta foi apagada.";
 
 test("invalid Supabase API keys show a configuration message, regardless of case", () => {
   for (const message of ["Invalid API key", "INVALID_API_KEY", "No API key found in request", "apikey is invalid", "apikey is not valid", "  INVALID   API KEY  ", "missing apikey"]) {
