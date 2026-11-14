@@ -420,6 +420,23 @@ export function CommunityLivePanel({ user, requestOpen, onRequestHandled }: {
       }, (message) => {
         void processSignal(message.new as Signal);
       })
+      .on("postgres_changes", {
+        event: "*", schema: "public", table: "community_live_participants",
+        filter: "session_id=eq." + currentRoomId,
+      }, (change) => {
+        if (cancelled || liveRoom.current?.session.id !== currentRoomId) return;
+        const member = change.new as Member | undefined;
+        if (amHost) {
+          void loadMembers(currentRoomId);
+          if (member?.status === "kicked" || member?.status === "left") {
+            peers.current.get(member.user_id)?.close();
+            peers.current.delete(member.user_id);
+          }
+        } else if (member?.user_id === myId && member.status === "kicked") {
+          toast.error("O organizador removeu você desta live.");
+          void leaveRoom();
+        }
+      })
       .subscribe((status) => {
         if (cancelled) return;
         if (status === "SUBSCRIBED") {
