@@ -369,8 +369,8 @@ a[href*="lovable.dev"][style*="position: fixed"] {
   .home-summary { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 4px; }
   .home-stat { min-height: 78px; border-radius: 12px; padding: 7px 5px; }
   .home-stat svg { width: 19px; height: 19px; margin-bottom: 3px; }
-  .home-stat h2 { font-size: .62rem; line-height: 1.12; }
-  .home-stat p { font-size: .61rem; line-height: 1.15; padding-top: 4px; overflow-wrap: anywhere; }
+  .home-stat h2 { font-size: .7rem; line-height: 1.12; }
+  .home-stat p { font-size: .68rem; line-height: 1.15; padding-top: 4px; overflow-wrap: anywhere; }
   .home-middle { grid-template-columns: minmax(0,1fr); gap: 6px; }
   .home-devotional, .home-continue { min-height: 0; border-radius: 14px; padding: 9px 11px; }
   .home-devotional h2 { font-size: .75rem; }
@@ -388,7 +388,7 @@ a[href*="lovable.dev"][style*="position: fixed"] {
   .home-shortcuts { grid-template-columns: repeat(5, minmax(0,1fr)); gap: 4px; }
   .home-shortcut { min-height: 65px; padding: 4px 2px; border-radius: 10px; gap: 3px; }
   .home-shortcut svg { width: 20px; height: 20px; }
-  .home-shortcut span { font-size: .57rem; line-height: 1.13; }
+  .home-shortcut span { font-size: .69rem; line-height: 1.12; }
   .home-course { border-radius: 14px; padding: 8px 11px; }
   .home-course > div:last-child { gap: 5px; }
   .home-course h2 { font-size: .88rem; }
