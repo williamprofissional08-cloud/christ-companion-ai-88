@@ -1,52 +1,55 @@
 import type { StudyContent } from "../types";
 
-/** Daniel 4 — revisão lexical preliminar, não estudo editorialmente concluído. */
+/** Daniel 4 — paráfrases livres autorais; revisão humana pendente. */
 export const daniel4Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Estudo em revisão de Daniel 4.",
-  "historicalContext": "Contexto das cortes imperiais e literatura apocalíptica.",
+  "intro": "Daniel 4 apresenta uma proclamação de Nabucodonosor sobre seu sonho da árvore, a advertência de Daniel, a humilhação do rei e sua restauração após reconhecer a soberania divina.",
+  "historicalContext": "Narrativa de corte em primeira pessoa, situada na Babilônia e escrita na seção aramaica do livro de Daniel. A descrição do comportamento do rei é literária e teológica; tentativas de identificá-la com diagnósticos médicos específicos são especulativas. O texto também associa arrependimento à justiça para com os pobres (v. 27).",
   "keyPoints": [
     {
-      "title": "1–9: O sonho inquietante",
-      "text": "Unidade literária de Daniel 4."
+      "title": "1–9: O testemunho e a inquietação",
+      "text": "O rei anuncia a grandeza divina e relata um sonho perturbador."
     },
     {
-      "title": "10–18: Árvore e vigilante",
-      "text": "Unidade literária de Daniel 4."
+      "title": "10–18: A árvore e o decreto",
+      "text": "A árvore representa poder abrangente, mas o corte e o toco anunciam juízo e possibilidade de retorno."
     },
     {
-      "title": "19–27: Interpretação e chamado à justiça",
-      "text": "Unidade literária de Daniel 4."
+      "title": "19–27: Interpretação e responsabilidade social",
+      "text": "Daniel identifica a árvore como o rei e o chama à justiça e misericórdia para com os pobres."
     },
     {
-      "title": "28–33: Orgulho e humilhação",
-      "text": "Unidade literária de Daniel 4."
+      "title": "28–33: Orgulho e rebaixamento",
+      "text": "A arrogância do rei precede a perda de sua posição."
     },
     {
-      "title": "34–37: Restauração e louvor",
-      "text": "Unidade literária de Daniel 4."
+      "title": "34–37: Reconhecimento e restauração",
+      "text": "O rei recupera entendimento e louva a soberania de Deus."
     }
   ],
-  "application": "Buscar fidelidade e justiça.",
+  "application": "Combater a arrogância e usar a autoridade para promover justiça e misericórdia, especialmente para pessoas pobres. Evitar atribuir automaticamente enfermidades ou sofrimentos individuais a castigo divino.",
   "crossReferences": [
-    "Daniel 2:1-49",
-    "Daniel 7:1-28"
+    "Daniel 2:20-21",
+    "Daniel 5:18-23",
+    "Provérbios 16:18",
+    "Isaías 10:12-15",
+    "Lucas 14:11",
+    "Tiago 4:6"
   ],
   "questions": [
-    "Como o tema o sonho inquietante se desenvolve em 1–9?",
-    "Como o tema árvore e vigilante se desenvolve em 10–18?",
-    "Como o tema interpretação e chamado à justiça se desenvolve em 19–27?",
-    "Como o tema orgulho e humilhação se desenvolve em 28–33?",
-    "Como o tema restauração e louvor se desenvolve em 34–37?"
+    "Qual a função da árvore e do toco?",
+    "O que Daniel aconselha no versículo 27?",
+    "Por que a humilhação do rei não autoriza um diagnóstico médico retrospectivo?",
+    "Como o início e o fim do capítulo se relacionam?"
   ],
-  "conclusion": "O capítulo tem roteiro estrutural, notas de observação textual e aplicações preliminares; a exegese aprofundada e a revisão humana permanecem pendentes.",
+  "conclusion": "O capítulo não exalta o sofrimento como fim em si: ele confronta a autossuficiência do poder e associa reconhecimento de Deus à justiça e à humildade.",
   "prayer": "Senhor, dá-nos entendimento. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — consulte os versículos",
-      "body": "Leia Daniel 4:1–37 no texto bíblico do aplicativo. Este guia contém comentários autorais preliminares, **não uma tradução ou paráfrase integral**.",
+      "body": "Leia Daniel 4:1–37 no texto bíblico do aplicativo. Cada comentário individual apresenta **paráfrase livre autoral**, sem reproduzir tradução bíblica oficial.",
       "scriptureRefs": [
         "Daniel 4:1-37"
       ],
@@ -136,7 +139,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Daniel 4:1 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:1:** Este versículo integra o movimento **o sonho inquietante**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor, povos, nações, línguas, moram**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 1 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **o sonho inquietante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei dirige uma proclamação a povos e línguas.\n\n**Exegese contextual:** O capítulo começa como testemunho público do próprio Nabucodonosor; o alcance universal contrasta com sua futura humilhação.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:1"
       ],
@@ -146,7 +149,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Daniel 4:2 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:2:** Este versículo integra o movimento **o sonho inquietante**. Observe especialmente os termos e imagens presentes no texto bíblico: **Pareceu, fazer, conhecidos, sinais, maravilhas**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 2 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Pareceu** neste verso e como ela contribui para o desenvolvimento de **o sonho inquietante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei anuncia sinais que o Altíssimo realizou com ele.\n\n**Exegese contextual:** O testemunho prepara uma história em que o soberano é objeto, não controlador, da ação divina.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:2"
       ],
@@ -156,7 +159,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Daniel 4:3 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:3:** Este versículo integra o movimento **o sonho inquietante**. Observe especialmente os termos e imagens presentes no texto bíblico: **grandes, sinais, poderosas, maravilhas, reino**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 3 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **grandes** neste verso e como ela contribui para o desenvolvimento de **o sonho inquietante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei exalta o domínio eterno de Deus.\n\n**Exegese contextual:** O louvor antecipa a conclusão: o governo humano é limitado, enquanto o domínio divino permanece.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:3"
       ],
@@ -166,7 +169,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Daniel 4:4 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:4:** Este versículo integra o movimento **o sonho inquietante**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor, tranquilo, minha, próspero, palácio**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 4 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **o sonho inquietante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Nabucodonosor descreve tranquilidade no palácio.\n\n**Exegese contextual:** A segurança material cria contraste narrativo com a inquietação e perda que se aproximam.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:4"
       ],
@@ -176,7 +179,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Daniel 4:5 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:5:** Este versículo integra o movimento **o sonho inquietante**. Observe especialmente os termos e imagens presentes no texto bíblico: **sonho, espantou, imaginações, minha, visões**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 5 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **sonho** neste verso e como ela contribui para o desenvolvimento de **o sonho inquietante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Um sonho perturba o rei durante a noite.\n\n**Exegese contextual:** A ansiedade rompe a sensação de controle e retoma o motivo dos sonhos reais de Daniel 2.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:5"
       ],
@@ -186,7 +189,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Daniel 4:6 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:6:** Este versículo integra o movimento **o sonho inquietante**. Observe especialmente os termos e imagens presentes no texto bíblico: **decreto, trouxessem, sábios, Babilônia, fizessem**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 6 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **decreto** neste verso e como ela contribui para o desenvolvimento de **o sonho inquietante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei convoca os sábios para interpretar o sonho.\n\n**Exegese contextual:** O decreto demonstra dependência do conhecimento especializado da corte.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:6"
       ],
@@ -196,7 +199,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Daniel 4:7 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:7:** Este versículo integra o movimento **o sonho inquietante**. Observe especialmente os termos e imagens presentes no texto bíblico: **vieram, magos, astrólogos, caldeus, adivinhos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 7 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **vieram** neste verso e como ela contribui para o desenvolvimento de **o sonho inquietante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os especialistas ouvem o sonho, mas não conseguem explicá-lo.\n\n**Exegese contextual:** O fracasso narrativo prepara a entrada de Daniel; não constitui prova de que todo saber humano é inútil.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:7"
       ],
@@ -206,7 +209,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Daniel 4:8 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:8:** Este versículo integra o movimento **o sonho inquietante**. Observe especialmente os termos e imagens presentes no texto bíblico: **Daniel, Beltessazar, segundo, espírito, deuses**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 8 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Daniel** neste verso e como ela contribui para o desenvolvimento de **o sonho inquietante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel é apresentado também pelo nome Beltessazar.\n\n**Exegese contextual:** A referência ao deus do rei reflete a linguagem religiosa de Nabucodonosor, não uma confissão monoteísta plena.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:8"
       ],
@@ -216,7 +219,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Daniel 4:9 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:9:** Este versículo integra o movimento **o sonho inquietante**. Observe especialmente os termos e imagens presentes no texto bíblico: **Beltessazar, príncipe, magos, espírito, deuses**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 9 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Beltessazar** neste verso e como ela contribui para o desenvolvimento de **o sonho inquietante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei pede a Daniel a interpretação, reconhecendo sua capacidade.\n\n**Exegese contextual:** A fala combina títulos da corte com a crença do rei em uma presença espiritual extraordinária em Daniel.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:9"
       ],
@@ -226,7 +229,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Daniel 4:10 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:10:** Este versículo integra o movimento **árvore e vigilante**. Observe especialmente os termos e imagens presentes no texto bíblico: **visões, minha, cabeça, vendo, árvore**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 10 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **visões** neste verso e como ela contribui para o desenvolvimento de **árvore e vigilante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O sonho mostra uma árvore enorme no centro da terra.\n\n**Exegese contextual:** A árvore funciona como imagem de grandeza política e influência, não como espécie botânica identificável.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:10"
       ],
@@ -236,7 +239,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Daniel 4:11 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:11:** Este versículo integra o movimento **árvore e vigilante**. Observe especialmente os termos e imagens presentes no texto bíblico: **árvore, crescia, fortalecia, altura, chegava**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 11 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **árvore** neste verso e como ela contribui para o desenvolvimento de **árvore e vigilante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A árvore cresce até o céu e é visível de longe.\n\n**Exegese contextual:** A linguagem hiperbólica comunica alcance imperial e prenuncia a crítica à arrogância.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:11"
       ],
@@ -246,7 +249,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Daniel 4:12 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:12:** Este versículo integra o movimento **árvore e vigilante**. Observe especialmente os termos e imagens presentes no texto bíblico: **folhagem, fruto, abundante, alimento, Debaixo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 12 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **folhagem** neste verso e como ela contribui para o desenvolvimento de **árvore e vigilante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Animais e aves encontram alimento e abrigo na árvore.\n\n**Exegese contextual:** O poder é retratado como fonte de recursos para muitos, aumentando a responsabilidade de quem governa.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:12"
       ],
@@ -256,7 +259,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Daniel 4:13 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:13:** Este versículo integra o movimento **árvore e vigilante**. Observe especialmente os termos e imagens presentes no texto bíblico: **vendo, visões, minha, cabeça, vigilante**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 13 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **vendo** neste verso e como ela contribui para o desenvolvimento de **árvore e vigilante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Um vigilante santo desce do céu.\n\n**Exegese contextual:** A figura celestial introduz o decreto divino; sua classificação exata nas hierarquias angelicais não é explicitada.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:13"
       ],
@@ -266,7 +269,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Daniel 4:14 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:14:** Este versículo integra o movimento **árvore e vigilante**. Observe especialmente os termos e imagens presentes no texto bíblico: **gritava, fortemente, dizia, Cortai, árvore**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 14 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **gritava** neste verso e como ela contribui para o desenvolvimento de **árvore e vigilante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O vigilante manda derrubar a árvore e dispersar seus habitantes.\n\n**Exegese contextual:** A perda do abrigo revela o alcance social da queda do soberano.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:14"
       ],
@@ -276,7 +279,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Daniel 4:15 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:15:** Este versículo integra o movimento **árvore e vigilante**. Observe especialmente os termos e imagens presentes no texto bíblico: **deixai, tronco, raízes, terra, correntes**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 15 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **deixai** neste verso e como ela contribui para o desenvolvimento de **árvore e vigilante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O toco e as raízes devem permanecer, apesar do corte.\n\n**Exegese contextual:** A preservação do toco antecipa a possibilidade de restauração após o juízo.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:15"
       ],
@@ -286,7 +289,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Daniel 4:16 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:16:** Este versículo integra o movimento **árvore e vigilante**. Observe especialmente os termos e imagens presentes no texto bíblico: **coração, mudado, homem, animal, passem**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 16 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **coração** neste verso e como ela contribui para o desenvolvimento de **árvore e vigilante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O coração humano se torna como o de animal por sete tempos.\n\n**Exegese contextual:** A transformação representa rebaixamento da condição régia; 'sete tempos' não recebe equivalência cronológica incontestável.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:16"
       ],
@@ -296,7 +299,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Daniel 4:17 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:17:** Este versículo integra o movimento **árvore e vigilante**. Observe especialmente os termos e imagens presentes no texto bíblico: **sentença, decreto, vigilantes, exigência, palavra**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 17 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **sentença** neste verso e como ela contribui para o desenvolvimento de **árvore e vigilante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O decreto ensina que o Altíssimo governa os reinos humanos.\n\n**Exegese contextual:** Este é o objetivo interpretativo explícito da visão, mais importante que especulações sobre o prazo.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:17"
       ],
@@ -306,7 +309,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Daniel 4:18 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:18:** Este versículo integra o movimento **árvore e vigilante**. Observe especialmente os termos e imagens presentes no texto bíblico: **sonho, Nabucodonosor, Beltessazar, interpretação, sábios**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 18 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **sonho** neste verso e como ela contribui para o desenvolvimento de **árvore e vigilante**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei pede a Daniel a interpretação porque os outros não conseguiram.\n\n**Exegese contextual:** A narrativa reafirma o papel de Daniel como intérprete, mas a origem da sabedoria permanece divina.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:18"
       ],
@@ -316,7 +319,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Daniel 4:19 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:19:** Este versículo integra o movimento **interpretação e chamado à justiça**. Observe especialmente os termos e imagens presentes no texto bíblico: **Daniel, Beltessazar, ficou, atônito, certo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 19 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Daniel** neste verso e como ela contribui para o desenvolvimento de **interpretação e chamado à justiça**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel se perturba com o significado do sonho.\n\n**Exegese contextual:** Sua reação expressa gravidade e possível compaixão pelo rei, não prazer diante da punição.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:19"
       ],
@@ -326,7 +329,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Daniel 4:20 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:20:** Este versículo integra o movimento **interpretação e chamado à justiça**. Observe especialmente os termos e imagens presentes no texto bíblico: **árvore, viste, crescera, fizera, forte**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 20 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **árvore** neste verso e como ela contribui para o desenvolvimento de **interpretação e chamado à justiça**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel retoma a descrição da árvore grandiosa.\n\n**Exegese contextual:** A repetição liga a imagem vista pelo rei à interpretação que será dada.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:20"
       ],
@@ -336,7 +339,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Daniel 4:21 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:21:** Este versículo integra o movimento **interpretação e chamado à justiça**. Observe especialmente os termos e imagens presentes no texto bíblico: **folhagem, formosa, fruto, abundante, alimento**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 21 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **folhagem** neste verso e como ela contribui para o desenvolvimento de **interpretação e chamado à justiça**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel lembra a beleza e a provisão da árvore.\n\n**Exegese contextual:** A extensão do domínio real implica responsabilidade para com os dependentes do império.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:21"
       ],
@@ -346,7 +349,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Daniel 4:22 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:22:** Este versículo integra o movimento **interpretação e chamado à justiça**. Observe especialmente os termos e imagens presentes no texto bíblico: **cresceste, fizeste, forte, grandeza, cresceu**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 22 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **cresceste** neste verso e como ela contribui para o desenvolvimento de **interpretação e chamado à justiça**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel identifica a árvore como o próprio Nabucodonosor.\n\n**Exegese contextual:** A interpretação é explícita: o rei alcançou poder extraordinário, mas não é autossuficiente.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:22"
       ],
@@ -356,7 +359,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Daniel 4:23 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:23:** Este versículo integra o movimento **interpretação e chamado à justiça**. Observe especialmente os termos e imagens presentes no texto bíblico: **vigilante, santo, descia, dizia, Cortai**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 23 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **vigilante** neste verso e como ela contribui para o desenvolvimento de **interpretação e chamado à justiça**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel relembra a ordem do vigilante e o toco preservado.\n\n**Exegese contextual:** A ameaça de queda inclui uma condição de reversibilidade simbolizada pelas raízes.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:23"
       ],
@@ -366,7 +369,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Daniel 4:24 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:24:** Este versículo integra o movimento **interpretação e chamado à justiça**. Observe especialmente os termos e imagens presentes no texto bíblico: **interpretação, sentença, Altíssimo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 24 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **interpretação** neste verso e como ela contribui para o desenvolvimento de **interpretação e chamado à justiça**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel anuncia a sentença do Altíssimo contra o rei.\n\n**Exegese contextual:** A autoridade final do julgamento não pertence a Daniel nem aos especialistas da corte.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:24"
       ],
@@ -376,7 +379,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Daniel 4:25 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:25:** Este versículo integra o movimento **interpretação e chamado à justiça**. Observe especialmente os termos e imagens presentes no texto bíblico: **Expulsar, dentre, homens, morada, animais**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 25 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Expulsar** neste verso e como ela contribui para o desenvolvimento de **interpretação e chamado à justiça**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei será afastado da convivência humana até reconhecer o domínio divino.\n\n**Exegese contextual:** A linguagem animaliza a experiência de humilhação; não se deve diagnosticar retrospectivamente uma doença específica.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:25"
       ],
@@ -386,7 +389,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Daniel 4:26 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:26:** Este versículo integra o movimento **interpretação e chamado à justiça**. Observe especialmente os termos e imagens presentes no texto bíblico: **deixassem, tronco, raízes, árvore, significa**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 26 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **deixassem** neste verso e como ela contribui para o desenvolvimento de **interpretação e chamado à justiça**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A permanência do toco indica que o reino poderá ser restituído.\n\n**Exegese contextual:** A restauração está vinculada ao reconhecimento de que o céu governa.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:26"
       ],
@@ -396,7 +399,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Daniel 4:27 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:27:** Este versículo integra o movimento **interpretação e chamado à justiça**. Observe especialmente os termos e imagens presentes no texto bíblico: **Portanto, aceita, conselho, desfaze, pecados**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 27 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Portanto** neste verso e como ela contribui para o desenvolvimento de **interpretação e chamado à justiça**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel aconselha justiça e misericórdia para com os pobres.\n\n**Exegese contextual:** O texto relaciona arrependimento não apenas a crença, mas à correção da opressão social; a extensão da paz é apresentada como possibilidade, não contrato.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:27"
       ],
@@ -406,7 +409,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Daniel 4:28 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:28:** Este versículo integra o movimento **orgulho e humilhação**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 28 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **orgulho e humilhação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O narrador afirma que a sentença se cumpriu.\n\n**Exegese contextual:** A breve transição leva da advertência à realização do sonho.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:28"
       ],
@@ -416,7 +419,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Daniel 4:29 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:29:** Este versículo integra o movimento **orgulho e humilhação**. Observe especialmente os termos e imagens presentes no texto bíblico: **meses, enquanto, passeava, palácio, Babilônia**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 29 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **meses** neste verso e como ela contribui para o desenvolvimento de **orgulho e humilhação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Doze meses se passam antes da crise.\n\n**Exegese contextual:** O intervalo ressalta que houve tempo entre aviso e cumprimento, sem afirmar que a oportunidade foi aproveitada.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:29"
       ],
@@ -426,7 +429,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Daniel 4:30 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:30:** Este versículo integra o movimento **orgulho e humilhação**. Observe especialmente os termos e imagens presentes no texto bíblico: **falou, grande, Babilônia, edifiquei, capital**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 30 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **falou** neste verso e como ela contribui para o desenvolvimento de **orgulho e humilhação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei atribui a si mesmo a grandeza de Babilônia.\n\n**Exegese contextual:** A linguagem de autopromoção contrasta com a afirmação de Daniel de que a autoridade foi concedida por Deus.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:30"
       ],
@@ -436,7 +439,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Daniel 4:31 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:31:** Este versículo integra o movimento **orgulho e humilhação**. Observe especialmente os termos e imagens presentes no texto bíblico: **Enquanto, palavra, Nabucodonosor, perdeste, reino**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 31 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Enquanto** neste verso e como ela contribui para o desenvolvimento de **orgulho e humilhação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Uma voz celestial anuncia a perda do reino.\n\n**Exegese contextual:** O juízo interrompe o discurso orgulhoso, marcando a reversão repentina.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:31"
       ],
@@ -446,7 +449,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-32",
       "title": "Daniel 4:32 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:32:** Este versículo integra o movimento **orgulho e humilhação**. Observe especialmente os termos e imagens presentes no texto bíblico: **expulsarão, dentre, homens, morada, animais**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 32 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **expulsarão** neste verso e como ela contribui para o desenvolvimento de **orgulho e humilhação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A voz repete o afastamento e os sete tempos.\n\n**Exegese contextual:** A repetição identifica o propósito pedagógico: reconhecer a soberania do Altíssimo.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:32"
       ],
@@ -456,7 +459,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-33",
       "title": "Daniel 4:33 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:33:** Este versículo integra o movimento **orgulho e humilhação**. Observe especialmente os termos e imagens presentes no texto bíblico: **mesma, palavra, cumpriu, Nabucodonosor, lançado**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 33 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **mesma** neste verso e como ela contribui para o desenvolvimento de **orgulho e humilhação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O relato descreve o rei vivendo como animal e com aparência alterada.\n\n**Exegese contextual:** Pelos e unhas crescidos intensificam a imagem de abandono da condição régia; não constituem prontuário clínico.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:33"
       ],
@@ -466,7 +469,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-34",
       "title": "Daniel 4:34 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:34:** Este versículo integra o movimento **restauração e louvor**. Observe especialmente os termos e imagens presentes no texto bíblico: **daqueles, Nabucodonosor, levantei, olhos, entendimento**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 34 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **daqueles** neste verso e como ela contribui para o desenvolvimento de **restauração e louvor**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Nabucodonosor ergue os olhos e recupera o entendimento.\n\n**Exegese contextual:** A mudança de perspectiva acompanha o louvor ao Deus de domínio eterno.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:34"
       ],
@@ -476,7 +479,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-35",
       "title": "Daniel 4:35 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:35:** Este versículo integra o movimento **restauração e louvor**. Observe especialmente os termos e imagens presentes no texto bíblico: **moradores, terra, contados, exército, habitantes**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 35 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **moradores** neste verso e como ela contribui para o desenvolvimento de **restauração e louvor**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei reconhece que ninguém pode impedir o agir divino.\n\n**Exegese contextual:** A declaração limita pretensões absolutas de governantes humanos; não deve ser usada para legitimar tiranias.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:35"
       ],
@@ -486,7 +489,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-36",
       "title": "Daniel 4:36 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:36:** Este versículo integra o movimento **restauração e louvor**. Observe especialmente os termos e imagens presentes no texto bíblico: **mesmo, tempo, entendimento, voltou, dignidade**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 36 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **mesmo** neste verso e como ela contribui para o desenvolvimento de **restauração e louvor**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A razão e a posição do rei são restauradas.\n\n**Exegese contextual:** A volta de conselheiros e dignidade mostra reversão do juízo, não uma promessa geral de recuperação política.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:36"
       ],
@@ -496,7 +499,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "versiculo-37",
       "title": "Daniel 4:37 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 4:37:** Este versículo integra o movimento **restauração e louvor**. Observe especialmente os termos e imagens presentes no texto bíblico: **Agora, Nabucodonosor, louvo, exalto, glorifico**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 37 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Agora** neste verso e como ela contribui para o desenvolvimento de **restauração e louvor**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei encerra louvando a justiça de Deus e condenando a arrogância.\n\n**Exegese contextual:** O último versículo explicita a mensagem moral do capítulo: o orgulho pode ser humilhado.\n\n**Pergunta:** Como este detalhe contribui para o contraste entre arrogância imperial, justiça e soberania de Deus?",
       "scriptureRefs": [
         "Daniel 4:37"
       ],
@@ -516,7 +519,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas",
-      "body": "Evitar identificar figuras antigas com governos modernos sem evidência, ou transformar visões e narrativas em promessas automáticas.",
+      "body": "**Sete tempos:** a duração exata é debatida; não impor cronologia que o texto não explica.\n\n**Comportamento animalizado:** não atribuir ao rei um diagnóstico psiquiátrico moderno como fato histórico.\n\n**Vigilante:** figura celestial que comunica juízo; hierarquias angelicais posteriores não são identificadas pelo relato.\n\n**Arrependimento e justiça:** o v. 27 liga mudança de vida a atos de justiça e misericórdia para com os pobres.",
       "scriptureRefs": [
         "Daniel 4:1-37"
       ],
@@ -526,7 +529,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas",
-      "body": "Daniel 1–7; Salmo 2; Marcos 14:62. Compare contexto e gênero.",
+      "body": "**Daniel 2:20–21:** Deus estabelece e remove reis.\n\n**Daniel 5:18–23:** a história de Nabucodonosor é lembrada como advertência.\n\n**Provérbios 16:18:** orgulho precede a queda.\n\n**Isaías 10:12–15:** crítica ao orgulho imperial.\n\n**Lucas 14:11:** Jesus ensina sobre humilhação e exaltação.\n\n**Tiago 4:6:** Deus resiste aos soberbos.",
       "scriptureRefs": [
         "Daniel 4:1-37"
       ],
@@ -536,7 +539,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão cristológica cautelosa",
-      "body": "A esperança do reino de Deus e a fidelidade são retomadas no Novo Testamento; em Daniel 7 a figura do filho de homem é especialmente relevante.",
+      "body": "Jesus ensina em Lucas 14:11 que a autoexaltação conduz à humilhação, oferecendo um diálogo ético com Daniel 4. Essa conexão não exige interpretar o sonho da árvore como profecia direta sobre Jesus.",
       "scriptureRefs": [
         "Daniel 4:1-37"
       ],
@@ -556,7 +559,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios e respostas",
-      "body": "**1. Qual tema orienta Daniel 4:1–9?** O sonho inquietante.\n\n**2. Qual tema orienta Daniel 4:10–18?** Árvore e vigilante.\n\n**3. Qual tema orienta Daniel 4:19–27?** Interpretação e chamado à justiça.\n\n**4. Qual tema orienta Daniel 4:28–33?** Orgulho e humilhação.\n\n**5. Qual tema orienta Daniel 4:34–37?** Restauração e louvor.",
+      "body": "**1. Quem é a árvore?** Nabucodonosor, segundo 4:22.\n\n**2. Por que o toco permanece?** Aponta para possibilidade de restituição do reino (4:26).\n\n**3. Que conselho Daniel oferece?** Praticar justiça e misericórdia para com os pobres (4:27).\n\n**4. O que desencadeia a cena do juízo?** O rei se atribui a glória de Babilônia (4:30–31).\n\n**5. Qual a mensagem final?** Deus pode humilhar os arrogantes (4:37).",
       "scriptureRefs": [
         "Daniel 4:1-37"
       ],
@@ -566,7 +569,7 @@ export const daniel4Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador",
-      "body": "**Tema:** O sonho inquietante.\n\n**Esboço:** O sonho inquietante (1–9); Árvore e vigilante (10–18); Interpretação e chamado à justiça (19–27); Orgulho e humilhação (28–33); Restauração e louvor (34–37).\n\n**Cuidado:** respeitar o contexto e não afirmar que o guia preliminar é estudo editorialmente concluído.",
+      "body": "**Tema:** Quando o poder aprende a humildade.\n\n**Proposição:** Autoridade responsável reconhece seus limites e pratica justiça.\n\n**Esboço:** (1) segurança abalada (1–9); (2) sonho e advertência (10–27); (3) arrogância e queda (28–33); (4) reconhecimento e restauração (34–37).\n\n**Cuidados:** não diagnosticar o rei com doença moderna nem prometer que sofrimento sempre será revertido em prosperidade.",
       "scriptureRefs": [
         "Daniel 4:1-37"
       ],
