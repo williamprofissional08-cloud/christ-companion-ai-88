@@ -153,6 +153,12 @@ export const hosea3Study: StudyContent = {
       "body": "**Tema:** Fidelidade que abre caminho para o retorno. **Proposição:** O sinal de Oseias anuncia um período de privação, mas a esperança final é a busca renovada pelo Senhor. **Movimentos:** (1) amor como sinal profético (1–3); (2) perda de apoios políticos e religiosos (4); (3) retorno e esperança davídica (5). **Ilustração:** a diferença entre confiança em símbolos e compromisso verdadeiro. **Alerta:** não apresentar compra de pessoa como ideal de relacionamento, nem romantizar sofrimento conjugal."
     },
     {
+      "id": "linha-tempo",
+      "title": "Linha do tempo e limites históricos",
+      "kind": "context",
+      "body": "Oseias atua no século VIII a.C., quando o reino do norte enfrenta instabilidade e expansão assíria. A queda de Samaria em 722/721 a.C. é um marco histórico posterior relacionado à privação descrita em 3:4. O capítulo, porém, não fornece data explícita para o retorno anunciado em 3:5; não é responsável estabelecer uma cronologia rígida a partir destes cinco versículos."
+    },
+    {
       "id": "oracao",
       "title": "Oração final",
       "kind": "prayer",
