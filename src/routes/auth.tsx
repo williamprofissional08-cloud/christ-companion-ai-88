@@ -30,12 +30,12 @@ export const Route = createFileRoute("/auth")({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { title: "Entrar — Caminho Divino" },
+      { title: "Entrar — Caminhando com Cristo" },
       {
         name: "description",
         content: "Acesse sua conta para continuar sua jornada diária com Deus.",
       },
-      { property: "og:title", content: "Entrar — Caminho Divino" },
+      { property: "og:title", content: "Entrar — Caminhando com Cristo" },
       {
         property: "og:description",
         content: "Acesse sua conta para continuar sua jornada diária com Deus.",

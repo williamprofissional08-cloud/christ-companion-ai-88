@@ -17,7 +17,7 @@ export const Route = createFileRoute("/_authenticated/estudos/")({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { title: "Estudos bíblicos — Caminho Divino" },
+      { title: "Estudos bíblicos — Caminhando com Cristo" },
       {
         name: "description",
         content:
