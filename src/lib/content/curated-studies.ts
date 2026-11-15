@@ -1,3 +1,13 @@
+import { jeremiah45Study } from "./jeremiah-45-study";
+import { jeremiah44Study } from "./jeremiah-44-study";
+import { jeremiah43Study } from "./jeremiah-43-study";
+import { jeremiah42Study } from "./jeremiah-42-study";
+import { jeremiah41Study } from "./jeremiah-41-study";
+import { jeremiah40Study } from "./jeremiah-40-study";
+import { jeremiah39Study } from "./jeremiah-39-study";
+import { jeremiah38Study } from "./jeremiah-38-study";
+import { jeremiah37Study } from "./jeremiah-37-study";
+import { jeremiah36Study } from "./jeremiah-36-study";
 import { jeremiah35Study } from "./jeremiah-35-study";
 import { jeremiah34Study } from "./jeremiah-34-study";
 import { jeremiah33Study } from "./jeremiah-33-study";
@@ -915,6 +925,16 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-jeremias-cap-33": jeremiah33Study,
   "biblia-jeremias-cap-34": jeremiah34Study,
   "biblia-jeremias-cap-35": jeremiah35Study,
+  "biblia-jeremias-cap-36": jeremiah36Study,
+  "biblia-jeremias-cap-37": jeremiah37Study,
+  "biblia-jeremias-cap-38": jeremiah38Study,
+  "biblia-jeremias-cap-39": jeremiah39Study,
+  "biblia-jeremias-cap-40": jeremiah40Study,
+  "biblia-jeremias-cap-41": jeremiah41Study,
+  "biblia-jeremias-cap-42": jeremiah42Study,
+  "biblia-jeremias-cap-43": jeremiah43Study,
+  "biblia-jeremias-cap-44": jeremiah44Study,
+  "biblia-jeremias-cap-45": jeremiah45Study,
   "biblia-marcos-cap-4": mark4Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
