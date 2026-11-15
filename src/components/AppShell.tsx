@@ -25,6 +25,17 @@ const PRIMARY_NAV = [
   { to: "/escola", label: "Escola Bíblica", icon: GraduationCap },
 ] as const;
 
+// Uma única navegação móvel para todas as páginas autenticadas.
+// Itens secundários permanecem no menu e nos atalhos do Início.
+const MOBILE_NAV = [
+  { to: "/inicio", label: "Início", icon: Home },
+  { to: "/biblia", label: "Bíblia", icon: BookOpen },
+  { to: "/estudos", label: "Estudos", icon: BookOpen },
+  { to: "/trilhas", label: "Trilhas", icon: RouteIcon },
+  { to: "/comunidade", label: "Comunidade", icon: UsersRound },
+  { to: "/configuracoes", label: "Perfil", icon: UserRound },
+] as const;
+
 const MORE_NAV = [
   { to: "/assistente", label: "Assistente", icon: MessageCircleHeart },
   { to: "/devocional", label: "Devocional", icon: Flame },
@@ -222,27 +233,19 @@ export function AppShell({
           )}
         </header>
 
-        <main className={`mx-auto w-full max-w-screen-2xl min-w-0 flex-1 ${homeHeader ? "px-2 pt-[calc(3.5rem+env(safe-area-inset-top)+0.5rem)] pb-[calc(3.75rem+env(safe-area-inset-bottom)+0.5rem)] sm:px-3 lg:px-5 lg:pb-3" : "px-3 pt-4 pb-24 sm:px-5 sm:pt-5 lg:px-8 lg:pb-10"}`}>{children}</main>
+        <main className={`mx-auto w-full max-w-screen-2xl min-w-0 flex-1 ${homeHeader ? "px-2 pt-[calc(3.5rem+env(safe-area-inset-top)+0.5rem)] pb-[calc(4.5rem+env(safe-area-inset-bottom))] sm:px-3 lg:px-5 lg:pb-3" : "px-3 pt-4 pb-[calc(4.5rem+env(safe-area-inset-bottom))] sm:px-5 sm:pt-5 lg:px-8 lg:pb-10"}`}>{children}</main>
 
-        <nav aria-label="Navegação rápida" className="fixed inset-x-0 bottom-0 z-30 pb-[env(safe-area-inset-bottom)] border-t border-border/70 bg-white/95 backdrop-blur dark:bg-background/95 lg:hidden">
-          <div className={profileHeader ? "mx-auto grid max-w-2xl grid-cols-5" : homeHeader || !isAdmin ? "mx-auto grid max-w-2xl grid-cols-6" : "mx-auto grid max-w-2xl grid-cols-5"}>
-            {(profileHeader ? [
-              { to: "/inicio" as const, label: "Início", icon: Home },
-              { to: "/estudos" as const, label: "Estudos", icon: BookOpen },
-              { to: "/escola" as const, label: "Cursos", icon: GraduationCap },
-              { to: "/comunidade" as const, label: "Comunidade", icon: UsersRound },
-              { to: "/configuracoes" as const, label: "Perfil", icon: UserRound },
-            ] : homeHeader ? [
-              { to: "/inicio" as const, label: "Início", icon: Home },
-              { to: "/biblia" as const, label: "Bíblia", icon: BookOpen },
-              { to: "/trilhas" as const, label: "Cursos", icon: RouteIcon },
-              { to: "/comunidade" as const, label: "Comunidade", icon: UsersRound },
-              { to: "/metas" as const, label: "Minha Jornada", icon: Target },
-              { to: "/configuracoes" as const, label: "Perfil", icon: UserRound },
-            ] : isAdmin ? [...PRIMARY_NAV, { to: "/admin" as const, label: "Admin", icon: ShieldCheck }] : PRIMARY_NAV).map((item) => (
-              <Link key={item.to} to={item.to} className="flex min-h-12 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[9px] text-center leading-tight text-muted-foreground"
-                activeProps={{ className: "flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[9px] text-center leading-tight font-semibold text-primary" }}>
-                <item.icon className="size-[19px]" aria-hidden />{item.label}
+        <nav aria-label="Navegação rápida" className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur dark:bg-background/95 lg:hidden">
+          <div className="mx-auto grid max-w-2xl grid-cols-6">
+            {MOBILE_NAV.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="flex min-h-14 min-w-0 flex-col items-center justify-center gap-1 px-0.5 py-2 text-center text-[10px] leading-tight text-muted-foreground transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary"
+                activeProps={{ className: "font-semibold text-primary" }}
+              >
+                <item.icon className="size-5 shrink-0" aria-hidden="true" />
+                <span className="block w-full truncate">{item.label}</span>
               </Link>
             ))}
           </div>
