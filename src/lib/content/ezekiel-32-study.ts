@@ -1,51 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 32 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 32 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel32Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 32 reúne lamentos que retratam o faraó como monstro capturado e o Egito entre impérios caídos.",
-  "historicalContext": "Oráculos contra o Egito no século VI a.C., com linguagem poética de guerra e do mundo dos mortos.",
+  "intro": "Ezequiel 32 reúne dois lamentos sobre a queda do Egito: Faraó aparece como monstro aquático derrotado, e depois como governante que desce ao mundo dos mortos ao lado de impérios antes temidos.",
+  "historicalContext": "O capítulo integra os oráculos de Ezequiel contra o Egito em meio à expansão babilônica no século VI a.C. O primeiro lamento emprega imagens do Nilo, da captura de uma criatura e de trevas cósmicas; o segundo utiliza uma representação poética do Xeol e uma lista de potências derrotadas. Não se deve confundir a poesia profética com um relato geográfico literal do além.",
   "keyPoints": [
     {
-      "title": "1–16: O monstro do Nilo e o lamento cósmico",
-      "text": "Faraó é figurado como criatura aquática capturada, enquanto o céu escurece e as nações tremem."
+      "title": "1–10: O monstro derrotado",
+      "text": "Faraó, antes temido, é capturado e sua queda abala simbolicamente os céus e as nações."
     },
     {
-      "title": "17–21: A descida à cova",
-      "text": "O segundo oráculo convoca o Egito a juntar-se aos mortos e desfaz sua pretensão de excepcionalidade."
+      "title": "11–16: A espada da Babilônia",
+      "text": "A ameaça histórica é nomeada e o primeiro lamento se encerra."
     },
     {
-      "title": "22–30: A assembleia dos impérios caídos",
-      "text": "Assíria, Elão, Meseque, Tubal, Edom e outros aparecem como exemplos de poder que terminou."
+      "title": "17–28: A descida ao Xeol",
+      "text": "O Egito encontra outras potências militares que não escaparam da morte."
     },
     {
-      "title": "31–32: O consolo irônico do faraó",
-      "text": "A presença de outros caídos não restitui ao Egito a grandeza perdida."
+      "title": "29–32: A igualdade dos impérios na derrota",
+      "text": "Edom, povos do norte e o próprio Faraó são apresentados entre os mortos."
     }
   ],
-  "application": "Reconhecer os limites do poder e cultivar compaixão pelas vítimas de conflitos.",
+  "application": "Desconfiar da idolatria do poder militar e da arrogância de governantes; lamentar as consequências humanas das guerras e reconhecer a mortalidade de toda potência. Não transformar nomes antigos em previsões simplistas sobre nações atuais.",
   "crossReferences": [
-    "Ezequiel 29:3-5",
-    "Ezequiel 31:15-18",
-    "Isaías 14:9-15",
+    "Êxodo 7:20-21",
+    "Isaías 14:4-20",
+    "Isaías 19:1-16",
     "Jeremias 46:1-26",
-    "Salmo 146:3-4",
-    "1 Coríntios 15:20-26"
+    "Ezequiel 29:1-16",
+    "Apocalipse 18:9-19"
   ],
   "questions": [
-    "O que representa o monstro do Nilo?",
-    "Como interpretar os astros escurecidos?",
-    "Por que os impérios são reunidos no Xeol?",
-    "Qual o sentido do consolo do faraó?"
+    "Por que Faraó é retratado como monstro que turva as águas?",
+    "Que função têm as imagens de escuridão nos vv. 7–8?",
+    "Qual invasor é citado no v. 11?",
+    "Como a lista de povos no Xeol reforça o argumento do lamento?",
+    "Em que sentido o consolo de Faraó no v. 31 é irônico?"
   ],
-  "conclusion": "Os lamentos encerram a série contra o Egito com a lembrança de que poder e prestígio não vencem a mortalidade.",
+  "conclusion": "O capítulo mostra, por meio de imagens intensas de luto, que nenhum império pode sustentar para sempre sua pretensão de invulnerabilidade.",
   "prayer": "Senhor, ensina-nos humildade e compaixão. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 32:1–32 (paráfrase livre autoral)",
-      "body": "**Paráfrase autoral para estudo; não é tradução bíblica oficial.**\n\n**1.** O lamento recebe data no décimo segundo ano, décimo segundo mês, primeiro dia.\n\n**2.** Faraó é comparado a leão e monstro aquático que turva rios.\n\n**3.** Uma rede lançada por muitos povos capturará o monstro.\n\n**4.** O monstro é lançado em terra e exposto às aves e animais.\n\n**5.** A grandeza do monstro se torna imagem de corpos sobre montes e vales.\n\n**6.** A terra e as correntes são figuradas como cobertas pelo sangue do monstro.\n\n**7.** A queda do faraó é acompanhada pelo escurecimento dos astros.\n\n**8.** Luzes do céu se apagam e trevas cobrem o Egito.\n\n**9.** A notícia da queda perturba povos distantes.\n\n**10.** Reis estrangeiros tremem diante do destino do faraó.\n\n**11.** A espada do rei da Babilônia é anunciada.\n\n**12.** Guerreiros estrangeiros abatem a multidão e o orgulho egípcios.\n\n**13.** Animais deixam de turvar as águas.\n\n**14.** As águas passam a correr tranquilas como óleo.\n\n**15.** A desolação é apresentada como ocasião de reconhecimento divino.\n\n**16.** O primeiro poema é identificado como lamentação por Egito e seu povo.\n\n**17.** Um segundo oráculo recebe data no mesmo décimo segundo ano, dia quinze.\n\n**18.** O Egito é convocado a descer à cova junto com outros povos.\n\n**19.** A pergunta sobre beleza é respondida pela mortalidade comum.\n\n**20.** O povo é descrito entre os mortos à espada.\n\n**21.** Guerreiros poderosos falam do Xeol aos recém-chegados.\n\n**22.** A Assíria e sua multidão aparecem entre os mortos.\n\n**23.** Túmulos da Assíria circundam a cova.\n\n**24.** Elão e seus guerreiros aparecem no mundo dos mortos.\n\n**25.** A multidão de Elão recebe lugar entre mortos e sepulturas.\n\n**26.** Meseque e Tubal são citados com seus guerreiros.\n\n**27.** A comparação com guerreiros enterrados com armas introduz distinção funerária.\n\n**28.** O Egito também será colocado entre os mortos à espada.\n\n**29.** Edom e seus governantes figuram entre os caídos.\n\n**30.** Príncipes do norte e sidônios também aparecem na cova.\n\n**31.** O faraó vê os demais e encontra consolo amargo na companhia dos caídos.\n\n**32.** O capítulo encerra com faraó e sua multidão entre os mortos.",
+      "body": "Leia Ezequiel 32:1–32 no texto bíblico do aplicativo. Os comentários apresentam **paráfrases livres autorais** e exegese contextual, não transcrição de tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 32:1-32"
       ],
@@ -127,7 +128,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 32:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O lamento recebe data no décimo segundo ano, décimo segundo mês, primeiro dia.\n\n**Exegese contextual:** A data situa o oráculo depois da queda de Jerusalém no contexto do exílio.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** A palavra do Senhor é datada no décimo segundo ano, no primeiro dia do décimo segundo mês.\n\n**Exegese contextual:** A datação situa o lamento na série de oráculos contra o Egito e reforça seu caráter de anúncio histórico, não de cronograma moderno.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:1"
       ],
@@ -137,7 +138,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 32:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Faraó é comparado a leão e monstro aquático que turva rios.\n\n**Exegese contextual:** A imagem denuncia a pretensão de grandeza e o efeito perturbador do poder imperial.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Faraó é comparado a leão e monstro aquático que agita as águas.\n\n**Exegese contextual:** As imagens de predador e criatura dos rios retratam poder imperial ameaçador; o Nilo integra a representação da força egípcia.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:2"
       ],
@@ -147,7 +148,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 32:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma rede lançada por muitos povos capturará o monstro.\n\n**Exegese contextual:** O animal que dominava as águas perde a liberdade diante do juízo.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Deus anuncia uma rede lançada por muitos povos contra o monstro.\n\n**Exegese contextual:** A imagem inverte a posição de Faraó: o governante que dominava será capturado.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:3"
       ],
@@ -157,7 +158,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 32:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O monstro é lançado em terra e exposto às aves e animais.\n\n**Exegese contextual:** A retirada da água destrói sua fonte simbólica de poder.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** O monstro será lançado em terra para aves e animais.\n\n**Exegese contextual:** A exposição do corpo representa derrota pública e perda de honra na linguagem poética do juízo.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:4"
       ],
@@ -167,7 +168,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 32:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A grandeza do monstro se torna imagem de corpos sobre montes e vales.\n\n**Exegese contextual:** A linguagem chocante dramatiza a escala da derrota, sem descrever evento zoológico literal.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Montes e vales são preenchidos pela carne do monstro derrotado.\n\n**Exegese contextual:** O exagero visual amplia a escala da queda do império, não descreve literalmente um animal.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:5"
       ],
@@ -177,7 +178,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 32:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A terra e as correntes são figuradas como cobertas pelo sangue do monstro.\n\n**Exegese contextual:** A hipérbole comunica violência e devastação de guerra.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** O sangue alcança a terra e as correntes de água.\n\n**Exegese contextual:** A imagem extrema associa a derrota à violência que marcou o poder imperial.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:6"
       ],
@@ -187,7 +188,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 32:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A queda do faraó é acompanhada pelo escurecimento dos astros.\n\n**Exegese contextual:** A linguagem cósmica é poesia de juízo, não previsão astronômica literal.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** A queda de Faraó é figurada como escurecimento de estrelas, sol e lua.\n\n**Exegese contextual:** A linguagem cósmica expressa colapso político e social, não previsão obrigatória de um eclipse astronômico.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:7"
       ],
@@ -197,7 +198,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 32:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Luzes do céu se apagam e trevas cobrem o Egito.\n\n**Exegese contextual:** A repetição reforça a dimensão política e existencial da crise.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Deus anuncia trevas sobre a terra egípcia.\n\n**Exegese contextual:** A escuridão retoma o efeito totalizador da queda e pode evocar o repertório das pragas do Êxodo.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:8"
       ],
@@ -207,7 +208,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 32:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A notícia da queda perturba povos distantes.\n\n**Exegese contextual:** A reputação egípcia alcança além de suas fronteiras.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Outras nações ficarão perturbadas com a notícia da destruição.\n\n**Exegese contextual:** A queda de uma potência regional altera o sentimento de segurança de povos vizinhos.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:9"
       ],
@@ -217,7 +218,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 32:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Reis estrangeiros tremem diante do destino do faraó.\n\n**Exegese contextual:** A queda de uma potência ameaça a sensação de segurança dos demais governantes.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Reis e povos tremerão diante da espada que anuncia a derrota.\n\n**Exegese contextual:** O temor internacional ressalta a fragilidade até dos governantes que se consideram seguros.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:10"
       ],
@@ -227,7 +228,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 32:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A espada do rei da Babilônia é anunciada.\n\n**Exegese contextual:** O texto vincula o desastre ao avanço neobabilônico.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** A espada do rei da Babilônia é nomeada como instrumento do juízo.\n\n**Exegese contextual:** O oráculo deixa a metáfora e identifica a ameaça imperial babilônica no horizonte histórico.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:11"
       ],
@@ -237,7 +238,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 32:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Guerreiros estrangeiros abatem a multidão e o orgulho egípcios.\n\n**Exegese contextual:** A retórica de derrota não autoriza violência contra povos modernos.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Guerreiros estrangeiros derrubarão o orgulho e a multidão do Egito.\n\n**Exegese contextual:** A ênfase recai na queda da soberba política e militar, não em superioridade moral intrínseca dos invasores.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:12"
       ],
@@ -247,7 +248,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 32:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Animais deixam de turvar as águas.\n\n**Exegese contextual:** A interrupção do movimento simboliza silêncio após a devastação.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Animais deixarão de agitar as águas egípcias.\n\n**Exegese contextual:** A interrupção da atividade à beira dos rios retrata desolação econômica e ambiental.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:13"
       ],
@@ -257,7 +258,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 32:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As águas passam a correr tranquilas como óleo.\n\n**Exegese contextual:** A imagem inverte os rios agitados pelo monstro no verso 2.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** As águas se aquietarão e correrão como azeite.\n\n**Exegese contextual:** O contraste com o monstro que turvava os rios sugere o fim de sua agitação dominadora.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:14"
       ],
@@ -267,7 +268,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 32:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A desolação é apresentada como ocasião de reconhecimento divino.\n\n**Exegese contextual:** A fórmula 'saberão que eu sou o Senhor' é recorrente em Ezequiel.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** A devastação levará ao reconhecimento do Senhor.\n\n**Exegese contextual:** A fórmula recorrente em Ezequiel dá interpretação teológica ao anúncio de juízo.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:15"
       ],
@@ -277,7 +278,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 32:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O primeiro poema é identificado como lamentação por Egito e seu povo.\n\n**Exegese contextual:** O gênero reconhece a perda e não exige alegria diante da morte.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** As nações entoarão o lamento pelo Egito e sua multidão.\n\n**Exegese contextual:** A conclusão da primeira parte identifica o gênero literário como lamentação fúnebre por uma potência caída.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:16"
       ],
@@ -287,7 +288,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 32:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Um segundo oráculo recebe data no mesmo décimo segundo ano, dia quinze.\n\n**Exegese contextual:** O mês não é repetido no texto hebraico do verso, de modo que não convém completá-lo com certeza.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Uma segunda palavra profética é datada no décimo segundo ano.\n\n**Exegese contextual:** O texto abre outro lamento; a indicação do mês apresenta discussão textual, portanto convém evitar precisão não fornecida.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:17"
       ],
@@ -297,7 +298,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 32:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O Egito é convocado a descer à cova junto com outros povos.\n\n**Exegese contextual:** A descida à região dos mortos simboliza o fim do prestígio imperial.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** O profeta deve lamentar o Egito e imaginá-lo descendo à cova.\n\n**Exegese contextual:** A cena muda do rio e da superfície da terra para o mundo dos mortos, enfatizando mortalidade imperial.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:18"
       ],
@@ -307,7 +308,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 32:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A pergunta sobre beleza é respondida pela mortalidade comum.\n\n**Exegese contextual:** Nenhum império possui status superior diante da morte.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** A pergunta retórica nega ao Egito beleza ou privilégio que o livre da morte.\n\n**Exegese contextual:** Nenhuma grandeza política concede exceção ao destino representado na lamentação.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:19"
       ],
@@ -317,7 +318,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 32:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O povo é descrito entre os mortos à espada.\n\n**Exegese contextual:** A espada é marca de guerra no poema, não juízo sobre valor individual.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** A multidão egípcia é entregue à espada e à sepultura.\n\n**Exegese contextual:** A repetição associa o fim do império à violência da guerra.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:20"
       ],
@@ -327,7 +328,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 32:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Guerreiros poderosos falam do Xeol aos recém-chegados.\n\n**Exegese contextual:** A personificação dos mortos é recurso dramático de lamentação.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Guerreiros mortos falam do Xeol aos recém-chegados.\n\n**Exegese contextual:** O Xeol é representado poeticamente como domínio dos mortos; o diálogo compõe uma sátira fúnebre.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:21"
       ],
@@ -337,7 +338,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 32:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A Assíria e sua multidão aparecem entre os mortos.\n\n**Exegese contextual:** O antigo império serve como precedente para o Egito.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** A Assíria e seu exército já estão entre os mortos.\n\n**Exegese contextual:** A antiga potência oferece precedente histórico para a queda de Faraó.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:22"
       ],
@@ -347,7 +348,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 32:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Túmulos da Assíria circundam a cova.\n\n**Exegese contextual:** O espaço funerário é descrito poeticamente como reunião de potências caídas.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Os túmulos da Assíria cercam a cova após seu terror na terra.\n\n**Exegese contextual:** A repetição de morte e terror contrasta a antiga reputação militar com a impotência final.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:23"
       ],
@@ -357,7 +358,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 32:24 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Elão e seus guerreiros aparecem no mundo dos mortos.\n\n**Exegese contextual:** Outro poder regional é lembrado por ter espalhado terror.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Elão aparece entre os mortos, apesar do terror que provocou.\n\n**Exegese contextual:** A lista amplia o argumento: povos guerreiros diversos não escapam da mortalidade.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:24"
       ],
@@ -367,7 +368,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 32:25 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A multidão de Elão recebe lugar entre mortos e sepulturas.\n\n**Exegese contextual:** O tema repetido é a inversão do terror causado em vida.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Elão e sua multidão recebem lugar entre os mortos à espada.\n\n**Exegese contextual:** O leito fúnebre e as sepulturas reforçam a inversão de honra e poder.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:25"
       ],
@@ -377,7 +378,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 32:26 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Meseque e Tubal são citados com seus guerreiros.\n\n**Exegese contextual:** As designações apontam grupos conhecidos da geografia antiga; identificações modernas simplistas devem ser evitadas.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Meseque e Tubal são mencionados com seus exércitos mortos.\n\n**Exegese contextual:** Os nomes representam outros povos guerreiros conhecidos no horizonte profético, sem identificação automática com países atuais.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:26"
       ],
@@ -387,7 +388,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 32:27 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A comparação com guerreiros enterrados com armas introduz distinção funerária.\n\n**Exegese contextual:** O texto contrasta honra militar e vergonha; detalhes rituais são discutidos.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** A comparação com guerreiros enterrados com armas destaca vergonha e culpa.\n\n**Exegese contextual:** O contraste entre ritos funerários e o peso da violência expõe a inutilidade da fama bélica diante da morte.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:27"
       ],
@@ -397,7 +398,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 32:28 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O Egito também será colocado entre os mortos à espada.\n\n**Exegese contextual:** A sentença aplica ao faraó o mesmo destino das potências anteriores.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** O Egito também será contado entre os mortos à espada.\n\n**Exegese contextual:** A aplicação direta a Faraó desfaz qualquer pretensão de destino privilegiado.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:28"
       ],
@@ -407,7 +408,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Ezequiel 32:29 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Edom e seus governantes figuram entre os caídos.\n\n**Exegese contextual:** O poema reúne poderes de regiões diferentes sob a mesma mortalidade.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Edom e seus governantes aparecem na mesma comunidade dos mortos.\n\n**Exegese contextual:** A enumeração continua nivelando reinos de diferentes regiões diante da mortalidade.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:29"
       ],
@@ -417,7 +418,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Ezequiel 32:30 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Príncipes do norte e sidônios também aparecem na cova.\n\n**Exegese contextual:** A enumeração amplia o alcance do lamento e sua crítica ao terror imperial.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Príncipes do norte e sidônios compartilham a vergonha da sepultura.\n\n**Exegese contextual:** O alcance geográfico da lista evidencia que terror e prestígio militar não asseguram permanência.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:30"
       ],
@@ -427,7 +428,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Ezequiel 32:31 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O faraó vê os demais e encontra consolo amargo na companhia dos caídos.\n\n**Exegese contextual:** O consolo não é redenção; é ironia diante da perda de superioridade.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** Faraó verá as outras potências caídas e terá consolo amargo.\n\n**Exegese contextual:** O consolo é irônico: a única companhia disponível é a dos exércitos derrotados.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:31"
       ],
@@ -437,7 +438,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "versiculo-32",
       "title": "Ezequiel 32:32 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O capítulo encerra com faraó e sua multidão entre os mortos.\n\n**Exegese contextual:** A soberania divina é afirmada diante do poder militar e da mortalidade.\n\n**Pergunta para estudo:** Como este verso apresenta a fragilidade do poder diante da morte?",
+      "body": "**Paráfrase livre autoral:** O Senhor conclui que Faraó e sua multidão jazerão entre os mortos.\n\n**Exegese contextual:** A conclusão encerra o lamento com a fragilidade do poder que antes inspirava terror.\n\n**Pergunta interpretativa:** Como esta imagem revela a fragilidade do poder imperial diante do juízo?",
       "scriptureRefs": [
         "Ezequiel 32:32"
       ],
@@ -517,7 +518,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "São discutidos o tipo de monstro aquático, o alcance das imagens cósmicas, a identificação dos povos e o sentido do Xeol. A passagem não autoriza usar catástrofes modernas como cumprimento direto nem celebrar mortes em guerra.",
+      "body": "**Monstro aquático:** a imagem remete à força de Faraó ligada aos rios do Egito; não exige identificar uma criatura zoológica literal.\n\n**Trevas cósmicas:** recurso poético de colapso político e juízo, não previsão necessária de fenômenos astronômicos.\n\n**Xeol:** cenário literário do mundo dos mortos; a passagem não deve ser tratada como mapa detalhado da vida após a morte.\n\n**Povos antigos:** Assíria, Elão, Meseque, Tubal, Edom e Sidom pertencem ao horizonte histórico do profeta; correspondências políticas modernas exigiriam evidência que o texto não fornece.",
       "scriptureRefs": [
         "Ezequiel 32:1-32"
       ],
@@ -527,7 +528,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**Ezequiel 29:3–5:** faraó como monstro do Nilo. **Ezequiel 31:15–18:** árvore imperial descendo ao Xeol. **Isaías 14:9–15:** lamento sobre governante caído com imagens do mundo dos mortos. **Jeremias 46:1–26:** oráculo contra Egito. **Salmo 146:3–4:** limite do poder dos governantes.",
+      "body": "**Êxodo 7:20–21:** águas do Nilo e juízo.\n\n**Isaías 14:4–20:** sátira fúnebre de um governante caído no mundo dos mortos.\n\n**Isaías 19:1–16:** oráculo contra o Egito.\n\n**Jeremias 46:1–26:** juízo sobre a força militar egípcia.\n\n**Ezequiel 29:1–16:** Faraó e a imagem do monstro dos rios.\n\n**Apocalipse 18:9–19:** lamento pela queda de uma potência arrogante.",
       "scriptureRefs": [
         "Ezequiel 32:1-32"
       ],
@@ -537,7 +538,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria forçada",
-      "body": "A mortalidade dos impérios contrasta com a esperança cristã da ressurreição (1 Coríntios 15:20–26). Isso é diálogo teológico posterior, não identificação direta do faraó com uma figura do Novo Testamento.",
+      "body": "A tradição cristã lê a queda de poderes arrogantes à luz do reino de Deus, que não depende da violência imperial. Apocalipse 18 utiliza o gênero de lamento sobre uma potência caída. A conexão deve preservar o contexto do Egito e a linguagem poética de Ezequiel 32.",
       "scriptureRefs": [
         "Ezequiel 32:1-32"
       ],
@@ -557,7 +558,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Como o faraó é representado?** Como monstro aquático que turva rios (v. 2).\n\n**2. Que imagem anuncia sua captura?** Uma rede (v. 3).\n\n**3. Como o céu participa do lamento?** Escurecimento dos astros (vv. 7–8).\n\n**4. Que impérios aparecem na cova?** Assíria, Elão, Meseque, Tubal e outros (vv. 22–30).\n\n**5. Qual é a mensagem central da segunda parte?** Nenhuma potência escapa à mortalidade (vv. 17–32).",
+      "body": "**1. Que imagens descrevem Faraó?** Leão e monstro aquático (32:2).\n\n**2. Quem é nomeado como ameaça?** O rei da Babilônia (32:11).\n\n**3. Como termina a primeira seção?** Com um lamento pelo Egito (32:16).\n\n**4. Onde o segundo lamento situa os impérios caídos?** No Xeol, figurado como mundo dos mortos (32:21–30).\n\n**5. Qual é a ironia do v. 31?** Faraó só encontra consolo entre outros derrotados.",
       "scriptureRefs": [
         "Ezequiel 32:1-32"
       ],
@@ -567,7 +568,7 @@ export const ezekiel32Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — o limite de todo império",
-      "body": "**Tema:** A grandeza que encontra a morte.\n\n**Proposição:** O poder humano não é absoluto e não deve ser idolatrado.\n\n**Esboço:** (1) o monstro capturado (1–16); (2) a cova das nações (17–30); (3) o faraó entre os caídos (31–32).\n\n**Cuidado:** tratar imagens do Xeol como poesia e jamais transformar a passagem em celebração de vítimas.",
+      "body": "**Tema:** O fim da arrogância dos impérios.\n\n**Proposição:** Nenhuma potência militar é imune à fragilidade humana e ao juízo divino.\n\n**Esboço:** (1) a captura do monstro (1–10); (2) a espada histórica (11–16); (3) os impérios no mundo dos mortos (17–28); (4) o consolo irônico de Faraó (29–32).\n\n**Cuidados:** não tratar a poesia do Xeol como descrição literal do além, não identificar automaticamente povos antigos com nações modernas e não celebrar vítimas de guerra.",
       "scriptureRefs": [
         "Ezequiel 32:1-32"
       ],
