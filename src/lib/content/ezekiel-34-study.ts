@@ -1,50 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 34 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 34 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel34Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 34 denuncia pastores exploradores, promete o cuidado de Deus e anuncia um pastor davídico e uma aliança de paz.",
-  "historicalContext": "Crítica profética aos governantes de Israel após a crise de Jerusalém, com linguagem régia de pastor.",
+  "intro": "Ezequiel 34 confronta líderes que exploram o povo, promete o cuidado direto de Deus, denuncia a opressão entre as próprias ovelhas e anuncia um pastor davídico e uma aliança de paz.",
+  "historicalContext": "Na tradição bíblica do antigo Oriente Próximo, reis e líderes podiam ser chamados de pastores. No contexto da queda de Jerusalém e do exílio, Ezequiel denuncia governantes que falharam na proteção do povo. O capítulo distingue a crítica aos líderes (vv. 1–10), o cuidado de Deus (vv. 11–16), o juízo entre as ovelhas (vv. 17–22) e a esperança davídica (vv. 23–31).",
   "keyPoints": [
     {
-      "title": "Liderança sob julgamento",
-      "text": "Os pastores exploram e abandonam o rebanho."
+      "title": "1–10: Pastores que exploram",
+      "text": "Lideranças usam o rebanho para benefício próprio e abandonam os vulneráveis."
     },
     {
-      "title": "Deus busca o disperso",
-      "text": "O Senhor promete reunir, curar e alimentar."
+      "title": "11–16: Deus busca e cuida",
+      "text": "O Senhor reúne, alimenta, cura e protege as ovelhas dispersas."
     },
     {
-      "title": "Justiça entre ovelhas",
-      "text": "A opressão dentro da comunidade também será julgada."
+      "title": "17–22: Justiça dentro do rebanho",
+      "text": "O julgamento também alcança membros fortes que prejudicam os fracos."
     },
     {
-      "title": "Pastor davídico e paz",
-      "text": "O futuro do povo é descrito como governo justo e segurança."
+      "title": "23–31: Pastor davídico e paz",
+      "text": "A promessa reúne liderança justa, libertação e aliança com Deus."
     }
   ],
-  "application": "Exercer liderança com prestação de contas e cuidado concreto pelos vulneráveis.",
+  "application": "Avaliar lideranças pela proteção de pessoas vulneráveis, transparência e serviço, não por prestígio. Evitar desperdício ou controle de recursos comuns que prejudique os demais. Reconhecer que o capítulo não concede autoridade ilimitada a líderes religiosos.",
   "crossReferences": [
-    "Jeremias 23:1-6",
     "Salmo 23:1-6",
-    "Isaías 40:11",
+    "Jeremias 23:1-6",
+    "Ezequiel 37:24-28",
     "João 10:11-16",
+    "Lucas 15:3-7",
     "1 Pedro 5:2-4"
   ],
   "questions": [
-    "Quais deveres os pastores negligenciam?",
-    "Por que Deus julga ovelhas fortes?",
-    "Como entender o servo Davi?",
-    "Quais sinais concretos acompanham a paz?"
+    "Que práticas concretas caracterizam os maus pastores?",
+    "Por que Deus diz 'eu mesmo' ao prometer buscar as ovelhas?",
+    "Como os fortes prejudicam as outras ovelhas nos vv. 18–21?",
+    "Quem é o 'servo Davi' na promessa e como diferentes tradições o interpretam?",
+    "Como a aliança de paz relaciona justiça e provisão?"
   ],
-  "conclusion": "A liderança legítima protege, a justiça alcança toda a comunidade e a esperança repousa no cuidado de Deus.",
+  "conclusion": "O Senhor confronta líderes e membros opressores, promete reunir o povo disperso e aponta para um pastoreio caracterizado por justiça, proteção e paz.",
   "prayer": "Senhor, faz-nos cuidar e não explorar. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 34:1–31 (paráfrase livre autoral)",
-      "body": "**Paráfrase autoral para estudo; não é tradução bíblica oficial.**\n\n**1.** A palavra profética introduz o confronto com a liderança.\n\n**2.** Os pastores de Israel cuidam de si, não das ovelhas.\n\n**3.** Os líderes consomem recursos do rebanho sem alimentá-lo.\n\n**4.** Fracos, doentes, feridos, desgarrados e perdidos foram abandonados.\n\n**5.** O rebanho se dispersa por falta de pastor.\n\n**6.** As ovelhas vagam sem que ninguém as procure.\n\n**7.** Os pastores são convocados a ouvir a sentença.\n\n**8.** Deus denuncia pastores que exploraram o rebanho e não o buscaram.\n\n**9.** O chamado aos pastores é repetido.\n\n**10.** Deus retira das mãos dos pastores o rebanho explorado.\n\n**11.** O próprio Deus promete procurar suas ovelhas.\n\n**12.** O pastor reúne o rebanho disperso no dia escuro.\n\n**13.** As ovelhas são reunidas dos povos e trazidas à terra.\n\n**14.** O rebanho recebe bons pastos e descanso.\n\n**15.** Deus declara que alimentará e fará descansar suas ovelhas.\n\n**16.** A perdida será procurada, a ferida tratada e a fraca fortalecida.\n\n**17.** O julgamento se volta também às próprias ovelhas.\n\n**18.** Algumas ovelhas pisoteiam o pasto e sujam a água restante.\n\n**19.** As ovelhas fracas recebem comida e água contaminadas.\n\n**20.** Deus promete julgar entre ovelhas gordas e magras.\n\n**21.** As fortes empurram e ferem as fracas com ombros e chifres.\n\n**22.** O rebanho será protegido e haverá justiça entre as ovelhas.\n\n**23.** Um só pastor, chamado servo Davi, será estabelecido.\n\n**24.** Deus permanece Deus do povo, e Davi atua como príncipe.\n\n**25.** Uma aliança de paz trará segurança contra ameaças.\n\n**26.** Chuvas no tempo certo são chamadas bênçãos.\n\n**27.** Árvores e terra produzem, e o jugo opressor é quebrado.\n\n**28.** O povo deixa de ser presa e habita sem medo.\n\n**29.** Uma plantação florescente substitui fome e vergonha.\n\n**30.** Israel reconhecerá a presença de Deus e sua pertença a ele.\n\n**31.** O capítulo esclarece que as ovelhas representam pessoas.",
+      "body": "Leia Ezequiel 34:1–31 no texto bíblico do aplicativo. As notas trazem **paráfrases livres autorais** e análise contextual, não uma tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 34:1-31"
       ],
@@ -125,7 +127,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 34:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A palavra profética introduz o confronto com a liderança.\n\n**Exegese contextual:** A transição após a notícia da queda de Jerusalém abre a denúncia dos responsáveis pelo rebanho.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** O Senhor dirige uma nova palavra a Ezequiel.\n\n**Exegese contextual:** A fórmula inicia um oráculo sobre liderança e responsabilidade comunitária após a catástrofe do exílio.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:1"
       ],
@@ -135,7 +137,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 34:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os pastores de Israel cuidam de si, não das ovelhas.\n\n**Exegese contextual:** A metáfora identifica dirigentes que usam o cargo para benefício próprio.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus denuncia pastores que alimentam a si mesmos, não ao rebanho.\n\n**Exegese contextual:** 'Pastores' é metáfora para governantes e líderes de Israel; a acusação central é usar autoridade para benefício próprio.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:2"
       ],
@@ -145,7 +147,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 34:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os líderes consomem recursos do rebanho sem alimentá-lo.\n\n**Exegese contextual:** O contraste entre lã, alimento e cuidado denuncia exploração institucional.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Os pastores consomem recursos das ovelhas sem cuidar delas.\n\n**Exegese contextual:** Gordura, lã e animais abatidos figuram exploração econômica daqueles que deveriam ser protegidos.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:3"
       ],
@@ -155,7 +157,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 34:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Fracos, doentes, feridos, desgarrados e perdidos foram abandonados.\n\n**Exegese contextual:** O texto enumera deveres concretos de proteção e critica domínio violento.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Os líderes negligenciam fracos, doentes, feridos, desgarrados e perdidos.\n\n**Exegese contextual:** A sequência torna concreta a falha de liderança: ausência de cuidado e domínio exercido com violência.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:4"
       ],
@@ -165,7 +167,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 34:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O rebanho se dispersa por falta de pastor.\n\n**Exegese contextual:** A dispersão expressa vulnerabilidade social e política após o fracasso da liderança.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** As ovelhas se dispersam e ficam expostas a predadores.\n\n**Exegese contextual:** A dispersão é consequência da falta de proteção, em diálogo com a vulnerabilidade do povo no exílio.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:5"
       ],
@@ -175,7 +177,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 34:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As ovelhas vagam sem que ninguém as procure.\n\n**Exegese contextual:** A repetição reforça negligência sistemática, não culpa das pessoas abandonadas.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** O rebanho vagueia pelos montes sem ninguém que o procure.\n\n**Exegese contextual:** A repetição da ausência de busca enfatiza o abandono de pessoas sob responsabilidade dos líderes.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:6"
       ],
@@ -185,7 +187,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 34:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os pastores são convocados a ouvir a sentença.\n\n**Exegese contextual:** A fórmula introduz a prestação de contas dos governantes.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus convoca os pastores a ouvirem seu julgamento.\n\n**Exegese contextual:** A interpelação torna os responsáveis diretamente destinatários do oráculo.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:7"
       ],
@@ -195,7 +197,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 34:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus denuncia pastores que exploraram o rebanho e não o buscaram.\n\n**Exegese contextual:** O rebanho pertence a Deus; os dirigentes não são seus donos.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus acusa os líderes de deixar o rebanho virar presa.\n\n**Exegese contextual:** A exploração e a omissão se somam: quem detém poder não buscou as pessoas vulneráveis.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:8"
       ],
@@ -205,7 +207,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 34:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O chamado aos pastores é repetido.\n\n**Exegese contextual:** A repetição destaca a gravidade do julgamento da liderança.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** A convocação aos pastores é repetida.\n\n**Exegese contextual:** A repetição intensifica a solenidade da sentença que se segue.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:9"
       ],
@@ -215,7 +217,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 34:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus retira das mãos dos pastores o rebanho explorado.\n\n**Exegese contextual:** O juízo inclui cessação de autoridade abusiva e libertação das vítimas.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus retirará dos pastores exploradores o controle das ovelhas.\n\n**Exegese contextual:** O juízo protege o rebanho e responsabiliza a liderança; a imagem não legitima abuso de autoridade religiosa.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:10"
       ],
@@ -225,7 +227,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 34:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O próprio Deus promete procurar suas ovelhas.\n\n**Exegese contextual:** A resposta à negligência humana é a iniciativa divina de cuidado.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** O próprio Senhor promete procurar seu rebanho.\n\n**Exegese contextual:** A repetição enfática 'eu mesmo' contrapõe o cuidado divino ao abandono dos governantes.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:11"
       ],
@@ -235,7 +237,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 34:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O pastor reúne o rebanho disperso no dia escuro.\n\n**Exegese contextual:** A imagem remete à experiência de exílio e perda de segurança.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus buscará as ovelhas dispersas em dia de escuridão.\n\n**Exegese contextual:** A imagem de nuvens e trevas evoca crise e desorientação; o cuidado começa onde as pessoas se perderam.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:12"
       ],
@@ -245,7 +247,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 34:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As ovelhas são reunidas dos povos e trazidas à terra.\n\n**Exegese contextual:** O cuidado pastoral inclui restauração comunitária e geográfica.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** O Senhor reunirá os dispersos e os trará à sua terra.\n\n**Exegese contextual:** A promessa é comunitária e histórica, respondendo à experiência do exílio entre as nações.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:13"
       ],
@@ -255,7 +257,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 34:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O rebanho recebe bons pastos e descanso.\n\n**Exegese contextual:** Alimento e repouso representam vida digna e proteção.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus oferecerá pastagens boas e descanso nos montes.\n\n**Exegese contextual:** Alimento e segurança expressam o oposto da exploração denunciada nos primeiros versículos.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:14"
       ],
@@ -265,7 +267,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 34:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus declara que alimentará e fará descansar suas ovelhas.\n\n**Exegese contextual:** O cuidado é pessoal e não apenas uma troca de administradores.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** O próprio Senhor dará pasto e repouso às ovelhas.\n\n**Exegese contextual:** O descanso representa proteção e bem-estar sob governo justo.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:15"
       ],
@@ -275,7 +277,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 34:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A perdida será procurada, a ferida tratada e a fraca fortalecida.\n\n**Exegese contextual:** O contraste com o v. 4 mostra reparação; a sentença contra fortes deve ser lida como juízo sobre opressão.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus buscará perdidos, curará feridos e julgará os fortes.\n\n**Exegese contextual:** O cuidado dos vulneráveis é acompanhado de justiça contra quem usa força para dominar.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:16"
       ],
@@ -285,7 +287,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 34:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O julgamento se volta também às próprias ovelhas.\n\n**Exegese contextual:** Nem toda injustiça parte dos governantes; membros fortes podem explorar outros.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus passa a julgar conflitos dentro do próprio rebanho.\n\n**Exegese contextual:** A injustiça não está apenas nos líderes; membros mais fortes também podem prejudicar os demais.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:17"
       ],
@@ -295,7 +297,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 34:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Algumas ovelhas pisoteiam o pasto e sujam a água restante.\n\n**Exegese contextual:** A imagem denuncia consumo irresponsável que prejudica os vulneráveis.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Algumas ovelhas pisoteiam o pasto e sujam a água que sobra.\n\n**Exegese contextual:** A metáfora denuncia apropriação de recursos comuns e degradação daquilo de que os outros dependem.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:18"
       ],
@@ -305,7 +307,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 34:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As ovelhas fracas recebem comida e água contaminadas.\n\n**Exegese contextual:** O dano produzido pelos privilegiados recai sobre quem tem menos recursos.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** As ovelhas vulneráveis recebem comida e água prejudicadas.\n\n**Exegese contextual:** O efeito do privilégio dos fortes recai sobre os que têm menos poder e acesso.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:19"
       ],
@@ -315,7 +317,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 34:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus promete julgar entre ovelhas gordas e magras.\n\n**Exegese contextual:** A diferença não é aparência corporal, mas poder exercido de modo injusto.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus anuncia julgamento entre ovelhas gordas e magras.\n\n**Exegese contextual:** A distinção é ética e social, não uma condenação de características físicas humanas.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:20"
       ],
@@ -325,7 +327,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 34:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As fortes empurram e ferem as fracas com ombros e chifres.\n\n**Exegese contextual:** A agressão explica a dispersão de quem já era vulnerável.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Os fortes empurram os fracos até expulsá-los.\n\n**Exegese contextual:** Chifres e ombros representam intimidação e violência que provocam exclusão.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:21"
       ],
@@ -335,7 +337,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 34:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O rebanho será protegido e haverá justiça entre as ovelhas.\n\n**Exegese contextual:** A salvação envolve interromper a exploração dentro da comunidade.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** O Senhor salvará o rebanho e julgará entre seus membros.\n\n**Exegese contextual:** A promessa de proteção inclui responsabilizar tanto governantes quanto integrantes opressores da comunidade.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:22"
       ],
@@ -345,7 +347,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 34:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Um só pastor, chamado servo Davi, será estabelecido.\n\n**Exegese contextual:** O anúncio de um governante davídico futuro sustenta esperança messiânica.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus promete levantar um só pastor, seu servo Davi.\n\n**Exegese contextual:** A referência a Davi aponta para liderança davídica ideal; a recepção cristã a relaciona ao Messias.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:23"
       ],
@@ -355,7 +357,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 34:24 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus permanece Deus do povo, e Davi atua como príncipe.\n\n**Exegese contextual:** A promessa distingue soberania divina e mediação régia.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** O Senhor será Deus do povo, e o servo Davi será seu príncipe.\n\n**Exegese contextual:** O governo prometido permanece subordinado à soberania divina e à aliança.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:24"
       ],
@@ -365,7 +367,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 34:25 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma aliança de paz trará segurança contra ameaças.\n\n**Exegese contextual:** A linguagem de animais perigosos simboliza proteção e tranquilidade.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus estabelece uma aliança de paz e segurança.\n\n**Exegese contextual:** A remoção de ameaças é descrita com imagens pastorais de descanso até em lugares perigosos.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:25"
       ],
@@ -375,7 +377,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 34:26 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Chuvas no tempo certo são chamadas bênçãos.\n\n**Exegese contextual:** A restauração inclui condições materiais para prosperidade agrícola.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus promete chuva oportuna e bênção sobre a terra.\n\n**Exegese contextual:** A fertilidade agrícola acompanha a segurança comunitária, sem funcionar como promessa individual de riqueza.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:26"
       ],
@@ -385,7 +387,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 34:27 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Árvores e terra produzem, e o jugo opressor é quebrado.\n\n**Exegese contextual:** Fertilidade e libertação econômica pertencem ao quadro de paz.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Árvores e campos produzirão, e o jugo opressor será quebrado.\n\n**Exegese contextual:** Libertação de exploração e provisão material compõem a paz anunciada.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:27"
       ],
@@ -395,7 +397,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 34:28 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O povo deixa de ser presa e habita sem medo.\n\n**Exegese contextual:** A promessa contrasta diretamente com o abandono inicial.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** O povo deixará de ser presa das nações e viverá sem medo.\n\n**Exegese contextual:** A segurança coletiva contrasta com a violência e a dispersão descritas no início.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:28"
       ],
@@ -405,7 +407,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Ezequiel 34:29 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma plantação florescente substitui fome e vergonha.\n\n**Exegese contextual:** A restauração visa subsistência e dignidade comunitária.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus promete plantação produtiva e fim da fome humilhante.\n\n**Exegese contextual:** A provisão de alimento expressa dignidade restaurada diante da escassez.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:29"
       ],
@@ -415,7 +417,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Ezequiel 34:30 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Israel reconhecerá a presença de Deus e sua pertença a ele.\n\n**Exegese contextual:** A fórmula da aliança sela a promessa de cuidado.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Israel reconhecerá a presença do Senhor e sua identidade como povo.\n\n**Exegese contextual:** A fórmula de aliança apresenta o propósito relacional da restauração.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:30"
       ],
@@ -425,7 +427,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Ezequiel 34:31 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O capítulo esclarece que as ovelhas representam pessoas.\n\n**Exegese contextual:** A metáfora pastoral é explicitamente aplicada à casa de Israel.\n\n**Questão para reflexão:** Como este versículo distingue cuidado responsável de exploração?",
+      "body": "**Paráfrase livre autoral:** Deus esclarece que as ovelhas representam pessoas, seu povo.\n\n**Exegese contextual:** A explicação final impede leitura puramente zoológica: trata-se de responsabilidade humana e cuidado divino.\n\n**Pergunta interpretativa:** O que este versículo revela sobre cuidado, justiça e responsabilidade dentro do rebanho?",
       "scriptureRefs": [
         "Ezequiel 34:31"
       ],
@@ -475,7 +477,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Cristo, o bom pastor — conexão fundamentada",
-      "body": "João 10:11–16 apresenta Jesus como bom pastor que dá a vida pelas ovelhas. A tradição cristã lê essa apresentação em diálogo com Ezequiel 34 e a promessa do pastor davídico, sem negar o contexto original de Israel.",
+      "body": "João 10:11–16 apresenta Jesus como bom pastor e dialoga diretamente com a promessa de Ezequiel 34 de buscar, proteger e reunir o rebanho. A conexão cristológica deve preservar a crítica do texto à exploração e ao abuso de poder.",
       "scriptureRefs": [
         "Ezequiel 34:1-31"
       ],
@@ -495,7 +497,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "Debatem-se a identidade e o horizonte de cumprimento do 'servo Davi', o sentido de destruir as ovelhas gordas no v. 16 e a relação entre restauração nacional e esperança messiânica. É inadequado usar o capítulo para legitimar autoritarismo espiritual.",
+      "body": "**Quem são os pastores?** A metáfora se refere sobretudo a governantes e lideranças responsáveis pelo povo, não apenas a ministros religiosos modernos.\n\n**Ovelhas gordas e magras:** a imagem denuncia relações de poder e acesso desigual a recursos; não deve ser aplicada à aparência corporal.\n\n**Servo Davi:** a expressão sustenta esperança de governo davídico ideal e recebe interpretação messiânica na tradição cristã.\n\n**Paz e prosperidade:** as imagens descrevem restauração comunitária, não garantia de riqueza individual.",
       "scriptureRefs": [
         "Ezequiel 34:1-31"
       ],
@@ -505,7 +507,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**Jeremias 23:1–6:** denúncia dos pastores e promessa de rei justo. **Salmo 23:** Deus como pastor. **Isaías 40:11:** cuidado com o rebanho. **João 10:11–16:** Jesus como bom pastor. **1 Pedro 5:2–4:** liderança sem domínio abusivo.",
+      "body": "**Salmo 23:** o Senhor como pastor que guia e sustenta.\n\n**Jeremias 23:1–6:** crítica aos pastores e promessa de descendente davídico justo.\n\n**Ezequiel 37:24–28:** um só pastor e aliança de paz.\n\n**João 10:11–16:** Jesus como bom pastor que dá a vida pelas ovelhas.\n\n**Lucas 15:3–7:** busca da ovelha perdida.\n\n**1 Pedro 5:2–4:** cuidado pastoral sem domínio abusivo.",
       "scriptureRefs": [
         "Ezequiel 34:1-31"
       ],
@@ -525,7 +527,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Qual é o erro dos pastores?** Alimentam a si mesmos e abandonam o rebanho (vv. 2–4).\n\n**2. O que Deus promete fazer?** Buscar e cuidar das ovelhas dispersas (vv. 11–16).\n\n**3. Quem mais é julgado?** Ovelhas que oprimem outras (vv. 17–22).\n\n**4. Quem é o pastor prometido?** O servo Davi, figura davídica futura (v. 23).\n\n**5. Que frutos acompanham a aliança de paz?** Segurança, chuva, colheitas e libertação (vv. 25–29).",
+      "body": "**1. Qual é a falha central dos pastores?** Alimentam a si mesmos em vez de cuidar do rebanho (34:2–4).\n\n**2. Quem promete buscar as ovelhas?** O próprio Senhor (34:11).\n\n**3. Que injustiça ocorre entre as ovelhas?** Os fortes pisoteiam pasto, sujam água e empurram os fracos (34:18–21).\n\n**4. Quem é prometido como pastor?** O servo Davi (34:23).\n\n**5. Qual é a promessa final?** Aliança de paz, segurança e pertencimento a Deus (34:25–31).",
       "scriptureRefs": [
         "Ezequiel 34:1-31"
       ],
@@ -535,7 +537,7 @@ export const ezekiel34Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — o pastor não é dono das ovelhas",
-      "body": "**Tema:** Liderança como cuidado, não exploração.\n\n**Proposição:** Deus confronta quem usa pessoas e promete restaurar seu povo com justiça.\n\n**Esboço:** (1) o abuso dos pastores (1–10); (2) o cuidado de Deus (11–16); (3) justiça e esperança davídica (17–31).\n\n**Cuidado pastoral:** não culpar pessoas feridas por sua dispersão; evitar confundir autoridade espiritual com controle.",
+      "body": "**Tema:** Liderança que serve e protege.\n\n**Proposição:** Deus responsabiliza quem explora o rebanho e promete cuidado e justiça para os vulneráveis.\n\n**Esboço:** (1) exploração dos líderes (1–10); (2) Deus busca os dispersos (11–16); (3) justiça entre as ovelhas (17–22); (4) pastor davídico e paz (23–31).\n\n**Cuidados:** não usar a metáfora para legitimar autoritarismo pastoral, não equiparar gordura corporal à opressão e não transformar a aliança de paz em promessa de riqueza.",
       "scriptureRefs": [
         "Ezequiel 34:1-31"
       ],
