@@ -24,20 +24,39 @@ export function CommunityStories({ user }: { user: User | null }) {
   const [backendMessage, setBackendMessage] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
+  const checkStoryInfrastructure = useCallback(async () => {
     if (!user) return;
-    let active = true;
-    void db.from("community_stories").select("id", { head: true }).limit(1)
-      .then(({ error: tableError }) => {
-        if (!active) return;
-        const ready = !tableError;
-        setBackendReady(ready);
-        setBackendMessage(ready ? null : isMissingCommunityStoryBackend(tableError)
-          ? "Os stories ainda não estão ativados no servidor. A configuração está preparada, mas falta instalar a tabela e o armazenamento de mídia."
-          : "Não foi possível acessar os stories. Verifique a conexão ou as permissões da sua conta.");
-      });
-    return () => { active = false; };
+    setBackendReady(null);
+    setBackendMessage(null);
+    try {
+      const { error: tableError } = await db.from("community_stories")
+        .select("id", { head: true }).limit(1);
+      if (tableError) {
+        setBackendReady(false);
+        setBackendMessage(isMissingCommunityStoryBackend(tableError)
+          ? "Os stories ainda não estão disponíveis. A tabela precisa ser ativada no Supabase."
+          : "Não foi possível consultar os stories. Confira sua conexão ou as permissões da conta.");
+        return;
+      }
+      // Reading an empty own folder is safe even before the first story exists.
+      // It detects a missing bucket or SELECT policy before a file is selected.
+      const { error: storageError } = await db.storage.from(COMMUNITY_MEDIA_BUCKET)
+        .list(`${user.id}/stories`, { limit: 1 });
+      if (storageError) {
+        setBackendReady(false);
+        setBackendMessage("O armazenamento privado dos stories ainda não está disponível. A equipe precisa ativá-lo no Supabase.");
+        return;
+      }
+      setBackendReady(true);
+    } catch {
+      setBackendReady(false);
+      setBackendMessage("Não foi possível verificar os stories agora. Confira sua conexão e tente novamente.");
+    }
   }, [user?.id]);
+
+  useEffect(() => {
+    void checkStoryInfrastructure();
+  }, [checkStoryInfrastructure]);
 
   const loadStories = useCallback(async () => {
     if (!user) return;
@@ -113,9 +132,13 @@ export function CommunityStories({ user }: { user: User | null }) {
       </div>
       {backendReady === null && user && <p className="py-2 text-sm text-slate-600">Verificando stories…</p>}
       {backendReady === false && (
-        <p role="status" className="rounded-xl border border-amber-200 bg-amber-50 px-3 py-3 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
-          {backendMessage}
-        </p>
+        <div role="status" className="flex flex-wrap items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-3 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
+          <span className="min-w-0 flex-1">{backendMessage}</span>
+          <button type="button" onClick={() => void checkStoryInfrastructure()}
+            className="min-h-10 rounded-full border border-amber-400 px-3 font-semibold focus-visible:outline-2 focus-visible:outline-blue-600">
+            Verificar novamente
+          </button>
+        </div>
       )}
       {backendReady === true && <div className="flex gap-2 overflow-x-auto pb-2 sm:gap-3">
         <button type="button" onClick={()=>setShowForm(v=>!v)}
