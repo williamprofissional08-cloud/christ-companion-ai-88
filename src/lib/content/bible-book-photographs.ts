@@ -1,0 +1,81 @@
+import type { BibleBook } from "./bible-books";
+
+/**
+ * Fotos locais já publicadas no Caminho Divino.
+ * Cada livro recebe uma imagem temática na biblioteca e mantém uma capa
+ * vetorial exclusiva (bible-book-covers.ts) como reserva se a foto falhar.
+ * Reutilizamos cenários entre livros para não inflar o download do aplicativo.
+ */
+export const BIBLE_BOOK_PHOTOS: Record<string, string> = {
+  genesis: "/images/study-bible.webp",
+  exodo: "/images/tracks-catalog/fe.webp",
+  levitico: "/images/bible-school-study.webp",
+  numeros: "/images/tracks-catalog/proposito.webp",
+  deuteronomio: "/images/tracks-catalog/identidade.webp",
+  josue: "/images/tracks-catalog/fe.webp",
+  juizes: "/images/tracks-catalog/proposito.webp",
+  rute: "/images/tracks-catalog/gratidao.webp",
+  "1-samuel": "/images/tracks-catalog/identidade.webp",
+  "2-samuel": "/images/tracks-catalog/fe.webp",
+  "1-reis": "/images/bible-school-study.webp",
+  "2-reis": "/images/tracks-catalog/proposito.webp",
+  "1-cronicas": "/images/tracks-catalog/identidade.webp",
+  "2-cronicas": "/images/bible-school-study.webp",
+  esdras: "/images/study-bible.webp",
+  neemias: "/images/tracks-catalog/fe.webp",
+  ester: "/images/tracks-catalog/proposito.webp",
+  jo: "/images/tracks-catalog/paz.webp",
+  salmos: "/images/tracks-catalog/oracao.webp",
+  proverbios: "/images/study-bible.webp",
+  eclesiastes: "/images/tracks-catalog/paz.webp",
+  "cantico-dos-canticos": "/images/tracks-catalog/gratidao.webp",
+  isaias: "/images/prayer-sunrise.webp",
+  jeremias: "/images/tracks-catalog/perdao.webp",
+  lamentacoes: "/images/tracks-catalog/paz.webp",
+  ezequiel: "/images/tracks-catalog/fe.webp",
+  daniel: "/images/tracks-catalog/proposito.webp",
+  oseias: "/images/tracks-catalog/perdao.webp",
+  joel: "/images/prayer-sunrise.webp",
+  amos: "/images/tracks-catalog/fe.webp",
+  obadias: "/images/tracks-catalog/proposito.webp",
+  jonas: "/images/tracks-catalog/fe.webp",
+  miqueias: "/images/tracks-catalog/identidade.webp",
+  naum: "/images/tracks-catalog/proposito.webp",
+  habacuque: "/images/tracks-catalog/paz.webp",
+  sofonias: "/images/tracks-catalog/fe.webp",
+  ageu: "/images/bible-school-study.webp",
+  zacarias: "/images/prayer-sunrise.webp",
+  malaquias: "/images/prayer-sunrise.webp",
+  mateus: "/images/home-daily-phrase-background.webp",
+  marcos: "/images/tracks-catalog/fe.webp",
+  lucas: "/images/tracks-catalog/identidade.webp",
+  joao: "/images/devotional-reflection.webp",
+  atos: "/images/tracks-catalog/proposito.webp",
+  romanos: "/images/study-bible.webp",
+  "1-corintios": "/images/tracks-catalog/perdao.webp",
+  "2-corintios": "/images/tracks-catalog/fe.webp",
+  galatas: "/images/tracks-catalog/gratidao.webp",
+  efesios: "/images/tracks-catalog/identidade.webp",
+  filipenses: "/images/tracks-catalog/gratidao.webp",
+  colossenses: "/images/prayer-sunrise.webp",
+  "1-tessalonicenses": "/images/tracks-catalog/proposito.webp",
+  "2-tessalonicenses": "/images/prayer-sunrise.webp",
+  "1-timoteo": "/images/study-bible.webp",
+  "2-timoteo": "/images/tracks-catalog/fe.webp",
+  tito: "/images/tracks-catalog/identidade.webp",
+  filemom: "/images/tracks-catalog/perdao.webp",
+  hebreus: "/images/bible-school-study.webp",
+  tiago: "/images/tracks-catalog/gratidao.webp",
+  "1-pedro": "/images/tracks-catalog/proposito.webp",
+  "2-pedro": "/images/tracks-catalog/fe.webp",
+  "1-joao": "/images/tracks-catalog/oracao.webp",
+  "2-joao": "/images/devotional-reflection.webp",
+  "3-joao": "/images/tracks-catalog/gratidao.webp",
+  judas: "/images/tracks-catalog/fe.webp",
+  apocalipse: "/images/prayer-sunrise.webp",
+};
+
+/** Caminho de foto verificado no pacote público. */
+export function getBibleBookPhoto(book: Pick<BibleBook, "slug">): string {
+  return BIBLE_BOOK_PHOTOS[book.slug] ?? "/images/study-bible.webp";
+}
