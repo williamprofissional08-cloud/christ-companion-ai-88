@@ -1,66 +1,56 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 16 — conteúdo sensível; revisão humana pendente. */
+/** Ezequiel 16 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel16Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Alegoria profética extensa e sensível sobre Jerusalém: cuidado inicial, infidelidade, violência, juízo e promessa de aliança.",
-  "historicalContext": "Exílio babilônico no século VI a.C.; denúncia profética da cidade de Jerusalém antes de sua destruição.",
+  "intro": "Ezequiel 16 é uma extensa alegoria sobre Jerusalém: de criança abandonada a cidade próspera, da ruptura da aliança ao anúncio de julgamento, terminando com promessa de restauração. O capítulo contém metáforas sexuais e imagens de violência que exigem leitura histórica cuidadosa, especialmente para não justificar abuso ou culpabilizar vítimas.",
+  "historicalContext": "A alegoria relê a trajetória de Jerusalém, suas raízes cananeias, sua elevação política e suas alianças com Egito, Assíria e Babilônia. A denúncia profética combina idolatria, injustiça e sacrifício de crianças no contexto da crise do reino de Judá. Samaria e Sodoma aparecem como comparações retóricas, e o final anuncia renovação da aliança.",
   "keyPoints": [
     {
-      "title": "1–5: Jerusalém como criança abandonada",
-      "text": "A origem cananeia e a criança desamparada desconstroem a pretensão de superioridade da cidade. A cena é uma personificação coletiva, não uma história clínica de uma criança específica."
+      "title": "1–14: Cuidado e aliança",
+      "text": "Jerusalém é representada como criança abandonada acolhida e enriquecida."
     },
     {
-      "title": "6–14: A vida, a aliança e os dons recebidos",
-      "text": "O imperativo 'vive', o crescimento, a cobertura com o manto, o juramento e as roupas preciosas descrevem cuidado e eleição gratuitos. A passagem da infância à linguagem nupcial é metáfora nacional de aliança."
+      "title": "15–34: Infidelidade e violência",
+      "text": "Dádivas são desviadas para ídolos, alianças e sacrifícios de crianças."
     },
     {
-      "title": "15–22: Dons convertidos em idolatria e violência",
-      "text": "Roupas, metais, alimento e até filhos são apresentados como desviados para cultos rivais. A referência a sacrifício de crianças torna a crítica concreta: a vida vulnerável é destruída."
+      "title": "35–43: Julgamento",
+      "text": "A cidade perde proteção e prestígio em imagens de destruição."
     },
     {
-      "title": "23–34: Alianças políticas e a busca insaciável de segurança",
-      "text": "Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças."
+      "title": "44–58: As cidades irmãs",
+      "text": "Samaria e Sodoma revelam a arrogância de Jerusalém e ampliam a promessa de restauração."
     },
     {
-      "title": "35–43: A imagem severa de exposição e destruição",
-      "text": "O oráculo anuncia a reunião dos antigos aliados contra Jerusalém e emprega imagens de exposição, apedrejamento, espada e fogo. São figuras violentas de juízo no mundo antigo."
-    },
-    {
-      "title": "44–52: Jerusalém comparada com Samaria e Sodoma",
-      "text": "O provérbio familiar introduz comparação acusatória: Jerusalém não pode declarar-se moralmente superior às cidades que despreza. O argumento intensifica a crítica à hipocrisia."
-    },
-    {
-      "title": "53–59: Vergonha, restauração e memória da aliança violada",
-      "text": "A reversão da sorte de Sodoma, Samaria e Jerusalém é anunciada junto à memória do desprezo e do juramento quebrado. O texto mantém juízo e esperança em tensão."
-    },
-    {
-      "title": "60–63: Aliança lembrada e reconciliação",
-      "text": "O Senhor anuncia lembrar-se da aliança e estabelecer aliança duradoura. A restauração é apresentada como iniciativa divina que produz reconhecimento e memória responsável."
+      "title": "59–63: Aliança lembrada",
+      "text": "A iniciativa divina encerra a alegoria com esperança de reconciliação."
     }
   ],
-  "application": "Proteger crianças e sobreviventes, combater injustiça e idolatria, valorizar a aliança sem normalizar violência.",
+  "application": "Praticar gratidão sem arrogância, proteger crianças, socorrer pobres e reconhecer que a fé não pode encobrir violência ou exploração. Ler imagens de punição sem transformá-las em justificativa para abuso, exposição pública ou coerção em relacionamentos.",
   "crossReferences": [
-    "Jeremias 2:1-37",
-    "Oséias 2:1-23",
-    "Ezequiel 36:22-28",
-    "Gênesis 19:1-29",
-    "Lucas 22:20"
+    "Deuteronômio 12:29-31",
+    "2 Reis 21:1-9",
+    "Jeremias 2:1-13",
+    "Ezequiel 20:25-31",
+    "Ezequiel 23:1-49",
+    "Oséias 2:14-23"
   ],
   "questions": [
-    "Como funciona a personificação de Jerusalém?",
-    "Por que a denúncia de violência contra crianças é central?",
-    "O que Ezequiel 16:49 diz sobre os pobres?",
-    "Como a aliança é retomada no final?"
+    "O que significa a criança abandonada no início da alegoria?",
+    "Como a prosperidade recebida é transformada em idolatria?",
+    "Por que os versículos 20–21 são centrais para a denúncia?",
+    "Que injustiça social é atribuída a Sodoma no versículo 49?",
+    "Como a promessa de aliança nos versículos 60–63 altera o desfecho?"
   ],
-  "conclusion": "A alegoria confronta infidelidade e injustiça sem retirar a promessa de reconciliação; seu uso pastoral exige proteção dos vulneráveis.",
+  "conclusion": "A alegoria denuncia a ruptura da aliança e a violência cometida pela cidade, mas termina com a iniciativa divina de restaurar. Seu uso responsável exige atenção ao gênero literário, às vítimas e ao contexto histórico.",
   "prayer": "Senhor, dá-nos justiça, cuidado com os vulneráveis e fidelidade à tua aliança. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 16:1–63 (guia de leitura)",
-      "body": "**Guia autoral de leitura, não substitui a leitura integral do texto bíblico no acervo.** O capítulo apresenta a história figurada de Jerusalém como criança abandonada, acolhida e adornada, depois acusada de infidelidade e violência, confrontada com cidades irmãs e finalmente alcançada por promessa de aliança. Leia os 63 versículos no texto bíblico e acompanhe a exposição abaixo.",
+      "body": "Leia Ezequiel 16:1–63 no texto bíblico do aplicativo. As notas apresentam **paráfrases livres autorais**, não tradução oficial. **Aviso de conteúdo:** há referências a abandono infantil, sacrifício de crianças, sexualidade figurada e violência. A alegoria não autoriza abuso contra mulheres ou crianças.",
       "scriptureRefs": [
         "Ezequiel 16:1-63"
       ],
@@ -182,7 +172,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 16:1 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E veio a mim a palavra do SENHOR, dizendo:\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém como criança abandonada** (1–5). A origem cananeia e a criança desamparada desconstroem a pretensão de superioridade da cidade. A cena é uma personificação coletiva, não uma história clínica de uma criança específica.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O Senhor fala ao profeta.\n\n**Exegese contextual:** A abertura anuncia um extenso discurso figurado sobre Jerusalém.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:1"
       ],
@@ -192,7 +182,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 16:2 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Filho do homem, notifica a Jerusalém suas abominações,\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém como criança abandonada** (1–5). A origem cananeia e a criança desamparada desconstroem a pretensão de superioridade da cidade. A cena é uma personificação coletiva, não uma história clínica de uma criança específica.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Ezequiel deve expor as práticas de Jerusalém.\n\n**Exegese contextual:** A cidade é personificada como mulher; é uma alegoria coletiva, não descrição de uma mulher real.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:2"
       ],
@@ -202,7 +192,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 16:3 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E dize: Assim diz o Senhor DEUS a Jerusalém: Tua origem e teu nascimento procedem da terra de Canaã; teu pai era amorreu, e tua mãe Heteia.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém como criança abandonada** (1–5). A origem cananeia e a criança desamparada desconstroem a pretensão de superioridade da cidade. A cena é uma personificação coletiva, não uma história clínica de uma criança específica.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A origem de Jerusalém é descrita como cananeia.\n\n**Exegese contextual:** Amorreus e heteus evocam o passado pré-israelita da cidade e questionam sua autossuficiência.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:3"
       ],
@@ -212,7 +202,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 16:4 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E quanto a teu nascimento, no dia que nasceste não foi cortado o teu umbigo, nem foste lavada com água para ficares limpa; nem foste esfregada com sal, nem foste envolvida em faixas.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém como criança abandonada** (1–5). A origem cananeia e a criança desamparada desconstroem a pretensão de superioridade da cidade. A cena é uma personificação coletiva, não uma história clínica de uma criança específica.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Uma recém-nascida aparece sem cuidados básicos.\n\n**Exegese contextual:** A imagem de abandono apresenta vulnerabilidade extrema antes da intervenção divina.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:4"
       ],
@@ -222,7 +212,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 16:5 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Não houve olho algum que se compadecesse de ti, para te fazer algo disto, tendo misericórdia; ao invés disso, foste lançada sobre a face do campo, por nojo de tua alma, no dia em que nasceste.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém como criança abandonada** (1–5). A origem cananeia e a criança desamparada desconstroem a pretensão de superioridade da cidade. A cena é uma personificação coletiva, não uma história clínica de uma criança específica.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Ninguém demonstra compaixão pela criança abandonada.\n\n**Exegese contextual:** O retrato intensifica a gratuidade do cuidado posterior.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:5"
       ],
@@ -232,7 +222,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 16:6 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E quando passei junto a ti, vi-te suja em teu sangue, e te disse em teu sangue: Vive; e te disse em teu sangue: Vive.\n\n**Leitura no contexto:** Este versículo integra a unidade **A vida, a aliança e os dons recebidos** (6–14). O imperativo 'vive', o crescimento, a cobertura com o manto, o juramento e as roupas preciosas descrevem cuidado e eleição gratuitos. A passagem da infância à linguagem nupcial é metáfora nacional de aliança.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Deus encontra a criança e ordena que viva.\n\n**Exegese contextual:** A repetição de 'vive' marca o início da história como ato de preservação.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:6"
       ],
@@ -242,7 +232,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 16:7 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Eu te multipliquei como o broto do campo, e cresceste, e engrandeceste; e chegaste à grande formosura; os seios te cresceram, e teu pelo cresceu; porém estavas nua e descoberta.\n\n**Leitura no contexto:** Este versículo integra a unidade **A vida, a aliança e os dons recebidos** (6–14). O imperativo 'vive', o crescimento, a cobertura com o manto, o juramento e as roupas preciosas descrevem cuidado e eleição gratuitos. A passagem da infância à linguagem nupcial é metáfora nacional de aliança.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A criança cresce, mas permanece desprotegida.\n\n**Exegese contextual:** O crescimento não elimina sua necessidade de cuidado e proteção.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:7"
       ],
@@ -252,7 +242,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 16:8 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E quando passei junto a ti, e te vi, e eis que teu tempo era tempo de amores; e estendi meu manto sobre ti, e cobri tua nudez; e prestei juramento a ti, e entrei em pacto contigo, e foste minha diz o Senhor DEUS.\n\n**Leitura no contexto:** Este versículo integra a unidade **A vida, a aliança e os dons recebidos** (6–14). O imperativo 'vive', o crescimento, a cobertura com o manto, o juramento e as roupas preciosas descrevem cuidado e eleição gratuitos. A passagem da infância à linguagem nupcial é metáfora nacional de aliança.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Deus a cobre e estabelece uma aliança.\n\n**Exegese contextual:** A imagem de casamento figura o pacto com Jerusalém; requer leitura crítica pela assimetria da metáfora.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:8"
       ],
@@ -262,7 +252,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 16:9 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Então te lavei com água, e te enxaguei de teu sangue, e te ungi com óleo;\n\n**Leitura no contexto:** Este versículo integra a unidade **A vida, a aliança e os dons recebidos** (6–14). O imperativo 'vive', o crescimento, a cobertura com o manto, o juramento e as roupas preciosas descrevem cuidado e eleição gratuitos. A passagem da infância à linguagem nupcial é metáfora nacional de aliança.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Deus lava e unge a jovem.\n\n**Exegese contextual:** Os cuidados sinalizam acolhimento e transformação de sua condição.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:9"
       ],
@@ -272,7 +262,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 16:10 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E te vesti de bordado, calcei-te com couro, cingi-te de linho fino, e te cobri de seda.\n\n**Leitura no contexto:** Este versículo integra a unidade **A vida, a aliança e os dons recebidos** (6–14). O imperativo 'vive', o crescimento, a cobertura com o manto, o juramento e as roupas preciosas descrevem cuidado e eleição gratuitos. A passagem da infância à linguagem nupcial é metáfora nacional de aliança.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Roupas finas substituem a nudez anterior.\n\n**Exegese contextual:** A descrição da vestimenta representa dignidade e provisão.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:10"
       ],
@@ -282,7 +272,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 16:11 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E te adornei com ornamentos, e pus braceletes em teus braços, e colar em teu pescoço;\n\n**Leitura no contexto:** Este versículo integra a unidade **A vida, a aliança e os dons recebidos** (6–14). O imperativo 'vive', o crescimento, a cobertura com o manto, o juramento e as roupas preciosas descrevem cuidado e eleição gratuitos. A passagem da infância à linguagem nupcial é metáfora nacional de aliança.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Braceletes e colar adornam a jovem.\n\n**Exegese contextual:** Os presentes expressam prosperidade recebida, não conquista autônoma.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:11"
       ],
@@ -292,7 +282,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 16:12 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E pus joias pendente em teu nariz, argolas em tuas orelhas, e uma linda coroa em tua cabeça.\n\n**Leitura no contexto:** Este versículo integra a unidade **A vida, a aliança e os dons recebidos** (6–14). O imperativo 'vive', o crescimento, a cobertura com o manto, o juramento e as roupas preciosas descrevem cuidado e eleição gratuitos. A passagem da infância à linguagem nupcial é metáfora nacional de aliança.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Joias e coroa completam os adornos.\n\n**Exegese contextual:** A coroa introduz a imagem da cidade elevada à condição régia.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:12"
       ],
@@ -302,7 +292,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 16:13 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E foste adornada de ouro e de prata, e teu vestido foi linho fino, e seda, e bordado; comeste farinha fina, mel, e azeite; foste muito formosa, e prosperaste até ser rainha.\n\n**Leitura no contexto:** Este versículo integra a unidade **A vida, a aliança e os dons recebidos** (6–14). O imperativo 'vive', o crescimento, a cobertura com o manto, o juramento e as roupas preciosas descrevem cuidado e eleição gratuitos. A passagem da infância à linguagem nupcial é metáfora nacional de aliança.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Alimentos e tecidos preciosos acompanham a ascensão.\n\n**Exegese contextual:** A fartura retrata a prosperidade de Jerusalém como dádiva.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:13"
       ],
@@ -312,7 +302,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 16:14 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** A tua fama percorreu entre as nações por causa da tua beleza; porque era perfeita, por causa da minha glória que eu havia posto sobre ti, diz o Senhor DEUS.\n\n**Leitura no contexto:** Este versículo integra a unidade **A vida, a aliança e os dons recebidos** (6–14). O imperativo 'vive', o crescimento, a cobertura com o manto, o juramento e as roupas preciosas descrevem cuidado e eleição gratuitos. A passagem da infância à linguagem nupcial é metáfora nacional de aliança.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A beleza da cidade torna-se conhecida entre as nações.\n\n**Exegese contextual:** A fama é atribuída à glória concedida por Deus.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:14"
       ],
@@ -322,7 +312,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 16:15 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Porém confiaste na tua beleza, e te prostituíste por causa da tua fama, e derramaste tuas prostituições a todo que passava, para que fosse dele.\n\n**Leitura no contexto:** Este versículo integra a unidade **Dons convertidos em idolatria e violência** (15–22). Roupas, metais, alimento e até filhos são apresentados como desviados para cultos rivais. A referência a sacrifício de crianças torna a crítica concreta: a vida vulnerável é destruída.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Jerusalém passa a confiar em sua própria beleza.\n\n**Exegese contextual:** A infidelidade é descrita por metáfora sexual que representa idolatria e alianças políticas.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:15"
       ],
@@ -332,7 +322,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 16:16 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E tomaste de teus vestidos, fizeste altares de diversas cores, e te prostituíste sobre eles: coisa semelhante não virá, nem será assim.\n\n**Leitura no contexto:** Este versículo integra a unidade **Dons convertidos em idolatria e violência** (15–22). Roupas, metais, alimento e até filhos são apresentados como desviados para cultos rivais. A referência a sacrifício de crianças torna a crítica concreta: a vida vulnerável é destruída.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Vestes recebidas são usadas para altares.\n\n**Exegese contextual:** A dádiva é desviada para práticas de culto condenadas pelo profeta.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:16"
       ],
@@ -342,7 +332,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 16:17 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Tomaste também os vasos de teu ornamento, que eu te dei de meu ouro e de minha prata, e fizeste para ti imagens de homens, e te prostituíste com elas.\n\n**Leitura no contexto:** Este versículo integra a unidade **Dons convertidos em idolatria e violência** (15–22). Roupas, metais, alimento e até filhos são apresentados como desviados para cultos rivais. A referência a sacrifício de crianças torna a crítica concreta: a vida vulnerável é destruída.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Ouro e prata tornam-se imagens de ídolos.\n\n**Exegese contextual:** O contraste é entre os presentes da aliança e seu emprego na idolatria.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:17"
       ],
@@ -352,7 +342,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 16:18 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E tomaste teus vestidos bordados, e as cobriste; e puseste meu óleo e meu perfume diante delas.\n\n**Leitura no contexto:** Este versículo integra a unidade **Dons convertidos em idolatria e violência** (15–22). Roupas, metais, alimento e até filhos são apresentados como desviados para cultos rivais. A referência a sacrifício de crianças torna a crítica concreta: a vida vulnerável é destruída.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Tecidos e perfume são colocados diante dos ídolos.\n\n**Exegese contextual:** O texto detalha o redirecionamento dos bens do culto.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:18"
       ],
@@ -362,7 +352,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 16:19 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E o meu pão também que eu te dei, a farinha fina, o azeite, e o mel, com que eu te sustentava, puseste diante delas, como cheiro suave; e assim foi, diz o Senhor DEUS.\n\n**Leitura no contexto:** Este versículo integra a unidade **Dons convertidos em idolatria e violência** (15–22). Roupas, metais, alimento e até filhos são apresentados como desviados para cultos rivais. A referência a sacrifício de crianças torna a crítica concreta: a vida vulnerável é destruída.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O alimento provido por Deus é oferecido a outros deuses.\n\n**Exegese contextual:** A repetição de dádivas desperdiçadas aprofunda a acusação de ingratidão.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:19"
       ],
@@ -372,7 +362,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 16:20 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Além disto, tomaste teus filhos e tuas filhas, que havias gerado para mim, e os sacrificaste a elas para que fossem consumidas. Por acaso são poucas as tuas prostituições?\n\n**Leitura no contexto:** Este versículo integra a unidade **Dons convertidos em idolatria e violência** (15–22). Roupas, metais, alimento e até filhos são apresentados como desviados para cultos rivais. A referência a sacrifício de crianças torna a crítica concreta: a vida vulnerável é destruída.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Filhos e filhas são sacrificados a ídolos.\n\n**Exegese contextual:** A denúncia atinge violência real contra crianças e não deve ser reduzida à metáfora conjugal.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:20"
       ],
@@ -382,7 +372,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 16:21 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E mataste meus filhos, e os entregastes a elas para que passassem pelo fogo .\n\n**Leitura no contexto:** Este versículo integra a unidade **Dons convertidos em idolatria e violência** (15–22). Roupas, metais, alimento e até filhos são apresentados como desviados para cultos rivais. A referência a sacrifício de crianças torna a crítica concreta: a vida vulnerável é destruída.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O texto condena a morte de crianças no fogo.\n\n**Exegese contextual:** A linguagem identifica a gravidade concreta do sacrifício infantil.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:21"
       ],
@@ -392,7 +382,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 16:22 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E em todas as tuas abominações e tuas prostituições, não te lembraste dos dias de tua juventude, quando estavas nua e descoberta, quando estavas suja em teu sangue.\n\n**Leitura no contexto:** Este versículo integra a unidade **Dons convertidos em idolatria e violência** (15–22). Roupas, metais, alimento e até filhos são apresentados como desviados para cultos rivais. A referência a sacrifício de crianças torna a crítica concreta: a vida vulnerável é destruída.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Jerusalém esquece sua antiga vulnerabilidade.\n\n**Exegese contextual:** A perda da memória do cuidado recebido estrutura a acusação.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:22"
       ],
@@ -402,7 +392,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 16:23 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E sucedeu que, depois de toda tua maldade (Ai, ai de ti! diz o Senhor DEUS),\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Um lamento interrompe a lista de transgressões.\n\n**Exegese contextual:** A interjeição reforça a gravidade do comportamento denunciado.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:23"
       ],
@@ -412,7 +402,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 16:24 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Edificaste para ti uma câmara, e fizeste para ti altares em todas as ruas:\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** São construídos lugares de culto pelas ruas.\n\n**Exegese contextual:** A multiplicação dos altares representa disseminação pública da idolatria.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:24"
       ],
@@ -422,7 +412,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 16:25 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Em cada canto de caminho edificaste teu altar, fizeste abominável tua formosura, e abriste tuas pernas a todo que passava; e assim multiplicaste tuas prostituições.\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** As encruzilhadas tornam-se lugares de infidelidade.\n\n**Exegese contextual:** A linguagem sexual é metafórica e deliberadamente chocante.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:25"
       ],
@@ -432,7 +422,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 16:26 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E te prostituíste com os filhos do Egito, teus vizinhos, grandemente promíscuos; e multiplicaste tuas prostituições, para me provocar à ira.\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O Egito aparece como parceiro da infidelidade.\n\n**Exegese contextual:** A alusão pode envolver alianças políticas e influências cultuais egípcias.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:26"
       ],
@@ -442,7 +432,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 16:27 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Por isso eis que estendi minha mão sobre ti, e diminuí tua provisão; e te entreguei à vontade das que te odeiam, as filhas dos filisteus, as quais se envergonhavam de teu caminho pecaminoso.\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O texto menciona perda de provisões e hostilidade filisteia.\n\n**Exegese contextual:** A crise política é narrada como consequência da infidelidade.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:27"
       ],
@@ -452,7 +442,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 16:28 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Também te prostituíste com os filhos da Assíria, por seres insaciável; e te prostituindo com eles, nem ainda te fartaste.\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A Assíria aparece entre os parceiros procurados.\n\n**Exegese contextual:** O profeta retrata dependência sucessiva de potências estrangeiras.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:28"
       ],
@@ -462,7 +452,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Ezequiel 16:29 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Ao invés disso multiplicaste tuas prostituições na terra de Canaã até a Caldeia; e nem ainda com isso com isto te fartaste.\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A busca alcança a Caldeia e continua insatisfeita.\n\n**Exegese contextual:** A sequência geográfica expõe instabilidade de alianças e lealdades.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:29"
       ],
@@ -472,7 +462,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Ezequiel 16:30 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Como está fraco o teu coração, diz o Senhor DEUS, tendo tu feito todas estas coisas, obras de uma poderosa prostituta,\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A conduta é denunciada com linguagem de vergonha.\n\n**Exegese contextual:** A retórica é severa; não legitima humilhação de mulheres reais.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:30"
       ],
@@ -482,7 +472,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Ezequiel 16:31 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Edificando tu tuas câmaras ao canto de cada caminho, e fazendo teus altares em cada rua; e nem sequer foste como a prostituta, pois desprezaste o pagamento,\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Jerusalém é descrita como quem rejeita pagamento.\n\n**Exegese contextual:** A comparação intensifica o caráter paradoxal da busca por aliados.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:31"
       ],
@@ -492,7 +482,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-32",
       "title": "Ezequiel 16:32 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Mas foste como uma mulher adúltera, que em lugar de seu marido recebe a estranhos.\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A cidade é chamada de adúltera.\n\n**Exegese contextual:** O casamento é a imagem da aliança violada, não uma norma para julgar vítimas de infidelidade.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:32"
       ],
@@ -502,7 +492,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-33",
       "title": "Ezequiel 16:33 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Todas as prostitutas são pagas; mas tu deste teus pagamentos a todos os teus amantes; e lhes deste presentes, para que viessem a ti dos lugares ao redor, por causa de tuas prostituições.\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A cidade oferece presentes a seus parceiros.\n\n**Exegese contextual:** A inversão da troca sugere custos políticos e econômicos das alianças.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:33"
       ],
@@ -512,7 +502,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-34",
       "title": "Ezequiel 16:34 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Assim acontece contigo o contrário das mulheres que se prostituem, porque ninguém te buscou para prostituir; pois quando pagas ao invés de receber pagamento, tu tens sido o contrário das outras .\n\n**Leitura no contexto:** Este versículo integra a unidade **Alianças políticas e a busca insaciável de segurança** (23–34). Os lugares altos e as referências a Egito, Assíria e Caldeia articulam idolatria e dependência de poderes estrangeiros. O pagamento invertido reforça a denúncia de uma cidade que entrega recursos para buscar alianças.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A comparação com prostituição é levada ao extremo.\n\n**Exegese contextual:** O objetivo retórico é denunciar a iniciativa de Jerusalém em buscar outras lealdades.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:34"
       ],
@@ -522,7 +512,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-35",
       "title": "Ezequiel 16:35 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Portanto, ó prostituta, ouve a palavra do SENHOR.\n\n**Leitura no contexto:** Este versículo integra a unidade **A imagem severa de exposição e destruição** (35–43). O oráculo anuncia a reunião dos antigos aliados contra Jerusalém e emprega imagens de exposição, apedrejamento, espada e fogo. São figuras violentas de juízo no mundo antigo.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O profeta convoca a cidade a ouvir o julgamento.\n\n**Exegese contextual:** A transição marca o início do anúncio de consequências.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:35"
       ],
@@ -532,7 +522,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-36",
       "title": "Ezequiel 16:36 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Assim diz o Senhor DEUS: Visto que se derramou teu dinheiro, e tuas vergonhas foram descobertas por tuas prostituições com teus amantes, como também com todos os ídolos de tuas abominações, e no sangue de teus filhos, os quais lhes deste;\n\n**Leitura no contexto:** Este versículo integra a unidade **A imagem severa de exposição e destruição** (35–43). O oráculo anuncia a reunião dos antigos aliados contra Jerusalém e emprega imagens de exposição, apedrejamento, espada e fogo. São figuras violentas de juízo no mundo antigo.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Idolatria e sangue de crianças fundamentam a acusação.\n\n**Exegese contextual:** A menção explícita das vítimas impede tratar a passagem como mero ciúme conjugal.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:36"
       ],
@@ -542,7 +532,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-37",
       "title": "Ezequiel 16:37 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Por isso eis que ajuntarei todos os teus amantes com os quais tiveste prazer, e também todos os que amaste, com todos quantos tu odiaste; e os ajuntarei contra ti ao redor, e descobrirei tua nudez diante deles, para que vejam toda a tua nudez.\n\n**Leitura no contexto:** Este versículo integra a unidade **A imagem severa de exposição e destruição** (35–43). O oráculo anuncia a reunião dos antigos aliados contra Jerusalém e emprega imagens de exposição, apedrejamento, espada e fogo. São figuras violentas de juízo no mundo antigo.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Os antigos aliados se voltam contra Jerusalém.\n\n**Exegese contextual:** A exposição pública figura a perda de proteção e prestígio da cidade.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:37"
       ],
@@ -552,7 +542,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-38",
       "title": "Ezequiel 16:38 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E eu te julgarei pelas leis das adúlteras, e das que derramam sangue; e te entregarei ao sangue do furor e do ciúme.\n\n**Leitura no contexto:** Este versículo integra a unidade **A imagem severa de exposição e destruição** (35–43). O oráculo anuncia a reunião dos antigos aliados contra Jerusalém e emprega imagens de exposição, apedrejamento, espada e fogo. São figuras violentas de juízo no mundo antigo.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O julgamento é descrito com imagens de adultério e sangue.\n\n**Exegese contextual:** A linguagem reflete categorias penais antigas; não prescreve violência doméstica.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:38"
       ],
@@ -562,7 +552,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-39",
       "title": "Ezequiel 16:39 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E te entregarei na mão deles; e eles destruirão tua câmara, derrubarão teus altares, e te despirão de teus vestidos; e tomarão as joias de teu ornamento, e te deixarão nua e descoberta.\n\n**Leitura no contexto:** Este versículo integra a unidade **A imagem severa de exposição e destruição** (35–43). O oráculo anuncia a reunião dos antigos aliados contra Jerusalém e emprega imagens de exposição, apedrejamento, espada e fogo. São figuras violentas de juízo no mundo antigo.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Altares são derrubados e adornos retirados.\n\n**Exegese contextual:** A reversão desfaz os sinais de prosperidade descritos nos vv. 9–14.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:39"
       ],
@@ -572,7 +562,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-40",
       "title": "Ezequiel 16:40 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Então farão subir contra ti uma multidão, e te apedrejarão com pedras, e te atravessarão com suas espadas.\n\n**Leitura no contexto:** Este versículo integra a unidade **A imagem severa de exposição e destruição** (35–43). O oráculo anuncia a reunião dos antigos aliados contra Jerusalém e emprega imagens de exposição, apedrejamento, espada e fogo. São figuras violentas de juízo no mundo antigo.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Uma multidão ataca com pedras e espadas.\n\n**Exegese contextual:** A imagem violenta representa devastação da cidade e exige cuidado pastoral.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:40"
       ],
@@ -582,7 +572,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-41",
       "title": "Ezequiel 16:41 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E queimarão tuas casas a fogo, e executarão julgamentos contra ti, diante dos olhos de muitas mulheres; e te farei cessar de ser prostituta, nem darás mais pagamento.\n\n**Leitura no contexto:** Este versículo integra a unidade **A imagem severa de exposição e destruição** (35–43). O oráculo anuncia a reunião dos antigos aliados contra Jerusalém e emprega imagens de exposição, apedrejamento, espada e fogo. São figuras violentas de juízo no mundo antigo.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Casas são queimadas e os cultos interrompidos.\n\n**Exegese contextual:** O incêndio evoca destruição urbana, não um modelo de punição para pessoas.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:41"
       ],
@@ -592,7 +582,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-42",
       "title": "Ezequiel 16:42 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Assim farei descansar meu furor sobre ti, meu ciúme se afastará de ti; eu me aquietarei, e não mais me indignarei.\n\n**Leitura no contexto:** Este versículo integra a unidade **A imagem severa de exposição e destruição** (35–43). O oráculo anuncia a reunião dos antigos aliados contra Jerusalém e emprega imagens de exposição, apedrejamento, espada e fogo. São figuras violentas de juízo no mundo antigo.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A indignação é apresentada como chegando ao fim.\n\n**Exegese contextual:** O encerramento da punição prepara a mudança de tom posterior.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:42"
       ],
@@ -602,7 +592,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-43",
       "title": "Ezequiel 16:43 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Porque não te lembraste dos dias de tua juventude, e me provocaste à ira com tudo isto, por isso eis que também eu tornarei o teu caminho sobre tua cabeça, diz o Senhor DEUS; por acaso não cometeste tu tal promiscuidade além de todas as tuas abominações?\n\n**Leitura no contexto:** Este versículo integra a unidade **A imagem severa de exposição e destruição** (35–43). O oráculo anuncia a reunião dos antigos aliados contra Jerusalém e emprega imagens de exposição, apedrejamento, espada e fogo. São figuras violentas de juízo no mundo antigo.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A falta de memória é retomada como causa da ruína.\n\n**Exegese contextual:** O discurso fecha o ciclo da acusação iniciado na infância abandonada.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:43"
       ],
@@ -612,7 +602,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-44",
       "title": "Ezequiel 16:44 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Eis que todo aquele que usa de provérbios fará provérbio sobre ti, dizendo: Tal mãe, tal filha.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém comparada com Samaria e Sodoma** (44–52). O provérbio familiar introduz comparação acusatória: Jerusalém não pode declarar-se moralmente superior às cidades que despreza. O argumento intensifica a crítica à hipocrisia.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O provérbio 'tal mãe, tal filha' é aplicado a Jerusalém.\n\n**Exegese contextual:** O recurso genealógico conecta a cidade a padrões históricos de infidelidade.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:44"
       ],
@@ -622,7 +612,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-45",
       "title": "Ezequiel 16:45 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Tu és filha de tua mãe, que tinha nojo de seu marido e de seus filhos; e tu és irmã de tuas irmãs, que tinham nojo de seus maridos e de seus filhos; vossa mãe foi Heteia, e vosso pai amorreu.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém comparada com Samaria e Sodoma** (44–52). O provérbio familiar introduz comparação acusatória: Jerusalém não pode declarar-se moralmente superior às cidades que despreza. O argumento intensifica a crítica à hipocrisia.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A família simbólica de Jerusalém é descrita novamente.\n\n**Exegese contextual:** Os vínculos são retóricos, não genealogia literal da população.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:45"
       ],
@@ -632,7 +622,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-46",
       "title": "Ezequiel 16:46 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E tua irmã maior é Samaria, ela e suas filhas, a qual habita à tua esquerda; e tua irmã menor que tu é Sodoma com suas filhas, a qual habita à tua direita.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém comparada com Samaria e Sodoma** (44–52). O provérbio familiar introduz comparação acusatória: Jerusalém não pode declarar-se moralmente superior às cidades que despreza. O argumento intensifica a crítica à hipocrisia.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Samaria e Sodoma são chamadas irmãs de Jerusalém.\n\n**Exegese contextual:** As cidades funcionam como espelhos morais e políticos.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:46"
       ],
@@ -642,7 +632,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-47",
       "title": "Ezequiel 16:47 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Porém não andaste em seus caminhos, nem fizeste conforme suas abominações; mas em vez disso, como se fosse muito pouco, tu te corrompeste ainda mais que elas em todos os teus caminhos.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém comparada com Samaria e Sodoma** (44–52). O provérbio familiar introduz comparação acusatória: Jerusalém não pode declarar-se moralmente superior às cidades que despreza. O argumento intensifica a crítica à hipocrisia.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Jerusalém é acusada de ultrapassar suas irmãs.\n\n**Exegese contextual:** A comparação desfaz a pretensão de superioridade moral.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:47"
       ],
@@ -652,7 +642,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-48",
       "title": "Ezequiel 16:48 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Vivo eu, diz o Senhor DEUS, que tua irmã Sodoma e suas filhas não fizeram tanto como fizeste tu e tuas filhas.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém comparada com Samaria e Sodoma** (44–52). O provérbio familiar introduz comparação acusatória: Jerusalém não pode declarar-se moralmente superior às cidades que despreza. O argumento intensifica a crítica à hipocrisia.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Sodoma é apresentada como menos culpada que Jerusalém.\n\n**Exegese contextual:** O contraste provoca os ouvintes e desloca o foco para a responsabilidade local.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:48"
       ],
@@ -662,7 +652,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-49",
       "title": "Ezequiel 16:49 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Eis que esta foi a maldade de tua irmã Sodoma: ela e suas filhas tiveram soberba, fartura de pão, e abundância de conforto; porém nunca ajudaram a mão do pobre e do necessitado.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém comparada com Samaria e Sodoma** (44–52). O provérbio familiar introduz comparação acusatória: Jerusalém não pode declarar-se moralmente superior às cidades que despreza. O argumento intensifica a crítica à hipocrisia.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O pecado de Sodoma inclui orgulho, fartura e negligência dos pobres.\n\n**Exegese contextual:** O versículo explicita injustiça social e recusa de socorro aos necessitados.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:49"
       ],
@@ -672,7 +662,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-50",
       "title": "Ezequiel 16:50 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E se tornaram arrogantes, e fizeram abominação diante de mim, por isso eu as tirei quando vi isto .\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém comparada com Samaria e Sodoma** (44–52). O provérbio familiar introduz comparação acusatória: Jerusalém não pode declarar-se moralmente superior às cidades que despreza. O argumento intensifica a crítica à hipocrisia.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A arrogância e outras abominações completam a acusação contra Sodoma.\n\n**Exegese contextual:** A passagem não reduz sua crítica a um único comportamento.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:50"
       ],
@@ -682,7 +672,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-51",
       "title": "Ezequiel 16:51 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Também Samaria não cometeu sequer a metade de teus pecados; e tu multiplicaste tuas abominações mais que elas, e fizeste tuas irmãs parecerem justas em comparação a todas as tuas abominações que fizeste.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém comparada com Samaria e Sodoma** (44–52). O provérbio familiar introduz comparação acusatória: Jerusalém não pode declarar-se moralmente superior às cidades que despreza. O argumento intensifica a crítica à hipocrisia.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Samaria também é usada como comparação desfavorável a Jerusalém.\n\n**Exegese contextual:** O profeta intensifica a denúncia da cidade que julgava as outras.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:51"
       ],
@@ -692,7 +682,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-52",
       "title": "Ezequiel 16:52 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Tu também, leva tua vergonha, tu que julgaste em favor de tuas irmãs por meio de teus pecados, que fizeste mais abomináveis que elas; mais justas são que tu; envergonha-te, pois, tu também, e leva tua vergonha, pois justificaste a tuas irmãs.\n\n**Leitura no contexto:** Este versículo integra a unidade **Jerusalém comparada com Samaria e Sodoma** (44–52). O provérbio familiar introduz comparação acusatória: Jerusalém não pode declarar-se moralmente superior às cidades que despreza. O argumento intensifica a crítica à hipocrisia.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Jerusalém deve reconhecer sua própria vergonha.\n\n**Exegese contextual:** O argumento combate a condenação arrogante de outros povos.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:52"
       ],
@@ -702,7 +692,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-53",
       "title": "Ezequiel 16:53 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Eu, pois, os restaurarei de seu infortúnio, os cativos de Sodoma e de suas filhas, e os cativos de Samaria e de suas filhas, e os cativos do teu cativeiro entre elas,\n\n**Leitura no contexto:** Este versículo integra a unidade **Vergonha, restauração e memória da aliança violada** (53–59). A reversão da sorte de Sodoma, Samaria e Jerusalém é anunciada junto à memória do desprezo e do juramento quebrado. O texto mantém juízo e esperança em tensão.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Deus anuncia restauração para Sodoma, Samaria e Jerusalém.\n\n**Exegese contextual:** A promessa surpreendente amplia o horizonte para além da cidade central.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:53"
       ],
@@ -712,7 +702,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-54",
       "title": "Ezequiel 16:54 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Para que leves tua vergonha, e sejas envergonhada por tudo que fizeste, dando-lhes tu consolo.\n\n**Leitura no contexto:** Este versículo integra a unidade **Vergonha, restauração e memória da aliança violada** (53–59). A reversão da sorte de Sodoma, Samaria e Jerusalém é anunciada junto à memória do desprezo e do juramento quebrado. O texto mantém juízo e esperança em tensão.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A vergonha de Jerusalém será acompanhada pela restauração das irmãs.\n\n**Exegese contextual:** O texto transforma a comparação em possibilidade de reconciliação.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:54"
       ],
@@ -722,7 +712,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-55",
       "title": "Ezequiel 16:55 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Enquanto tuas irmãs, Sodoma com suas filhas e Samaria com suas filhas, voltarão ao seu primeiro estado; também tu e tuas filhas voltareis a vosso primeiro estado.\n\n**Leitura no contexto:** Este versículo integra a unidade **Vergonha, restauração e memória da aliança violada** (53–59). A reversão da sorte de Sodoma, Samaria e Jerusalém é anunciada junto à memória do desprezo e do juramento quebrado. O texto mantém juízo e esperança em tensão.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** As três cidades são descritas como retornando a seu estado.\n\n**Exegese contextual:** O alcance e a forma dessa restauração são temas interpretativos debatidos.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:55"
       ],
@@ -732,7 +722,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-56",
       "title": "Ezequiel 16:56 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Não foi tua irmã Sodoma mencionada em tua boca no tempo de tuas soberbas,\n\n**Leitura no contexto:** Este versículo integra a unidade **Vergonha, restauração e memória da aliança violada** (53–59). A reversão da sorte de Sodoma, Samaria e Jerusalém é anunciada junto à memória do desprezo e do juramento quebrado. O texto mantém juízo e esperança em tensão.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Jerusalém antes mencionava Sodoma com desprezo.\n\n**Exegese contextual:** A lembrança expõe a antiga arrogância da cidade.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:56"
       ],
@@ -742,7 +732,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-57",
       "title": "Ezequiel 16:57 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Antes que tua maldade fosse descoberta? Semelhantemente agora é teu tempo de humilhação pelas filhas de Síria e de todos que estavam ao redor dela, e as filhas dos filisteus ao redor, que te desprezam.\n\n**Leitura no contexto:** Este versículo integra a unidade **Vergonha, restauração e memória da aliança violada** (53–59). A reversão da sorte de Sodoma, Samaria e Jerusalém é anunciada junto à memória do desprezo e do juramento quebrado. O texto mantém juízo e esperança em tensão.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Agora Jerusalém sofre o desprezo de povos vizinhos.\n\n**Exegese contextual:** A inversão de status mostra a fragilidade de quem ridiculariza outros.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:57"
       ],
@@ -752,7 +742,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-58",
       "title": "Ezequiel 16:58 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Tu levarás a punição por tua perversidade e tuas abominações, diz o SENHOR.\n\n**Leitura no contexto:** Este versículo integra a unidade **Vergonha, restauração e memória da aliança violada** (53–59). A reversão da sorte de Sodoma, Samaria e Jerusalém é anunciada junto à memória do desprezo e do juramento quebrado. O texto mantém juízo e esperança em tensão.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** A cidade deve responder por suas transgressões.\n\n**Exegese contextual:** A restauração futura não apaga a responsabilidade moral.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:58"
       ],
@@ -762,7 +752,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-59",
       "title": "Ezequiel 16:59 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Porque assim diz o Senhor DEUS: Eu farei contigo conforme tu fizeste, que desprezaste o juramento, quebrando o pacto.\n\n**Leitura no contexto:** Este versículo integra a unidade **Vergonha, restauração e memória da aliança violada** (53–59). A reversão da sorte de Sodoma, Samaria e Jerusalém é anunciada junto à memória do desprezo e do juramento quebrado. O texto mantém juízo e esperança em tensão.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O pacto violado é lembrado como fundamento do juízo.\n\n**Exegese contextual:** A quebra de juramento liga a metáfora conjugal à teologia da aliança.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:59"
       ],
@@ -772,7 +762,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-60",
       "title": "Ezequiel 16:60 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Contudo eu me lembrarei do meu pacto contigo nos dias de tua juventude, e estabelecerei contigo um pacto eterno.\n\n**Leitura no contexto:** Este versículo integra a unidade **Aliança lembrada e reconciliação** (60–63). O Senhor anuncia lembrar-se da aliança e estabelecer aliança duradoura. A restauração é apresentada como iniciativa divina que produz reconhecimento e memória responsável.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Deus promete lembrar a aliança e estabelecer pacto duradouro.\n\n**Exegese contextual:** A iniciativa divina inaugura a conclusão de esperança.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:60"
       ],
@@ -782,7 +772,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-61",
       "title": "Ezequiel 16:61 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Então te lembrarás de teus caminhos, e te envergonharás, quando receberes a tuas irmãs maiores que tu com as menores que tu, pois eu as darei a ti por filhas, porém não por teu pacto.\n\n**Leitura no contexto:** Este versículo integra a unidade **Aliança lembrada e reconciliação** (60–63). O Senhor anuncia lembrar-se da aliança e estabelecer aliança duradoura. A restauração é apresentada como iniciativa divina que produz reconhecimento e memória responsável.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Jerusalém recordará sua história ao receber suas irmãs.\n\n**Exegese contextual:** A restauração inclui humildade e acolhimento de outras comunidades.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:61"
       ],
@@ -792,7 +782,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-62",
       "title": "Ezequiel 16:62 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** E estabelecerei meu pacto contigo, e saberás que eu sou o SENHOR;\n\n**Leitura no contexto:** Este versículo integra a unidade **Aliança lembrada e reconciliação** (60–63). O Senhor anuncia lembrar-se da aliança e estabelecer aliança duradoura. A restauração é apresentada como iniciativa divina que produz reconhecimento e memória responsável.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** Deus reafirma a aliança e o reconhecimento de seu nome.\n\n**Exegese contextual:** A fidelidade divina contrasta com a infidelidade narrada.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:62"
       ],
@@ -802,7 +792,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "versiculo-63",
       "title": "Ezequiel 16:63 — exposição versículo a versículo",
-      "body": "**Texto-base BLIVRE:** Para que te lembres disso , e te envergonhes, e nunca mais abras a boca por causa de tua vergonha, quando eu me reconciliar contigo de tudo quanto fizeste, diz o Senhor DEUS.\n\n**Leitura no contexto:** Este versículo integra a unidade **Aliança lembrada e reconciliação** (60–63). O Senhor anuncia lembrar-se da aliança e estabelecer aliança duradoura. A restauração é apresentada como iniciativa divina que produz reconhecimento e memória responsável.\n\n**Distinção interpretativa:** A personificação de Jerusalém é linguagem profética coletiva, não autorização para aplicar suas acusações a uma pessoa vulnerável.",
+      "body": "**Paráfrase livre autoral:** O capítulo termina com memória, silêncio e expiação.\n\n**Exegese contextual:** A reconciliação final não banaliza a violência passada nem autoriza envergonhar vítimas.\n\n**Pergunta interpretativa:** Como este versículo desenvolve a história simbólica de Jerusalém, sua responsabilidade ou a esperança de restauração?",
       "scriptureRefs": [
         "Ezequiel 16:63"
       ],
@@ -833,7 +823,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "debates",
       "title": "Interpretações debatidas",
-      "body": "Discute-se a relação entre a alegoria matrimonial e a retórica jurídica da aliança; também o alcance da restauração de Sodoma e Samaria nos vv. 53–55. A promessa de aliança eterna (v. 60) pode ser lida em diálogo com outras promessas proféticas, sem apagar seu destinatário histórico. O texto não ensina que Deus aprova violência doméstica.",
+      "body": "**Alegoria conjugal:** Jerusalém é uma cidade personificada, não uma mulher real; imagens de exposição e punição não podem servir de modelo para relacionamentos.\n\n**Origens cananeias:** 'amorreu' e 'heteia' são caracterizações retóricas da história da cidade.\n\n**Sodoma (v. 49):** a denúncia nomeia orgulho, abundância e omissão diante dos pobres; a leitura do capítulo não deve apagar esse foco social.\n\n**Restauração de Sodoma e Samaria (vv. 53–55):** seu alcance é debatido; a promessa tem força de reversão da humilhação.\n\n**Aliança eterna (v. 60):** o final desloca a narrativa da condenação para a iniciativa divina de reconciliação.",
       "scriptureRefs": [
         "Ezequiel 16:1-63"
       ],
@@ -843,7 +833,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**Jeremias 2:1–37:** memória de fidelidade e acusação de infidelidade. **Oséias 2:1–23:** outra metáfora conjugal, com diferenças importantes. **Ezequiel 20:1–44:** história de rebelião e memória. **Ezequiel 36:22–28:** renovação e transformação. **Lucas 4:18–19:** cuidado com oprimidos, sem equiparar diretamente a alegoria a Jesus.",
+      "body": "**Deuteronômio 12:29–31:** condenação de sacrifícios de crianças.\n\n**2 Reis 21:1–9:** idolatria e práticas condenadas em Judá.\n\n**Jeremias 2:1–13:** metáfora da infidelidade de Israel.\n\n**Ezequiel 20:25–31:** denúncia de práticas idolátricas e sacrifício infantil.\n\n**Ezequiel 23:** outra alegoria de alianças e infidelidade.\n\n**Oséias 2:14–23:** imagem conjugal e promessa de restauração.",
       "scriptureRefs": [
         "Ezequiel 16:1-63"
       ],
@@ -853,7 +843,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegorias inventadas",
-      "body": "Cristãos podem relacionar a iniciativa divina de reconciliação (vv. 60–63) à mensagem de graça e nova aliança no Novo Testamento (Lucas 22:20). Essa leitura é teológica e posterior; o capítulo fala primeiro a Jerusalém em seu contexto histórico e não deve ser usado para normalizar coerção ou abuso.",
+      "body": "Na leitura cristã, a iniciativa divina de restaurar a aliança pode dialogar com a linguagem da nova aliança em Lucas 22:20 e Hebreus 8:8–12. A conexão não autoriza transferir imagens violentas da alegoria para relações humanas nem apagar o sofrimento das vítimas.",
       "scriptureRefs": [
         "Ezequiel 16:1-63"
       ],
@@ -873,7 +863,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas",
-      "body": "**1. Quem é a personagem coletiva da alegoria?** Jerusalém (vv. 2–3).\n\n**2. Qual o primeiro ato de cuidado?** A ordem para viver diante do abandono (v. 6).\n\n**3. Que prática concreta agrava a acusação?** Sacrifício de filhos (vv. 20–21).\n\n**4. Que pecado social de Sodoma é destacado?** Não ajudar pobres e necessitados (v. 49).\n\n**5. Como termina o capítulo?** Com a promessa de aliança lembrada e reconciliação (vv. 60–63).",
+      "body": "**1. Como Jerusalém aparece inicialmente?** Como recém-nascida abandonada (16:4–6).\n\n**2. Que presentes simbolizam sua prosperidade?** Roupas, joias e alimentos (16:9–14).\n\n**3. Qual violência é denunciada nos vv. 20–21?** Sacrifício de crianças.\n\n**4. Que pecado de Sodoma é destacado no v. 49?** Orgulho, fartura e negligência dos pobres.\n\n**5. O que Deus promete nos vv. 60–63?** Lembrar e renovar a aliança.",
       "scriptureRefs": [
         "Ezequiel 16:1-63"
       ],
@@ -883,7 +873,7 @@ export const ezekiel16Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — graça, responsabilidade e dignidade",
-      "body": "**Tema:** A graça recebida não dispensa responsabilidade.\n\n**Proposição:** A alegoria denuncia a traição da aliança e termina na iniciativa divina de restauração.\n\n**Esboço:** (1) vida recebida (1–14); (2) dons pervertidos e injustiça (15–52); (3) aliança lembrada (53–63).\n\n**Cuidado pastoral obrigatório:** avisar sobre conteúdo sensível, nunca usar imagens de agressão para justificar abuso, não culpar sobreviventes e não exigir reconciliação com agressores.",
+      "body": "**Tema:** Memória da graça, denúncia da violência e esperança de aliança.\n\n**Proposição:** Receber cuidado e prosperidade implica responsabilidade de proteger a vida e socorrer os vulneráveis.\n\n**Esboço:** (1) acolhimento da cidade vulnerável (1–14); (2) dádivas desviadas e crianças sacrificadas (15–34); (3) ruína e perda de prestígio (35–43); (4) injustiça e arrogância diante das irmãs (44–58); (5) promessa de aliança (59–63).\n\n**Cuidados pastorais:** avisar sobre linguagem sexual e violência; nunca usar o texto para legitimar abuso conjugal, culpabilizar vítimas ou humilhar sobreviventes.",
       "scriptureRefs": [
         "Ezequiel 16:1-63"
       ],
