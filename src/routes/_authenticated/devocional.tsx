@@ -1,16 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { BookOpen, CalendarDays, Check, ChevronRight, Flame, Lightbulb, MessageCircle, Sparkles } from "lucide-react";
+import { BookOpen, CalendarDays, Check, ChevronRight, Flame, Lightbulb, MessageCircle, Sparkles, Sun, Moon } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { ExportCard } from "@/components/ExportCard";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { loadDevotionalSafely } from "@/lib/devotional-loader";
 import { curatedDevotionalCount } from "@/lib/content/daily-devotional";
+import { EVENING_DEVOTIONALS } from "@/lib/content/evening-devotionals";
+import { useBrazilDevotionalPeriod } from "@/hooks/use-brazil-devotional-period";
 import { useBrazilDay } from "@/hooks/use-brazil-day";
 import { BIBLE_BOOKS, parseBibleReference } from "@/lib/bible-catalog";
 
 export const Route = createFileRoute("/_authenticated/devocional")({
+  validateSearch: (search: Record<string, unknown>): { periodo?: "manha" | "noite" } => {
+    const raw = search["periodo"];
+    if (raw === "manha") return { periodo: "manha" };
+    if (raw === "noite") return { periodo: "noite" };
+    return {};
+  },
   head: () => ({
     meta: [
       { property: "og:type", content: "website" },
@@ -101,16 +109,20 @@ function ScriptureReferenceChips({ references }: { references: string[] }) {
 
 function DevocionalPage() {
   const day = useBrazilDay();
+  const { periodo: requestedPeriod } = Route.useSearch();
+  const suggestedPeriod = useBrazilDevotionalPeriod();
+  const period = requestedPeriod ?? suggestedPeriod;
+  const periodTitle = period === "noite" ? "Devocional da Noite" : "Devocional da Manhã";
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ["devotional", day],
-    queryFn: () => loadDevotionalSafely(day),
+    queryKey: ["devotional", day, period],
+    queryFn: () => loadDevotionalSafely(day, period),
     retry: false,
     staleTime: Infinity,
   });
 
   if (isLoading) {
     return (
-      <AppShell title="Devocional de hoje" subtitle="Preparando sua leitura...">
+      <AppShell title={periodTitle} subtitle="Preparando sua leitura...">
         <div className="mx-auto max-w-5xl space-y-4" aria-label="Carregando devocional">
           <Skeleton className="h-40 w-full rounded-3xl" />
           <Skeleton className="h-64 w-full rounded-3xl" />
@@ -122,7 +134,7 @@ function DevocionalPage() {
 
   if (isError || !data) {
     return (
-      <AppShell title="Devocional de hoje">
+      <AppShell title={periodTitle}>
         <div role="alert" className="mx-auto max-w-5xl rounded-2xl border border-border bg-card p-6 text-sm text-muted-foreground">
           {error instanceof Error && error.message
             ? error.message
@@ -142,28 +154,50 @@ function DevocionalPage() {
     { label: "Reflexão e exposição", text: displayedData.reflection, icon: BookOpen, accent: "blue" },
     { label: "Aplicação prática", text: displayedData.application, icon: Lightbulb, accent: "gold" },
     { label: "Oração", text: displayedData.prayer, icon: Sparkles, accent: "blue" },
-    { label: "Desafio de hoje", text: displayedData.challenge, icon: Flame, accent: "gold" },
+    { label: period === "noite" ? "Prática para esta noite" : "Desafio de hoje", text: displayedData.challenge, icon: Flame, accent: "gold" },
     { label: "Pergunta para reflexão", text: displayedData.question, icon: MessageCircle, accent: "blue" },
     { label: "Leitura sugerida", text: displayedData.readingSuggestion, icon: BookOpen, accent: "gold" },
   ];
 
   return (
-    <AppShell title="Devocional de hoje" subtitle={displayedData.theme}>
+    <AppShell title={periodTitle} subtitle={displayedData.theme}>
       <div className="mx-auto max-w-5xl space-y-5 sm:space-y-6">
         <section className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-primary"><span className="h-1 w-8 rounded-full bg-amber-400" />Seu momento com a Palavra</p>
-            <h1 className="font-display text-3xl font-bold tracking-tight text-[#142d59] dark:text-foreground sm:text-4xl">Devocional</h1>
+            <h1 className="font-display text-3xl font-bold tracking-tight text-[#142d59] dark:text-foreground sm:text-4xl">{periodTitle}</h1>
             <p className="mt-1 flex items-center gap-2 text-sm capitalize text-muted-foreground"><CalendarDays className="size-4" aria-hidden="true" />{dateLabel}</p>
           </div>
           <div className="flex items-center gap-3 rounded-2xl border border-border/70 bg-card px-4 py-3 shadow-sm">
             <span className="flex size-10 items-center justify-center rounded-xl bg-blue-50 text-primary dark:bg-primary/15"><BookOpen className="size-5" aria-hidden="true" /></span>
-            <div className="min-w-0"><p className="text-sm font-semibold">Acervo de leituras</p><p className="text-xs text-muted-foreground">{curatedDevotionalCount().toLocaleString("pt-BR")} devocionais completos</p></div>
-            <span className="ml-1 rounded-lg bg-blue-50 px-3 py-2 text-xs font-semibold text-primary dark:bg-primary/15 dark:text-blue-200">Novo às 00h</span>
+            <div className="min-w-0"><p className="text-sm font-semibold">Acervo de leituras</p><p className="text-xs text-muted-foreground">{curatedDevotionalCount()} da manhã · {EVENING_DEVOTIONALS.length} da noite</p></div>
+            <span className="ml-1 rounded-lg bg-blue-50 px-3 py-2 text-xs font-semibold text-primary dark:bg-primary/15 dark:text-blue-200">Renova às 00h</span>
           </div>
         </section>
 
-        <ExportCard filename={`devocional-${day}`} title={`Devocional — ${displayedData.theme}`}>
+        <nav aria-label="Escolher devocional da manhã ou noite" className="grid grid-cols-2 gap-3">
+          <Link
+            to="/devocional"
+            search={{ periodo: "manha" }}
+            aria-current={period === "manha" ? "page" : undefined}
+            className={`flex min-h-16 items-center justify-center gap-3 rounded-2xl border px-3 text-center text-sm font-semibold shadow-sm transition-colors focus-visible:outline-2 focus-visible:outline-primary sm:text-base ${period === "manha" ? "border-blue-700 bg-[#133e62] text-white" : "border-blue-100 bg-white text-[#15385b] hover:bg-blue-50 dark:border-border dark:bg-card dark:text-foreground"}`}
+          >
+            <Sun className="size-5 shrink-0" aria-hidden="true" />
+            <span>Manhã <span className="block text-xs font-normal opacity-80">6h · Comece com Deus</span></span>
+          </Link>
+          <Link
+            to="/devocional"
+            search={{ periodo: "noite" }}
+            aria-current={period === "noite" ? "page" : undefined}
+            className={`flex min-h-16 items-center justify-center gap-3 rounded-2xl border px-3 text-center text-sm font-semibold shadow-sm transition-colors focus-visible:outline-2 focus-visible:outline-primary sm:text-base ${period === "noite" ? "border-blue-700 bg-[#133e62] text-white" : "border-blue-100 bg-white text-[#15385b] hover:bg-blue-50 dark:border-border dark:bg-card dark:text-foreground"}`}
+          >
+            <Moon className="size-5 shrink-0" aria-hidden="true" />
+            <span>Noite <span className="block text-xs font-normal opacity-80">20h · Gratidão e descanso</span></span>
+          </Link>
+        </nav>
+        <p className="text-center text-xs text-muted-foreground">Horários recomendados de Brasília. As duas leituras estão disponíveis durante o dia e mudam à meia-noite.</p>
+
+        <ExportCard filename={`devocional-${period}-${day}`} title={`${periodTitle} — ${displayedData.theme}`}>
           <section aria-labelledby="verse-heading" className="relative isolate overflow-hidden rounded-3xl border border-blue-900/10 bg-gradient-to-br from-[#f5f9ff] via-white to-[#e7f1ff] p-6 shadow-sm dark:border-white/10 dark:from-[#162743] dark:via-[#13223a] dark:to-[#1a3150] sm:p-9 lg:p-11">
             <img src="/images/devotional-reflection.webp" alt="" aria-hidden="true" className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25 dark:opacity-15" />
             <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-white/90 via-white/80 to-white/55 dark:from-[#162743]/95 dark:via-[#13223a]/90 dark:to-[#1a3150]/75" />

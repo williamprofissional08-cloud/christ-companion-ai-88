@@ -74,14 +74,15 @@ test("datas inexistentes são rejeitadas", () => {
   assert.throws(() => getDailyDevotional("data-invalida"), /inválida/);
 });
 
-test("início e página devocional usam o mesmo acervo fixo, sem sorteio manual ou geração na UI", () => {
+test("início e página devocional usam os acervos fixos da manhã e da noite, sem sorteio manual ou geração na UI", () => {
   const home = readFileSync(new URL("../src/routes/_authenticated/inicio.tsx", import.meta.url), "utf8");
   const route = readFileSync(new URL("../src/routes/_authenticated/devocional.tsx", import.meta.url), "utf8");
   const loader = readFileSync(new URL("../src/lib/devotional-loader.ts", import.meta.url), "utf8");
-  assert.match(home, /loadDevotionalSafely\(day\)/);
-  assert.match(route, /loadDevotionalSafely\(day\)/);
-  assert.match(loader, /getDailyDevotional\(day\)/);
+  assert.match(home, /loadDevotionalSafely\(day, "manha"\)/);
+  assert.match(home, /loadDevotionalSafely\(day, "noite"\)/);
+  assert.match(route, /loadDevotionalSafely\(day, period\)/);
+  assert.match(loader, /getDevotionalForPeriod\(day, period\)/);
+  assert.match(route, /periodo/);
   assert.doesNotMatch(route, /Sortear outro|Math\.random/);
-  assert.doesNotMatch(home, /getDevotional/);
-  assert.doesNotMatch(route, /getDevotional/);
+  assert.doesNotMatch(home, /Math\.random/);
 });

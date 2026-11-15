@@ -34,7 +34,7 @@ export function WeeklySummary({ summary, isLoading }: { summary: Summary | undef
       {!hasActivity ? (
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-muted-foreground">Comece hoje, um passo de cada vez.</p>
-          <Button asChild size="sm" variant="outline" className="rounded-full"><Link to="/devocional">Começar hoje</Link></Button>
+          <Button asChild size="sm" variant="outline" className="rounded-full"><Link to="/devocional" search={{}}>Começar hoje</Link></Button>
         </div>
       ) : (
         <>
