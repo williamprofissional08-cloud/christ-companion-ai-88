@@ -4,6 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { friendlyAuthError } from "@/lib/auth-redirect";
+import { finishAuthCallback } from "@/lib/auth-callback-flow";
 
 export const Route = createFileRoute("/auth-callback")({
   ssr: false,
@@ -25,37 +26,32 @@ function AuthCallback() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    let done = false;
-
-    const params = new URLSearchParams(window.location.search);
-    const hash = new URLSearchParams(window.location.hash.replace(/^#/, ""));
-    const oauthError = params.get("error_description") ?? params.get("error") ?? hash.get("error");
-    if (oauthError) {
-      setError(friendlyAuthError(oauthError));
-      return;
-    }
-
-    const finish = () => {
-      if (done) return;
-      done = true;
-      // `replace` remove os parâmetros do OAuth da URL final.
-      navigate({ to: "/inicio", replace: true });
-    };
-
-    const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (session) finish();
-    });
-
-    supabase.auth.getSession().then(({ data }) => {
-      if (data.session) finish();
-    });
-
+    let disposed = false;
+    // A slow server should offer a safe way back to sign-in, not claim that
+    // registration failed or erase a verified user's existing session.
     const timeout = window.setTimeout(() => {
-      if (!done) setError("Não foi possível concluir o login. Tente novamente.");
-    }, 8000);
+      if (!disposed) setError("A confirmação está demorando. Você pode voltar para a tela de login e entrar com o e-mail e a senha que cadastrou.");
+    }, 20_000);
+
+    void finishAuthCallback(supabase.auth, window.location.search, window.location.hash)
+      .then((outcome) => {
+        if (disposed) return;
+        window.clearTimeout(timeout);
+        if (outcome === "authenticated") {
+          // Remove one-time credentials from browser history via replace.
+          navigate({ to: "/inicio", replace: true });
+          return;
+        }
+        setError("Não há uma sessão ativa neste navegador. Se o e-mail já foi confirmado, entre com seu e-mail e senha. Não é necessário criar outra conta.");
+      })
+      .catch((issue: unknown) => {
+        if (disposed) return;
+        window.clearTimeout(timeout);
+        setError(friendlyAuthError(issue));
+      });
 
     return () => {
-      sub.subscription.unsubscribe();
+      disposed = true;
       window.clearTimeout(timeout);
     };
   }, [navigate]);
@@ -65,14 +61,14 @@ function AuthCallback() {
       <Card className="w-full max-w-sm p-7 text-center shadow-soft">
         {error ? (
           <>
-            <h1 className="font-display text-xl font-semibold">Login não concluído</h1>
+            <h1 className="font-display text-xl font-semibold">Confirmação de acesso</h1>
             <p className="mt-2 text-sm text-muted-foreground">{error}</p>
             <Button
               className="mt-5 w-full"
               variant="hero"
               onClick={() => navigate({ to: "/auth", replace: true })}
             >
-              Tentar novamente
+              Voltar para entrar
             </Button>
           </>
         ) : (
