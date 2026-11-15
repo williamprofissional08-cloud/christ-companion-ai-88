@@ -44,7 +44,7 @@ test("as 14 leituras noturnas atendem ao padrão de conteúdo integral", () => {
     assert.ok(devotional.context.length >= 150, devotional.theme + ": contexto incompleto");
     assert.ok(devotional.biblicalMeaning.length >= 130, devotional.theme + ": significado incompleto");
     assert.ok(devotional.reflection.length >= 650, devotional.theme + ": reflexão curta");
-    assert.ok(devotional.reflection.split("\\n\\n").length >= 3, devotional.theme + ": faltam parágrafos");
+    assert.ok(devotional.reflection.split("\n\n").length >= 3, devotional.theme + ": faltam parágrafos");
     assert.ok(devotional.prayer.length >= 130, devotional.theme + ": oração curta");
     assert.ok(devotional.readingSuggestion.includes(":"), devotional.theme + ": leitura não indicada");
     themes.add(devotional.theme);
