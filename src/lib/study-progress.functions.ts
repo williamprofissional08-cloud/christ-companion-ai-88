@@ -51,3 +51,22 @@ export const saveStudyCheckpoint = createServerFn({ method: "POST" })
     if (error) throw new Error(error.message);
     return { ok: true };
   });
+
+/** Último estudo realmente aberto pelo usuário; leitura limitada à própria conta. */
+export const getRecentStudyCheckpoint = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .handler(async ({ context }) => {
+    const { data: row, error } = await context.supabase
+      .from("study_progress")
+      .select("study_slug, read_percent, updated_at")
+      .eq("user_id", context.userId)
+      .order("updated_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+    if (error) throw new Error(error.message);
+    if (!row || !getStudy(row.study_slug)) return null;
+    return {
+      slug: row.study_slug,
+      readPercent: Math.max(0, Math.min(100, row.read_percent ?? 0)),
+    };
+  });
