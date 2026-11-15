@@ -1,12 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
-import { BookOpen, GraduationCap, Route as RouteIcon, Sparkles, UsersRound, Heart, NotebookPen, Headphones, ListChecks, Award, BarChart3, Bookmark, CalendarDays, ChevronRight, Clock3, Play, LayoutGrid } from "lucide-react";
+import { BookOpen, GraduationCap, Route as RouteIcon, Sparkles, UsersRound, Heart, NotebookPen, Headphones, ListChecks, Award, BarChart3, Bookmark, CalendarDays, ChevronRight, Clock3, Play, LayoutGrid, Sun, Moon } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuth } from "@/hooks/use-auth";
 import { loadDevotionalSafely } from "@/lib/devotional-loader";
 import { useBrazilDay } from "@/hooks/use-brazil-day";
+import { useBrazilDevotionalPeriod } from "@/hooks/use-brazil-devotional-period";
 import { listFavorites, listGoals } from "@/lib/app.functions";
 
 export const Route = createFileRoute("/_authenticated/inicio")({
@@ -22,14 +23,21 @@ export const Route = createFileRoute("/_authenticated/inicio")({
 
 function Inicio() {
   const day = useBrazilDay();
+  const suggestedDevotionalPeriod = useBrazilDevotionalPeriod();
   const { user } = useAuth();
   const fetchFavorites = useServerFn(listFavorites);
   const fetchGoals = useServerFn(listGoals);
   const favorites = useQuery({ queryKey: ["home-favorites", user?.id], queryFn: () => fetchFavorites(), enabled: !!user?.id, retry: false });
   const goals = useQuery({ queryKey: ["home-goals", user?.id], queryFn: () => fetchGoals(), enabled: !!user?.id, retry: false });
-  const devotional = useQuery({
-    queryKey: ["devotional", day],
-    queryFn: () => loadDevotionalSafely(day),
+  const morningDevotional = useQuery({
+    queryKey: ["devotional", day, "manha"],
+    queryFn: () => loadDevotionalSafely(day, "manha"),
+    retry: false,
+    staleTime: Infinity,
+  });
+  const eveningDevotional = useQuery({
+    queryKey: ["devotional", day, "noite"],
+    queryFn: () => loadDevotionalSafely(day, "noite"),
     retry: false,
     staleTime: Infinity,
   });
@@ -39,7 +47,7 @@ function Inicio() {
   const displayName = rawDisplayName.trim().split(/\s+/)[0] || "Amigo";
   const hour = new Date().getHours();
   const greeting = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
-  const d = devotional.data;
+
   const shortcuts = [
     { to: "/estudos", label: "Estudar a Bíblia", icon: BookOpen },
     { to: "/trilhas", label: "Cursos e Trilhas", icon: RouteIcon },
@@ -80,18 +88,33 @@ function Inicio() {
           ))}
         </section>
 
-        <div className="home-middle grid gap-3 lg:grid-cols-2 lg:items-stretch"><section className="home-devotional relative isolate overflow-hidden rounded-3xl bg-[#173b60] p-5 text-white shadow-md sm:p-8">
-          <img src="/images/home-daily-phrase-background.webp" alt="" aria-hidden="true" className="absolute inset-0 -z-20 size-full object-cover object-right" />
-          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#102d4a]/95 via-[#173b60]/80 to-[#173b60]/15" />
-          <h2 className="flex items-center gap-2 text-sm font-semibold"><CalendarDays className="size-5" aria-hidden="true" /> Devocional de Hoje · renova às 00h</h2>
-          {devotional.isLoading ? <Skeleton className="mt-5 h-16 w-2/3" /> : (
-            <>
-              <p className="mt-4 max-w-lg font-serif text-2xl font-bold leading-tight sm:text-3xl">{d?.verse.text?.replace(/^Síntese para meditação, não uma citação literal:\\s*/i, "") || "Medite na Palavra de Deus"}</p>
-              <p className="mt-2 text-sm">{d?.verse.reference || "Salmos 119:105"}</p>
-            </>
-          )}
-          {devotional.isError && <p role="status" className="mt-2 text-sm">Não foi possível carregar o devocional. Você pode abrir a leitura diretamente.</p>}
-          <Link to="/devocional" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border-2 border-white px-5 font-semibold hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Ler Devocional <ChevronRight className="size-4" aria-hidden="true" /></Link>
+        <div className="home-middle grid gap-3 lg:grid-cols-2 lg:items-stretch"><section className="home-devotional rounded-3xl border border-blue-100 bg-white p-4 text-[#102d4a] shadow-md dark:border-slate-700 dark:bg-card dark:text-foreground sm:p-6">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+            <h2 className="flex items-center gap-2 font-display text-lg font-bold sm:text-xl"><CalendarDays className="size-5 text-primary" aria-hidden="true" /> Devocionais de Hoje</h2>
+            <span className="text-xs font-semibold text-primary">Novos às 00h</span>
+          </div>
+          <p className="mb-4 text-xs text-muted-foreground">Dois momentos completos com Deus. Horários recomendados: 6h e 20h (Brasília).</p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {([
+              { period: "manha" as const, label: "Devocional da Manhã", hour: "6h", icon: Sun, image: "/images/prayer-sunrise.webp", query: morningDevotional },
+              { period: "noite" as const, label: "Devocional da Noite", hour: "20h", icon: Moon, image: "/images/devotional-reflection.webp", query: eveningDevotional },
+            ]).map((entry) => (
+              <div key={entry.period} className="relative isolate flex min-h-44 flex-col overflow-hidden rounded-2xl bg-[#123b60] p-4 text-white shadow-sm sm:min-h-56 sm:p-5">
+                <img src={entry.image} alt="" aria-hidden="true" className="absolute inset-0 -z-20 size-full object-cover" />
+                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0d2946]/95 via-[#163d5b]/85 to-[#153c56]/50" />
+                <p className="flex items-center gap-2 text-xs font-semibold"><entry.icon className="size-4" aria-hidden="true" /> {entry.label} · {entry.hour}</p>
+                {suggestedDevotionalPeriod === entry.period ? <span className="mt-2 self-start rounded-full bg-white/15 px-2 py-0.5 text-[10px] font-semibold">Leitura sugerida agora</span> : null}
+                {entry.query.isLoading ? <Skeleton className="mt-4 h-10 w-full" /> : (
+                  <p className="mt-3 line-clamp-3 flex-1 font-display text-base font-bold leading-snug sm:text-lg">{entry.query.data?.theme ?? "Medite na Palavra de Deus"}</p>
+                )}
+                <p className="mt-2 text-xs text-blue-100">{entry.query.data?.verse.reference ?? ""}</p>
+                {entry.query.isError ? <p className="mt-1 text-xs">Não foi possível carregar a prévia. Abra a leitura completa.</p> : null}
+                <Link to="/devocional" search={{ periodo: entry.period }} className="mt-3 inline-flex min-h-10 items-center justify-center gap-2 self-start rounded-full border border-white px-4 text-xs font-bold transition-colors hover:bg-white/20">
+                  Ler completo <ChevronRight className="size-4" aria-hidden="true" />
+                </Link>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className="home-continue rounded-3xl border border-blue-100 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-card sm:p-6">
