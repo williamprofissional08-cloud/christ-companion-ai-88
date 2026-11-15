@@ -6,7 +6,7 @@ const study = readFileSync(new URL("../src/lib/content/daniel-9-study.ts", impor
 const catalog = readFileSync(new URL("../src/lib/content/curated-studies.ts", import.meta.url), "utf8");
 
 test("Daniel 9 cobre os 27 versículos sem IDs duplicados", () => {
-  const ids = [...study.matchAll(/"id": "versiculo-(\\d+)"/g)].map((m) => Number(m[1]));
+  const ids = [...study.matchAll(/"id": "versiculo-(\d+)"/g)].map((m) => Number(m[1]));
   assert.deepEqual(ids, Array.from({ length: 27 }, (_, i) => i + 1));
   assert.match(study, /"depth": "deep"/);
   assert.match(study, /"id": "debates"/);
