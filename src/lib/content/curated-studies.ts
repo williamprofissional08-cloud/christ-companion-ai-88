@@ -1,3 +1,4 @@
+import { revelation19Study } from "./revelation-19-study";
 import { miqueias5Study } from "./miqueias-5-study";
 import { revelation20Study } from "./revelation-20-study";
 import { revelation21Study } from "./revelation-21-study";
@@ -1813,4 +1814,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-apocalipse-cap-22": revelation22Study,
   "biblia-apocalipse-cap-21": revelation21Study,
   "biblia-apocalipse-cap-20": revelation20Study,
+  "biblia-apocalipse-cap-19": revelation19Study,
 };
