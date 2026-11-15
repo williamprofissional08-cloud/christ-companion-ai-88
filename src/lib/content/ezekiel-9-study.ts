@@ -1,50 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 9 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 9 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel9Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 9 narra a marcação dos que lamentam a injustiça, o juízo visionário sobre Jerusalém e a intercessão angustiada do profeta.",
-  "historicalContext": "Visão de Ezequiel 8–11, no contexto do exílio babilônico do século VI a.C., antes da queda de Jerusalém.",
+  "intro": "Ezequiel 9 apresenta uma visão difícil de julgamento de Jerusalém: um homem de linho marca os que lamentam a corrupção, enquanto outros agentes recebem a tarefa de executar o juízo. O próprio Ezequiel reage com intercessão. O texto exige atenção ao gênero visionário e não autoriza violência religiosa.",
+  "historicalContext": "A visão faz parte de Ezequiel 8–11, pronunciada no contexto do exílio babilônico e da crise anterior à queda de Jerusalém. As abominações no templo descritas no capítulo 8, junto à violência e à injustiça mencionadas em 9:9, explicam a sequência. A glória divina começa a deslocar-se do santuário.",
   "keyPoints": [
     {
-      "title": "Agentes e glória",
-      "text": "A visão apresenta os agentes e o deslocamento da glória (1–3)."
+      "title": "1–3: Agentes e glória",
+      "text": "O cenário do templo introduz executores e o homem de linho."
     },
     {
-      "title": "Marca distintiva",
-      "text": "São marcados os que lamentam as práticas condenadas (4)."
+      "title": "4: O sinal dos que lamentam",
+      "text": "A marca distingue quem rejeita as práticas denunciadas."
     },
     {
-      "title": "Juízo e intercessão",
-      "text": "O julgamento começa no templo, e Ezequiel intercede (5–8)."
+      "title": "5–7: Juízo desde o santuário",
+      "text": "A cena desmente a falsa segurança baseada no local sagrado."
     },
     {
-      "title": "Violência denunciada",
-      "text": "O derramamento de sangue é parte central da acusação (9–11)."
+      "title": "8–11: Intercessão e resposta",
+      "text": "Ezequiel lamenta, Deus denuncia violência e o homem de linho conclui sua missão."
     }
   ],
-  "application": "Não normalizar violência e corrupção; interceder e proteger pessoas vulneráveis, sem justificar agressões religiosas.",
+  "application": "Lamentar injustiças em vez de normalizá-las; não confundir participação religiosa com imunidade ética; interceder pelas pessoas atingidas por crises. Nunca utilizar esta visão como autorização para violência ou para julgar vítimas de tragédias.",
   "crossReferences": [
-    "Ezequiel 8:17",
-    "Ezequiel 10:18-19",
-    "Êxodo 12:7-13",
-    "Gênesis 18:23-33",
-    "Lucas 13:1-5"
+    "Êxodo 12:21-23",
+    "Ezequiel 8:1-18",
+    "Ezequiel 10:1-22",
+    "Ezequiel 11:22-25",
+    "Jeremias 7:1-15",
+    "Apocalipse 7:2-4"
   ],
   "questions": [
-    "Quem é marcado?",
-    "Por que o juízo começa no templo?",
-    "O que Ezequiel faz diante da visão?",
-    "Como tratar a violência do texto com responsabilidade?"
+    "Quem são os agentes apresentados nos primeiros versículos?",
+    "Quem recebe o sinal e por quê?",
+    "Por que o juízo começa pelo santuário?",
+    "Como Ezequiel reage à destruição?",
+    "Quais pecados são citados na resposta divina?"
   ],
-  "conclusion": "O capítulo confronta a injustiça e a indiferença, mas preserva a voz de intercessão do profeta diante da gravidade do juízo.",
+  "conclusion": "O capítulo denuncia a violência e a corrupção que ameaçam Jerusalém, destaca aqueles que lamentam o mal e mostra Ezequiel intercedendo diante de uma visão terrível. Seu conteúdo deve produzir responsabilidade e compaixão, nunca agressão.",
   "prayer": "Senhor, faz-nos atentos à injustiça e comprometidos com a proteção da vida. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 9:1–11 (paráfrase livre)",
-      "body": "**Paráfrase livre autoral, baseada no acervo BLIVRE; não substitui tradução bíblica oficial.**\n\n**1.** Uma voz convoca os encarregados do julgamento da cidade, cada qual com instrumento de destruição.\n\n**2.** Seis figuras armadas chegam do norte; com elas vem alguém vestido de linho e portando material de escrita.\n\n**3.** A glória do Deus de Israel se move do querubim para a entrada do templo e chama o homem de linho.\n\n**4.** O homem de linho deve marcar na testa os que lamentam as práticas detestáveis cometidas em Jerusalém.\n\n**5.** Os demais agentes recebem a ordem de percorrer a cidade em julgamento.\n\n**6.** A ordem inclui pessoas de diferentes idades e começa pelo santuário, mas proíbe atingir os marcados.\n\n**7.** Os agentes são enviados aos pátios e à cidade, e o templo é descrito como profanado pela morte.\n\n**8.** Ezequiel cai com o rosto em terra e pergunta se todo o remanescente de Israel será destruído.\n\n**9.** Deus responde denunciando sangue derramado, injustiça e a crença de que ele não vê.\n\n**10.** O oráculo reafirma que a conduta da cidade terá consequências.\n\n**11.** O homem vestido de linho informa que cumpriu a tarefa recebida.",
+      "body": "Leia Ezequiel 9:1–11 no texto bíblico do aplicativo. As notas são **paráfrases livres autorais**, não tradução oficial.",
       "scriptureRefs": [
         "Ezequiel 9:1-11"
       ],
@@ -86,7 +88,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 9:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma voz convoca os encarregados do julgamento da cidade, cada qual com instrumento de destruição.\n\n**Exegese contextual:** A cena continua a visão iniciada no capítulo 8. Trata-se de um relato visionário de juízo, não de convocação para violência humana.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** Uma voz convoca executores do juízo sobre a cidade.\n\n**Exegese contextual:** A cena visionária personifica o juízo iminente; não é instrução para violência humana.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:1"
       ],
@@ -96,7 +98,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 9:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Seis figuras armadas chegam do norte; com elas vem alguém vestido de linho e portando material de escrita.\n\n**Exegese contextual:** A distinção entre os seis agentes e o homem de linho prepara duas tarefas: marcar e executar o julgamento. A identidade sobrenatural exata dos personagens não é explicitada.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** Seis homens armados e um homem de linho com estojo chegam ao altar.\n\n**Exegese contextual:** O contraste entre armas e instrumento de escrita prepara a distinção entre execução e marcação.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:2"
       ],
@@ -106,7 +108,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 9:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A glória do Deus de Israel se move do querubim para a entrada do templo e chama o homem de linho.\n\n**Exegese contextual:** O movimento da glória introduz o tema de sua saída progressiva, desenvolvido em Ezequiel 10–11; o texto não afirma ainda uma partida completa.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** A glória divina move-se do querubim à entrada do templo.\n\n**Exegese contextual:** A movimentação antecipa a partida progressiva da glória nos capítulos 10–11.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:3"
       ],
@@ -116,7 +118,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 9:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O homem de linho deve marcar na testa os que lamentam as práticas detestáveis cometidas em Jerusalém.\n\n**Exegese contextual:** A marca distingue pessoas que não aprovam a corrupção da cidade. A forma gráfica precisa do sinal não é especificada; associações automáticas a símbolos posteriores são especulativas.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** O homem de linho deve marcar quem lamenta as abominações de Jerusalém.\n\n**Exegese contextual:** O sinal distingue os que rejeitam a corrupção; o texto não descreve o formato exato da marca.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:4"
       ],
@@ -126,7 +128,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 9:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os demais agentes recebem a ordem de percorrer a cidade em julgamento.\n\n**Exegese contextual:** A linguagem severa pertence ao cenário da visão e exige reconhecimento de sua dificuldade ética; não autoriza agressão ou perseguição.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** Os demais recebem ordem de percorrer a cidade em juízo.\n\n**Exegese contextual:** A linguagem severa pertence à visão profética e exige leitura histórica e literária responsável.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:5"
       ],
@@ -136,7 +138,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 9:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A ordem inclui pessoas de diferentes idades e começa pelo santuário, mas proíbe atingir os marcados.\n\n**Exegese contextual:** A extensão do juízo é perturbadora. O início no templo confronta a falsa ideia de que posição religiosa assegura imunidade; não é modelo de ação para líderes.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** O juízo alcança gerações e começa pelo santuário, poupando os marcados.\n\n**Exegese contextual:** A cena denuncia que o prestígio religioso não protege lideranças corruptas; não legitima agressão a inocentes.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:6"
       ],
@@ -146,7 +148,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 9:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os agentes são enviados aos pátios e à cidade, e o templo é descrito como profanado pela morte.\n\n**Exegese contextual:** O contraste com a santidade do santuário dramatiza a profundidade da crise da comunidade.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** A profanação dos pátios mostra a gravidade da crise do templo.\n\n**Exegese contextual:** O local sagrado, já marcado por práticas condenadas no capítulo 8, não impede o julgamento.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:7"
       ],
@@ -156,7 +158,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 9:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ezequiel cai com o rosto em terra e pergunta se todo o remanescente de Israel será destruído.\n\n**Exegese contextual:** A intercessão do profeta é crucial: ele não celebra a violência, mas protesta diante da possibilidade de perda total.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** Ezequiel cai com o rosto em terra e intercede pelo restante de Israel.\n\n**Exegese contextual:** A reação do profeta é lamento diante da destruição, oferecendo modelo de compaixão e não de celebração.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:8"
       ],
@@ -166,7 +168,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 9:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus responde denunciando sangue derramado, injustiça e a crença de que ele não vê.\n\n**Exegese contextual:** A explicação associa o julgamento à violência social e à corrupção, conectando este capítulo à acusação de Ezequiel 8:17.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** Deus denuncia sangue derramado, perversidade e a crença de que ele não vê.\n\n**Exegese contextual:** A resposta fundamenta a acusação em violência e injustiça concretas, além de uma teologia de abandono.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:9"
       ],
@@ -176,7 +178,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 9:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo reafirma que a conduta da cidade terá consequências.\n\n**Exegese contextual:** A linguagem de retribuição não pode ser aplicada mecanicamente para acusar vítimas contemporâneas de desastres ou guerra.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** O juízo é descrito como consequência dos caminhos do povo.\n\n**Exegese contextual:** A fórmula de retribuição pertence ao anúncio histórico sobre Jerusalém, não a um método para diagnosticar tragédias atuais.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:10"
       ],
@@ -186,7 +188,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 9:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O homem vestido de linho informa que cumpriu a tarefa recebida.\n\n**Exegese contextual:** O relato fecha a sequência da marcação e mantém em destaque a distinção entre quem lamenta a injustiça e o ambiente corrompido.\n\n**Cuidado de leitura:** A visão não constitui autorização para atacar pessoas, impor marcas religiosas ou atribuir culpa automática às vítimas de violência.",
+      "body": "**Paráfrase livre autoral:** O homem de linho informa que concluiu a missão.\n\n**Exegese contextual:** O relato fecha a cena de marcação e prepara a continuação da visão no capítulo seguinte.\n\n**Pergunta interpretativa:** Como a cena relaciona responsabilidade comunitária, lamento e a santidade de Deus?",
       "scriptureRefs": [
         "Ezequiel 9:11"
       ],
@@ -226,7 +228,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e éticas",
-      "body": "A ordem dos vv. 5–7, incluindo crianças, é moralmente perturbadora e não deve ser suavizada nem transformada em prescrição. Há leituras distintas sobre a relação entre visão simbólica e calamidade histórica. O próprio profeta se prostra e intercede no v. 8. Nenhuma comunidade atual recebe, por este texto, autoridade para violência contra dissidentes ou pessoas de outras religiões.",
+      "body": "**A marca na testa (v. 4):** sua forma não é explicitada; tradições relacionam-na à letra hebraica *tav*, mas não se deve afirmar uma representação visual certa.\n\n**O homem de linho:** figura visionária associada à marcação; sua identidade exata não é fornecida.\n\n**Juízo e violência (vv. 5–7):** linguagem severa de uma visão profética sobre Jerusalém; não é ordem ética para leitores contemporâneos.\n\n**Começar pelo santuário:** a cena rejeita a ideia de que um local religioso torne seus frequentadores moralmente intocáveis.\n\n**Intercessão (v. 8):** Ezequiel lamenta o sofrimento e pergunta pelo remanescente.",
       "scriptureRefs": [
         "Ezequiel 9:1-11"
       ],
@@ -236,7 +238,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências bíblicas contextualizadas",
-      "body": "**Ezequiel 8:17:** a terra cheia de violência prepara a acusação do v. 9. **Ezequiel 10:18–19:** movimento posterior da glória. **Êxodo 12:7–13:** outro sinal de distinção e proteção, em contexto diferente. **Gênesis 18:23–33:** intercessão diante do juízo, sem identidade entre as narrativas. **Lucas 13:1–5:** Jesus rejeita a conclusão de que vítimas de tragédias sejam mais culpadas.",
+      "body": "**Êxodo 12:21–23:** sinal e preservação em narrativa distinta.\n\n**Ezequiel 8:** corrupção no templo.\n\n**Ezequiel 10–11:** deslocamento da glória divina.\n\n**Jeremias 7:1–15:** crítica à falsa confiança no templo.\n\n**Apocalipse 7:2–4:** imagem posterior de selamento, sem identidade automática entre as cenas.",
       "scriptureRefs": [
         "Ezequiel 9:1-11"
       ],
@@ -246,7 +248,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem forçar a alegoria",
-      "body": "O clamor de Ezequiel pelo remanescente pode dialogar tematicamente com a intercessão e a compaixão presentes no Novo Testamento (Lucas 23:34). A marca do capítulo não deve ser apresentada como prova de uma cruz desenhada nem como previsão direta de práticas cristãs.",
+      "body": "Na leitura cristã, a preocupação com aqueles que pertencem a Deus pode dialogar com a imagem do selo em Apocalipse 7:2–4. A ligação é temática e posterior; Ezequiel 9 trata diretamente da visão do juízo sobre Jerusalém. A intercessão de Ezequiel também pode ser comparada, com as devidas distinções, à compaixão de Jesus por Jerusalém (Lucas 19:41–44).",
       "scriptureRefs": [
         "Ezequiel 9:1-11"
       ],
@@ -266,7 +268,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas",
-      "body": "**1. Quem recebe a marca?** Os que lamentam as práticas condenadas em Jerusalém (v. 4).\n\n**2. Onde começa o juízo?** No santuário (v. 6).\n\n**3. O que faz Ezequiel?** Prostra-se e intercede pelo remanescente (v. 8).\n\n**4. Qual acusação central aparece?** Derramamento de sangue, injustiça e a ideia de que Deus não vê (v. 9).\n\n**5. O que não se pode concluir?** Que o texto autoriza violência religiosa ou que toda vítima de calamidade é culpada.",
+      "body": "**1. Quantos agentes armados são descritos?** Seis (9:2).\n\n**2. O que carrega o homem de linho?** Um estojo de escrivão (9:2).\n\n**3. Quem recebe o sinal?** Quem lamenta as abominações da cidade (9:4).\n\n**4. Onde começa o juízo?** No santuário (9:6).\n\n**5. O que faz Ezequiel?** Prostra-se e intercede pelo remanescente (9:8).",
       "scriptureRefs": [
         "Ezequiel 9:1-11"
       ],
@@ -276,7 +278,7 @@ export const ezekiel9Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — quem lamenta a violência?",
-      "body": "**Tema:** Integridade, juízo e intercessão.\n\n**Proposição:** O relato distingue a indiferença à corrupção do lamento por ela e apresenta um profeta que intercede diante do sofrimento.\n\n**Esboço:** (1) o Deus que vê a cidade (1–4); (2) a gravidade do juízo (5–7); (3) a voz que intercede (8–11).\n\n**Cuidado homilético:** enfrentar explicitamente a dificuldade ética dos vv. 5–7; nunca transformar o texto em legitimação de violência contra crianças, opositores ou pessoas de outras crenças.",
+      "body": "**Tema:** Lamentar o mal em vez de normalizá-lo.\n\n**Proposição:** A verdadeira reverência não se apoia em privilégios religiosos, mas leva a sério a injustiça e responde com compaixão.\n\n**Esboço:** (1) a gravidade da visão (1–3); (2) os que lamentam a corrupção (4); (3) o juízo que alcança o templo (5–7); (4) a intercessão e a denúncia da violência (8–11).\n\n**Cuidados:** jamais apresentar a visão como autorização para ferir pessoas, nem atribuir culpa individual a vítimas de desastres.",
       "scriptureRefs": [
         "Ezequiel 9:1-11"
       ],
