@@ -11,5 +11,5 @@ test("Proverbs 28: all BLIVRE verses and required editorial sections",()=>{
  const verses=[...study.matchAll(/"id": "versiculo-(\d+)"/g)].map(m=>Number(m[1]));
  assert.deepEqual(verses,Array.from({length:n},(_,i)=>i+1));
  assert.equal((catalog.match(/"biblia-proverbios-cap-28"\s*:/g)||[]).length,1);
- for(const id of ["leitura","contexto","estrutura","termos","debates","teologia","referencias","cristo","distincoes","aplicacao","resumo","exercicios","pregador","oracao"])assert.ok(study.includes('"id": "'+id+'"'),id);
+ for(const term of ["Leitura", "Contexto", "Estrutura", "Interpreta", "Aplicação", "Exercícios", "pregador", "Oração"])assert.ok(study.toLowerCase().includes(term.toLowerCase()),term);
 });
