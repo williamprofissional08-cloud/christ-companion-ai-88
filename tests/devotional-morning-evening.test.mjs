@@ -37,6 +37,23 @@ test("duas leituras completas por dia, com seleção noturna estável e sem repe
   }
 });
 
+test("as 14 leituras noturnas atendem ao padrão de conteúdo integral", () => {
+  const themes = new Set();
+  const references = new Set();
+  for (const devotional of EVENING_DEVOTIONALS) {
+    assert.ok(devotional.context.length >= 150, devotional.theme + ": contexto incompleto");
+    assert.ok(devotional.biblicalMeaning.length >= 130, devotional.theme + ": significado incompleto");
+    assert.ok(devotional.reflection.length >= 650, devotional.theme + ": reflexão curta");
+    assert.ok(devotional.reflection.split("\\n\\n").length >= 3, devotional.theme + ": faltam parágrafos");
+    assert.ok(devotional.prayer.length >= 130, devotional.theme + ": oração curta");
+    assert.ok(devotional.readingSuggestion.includes(":"), devotional.theme + ": leitura não indicada");
+    themes.add(devotional.theme);
+    references.add(devotional.verse.reference);
+  }
+  assert.equal(themes.size, 14);
+  assert.equal(references.size, 14);
+});
+
 test("datas inválidas não selecionam conteúdo", () => {
   for (const invalid of ["2026-02-30", "abc", "2026-13-01", ""]) {
     assert.throws(() => getEveningDevotional(invalid));
