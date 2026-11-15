@@ -7,6 +7,7 @@ import { malaquias1Study } from "./malaquias-1-study";
 import { zacarias14Study } from "./zacarias-14-study";
 import { zacarias13Study } from "./zacarias-13-study";
 import { zacarias12Study } from "./zacarias-12-study";
+import { secondPeter3Study } from "./second-peter-3-study";
 import { firstJohn1Study } from "./first-john-1-study";
 import { firstJohn2Study } from "./first-john-2-study";
 import { firstJohn3Study } from "./first-john-3-study";
@@ -1933,4 +1934,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-1-joao-cap-3": firstJohn3Study,
   "biblia-1-joao-cap-2": firstJohn2Study,
   "biblia-1-joao-cap-1": firstJohn1Study,
+  "biblia-2-pedro-cap-3": secondPeter3Study,
 };
