@@ -15,7 +15,9 @@ import { BIBLE_BOOKS, parseBibleReference } from "@/lib/bible-catalog";
 export const Route = createFileRoute("/_authenticated/devocional")({
   validateSearch: (search: Record<string, unknown>): { periodo?: "manha" | "noite" } => {
     const raw = search["periodo"];
-    return { periodo: raw === "manha" ? "manha" : raw === "noite" ? "noite" : undefined };
+    if (raw === "manha") return { periodo: "manha" };
+    if (raw === "noite") return { periodo: "noite" };
+    return {};
   },
   head: () => ({
     meta: [
