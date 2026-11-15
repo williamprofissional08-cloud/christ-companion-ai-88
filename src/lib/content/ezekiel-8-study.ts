@@ -1,51 +1,53 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 8 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 8 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel8Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 8 apresenta uma visão do templo em Jerusalém, expondo cultos rivais e violência social no contexto da infidelidade à aliança.",
-  "historicalContext": "Visão datada do sexto ano do exílio de Joaquim, por volta de 592/591 a.C., quando Ezequiel vive entre os deportados na Babilônia.",
+  "intro": "Ezequiel 8 abre a visão dos capítulos 8–11: enquanto anciãos estão reunidos na casa do profeta, ele é levado em visão ao templo de Jerusalém. Quatro cenas revelam práticas idólatras e violência, mostrando por que a cidade enfrenta juízo.",
+  "historicalContext": "O profeta está entre os exilados na Babilônia, no sexto ano do exílio de Joaquim, antes da destruição do templo em 586 a.C. O texto retrata em visão a corrupção do santuário de Jerusalém, com imagens, incenso, lamento por Tamuz e adoração ao sol. A associação precisa de alguns ritos e objetos é discutida.",
   "keyPoints": [
     {
-      "title": "Glória e rivalidade",
-      "text": "A glória divina contrasta com a imagem do ciúme (1–6)."
+      "title": "1–6: Imagem junto ao altar",
+      "text": "A glória divina contrasta com um objeto de culto rival na entrada norte."
     },
     {
-      "title": "Práticas escondidas",
-      "text": "Os anciãos oferecem incenso diante de imagens (7–13)."
+      "title": "7–13: Culto secreto dos anciãos",
+      "text": "Representantes da liderança oferecem incenso a imagens e alegam que Deus não vê."
     },
     {
-      "title": "Outros cultos",
-      "text": "A visão inclui lamento por Tamuz e adoração ao sol (14–16)."
+      "title": "14–15: Lamento por Tamuz",
+      "text": "Um rito ligado a outra divindade é observado junto ao templo."
     },
     {
-      "title": "Violência e juízo",
-      "text": "A denúncia culmina na violência que enche a terra (17–18)."
+      "title": "16–18: Adoração ao sol e violência",
+      "text": "A última cena une desvio cultual, injustiça e anúncio de julgamento."
     }
   ],
-  "application": "Buscar coerência entre culto, justiça e conduta privada, rejeitando violência e acusações religiosas irresponsáveis.",
+  "application": "Examinar se práticas religiosas encobrem injustiça, abuso de poder ou falta de integridade. Não presumir que posição de liderança garante fidelidade. Combater violência e manipulação com responsabilidade, sem transformar a denúncia profética em perseguição a pessoas de outras crenças.",
   "crossReferences": [
-    "Êxodo 20:3-5",
-    "Deuteronômio 4:19",
-    "2 Reis 23:4-11",
-    "Jeremias 7:9-11",
-    "Ezequiel 10:1-22",
-    "Mateus 23:23-28"
+    "Êxodo 20:3-6",
+    "Deuteronômio 4:15-19",
+    "1 Reis 8:10-11",
+    "2 Reis 23:4-12",
+    "Jeremias 7:1-15",
+    "Ezequiel 9:1-11",
+    "Ezequiel 11:22-23"
   ],
   "questions": [
-    "Qual é o contexto da visão?",
-    "Por que os anciãos dizem que Deus não vê?",
-    "O que se sabe sobre Tamuz?",
-    "Por que a violência social aparece no clímax?"
+    "Em que situação Ezequiel recebe a visão?",
+    "Qual é o contraste entre a glória divina e a imagem do ciúme?",
+    "Por que os anciãos pensam que seus atos estão ocultos?",
+    "Que limites existem para reconstruir o rito de Tamuz?",
+    "Como o versículo 17 relaciona culto e violência?"
   ],
-  "conclusion": "A visão confronta a confiança no templo como aparência de fidelidade enquanto práticas cultuais e violência contradizem a aliança.",
+  "conclusion": "A visão de Ezequiel 8 denuncia a corrupção religiosa e a violência por trás de uma aparência de normalidade. O capítulo exige discernimento e responsabilidade, não especulação sobre ritos antigos nem hostilidade contra pessoas.",
   "prayer": "Senhor, faz-nos íntegros na adoração e na prática da justiça. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 8:1–18 (paráfrase livre)",
-      "body": "**Paráfrase livre autoral para estudo, baseada no acervo BLIVRE; não substitui tradução bíblica oficial.**\n\n**1.** A visão é datada no sexto ano, sexto mês e quinto dia, enquanto os anciãos visitam Ezequiel.\n\n**2.** Uma figura resplandecente aparece com imagens de fogo e brilho.\n\n**3.** Uma mão toma Ezequiel pelos cabelos, e o Espírito o conduz em visão à entrada norte do templo.\n\n**4.** A glória do Deus de Israel está presente, como na visão anterior.\n\n**5.** O profeta olha para o norte e identifica a imagem junto à entrada do altar.\n\n**6.** Deus denuncia práticas que afastam sua presença do santuário e anuncia outras cenas.\n\n**7.** Ezequiel é levado a uma porta do pátio e vê um buraco na parede.\n\n**8.** O profeta cava a parede e encontra uma entrada.\n\n**9.** A ordem é entrar e observar práticas condenadas.\n\n**10.** As paredes exibem figuras de animais e ídolos.\n\n**11.** Setenta anciãos, entre eles Jaazanias filho de Safã, oferecem incenso.\n\n**12.** Os anciãos afirmam que o Senhor não os vê e abandonou a terra.\n\n**13.** A voz anuncia que outras práticas ainda serão mostradas.\n\n**14.** Na entrada norte do templo, mulheres choram por Tamuz.\n\n**15.** O profeta é novamente advertido de que verá práticas consideradas ainda mais graves.\n\n**16.** Cerca de vinte e cinco homens voltam as costas ao templo e se prostram em direção ao sol nascente.\n\n**17.** Deus vincula os cultos condenados à violência que enche a terra.\n\n**18.** O oráculo encerra com anúncio severo de juízo, apesar dos clamores.",
+      "body": "Leia Ezequiel 8:1–18 no texto bíblico do aplicativo. As explicações usam **paráfrases livres autorais**, não uma tradução oficial.",
       "scriptureRefs": [
         "Ezequiel 8:1-18"
       ],
@@ -87,7 +89,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 8:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A visão é datada no sexto ano, sexto mês e quinto dia, enquanto os anciãos visitam Ezequiel.\n\n**Exegese contextual:** A data situa a experiência cerca de um ano após a visão inaugural, no período do exílio; a presença dos anciãos mostra o profeta exercendo seu ministério entre deportados.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** No sexto ano do exílio, anciãos de Judá visitam Ezequiel quando a mão do Senhor vem sobre ele.\n\n**Exegese contextual:** A data e a presença dos anciãos situam a visão em um encontro profético concreto entre deportados.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:1"
       ],
@@ -97,7 +99,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 8:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma figura resplandecente aparece com imagens de fogo e brilho.\n\n**Exegese contextual:** A linguagem de semelhança e aparência protege o mistério da visão: o narrador descreve o que vê sem reduzir Deus a um corpo humano.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Ezequiel vê uma figura luminosa, semelhante a fogo e âmbar.\n\n**Exegese contextual:** A descrição usa comparações para expressar uma manifestação divina que ultrapassa a percepção comum.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:2"
       ],
@@ -107,7 +109,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 8:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma mão toma Ezequiel pelos cabelos, e o Espírito o conduz em visão à entrada norte do templo.\n\n**Exegese contextual:** A narrativa especifica 'em visões de Deus'; não exige concluir que o corpo físico do profeta foi transportado. A imagem do ciúme é um objeto cultual rival.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Uma mão o ergue em visão até a entrada norte do templo, junto à imagem que provoca ciúme.\n\n**Exegese contextual:** O deslocamento é explicitamente visionário; a imagem representa culto rival no espaço consagrado ao Senhor.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:3"
       ],
@@ -117,7 +119,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 8:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A glória do Deus de Israel está presente, como na visão anterior.\n\n**Exegese contextual:** A presença da glória contrasta com os cultos denunciados; o templo não é apresentado como lugar fora do alcance do conhecimento divino.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** A glória do Deus de Israel permanece visível no local.\n\n**Exegese contextual:** A presença divina contrasta com a idolatria instalada no santuário, preparando o julgamento posterior.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:4"
       ],
@@ -127,7 +129,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 8:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta olha para o norte e identifica a imagem junto à entrada do altar.\n\n**Exegese contextual:** A localização acentua a afronta ao culto do Senhor. A identidade material precisa do ídolo não é informada.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** O profeta olha ao norte e vê a imagem junto à porta do altar.\n\n**Exegese contextual:** A localização acentua a gravidade de introduzir um objeto de culto rival no acesso ao templo.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:5"
       ],
@@ -137,7 +139,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 8:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus denuncia práticas que afastam sua presença do santuário e anuncia outras cenas.\n\n**Exegese contextual:** O contraste entre presença e profanação prepara a progressão dramática; a saída da glória será narrada adiante, não deve ser antecipada como já concluída.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Deus denuncia práticas que profanam o santuário e anuncia outras cenas ainda piores.\n\n**Exegese contextual:** A repetição de 'abominações' organiza uma progressão de revelações sobre a corrupção do culto.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:6"
       ],
@@ -147,7 +149,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 8:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ezequiel é levado a uma porta do pátio e vê um buraco na parede.\n\n**Exegese contextual:** O pequeno acesso funciona como dispositivo narrativo que conduz do espaço público a uma prática escondida.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Ezequiel vê um buraco na parede do pátio.\n\n**Exegese contextual:** A abertura discreta introduz práticas ocultas que não são imediatamente visíveis ao público.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:7"
       ],
@@ -157,7 +159,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 8:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta cava a parede e encontra uma entrada.\n\n**Exegese contextual:** A ação dramatiza a revelação do que estava oculto, sem legitimar invasão de privacidade ou espionagem religiosa hoje.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** O profeta cava a parede e encontra uma porta.\n\n**Exegese contextual:** O gesto de investigação torna explícito o contraste entre aparência externa e ações escondidas.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:8"
       ],
@@ -167,7 +169,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 8:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A ordem é entrar e observar práticas condenadas.\n\n**Exegese contextual:** O profeta age dentro da visão e de seu chamado específico; não é autorização para perseguir pessoas de outras crenças.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Deus ordena que entre e observe o que ali se pratica.\n\n**Exegese contextual:** O testemunho visual fundamenta a acusação, em vez de depender de boatos.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:9"
       ],
@@ -177,7 +179,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 8:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As paredes exibem figuras de animais e ídolos.\n\n**Exegese contextual:** A enumeração aponta para representações cultuais reprovadas na narrativa; não é condenação de toda arte com animais.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Nas paredes há imagens de animais e ídolos.\n\n**Exegese contextual:** A decoração cultual revela práticas incompatíveis com a adoração exclusiva exigida pela aliança.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:10"
       ],
@@ -187,7 +189,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 8:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Setenta anciãos, entre eles Jaazanias filho de Safã, oferecem incenso.\n\n**Exegese contextual:** O número e o nome situam a crítica entre lideranças. Não se deve confundir automaticamente este Jaazanias com outros personagens de nome semelhante.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Setenta anciãos, incluindo Jazanias filho de Safã, oferecem incenso diante das imagens.\n\n**Exegese contextual:** O número e o nome destacam a participação de representantes da liderança, não apenas indivíduos marginais.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:11"
       ],
@@ -197,7 +199,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 8:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os anciãos afirmam que o Senhor não os vê e abandonou a terra.\n\n**Exegese contextual:** A crença de ausência divina serve como justificativa para práticas ocultas; o próprio ato de revelar a cena contesta essa afirmação.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Os anciãos dizem que Deus não os vê e abandonou a terra.\n\n**Exegese contextual:** A teologia da ausência divina é usada para justificar atos secretos, embora a própria visão os exponha.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:12"
       ],
@@ -207,7 +209,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 8:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A voz anuncia que outras práticas ainda serão mostradas.\n\n**Exegese contextual:** A repetição constrói uma escalada literária e conduz o leitor à cena seguinte.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Deus anuncia que Ezequiel verá práticas ainda mais graves.\n\n**Exegese contextual:** A frase marca a transição para outro cenário do templo.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:13"
       ],
@@ -217,7 +219,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 8:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Na entrada norte do templo, mulheres choram por Tamuz.\n\n**Exegese contextual:** Tamuz é associado a um culto mesopotâmico; detalhes específicos do ritual são discutidos. O texto critica a prática no contexto do templo, não o ato de mulheres chorarem.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Mulheres estão à porta norte chorando por Tamuz.\n\n**Exegese contextual:** O lamento provavelmente se relaciona a um rito de fertilidade e morte associado a uma divindade mesopotâmica; detalhes do ritual são debatidos.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:14"
       ],
@@ -227,7 +229,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 8:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta é novamente advertido de que verá práticas consideradas ainda mais graves.\n\n**Exegese contextual:** A fórmula prepara o ápice da sequência no pátio interno.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** O profeta é avisado de que verá algo ainda mais grave.\n\n**Exegese contextual:** A progressão intensifica a denúncia do afastamento do culto ao Senhor.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:15"
       ],
@@ -237,7 +239,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 8:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Cerca de vinte e cinco homens voltam as costas ao templo e se prostram em direção ao sol nascente.\n\n**Exegese contextual:** A orientação corporal dramatiza a inversão de lealdade religiosa. A identidade exata do grupo é debatida; o texto não declara expressamente que sejam todos sacerdotes.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Cerca de vinte e cinco homens, entre pórtico e altar, se curvam para o sol.\n\n**Exegese contextual:** Estar de costas para o templo e de frente para o oriente simboliza a inversão da orientação religiosa esperada naquele espaço.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:16"
       ],
@@ -247,7 +249,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 8:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus vincula os cultos condenados à violência que enche a terra.\n\n**Exegese contextual:** O verso impede reduzir a denúncia à ritualidade: injustiça e violência social fazem parte do problema. O gesto do ramo ao nariz é de sentido incerto.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** A denúncia associa práticas cultuais à violência que enche a terra.\n\n**Exegese contextual:** O capítulo não separa idolatria de injustiça social; a expressão do ramo junto ao nariz tem interpretação incerta.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:17"
       ],
@@ -257,7 +259,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 8:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo encerra com anúncio severo de juízo, apesar dos clamores.\n\n**Exegese contextual:** A linguagem de ira pertence ao anúncio profético histórico e não autoriza líderes atuais a negar escuta, proteção ou misericórdia a pessoas em sofrimento.\n\n**Pergunta de observação:** Como este detalhe contribui para o contraste entre a glória do Senhor e as práticas do templo?",
+      "body": "**Paráfrase livre autoral:** Deus anuncia julgamento e recusa ouvir gritos tardios.\n\n**Exegese contextual:** A linguagem severa conclui a visão de denúncia e prepara Ezequiel 9; não autoriza violência religiosa hoje.\n\n**Pergunta interpretativa:** Como esta cena denuncia a distância entre aparência religiosa, fidelidade e justiça?",
       "scriptureRefs": [
         "Ezequiel 8:18"
       ],
@@ -277,7 +279,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "O transporte de Ezequiel é explicitamente apresentado como visão; não é prova de deslocamento físico. O grupo de setenta anciãos pode representar a liderança coletiva, sem exigir que o número seja apenas simbólico. A identidade dos vinte e cinco homens do v. 16 é discutida. A crítica a mulheres que choram por Tamuz não é crítica a mulheres nem ao luto em geral.",
+      "body": "**Imagem do ciúme (vv. 3–5):** o texto não identifica com certeza qual imagem estava ali; propostas históricas devem ser apresentadas como hipóteses.\n\n**Setenta anciãos (v. 11):** o número pode sugerir representação ampla da liderança, sem provar a identidade de todos.\n\n**Tamuz (v. 14):** geralmente relacionado à divindade mesopotâmica Dumuzi/Tamuz; detalhes do rito de lamento não são totalmente conhecidos.\n\n**Vinte e cinco homens (v. 16):** a localização junto ao templo é clara, mas sua função institucional exata é debatida.\n\n**Ramo ao nariz (v. 17):** expressão textual difícil, com interpretações variadas; evitar conclusões categóricas.\n\n**Juízo (v. 18):** linguagem de oráculo histórico, nunca permissão para violência contemporânea.",
       "scriptureRefs": [
         "Ezequiel 8:1-18"
       ],
@@ -287,7 +289,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas explicadas",
-      "body": "**Êxodo 20:3–5:** exclusividade da adoração ao Senhor na aliança. **Deuteronômio 4:19:** advertência contra adorar os astros. **2 Reis 23:4–11:** reformas contra cultos associados a outros deuses e ao sol. **Jeremias 7:9–11:** crítica à confiança no templo enquanto se pratica injustiça. **Ezequiel 10–11:** continuação da visão da glória.",
+      "body": "**Êxodo 20:3–6:** proibição de culto a outros deuses e imagens.\n\n**Deuteronômio 4:15–19:** advertência contra adoração dos astros.\n\n**1 Reis 8:10–11:** glória divina no templo.\n\n**2 Reis 23:4–12:** reformas contra práticas idólatras no santuário.\n\n**Jeremias 7:1–15:** crítica à falsa segurança no templo.\n\n**Ezequiel 9–11:** julgamento e deslocamento da glória.",
       "scriptureRefs": [
         "Ezequiel 8:1-18"
       ],
@@ -297,7 +299,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo — culto e justiça",
-      "body": "Jesus denuncia práticas religiosas que ocultam injustiça (Mateus 23:23–28), oferecendo uma conexão temática com a crítica de Ezequiel. Isso não transforma Ezequiel 8 em profecia direta sobre Jesus nem autoriza equiparar divergências litúrgicas atuais à idolatria denunciada na visão.",
+      "body": "Na leitura cristã, a crítica à religião exterior sem integridade dialoga com Mateus 23:23–28, onde Jesus denuncia a incoerência entre aparência e justiça. Trata-se de uma aproximação temática posterior, sem apagar a denúncia histórica de Ezequiel sobre Jerusalém.",
       "scriptureRefs": [
         "Ezequiel 8:1-18"
       ],
@@ -317,7 +319,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Onde Ezequiel está quando a visão começa?** Em sua casa, diante de anciãos (v. 1).\n\n**2. Como ele chega a Jerusalém?** Em visões de Deus (v. 3).\n\n**3. Que grupo oferece incenso?** Setenta anciãos (v. 11).\n\n**4. Qual culto aparece no v. 14?** Lamento por Tamuz.\n\n**5. Que questão social acompanha a denúncia?** A terra cheia de violência (v. 17).",
+      "body": "**1. Quem estava na casa de Ezequiel?** Anciãos de Judá (8:1).\n\n**2. Onde estava a imagem do ciúme?** Junto à entrada norte do templo (8:3–5).\n\n**3. O que faziam os setenta anciãos?** Ofereciam incenso diante de imagens (8:10–12).\n\n**4. Por quem as mulheres choravam?** Tamuz (8:14).\n\n**5. Qual problema social aparece junto às práticas religiosas?** Violência na terra (8:17).",
       "scriptureRefs": [
         "Ezequiel 8:1-18"
       ],
@@ -327,7 +329,7 @@ export const ezekiel8Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — quando o culto esconde violência",
-      "body": "**Tema:** A integridade que Deus requer.\n\n**Proposição:** A visão denuncia a incoerência entre culto e lealdade ao Senhor, revelando que violência e falsa adoração caminham juntas.\n\n**Esboço:** (1) a glória diante do ídolo (1–6); (2) a religião nas sombras (7–13); (3) os cultos rivais e a violência social (14–18).\n\n**Cuidado homilético:** não usar o texto para incitar hostilidade a outras religiões nem para atacar mulheres por expressarem luto.",
+      "body": "**Tema:** Quando a aparência religiosa esconde injustiça.\n\n**Proposição:** A fidelidade exige coerência entre culto, integridade e responsabilidade social.\n\n**Esboço:** (1) a imagem junto ao altar (1–6); (2) a idolatria secreta da liderança (7–13); (3) o rito de Tamuz (14–15); (4) adoração ao sol e violência (16–18).\n\n**Cuidados:** não tratar hipóteses históricas como certezas; não usar a passagem para atacar mulheres, religiões contemporâneas ou vítimas de violência.",
       "scriptureRefs": [
         "Ezequiel 8:1-18"
       ],
