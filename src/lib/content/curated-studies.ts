@@ -1,3 +1,4 @@
+import { amos6Study } from "./amos-6-study";
 import { amos5Study } from "./amos-5-study";
 import { amos4Study } from "./amos-4-study";
 import { amos3Study } from "./amos-3-study";
@@ -1123,6 +1124,7 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-amos-cap-3": amos3Study,
   "biblia-amos-cap-4": amos4Study,
   "biblia-amos-cap-5": amos5Study,
+  "biblia-amos-cap-6": amos6Study,
   "biblia-marcos-cap-4": mark4Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
