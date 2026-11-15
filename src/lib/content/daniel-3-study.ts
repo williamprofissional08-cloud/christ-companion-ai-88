@@ -1,10 +1,10 @@
 import type { StudyContent } from "../types";
 
-/** Daniel 3 — guia preliminar; revisão editorial e exegese específica pendentes. */
+/** Daniel 3 — revisão lexical preliminar, não estudo editorialmente concluído. */
 export const daniel3Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Guia preliminar de Daniel 3.",
+  "intro": "Estudo em revisão de Daniel 3.",
   "historicalContext": "Contexto das cortes imperiais e literatura apocalíptica.",
   "keyPoints": [
     {
@@ -35,7 +35,7 @@ export const daniel3Study: StudyContent = {
     "Como o tema fornalha e livramento se desenvolve em 19–27?",
     "Como o tema reconhecimento real se desenvolve em 28–30?"
   ],
-  "conclusion": "Guia inicial sujeito a revisão exegética detalhada.",
+  "conclusion": "O capítulo tem roteiro estrutural, notas de observação textual e aplicações preliminares; a exegese aprofundada e a revisão humana permanecem pendentes.",
   "prayer": "Senhor, dá-nos entendimento. Amém.",
   "sections": [
     {
@@ -51,7 +51,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "introducao",
       "title": "Introdução",
-      "body": "Daniel 3 aborda imagem e adoração imposta, recusa dos três jovens, fornalha e livramento, reconhecimento real. O contexto e as divisões ajudam a orientar a leitura.",
+      "body": "Daniel 3 aborda imagem e adoração imposta, recusa dos três jovens, fornalha e livramento, reconhecimento real. O contexto e as divisões ajudam a orientar a leitura.\n\n**Estado editorial:** leitura orientada e análise lexical inicial; ainda não equivale a uma exposição aprofundada, versículo por versículo, aprovada.",
       "scriptureRefs": [
         "Daniel 3:1-30"
       ],
@@ -121,7 +121,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Daniel 3:1 — roteiro de leitura",
-      "body": "**Tema da unidade:** Imagem e adoração imposta.\n\n**Pergunta contextual:** Qual detalhe do versículo 1 contribui para a sequência dos versículos 1–7? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:1:** Este versículo integra o movimento **imagem e adoração imposta**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor, estátua, altura, sessenta, côvados**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 1 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **imagem e adoração imposta**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:1"
       ],
@@ -131,7 +131,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Daniel 3:2 — roteiro de leitura",
-      "body": "**Tema da unidade:** Imagem e adoração imposta.\n\n**Pergunta contextual:** Qual detalhe do versículo 2 contribui para a sequência dos versículos 1–7? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:2:** Este versículo integra o movimento **imagem e adoração imposta**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor, mandou, juntar, sátrapas, prefeitos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 2 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **imagem e adoração imposta**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:2"
       ],
@@ -141,7 +141,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Daniel 3:3 — roteiro de leitura",
-      "body": "**Tema da unidade:** Imagem e adoração imposta.\n\n**Pergunta contextual:** Qual detalhe do versículo 3 contribui para a sequência dos versículos 1–7? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:3:** Este versículo integra o movimento **imagem e adoração imposta**. Observe especialmente os termos e imagens presentes no texto bíblico: **reuniram, sátrapas, prefeitos, governadores, juízes**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 3 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **reuniram** neste verso e como ela contribui para o desenvolvimento de **imagem e adoração imposta**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:3"
       ],
@@ -151,7 +151,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Daniel 3:4 — roteiro de leitura",
-      "body": "**Tema da unidade:** Imagem e adoração imposta.\n\n**Pergunta contextual:** Qual detalhe do versículo 4 contribui para a sequência dos versículos 1–7? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:4:** Este versículo integra o movimento **imagem e adoração imposta**. Observe especialmente os termos e imagens presentes no texto bíblico: **arauto, proclamava, Manda, povos, nações**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 4 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **arauto** neste verso e como ela contribui para o desenvolvimento de **imagem e adoração imposta**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:4"
       ],
@@ -161,7 +161,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Daniel 3:5 — roteiro de leitura",
-      "body": "**Tema da unidade:** Imagem e adoração imposta.\n\n**Pergunta contextual:** Qual detalhe do versículo 5 contribui para a sequência dos versículos 1–7? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:5:** Este versículo integra o movimento **imagem e adoração imposta**. Observe especialmente os termos e imagens presentes no texto bíblico: **ouvirdes, trombeta, pífano, cítara, harpa**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 5 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **ouvirdes** neste verso e como ela contribui para o desenvolvimento de **imagem e adoração imposta**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:5"
       ],
@@ -171,7 +171,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Daniel 3:6 — roteiro de leitura",
-      "body": "**Tema da unidade:** Imagem e adoração imposta.\n\n**Pergunta contextual:** Qual detalhe do versículo 6 contribui para a sequência dos versículos 1–7? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:6:** Este versículo integra o movimento **imagem e adoração imposta**. Observe especialmente os termos e imagens presentes no texto bíblico: **qualquer, prostrar, adorar, mesma, lançado**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 6 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **qualquer** neste verso e como ela contribui para o desenvolvimento de **imagem e adoração imposta**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:6"
       ],
@@ -181,7 +181,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Daniel 3:7 — roteiro de leitura",
-      "body": "**Tema da unidade:** Imagem e adoração imposta.\n\n**Pergunta contextual:** Qual detalhe do versículo 7 contribui para a sequência dos versículos 1–7? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:7:** Este versículo integra o movimento **imagem e adoração imposta**. Observe especialmente os termos e imagens presentes no texto bíblico: **mesmo, instante, povos, ouviram, trombeta**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 7 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **mesmo** neste verso e como ela contribui para o desenvolvimento de **imagem e adoração imposta**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:7"
       ],
@@ -191,7 +191,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Daniel 3:8 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 8 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:8:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **mesmo, instante, alguns, homens, caldeus**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 8 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **mesmo** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:8"
       ],
@@ -201,7 +201,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Daniel 3:9 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 9 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:9:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **falaram, Nabucodonosor, sempre**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 9 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **falaram** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:9"
       ],
@@ -211,7 +211,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Daniel 3:10 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 10 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:10:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **fizeste, decreto, ouvisse, trombeta, pífano**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 10 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **fizeste** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:10"
       ],
@@ -221,7 +221,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Daniel 3:11 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 11 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:11:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **qualquer, prostrasse, adorasse, fosse, lançado**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 11 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **qualquer** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:11"
       ],
@@ -231,7 +231,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Daniel 3:12 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 12 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:12:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **homens, judeus, quais, constituíste, negócios**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 12 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **homens** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:12"
       ],
@@ -241,7 +241,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Daniel 3:13 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 13 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:13:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor, furor, mandou, trazer, Sadraque**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 13 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:13"
       ],
@@ -251,7 +251,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Daniel 3:14 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 14 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:14:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor, verdade, Sadraque, Mesaque, Abednego**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 14 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:14"
       ],
@@ -261,7 +261,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Daniel 3:15 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 15 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:15:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **Agora, estais, prontos, ouvirdes, trombeta**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 15 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Agora** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:15"
       ],
@@ -271,7 +271,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Daniel 3:16 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 16 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:16:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **Sadraque, Mesaque, Abednego, responderam, Nabucodonosor**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 16 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Sadraque** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:16"
       ],
@@ -281,7 +281,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Daniel 3:17 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 17 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:17:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **nosso, servimos, livrar, fornalha, ardente**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 17 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **nosso** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:17"
       ],
@@ -291,7 +291,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Daniel 3:18 — roteiro de leitura",
-      "body": "**Tema da unidade:** Recusa dos três jovens.\n\n**Pergunta contextual:** Qual detalhe do versículo 18 contribui para a sequência dos versículos 8–18? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:18:** Este versículo integra o movimento **recusa dos três jovens**. Observe especialmente os termos e imagens presentes no texto bíblico: **serviremos, deuses, adoraremos, estátua, ergueste**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 18 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **serviremos** neste verso e como ela contribui para o desenvolvimento de **recusa dos três jovens**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:18"
       ],
@@ -301,7 +301,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Daniel 3:19 — roteiro de leitura",
-      "body": "**Tema da unidade:** Fornalha e livramento.\n\n**Pergunta contextual:** Qual detalhe do versículo 19 contribui para a sequência dos versículos 19–27? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:19:** Este versículo integra o movimento **fornalha e livramento**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor, encheu, furor, aspecto, rosto**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 19 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **fornalha e livramento**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:19"
       ],
@@ -311,7 +311,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Daniel 3:20 — roteiro de leitura",
-      "body": "**Tema da unidade:** Fornalha e livramento.\n\n**Pergunta contextual:** Qual detalhe do versículo 20 contribui para a sequência dos versículos 19–27? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:20:** Este versículo integra o movimento **fornalha e livramento**. Observe especialmente os termos e imagens presentes no texto bíblico: **mandou, homens, fortes, exército, atassem**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 20 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **mandou** neste verso e como ela contribui para o desenvolvimento de **fornalha e livramento**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:20"
       ],
@@ -321,7 +321,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Daniel 3:21 — roteiro de leitura",
-      "body": "**Tema da unidade:** Fornalha e livramento.\n\n**Pergunta contextual:** Qual detalhe do versículo 21 contribui para a sequência dos versículos 19–27? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:21:** Este versículo integra o movimento **fornalha e livramento**. Observe especialmente os termos e imagens presentes no texto bíblico: **homens, atados, capas, calças, turbantes**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 21 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **homens** neste verso e como ela contribui para o desenvolvimento de **fornalha e livramento**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:21"
       ],
@@ -331,7 +331,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Daniel 3:22 — roteiro de leitura",
-      "body": "**Tema da unidade:** Fornalha e livramento.\n\n**Pergunta contextual:** Qual detalhe do versículo 22 contribui para a sequência dos versículos 19–27? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:22:** Este versículo integra o movimento **fornalha e livramento**. Observe especialmente os termos e imagens presentes no texto bíblico: **visto, palavra, urgente, fornalha, muitíssimo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 22 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **visto** neste verso e como ela contribui para o desenvolvimento de **fornalha e livramento**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:22"
       ],
@@ -341,7 +341,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Daniel 3:23 — roteiro de leitura",
-      "body": "**Tema da unidade:** Fornalha e livramento.\n\n**Pergunta contextual:** Qual detalhe do versículo 23 contribui para a sequência dos versículos 19–27? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:23:** Este versículo integra o movimento **fornalha e livramento**. Observe especialmente os termos e imagens presentes no texto bíblico: **homens, Sadraque, Mesaque, Abednego, caíram**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 23 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **homens** neste verso e como ela contribui para o desenvolvimento de **fornalha e livramento**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:23"
       ],
@@ -351,7 +351,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Daniel 3:24 — roteiro de leitura",
-      "body": "**Tema da unidade:** Fornalha e livramento.\n\n**Pergunta contextual:** Qual detalhe do versículo 24 contribui para a sequência dos versículos 19–27? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:24:** Este versículo integra o movimento **fornalha e livramento**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor, espantou, levantou, depressa, perguntou**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 24 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **fornalha e livramento**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:24"
       ],
@@ -361,7 +361,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Daniel 3:25 — roteiro de leitura",
-      "body": "**Tema da unidade:** Fornalha e livramento.\n\n**Pergunta contextual:** Qual detalhe do versículo 25 contribui para a sequência dos versículos 19–27? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:25:** Este versículo integra o movimento **fornalha e livramento**. Observe especialmente os termos e imagens presentes no texto bíblico: **quatro, homens, soltos, andando, neles**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 25 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **quatro** neste verso e como ela contribui para o desenvolvimento de **fornalha e livramento**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:25"
       ],
@@ -371,7 +371,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Daniel 3:26 — roteiro de leitura",
-      "body": "**Tema da unidade:** Fornalha e livramento.\n\n**Pergunta contextual:** Qual detalhe do versículo 26 contribui para a sequência dos versículos 19–27? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:26:** Este versículo integra o movimento **fornalha e livramento**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor, aproximou, porta, fornalha, ardente**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 26 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **fornalha e livramento**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:26"
       ],
@@ -381,7 +381,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Daniel 3:27 — roteiro de leitura",
-      "body": "**Tema da unidade:** Fornalha e livramento.\n\n**Pergunta contextual:** Qual detalhe do versículo 27 contribui para a sequência dos versículos 19–27? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:27:** Este versículo integra o movimento **fornalha e livramento**. Observe especialmente os termos e imagens presentes no texto bíblico: **juntaram, sátrapas, prefeitos, governadores, conselheiros**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 27 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **juntaram** neste verso e como ela contribui para o desenvolvimento de **fornalha e livramento**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:27"
       ],
@@ -391,7 +391,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Daniel 3:28 — roteiro de leitura",
-      "body": "**Tema da unidade:** Reconhecimento real.\n\n**Pergunta contextual:** Qual detalhe do versículo 28 contribui para a sequência dos versículos 28–30? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:28:** Este versículo integra o movimento **reconhecimento real**. Observe especialmente os termos e imagens presentes no texto bíblico: **Nabucodonosor, falou, Bendito, Sadraque, Mesaque**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 28 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Nabucodonosor** neste verso e como ela contribui para o desenvolvimento de **reconhecimento real**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:28"
       ],
@@ -401,7 +401,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Daniel 3:29 — roteiro de leitura",
-      "body": "**Tema da unidade:** Reconhecimento real.\n\n**Pergunta contextual:** Qual detalhe do versículo 29 contribui para a sequência dos versículos 28–30? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:29:** Este versículo integra o movimento **reconhecimento real**. Observe especialmente os termos e imagens presentes no texto bíblico: **Portanto, decreto, nação, língua, disser**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 29 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Portanto** neste verso e como ela contribui para o desenvolvimento de **reconhecimento real**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:29"
       ],
@@ -411,7 +411,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Daniel 3:30 — roteiro de leitura",
-      "body": "**Tema da unidade:** Reconhecimento real.\n\n**Pergunta contextual:** Qual detalhe do versículo 30 contribui para a sequência dos versículos 28–30? Compare o texto integral no aplicativo.\n\n**Nota editorial:** comentário exegético específico deste verso ainda precisa de aprofundamento.",
+      "body": "**Leitura orientada de Daniel 3:30:** Este versículo integra o movimento **reconhecimento real**. Observe especialmente os termos e imagens presentes no texto bíblico: **Sadraque, Mesaque, Abednego, fossem, prósperos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 30 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Sadraque** neste verso e como ela contribui para o desenvolvimento de **reconhecimento real**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Daniel 3:30"
       ],
@@ -421,7 +421,7 @@ export const daniel3Study: StudyContent = {
     {
       "id": "termos",
       "title": "Termos e imagens",
-      "body": "Distinguir símbolos, nomes antigos, unidades de medida e expressões religiosas segundo o gênero do capítulo.",
+      "body": "Distinguir símbolos, nomes antigos, unidades de medida e expressões religiosas segundo o gênero do capítulo.\n\n**Método de estudo:** as palavras destacadas nas notas individuais servem como pontos de observação textual, não como glossário hebraico/aramaico nem interpretação definitiva.",
       "scriptureRefs": [
         "Daniel 3:1-30"
       ],
