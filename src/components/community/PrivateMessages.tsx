@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import type { SupabaseClient, User } from "@supabase/supabase-js";
-import { ArrowLeft, Copy, Flag, Loader2, MessageCircle, Search, Send, ShieldBan, UserRound } from "lucide-react";
+import { ArrowLeft, Flag, Loader2, MessageCircle, Send, ShieldBan, UserRound } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { AppShell } from "@/components/AppShell";
@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
+import { PrivateFriendsDesign } from "@/components/community/PrivateFriendsDesign";
 
 const db = supabase as unknown as SupabaseClient;
 type Member = { id: string; display_name: string | null; avatar_url: string | null };
@@ -225,44 +226,32 @@ export function PrivateMessagesList() {
   }
 
   return (
-    <AppShell title="Mensagens privadas" subtitle="Conversas pessoais com outros membros">
-      <div className="mx-auto max-w-5xl space-y-5 pb-6">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <Link to="/comunidade" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"><ArrowLeft className="size-4" /> Voltar à Comunidade</Link>
-          <span className="text-xs text-muted-foreground">Suas conversas são privadas</span>
-        </div>
-        <Card className="rounded-2xl border-primary/15 p-4 shadow-sm sm:p-5">
-          <div className="mb-3 flex items-center gap-2"><UserRound className="size-5 text-primary" /><h2 className="font-display text-lg font-semibold">Encontrar membros</h2></div>
-          <div className="relative mb-2"><Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" /><Input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar por nome ou colar ID do membro..." className="pl-9" /></div>
-          <p className="mb-3 text-xs text-muted-foreground">Pesquise pelo nome ou pelos primeiros 6 caracteres (ou mais) do ID. Somente nome, foto e ID público são usados na busca.</p>
-          {incomingRequests.length > 0 ? <div className="mb-4 rounded-xl border border-primary/20 bg-primary/5 p-3"><h3 className="mb-2 text-sm font-semibold">Pedidos recebidos ({incomingRequests.length})</h3><div className="space-y-2">{incomingRequests.map((request) => { const sender = members.find((item) => item.id === request.solicitante_id); return <div key={request.id} className="flex items-center gap-2"><span className="min-w-0 flex-1 truncate text-sm">{sender?.display_name || "Membro da comunidade"}</span><Button size="sm" disabled={starting !== null} onClick={() => void acceptFriendRequest(request)}>{starting === request.solicitante_id ? <Loader2 className="size-4 animate-spin" /> : "Aceitar"}</Button><Button size="sm" variant="ghost" disabled={starting !== null} onClick={() => void rejectFriendRequest(request)}>Recusar</Button></div>; })}</div></div> : null}
-          {searchingMembers ? <div className="flex items-center justify-center gap-2 py-4 text-sm text-muted-foreground"><Loader2 className="size-4 animate-spin" />Buscando membros...</div> : null}
-          {memberSearchError ? <p className="py-3 text-center text-sm text-muted-foreground">{memberSearchError}</p> : null}
-          <div className="grid gap-2 sm:grid-cols-2">
-            {filteredMembers.map((member) => <div key={member.id} className="flex items-center gap-3 rounded-xl border border-border/70 p-3">
-              <Avatar className="size-10"><AvatarImage src={member.avatar_url ?? undefined} /><AvatarFallback>{initials(member.display_name)}</AvatarFallback></Avatar>
-              <div className="min-w-0 flex-1"><p className="truncate text-sm font-medium">{member.display_name || "Membro"}</p><p className="truncate font-mono text-[10px] text-muted-foreground" title={member.id}>{member.id}</p></div>
-              <Button size="icon" variant="ghost" aria-label="Copiar ID do membro" title="Copiar ID" onClick={() => { void navigator.clipboard.writeText(member.id).then(() => toast.success("ID copiado.")).catch(() => toast.error("Não foi possível copiar o ID.")); }}><Copy className="size-4" /></Button>
-              <Button size="sm" variant="outline" disabled={starting !== null || outgoingRequests.some((request) => request.destinatario_id === member.id)} onClick={() => friendIds.includes(member.id) ? void openConversation(member) : incomingRequests.some((request) => request.solicitante_id === member.id) ? void acceptFriendRequest(incomingRequests.find((request) => request.solicitante_id === member.id)!) : void sendFriendRequest(member)}>{starting === member.id ? <Loader2 className="size-4 animate-spin" /> : friendIds.includes(member.id) ? <><MessageCircle className="mr-1 size-3.5" /> Conversar</> : incomingRequests.some((request) => request.solicitante_id === member.id) ? "Aceitar pedido" : outgoingRequests.some((request) => request.destinatario_id === member.id) ? "Pedido enviado" : "Adicionar amigo"}</Button>
-              {user ? <div className="flex gap-1"><Button size="icon" variant="ghost" aria-label="Denunciar perfil" onClick={() => void sendProfileReport(user.id, member.id)}><Flag className="size-4" /></Button><Button size="icon" variant="ghost" aria-label="Bloquear membro" onClick={() => void blockMember(user.id, member.id)}><ShieldBan className="size-4" /></Button></div> : null}
-            </div>)}
-            {!loading && !searchingMembers && !memberSearchError && !filteredMembers.length ? <p className="col-span-full py-4 text-center text-sm text-muted-foreground">{search.trim() ? "Nenhum membro encontrado para esse nome ou ID." : "Ainda não há outros membros disponíveis para adicionar."}</p> : null}
-          </div>
-        </Card>
-        <Card className="rounded-2xl border-primary/15 p-4 shadow-sm sm:p-5">
-          <h2 className="mb-3 font-display text-lg font-semibold">Suas conversas</h2>
-          {loading ? <div className="flex items-center justify-center gap-2 py-10 text-sm text-muted-foreground"><Loader2 className="size-4 animate-spin" />Carregando conversas...</div> : null}
-          {!loading && error ? <div className="rounded-xl bg-destructive/5 p-4 text-sm text-destructive">{error}<Button size="sm" variant="outline" className="ml-2" onClick={() => user && void reload(user)}>Tentar novamente</Button></div> : null}
-          {!loading && !error && !previews.length ? <div className="py-10 text-center"><MessageCircle className="mx-auto mb-2 size-9 text-primary/40" /><p className="font-medium">Você ainda não tem conversas.</p><p className="mt-1 text-sm text-muted-foreground">Escolha um membro acima para iniciar uma conversa privada.</p></div> : null}
-          <div className="divide-y divide-border/60">
-            {previews.map(({ conversation, member, lastMessage, unread }) => <a key={conversation.id} href={`/comunidade/privado/${conversation.id}`} className="flex items-center gap-3 py-3 transition hover:bg-muted/30">
-              <Avatar className="size-11"><AvatarImage src={member?.avatar_url ?? undefined} /><AvatarFallback>{initials(member?.display_name)}</AvatarFallback></Avatar>
-              <div className="min-w-0 flex-1"><p className="truncate text-sm font-semibold">{member?.display_name || "Membro"}</p><p className="truncate text-xs text-muted-foreground">{lastMessage?.conteudo || "Conversa iniciada"}</p></div>
-              <div className="flex flex-col items-end gap-1"><time className="text-[10px] text-muted-foreground">{lastMessage ? new Date(lastMessage.criado_em).toLocaleDateString("pt-BR") : ""}</time>{unread ? <span className="flex size-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">{unread > 9 ? "9+" : unread}</span> : null}</div>
-            </a>)}
-          </div>
-        </Card>
-      </div>
+    <AppShell title="Mensagens privadas" subtitle="Conexões e conversas com outros membros">
+      <PrivateFriendsDesign
+        user={user}
+        members={members}
+        blockedIds={blockedIds}
+        friendIds={friendIds}
+        incomingRequests={incomingRequests}
+        outgoingRequests={outgoingRequests}
+        previews={previews}
+        search={search}
+        onSearchChange={setSearch}
+        searchingMembers={searchingMembers}
+        memberSearchError={memberSearchError}
+        loading={loading}
+        error={error}
+        starting={starting}
+        onRequest={(member) => void sendFriendRequest(member)}
+        onAccept={(request) => void acceptFriendRequest(request)}
+        onReject={(request) => void rejectFriendRequest(request)}
+        onMessage={(member) => void openConversation(member)}
+        onReport={(member) => { if (user) void sendProfileReport(user.id, member.id); }}
+        onBlock={(member) => { if (user) void blockMember(user.id, member.id).then((ok) => {
+          if (ok) void reload(user);
+        }); }}
+        onRetry={() => { if (user) void reload(user); }}
+      />
     </AppShell>
   );
 }
