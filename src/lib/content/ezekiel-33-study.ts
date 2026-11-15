@@ -1,51 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 33 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 33 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel33Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 33 renova o chamado do sentinela, anuncia a possibilidade de conversão e registra a notícia da queda de Jerusalém.",
-  "historicalContext": "Exílio babilônico e chegada da notícia da queda de Jerusalém, com debates de cronologia textual.",
+  "intro": "Ezequiel 33 renova a missão do profeta como sentinela, anuncia que Deus deseja a conversão e a vida, registra a notícia da queda de Jerusalém e denuncia quem escuta a palavra sem praticá-la.",
+  "historicalContext": "A queda de Jerusalém em 586 a.C. é o pano de fundo decisivo do capítulo. A chegada do sobrevivente no v. 21 transforma o anúncio anterior em notícia confirmada. A missão de sentinela, já presente em Ezequiel 3, é reapresentada para uma comunidade que precisa compreender responsabilidade, arrependimento e reconstrução.",
   "keyPoints": [
     {
-      "title": "1–9: O dever do sentinela",
-      "text": "A responsabilidade do profeta consiste em alertar com fidelidade, sem controlar a resposta do povo."
+      "title": "1–9: O dever da sentinela",
+      "text": "O profeta deve advertir com fidelidade, sem controlar a resposta do povo."
     },
     {
-      "title": "10–20: Conversão e justiça",
-      "text": "A esperança de vida inclui abandono do mal, restituição e responsabilidade pessoal."
+      "title": "10–20: Conversão e responsabilidade",
+      "text": "Deus chama à mudança efetiva e rejeita tanto desespero quanto presunção moral."
     },
     {
-      "title": "21–29: A notícia da queda de Jerusalém",
-      "text": "O desastre chega aos exilados e questiona a pretensão dos sobreviventes de possuir a terra sem justiça."
+      "title": "21–29: Jerusalém caiu",
+      "text": "A notícia da destruição acompanha a denúncia de violência entre os sobreviventes."
     },
     {
-      "title": "30–33: Ouvir sem praticar",
-      "text": "O povo aprecia a mensagem como música, mas não transforma sua conduta."
+      "title": "30–33: Ouvir não é praticar",
+      "text": "O público aprecia a mensagem, mas não muda de conduta."
     }
   ],
-  "application": "Advertir com responsabilidade, arrepender-se com restituição e praticar a Palavra.",
+  "application": "Advertir com responsabilidade e sem manipulação, reconhecer que mudança exige reparar injustiças e transformar práticas, e avaliar se a escuta religiosa produz ações concretas. Não aplicar a metáfora da sentinela para controlar vidas privadas ou culpabilizar vítimas.",
   "crossReferences": [
     "Ezequiel 3:16-21",
     "Ezequiel 18:21-32",
     "Ezequiel 24:25-27",
-    "Tiago 1:22-25",
-    "Lucas 19:8-10",
-    "Mateus 7:24-27"
+    "Jeremias 39:1-10",
+    "Lucas 15:7",
+    "Tiago 1:22-25"
   ],
   "questions": [
-    "Qual é a função do sentinela?",
-    "O que significa conversão concreta?",
-    "Por que a notícia da queda é decisiva?",
-    "Como o povo trata a mensagem de Ezequiel?"
+    "Qual é a diferença entre o dever da sentinela e a resposta do ouvinte?",
+    "Por que Deus declara não ter prazer na morte do perverso?",
+    "Que exemplos de reparação aparecem no versículo 15?",
+    "Por que a notícia da queda de Jerusalém é decisiva?",
+    "O que significa ouvir a mensagem como uma bela canção?"
   ],
-  "conclusion": "O capítulo chama à responsabilidade, à conversão e à prática do que se ouve.",
+  "conclusion": "O capítulo convoca a advertir com fidelidade, converter-se com ações justas e não reduzir a palavra de Deus a discurso admirado, mas desobedecido.",
   "prayer": "Senhor, dá-nos coragem, justiça e obediência. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 33:1–33 (paráfrase livre autoral)",
-      "body": "**Paráfrase livre autoral para estudo; não é tradução bíblica oficial.**\n\n**1.** O profeta recebe nova palavra divina.\n\n**2.** Uma comunidade escolhe alguém para vigiar ameaças.\n\n**3.** O vigia vê a espada e toca a trombeta.\n\n**4.** Quem ignora um alerta claro assume o risco.\n\n**5.** Quem acolhe o aviso pode preservar a vida.\n\n**6.** O sentinela omisso é responsabilizado pelo silêncio.\n\n**7.** Ezequiel é designado vigia para Israel.\n\n**8.** O profeta deve advertir quem pratica injustiça.\n\n**9.** Quando o aviso é dado e rejeitado, a responsabilidade se distingue.\n\n**10.** O povo pergunta como pode viver sob o peso de seus pecados.\n\n**11.** Deus declara não desejar a morte do perverso, mas sua conversão.\n\n**12.** A justiça passada não protege quem abandona o bem.\n\n**13.** A autoconfiança do justo pode preceder sua queda.\n\n**14.** Quem praticou o mal é chamado a mudar e fazer justiça.\n\n**15.** Restituir penhores e devolver o roubado demonstram mudança.\n\n**16.** A justiça praticada após a mudança é reconhecida.\n\n**17.** O povo acusa o caminho de Deus de injusto.\n\n**18.** Quem deixa a justiça e pratica o mal responde por isso.\n\n**19.** Quem abandona a maldade e faz o que é justo encontra vida.\n\n**20.** O debate sobre justiça termina com responsabilidade individual.\n\n**21.** Um fugitivo anuncia que Jerusalém caiu.\n\n**22.** A boca de Ezequiel é aberta antes da chegada do mensageiro.\n\n**23.** Outra palavra divina introduz o tema dos sobreviventes.\n\n**24.** Moradores das ruínas reivindicam a terra citando Abraão.\n\n**25.** O texto denuncia sangue, idolatria e violência.\n\n**26.** A confiança nas armas acompanha violações contra o próximo.\n\n**27.** São anunciadas consequências para quem permanece nas ruínas.\n\n**28.** A desolação desmonta o orgulho da força.\n\n**29.** A fórmula de reconhecimento conclui a denúncia.\n\n**30.** Pessoas convidam umas às outras a ouvir o profeta.\n\n**31.** Os ouvintes comparecem, mas buscam ganho próprio.\n\n**32.** O profeta é apreciado como intérprete musical, sem obediência.\n\n**33.** O cumprimento da palavra mostrará que houve profeta entre eles.",
+      "body": "Leia Ezequiel 33:1–33 no texto bíblico do aplicativo. As notas oferecem **paráfrases livres autorais** e explicações contextuais, não uma tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 33:1-33"
       ],
@@ -126,7 +127,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 33:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta recebe nova palavra divina.\n\n**Exegese contextual:** O capítulo marca a passagem do juízo anunciado à responsabilidade e à restauração.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O Senhor dirige nova palavra ao profeta.\n\n**Exegese contextual:** A fórmula abre a renovação do chamado de Ezequiel como sentinela, agora no limiar da notícia da queda de Jerusalém.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:1"
       ],
@@ -136,7 +137,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 33:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma comunidade escolhe alguém para vigiar ameaças.\n\n**Exegese contextual:** O sentinela é figura de responsabilidade pública diante de perigo reconhecível.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O povo escolhe uma sentinela diante da ameaça de invasão.\n\n**Exegese contextual:** A figura do vigia usa uma prática militar conhecida para explicar responsabilidade por avisos de perigo.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:2"
       ],
@@ -146,7 +147,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 33:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O vigia vê a espada e toca a trombeta.\n\n**Exegese contextual:** O aviso precisa ser comunicado para que o povo possa responder.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** A sentinela vê o perigo e toca a trombeta.\n\n**Exegese contextual:** A advertência pública torna possível uma resposta; o vigia não controla a decisão de quem ouve.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:3"
       ],
@@ -156,7 +157,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 33:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Quem ignora um alerta claro assume o risco.\n\n**Exegese contextual:** O texto distingue a responsabilidade do mensageiro da resposta do ouvinte.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Quem ignora o alarme assume a consequência de sua escolha.\n\n**Exegese contextual:** A linguagem de responsabilidade pressupõe que o aviso foi de fato ouvido e compreendido.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:4"
       ],
@@ -166,7 +167,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 33:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Quem acolhe o aviso pode preservar a vida.\n\n**Exegese contextual:** Ouvir implica agir, não apenas perceber um som.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Quem leva o aviso a sério pode preservar a vida.\n\n**Exegese contextual:** A comparação ressalta a importância de responder ao alerta, não uma promessa de segurança irrestrita.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:5"
       ],
@@ -176,7 +177,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 33:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O sentinela omisso é responsabilizado pelo silêncio.\n\n**Exegese contextual:** A culpa do agressor não elimina o dever de alertar quem está em perigo.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** A sentinela omissa responde por não ter avisado.\n\n**Exegese contextual:** O texto distingue culpa do agressor e responsabilidade adicional de quem tinha dever de advertir.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:6"
       ],
@@ -186,7 +187,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 33:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ezequiel é designado vigia para Israel.\n\n**Exegese contextual:** A metáfora é aplicada ao ministério profético, não a poder irrestrito sobre os outros.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Deus designa Ezequiel sentinela da casa de Israel.\n\n**Exegese contextual:** A tarefa profética nasce da palavra recebida de Deus, não da pretensão de vigiar ou controlar cada pessoa.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:7"
       ],
@@ -196,7 +197,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 33:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta deve advertir quem pratica injustiça.\n\n**Exegese contextual:** O objetivo da advertência é abrir possibilidade de mudança.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O profeta deve advertir o perverso de seu caminho.\n\n**Exegese contextual:** A omissão do anúncio traz responsabilidade ao mensageiro; a finalidade é possibilitar mudança.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:8"
       ],
@@ -206,7 +207,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 33:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Quando o aviso é dado e rejeitado, a responsabilidade se distingue.\n\n**Exegese contextual:** O mensageiro não controla a decisão do destinatário.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** A advertência fiel não obriga o outro a se converter.\n\n**Exegese contextual:** O profeta cumpre seu encargo ao transmitir o alerta, ainda que a resposta seja negativa.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:9"
       ],
@@ -216,7 +217,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 33:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O povo pergunta como pode viver sob o peso de seus pecados.\n\n**Exegese contextual:** A desesperança coletiva cria o cenário da resposta divina.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O povo pergunta como pode viver sob o peso de seus pecados.\n\n**Exegese contextual:** A pergunta expressa desespero coletivo após o juízo e prepara uma palavra de esperança responsável.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:10"
       ],
@@ -226,7 +227,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 33:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus declara não desejar a morte do perverso, mas sua conversão.\n\n**Exegese contextual:** A repetição do chamado à mudança expressa misericórdia e urgência.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Deus declara preferir a conversão e a vida à morte do perverso.\n\n**Exegese contextual:** O convite repetido a mudar de caminho é central: o juízo não elimina a possibilidade de arrependimento.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:11"
       ],
@@ -236,7 +237,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 33:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A justiça passada não protege quem abandona o bem.\n\n**Exegese contextual:** O texto recusa a ideia de crédito moral automático e permanente.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O passado justo não protege quem passa a agir mal, nem o passado perverso condena quem muda.\n\n**Exegese contextual:** O texto rejeita tanto confiança automática em méritos antigos quanto fatalismo moral.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:12"
       ],
@@ -246,7 +247,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 33:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A autoconfiança do justo pode preceder sua queda.\n\n**Exegese contextual:** O histórico de boas ações não legitima injustiça presente.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** A autoconfiança em justiça anterior pode acompanhar uma queda ética.\n\n**Exegese contextual:** A fidelidade deve ser vivida no presente, não usada como crédito para praticar injustiça.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:13"
       ],
@@ -256,7 +257,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 33:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Quem praticou o mal é chamado a mudar e fazer justiça.\n\n**Exegese contextual:** Arrependimento é possibilidade concreta, não fatalismo.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O perverso que se converte deve praticar justiça.\n\n**Exegese contextual:** A mudança verdadeira tem expressão observável em condutas, não apenas palavras de remorso.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:14"
       ],
@@ -266,7 +267,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 33:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Restituir penhores e devolver o roubado demonstram mudança.\n\n**Exegese contextual:** A conversão tem dimensão material e reparadora.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Restituir penhores e devolver o que foi roubado exemplificam conversão.\n\n**Exegese contextual:** A reparação econômica e o abandono da violência concretizam o arrependimento.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:15"
       ],
@@ -276,7 +277,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 33:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A justiça praticada após a mudança é reconhecida.\n\n**Exegese contextual:** A promessa de vida acompanha abandono do mal.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** A pessoa que muda e age com justiça recebe promessa de vida.\n\n**Exegese contextual:** A graça não torna irrelevante a reparação; o texto destaca uma nova orientação de vida.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:16"
       ],
@@ -286,7 +287,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 33:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O povo acusa o caminho de Deus de injusto.\n\n**Exegese contextual:** O oráculo inverte a acusação e examina a conduta humana.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O povo acusa o caminho do Senhor de ser injusto.\n\n**Exegese contextual:** O conflito é sobre critérios de responsabilidade e possibilidade de mudança, não mero desacordo emocional.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:17"
       ],
@@ -296,7 +297,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 33:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Quem deixa a justiça e pratica o mal responde por isso.\n\n**Exegese contextual:** O julgamento considera a direção efetiva da vida.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** A pessoa justa que abandona a justiça responde por seu mal.\n\n**Exegese contextual:** A repetição reforça que o comportamento presente importa, sem negar a complexidade de outras passagens bíblicas.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:18"
       ],
@@ -306,7 +307,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 33:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Quem abandona a maldade e faz o que é justo encontra vida.\n\n**Exegese contextual:** A mudança é apresentada como alternativa real.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** A pessoa perversa que passa a agir com justiça pode viver.\n\n**Exegese contextual:** A esperança permanece aberta à transformação efetiva.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:19"
       ],
@@ -316,7 +317,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 33:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O debate sobre justiça termina com responsabilidade individual.\n\n**Exegese contextual:** O capítulo insiste que cada pessoa responde por seus caminhos.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Deus responde à acusação e anuncia julgamento conforme os caminhos de cada um.\n\n**Exegese contextual:** A responsabilidade pessoal é enfatizada em diálogo com Ezequiel 18.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:20"
       ],
@@ -326,7 +327,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 33:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Um fugitivo anuncia que Jerusalém caiu.\n\n**Exegese contextual:** A notícia confirma a catástrofe anteriormente anunciada e altera o contexto do profeta.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Um sobrevivente chega do exílio com a notícia da queda de Jerusalém.\n\n**Exegese contextual:** A datação marca um ponto de virada no livro; tradições textuais diferem em detalhes cronológicos.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:21"
       ],
@@ -336,7 +337,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 33:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A boca de Ezequiel é aberta antes da chegada do mensageiro.\n\n**Exegese contextual:** A retomada da fala dialoga com o sinal profético anunciado em Ezequiel 24.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** A boca de Ezequiel é aberta após o período de silêncio profético.\n\n**Exegese contextual:** O episódio retoma Ezequiel 3:26–27 e 24:25–27, ligando a notícia à confirmação do anúncio anterior.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:22"
       ],
@@ -346,7 +347,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 33:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Outra palavra divina introduz o tema dos sobreviventes.\n\n**Exegese contextual:** O foco se desloca para a interpretação da posse da terra.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Uma nova palavra do Senhor inicia outro oráculo.\n\n**Exegese contextual:** O foco passa para os sobreviventes que permanecem entre as ruínas da terra.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:23"
       ],
@@ -356,7 +357,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 33:24 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Moradores das ruínas reivindicam a terra citando Abraão.\n\n**Exegese contextual:** O argumento demográfico ignora a responsabilidade ética ligada à aliança.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Moradores das ruínas invocam Abraão para reivindicar posse da terra.\n\n**Exegese contextual:** A comparação entre o patriarca e o grupo numeroso confunde herança prometida com licença para injustiça.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:24"
       ],
@@ -366,7 +367,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 33:25 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O texto denuncia sangue, idolatria e violência.\n\n**Exegese contextual:** A reivindicação de herança não substitui justiça.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Deus confronta práticas de sangue e idolatria enquanto reivindicam a terra.\n\n**Exegese contextual:** A posse territorial é questionada à luz da fidelidade ética e religiosa.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:25"
       ],
@@ -376,7 +377,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 33:26 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A confiança nas armas acompanha violações contra o próximo.\n\n**Exegese contextual:** A posse da terra não é legitimada por força e abuso.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O povo confia na espada e pratica violência e infidelidade.\n\n**Exegese contextual:** A crítica expõe contradição entre pretensão de direito à terra e comportamento destrutivo.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:26"
       ],
@@ -386,7 +387,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 33:27 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** São anunciadas consequências para quem permanece nas ruínas.\n\n**Exegese contextual:** A linguagem severa expressa juízo, não licença para agressão moderna.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O oráculo anuncia juízo aos que vivem nas ruínas, no campo e em refúgios.\n\n**Exegese contextual:** A enumeração mostra que posições diferentes não garantem imunidade às consequências da violência.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:27"
       ],
@@ -396,7 +397,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 33:28 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A desolação desmonta o orgulho da força.\n\n**Exegese contextual:** O desastre revela o vazio da autossuficiência.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** A terra se tornará desolada e cessará o orgulho de sua força.\n\n**Exegese contextual:** A devastação é apresentada como resposta ao comportamento denunciado, não modelo para julgar tragédias atuais.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:28"
       ],
@@ -406,7 +407,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Ezequiel 33:29 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A fórmula de reconhecimento conclui a denúncia.\n\n**Exegese contextual:** O juízo é relacionado às práticas injustas nomeadas.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O reconhecimento do Senhor acompanhará o juízo sobre a terra.\n\n**Exegese contextual:** A fórmula teológica explica o sentido do oráculo dentro do livro.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:29"
       ],
@@ -416,7 +417,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Ezequiel 33:30 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Pessoas convidam umas às outras a ouvir o profeta.\n\n**Exegese contextual:** A popularidade do mensageiro não prova compromisso com sua mensagem.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Pessoas convidam umas às outras a ouvir o profeta.\n\n**Exegese contextual:** O interesse pela mensagem parece intenso, mas a seção questionará sua profundidade.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:30"
       ],
@@ -426,7 +427,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Ezequiel 33:31 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os ouvintes comparecem, mas buscam ganho próprio.\n\n**Exegese contextual:** Há diferença entre participar de uma reunião religiosa e praticar justiça.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Os ouvintes se reúnem, mas não praticam o que escutam.\n\n**Exegese contextual:** O contraste entre discurso agradável e interesse próprio denuncia uma religiosidade sem transformação ética.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:31"
       ],
@@ -436,7 +437,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-32",
       "title": "Ezequiel 33:32 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta é apreciado como intérprete musical, sem obediência.\n\n**Exegese contextual:** A beleza da apresentação pode tornar-se entretenimento espiritual.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** O profeta é tratado como cantor talentoso, não como mensageiro a obedecer.\n\n**Exegese contextual:** A comparação alerta contra consumir a palavra divina como entretenimento estético.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:32"
       ],
@@ -446,7 +447,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "versiculo-33",
       "title": "Ezequiel 33:33 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O cumprimento da palavra mostrará que houve profeta entre eles.\n\n**Exegese contextual:** O encerramento ressalta a seriedade da mensagem, não o prestígio do orador.\n\n**Pergunta para reflexão:** Qual responsabilidade humana e qual possibilidade de mudança este verso apresenta?",
+      "body": "**Paráfrase livre autoral:** Quando a palavra se cumprir, reconhecerão que houve profeta entre eles.\n\n**Exegese contextual:** O encerramento une advertência e responsabilidade pela resposta à mensagem.\n\n**Pergunta interpretativa:** Que responsabilidade ou possibilidade de mudança este versículo apresenta em seu contexto?",
       "scriptureRefs": [
         "Ezequiel 33:33"
       ],
@@ -526,7 +527,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "Debatem-se a cronologia do fugitivo no v. 21, a relação da mudez de Ezequiel com sua missão e a natureza da promessa de vida nos vv. 10–20. A responsabilidade do sentinela não elimina liberdade nem autoriza coerção espiritual.",
+      "body": "**Responsabilidade da sentinela:** a metáfora trata do encargo profético e não autoriza vigilância abusiva sobre outras pessoas.\n\n**Conversão e justiça:** o texto destaca a possibilidade real de mudança, com restituição de bens e reparação (v. 15).\n\n**Cronologia:** a data do mensageiro em 33:21 apresenta variantes textuais e dificuldades de harmonização; evitar precisão excessiva.\n\n**Escuta e prática:** a crítica final é à admiração da palavra sem compromisso ético.",
       "scriptureRefs": [
         "Ezequiel 33:1-33"
       ],
@@ -536,7 +537,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas comentadas",
-      "body": "**Ezequiel 3:16–21:** primeiro chamado do sentinela. **Ezequiel 18:21–32:** arrependimento e responsabilidade. **Ezequiel 24:25–27:** anúncio da notícia de Jerusalém. **Tiago 1:22–25:** ouvir e praticar. **Lucas 19:8–10:** restituição como sinal de mudança.",
+      "body": "**Ezequiel 3:16–21:** primeira comissão da sentinela.\n\n**Ezequiel 18:21–32:** responsabilidade pessoal e conversão.\n\n**Ezequiel 24:25–27:** promessa da notícia e da abertura da boca.\n\n**Jeremias 39:1–10:** relato da queda de Jerusalém.\n\n**Lucas 15:7:** alegria pela conversão.\n\n**Tiago 1:22–25:** praticantes da palavra, não apenas ouvintes.",
       "scriptureRefs": [
         "Ezequiel 33:1-33"
       ],
@@ -546,7 +547,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria forçada",
-      "body": "Jesus chama à conversão e ensina que ouvir deve produzir prática (Mateus 7:24–27). A aproximação é teológica e pastoral; Ezequiel 33 se dirige primeiro à casa de Israel no exílio.",
+      "body": "O chamado divino à conversão e à vida em Ezequiel 33:11 dialoga com o anúncio de arrependimento nos evangelhos; Tiago 1:22–25 reforça a exigência de praticar a palavra. Essas conexões não apagam a crise histórica da queda de Jerusalém.",
       "scriptureRefs": [
         "Ezequiel 33:1-33"
       ],
@@ -566,7 +567,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Qual é o dever do sentinela?** Alertar sobre perigo (vv. 2–6).\n\n**2. O que Deus deseja do perverso?** Conversão e vida (v. 11).\n\n**3. Qual sinal prático de mudança aparece?** Restituir o que foi tomado (v. 15).\n\n**4. Que notícia chega ao profeta?** Jerusalém caiu (v. 21).\n\n**5. Que problema existe entre os ouvintes?** Escutam, mas não praticam (vv. 30–32).",
+      "body": "**1. Qual é o dever da sentinela?** Avisar ao perceber o perigo (33:2–7).\n\n**2. O que Deus deseja para o perverso?** Que se converta e viva (33:11).\n\n**3. Que atos mostram arrependimento?** Devolver o roubado e restituir o penhor (33:15).\n\n**4. Que notícia chega ao profeta?** A queda de Jerusalém (33:21).\n\n**5. Qual é a falha dos ouvintes?** Escutam com prazer, mas não praticam (33:31–32).",
       "scriptureRefs": [
         "Ezequiel 33:1-33"
       ],
@@ -576,7 +577,7 @@ export const ezekiel33Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — ouvir e agir",
-      "body": "**Tema:** A responsabilidade diante da Palavra.\n\n**Proposição:** A advertência fiel oferece caminho de mudança, mas a escuta verdadeira produz justiça.\n\n**Esboço:** (1) o vigia responsável (1–9); (2) o arrependimento que repara (10–20); (3) a queda e a escuta vazia (21–33).\n\n**Cuidado pastoral:** pregar arrependimento sem coerção e sem culpar vítimas de violência.",
+      "body": "**Tema:** Ouvir, mudar e praticar.\n\n**Proposição:** Deus convoca a uma resposta responsável à palavra: advertência fiel, conversão concreta e obediência.\n\n**Esboço:** (1) a sentinela e o alerta (1–9); (2) o caminho de volta (10–20); (3) a queda e a responsabilidade (21–29); (4) ouvintes sem prática (30–33).\n\n**Cuidados:** não usar o dever da sentinela para intimidar pessoas nem tratar a destruição histórica como sentença sobre vítimas de desastres atuais.",
       "scriptureRefs": [
         "Ezequiel 33:1-33"
       ],
