@@ -1,52 +1,51 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 46 — revisão lexical preliminar, não estudo editorialmente concluído. */
+/** Ezequiel 46 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel46Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Estudo em revisão de Ezequiel 46.",
-  "historicalContext": "Exílio babilônico e visão de restauração.",
+  "intro": "Ezequiel 46 descreve a participação do príncipe e do povo no culto visionário, ofertas regulares e voluntárias, regras de herança que impedem abusos de poder e espaços destinados ao preparo dos sacrifícios.",
+  "historicalContext": "O capítulo integra a visão do templo e da terra restaurada em Ezequiel 40–48, dirigida a uma comunidade marcada pelo exílio. O texto reúne legislação ritual, arquitetura e justiça patrimonial. Há debates sobre a leitura literal, simbólica ou escatológica desse templo e sobre diferenças em relação a normas do Pentateuco.",
   "keyPoints": [
     {
-      "title": "1–8: A porta oriental e o príncipe",
-      "text": "Unidade literária de Ezequiel 46."
+      "title": "1–12: Portas, príncipe e celebrações",
+      "text": "Os acessos e ofertas diferenciam dias comuns, sábados, luas novas e festas, com participação regulada do povo."
     },
     {
-      "title": "9–12: Ordem das festas e circulação do povo",
-      "text": "Unidade literária de Ezequiel 46."
+      "title": "13–15: Culto diário",
+      "text": "A oferta matinal contínua enfatiza regularidade."
     },
     {
-      "title": "13–15: Oferta diária",
-      "text": "Unidade literária de Ezequiel 46."
+      "title": "16–18: Herança e limites do poder",
+      "text": "O príncipe não pode enriquecer tomando propriedades do povo."
     },
     {
-      "title": "16–18: Herança sem expropriação",
-      "text": "Unidade literária de Ezequiel 46."
-    },
-    {
-      "title": "19–24: Cozinhas e preparação das ofertas",
-      "text": "Unidade literária de Ezequiel 46."
+      "title": "19–24: Cozinhas e espaços de serviço",
+      "text": "O templo inclui áreas práticas para o preparo adequado das ofertas."
     }
   ],
-  "application": "Buscar fidelidade e justiça.",
+  "application": "Valorizar práticas comunitárias organizadas e constantes sem impor sacrifícios animais à vida cristã. Cobrar de líderes transparência, respeito à propriedade e proteção contra desapropriação abusiva.",
   "crossReferences": [
-    "Ezequiel 40:1-49",
-    "Apocalipse 21:1-27"
+    "Levítico 25:8-17",
+    "Números 28:3-15",
+    "1 Reis 21:1-19",
+    "Ezequiel 45:7-9",
+    "Ezequiel 47:1-12",
+    "Hebreus 10:1-18"
   ],
   "questions": [
-    "Como o tema a porta oriental e o príncipe se desenvolve em 1–8?",
-    "Como o tema ordem das festas e circulação do povo se desenvolve em 9–12?",
-    "Como o tema oferta diária se desenvolve em 13–15?",
-    "Como o tema herança sem expropriação se desenvolve em 16–18?",
-    "Como o tema cozinhas e preparação das ofertas se desenvolve em 19–24?"
+    "Qual a diferença entre a entrada do príncipe e a circulação do povo?",
+    "Por que o texto prevê ofertas proporcionais à capacidade?",
+    "Que abuso é expressamente proibido em 46:18?",
+    "Qual a função das cozinhas e câmaras separadas?"
   ],
-  "conclusion": "O capítulo tem roteiro estrutural, notas de observação textual e aplicações preliminares; a exegese aprofundada e a revisão humana permanecem pendentes.",
+  "conclusion": "O capítulo une culto e justiça: a visão não descreve apenas ritos, mas limita o poder do príncipe e organiza serviços para o bem da comunidade.",
   "prayer": "Senhor, dá-nos entendimento. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — consulte os versículos",
-      "body": "Leia Ezequiel 46:1–24 no texto bíblico do aplicativo. Este guia contém comentários autorais preliminares, **não uma tradução ou paráfrase integral**.",
+      "body": "Leia Ezequiel 46:1–24 no texto bíblico do aplicativo. As notas versículo a versículo contêm **paráfrases livres autorais**, não transcrição de tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 46:1-24"
       ],
@@ -136,7 +135,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 46:1 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:1:** Este versículo integra o movimento **a porta oriental e o príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **porta, pátio, dentro, voltada, oriente**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 1 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **porta** neste verso e como ela contribui para o desenvolvimento de **a porta oriental e o príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A porta oriental do pátio interno abre nos sábados e nas luas novas.\n\n**Exegese contextual:** A alternância entre dias comuns e dias de culto marca ritmos sagrados na visão do templo; não impõe calendário ritual diretamente às igrejas.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:1"
       ],
@@ -146,7 +145,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 46:2 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:2:** Este versículo integra o movimento **a porta oriental e o príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **príncipe, entrará, caminho, pórtico, porta**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 2 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **príncipe** neste verso e como ela contribui para o desenvolvimento de **a porta oriental e o príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O príncipe comparece ao limiar enquanto sacerdotes oferecem sacrifícios.\n\n**Exegese contextual:** A separação de funções limita o poder do príncipe: ele participa do culto, mas não substitui os sacerdotes.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:2"
       ],
@@ -156,7 +155,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 46:3 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:3:** Este versículo integra o movimento **a porta oriental e o príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **terra, ficará, prostrado, junto, entrada**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 3 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **terra** neste verso e como ela contribui para o desenvolvimento de **a porta oriental e o príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O povo adora à entrada da porta nos dias determinados.\n\n**Exegese contextual:** O acesso ordenado ao culto mostra participação coletiva, ainda que espaços e funções sejam diferenciados.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:3"
       ],
@@ -166,7 +165,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 46:4 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:4:** Este versículo integra o movimento **a porta oriental e o príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **holocausto, príncipe, oferecerá, sábado, cordeiros**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 4 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **holocausto** neste verso e como ela contribui para o desenvolvimento de **a porta oriental e o príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O príncipe apresenta seis cordeiros e um carneiro no sábado.\n\n**Exegese contextual:** A especificidade dos animais pertence ao programa sacrificial visionário e deve ser comparada com a legislação do Pentateuco.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:4"
       ],
@@ -176,7 +175,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 46:5 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:5:** Este versículo integra o movimento **a porta oriental e o príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **oferta, alimento, carneiro, cordeiro, presente**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 5 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **oferta** neste verso e como ela contribui para o desenvolvimento de **a porta oriental e o príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** As ofertas de cereal e azeite acompanham os animais.\n\n**Exegese contextual:** A expressão relativa à capacidade de oferecer introduz proporcionalidade em parte das contribuições.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:5"
       ],
@@ -186,7 +185,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 46:6 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:6:** Este versículo integra o movimento **a porta oriental e o príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **bezerro, mancha, cordeiros, carneiro, deverão**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 6 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **bezerro** neste verso e como ela contribui para o desenvolvimento de **a porta oriental e o príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Na lua nova há um novilho, seis cordeiros e um carneiro.\n\n**Exegese contextual:** A oferta da lua nova difere da sabática, indicando gradação litúrgica entre ocasiões.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:6"
       ],
@@ -196,7 +195,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 46:7 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:7:** Este versículo integra o movimento **a porta oriental e o príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **preparará, oferta, alimento, bezerro, carneiro**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 7 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **preparará** neste verso e como ela contribui para o desenvolvimento de **a porta oriental e o príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Cereal e azeite acompanham a oferta da lua nova.\n\n**Exegese contextual:** A provisão segundo os recursos disponíveis retoma a relação entre culto e capacidade econômica.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:7"
       ],
@@ -206,7 +205,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 46:8 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:8:** Este versículo integra o movimento **a porta oriental e o príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **príncipe, entrar, entrará, caminho, pórtico**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 8 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **príncipe** neste verso e como ela contribui para o desenvolvimento de **a porta oriental e o príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O príncipe entra e sai pelo mesmo pórtico.\n\n**Exegese contextual:** A regra específica do príncipe contrasta com o fluxo de circulação prescrito ao povo no verso seguinte.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:8"
       ],
@@ -216,7 +215,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 46:9 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:9:** Este versículo integra o movimento **ordem das festas e circulação do povo**. Observe especialmente os termos e imagens presentes no texto bíblico: **terra, solenidades, entrar, caminho, porta**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 9 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **terra** neste verso e como ela contribui para o desenvolvimento de **ordem das festas e circulação do povo**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O povo entra por uma porta e sai pela porta oposta.\n\n**Exegese contextual:** A circulação norte–sul organiza a reunião festiva e evita movimentos de retorno pelo mesmo acesso.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:9"
       ],
@@ -226,7 +225,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 46:10 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:10:** Este versículo integra o movimento **ordem das festas e circulação do povo**. Observe especialmente os termos e imagens presentes no texto bíblico: **príncipe, entrará, entrarem, saírem, sairão**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 10 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **príncipe** neste verso e como ela contribui para o desenvolvimento de **ordem das festas e circulação do povo**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O príncipe acompanha a entrada e a saída do povo.\n\n**Exegese contextual:** A figura dirigente aparece entre os participantes, não como proprietário exclusivo do espaço sagrado.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:10"
       ],
@@ -236,7 +235,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 46:11 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:11:** Este versículo integra o movimento **ordem das festas e circulação do povo**. Observe especialmente os termos e imagens presentes no texto bíblico: **festas, solenidades, oferta, alimento, bezerro**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 11 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **festas** neste verso e como ela contribui para o desenvolvimento de **ordem das festas e circulação do povo**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** As festas têm ofertas de cereal proporcionais aos animais.\n\n**Exegese contextual:** O padrão distingue ofertas festivas e conserva a referência aos recursos de quem contribui.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:11"
       ],
@@ -246,7 +245,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 46:12 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:12:** Este versículo integra o movimento **ordem das festas e circulação do povo**. Observe especialmente os termos e imagens presentes no texto bíblico: **príncipe, fizer, oferta, voluntária, queima**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 12 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **príncipe** neste verso e como ela contribui para o desenvolvimento de **ordem das festas e circulação do povo**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Uma oferta voluntária do príncipe permite abrir a porta oriental.\n\n**Exegese contextual:** A abertura excepcional mostra espaço para devoção espontânea dentro de limites estabelecidos.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:12"
       ],
@@ -256,7 +255,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 46:13 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:13:** Este versículo integra o movimento **oferta diária**. Observe especialmente os termos e imagens presentes no texto bíblico: **prepararás, cordeiro, defeito, holocausto, manhãs**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 13 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **prepararás** neste verso e como ela contribui para o desenvolvimento de **oferta diária**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Um cordeiro de um ano é oferecido diariamente pela manhã.\n\n**Exegese contextual:** A regularidade do sacrifício exprime continuidade do culto na visão.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:13"
       ],
@@ -266,7 +265,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 46:14 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:14:** Este versículo integra o movimento **oferta diária**. Observe especialmente os termos e imagens presentes no texto bíblico: **juntamente, manhãs, prepararás, oferta, alimento**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 14 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **juntamente** neste verso e como ela contribui para o desenvolvimento de **oferta diária**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Cereal e azeite acompanham a oferta matinal.\n\n**Exegese contextual:** As medidas detalhadas enfatizam disciplina ritual; não são instruções culinárias ou devocionais obrigatórias para cristãos.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:14"
       ],
@@ -276,7 +275,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 46:15 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:15:** Este versículo integra o movimento **oferta diária**. Observe especialmente os termos e imagens presentes no texto bíblico: **prepararão, cordeiro, oferta, alimento, manhãs**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 15 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **prepararão** neste verso e como ela contribui para o desenvolvimento de **oferta diária**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O cordeiro e o cereal constituem oferta contínua a cada manhã.\n\n**Exegese contextual:** A repetição reforça a importância da constância, não apenas de celebrações ocasionais.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:15"
       ],
@@ -286,7 +285,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 46:16 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:16:** Este versículo integra o movimento **herança sem expropriação**. Observe especialmente os termos e imagens presentes no texto bíblico: **príncipe, presente, herança, algum, filhos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 16 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **príncipe** neste verso e como ela contribui para o desenvolvimento de **herança sem expropriação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A herança doada pelo príncipe a seus filhos permanece com eles.\n\n**Exegese contextual:** A regra estabelece transmissão patrimonial familiar e delimita os bens que o príncipe pode distribuir.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:16"
       ],
@@ -296,7 +295,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 46:17 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:17:** Este versículo integra o movimento **herança sem expropriação**. Observe especialmente os termos e imagens presentes no texto bíblico: **presente, herança, alguém, servos, pertencerá**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 17 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **presente** neste verso e como ela contribui para o desenvolvimento de **herança sem expropriação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A doação a um servo retorna no ano da liberdade.\n\n**Exegese contextual:** A distinção protege a herança familiar e alude à lógica de restituição patrimonial, embora sua relação exata com o jubileu seja debatida.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:17"
       ],
@@ -306,7 +305,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 46:18 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:18:** Este versículo integra o movimento **herança sem expropriação**. Observe especialmente os termos e imagens presentes no texto bíblico: **príncipe, tomará, herança, destituir, propriedade**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 18 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **príncipe** neste verso e como ela contribui para o desenvolvimento de **herança sem expropriação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O príncipe é proibido de tomar a propriedade do povo.\n\n**Exegese contextual:** Este é o núcleo ético explícito da seção: a liderança não deve usar poder para desapropriar e dispersar famílias.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:18"
       ],
@@ -316,7 +315,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 46:19 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:19:** Este versículo integra o movimento **cozinhas e preparação das ofertas**. Observe especialmente os termos e imagens presentes no texto bíblico: **disto, trouxe, entrada, porta, câmaras**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 19 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **disto** neste verso e como ela contribui para o desenvolvimento de **cozinhas e preparação das ofertas**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O guia mostra a Ezequiel salas sacerdotais próximas ao norte.\n\n**Exegese contextual:** A mudança de cenário introduz áreas de preparação das ofertas e a distinção entre espaços sagrados.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:19"
       ],
@@ -326,7 +325,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 46:20 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:20:** Este versículo integra o movimento **cozinhas e preparação das ofertas**. Observe especialmente os termos e imagens presentes no texto bíblico: **lugar, sacerdotes, cozerão, sacrifício, culpa**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 20 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **lugar** neste verso e como ela contribui para o desenvolvimento de **cozinhas e preparação das ofertas**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os sacerdotes cozinham ofertas em local reservado.\n\n**Exegese contextual:** A separação evita transportar certos alimentos sagrados ao pátio externo e preserva as fronteiras rituais.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:20"
       ],
@@ -336,7 +335,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 46:21 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:21:** Este versículo integra o movimento **cozinhas e preparação das ofertas**. Observe especialmente os termos e imagens presentes no texto bíblico: **levou, pátio, passar, pelos, quatro**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 21 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **levou** neste verso e como ela contribui para o desenvolvimento de **cozinhas e preparação das ofertas**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O profeta observa pequenos pátios nos quatro cantos externos.\n\n**Exegese contextual:** A repetição arquitetônica sugere distribuição funcional e organização simétrica do complexo.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:21"
       ],
@@ -346,7 +345,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 46:22 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:22:** Este versículo integra o movimento **cozinhas e preparação das ofertas**. Observe especialmente os termos e imagens presentes no texto bíblico: **quatro, cantos, pátio, outros, pátios**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 22 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **quatro** neste verso e como ela contribui para o desenvolvimento de **cozinhas e preparação das ofertas**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os quatro pátios têm dimensões iguais.\n\n**Exegese contextual:** A precisão das medidas reforça o caráter ordenado da visão; a conversão exata depende da medida de côvado adotada.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:22"
       ],
@@ -356,7 +355,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 46:23 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:23:** Este versículo integra o movimento **cozinhas e preparação das ofertas**. Observe especialmente os termos e imagens presentes no texto bíblico: **parede, redor, quatro, lugares, cozinhar**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 23 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **parede** neste verso e como ela contribui para o desenvolvimento de **cozinhas e preparação das ofertas**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Muros e estruturas de cozimento circundam os pátios.\n\n**Exegese contextual:** O desenho identifica instalações práticas para preparo dos sacrifícios, não apenas simbolismo abstrato.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:23"
       ],
@@ -366,7 +365,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 46:24 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 46:24:** Este versículo integra o movimento **cozinhas e preparação das ofertas**. Observe especialmente os termos e imagens presentes no texto bíblico: **cozinhas, trabalhadores, cozerão, sacrifício**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 24 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **cozinhas** neste verso e como ela contribui para o desenvolvimento de **cozinhas e preparação das ofertas**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O guia identifica as cozinhas destinadas às ofertas do povo.\n\n**Exegese contextual:** O encerramento associa arquitetura, serviço comunitário e manejo responsável do culto.\n\n**Pergunta interpretativa:** O que este detalhe revela sobre culto ordenado, responsabilidade do príncipe e proteção da comunidade?",
       "scriptureRefs": [
         "Ezequiel 46:24"
       ],
@@ -386,7 +385,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas",
-      "body": "Evitar identificar figuras antigas com governos modernos sem evidência, ou transformar visões e narrativas em promessas automáticas.",
+      "body": "**Templo visionário:** interpretações literal-futura, idealizada e simbólica coexistem; o texto não resolve todas as questões arquitetônicas.\n\n**Sacrifícios:** a relação com a obra de Cristo e Hebreus 10 é debatida em diferentes tradições cristãs; não afirmar obrigatoriedade atual.\n\n**Ano da liberdade:** a ligação com as normas do jubileu em Levítico 25 é provável, mas a terminologia e aplicação exigem cuidado.\n\n**Príncipe:** sua identidade é debatida; o texto limita explicitamente seu poder patrimonial.",
       "scriptureRefs": [
         "Ezequiel 46:1-24"
       ],
@@ -396,7 +395,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas",
-      "body": "Ezequiel 40–48; Êxodo 40; Apocalipse 21–22. Compare contexto e gênero.",
+      "body": "**Levítico 25:8–17:** restituição e proteção patrimonial.\n\n**Números 28:3–15:** ofertas diárias, sabáticas e da lua nova para comparação.\n\n**1 Reis 21:1–19:** abuso régio contra propriedade de uma família.\n\n**Ezequiel 45:7–9:** limites à opressão dos governantes.\n\n**Ezequiel 47:1–12:** continuidade da visão do templo.\n\n**Hebreus 10:1–18:** reflexão cristã sobre sacrifícios e a obra de Cristo.",
       "scriptureRefs": [
         "Ezequiel 46:1-24"
       ],
@@ -406,7 +405,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão cristológica cautelosa",
-      "body": "A esperança da presença de Deus encontra diálogo com Apocalipse 21, sem apagar o contexto de Israel.",
+      "body": "Hebreus 10 apresenta o sacrifício de Cristo como decisivo para a compreensão cristã do culto. Essa conexão não permite ignorar o sentido original da visão de Ezequiel nem converter suas medidas e ofertas em exigências atuais para igrejas.",
       "scriptureRefs": [
         "Ezequiel 46:1-24"
       ],
@@ -426,7 +425,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios e respostas",
-      "body": "**1. Qual tema orienta Ezequiel 46:1–8?** A porta oriental e o príncipe.\n\n**2. Qual tema orienta Ezequiel 46:9–12?** Ordem das festas e circulação do povo.\n\n**3. Qual tema orienta Ezequiel 46:13–15?** Oferta diária.\n\n**4. Qual tema orienta Ezequiel 46:16–18?** Herança sem expropriação.\n\n**5. Qual tema orienta Ezequiel 46:19–24?** Cozinhas e preparação das ofertas.",
+      "body": "**1. Quando a porta oriental é aberta?** Aos sábados e nas luas novas (46:1).\n\n**2. Como o povo circula nas festas?** Entra por uma porta e sai pela oposta (46:9).\n\n**3. Que oferta ocorre toda manhã?** Um cordeiro acompanhado de cereal e azeite (46:13–15).\n\n**4. Qual é o limite do príncipe?** Não tomar a herança do povo (46:18).\n\n**5. Para que servem as cozinhas?** Preparar ofertas nos espaços designados (46:19–24).",
       "scriptureRefs": [
         "Ezequiel 46:1-24"
       ],
@@ -436,7 +435,7 @@ export const ezekiel46Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador",
-      "body": "**Tema:** A porta oriental e o príncipe.\n\n**Esboço:** A porta oriental e o príncipe (1–8); Ordem das festas e circulação do povo (9–12); Oferta diária (13–15); Herança sem expropriação (16–18); Cozinhas e preparação das ofertas (19–24).\n\n**Cuidado:** respeitar o contexto e não afirmar que o guia preliminar é estudo editorialmente concluído.",
+      "body": "**Tema:** Culto ordenado e liderança que não oprime.\n\n**Proposição:** A vida comunitária exige devoção constante, organização e limites claros ao poder.\n\n**Esboço:** (1) participação no culto (1–12); (2) constância diária (13–15); (3) justiça na herança (16–18); (4) serviço responsável (19–24).\n\n**Cuidados:** não impor sistema sacrificial antigo à igreja e não espiritualizar 46:18 a ponto de apagar a proibição concreta de desapropriação.",
       "scriptureRefs": [
         "Ezequiel 46:1-24"
       ],
