@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "@tanstack/react-router";
 import {
-  BookOpen, Flame, GraduationCap, HeartHandshake, Home, LogOut,
+  BookOpen, Compass, Flame, GraduationCap, HeartHandshake, Home, LogOut,
   MessageCircleHeart, Moon, NotebookPen, FilePenLine, Route as RouteIcon,
-  Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreVertical, UserRound, Menu, ChevronLeft,
+  Search, Settings, ShieldCheck, Star, Sun, Target, UsersRound, MoreVertical, UserRound, Menu, Bell, ChevronLeft,
 } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -19,66 +19,39 @@ import logo from "@/assets/logo.png";
 import { MusicControlButton } from "@/components/GlobalBackgroundMusic";
 
 const PRIMARY_NAV = [
-  { to: "/inicio", label: "Hoje", icon: Home },
-  { to: "/estudos", label: "Estudos", icon: BookOpen },
-  { to: "/comunidade", label: "Comunidade", icon: UsersRound },
-  { to: "/configuracoes", label: "Perfil", icon: UserRound },
-] as const;
-
-const LEARNING_NAV = [
-  { to: "/devocional", label: "Devocional completo", icon: Flame },
-  { to: "/biblia", label: "Ler a Bíblia", icon: BookOpen },
-  { to: "/trilhas", label: "Trilhas guiadas", icon: RouteIcon },
+  { to: "/inicio", label: "Início", icon: Home },
+  { to: "/estudos", label: "Estudo", icon: BookOpen },
+  { to: "/trilhas", label: "Trilhas", icon: RouteIcon },
   { to: "/escola", label: "Escola Bíblica", icon: GraduationCap },
-  { to: "/assistente", label: "Professor IA", icon: MessageCircleHeart },
-  { to: "/planos", label: "Planos de oração", icon: HeartHandshake },
-  { to: "/pesquisa", label: "Pesquisar", icon: Search },
 ] as const;
 
-const JOURNEY_NAV = [
-  { to: "/metas", label: "Minha jornada", icon: Target },
+const MORE_NAV = [
+  { to: "/assistente", label: "Assistente", icon: MessageCircleHeart },
+  { to: "/devocional", label: "Devocional", icon: Flame },
+  { to: "/planos", label: "Planos de oração", icon: HeartHandshake },
+  { to: "/estudos", label: "Estudos", icon: Compass },
+  { to: "/comunidade", label: "Comunidade", icon: UsersRound },
+  { to: "/biblia", label: "Bíblia", icon: BookOpen },
+  { to: "/pesquisa", label: "Pesquisa", icon: Search },
+  { to: "/diario", label: "Diário", icon: NotebookPen },
+  { to: "/minhas-mensagens", label: "Mensagens", icon: FilePenLine },
+  { to: "/metas", label: "Metas", icon: Target },
   { to: "/favoritos", label: "Favoritos", icon: Star },
-  { to: "/diario", label: "Minhas anotações", icon: NotebookPen },
-  { to: "/minhas-mensagens", label: "Minhas mensagens", icon: FilePenLine },
+  { to: "/configuracoes", label: "Configurações", icon: Settings },
 ] as const;
+
+const ALL_NAV = [...PRIMARY_NAV, ...MORE_NAV, { to: "/admin" as const, label: "Painel administrativo", icon: ShieldCheck }];
 
 function NavLinks({ onNavigate, isAdmin }: { onNavigate?: () => void; isAdmin: boolean }) {
-  const groups = [
-    { title: "Principal", items: PRIMARY_NAV },
-    { title: "Aprofundar", items: LEARNING_NAV },
-    { title: "Minha jornada", items: JOURNEY_NAV },
-  ] as const;
-
   return (
-    <nav aria-label="Navegação principal" className="space-y-5">
-      {groups.map((group) => (
-        <div key={group.title}>
-          <p className="mb-2 px-3 text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
-            {group.title}
-          </p>
-          <div className="flex flex-col gap-1">
-            {group.items.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={onNavigate}
-                className="group flex min-h-11 items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-sidebar-foreground/80 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground dark:text-slate-200/90 dark:hover:bg-blue-950/80 dark:hover:text-white"
-                activeProps={{ className: "group flex min-h-11 items-center gap-3 rounded-xl bg-sidebar-accent px-3.5 py-2.5 text-sm font-semibold text-sidebar-accent-foreground dark:bg-blue-900/70 dark:text-white" }}
-              >
-                <item.icon className="size-5 shrink-0 text-sidebar-foreground/70 dark:text-blue-200" aria-hidden />
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </div>
+    <nav aria-label="Navegação principal" className="flex flex-col gap-1">
+      {ALL_NAV.filter((item) => item.to !== "/admin" || isAdmin).map((item) => (
+        <Link key={item.to} to={item.to} onClick={onNavigate}
+          className="group flex min-h-11 items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-sidebar-foreground/80 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground dark:text-slate-200/90 dark:hover:bg-blue-950/80 dark:hover:text-white"
+          activeProps={{ className: "group flex min-h-11 items-center gap-3 rounded-xl bg-sidebar-accent px-3.5 py-2.5 text-sm font-semibold text-sidebar-accent-foreground dark:bg-blue-900/70 dark:text-white" }}>
+          <item.icon className="size-5 shrink-0 text-sidebar-foreground/70 dark:text-blue-200" aria-hidden />{item.label}
+        </Link>
       ))}
-      {isAdmin ? (
-        <div className="border-t border-sidebar-border pt-3">
-          <Link to="/admin" onClick={onNavigate} className="flex min-h-11 items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-sidebar-foreground hover:bg-sidebar-accent">
-            <ShieldCheck className="size-5" aria-hidden /> Painel administrativo
-          </Link>
-        </div>
-      ) : null}
     </nav>
   );
 }
@@ -232,6 +205,8 @@ export function AppShell({
             {homeHeader && (
               <div className="flex shrink-0 items-center gap-1">
                 <MusicControlButton className="hidden size-10 lg:inline-flex" />
+                <Link to="/pesquisa" aria-label="Pesquisar" className="flex size-8 sm:size-10 items-center justify-center rounded-full text-white hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-blue-600"><Search className="size-5" /></Link>
+                <Link to="/configuracoes" aria-label="Notificações e preferências" className="flex size-10 items-center justify-center rounded-full text-white hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-blue-600"><Bell className="size-5" /></Link>
               </div>
             )}
             {homeHeader ? (
@@ -250,16 +225,24 @@ export function AppShell({
         <main className={`mx-auto w-full max-w-screen-2xl min-w-0 flex-1 ${homeHeader ? "px-2 pt-[calc(3.5rem+env(safe-area-inset-top)+0.5rem)] pb-[calc(3.75rem+env(safe-area-inset-bottom)+0.5rem)] sm:px-3 lg:px-5 lg:pb-3" : "px-3 pt-4 pb-24 sm:px-5 sm:pt-5 lg:px-8 lg:pb-10"}`}>{children}</main>
 
         <nav aria-label="Navegação rápida" className="fixed inset-x-0 bottom-0 z-30 pb-[env(safe-area-inset-bottom)] border-t border-border/70 bg-white/95 backdrop-blur dark:bg-background/95 lg:hidden">
-          <div className="mx-auto grid max-w-2xl grid-cols-4">
-            {PRIMARY_NAV.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className="flex min-h-14 flex-col items-center justify-center gap-1 px-1 py-2 text-center text-xs font-medium text-muted-foreground transition-colors hover:text-primary"
-                activeProps={{ className: "flex min-h-14 flex-col items-center justify-center gap-1 px-1 py-2 text-center text-xs font-semibold text-primary" }}
-              >
-                <item.icon className="size-5" aria-hidden />
-                {item.label}
+          <div className={profileHeader ? "mx-auto grid max-w-2xl grid-cols-5" : homeHeader || !isAdmin ? "mx-auto grid max-w-2xl grid-cols-6" : "mx-auto grid max-w-2xl grid-cols-5"}>
+            {(profileHeader ? [
+              { to: "/inicio" as const, label: "Início", icon: Home },
+              { to: "/estudos" as const, label: "Estudos", icon: BookOpen },
+              { to: "/escola" as const, label: "Cursos", icon: GraduationCap },
+              { to: "/comunidade" as const, label: "Comunidade", icon: UsersRound },
+              { to: "/configuracoes" as const, label: "Perfil", icon: UserRound },
+            ] : homeHeader ? [
+              { to: "/inicio" as const, label: "Início", icon: Home },
+              { to: "/biblia" as const, label: "Bíblia", icon: BookOpen },
+              { to: "/trilhas" as const, label: "Cursos", icon: RouteIcon },
+              { to: "/comunidade" as const, label: "Comunidade", icon: UsersRound },
+              { to: "/metas" as const, label: "Minha Jornada", icon: Target },
+              { to: "/configuracoes" as const, label: "Perfil", icon: UserRound },
+            ] : isAdmin ? [...PRIMARY_NAV, { to: "/admin" as const, label: "Admin", icon: ShieldCheck }] : PRIMARY_NAV).map((item) => (
+              <Link key={item.to} to={item.to} className="flex min-h-12 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[9px] text-center leading-tight text-muted-foreground"
+                activeProps={{ className: "flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-2 text-[9px] text-center leading-tight font-semibold text-primary" }}>
+                <item.icon className="size-[19px]" aria-hidden />{item.label}
               </Link>
             ))}
           </div>

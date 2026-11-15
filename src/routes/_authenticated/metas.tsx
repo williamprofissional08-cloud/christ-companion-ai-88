@@ -17,7 +17,7 @@ export const Route = createFileRoute("/_authenticated/metas")({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { title: "Metas espirituais — Caminho Divino" },
+      { title: "Metas espirituais — Caminhando com Cristo" },
       {
         name: "description",
         content:
