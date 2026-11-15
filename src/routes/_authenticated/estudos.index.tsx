@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { getPublishedManagedCatalog } from "@/lib/admin.functions";
 import { BIBLE_BOOKS, BIBLE_CHAPTER_TOTAL, getChapterStudySlug } from "@/lib/content/bible-books";
 import { getBibleBookCover } from "@/lib/content/bible-book-covers";
+import { getBibleBookPhoto } from "@/lib/content/bible-book-photographs";
 import { deduplicateStudies, getStudy, STUDIES, STUDY_CATEGORIES } from "@/lib/content/studies";
 import { CURATED_STUDIES } from "@/lib/content/curated-studies";
 import { resolveManagedStudy } from "@/lib/content/managed-study-catalog";
@@ -257,8 +258,22 @@ function EstudosPage() {
                   <button type="button" onClick={() => setExpandedBook(isOpen ? null : book.slug)}
                     aria-expanded={isOpen} aria-controls={"book-chapters-" + book.slug}
                     className="flex w-full items-center gap-3 p-3 text-left outline-none focus-visible:ring-2 focus-visible:ring-primary sm:p-3.5">
-                    <img src={getBibleBookCover(book)} alt={"Capa temática ilustrada de " + book.name} loading="lazy" decoding="async"
-                      className="h-22 w-28 shrink-0 rounded-xl bg-[#173e60] object-cover shadow-sm sm:h-25 sm:w-36" />
+                    <span className="relative block h-22 w-28 shrink-0 overflow-hidden rounded-xl bg-[#173e60] shadow-sm sm:h-25 sm:w-36">
+                      <img
+                        src={getBibleBookPhoto(book)}
+                        alt={"Imagem temática do livro de " + book.name}
+                        loading="lazy"
+                        decoding="async"
+                        onError={(event) => {
+                          // A capa SVG exclusiva garante que nenhum livro fique sem imagem.
+                          event.currentTarget.onerror = null;
+                          event.currentTarget.src = getBibleBookCover(book);
+                        }}
+                        className="absolute inset-0 size-full object-cover"
+                      />
+                      <span aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#092a49]/85 via-[#092a49]/10 to-transparent" />
+                      <span aria-hidden="true" className="absolute bottom-2 left-2 right-2 truncate font-display text-xs font-bold text-white drop-shadow sm:text-sm">{book.name}</span>
+                    </span>
                     <span className="min-w-0 flex-1">
                       <span className="block font-display text-lg font-bold leading-snug text-foreground">{book.name}</span>
                       <span className="mt-1 block text-xs text-muted-foreground">{book.testament} · {book.category}</span>
