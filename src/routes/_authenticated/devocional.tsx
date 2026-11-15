@@ -13,9 +13,10 @@ import { useBrazilDay } from "@/hooks/use-brazil-day";
 import { BIBLE_BOOKS, parseBibleReference } from "@/lib/bible-catalog";
 
 export const Route = createFileRoute("/_authenticated/devocional")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    periodo: search.periodo === "manha" || search.periodo === "noite" ? search.periodo : undefined,
-  }),
+  validateSearch: (search: Record<string, unknown>): { periodo?: "manha" | "noite" } => {
+    const raw = search["periodo"];
+    return { periodo: raw === "manha" ? "manha" : raw === "noite" ? "noite" : undefined };
+  },
   head: () => ({
     meta: [
       { property: "og:type", content: "website" },
