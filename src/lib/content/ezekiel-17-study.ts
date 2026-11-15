@@ -1,47 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 17 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 17 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel17Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 17 interpreta a política de Judá por uma parábola de duas águias e uma videira, concluindo com a promessa de um novo cedro.",
-  "historicalContext": "Crise de Judá entre a deportação de Joaquim em 597 a.C. e a destruição de Jerusalém em 587/586 a.C., sob Zedequias e a influência de Babilônia e Egito.",
+  "intro": "Ezequiel 17 apresenta o enigma de duas águias, um cedro e uma videira. A explicação revela a crise política de Judá entre Babilônia e Egito e a quebra de juramento por Zedequias. O capítulo termina com a promessa de Deus plantar um novo ramo capaz de oferecer abrigo.",
+  "historicalContext": "Após a deportação de Joaquim em 597 a.C., Babilônia instalou Zedequias no trono de Judá. A tentativa de buscar apoio do Egito contra Babilônia precedeu a destruição de Jerusalém em 586 a.C. Ezequiel interpreta essa política por meio de uma parábola sobre fidelidade a pactos e esperança de restauração.",
   "keyPoints": [
     {
-      "title": "Enigma político",
-      "text": "Duas águias e uma videira representam alianças e dependências (1–10)."
+      "title": "1–10: Enigma das duas águias",
+      "text": "Cedro e videira representam a liderança de Judá e suas relações com impérios."
     },
     {
-      "title": "Interpretação histórica",
-      "text": "A parábola denuncia a ruptura do juramento de Zedequias (11–21)."
+      "title": "11–15: Explicação histórica",
+      "text": "Babilônia depõe um rei, instala outro e Judá busca auxílio egípcio."
     },
     {
-      "title": "Novo cedro",
-      "text": "Deus promete plantar um broto que crescerá e acolherá aves (22–24)."
+      "title": "16–21: O juramento quebrado",
+      "text": "A rebelião de Zedequias conduz à derrota e à dispersão."
+    },
+    {
+      "title": "22–24: O ramo plantado por Deus",
+      "text": "Uma nova árvore anuncia restauração, proteção e reversão de poder."
     }
   ],
-  "application": "Assumir responsabilidade por compromissos, avaliar alianças com discernimento e preservar esperança sem triunfalismo.",
+  "application": "Tratar compromissos com seriedade, reconhecer o custo humano de decisões políticas e desconfiar de promessas de segurança baseadas apenas em alianças de poder. A esperança do ramo aponta para liderança que acolhe e protege.",
   "crossReferences": [
     "2 Reis 24:10-20",
     "2 Reis 25:1-7",
-    "Jeremias 27:8-15",
-    "Ezequiel 12:12-13",
-    "Isaías 11:1-10",
-    "Lucas 1:32-33"
+    "2 Crônicas 36:11-13",
+    "Jeremias 37:5-10",
+    "Ezequiel 19:10-14",
+    "Isaías 11:1-10"
   ],
   "questions": [
-    "Como o próprio capítulo explica as águias?",
-    "Por que o juramento de Zedequias é central?",
-    "O que muda no v. 22?",
-    "Quais são os limites da leitura messiânica?"
+    "Quem é representado pela primeira águia?",
+    "O que a segunda águia simboliza?",
+    "Qual governante rompeu o pacto com Babilônia?",
+    "Por que o juramento tem importância moral e religiosa?",
+    "Como a árvore final contrasta com a videira frágil?"
   ],
-  "conclusion": "O enigma revela a responsabilidade de lideranças e termina com esperança de restauração iniciada por Deus.",
+  "conclusion": "O enigma denuncia a instabilidade de Judá e a quebra de um compromisso político, mas termina com uma promessa: Deus pode fazer brotar um futuro de justiça e abrigo onde a dinastia parecia arruinada.",
   "prayer": "Senhor, ajuda-nos a agir com fidelidade e a esperar em ti com responsabilidade. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 17:1–24 (paráfrase livre)",
-      "body": "**Paráfrase livre autoral para estudo, não substitui tradução bíblica.**\n\n**1.** A palavra divina introduz a nova unidade.\n\n**2.** O profeta deve propor enigma e parábola.\n\n**3.** Uma águia majestosa toma a copa de um cedro no Líbano.\n\n**4.** A ponta do cedro é levada à cidade de mercadores.\n\n**5.** A águia planta uma semente da terra junto a águas abundantes.\n\n**6.** A semente cresce como videira baixa, com ramos voltados à águia.\n\n**7.** Outra grande águia atrai as raízes e ramos da videira.\n\n**8.** A videira já estava em solo favorável e podia frutificar.\n\n**9.** O oráculo pergunta se a videira prosperará após desviar sua dependência.\n\n**10.** O vento oriental ameaça secar a videira em seu canteiro.\n\n**11.** A palavra do Senhor introduz a explicação da parábola.\n\n**12.** O rei da Babilônia veio a Jerusalém e deportou seu rei e dirigentes.\n\n**13.** O conquistador escolheu um membro da família real e exigiu juramento.\n\n**14.** O pacto buscava manter o reino fraco, mas estável.\n\n**15.** O governante buscou cavalos e soldados do Egito, rompendo o pacto.\n\n**16.** O oráculo anuncia que o governante morrerá na Babilônia.\n\n**17.** O faraó não conseguirá livrar Jerusalém durante o cerco.\n\n**18.** A quebra deliberada do juramento é repetida como motivo da derrota.\n\n**19.** O juramento é tratado como questão diante do próprio Senhor.\n\n**20.** A rede simboliza captura e deportação para Babilônia.\n\n**21.** Tropas serão dispersas e fugitivos morrerão na guerra.\n\n**22.** Deus anuncia que plantará pessoalmente um broto tenro do cedro.\n\n**23.** O broto se torna cedro frutífero, oferecendo sombra às aves.\n\n**24.** Deus humilha árvores altas e eleva baixas, revertendo expectativas.",
+      "body": "Leia Ezequiel 17:1–24 no texto bíblico do aplicativo. As notas são **paráfrases livres autorais** acompanhadas de explicação, não tradução oficial.",
       "scriptureRefs": [
         "Ezequiel 17:1-24"
       ],
@@ -83,7 +88,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 17:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A palavra divina introduz a nova unidade.\n\n**Exegese contextual:** O capítulo segue a denúncia de Jerusalém e prepara uma alegoria política com interpretação explícita.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** A palavra do Senhor vem a Ezequiel.\n\n**Exegese contextual:** O oráculo introduz uma parábola política que depois será explicada explicitamente.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:1"
       ],
@@ -93,7 +98,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 17:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta deve propor enigma e parábola.\n\n**Exegese contextual:** O próprio texto identifica o gênero figurado, evitando ler águias e plantas como animais e vegetais literais.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O profeta deve propor um enigma à casa de Israel.\n\n**Exegese contextual:** O gênero de enigma convida os ouvintes a interpretar símbolos antes de conhecer os personagens históricos.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:2"
       ],
@@ -103,7 +108,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 17:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma águia majestosa toma a copa de um cedro no Líbano.\n\n**Exegese contextual:** A primeira águia será associada ao rei da Babilônia; o cedro remete à dinastia de Jerusalém.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** Uma águia majestosa arranca o topo de um cedro no Líbano.\n\n**Exegese contextual:** A águia representa o poder imperial babilônico; o cedro evoca a casa real de Judá.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:3"
       ],
@@ -113,7 +118,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 17:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A ponta do cedro é levada à cidade de mercadores.\n\n**Exegese contextual:** A remoção figura a deportação do rei e da elite; a identificação aparece nos vv. 12–13.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O topo do cedro é levado a uma cidade de comércio.\n\n**Exegese contextual:** A retirada figura a deportação da liderança de Jerusalém para Babilônia.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:4"
       ],
@@ -123,7 +128,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 17:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A águia planta uma semente da terra junto a águas abundantes.\n\n**Exegese contextual:** A semente corresponde à instalação de um membro da casa real em condições de dependência.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** A águia planta uma semente da terra em solo fértil.\n\n**Exegese contextual:** A semente aponta para um membro da família real mantido no governo sob tutela babilônica.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:5"
       ],
@@ -133,7 +138,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 17:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A semente cresce como videira baixa, com ramos voltados à águia.\n\n**Exegese contextual:** A baixa estatura comunica um reino subordinado que poderia sobreviver dentro do pacto.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** A planta cresce como videira baixa voltada para a primeira águia.\n\n**Exegese contextual:** A baixa estatura indica autonomia limitada e dependência política do governante instalado.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:6"
       ],
@@ -143,7 +148,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 17:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Outra grande águia atrai as raízes e ramos da videira.\n\n**Exegese contextual:** A segunda águia corresponde ao Egito, procurado por Zedequias para apoio militar.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** Uma segunda águia atrai raízes e ramos da videira.\n\n**Exegese contextual:** A nova águia representa o Egito, a quem Judá buscou como aliado alternativo.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:7"
       ],
@@ -153,7 +158,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 17:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A videira já estava em solo favorável e podia frutificar.\n\n**Exegese contextual:** O contraste torna a mudança de aliança uma decisão deliberada, não uma necessidade agronômica.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** A videira já estava plantada em terra irrigada e capaz de frutificar.\n\n**Exegese contextual:** O cenário destaca que havia condições para subsistir dentro do acordo político existente.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:8"
       ],
@@ -163,7 +168,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 17:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo pergunta se a videira prosperará após desviar sua dependência.\n\n**Exegese contextual:** O arrancamento das raízes simboliza o fracasso político da rebelião.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** A parábola pergunta se a videira sobreviverá após mudar sua lealdade.\n\n**Exegese contextual:** A ameaça de arrancamento dramatiza a consequência da ruptura do pacto.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:9"
       ],
@@ -173,7 +178,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 17:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O vento oriental ameaça secar a videira em seu canteiro.\n\n**Exegese contextual:** O vento funciona como imagem de ruína, não previsão meteorológica específica.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O vento oriental fará secar a videira.\n\n**Exegese contextual:** O vento do leste é imagem de devastação e fragilidade diante do poder invasor.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:10"
       ],
@@ -183,7 +188,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 17:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A palavra do Senhor introduz a explicação da parábola.\n\n**Exegese contextual:** A divisão entre enigma e interpretação é explícita.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** Uma nova palavra introduz a interpretação do enigma.\n\n**Exegese contextual:** A narrativa passa do símbolo à identificação histórica dos personagens.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:11"
       ],
@@ -193,7 +198,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 17:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O rei da Babilônia veio a Jerusalém e deportou seu rei e dirigentes.\n\n**Exegese contextual:** A referência corresponde à deportação de Joaquim em 597 a.C., narrada em 2 Reis 24:10–17.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O rei da Babilônia levou o rei e os nobres de Jerusalém.\n\n**Exegese contextual:** A explicação aponta para a deportação de Joaquim e da elite de Judá.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:12"
       ],
@@ -203,7 +208,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 17:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O conquistador escolheu um membro da família real e exigiu juramento.\n\n**Exegese contextual:** A referência aponta a Zedequias, instalado sob autoridade babilônica.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O conquistador estabeleceu outro membro da família real mediante juramento.\n\n**Exegese contextual:** A referência corresponde à instalação de Zedequias sob compromisso com Babilônia.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:13"
       ],
@@ -213,7 +218,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 17:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O pacto buscava manter o reino fraco, mas estável.\n\n**Exegese contextual:** O oráculo não celebra imperialismo; descreve as condições políticas impostas.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O reino foi mantido fraco, mas poderia subsistir se guardasse o acordo.\n\n**Exegese contextual:** A subordinação é descrita como condição de sobrevivência política naquele momento.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:14"
       ],
@@ -223,7 +228,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 17:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O governante buscou cavalos e soldados do Egito, rompendo o pacto.\n\n**Exegese contextual:** A acusação enfatiza juramento quebrado e confiança em ajuda militar externa.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O governante buscou cavalos e soldados no Egito e quebrou o pacto.\n\n**Exegese contextual:** O texto condena a rebelião de Zedequias e a expectativa de socorro egípcio.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:15"
       ],
@@ -233,7 +238,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 17:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo anuncia que o governante morrerá na Babilônia.\n\n**Exegese contextual:** A história de Zedequias em 2 Reis 25:4–7 ajuda a situar a previsão.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O juramento quebrado levará o governante à Babilônia.\n\n**Exegese contextual:** A profecia associa o destino de Zedequias à ruptura de sua palavra.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:16"
       ],
@@ -243,7 +248,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 17:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O faraó não conseguirá livrar Jerusalém durante o cerco.\n\n**Exegese contextual:** O contraste mostra a fragilidade da expectativa de socorro egípcio.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O faraó não conseguirá salvar Jerusalém do cerco.\n\n**Exegese contextual:** A esperança em reforços egípcios é exposta como insuficiente diante do ataque.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:17"
       ],
@@ -253,7 +258,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 17:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A quebra deliberada do juramento é repetida como motivo da derrota.\n\n**Exegese contextual:** O tema central é a responsabilidade por compromissos assumidos.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** A quebra do juramento é repetida como causa da ruína.\n\n**Exegese contextual:** A repetição ressalta a seriedade ética de compromissos políticos assumidos.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:18"
       ],
@@ -263,7 +268,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 17:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O juramento é tratado como questão diante do próprio Senhor.\n\n**Exegese contextual:** O texto conecta fidelidade política e responsabilidade religiosa, sem transformar qualquer poder humano em autoridade absoluta.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** Deus chama o juramento quebrado de seu próprio juramento.\n\n**Exegese contextual:** A dimensão religiosa do pacto torna a traição mais que simples erro diplomático.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:19"
       ],
@@ -273,7 +278,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 17:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A rede simboliza captura e deportação para Babilônia.\n\n**Exegese contextual:** A imagem retoma o uso profético de armadilha em Ezequiel 12:13.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** Uma rede captura o governante, que será levado a Babilônia.\n\n**Exegese contextual:** A imagem de caça apresenta a inevitabilidade do julgamento de Zedequias.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:20"
       ],
@@ -283,7 +288,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 17:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Tropas serão dispersas e fugitivos morrerão na guerra.\n\n**Exegese contextual:** O texto descreve a gravidade do cerco, não autoriza violência atual.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** Tropas serão derrotadas e sobreviventes dispersos.\n\n**Exegese contextual:** O colapso do exército revela o custo humano da decisão real.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:21"
       ],
@@ -293,7 +298,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 17:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus anuncia que plantará pessoalmente um broto tenro do cedro.\n\n**Exegese contextual:** O agente muda: depois da política das águias, a restauração é iniciativa divina.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O próprio Senhor promete plantar um ramo tenro do alto cedro.\n\n**Exegese contextual:** A iniciativa divina contrasta com as manobras das águias e abre esperança para a casa real.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:22"
       ],
@@ -303,7 +308,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 17:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O broto se torna cedro frutífero, oferecendo sombra às aves.\n\n**Exegese contextual:** A imagem final aponta para proteção e abrangência da restauração, em contraste com a videira frustrada.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** O ramo crescerá em monte de Israel e abrigará aves sob sua sombra.\n\n**Exegese contextual:** A imagem apresenta governo restaurado como proteção e acolhimento, não dominação predatória.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:23"
       ],
@@ -313,7 +318,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 17:24 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus humilha árvores altas e eleva baixas, revertendo expectativas.\n\n**Exegese contextual:** O encerramento enfatiza soberania divina e esperança além do fracasso da dinastia.\n\n**Pergunta de observação:** Este versículo apresenta um símbolo, sua interpretação histórica ou a promessa final?",
+      "body": "**Paráfrase livre autoral:** Deus rebaixa árvores altas e exalta as baixas.\n\n**Exegese contextual:** A reversão final enfatiza soberania divina sobre impérios e dinastias.\n\n**Pergunta interpretativa:** Como o símbolo deste versículo ilumina a crise de Judá, a fidelidade aos pactos ou a esperança futura?",
       "scriptureRefs": [
         "Ezequiel 17:24"
       ],
@@ -363,7 +368,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas",
-      "body": "A identificação histórica das águias é amplamente aceita pela explicação dos vv. 12–15. Há debate sobre o alcance do broto dos vv. 22–24: esperança davídica histórica, expectativa messiânica ou ambas em leituras posteriores. A imagem não fornece data de restauração nem autoriza equiparar automaticamente qualquer Estado moderno à árvore prometida.",
+      "body": "**A primeira águia:** a explicação do capítulo identifica o rei da Babilônia (vv. 12–13).\n\n**A segunda águia:** o Egito aparece explicitamente no v. 15 como aliado buscado por Zedequias.\n\n**O juramento:** a passagem trata da responsabilidade por compromissos políticos; não exige obediência irrestrita a qualquer poder injusto em todas as épocas.\n\n**O ramo tenro:** pode representar a esperança de restauração davídica; a leitura messiânica cristã é posterior e deve ser distinguida do contexto do exílio.",
       "scriptureRefs": [
         "Ezequiel 17:1-24"
       ],
@@ -373,7 +378,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências bíblicas comentadas",
-      "body": "**2 Reis 24:10–20:** deportação de Joaquim e instalação de Zedequias. **2 Reis 25:1–7:** cerco e captura. **Jeremias 27:8–15:** orientação sobre domínio babilônico no contexto. **Ezequiel 12:12–13:** captura do príncipe. **Isaías 11:1–10:** broto davídico em outra tradição profética, com semelhanças e diferenças.",
+      "body": "**2 Reis 24:10–20:** deportação de Joaquim e instalação de Zedequias.\n\n**2 Reis 25:1–7:** cerco e captura de Zedequias.\n\n**2 Crônicas 36:11–13:** ruptura do juramento.\n\n**Jeremias 37:5–10:** expectativa de intervenção egípcia.\n\n**Ezequiel 19:10–14:** outra imagem vegetal da dinastia.\n\n**Isaías 11:1–10:** esperança de um rebento justo.",
       "scriptureRefs": [
         "Ezequiel 17:1-24"
       ],
@@ -383,7 +388,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria inventada",
-      "body": "Leitores cristãos podem relacionar o broto e a esperança davídica às expectativas messiânicas associadas a Jesus (Lucas 1:32–33). Essa é uma leitura canônica posterior: Ezequiel 17 não nomeia Jesus, e os símbolos políticos dos vv. 1–21 devem permanecer em seu contexto histórico.",
+      "body": "Leitores cristãos relacionam o ramo plantado por Deus à esperança messiânica de um rei justo e acolhedor, à luz de Isaías 11:1–10 e Lucas 1:32–33. Essa leitura canônica não apaga a crítica histórica à política de Zedequias.",
       "scriptureRefs": [
         "Ezequiel 17:1-24"
       ],
@@ -403,7 +408,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas",
-      "body": "**1. Qual gênero é indicado no v. 2?** Enigma e parábola.\n\n**2. Quem é a primeira águia?** O rei da Babilônia (v. 12).\n\n**3. Quem busca apoio egípcio?** O governante instalado sob juramento, associado a Zedequias (vv. 13–15).\n\n**4. Por que a videira fracassa?** A parábola denuncia ruptura de pacto e dependência de outra potência (vv. 9–10, 15–21).\n\n**5. Quem planta o novo broto?** O próprio Senhor (vv. 22–24).",
+      "body": "**1. Que gênero inicia o capítulo?** Um enigma ou parábola (17:2).\n\n**2. Quem levou o rei de Jerusalém à Babilônia?** O rei babilônico (17:12).\n\n**3. A quem Zedequias pediu cavalos e tropas?** Ao Egito (17:15).\n\n**4. Que compromisso foi quebrado?** O pacto e juramento com Babilônia (17:13–19).\n\n**5. Quem planta o ramo final?** O próprio Senhor (17:22–24).",
       "scriptureRefs": [
         "Ezequiel 17:1-24"
       ],
@@ -413,7 +418,7 @@ export const ezekiel17Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — depois das águias, o broto",
-      "body": "**Tema:** Compromissos humanos e esperança que Deus inaugura.\n\n**Proposição:** O fracasso de alianças infiéis não encerra a possibilidade de restauração divina.\n\n**Esboço:** (1) o enigma político (1–10); (2) a responsabilidade de Zedequias (11–21); (3) o novo cedro (22–24).\n\n**Cuidado homilético:** não transformar a profecia em apoio irrestrito a governos, nem prometer prosperidade política a uma nação atual.",
+      "body": "**Tema:** Alianças frágeis e esperança plantada por Deus.\n\n**Proposição:** A quebra de compromissos e a confiança cega em poderes humanos geram ruína, mas a esperança de governo justo não depende apenas deles.\n\n**Esboço:** (1) o enigma da videira (1–10); (2) os reis e as águias (11–15); (3) a palavra quebrada (16–21); (4) o ramo de esperança (22–24).\n\n**Cuidados:** diferenciar descrição histórica de prescrições políticas universais; não romantizar impérios; distinguir esperança messiânica de interpretação imediata.",
       "scriptureRefs": [
         "Ezequiel 17:1-24"
       ],
