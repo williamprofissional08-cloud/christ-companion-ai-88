@@ -1,3 +1,13 @@
+import { ezekiel45Study } from "./ezekiel-45-study";
+import { ezekiel44Study } from "./ezekiel-44-study";
+import { ezekiel43Study } from "./ezekiel-43-study";
+import { ezekiel42Study } from "./ezekiel-42-study";
+import { ezekiel41Study } from "./ezekiel-41-study";
+import { ezekiel40Study } from "./ezekiel-40-study";
+import { ezekiel39Study } from "./ezekiel-39-study";
+import { ezekiel38Study } from "./ezekiel-38-study";
+import { ezekiel37Study } from "./ezekiel-37-study";
+import { ezekiel36Study } from "./ezekiel-36-study";
 import { ezekiel35Study } from "./ezekiel-35-study";
 import { ezekiel34Study } from "./ezekiel-34-study";
 import { ezekiel33Study } from "./ezekiel-33-study";
@@ -1029,6 +1039,16 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-ezequiel-cap-33": ezekiel33Study,
   "biblia-ezequiel-cap-34": ezekiel34Study,
   "biblia-ezequiel-cap-35": ezekiel35Study,
+  "biblia-ezequiel-cap-36": ezekiel36Study,
+  "biblia-ezequiel-cap-37": ezekiel37Study,
+  "biblia-ezequiel-cap-38": ezekiel38Study,
+  "biblia-ezequiel-cap-39": ezekiel39Study,
+  "biblia-ezequiel-cap-40": ezekiel40Study,
+  "biblia-ezequiel-cap-41": ezekiel41Study,
+  "biblia-ezequiel-cap-42": ezekiel42Study,
+  "biblia-ezequiel-cap-43": ezekiel43Study,
+  "biblia-ezequiel-cap-44": ezekiel44Study,
+  "biblia-ezequiel-cap-45": ezekiel45Study,
   "biblia-marcos-cap-4": mark4Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
