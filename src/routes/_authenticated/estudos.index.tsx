@@ -163,7 +163,7 @@ function EstudosPage() {
                 (category === "Doutrinas" ? "border-[#d4a957] bg-[#123f60] text-white" : "border-border bg-card text-foreground hover:bg-primary/10")}>
               <GraduationCap className="size-4" aria-hidden="true" /> Teologia
             </button>
-            <Link to="/devocional" className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border border-border bg-card px-4 text-sm font-semibold text-foreground hover:bg-primary/10">
+            <Link to="/devocional" search={{}} className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border border-border bg-card px-4 text-sm font-semibold text-foreground hover:bg-primary/10">
               <Heart className="size-4" aria-hidden="true" /> Devocional
             </Link>
             <button type="button" onClick={() => openFocus("lideranca")}
