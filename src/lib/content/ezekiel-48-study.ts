@@ -1,47 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 48 — revisão lexical preliminar, não estudo editorialmente concluído. */
+/** Ezequiel 48 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel48Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Estudo em revisão de Ezequiel 48.",
-  "historicalContext": "Exílio babilônico e visão de restauração.",
+  "intro": "Ezequiel 48 encerra o livro com a distribuição da terra entre as tribos, uma área central para santuário, sacerdotes, levitas e cidade, limites ao território do príncipe e a cidade chamada 'O Senhor Está Ali'.",
+  "historicalContext": "A visão final de Ezequiel 40–48 responde à experiência do exílio, à perda da terra e à partida da glória divina do templo em Ezequiel 10–11. As faixas tribais e as medidas da cidade compõem uma geografia idealizada ou futura segundo diferentes leituras. O sentido culminante está na presença restaurada do Senhor.",
   "keyPoints": [
     {
       "title": "1–7: Tribos ao norte",
-      "text": "Unidade literária de Ezequiel 48."
+      "text": "Sete faixas tribais são distribuídas até Judá, imediatamente acima da área central."
     },
     {
-      "title": "8–22: Porção santa, cidade e príncipe",
-      "text": "Unidade literária de Ezequiel 48."
+      "title": "8–22: Santuário, cidade e príncipe",
+      "text": "Áreas consagradas e comuns recebem funções distintas; o governante possui limites territoriais."
     },
     {
       "title": "23–29: Tribos ao sul",
-      "text": "Unidade literária de Ezequiel 48."
+      "text": "Cinco faixas completam a distribuição da herança."
     },
     {
-      "title": "30–35: Portas e o nome O Senhor Está Ali",
-      "text": "Unidade literária de Ezequiel 48."
+      "title": "30–35: Portas e presença divina",
+      "text": "Doze portas tribais conduzem ao nome final da cidade: 'O Senhor Está Ali'."
     }
   ],
-  "application": "Buscar fidelidade e justiça.",
+  "application": "Valorizar justiça na distribuição de recursos, limites ao poder dos governantes e participação de toda a comunidade. O ponto culminante da esperança bíblica não é a precisão de um mapa moderno, mas a presença de Deus com seu povo.",
   "crossReferences": [
-    "Ezequiel 40:1-49",
-    "Apocalipse 21:1-27"
+    "Josué 13:1-7",
+    "Ezequiel 10:18-19",
+    "Ezequiel 37:26-28",
+    "Ezequiel 46:16-18",
+    "Ezequiel 47:13-23",
+    "Apocalipse 21:12-14",
+    "Apocalipse 21:22-27"
   ],
   "questions": [
-    "Como o tema tribos ao norte se desenvolve em 1–7?",
-    "Como o tema porção santa, cidade e príncipe se desenvolve em 8–22?",
-    "Como o tema tribos ao sul se desenvolve em 23–29?",
-    "Como o tema portas e o nome o senhor está ali se desenvolve em 30–35?"
+    "Por que a área do santuário ocupa posição central?",
+    "Como a distribuição limita a apropriação da terra pelo príncipe?",
+    "Qual a relação entre as doze portas e a identidade comunitária?",
+    "Como o nome final responde à saída da glória divina em Ezequiel 10–11?"
   ],
-  "conclusion": "O capítulo tem roteiro estrutural, notas de observação textual e aplicações preliminares; a exegese aprofundada e a revisão humana permanecem pendentes.",
+  "conclusion": "Ezequiel termina não com uma batalha, mas com uma cidade organizada em torno da presença divina: 'O Senhor Está Ali'.",
   "prayer": "Senhor, dá-nos entendimento. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — consulte os versículos",
-      "body": "Leia Ezequiel 48:1–35 no texto bíblico do aplicativo. Este guia contém comentários autorais preliminares, **não uma tradução ou paráfrase integral**.",
+      "body": "Leia Ezequiel 48:1–35 no texto bíblico do aplicativo. As notas contêm **paráfrases livres autorais** e comentários específicos, não transcrição de tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 48:1-35"
       ],
@@ -121,7 +126,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 48:1 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:1:** Este versículo integra o movimento **tribos ao norte**. Observe especialmente os termos e imagens presentes no texto bíblico: **nomes, tribos, Desde, extremo, norte**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 1 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **nomes** neste verso e como ela contribui para o desenvolvimento de **tribos ao norte**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Dã recebe a faixa mais ao norte da terra repartida.\n\n**Exegese contextual:** A enumeração começa pelo extremo norte e organiza as tribos em faixas leste–oeste; trata-se de uma geografia visionária, não de mapa cadastral atual.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:1"
       ],
@@ -131,7 +136,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 48:2 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:2:** Este versículo integra o movimento **tribos ao norte**. Observe especialmente os termos e imagens presentes no texto bíblico: **Junto, limite, desde, extremo, oriente**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 2 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao norte**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Aser recebe a faixa imediatamente ao sul de Dã.\n\n**Exegese contextual:** A repetição da fórmula territorial reforça a distribuição ordenada, em contraste com a perda de terra vivida no exílio.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:2"
       ],
@@ -141,7 +146,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 48:3 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:3:** Este versículo integra o movimento **tribos ao norte**. Observe especialmente os termos e imagens presentes no texto bíblico: **Junto, limite, desde, extremo, oriente**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 3 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao norte**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Naftali ocupa a faixa seguinte ao sul.\n\n**Exegese contextual:** O nome tribal preserva a memória da comunidade de Israel dentro de uma nova disposição espacial.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:3"
       ],
@@ -151,7 +156,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 48:4 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:4:** Este versículo integra o movimento **tribos ao norte**. Observe especialmente os termos e imagens presentes no texto bíblico: **Junto, limite, Naftali, desde, extremo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 4 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao norte**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Manassés recebe uma faixa entre Naftali e Efraim.\n\n**Exegese contextual:** Manassés e Efraim representam as duas linhagens de José na repartição, em diálogo com Ezequiel 47:13.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:4"
       ],
@@ -161,7 +166,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 48:5 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:5:** Este versículo integra o movimento **tribos ao norte**. Observe especialmente os termos e imagens presentes no texto bíblico: **Junto, limite, Manassés, desde, extremo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 5 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao norte**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Efraim recebe sua porção ao sul de Manassés.\n\n**Exegese contextual:** A proximidade das duas tribos ligadas a José sublinha a estrutura deliberada da distribuição.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:5"
       ],
@@ -171,7 +176,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 48:6 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:6:** Este versículo integra o movimento **tribos ao norte**. Observe especialmente os termos e imagens presentes no texto bíblico: **Junto, limite, Efraim, desde, extremo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 6 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao norte**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Rúben ocupa a faixa abaixo de Efraim.\n\n**Exegese contextual:** A ordem visionária não corresponde simplesmente a todas as disposições territoriais do livro de Josué.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:6"
       ],
@@ -181,7 +186,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 48:7 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:7:** Este versículo integra o movimento **tribos ao norte**. Observe especialmente os termos e imagens presentes no texto bíblico: **Junto, limite, Rúben, desde, extremo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 7 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao norte**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Judá recebe a última faixa antes da área central reservada.\n\n**Exegese contextual:** A posição de Judá junto ao setor do santuário prepara a transição das heranças tribais para o espaço comum.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:7"
       ],
@@ -191,7 +196,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 48:8 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:8:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **junto, limite, desde, oriente, ocidente**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 8 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **junto** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Uma faixa central é reservada, com o santuário em seu meio.\n\n**Exegese contextual:** A localização central do templo na distribuição mostra que a presença divina orienta a organização comunitária.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:8"
       ],
@@ -201,7 +206,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 48:9 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:9:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **oferta, reservareis, vinte, cinco, canas**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 9 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **oferta** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A oferta reservada ao Senhor recebe dimensões específicas.\n\n**Exegese contextual:** As medidas conferem caráter planejado à visão; traduções e unidades de medida podem variar entre tradições textuais.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:9"
       ],
@@ -211,7 +216,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 48:10 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:10:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **oferta, santa, sacerdotes, vinte, cinco**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 10 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **oferta** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A área sacerdotal circunda o santuário.\n\n**Exegese contextual:** O espaço consagrado liga serviço sacerdotal e presença divina sem transformar o terreno em posse privada do governante.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:10"
       ],
@@ -221,7 +226,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 48:11 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:11:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **sacerdotes, santificados, filhos, Zadoque, guardaram**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 11 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **sacerdotes** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os descendentes fiéis de Zadoque recebem a área sacerdotal.\n\n**Exegese contextual:** O texto valoriza a fidelidade no exercício do sacerdócio e distingue os sacerdotes de outros levitas na visão.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:11"
       ],
@@ -231,7 +236,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 48:12 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:12:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **terão, oferta, terra, parte, santíssima**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 12 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **terão** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A parte dos sacerdotes é descrita como especialmente santa.\n\n**Exegese contextual:** A linguagem de santidade marca a função do espaço, não superioridade moral automática de seus ocupantes.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:12"
       ],
@@ -241,7 +246,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 48:13 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:13:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **Levitas, terão, vizinhança, limite, sacerdotes**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 13 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Levitas** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os levitas recebem área adjacente à dos sacerdotes.\n\n**Exegese contextual:** A distribuição prevê espaço próprio para diferentes responsabilidades no serviço do templo.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:13"
       ],
@@ -251,7 +256,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 48:14 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:14:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **venderão, disto, trocarão, transferirão, primícias**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 14 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **venderão** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A porção consagrada não pode ser vendida nem trocada.\n\n**Exegese contextual:** A restrição protege o uso comunitário e sagrado contra apropriação e comércio privado.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:14"
       ],
@@ -261,7 +266,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 48:15 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:15:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **cinco, canas, largura, restam, vinte**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 15 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **cinco** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Uma faixa restante é destinada à cidade e a seus arredores.\n\n**Exegese contextual:** A visão inclui moradia e necessidades urbanas além do santuário, integrando culto e vida cotidiana.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:15"
       ],
@@ -271,7 +276,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 48:16 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:16:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **medidas, norte, quatro, quinhentas, canas**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 16 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **medidas** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A cidade é apresentada com lados de medidas iguais.\n\n**Exegese contextual:** A forma regular simboliza ordem e equilíbrio; não exige identificar uma cidade construída com essas medidas.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:16"
       ],
@@ -281,7 +286,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 48:17 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:17:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **arrebaldes, cidade, norte, duzentas, cinquenta**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 17 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **arrebaldes** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Faixas de terreno são reservadas ao redor da cidade.\n\n**Exegese contextual:** O espaço periférico mostra atenção ao funcionamento da cidade e à sua relação com a terra disponível.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:17"
       ],
@@ -291,7 +296,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 48:18 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:18:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **restar, comprimento, vizinhança, oferta, santa**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 18 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **restar** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O terreno restante produz alimento para trabalhadores urbanos.\n\n**Exegese contextual:** A produção agrícola sustenta o serviço da cidade, relacionando economia e provisão comunitária.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:18"
       ],
@@ -301,7 +306,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 48:19 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:19:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **trabalhadores, cidade, tribos, Israel, trabalharão**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 19 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **trabalhadores** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Trabalhadores de todas as tribos servem na cidade.\n\n**Exegese contextual:** A participação intertribal evita apresentar a cidade como propriedade exclusiva de uma única tribo.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:19"
       ],
@@ -311,7 +316,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 48:20 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:20:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **oferta, vinte, cinco, canas, quadrado**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 20 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **oferta** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A área consagrada e urbana forma um quadrado planejado.\n\n**Exegese contextual:** A geometria da oferta reforça o arranjo central e a distinção entre áreas sagradas e de uso comum.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:20"
       ],
@@ -321,7 +326,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 48:21 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:21:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **restar, príncipe, outro, oferta, santa**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 21 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **restar** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O príncipe recebe áreas a leste e oeste da oferta central.\n\n**Exegese contextual:** O governante tem porção delimitada, em continuidade com a proibição de tomar heranças do povo em Ezequiel 46:18.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:21"
       ],
@@ -331,7 +336,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 48:22 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:22:** Este versículo integra o movimento **porção santa, cidade e príncipe**. Observe especialmente os termos e imagens presentes no texto bíblico: **desde, propriedade, Levitas, cidade, daquilo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 22 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **desde** neste verso e como ela contribui para o desenvolvimento de **porção santa, cidade e príncipe**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A área do príncipe se situa entre Judá e Benjamim.\n\n**Exegese contextual:** O texto esclarece a relação espacial entre o poder político, a cidade e o santuário, sem confundi-los.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:22"
       ],
@@ -341,7 +346,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 48:23 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:23:** Este versículo integra o movimento **tribos ao sul**. Observe especialmente os termos e imagens presentes no texto bíblico: **demais, tribos, desde, extremo, oriente**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 23 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **demais** neste verso e como ela contribui para o desenvolvimento de **tribos ao sul**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Benjamim recebe a primeira faixa ao sul do setor central.\n\n**Exegese contextual:** A distribuição recomeça abaixo da área sagrada, mantendo o padrão leste–oeste das porções tribais.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:23"
       ],
@@ -351,7 +356,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 48:24 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:24:** Este versículo integra o movimento **tribos ao sul**. Observe especialmente os termos e imagens presentes no texto bíblico: **junto, limite, Benjamim, desde, extremo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 24 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao sul**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Simeão recebe a faixa seguinte.\n\n**Exegese contextual:** A repetição das porções expressa inclusão ordenada das tribos na terra restaurada.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:24"
       ],
@@ -361,7 +366,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 48:25 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:25:** Este versículo integra o movimento **tribos ao sul**. Observe especialmente os termos e imagens presentes no texto bíblico: **junto, limite, Simeão, desde, extremo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 25 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao sul**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Issacar recebe sua herança ao sul de Simeão.\n\n**Exegese contextual:** A sucessão territorial aponta para uma comunidade reunida, não fragmentada pelo exílio.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:25"
       ],
@@ -371,7 +376,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 48:26 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:26:** Este versículo integra o movimento **tribos ao sul**. Observe especialmente os termos e imagens presentes no texto bíblico: **junto, limite, Issacar, desde, extremo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 26 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao sul**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Zebulom ocupa a faixa seguinte.\n\n**Exegese contextual:** A presença do nome tribal reforça a continuidade da identidade coletiva na restauração.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:26"
       ],
@@ -381,7 +386,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 48:27 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:27:** Este versículo integra o movimento **tribos ao sul**. Observe especialmente os termos e imagens presentes no texto bíblico: **junto, limite, Zebulom, desde, extremo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 27 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao sul**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Gade recebe a faixa mais ao sul.\n\n**Exegese contextual:** A enumeração completa as doze porções, contando José por Efraim e Manassés e reservando Levi ao serviço sagrado.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:27"
       ],
@@ -391,7 +396,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 48:28 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:28:** Este versículo integra o movimento **tribos ao sul**. Observe especialmente os termos e imagens presentes no texto bíblico: **junto, limite, desde, Tamar, águas**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 28 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **junto** neste verso e como ela contribui para o desenvolvimento de **tribos ao sul**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O limite meridional é descrito por marcos geográficos antigos.\n\n**Exegese contextual:** A referência a Tamar e Cades deve ser interpretada no horizonte geográfico do texto, com cautela sobre equivalências modernas.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:28"
       ],
@@ -401,7 +406,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Ezequiel 48:29 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:29:** Este versículo integra o movimento **tribos ao sul**. Observe especialmente os termos e imagens presentes no texto bíblico: **terra, repartireis, herança, tribos, Israel**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 29 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **terra** neste verso e como ela contribui para o desenvolvimento de **tribos ao sul**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O Senhor confirma a repartição como herança das tribos.\n\n**Exegese contextual:** O resumo dá autoridade à distribuição e encerra a seção das faixas territoriais.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:29"
       ],
@@ -411,7 +416,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Ezequiel 48:30 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:30:** Este versículo integra o movimento **portas e o nome o senhor está ali**. Observe especialmente os termos e imagens presentes no texto bíblico: **saídas, cidade, norte, quatro, quinhentos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 30 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **saídas** neste verso e como ela contribui para o desenvolvimento de **portas e o nome o senhor está ali**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Começa a descrição das saídas e medidas da cidade.\n\n**Exegese contextual:** A visão passa da terra para a cidade, preparando a imagem final das portas abertas às tribos.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:30"
       ],
@@ -421,7 +426,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Ezequiel 48:31 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:31:** Este versículo integra o movimento **portas e o nome o senhor está ali**. Observe especialmente os termos e imagens presentes no texto bíblico: **portas, cidade, nomes, tribos, Israel**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 31 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **portas** neste verso e como ela contribui para o desenvolvimento de **portas e o nome o senhor está ali**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Três portas ao norte recebem nomes de Rúben, Judá e Levi.\n\n**Exegese contextual:** A inclusão de Levi nas portas, apesar de não possuir faixa tribal comum, mostra a abrangência simbólica da cidade.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:31"
       ],
@@ -431,7 +436,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-32",
       "title": "Ezequiel 48:32 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:32:** Este versículo integra o movimento **portas e o nome o senhor está ali**. Observe especialmente os termos e imagens presentes no texto bíblico: **oriente, quatro, quinhentos, côvados, portas**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 32 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **oriente** neste verso e como ela contribui para o desenvolvimento de **portas e o nome o senhor está ali**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** As portas orientais recebem nomes de José, Benjamim e Dã.\n\n**Exegese contextual:** José aparece como nome próprio na cidade, enquanto Efraim e Manassés receberam porções separadas na terra.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:32"
       ],
@@ -441,7 +446,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-33",
       "title": "Ezequiel 48:33 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:33:** Este versículo integra o movimento **portas e o nome o senhor está ali**. Observe especialmente os termos e imagens presentes no texto bíblico: **quatro, quinhentos, côvados, medida, portas**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 33 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **quatro** neste verso e como ela contribui para o desenvolvimento de **portas e o nome o senhor está ali**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Ao sul, as portas recebem nomes de Simeão, Issacar e Zebulom.\n\n**Exegese contextual:** A simetria de três portas por lado exprime acesso ordenado e memória das tribos.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:33"
       ],
@@ -451,7 +456,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-34",
       "title": "Ezequiel 48:34 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:34:** Este versículo integra o movimento **portas e o nome o senhor está ali**. Observe especialmente os termos e imagens presentes no texto bíblico: **ocidente, quatro, quinhentos, côvados, portas**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 34 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **ocidente** neste verso e como ela contribui para o desenvolvimento de **portas e o nome o senhor está ali**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Ao oeste, as portas recebem nomes de Gade, Aser e Naftali.\n\n**Exegese contextual:** A lista completa doze portas, antecipando um paralelo literário com a Jerusalém de Apocalipse 21.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:34"
       ],
@@ -461,7 +466,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "versiculo-35",
       "title": "Ezequiel 48:35 — roteiro de leitura",
-      "body": "**Leitura orientada de Ezequiel 48:35:** Este versículo integra o movimento **portas e o nome o senhor está ali**. Observe especialmente os termos e imagens presentes no texto bíblico: **redor, dezoito, côvados, cidade, desde**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 35 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **redor** neste verso e como ela contribui para o desenvolvimento de **portas e o nome o senhor está ali**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A cidade recebe o nome 'O Senhor Está Ali'.\n\n**Exegese contextual:** O livro termina respondendo à perda da presença divina narrada em Ezequiel 10–11: a esperança decisiva é Deus habitando com seu povo.\n\n**Pergunta interpretativa:** Como este detalhe contribui para a visão de terra repartida, cidade comunitária e presença divina?",
       "scriptureRefs": [
         "Ezequiel 48:35"
       ],
@@ -481,7 +486,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas",
-      "body": "Evitar identificar figuras antigas com governos modernos sem evidência, ou transformar visões e narrativas em promessas automáticas.",
+      "body": "**Mapa literal ou visionário:** tradições interpretam as faixas tribais e medidas de modo literal-futuro, idealizado ou simbólico; não há consenso sobre aplicação geopolítica moderna.\n\n**Medidas:** unidades e detalhes de tradução exigem cautela; o foco é a organização da visão.\n\n**Levi e José:** Levi aparece nas portas e na área sacerdotal; José é representado por Efraim e Manassés nas faixas de herança.\n\n**Nome da cidade:** 'O Senhor Está Ali' é o clímax teológico do livro, em contraste com a saída da glória em Ezequiel 10–11.",
       "scriptureRefs": [
         "Ezequiel 48:1-35"
       ],
@@ -491,7 +496,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas",
-      "body": "Ezequiel 40–48; Êxodo 40; Apocalipse 21–22. Compare contexto e gênero.",
+      "body": "**Josué 13:** distribuição da terra em outro contexto histórico.\n\n**Ezequiel 10:18–19:** saída da glória do templo.\n\n**Ezequiel 37:26–28:** promessa de santuário e presença divina.\n\n**Ezequiel 46:16–18:** limite à apropriação de terras pelo príncipe.\n\n**Ezequiel 47:13–23:** limites e herança, incluindo estrangeiros.\n\n**Apocalipse 21:12–14,22–27:** doze portas e presença divina na nova Jerusalém.",
       "scriptureRefs": [
         "Ezequiel 48:1-35"
       ],
@@ -501,7 +506,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão cristológica cautelosa",
-      "body": "A esperança da presença de Deus encontra diálogo com Apocalipse 21, sem apagar o contexto de Israel.",
+      "body": "Apocalipse 21 retoma a imagem das doze portas e descreve a habitação de Deus com seu povo, centrada no Senhor e no Cordeiro. A conexão cristã preserva o clímax de Ezequiel 48:35: a esperança da comunidade é a presença divina.",
       "scriptureRefs": [
         "Ezequiel 48:1-35"
       ],
@@ -521,7 +526,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios e respostas",
-      "body": "**1. Qual tema orienta Ezequiel 48:1–7?** Tribos ao norte.\n\n**2. Qual tema orienta Ezequiel 48:8–22?** Porção santa, cidade e príncipe.\n\n**3. Qual tema orienta Ezequiel 48:23–29?** Tribos ao sul.\n\n**4. Qual tema orienta Ezequiel 48:30–35?** Portas e o nome O Senhor Está Ali.",
+      "body": "**1. Quantas tribos recebem faixas ao norte da área central?** Sete (48:1–7).\n\n**2. Qual é o lugar do santuário?** No centro da porção reservada (48:8–10).\n\n**3. Quem trabalha para a cidade?** Pessoas de todas as tribos (48:19).\n\n**4. Quantas portas tribais há?** Doze, três por lado (48:30–34).\n\n**5. Qual é o nome final da cidade?** 'O Senhor Está Ali' (48:35).",
       "scriptureRefs": [
         "Ezequiel 48:1-35"
       ],
@@ -531,7 +536,7 @@ export const ezekiel48Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador",
-      "body": "**Tema:** Tribos ao norte.\n\n**Esboço:** Tribos ao norte (1–7); Porção santa, cidade e príncipe (8–22); Tribos ao sul (23–29); Portas e o nome O Senhor Está Ali (30–35).\n\n**Cuidado:** respeitar o contexto e não afirmar que o guia preliminar é estudo editorialmente concluído.",
+      "body": "**Tema:** Uma comunidade organizada pela presença de Deus.\n\n**Proposição:** A esperança da restauração une justiça na herança, limites ao poder e presença divina.\n\n**Esboço:** (1) herança ao norte (1–7); (2) centro sagrado e cidade comum (8–22); (3) herança ao sul (23–29); (4) a cidade onde Deus está (30–35).\n\n**Cuidados:** não converter o mapa visionário em justificativa automática para reivindicações territoriais atuais nem omitir a inclusão dos estrangeiros em Ezequiel 47.",
       "scriptureRefs": [
         "Ezequiel 48:1-35"
       ],
