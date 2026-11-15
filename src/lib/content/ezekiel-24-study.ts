@@ -1,51 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 24 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 24 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel24Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 24 marca o começo do cerco de Jerusalém com a parábola da panela e o sinal doloroso do luto do profeta.",
-  "historicalContext": "Início do cerco de Jerusalém por Babilônia, no nono ano do exílio de Joaquim, aproximadamente 588 a.C.",
+  "intro": "Ezequiel 24 marca o início do cerco de Jerusalém com a parábola da panela enferrujada e relata a morte da esposa do profeta como sinal doloroso da perda do templo. A passagem exige leitura histórica, atenção ao gênero profético e sensibilidade diante do luto.",
+  "historicalContext": "O capítulo se situa no nono ano do exílio, quando o cerco babilônico de Jerusalém começou (compare 2 Reis 25:1). A parábola da panela denuncia a violência da cidade; a segunda metade apresenta um sinal profético que antecipa a perda do santuário e a chegada posterior de notícias aos exilados.",
   "keyPoints": [
     {
-      "title": "1–2: A data do cerco",
-      "text": "O dia é marcado para mostrar que a palavra alcança os exilados enquanto o ataque ocorre em Jerusalém."
+      "title": "1–5: A panela no fogo",
+      "text": "O início do cerco é registrado e dramatizado por uma ação simbólica."
     },
     {
-      "title": "3–14: A panela incrustada",
-      "text": "O símbolo combina violência da cidade, cerco e corrupção resistente à correção."
+      "title": "6–14: A cidade sanguinária",
+      "text": "O sangue exposto e a sujeira incrustada representam culpa persistente."
     },
     {
-      "title": "15–24: A perda da esposa e o sinal",
-      "text": "O luto pessoal do profeta torna-se sinal do choque dos exilados diante da perda do templo e da família."
+      "title": "15–24: A dor do profeta como sinal",
+      "text": "A morte da esposa de Ezequiel antecipa a perda do templo e o choque do povo."
     },
     {
-      "title": "25–27: O sobrevivente e o fim do silêncio",
-      "text": "A chegada de um fugitivo confirma a queda e inaugura outra fase da atuação de Ezequiel."
+      "title": "25–27: O sobrevivente e a voz",
+      "text": "A notícia da queda abrirá novamente a boca do profeta."
     }
   ],
-  "application": "Enfrentar a injustiça sem encobri-la e acolher com compaixão pessoas em luto.",
+  "application": "Levar a sério a violência encoberta e a resistência à correção. Tratar o luto com empatia: a ação singular exigida de Ezequiel não deve ser imposta a pessoas enlutadas. Reconhecer que símbolos religiosos não substituem justiça e fidelidade.",
   "crossReferences": [
-    "2 Reis 25:1-10",
-    "Jeremias 39:1-8",
-    "Ezequiel 22:1-12",
-    "Levítico 17:13",
+    "2 Reis 25:1-4",
+    "Jeremias 39:1-2",
+    "Ezequiel 3:26-27",
+    "Ezequiel 11:3-12",
     "Ezequiel 33:21-22",
-    "João 11:35"
+    "Romanos 12:15"
   ],
   "questions": [
-    "Qual é o significado da data inicial?",
-    "Como funciona a imagem da panela?",
-    "Por que o luto do profeta é um sinal singular?",
-    "O que anuncia o sobrevivente?"
+    "Por que Ezequiel deveria registrar a data do cerco?",
+    "O que a sujeira incrustada na panela representa?",
+    "Como a morte da esposa do profeta se relaciona à perda do templo?",
+    "Por que não se deve aplicar a ordem de não lamentar a todos os enlutados?",
+    "O que significa a chegada do sobrevivente no fim do capítulo?"
   ],
-  "conclusion": "O capítulo conecta a realidade histórica do cerco à responsabilidade de Jerusalém e ao sofrimento humano de sua destruição.",
+  "conclusion": "A panela expõe a corrupção de Jerusalém; o sinal do luto de Ezequiel antecipa uma perda devastadora. O capítulo combina denúncia pública e sofrimento pessoal sem permitir que se banalize a dor.",
   "prayer": "Senhor, concede-nos justiça, verdade e compaixão por quem sofre. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 24:1–27 (paráfrase livre autoral)",
-      "body": "**Paráfrase autoral de estudo, não tradução bíblica oficial.**\n\n**1.** O oráculo recebe data precisa: nono ano, décimo mês, décimo dia.\n\n**2.** O profeta deve registrar o dia em que Babilônia cerca Jerusalém.\n\n**3.** Uma parábola manda colocar panela no fogo e acrescentar água.\n\n**4.** Pedaços escolhidos de carne e ossos entram na panela.\n\n**5.** O fogo cresce até ferver o conteúdo da panela.\n\n**6.** A cidade é acusada de sangue; sua panela está incrustada.\n\n**7.** O sangue foi exposto sobre pedra, sem ser encoberto.\n\n**8.** O sangue exposto torna impossível ocultar a culpa.\n\n**9.** O fogo da panela é aumentado contra a cidade.\n\n**10.** Lenha, fogo e ossos queimados compõem a cena.\n\n**11.** A panela vazia é aquecida para tentar remover sua incrustação.\n\n**12.** O esforço de limpar não remove a sujeira.\n\n**13.** A cidade resistiu à purificação e enfrenta a consequência anunciada.\n\n**14.** O Senhor confirma que o julgamento não será adiado.\n\n**15.** Uma nova palavra introduz sinal profético pessoal.\n\n**16.** Deus anuncia perda súbita da pessoa amada por Ezequiel.\n\n**17.** O profeta recebe instruções extraordinárias de não realizar ritos públicos habituais de luto.\n\n**18.** Ezequiel fala ao povo; sua esposa morre e ele executa o sinal.\n\n**19.** As pessoas perguntam o significado da conduta incomum.\n\n**20.** O profeta apresenta a explicação como palavra recebida.\n\n**21.** O santuário e familiares em Jerusalém sofrerão destruição e morte.\n\n**22.** A comunidade será levada a uma reação semelhante à do profeta.\n\n**23.** A ausência dos ritos usuais acompanha gemidos e sofrimento.\n\n**24.** Ezequiel se torna sinal reconhecível quando a notícia chegar.\n\n**25.** É anunciada a perda da fortaleza, do orgulho e dos familiares.\n\n**26.** Um sobrevivente chegará com notícias da cidade.\n\n**27.** Ao chegar a notícia, o profeta voltará a falar livremente.",
+      "body": "Leia Ezequiel 24:1–27 no texto bíblico do aplicativo. Os comentários oferecem **paráfrases livres autorais**, não uma tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 24:1-27"
       ],
@@ -127,7 +128,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 24:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo recebe data precisa: nono ano, décimo mês, décimo dia.\n\n**Exegese contextual:** A data situa o início do cerco babilônico; compare 2 Reis 25:1. É um marco cronológico, não um número simbólico.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** No nono ano, no décimo mês, dia dez, o Senhor fala a Ezequiel.\n\n**Exegese contextual:** A data vincula o oráculo ao início do cerco babilônico de Jerusalém, também datado em 2 Reis 25:1.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:1"
       ],
@@ -137,7 +138,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 24:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta deve registrar o dia em que Babilônia cerca Jerusalém.\n\n**Exegese contextual:** A coincidência entre palavra e acontecimento reforça a função de Ezequiel como testemunha entre exilados.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** O profeta deve registrar o dia em que o rei da Babilônia cerca Jerusalém.\n\n**Exegese contextual:** A ordem de escrever a data funciona como testemunho profético verificável para os exilados.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:2"
       ],
@@ -147,7 +148,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 24:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma parábola manda colocar panela no fogo e acrescentar água.\n\n**Exegese contextual:** A cozinha doméstica é transformada em imagem pública de cerco e julgamento.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Deus ordena uma parábola: colocar uma panela no fogo e enchê-la de água.\n\n**Exegese contextual:** A panela introduz uma ação simbólica que interpreta o destino da cidade sitiada.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:3"
       ],
@@ -157,7 +158,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 24:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Pedaços escolhidos de carne e ossos entram na panela.\n\n**Exegese contextual:** Os moradores da cidade aparecem figuradamente como conteúdo reunido sob pressão.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Pedaços selecionados de carne e ossos são colocados na panela.\n\n**Exegese contextual:** A seleção das melhores partes ressalta que nem os privilegiados escapam ao juízo coletivo.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:4"
       ],
@@ -167,7 +168,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 24:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O fogo cresce até ferver o conteúdo da panela.\n\n**Exegese contextual:** A intensidade da fervura antecipa a violência prolongada do cerco.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** O melhor do rebanho é fervido intensamente na panela.\n\n**Exegese contextual:** A fervura intensifica a imagem de Jerusalém submetida ao cerco; a figura não prescreve violência real.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:5"
       ],
@@ -177,7 +178,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 24:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A cidade é acusada de sangue; sua panela está incrustada.\n\n**Exegese contextual:** A sujeira aderida simboliza injustiça persistente, não impureza física dos habitantes.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** A cidade é denunciada como sanguinária, com impureza incrustada na panela.\n\n**Exegese contextual:** O sangue derramado e a corrupção não são removidos por um gesto superficial.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:6"
       ],
@@ -187,7 +188,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 24:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O sangue foi exposto sobre pedra, sem ser encoberto.\n\n**Exegese contextual:** A imagem denuncia violência pública e impune, em contraste com o cuidado de cobrir sangue em Levítico 17:13.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** O sangue da cidade permanece exposto sobre a rocha, sem ser coberto.\n\n**Exegese contextual:** A imagem contrasta com o cuidado de cobrir sangue derramado e acusa violência pública não reparada.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:7"
       ],
@@ -197,7 +198,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 24:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O sangue exposto torna impossível ocultar a culpa.\n\n**Exegese contextual:** A acusação judicial exige que a violência seja vista, não escondida.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** O sangue exposto torna a culpa visível e anuncia retribuição.\n\n**Exegese contextual:** O foco é a injustiça não escondida nem resolvida, não uma regra de vingança pessoal.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:8"
       ],
@@ -207,7 +208,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 24:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O fogo da panela é aumentado contra a cidade.\n\n**Exegese contextual:** O anúncio intensifica o juízo sobre Jerusalém, já chamada cidade sanguinária em Ezequiel 22.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** O Senhor anuncia uma fogueira maior contra a cidade sanguinária.\n\n**Exegese contextual:** O aumento do fogo reforça o caráter inevitável do cerco no oráculo.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:9"
       ],
@@ -217,7 +218,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 24:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Lenha, fogo e ossos queimados compõem a cena.\n\n**Exegese contextual:** A descrição poética não é receita; dramatiza destruição do cerco.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Lenha e fogo consomem a carne até os ossos.\n\n**Exegese contextual:** A descrição da panela passa da preparação do alimento à destruição, subvertendo a imagem doméstica.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:10"
       ],
@@ -227,7 +228,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 24:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A panela vazia é aquecida para tentar remover sua incrustação.\n\n**Exegese contextual:** O próprio recipiente passa pelo fogo: a imagem desloca o foco dos habitantes para a cidade como estrutura corrompida.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** A panela vazia é posta nas brasas para que sua sujeira seja queimada.\n\n**Exegese contextual:** Mesmo depois de retirar o conteúdo, a corrosão permanece; a metáfora denuncia corrupção estrutural.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:11"
       ],
@@ -237,7 +238,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 24:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O esforço de limpar não remove a sujeira.\n\n**Exegese contextual:** A persistência da corrupção é central; não se trata de incapacidade de higiene literal.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** A sujeira resiste ao esforço de limpeza e permanece no fogo.\n\n**Exegese contextual:** O verso enfatiza a persistência da culpa, não a incapacidade de Deus de oferecer perdão em outros contextos.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:12"
       ],
@@ -247,7 +248,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 24:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A cidade resistiu à purificação e enfrenta a consequência anunciada.\n\n**Exegese contextual:** A linguagem de purificação deve ser interpretada como crítica moral da comunidade histórica.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** A cidade rejeitou a purificação, e o juízo é anunciado.\n\n**Exegese contextual:** A acusação é de resistência continuada à correção; o texto deve ser lido dentro da história de Jerusalém.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:13"
       ],
@@ -257,7 +258,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 24:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O Senhor confirma que o julgamento não será adiado.\n\n**Exegese contextual:** O encerramento da primeira unidade reforça a gravidade dos atos, sem oferecer autorização para violência humana.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** O Senhor confirma que julgará segundo as práticas da cidade.\n\n**Exegese contextual:** A fórmula final da primeira unidade destaca responsabilidade por ações, não arbitrariedade.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:14"
       ],
@@ -267,7 +268,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 24:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma nova palavra introduz sinal profético pessoal.\n\n**Exegese contextual:** A narrativa muda da parábola coletiva para o sofrimento do próprio profeta.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Uma nova palavra do Senhor introduz outro sinal profético.\n\n**Exegese contextual:** O capítulo passa da parábola da panela a uma experiência dolorosa na vida de Ezequiel.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:15"
       ],
@@ -277,7 +278,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 24:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus anuncia perda súbita da pessoa amada por Ezequiel.\n\n**Exegese contextual:** O 'desejo dos olhos' será identificado como sua esposa; o texto apresenta sofrimento real e perturbador.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** O profeta ouve que perderá a pessoa amada e recebe ordem de não fazer luto público.\n\n**Exegese contextual:** A referência à 'delícia dos olhos' prepara o paralelo com o templo; a dor pessoal do profeta não deve ser banalizada.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:16"
       ],
@@ -287,7 +288,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 24:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta recebe instruções extraordinárias de não realizar ritos públicos habituais de luto.\n\n**Exegese contextual:** A ordem pertence a um sinal profético singular; não é regra universal para pessoas enlutadas.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Ezequiel deve gemer em silêncio e conservar sinais externos da vida cotidiana.\n\n**Exegese contextual:** A restrição se refere a ritos públicos de luto nessa ação profética específica, não a uma proibição universal de chorar.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:17"
       ],
@@ -297,7 +298,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 24:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ezequiel fala ao povo; sua esposa morre e ele executa o sinal.\n\n**Exegese contextual:** O relato concentra uma tragédia doméstica em poucos movimentos, sem descrever sentimentos íntimos do casal.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Após falar ao povo, Ezequiel perde a esposa e obedece à ordem recebida.\n\n**Exegese contextual:** O relato é extremamente grave e deve ser tratado com sensibilidade pastoral, sem apresentar sofrimento conjugal como ideal.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:18"
       ],
@@ -307,7 +308,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 24:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As pessoas perguntam o significado da conduta incomum.\n\n**Exegese contextual:** A pergunta abre espaço para interpretar o sinal sem transformá-lo em modelo moral.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** O povo pergunta o significado do comportamento incomum do profeta.\n\n**Exegese contextual:** A reação dos ouvintes mostra que o gesto foi deliberadamente público e exigia interpretação.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:19"
       ],
@@ -317,7 +318,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 24:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta apresenta a explicação como palavra recebida.\n\n**Exegese contextual:** O sentido do sinal não deve ser inventado à parte da explicação dada nos vv. 21–24.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Ezequiel responde que a palavra do Senhor explica o sinal.\n\n**Exegese contextual:** A explicação evita que o gesto seja entendido apenas como reação pessoal sem contexto.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:20"
       ],
@@ -327,7 +328,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 24:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O santuário e familiares em Jerusalém sofrerão destruição e morte.\n\n**Exegese contextual:** O 'desejo dos olhos' do povo se refere ao templo e à vida familiar, não apenas a objetos sagrados.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** O santuário, orgulho e desejo dos olhos do povo, será profanado; filhos e filhas morrerão.\n\n**Exegese contextual:** A perda do templo e de familiares explica o paralelo com a dor do profeta e a dimensão nacional do desastre.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:21"
       ],
@@ -337,7 +338,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 24:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A comunidade será levada a uma reação semelhante à do profeta.\n\n**Exegese contextual:** A comparação descreve choque coletivo no exílio; não proíbe expressar tristeza.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Os sobreviventes repetirão a ausência de certos ritos de luto.\n\n**Exegese contextual:** O gesto não exprime indiferença, mas o choque coletivo e a impossibilidade de luto habitual.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:22"
       ],
@@ -347,7 +348,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 24:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A ausência dos ritos usuais acompanha gemidos e sofrimento.\n\n**Exegese contextual:** A própria passagem reconhece dor profunda; o silêncio ritual não significa ausência de luto interior.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Turbantes e sandálias permanecem, enquanto as pessoas gemem umas com as outras.\n\n**Exegese contextual:** A dor interior persiste apesar da ausência de cerimônias; a culpa coletiva é nomeada no próprio oráculo.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:23"
       ],
@@ -357,7 +358,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 24:24 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ezequiel se torna sinal reconhecível quando a notícia chegar.\n\n**Exegese contextual:** O sinal profético aponta para o reconhecimento da gravidade da queda de Jerusalém.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Ezequiel é declarado sinal para o povo quando os acontecimentos ocorrerem.\n\n**Exegese contextual:** A confirmação futura relaciona a ação profética à queda de Jerusalém.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:24"
       ],
@@ -367,7 +368,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 24:25 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** É anunciada a perda da fortaleza, do orgulho e dos familiares.\n\n**Exegese contextual:** A repetição destaca dimensões religiosas, políticas e afetivas da catástrofe.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** O Senhor anuncia a perda da fortaleza, da beleza e dos filhos amados do povo.\n\n**Exegese contextual:** A enumeração retoma a linguagem afetiva usada para a esposa de Ezequiel e para o templo.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:25"
       ],
@@ -377,7 +378,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 24:26 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Um sobrevivente chegará com notícias da cidade.\n\n**Exegese contextual:** O mensageiro liga o anúncio à futura confirmação histórica, retomada em Ezequiel 33:21–22.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Um sobrevivente chegará para trazer notícias do desastre.\n\n**Exegese contextual:** O mensageiro conecta os exilados ao destino da cidade e prepara a retomada da fala do profeta.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:26"
       ],
@@ -387,7 +388,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 24:27 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ao chegar a notícia, o profeta voltará a falar livremente.\n\n**Exegese contextual:** O fim do silêncio se relaciona ao sinal profético e à nova fase de sua missão, não à recuperação simples da perda.\n\n**Questão de observação:** Que detalhe do texto fundamenta a interpretação e qual aplicação exigiria cautela?",
+      "body": "**Paráfrase livre autoral:** Com a chegada do sobrevivente, Ezequiel voltará a falar livremente.\n\n**Exegese contextual:** A abertura da boca retoma o tema de Ezequiel 3:26–27 e prepara a narrativa de 33:21–22.\n\n**Pergunta interpretativa:** Qual o papel deste versículo na denúncia da cidade ou no sinal profético de Ezequiel?",
       "scriptureRefs": [
         "Ezequiel 24:27"
       ],
@@ -437,7 +438,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "A relação exata entre a morte da esposa e o juízo anunciado é eticamente difícil. O texto descreve uma ação divina sem explicar todos os motivos do sofrimento individual. A leitura pastoral deve recusar qualquer ideia de que Deus exige de pessoas hoje que negligenciem o luto.",
+      "body": "**A data do cerco:** compare Ezequiel 24:1–2 e 2 Reis 25:1; a correspondência situa a ação simbólica num evento histórico.\n\n**A panela:** a metáfora tem elementos difíceis, mas seu eixo é a cidade culpada de derramamento de sangue.\n\n**A morte da esposa:** o texto relata um sinal profético singular e doloroso. Não se deve sugerir que Deus ordena normalmente a supressão do luto.\n\n**A boca do profeta:** a promessa de voltar a falar conecta 24:27 com 3:26–27 e 33:21–22.",
       "scriptureRefs": [
         "Ezequiel 24:1-27"
       ],
@@ -447,7 +448,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**2 Reis 25:1–10:** cerco e destruição de Jerusalém. **Jeremias 39:1–8:** cronologia da queda. **Ezequiel 22:1–12:** denúncia da cidade sanguinária. **Levítico 17:13:** imagem do sangue coberto, em outro contexto. **Ezequiel 33:21–22:** notícia da queda e fim do silêncio.",
+      "body": "**2 Reis 25:1–4:** início do cerco de Jerusalém.\n\n**Jeremias 39:1–2:** cronologia do cerco e da queda.\n\n**Ezequiel 3:26–27:** silêncio e fala profética.\n\n**Ezequiel 11:3–12:** outra imagem da panela e da cidade.\n\n**Ezequiel 33:21–22:** chegada do fugitivo e abertura da boca.\n\n**Romanos 12:15:** chamado cristão a chorar com os que choram.",
       "scriptureRefs": [
         "Ezequiel 24:1-27"
       ],
@@ -457,7 +458,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria forçada",
-      "body": "Cristãos podem ler o sofrimento de Ezequiel em diálogo com Jesus que chora diante da morte (João 11:35) e de Jerusalém (Lucas 19:41). A comparação destaca a legitimidade do luto; Ezequiel 24 não identifica a esposa do profeta como figura de Cristo ou da igreja.",
+      "body": "Na leitura cristã, a denúncia de violência e a necessidade de justiça dialogam com o ensino de Jesus sobre a responsabilidade moral (Mateus 23:23). Diante da perda de Ezequiel, João 11:35 e Romanos 12:15 lembram que o luto não é sinal de falta de fé.",
       "scriptureRefs": [
         "Ezequiel 24:1-27"
       ],
@@ -477,7 +478,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas",
-      "body": "**1. Qual evento é datado?** O começo do cerco de Jerusalém (vv. 1–2).\n\n**2. O que a sujeira da panela representa?** Corrupção e sangue não resolvidos (vv. 6–13).\n\n**3. Quem morre no v. 18?** A esposa de Ezequiel.\n\n**4. O sinal proíbe o luto cristão?** Não; trata-se de encenação profética singular (vv. 16–24).\n\n**5. Que evento futuro encerra o capítulo?** A chegada de um sobrevivente com notícias (vv. 26–27).",
+      "body": "**1. Que acontecimento é datado?** O início do cerco de Jerusalém (24:1–2).\n\n**2. O que representa a panela suja?** A culpa persistente da cidade sanguinária (24:6–13).\n\n**3. Quem morre na segunda parte?** A esposa de Ezequiel (24:18).\n\n**4. O que o sinal anuncia?** A perda do templo e o choque de Israel (24:21–24).\n\n**5. O que acontece com a fala do profeta?** Ela é retomada quando chega o sobrevivente (24:26–27).",
       "scriptureRefs": [
         "Ezequiel 24:1-27"
       ],
@@ -487,7 +488,7 @@ export const ezekiel24Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — a cidade e a dor",
-      "body": "**Tema:** A verdade sobre a violência e o peso da perda.\n\n**Proposição:** O juízo contra a cidade não elimina o sofrimento real das pessoas que vivem a catástrofe.\n\n**Esboço:** (1) o dia marcado (1–2); (2) a panela e o sangue (3–14); (3) o luto do profeta (15–24); (4) a notícia futura (25–27).\n\n**Cuidado pastoral:** não apresentar a morte da esposa como exemplo de punição a cônjuges nem proibir manifestações de tristeza.",
+      "body": "**Tema:** A cidade que resiste à correção e o profeta que sofre.\n\n**Proposição:** A injustiça pública produz consequências devastadoras, e o luto exige reverência e compaixão.\n\n**Esboço:** (1) o dia do cerco (1–5); (2) a culpa incrustada (6–14); (3) o sinal doloroso (15–24); (4) a notícia e a voz (25–27).\n\n**Cuidados:** jamais usar a morte da esposa de Ezequiel para justificar negligência emocional ou proibir choro; distinguir ação profética singular de regra pastoral.",
       "scriptureRefs": [
         "Ezequiel 24:1-27"
       ],
