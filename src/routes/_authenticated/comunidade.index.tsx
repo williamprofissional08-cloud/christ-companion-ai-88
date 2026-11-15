@@ -7,6 +7,7 @@ import { AppShell } from "@/components/AppShell";
 import { CommunitySocialHub } from "@/components/community/CommunitySocialHub";
 import { CommunityGroupsPanel } from "@/components/community/CommunityGroupsPanel";
 import { COMMUNITY_MEDIA_BUCKET, validateCommunityMedia } from "@/lib/community-media";
+import { COMMUNITY_POST_IMAGE_BUCKET, isCommunityPhoto, prepareCommunityPhoto } from "@/lib/community-photo";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -18,7 +19,7 @@ import { validateCommunityPdf } from "@/lib/community-pdf-validation";
 
 const db = supabase as unknown as SupabaseClient;
 type Category = "pergunta" | "debate" | "estudo" | "testemunho" | "oracao" | "reflexao";
-type Post = { id: string; user_id: string; category: Category; title: string; body: string; scripture_reference: string | null; created_at: string; media_path?: string | null; media_kind?: "image" | "video" | null; media_seconds?: number | null; promo_consent?: boolean };
+type Post = { id: string; user_id: string; category: Category; title: string; body: string; scripture_reference: string | null; created_at: string; media_path?: string | null; media_kind?: "image" | "video" | null; media_seconds?: number | null; promo_consent?: boolean; image_url?: string | null };
 type Resource = { id: string; user_id: string; title: string; author: string; description: string; category: string; storage_path: string; file_name: string; file_size: number; status: "pending" | "approved" | "rejected"; course_candidate?: boolean; created_at: string };
 type Profile = { id: string; display_name: string | null; avatar_url: string | null };
 type Comment = { id: string; post_id: string; user_id: string; body: string; created_at: string };
@@ -161,38 +162,44 @@ function ComunidadePage() {
     event.preventDefault();
     if (!user || busy) return;
     setBusy(true);
-    let mediaPath: string | null = null;
+    let uploadedPath: string | null = null;
     try {
       const { count, error: countError } = await db.from("community_posts")
-        .select("id", { count:"exact", head:true }).eq("user_id",user.id);
-      if (countError) throw new Error("Não foi possível verificar a moderação da primeira publicação.");
-      const status = count===0 ? "pending" : "published";
-      let mediaInfo: Awaited<ReturnType<typeof validateCommunityMedia>> | null = null;
+        .select("id", { count: "exact", head: true }).eq("user_id", user.id);
+      if (countError) throw new Error("Não foi possível verificar a moderação da publicação.");
+      const status = count === 0 ? "pending" : "published";
+
+      let imageUrl: string | null = null;
       if (media) {
-        mediaInfo = await validateCommunityMedia(media);
-        mediaPath = `${user.id}/posts/${crypto.randomUUID()}.${mediaInfo.extension}`;
-        const { error: uploadError } = await db.storage.from(COMMUNITY_MEDIA_BUCKET)
-          .upload(mediaPath,media,{contentType:media.type,upsert:false});
-        if(uploadError) throw uploadError;
+        if (!isCommunityPhoto(media)) {
+          await validateCommunityMedia(media);
+          throw new Error("O envio de vídeos depende da ativação do armazenamento de vídeos no servidor. As fotos já podem ser publicadas.");
+        }
+        // This bucket and column already exist in production. Do not write
+        // unknown media_path/media_kind/promo_consent columns to community_posts.
+        const readyPhoto = await prepareCommunityPhoto(media);
+        uploadedPath = `${user.id}/posts/${crypto.randomUUID()}.${readyPhoto.type === "image/jpeg" ? "jpg" : readyPhoto.type === "image/png" ? "png" : "webp"}`;
+        const { error: uploadError } = await db.storage.from(COMMUNITY_POST_IMAGE_BUCKET)
+          .upload(uploadedPath, readyPhoto, { contentType: readyPhoto.type, upsert: false });
+        if (uploadError) throw new Error("Não foi possível enviar a foto. Verifique a conexão ou escolha outra imagem.");
+        imageUrl = db.storage.from(COMMUNITY_POST_IMAGE_BUCKET).getPublicUrl(uploadedPath).data.publicUrl;
       }
-      const payload = {
-        user_id:user.id, category, title:title.trim(), body:body.trim(),
-        scripture_reference:reference.trim()||null, status,
-        ...(mediaInfo && mediaPath ? {
-          media_path:mediaPath,media_kind:mediaInfo.kind,media_seconds:mediaInfo.seconds,
-        } : {}),
-        ...(promoConsent ? { promo_consent: true } : {}),
-      };
-      const { error } = await db.from("community_posts").insert(payload);
-      if (error) throw error;
-      mediaPath = null;
-      toast.success(status==="pending"
+      const { error: saveError } = await db.from("community_posts").insert({
+        user_id: user.id, category, title: title.trim(), body: body.trim(),
+        scripture_reference: reference.trim() || null,
+        status,
+        ...(imageUrl ? { image_url: imageUrl } : {}),
+      });
+      if (saveError) throw new Error("A publicação não pôde ser salva. Confira o título, o texto e tente novamente.");
+      uploadedPath = null;
+      toast.success(status === "pending"
         ? "Sua primeira publicação foi enviada à moderação."
         : "Publicação compartilhada com a comunidade!");
-      setTitle("");setBody("");setReference("");setMedia(null);setMediaPreference(null);
-      setPromoConsent(false);setComposer(false);await reload(user);
+      setTitle(""); setBody(""); setReference(""); setMedia(null);
+      setMediaPreference(null); setPromoConsent(false); setComposer(false);
+      await reload(user);
     } catch (error) {
-      if(mediaPath) await db.storage.from(COMMUNITY_MEDIA_BUCKET).remove([mediaPath]);
+      if (uploadedPath) await db.storage.from(COMMUNITY_POST_IMAGE_BUCKET).remove([uploadedPath]);
       toast.error(error instanceof Error ? error.message : "Não foi possível publicar.");
     } finally {
       setBusy(false);
@@ -401,14 +408,13 @@ function ComunidadePage() {
                             className="block w-full text-xs file:mr-2 file:rounded-full file:border-0 file:bg-blue-700 file:px-3 file:py-2 file:text-white" />
                         </label>
                         <p className="text-xs text-slate-600 dark:text-slate-300">
-                          Vídeos de até 60 segundos e arquivos de até 49 MB. Foto ou vídeo ficará visível somente após a publicação ser aprovada, se necessário.
+                          As fotos serão ajustadas automaticamente para o limite de 8 MB. Vídeos dependem de ativação no servidor. Sua primeira publicação pode passar por moderação.
                         </p>
                         {media && <p className="break-all text-xs text-blue-900 dark:text-blue-300">Selecionado: {media.name}</p>}
                         <label className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
-                          <input type="checkbox" checked={promoConsent} onChange={e=>setPromoConsent(e.target.checked)}
+                          <input type="checkbox" checked={promoConsent} disabled onChange={e=>setPromoConsent(e.target.checked)}
                             className="mt-0.5 size-4 accent-blue-700" />
-                          Autorizo que a equipe do Caminho Divino avalie este conteúdo para possível divulgação em redes sociais.
-                          Isso não envia arquivos automaticamente por e-mail.
+                          Autorização de divulgação em preparação. Ainda não envia arquivos à equipe ou por e-mail.
                         </label>
                       </div>
                       <div className="flex flex-wrap items-center justify-between gap-2">
@@ -553,9 +559,10 @@ function ComunidadePage() {
                               )}
                             </p>
                           </div>
-                          {post.media_path && (
+                          {(post.media_path || post.image_url) && (
                             <div className="mt-3 overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-900">
-                              {mediaUrls[post.id]
+                              {post.image_url ? <img src={post.image_url} alt={post.title} loading="lazy" className="max-h-[480px] w-full object-contain" />
+                                : mediaUrls[post.id]
                                 ? post.media_kind==="video"
                                   ? <video className="max-h-[480px] w-full bg-black object-contain" src={mediaUrls[post.id]} controls playsInline preload="metadata" aria-label={post.title} />
                                   : <img src={mediaUrls[post.id]} alt={post.title} loading="lazy" className="max-h-[480px] w-full object-contain" />
