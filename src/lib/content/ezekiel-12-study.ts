@@ -1,51 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 12 — estudo autoral com texto-base BLIVRE; revisão humana pendente. */
+/** Ezequiel 12 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel12Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 12 apresenta ações simbólicas sobre exílio e escassez e confronta provérbios que desprezam a urgência da palavra profética.",
-  "historicalContext": "Profecia entre exilados babilônicos antes da queda de Jerusalém em 587/586 a.C., com possível relação ao destino de Zedequias.",
+  "intro": "Ezequiel 12 apresenta sinais encenados sobre a fuga do governante de Jerusalém, o exílio e a ansiedade de uma população em crise. Depois confronta dois ditados usados para desacreditar as advertências proféticas, afirmando que o tempo de seu cumprimento se aproxima.",
+  "historicalContext": "O profeta fala entre os deportados na Babilônia antes da queda de Jerusalém. A encenação da fuga do 'príncipe' é frequentemente associada a Zedequias, que tentou escapar durante o cerco e foi capturado; segundo 2 Reis 25, seus olhos foram cegados antes de ser levado à Babilônia. O capítulo também reflete a tensão entre mensagens de esperança fácil e advertências de destruição.",
   "keyPoints": [
     {
-      "title": "Bagagem do exílio",
-      "text": "A saída simbólica anuncia deslocamento e fuga (1–7)."
+      "title": "1–7: A bagagem do exílio",
+      "text": "Ezequiel encena uma fuga noturna para despertar a atenção da comunidade."
     },
     {
-      "title": "O príncipe capturado",
-      "text": "A explicação anuncia dispersão e captura (8–16)."
+      "title": "8–16: Explicação do sinal",
+      "text": "A ação anuncia a captura do governante, a dispersão e a sobrevivência de alguns."
     },
     {
-      "title": "Pão com tremor",
-      "text": "O medo da escassez torna-se sinal visível (17–20)."
+      "title": "17–20: Refeição com tremor",
+      "text": "O gesto representa ansiedade, violência e desolação."
     },
     {
-      "title": "Visões adiadas?",
-      "text": "Provérbios de descrença são contestados (21–28)."
+      "title": "21–28: O tempo do cumprimento",
+      "text": "Dois ditados que adiam ou negam as visões são confrontados."
     }
   ],
-  "application": "Escutar alertas com discernimento, agir com responsabilidade e acolher pessoas deslocadas, sem especulação apocalíptica.",
+  "application": "Não tratar avisos sérios como irrelevantes só porque sua consequência ainda não apareceu. Ouvir pessoas afetadas pela violência e pela insegurança, examinar discursos de falsa tranquilidade e agir com responsabilidade diante de crises reais.",
   "crossReferences": [
-    "2 Reis 25:4-7",
-    "Jeremias 39:4-7",
+    "2 Reis 25:1-7",
+    "Jeremias 39:1-7",
+    "Jeremias 52:7-11",
     "Ezequiel 4:1-17",
-    "Ezequiel 11:16-20",
-    "Lucas 6:46-49",
-    "Lucas 13:1-5"
+    "Ezequiel 13:1-16",
+    "Habacuque 2:2-3"
   ],
   "questions": [
-    "Qual é o significado da bagagem?",
-    "Como a profecia se relaciona ao destino de Zedequias?",
-    "O que comunica a refeição com tremor?",
-    "Por que o povo usa o provérbio do adiamento?"
+    "Por que Ezequiel prepara bagagem à vista do povo?",
+    "Qual é o significado da saída pela parede?",
+    "Como a história de Zedequias ajuda a entender o versículo 13?",
+    "O que a refeição com tremor comunica?",
+    "Quais desculpas sobre o tempo das profecias são contestadas?"
   ],
-  "conclusion": "O capítulo revela como ações simbólicas e palavras proféticas desafiam a falsa segurança e a resistência à verdade.",
+  "conclusion": "Os sinais de Ezequiel tornam visíveis a fuga, o exílio e a ansiedade que Jerusalém procura ignorar. O chamado do capítulo é reconhecer a realidade e levar a sério advertências que exigem resposta.",
   "prayer": "Senhor, ajuda-nos a ouvir com responsabilidade e a cuidar dos que sofrem deslocamento. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 12:1–28 (paráfrase livre)",
-      "body": "**Paráfrase livre autoral baseada no acervo BLIVRE, não substitui tradução bíblica.**\n\n**1.** A palavra do Senhor vem ao profeta.\n\n**2.** A metáfora dos olhos que não veem denuncia resistência à mensagem, não deficiência física; a rebeldia é moral e comunitária.\n\n**3.** A bagagem de exílio, preparada publicamente, transforma a rotina do profeta em sinal para os observadores.\n\n**4.** A saída ao entardecer intensifica a encenação de deslocamento e perda de segurança.\n\n**5.** A abertura na parede sugere fuga clandestina em situação de cerco, não instrução prática para escapar de autoridades.\n\n**6.** Bagagem nos ombros e rosto coberto comunicam humilhação, medo e perda da terra; o gesto tem função simbólica.\n\n**7.** Ezequiel obedece à ordem de encenar a partida durante o dia e a noite, tornando a mensagem visível.\n\n**8.** A palavra chega pela manhã após a ação, preparando sua interpretação.\n\n**9.** A pergunta esperada do povo mostra que o sinal busca despertar reflexão, não apenas causar espanto.\n\n**10.** O oráculo identifica seu alvo principal: o governante de Jerusalém e os habitantes da cidade.\n\n**11.** O profeta é declarado sinal do exílio que atingirá os moradores de Jerusalém.\n\n**12.** O príncipe sairá à noite com bagagem e rosto coberto; a imagem ecoa a tentativa de fuga de Zedequias.\n\n**13.** A rede e o laço representam captura. A referência a chegar à Babilônia sem vê-la se relaciona ao destino de Zedequias, cegado após a captura.\n\n**14.** Auxiliares e tropas serão dispersos; a desagregação do poder acompanha a derrota.\n\n**15.** A dispersão conduz à fórmula de reconhecimento do Senhor, recorrente em Ezequiel.\n\n**16.** Um pequeno grupo sobreviverá para testemunhar entre as nações o motivo do desastre; sobrevivência não é descrita como mérito individual.\n\n**17.** Uma nova fórmula introduz outro sinal profético, agora ligado à alimentação.\n\n**18.** O profeta deve comer e beber tremendo, encenando ansiedade diante da escassez.\n\n**19.** O alimento com medo representa a vida de Jerusalém sob ameaça; o texto vincula a devastação à violência social.\n\n**20.** Cidades habitadas serão arruinadas, e a terra ficará desolada; a fórmula de reconhecimento encerra o segundo sinal.\n\n**21.** Outra palavra do Senhor abre a discussão sobre um provérbio popular.\n\n**22.** O provérbio expressa descrença: o tempo passa e as visões proféticas parecem não se cumprir.\n\n**23.** A resposta rejeita a ideia de adiamento indefinido no horizonte da crise de Jerusalém.\n\n**24.** O contraste com visões falsas e adivinhação lisonjeira denuncia mensagens que alimentam falsa tranquilidade.\n\n**25.** O anúncio insiste na proximidade do cumprimento, no contexto histórico do público original.\n\n**26.** Uma nova fórmula introduz uma objeção semelhante sobre profecias distantes.\n\n**27.** Os ouvintes tentam neutralizar a advertência projetando-a para um futuro remoto.\n\n**28.** O Senhor anuncia que sua palavra não será adiada indefinidamente.",
+      "body": "Leia Ezequiel 12:1–28 no texto bíblico do aplicativo. As notas apresentam **paráfrases livres autorais** e explicações contextuais, não uma tradução oficial.",
       "scriptureRefs": [
         "Ezequiel 12:1-28"
       ],
@@ -87,7 +88,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 12:1 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** E veio a mim a palavra do SENHOR, dizendo:\n\n**Exegese contextual:** A fórmula introdutória atribui o oráculo à palavra do Senhor e abre uma nova unidade narrativa.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** A palavra do Senhor vem a Ezequiel.\n\n**Exegese contextual:** O oráculo introduz um sinal encenado para confrontar a resistência do povo.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:1"
       ],
@@ -97,7 +98,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 12:2 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Filho do homem, tu habitas em meio de uma casa rebelde, os quais têm olhos para ver mas não veem, têm ouvidos para ouvir, mas não ouvem; pois eles são uma casa rebelde.\n\n**Exegese contextual:** A metáfora dos olhos que não veem denuncia resistência à mensagem, não deficiência física; a rebeldia é moral e comunitária.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** A comunidade tem olhos e ouvidos, mas não percebe.\n\n**Exegese contextual:** A cegueira é moral e interpretativa, não deficiência física; o povo resiste ao aviso.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:2"
       ],
@@ -107,7 +108,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 12:3 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Portanto tu, filho do homem, prepara-te bagagem de partida, e parte-te de dia diante dos olhos deles; e tu partirás de teu lugar para outro lugar diante dos olhos deles; pode ser que vejam, ainda que eles sejam uma casa rebelde.\n\n**Exegese contextual:** A bagagem de exílio, preparada publicamente, transforma a rotina do profeta em sinal para os observadores.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** O profeta deve preparar bagagem de exílio à vista de todos.\n\n**Exegese contextual:** A ação pública torna visível o destino que Jerusalém tenta ignorar.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:3"
       ],
@@ -117,7 +118,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 12:4 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Assim tirarás tuas bagagem, como bagagem de partida, durante dia diante de seus olhos; então tu sairás à tarde diante de seu olhos, como quem sai para se partirem.\n\n**Exegese contextual:** A saída ao entardecer intensifica a encenação de deslocamento e perda de segurança.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** A bagagem sai de dia, e o próprio profeta parte ao anoitecer.\n\n**Exegese contextual:** A sequência encenada diferencia preparação e fuga noturna.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:4"
       ],
@@ -127,7 +128,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 12:5 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Diante de seus olhos cava um buraco na parede, e tira por ele a bagagem .\n\n**Exegese contextual:** A abertura na parede sugere fuga clandestina em situação de cerco, não instrução prática para escapar de autoridades.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Ezequiel deve abrir passagem por uma parede.\n\n**Exegese contextual:** O gesto dramatiza uma saída desesperada de uma cidade cercada.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:5"
       ],
@@ -137,7 +138,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 12:6 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Diante de seus olhos os levarás sobre teus ombros, ao anoitecer os tirarás; cobrirás teu rosto, para que não vejas a terra; pois eu fiz de ti por sinal à casa de Israel.\n\n**Exegese contextual:** Bagagem nos ombros e rosto coberto comunicam humilhação, medo e perda da terra; o gesto tem função simbólica.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Ele deve carregar a bagagem e cobrir o rosto.\n\n**Exegese contextual:** O sinal reúne humilhação, ocultação e perda de contato com a terra.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:6"
       ],
@@ -147,7 +148,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 12:7 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** E eu fiz assim como me foi mandado; tirei minha bagagem de dia, como bagagem de partida, e à tarde cavei um buraco na parede com a mão; tirei-os de noite, e os levei sobre os ombros diante dos olhos deles.\n\n**Exegese contextual:** Ezequiel obedece à ordem de encenar a partida durante o dia e a noite, tornando a mensagem visível.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Ezequiel executa o sinal diante das pessoas.\n\n**Exegese contextual:** A obediência do profeta transforma a mensagem em testemunho público verificável.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:7"
       ],
@@ -157,7 +158,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 12:8 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** E veio a mim palavra do SENHOR pela manhã, dizendo:\n\n**Exegese contextual:** A palavra chega pela manhã após a ação, preparando sua interpretação.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Na manhã seguinte, Deus volta a falar.\n\n**Exegese contextual:** A nova palavra prepara a explicação da encenação.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:8"
       ],
@@ -167,7 +168,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 12:9 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Filho do homem, por acaso a casa de Israel, aquela casa rebelde, não te perguntou: O que estás fazendo?\n\n**Exegese contextual:** A pergunta esperada do povo mostra que o sinal busca despertar reflexão, não apenas causar espanto.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** O povo pergunta o significado do gesto.\n\n**Exegese contextual:** A pergunta abre espaço para interpretar o sinal, apesar da resistência anterior.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:9"
       ],
@@ -177,7 +178,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 12:10 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Dize-lhes: Assim diz o Senhor DEUS: esta revelação é para o príncipe em Jerusalém, e para toda a casa de Israel que está em meio dela.\n\n**Exegese contextual:** O oráculo identifica seu alvo principal: o governante de Jerusalém e os habitantes da cidade.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** O sinal se refere ao governante de Jerusalém e ao povo.\n\n**Exegese contextual:** O 'príncipe' aponta para a liderança de Judá, geralmente identificada com Zedequias.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:10"
       ],
@@ -187,7 +188,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 12:11 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Dize: Eu sou vosso sinal; tal como eu fiz, assim se fará a eles; serão removidos; irão em cativeiro.\n\n**Exegese contextual:** O profeta é declarado sinal do exílio que atingirá os moradores de Jerusalém.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** A ação do profeta representa deportação e cativeiro.\n\n**Exegese contextual:** O gesto deixa de ser enigma e torna-se anúncio explícito do exílio.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:11"
       ],
@@ -197,7 +198,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 12:12 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** E o príncipe que está entre eles, levará nos ombros sua bagagem de noite, e sairá; na parede cavarão uma abertura para saírem por ela; cobrirá seu rosto para não ver com seus olhos a terra.\n\n**Exegese contextual:** O príncipe sairá à noite com bagagem e rosto coberto; a imagem ecoa a tentativa de fuga de Zedequias.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** O governante fugirá à noite por uma abertura na parede.\n\n**Exegese contextual:** A cena antecipa a tentativa de escapar do cerco de Jerusalém.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:12"
       ],
@@ -207,7 +208,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 12:13 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Também estenderei minha rede sobre ele, e ele será preso em meu laço, e eu o levarei à Babilônia, à terra de caldeus; porém ele não a verá, ainda que morrerá ali.\n\n**Exegese contextual:** A rede e o laço representam captura. A referência a chegar à Babilônia sem vê-la se relaciona ao destino de Zedequias, cegado após a captura.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Uma rede capturará o príncipe, levado à Babilônia sem vê-la.\n\n**Exegese contextual:** A tensão entre chegar à Babilônia e não a ver é relacionada à cegueira imposta a Zedequias após sua captura.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:13"
       ],
@@ -217,7 +218,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 12:14 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** E a todos os que estiverem ao redor dele para ajudá-lo, e a todas as suas tropas espalharei a todos os ventos, e desembainharei espada atrás deles.\n\n**Exegese contextual:** Auxiliares e tropas serão dispersos; a desagregação do poder acompanha a derrota.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** A guarda e as tropas serão dispersas.\n\n**Exegese contextual:** A queda do poder real inclui desagregação da proteção militar.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:14"
       ],
@@ -227,7 +228,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 12:15 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Assim saberão que eu sou o SENHOR, quando eu os espalhar entre as nações, e os dispersar pelas terras.\n\n**Exegese contextual:** A dispersão conduz à fórmula de reconhecimento do Senhor, recorrente em Ezequiel.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** A dispersão revelará a seriedade da palavra divina.\n\n**Exegese contextual:** A fórmula de reconhecimento acompanha o cumprimento do anúncio.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:15"
       ],
@@ -237,7 +238,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 12:16 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Porém deixarei alguns poucos sobreviventes da espada, da fome, e da pestilência, para que contem todas as suas abominações entre as nações para onde forem; e saberão que eu sou o SENHOR.\n\n**Exegese contextual:** Um pequeno grupo sobreviverá para testemunhar entre as nações o motivo do desastre; sobrevivência não é descrita como mérito individual.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Alguns sobreviventes contarão suas transgressões no exílio.\n\n**Exegese contextual:** A preservação de um remanescente permite testemunho e memória da crise.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:16"
       ],
@@ -247,7 +248,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 12:17 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Então veio a mim a palavra do SENHOR, dizendo:\n\n**Exegese contextual:** Uma nova fórmula introduz outro sinal profético, agora ligado à alimentação.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Uma nova palavra do Senhor inicia outro sinal.\n\n**Exegese contextual:** O foco passa da fuga real à experiência cotidiana dos habitantes.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:17"
       ],
@@ -257,7 +258,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 12:18 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Filho do homem, come teu pão com tremor, e bebe tua água com estremecimento e com ansiedade;\n\n**Exegese contextual:** O profeta deve comer e beber tremendo, encenando ansiedade diante da escassez.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** O profeta deve comer e beber com tremor.\n\n**Exegese contextual:** A refeição encenada traduz ansiedade em gesto corporal.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:18"
       ],
@@ -267,7 +268,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 12:19 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** E dize ao povo da terra: Assim diz o Senhor DEUS sobre os moradores de Jerusalém, e sobre a terra de Israel: Comerão seu pão com ansiedade, e com espanto beberão sua água; porque sua terra será desolada de seu conteúdo, por causa da violência de todos os que nela habitam.\n\n**Exegese contextual:** O alimento com medo representa a vida de Jerusalém sob ameaça; o texto vincula a devastação à violência social.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Os habitantes comerão e beberão angustiados pela violência e devastação.\n\n**Exegese contextual:** A escassez é vinculada ao colapso social, e a violência interna é explicitamente mencionada.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:19"
       ],
@@ -277,7 +278,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 12:20 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** E as cidades habitadas serão desoladas, e a terra se tornará em deserto; e sabereis que eu sou o SENHOR.\n\n**Exegese contextual:** Cidades habitadas serão arruinadas, e a terra ficará desolada; a fórmula de reconhecimento encerra o segundo sinal.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Cidades habitadas ficarão desoladas.\n\n**Exegese contextual:** A conclusão do sinal anuncia devastação territorial.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:20"
       ],
@@ -287,7 +288,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 12:21 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** E veio a mim a palavra do SENHOR, dizendo:\n\n**Exegese contextual:** Outra palavra do Senhor abre a discussão sobre um provérbio popular.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Uma nova palavra introduz a crítica a um provérbio.\n\n**Exegese contextual:** A discussão passa do sinal físico à maneira como o povo fala sobre profecias.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:21"
       ],
@@ -297,7 +298,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 12:22 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Filho do homem, que ditado é este que vós tendes vós terra de Israel, que diz: Os dias se prolongarão, e toda visão perecerá?\n\n**Exegese contextual:** O provérbio expressa descrença: o tempo passa e as visões proféticas parecem não se cumprir.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** O povo afirma que o tempo passa e as visões fracassam.\n\n**Exegese contextual:** O provérbio expressa descrença no cumprimento de advertências proféticas.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:22"
       ],
@@ -307,7 +308,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 12:23 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Portanto dize-lhes: Assim diz o Senhor DEUS: Farei cessar este ditado, e não usarão mais esta frase em Israel. Ao invés disso, dize-lhes: Os dias chegaram, e o cumprimento de toda visão.\n\n**Exegese contextual:** A resposta rejeita a ideia de adiamento indefinido no horizonte da crise de Jerusalém.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Deus declara que o provérbio cessará, pois o cumprimento se aproxima.\n\n**Exegese contextual:** O texto confronta a estratégia de adiar indefinidamente a resposta ao aviso.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:23"
       ],
@@ -317,7 +318,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 12:24 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Porque não haverá mais uma visão falsa sequer, nem haverá adivinhação lisonjeira no meio da casa de Israel.\n\n**Exegese contextual:** O contraste com visões falsas e adivinhação lisonjeira denuncia mensagens que alimentam falsa tranquilidade.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Visões falsas e adivinhação lisonjeira não prevalecerão.\n\n**Exegese contextual:** A promessa distingue a palavra divina das mensagens que apenas agradam ouvintes.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:24"
       ],
@@ -327,7 +328,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 12:25 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Pois eu, o SENHOR, falarei; a palavra que eu falar se cumprirá; não se prolongará mais; porque em vossos dias, ó casa rebelde, falarei a palavra e a cumprirei, diz o Senhor DEUS.\n\n**Exegese contextual:** O anúncio insiste na proximidade do cumprimento, no contexto histórico do público original.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Deus afirma que sua palavra será cumprida naquela geração.\n\n**Exegese contextual:** A ênfase recai na urgência histórica, não numa licença para prever datas modernas.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:25"
       ],
@@ -337,7 +338,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 12:26 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Também veio a mim palavra do SENHOR, dizendo:\n\n**Exegese contextual:** Uma nova fórmula introduz uma objeção semelhante sobre profecias distantes.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** Outra palavra do Senhor introduz uma objeção semelhante.\n\n**Exegese contextual:** A repetição reforça a persistência da resistência.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:26"
       ],
@@ -347,7 +348,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 12:27 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Filho do homem, eis que os da casa de Israel dizem: A visão que este vê é para muitos dias, e ele profetiza para tempos distantes.\n\n**Exegese contextual:** Os ouvintes tentam neutralizar a advertência projetando-a para um futuro remoto.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** O povo diz que Ezequiel anuncia acontecimentos muito distantes.\n\n**Exegese contextual:** A objeção tenta neutralizar a advertência projetando-a para um futuro remoto.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:27"
       ],
@@ -357,7 +358,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 12:28 — exposição versículo a versículo",
-      "body": "**Texto-base (BLIVRE):** Por isso dize-lhes: Assim diz o Senhor DEUS: Nenhuma das minhas palavras se prolongará mais; e palavra que eu falei se cumprirá, diz o Senhor DEUS.\n\n**Exegese contextual:** O fecho reafirma a urgência da palavra profética; não autoriza marcar datas para o fim do mundo.\n\n**Limite de aplicação:** A mensagem pertence ao contexto histórico da queda de Jerusalém; não é autorização para ameaçar pessoas ou prever tragédias contemporâneas.",
+      "body": "**Paráfrase livre autoral:** O Senhor responde que sua palavra não será mais adiada.\n\n**Exegese contextual:** O capítulo termina com insistência no cumprimento próximo do anúncio.\n\n**Pergunta interpretativa:** Como este versículo torna concreta a advertência sobre Jerusalém e a necessidade de ouvir a palavra profética?",
       "scriptureRefs": [
         "Ezequiel 12:28"
       ],
@@ -387,7 +388,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e históricas",
-      "body": "O v. 13 diz que o príncipe será levado à Babilônia sem vê-la; 2 Reis 25:7 relata que Zedequias foi cegado, conexão histórica plausível, mas a linguagem de Ezequiel deve ser respeitada em seus próprios termos. O anúncio de cumprimento próximo refere-se à crise do público original, não a um calendário do fim dos tempos. A sobrevivência de poucos não permite atribuir culpa individual às vítimas.",
+      "body": "**Olhos que não veem (v. 2):** linguagem figurada de resistência moral; não deve ser usada para estigmatizar pessoas com deficiência.\n\n**O príncipe (vv. 10–13):** costuma ser identificado como Zedequias, último rei de Judá antes da queda de Jerusalém.\n\n**Ir à Babilônia sem vê-la (v. 13):** a associação com a cegueira de Zedequias (2 Reis 25:7) é historicamente relevante.\n\n**Profecias sem demora (vv. 21–28):** o contexto é a crise iminente de Jerusalém; não se deve usar a passagem para estabelecer datas de eventos atuais.",
       "scriptureRefs": [
         "Ezequiel 12:1-28"
       ],
@@ -397,7 +398,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências bíblicas contextualizadas",
-      "body": "**2 Reis 25:4–7:** fuga, captura e cegueira de Zedequias. **Jeremias 39:4–7:** relato paralelo da queda do governante. **Ezequiel 4:1–17:** ações simbólicas anteriores sobre o cerco. **Ezequiel 11:16–20:** promessa de presença divina aos exilados. **Lucas 13:1–5:** cautela contra culpar vítimas de calamidades.",
+      "body": "**2 Reis 25:1–7:** fuga, captura e cegueira de Zedequias.\n\n**Jeremias 39:1–7:** relato paralelo da queda de Jerusalém.\n\n**Jeremias 52:7–11:** detalhes da captura e deportação do rei.\n\n**Ezequiel 4:1–17:** outros sinais proféticos encenados.\n\n**Ezequiel 13:1–16:** denúncia de mensagens de falsa paz.\n\n**Habacuque 2:2–3:** expectativa e tempo do cumprimento de uma visão.",
       "scriptureRefs": [
         "Ezequiel 12:1-28"
       ],
@@ -407,7 +408,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegorização",
-      "body": "A denúncia de uma escuta que não produz resposta pode dialogar com o chamado de Jesus a ouvir e praticar suas palavras (Lucas 6:46–49). Ezequiel 12 não anuncia diretamente episódios da vida de Jesus, e o exílio não deve ser convertido em alegoria de qualquer dificuldade pessoal.",
+      "body": "Na leitura cristã, o chamado a reconhecer o tempo de resposta encontra paralelo na convocação de Jesus ao arrependimento (Marcos 1:15). Essa conexão não deve substituir o anúncio histórico de Ezequiel sobre Jerusalém e seu governante.",
       "scriptureRefs": [
         "Ezequiel 12:1-28"
       ],
@@ -427,7 +428,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Qual é o primeiro sinal?** A bagagem e a saída simbólica para o exílio (vv. 3–7).\n\n**2. A quem se refere a explicação?** Ao príncipe em Jerusalém e à população (vv. 10–12).\n\n**3. Qual é o segundo sinal?** Comer e beber com tremor (vv. 17–20).\n\n**4. O que afirma o provérbio?** Que as visões não se cumprem ou pertencem a um futuro distante (vv. 22, 27).\n\n**5. Qual é a resposta profética?** A crise anunciada não será indefinidamente adiada no horizonte dos ouvintes.",
+      "body": "**1. O que o profeta prepara?** Bagagem de exílio (12:3–4).\n\n**2. Por onde ele retira a bagagem?** Por uma abertura na parede (12:5–7).\n\n**3. A quem o sinal se refere?** Ao governante de Jerusalém e ao povo (12:10–11).\n\n**4. Como ele deve comer e beber?** Com tremor e ansiedade (12:18).\n\n**5. Qual desculpa sobre profecias é rejeitada?** Que as visões fracassam ou se referem apenas a tempos distantes (12:22,27).",
       "scriptureRefs": [
         "Ezequiel 12:1-28"
       ],
@@ -437,7 +438,7 @@ export const ezekiel12Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — o perigo de adiar a escuta",
-      "body": "**Tema:** Quando a advertência é tratada como distante.\n\n**Proposição:** As ações simbólicas de Ezequiel confrontam a falsa segurança e a tendência de ignorar advertências até a crise chegar.\n\n**Esboço:** (1) a bagagem que anuncia perda (1–16); (2) o pão com tremor (17–20); (3) o provérbio do adiamento (21–28).\n\n**Cuidado pastoral:** não estabelecer datas apocalípticas, não culpar vítimas de guerra e não usar gestos proféticos como encenações coercitivas.",
+      "body": "**Tema:** Quando o aviso é visto, mas não ouvido.\n\n**Proposição:** A resistência à verdade não elimina a realidade de uma crise nem a responsabilidade de agir.\n\n**Esboço:** (1) o sinal do exílio (1–7); (2) o destino do governante (8–16); (3) a angústia da população (17–20); (4) a recusa de adiar a resposta (21–28).\n\n**Cuidados:** não usar metáforas sensoriais para ofender pessoas com deficiência; não fazer previsões cronológicas modernas com os versículos finais; tratar o sofrimento de exilados com respeito.",
       "scriptureRefs": [
         "Ezequiel 12:1-28"
       ],
