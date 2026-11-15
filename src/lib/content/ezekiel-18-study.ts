@@ -1,51 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 18 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 18 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel18Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 18 rejeita o fatalismo da culpa herdada, apresenta três gerações e convoca à responsabilidade, justiça e conversão.",
-  "historicalContext": "Oráculo dirigido a Israel durante a crise do exílio babilônico no século VI a.C., em diálogo com a questão da justiça intergeracional.",
+  "intro": "Ezequiel 18 responde ao provérbio das uvas verdes e afirma que cada pessoa responde por seus próprios caminhos. Por meio de três gerações e de exemplos de mudança moral, o capítulo proclama justiça, arrependimento e a vontade divina de que o povo viva.",
+  "historicalContext": "No contexto do exílio, o provérbio sobre pais e filhos expressava a percepção de sofrer consequências de gerações anteriores. Ezequiel contesta seu uso fatalista e chama cada pessoa à responsabilidade. O argumento convive com a realidade de efeitos coletivos da história, mas distingue esses efeitos da atribuição automática de culpa.",
   "keyPoints": [
     {
-      "title": "Uvas verdes",
-      "text": "A culpa moral não é transferida automaticamente entre gerações (1–4)."
+      "title": "1–4: O provérbio contestado",
+      "text": "A culpa não é automaticamente transmitida de pais para filhos."
     },
     {
-      "title": "Três gerações",
-      "text": "Condutas diferentes recebem avaliações diferentes (5–20)."
+      "title": "5–20: Três gerações",
+      "text": "Exemplos contrastantes mostram que cada pessoa responde por sua conduta."
     },
     {
-      "title": "Mudança possível",
-      "text": "Conversão e abandono da justiça têm consequências (21–29)."
+      "title": "21–24: Mudança de caminho",
+      "text": "A conversão do perverso é possível, e a justiça passada não autoriza novas injustiças."
     },
     {
-      "title": "Convite à vida",
-      "text": "O Senhor chama o povo a um coração renovado (30–32)."
+      "title": "25–32: Convite à vida",
+      "text": "Deus chama o povo a abandonar transgressões e renovar coração e espírito."
     }
   ],
-  "application": "Assumir responsabilidade sem culpar vítimas, praticar justiça concreta e cultivar esperança de mudança.",
+  "application": "Recusar a ideia de que uma pessoa esteja condenada moralmente pelos erros da família. Praticar justiça econômica, reparar danos quando possível e cultivar arrependimento com mudança concreta. Não usar o capítulo para negar traumas, desigualdades ou consequências sociais herdadas.",
   "crossReferences": [
-    "Jeremias 31:29-30",
     "Deuteronômio 24:16",
-    "Ezequiel 14:14-20",
+    "Jeremias 31:29-30",
+    "Ezequiel 14:12-20",
     "Ezequiel 33:10-20",
     "Ezequiel 36:25-27",
-    "Lucas 15:11-32"
+    "Lucas 15:11-24"
   ],
   "questions": [
-    "O que significa o provérbio das uvas verdes?",
-    "Como funcionam os três exemplos familiares?",
-    "Por que justiça social é central?",
-    "Como a ordem de novo coração se relaciona à promessa de Ezequiel 36?"
+    "O que o provérbio das uvas verdes pretendia explicar?",
+    "Que ações concretas definem a pessoa justa?",
+    "Por que a terceira geração é importante no argumento?",
+    "O que acontece quando alguém abandona a perversidade?",
+    "Como entender a afirmação de que Deus não se agrada da morte?"
   ],
-  "conclusion": "Deus confronta o fatalismo e chama cada pessoa e a comunidade a agir com justiça e a escolher a vida.",
+  "conclusion": "Ezequiel 18 rejeita a transferência automática de culpa, insiste na justiça praticada e abre espaço para a transformação. O chamado final é simples e exigente: converter-se e viver.",
   "prayer": "Senhor, dá-nos um coração atento, coragem para mudar e compromisso com justiça. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 18:1–32 (paráfrase livre)",
-      "body": "**Paráfrase livre autoral de apoio à leitura, não tradução bíblica oficial.**\n\n**1.** O Senhor dirige nova palavra ao profeta.\n\n**2.** O povo cita o ditado sobre pais e filhos que sofrem consequências alheias.\n\n**3.** O Senhor rejeita o uso continuado desse provérbio.\n\n**4.** Todas as vidas pertencem a Deus; quem peca responde por seu pecado.\n\n**5.** O primeiro exemplo apresenta uma pessoa que pratica justiça.\n\n**6.** Ela evita culto idólatra e violações de fidelidade sexual e pureza ritual.\n\n**7.** Não oprime, devolve garantias, não rouba e alimenta e veste necessitados.\n\n**8.** Recusa juros exploratórios e julga disputas com imparcialidade.\n\n**9.** A pessoa justa obedece com fidelidade e recebe promessa de vida.\n\n**10.** O segundo exemplo é um filho violento e ladrão.\n\n**11.** O filho adota práticas cultuais e sexuais condenadas.\n\n**12.** Ele oprime pobres, rouba, retém garantias e pratica idolatria.\n\n**13.** Sua exploração financeira e violência levam ao anúncio de morte.\n\n**14.** O terceiro exemplo é o neto que observa os pecados do pai e os rejeita.\n\n**15.** O neto recusa idolatria e práticas de infidelidade.\n\n**16.** Ele não oprime nem rouba, devolve garantias e alimenta necessitados.\n\n**17.** Recusa exploração e pratica a lei; não morre pela culpa do pai.\n\n**18.** O pai opressor é responsabilizado pelo mal que praticou.\n\n**19.** A pergunta do povo insiste na punição do filho pelo pai.\n\n**20.** O filho não carrega a culpa moral do pai nem o pai a do filho.\n\n**21.** Quem abandona a maldade e pratica justiça encontra vida.\n\n**22.** As transgressões anteriores não determinam o destino de quem se converte.\n\n**23.** Deus pergunta se deseja a morte do ímpio ou sua conversão.\n\n**24.** Quem abandona a justiça para praticar mal não pode invocar méritos passados.\n\n**25.** O povo acusa o caminho do Senhor de injustiça.\n\n**26.** O justo que passa a praticar mal responde por sua nova conduta.\n\n**27.** Quem abandona a maldade e pratica justiça preserva a vida.\n\n**28.** A reflexão e o arrependimento acompanham a mudança de vida.\n\n**29.** A acusação de injustiça é repetida e invertida pelo oráculo.\n\n**30.** Deus chama cada um a abandonar transgressões antes da queda.\n\n**31.** O povo deve abandonar transgressões e buscar coração e espírito novos.\n\n**32.** O Senhor declara não ter prazer na morte e chama o povo a viver.",
+      "body": "Leia Ezequiel 18:1–32 no texto bíblico do aplicativo. As notas apresentam **paráfrases livres autorais**, não tradução oficial.",
       "scriptureRefs": [
         "Ezequiel 18:1-32"
       ],
@@ -87,7 +88,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 18:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O Senhor dirige nova palavra ao profeta.\n\n**Exegese contextual:** Introduz a resposta ao provérbio fatalista dos exilados.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O Senhor dirige sua palavra a Ezequiel.\n\n**Exegese contextual:** A abertura introduz uma discussão sobre justiça e responsabilidade no contexto do exílio.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:1"
       ],
@@ -97,7 +98,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 18:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O povo cita o ditado sobre pais e filhos que sofrem consequências alheias.\n\n**Exegese contextual:** A imagem das uvas verdes denuncia uma percepção de injustiça geracional.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O povo repete o provérbio das uvas verdes e dos dentes dos filhos.\n\n**Exegese contextual:** A máxima atribui à geração presente as consequências das ações dos antepassados.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:2"
       ],
@@ -107,7 +108,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 18:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O Senhor rejeita o uso continuado desse provérbio.\n\n**Exegese contextual:** O argumento combate a desculpa de que a geração atual não tem responsabilidade.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Deus rejeita o uso desse provérbio em Israel.\n\n**Exegese contextual:** A resposta confronta o fatalismo que elimina a responsabilidade pessoal.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:3"
       ],
@@ -117,7 +118,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 18:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Todas as vidas pertencem a Deus; quem peca responde por seu pecado.\n\n**Exegese contextual:** A afirmação de responsabilidade pessoal não nega efeitos sociais dos atos de gerações anteriores.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Pai e filho pertencem igualmente a Deus; cada um responde pelo próprio pecado.\n\n**Exegese contextual:** A afirmação funda a responsabilidade individual, sem negar que ações humanas tenham efeitos sociais entre gerações.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:4"
       ],
@@ -127,7 +128,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 18:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O primeiro exemplo apresenta uma pessoa que pratica justiça.\n\n**Exegese contextual:** A justiça é descrita por ações concretas, não por título religioso.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** É apresentado o exemplo de uma pessoa justa.\n\n**Exegese contextual:** O texto definirá justiça por práticas concretas, não apenas por declaração religiosa.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:5"
       ],
@@ -137,7 +138,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 18:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ela evita culto idólatra e violações de fidelidade sexual e pureza ritual.\n\n**Exegese contextual:** A referência à menstruação pertence às normas rituais antigas e não deve ser usada para estigmatizar mulheres hoje.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O justo evita idolatria e violações de limites conjugais e rituais.\n\n**Exegese contextual:** A lista reflete normas da aliança em seu contexto antigo e requer cuidado na aplicação contemporânea.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:6"
       ],
@@ -147,7 +148,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 18:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Não oprime, devolve garantias, não rouba e alimenta e veste necessitados.\n\n**Exegese contextual:** A ética da aliança une respeito à propriedade e socorro aos vulneráveis.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O justo não oprime, devolve penhores e ajuda quem tem fome ou falta de roupa.\n\n**Exegese contextual:** Justiça envolve relações econômicas e proteção material de pessoas vulneráveis.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:7"
       ],
@@ -157,7 +158,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 18:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Recusa juros exploratórios e julga disputas com imparcialidade.\n\n**Exegese contextual:** A preocupação é exploração econômica e justiça nas relações.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O justo rejeita juros exploratórios e decide conflitos com equidade.\n\n**Exegese contextual:** O texto une integridade econômica e imparcialidade judicial.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:8"
       ],
@@ -167,7 +168,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 18:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A pessoa justa obedece com fidelidade e recebe promessa de vida.\n\n**Exegese contextual:** No oráculo, viver é linguagem de juízo e restauração, não promessa de ausência de doenças.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Quem pratica fielmente essas orientações viverá.\n\n**Exegese contextual:** A vida é apresentada como resultado da fidelidade no argumento profético.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:9"
       ],
@@ -177,7 +178,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 18:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O segundo exemplo é um filho violento e ladrão.\n\n**Exegese contextual:** O texto introduz contraste deliberado com o pai justo.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Surge o exemplo de um filho violento de pai justo.\n\n**Exegese contextual:** A mudança de geração testa se a conduta do pai determina automaticamente a do filho.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:10"
       ],
@@ -187,7 +188,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 18:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O filho adota práticas cultuais e sexuais condenadas.\n\n**Exegese contextual:** A herança familiar não determina automaticamente o caráter do filho.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O filho escolhe práticas cultuais e sexuais condenadas.\n\n**Exegese contextual:** A responsabilidade é avaliada pelas escolhas do filho, não pelo mérito do pai.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:11"
       ],
@@ -197,7 +198,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 18:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ele oprime pobres, rouba, retém garantias e pratica idolatria.\n\n**Exegese contextual:** A repetição destaca escolhas concretas e vítimas reais.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Ele oprime necessitados, rouba e pratica idolatria.\n\n**Exegese contextual:** As violações mostram que injustiça social e infidelidade religiosa caminham juntas.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:12"
       ],
@@ -207,7 +208,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 18:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Sua exploração financeira e violência levam ao anúncio de morte.\n\n**Exegese contextual:** A consequência não é transferida ao pai; o texto não autoriza execuções extrajudiciais.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Sua exploração econômica integra a acusação que leva ao juízo.\n\n**Exegese contextual:** O texto afirma responsabilidade por seus próprios atos, não transferência de culpa familiar.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:13"
       ],
@@ -217,7 +218,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 18:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O terceiro exemplo é o neto que observa os pecados do pai e os rejeita.\n\n**Exegese contextual:** O padrão familiar pode ser interrompido por escolha ética.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O filho desse homem observa os pecados paternos e decide não repeti-los.\n\n**Exegese contextual:** A terceira geração demonstra que a história familiar não precisa determinar o futuro moral.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:14"
       ],
@@ -227,7 +228,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 18:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O neto recusa idolatria e práticas de infidelidade.\n\n**Exegese contextual:** A fidelidade é avaliada por sua própria conduta.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Ele recusa idolatria e condutas condenadas pela aliança.\n\n**Exegese contextual:** A diferença é uma escolha concreta de fidelidade.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:15"
       ],
@@ -237,7 +238,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 18:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ele não oprime nem rouba, devolve garantias e alimenta necessitados.\n\n**Exegese contextual:** Justiça social aparece novamente como critério de integridade.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Ele não oprime, não rouba e socorre famintos e pessoas sem roupa.\n\n**Exegese contextual:** A justiça da terceira geração aparece em ações verificáveis de cuidado.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:16"
       ],
@@ -247,7 +248,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 18:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Recusa exploração e pratica a lei; não morre pela culpa do pai.\n\n**Exegese contextual:** A passagem distingue responsabilidade moral de consequências históricas coletivas.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Ele rejeita exploração e pratica os estatutos; não morrerá pela culpa do pai.\n\n**Exegese contextual:** O princípio da responsabilidade individual é reafirmado com base na conduta presente.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:17"
       ],
@@ -257,7 +258,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 18:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O pai opressor é responsabilizado pelo mal que praticou.\n\n**Exegese contextual:** O contraste conclui a sequência de três gerações.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O pai opressor responde pela própria injustiça.\n\n**Exegese contextual:** A consequência recai sobre quem praticou roubo e violência.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:18"
       ],
@@ -267,7 +268,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 18:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A pergunta do povo insiste na punição do filho pelo pai.\n\n**Exegese contextual:** O oráculo responde apontando a justiça efetiva do filho.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O povo questiona por que o filho não carrega a culpa do pai.\n\n**Exegese contextual:** A resposta destaca que o filho agiu justamente e não deve ser punido por pecados alheios.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:19"
       ],
@@ -277,7 +278,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 18:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O filho não carrega a culpa moral do pai nem o pai a do filho.\n\n**Exegese contextual:** A tese é expressa claramente, sem negar que atos de um afetem materialmente outros.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** A responsabilidade de pai e filho é diferenciada explicitamente.\n\n**Exegese contextual:** O versículo é a formulação central do capítulo: justiça e culpa não são herdadas automaticamente.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:20"
       ],
@@ -287,7 +288,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 18:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Quem abandona a maldade e pratica justiça encontra vida.\n\n**Exegese contextual:** A conversão é apresentada como possibilidade real, não identidade imutável.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Quem praticou o mal pode mudar de caminho e agir justamente.\n\n**Exegese contextual:** A conversão abre futuro real e impede tratar a pessoa como irremediavelmente definida pelo passado.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:21"
       ],
@@ -297,7 +298,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 18:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As transgressões anteriores não determinam o destino de quem se converte.\n\n**Exegese contextual:** O perdão é ligado a mudança concreta de conduta.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** As transgressões anteriores não serão usadas para negar a nova vida.\n\n**Exegese contextual:** A ênfase recai na mudança efetiva de conduta, não na impossibilidade de perdão.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:22"
       ],
@@ -307,7 +308,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 18:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus pergunta se deseja a morte do ímpio ou sua conversão.\n\n**Exegese contextual:** O propósito declarado é a vida, não prazer no castigo.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Deus pergunta se prefere a morte do perverso ou sua conversão.\n\n**Exegese contextual:** O propósito declarado é que a pessoa abandone o mal e viva.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:23"
       ],
@@ -317,7 +318,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 18:24 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Quem abandona a justiça para praticar mal não pode invocar méritos passados.\n\n**Exegese contextual:** A responsabilidade é dinâmica e envolve escolhas presentes.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Quem abandona a justiça para praticar o mal é advertido.\n\n**Exegese contextual:** O texto também recusa segurança baseada apenas em boas ações passadas.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:24"
       ],
@@ -327,7 +328,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 18:25 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O povo acusa o caminho do Senhor de injustiça.\n\n**Exegese contextual:** A objeção é retomada para ser examinada no próprio discurso.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O povo acusa o caminho do Senhor de injustiça.\n\n**Exegese contextual:** A disputa trata da avaliação moral de pessoas que mudam de conduta.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:25"
       ],
@@ -337,7 +338,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 18:26 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O justo que passa a praticar mal responde por sua nova conduta.\n\n**Exegese contextual:** A tese da responsabilidade atual é reiterada.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** A pessoa justa que passa a agir perversamente responde por isso.\n\n**Exegese contextual:** A advertência reforça que a conduta presente importa.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:26"
       ],
@@ -347,7 +348,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 18:27 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Quem abandona a maldade e pratica justiça preserva a vida.\n\n**Exegese contextual:** A possibilidade de mudança impede o fatalismo moral.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Quem abandona a perversidade e pratica justiça preserva a vida.\n\n**Exegese contextual:** A mudança é descrita de forma positiva e acessível.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:27"
       ],
@@ -357,7 +358,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 18:28 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A reflexão e o arrependimento acompanham a mudança de vida.\n\n**Exegese contextual:** O texto une reconhecimento do erro e ação diferente.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** A conversão envolve reconhecer e abandonar transgressões.\n\n**Exegese contextual:** O arrependimento não é só sentimento: inclui revisão efetiva do comportamento.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:28"
       ],
@@ -367,7 +368,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Ezequiel 18:29 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A acusação de injustiça é repetida e invertida pelo oráculo.\n\n**Exegese contextual:** O argumento exige que o povo examine seus próprios caminhos.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** A acusação de injustiça divina é repetida.\n\n**Exegese contextual:** A repetição prepara o apelo final a cada membro da comunidade.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:29"
       ],
@@ -377,7 +378,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Ezequiel 18:30 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus chama cada um a abandonar transgressões antes da queda.\n\n**Exegese contextual:** O convite ao arrependimento é coletivo e individual.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Deus chama cada um a responder por seus caminhos e a converter-se.\n\n**Exegese contextual:** O imperativo transforma o debate teórico em decisão prática.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:30"
       ],
@@ -387,7 +388,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Ezequiel 18:31 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O povo deve abandonar transgressões e buscar coração e espírito novos.\n\n**Exegese contextual:** O imperativo de mudança antecipa temas de renovação em Ezequiel 36:26, onde Deus também promete agir.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** O povo é chamado a abandonar transgressões e buscar novo coração e espírito.\n\n**Exegese contextual:** A renovação interior acompanha mudança de conduta; compare a promessa de Ezequiel 36:26.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:31"
       ],
@@ -397,7 +398,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "versiculo-32",
       "title": "Ezequiel 18:32 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O Senhor declara não ter prazer na morte e chama o povo a viver.\n\n**Exegese contextual:** O fecho resume o horizonte pastoral do capítulo: conversão e vida.\n\n**Pergunta de leitura:** Como este versículo contribui para o argumento sobre justiça, responsabilidade ou conversão?",
+      "body": "**Paráfrase livre autoral:** Deus declara não se agradar da morte e chama à vida.\n\n**Exegese contextual:** O capítulo termina com convite à conversão, não com fatalismo ou prazer no castigo.\n\n**Pergunta interpretativa:** Como este versículo esclarece a responsabilidade pessoal, a justiça concreta ou a possibilidade de conversão?",
       "scriptureRefs": [
         "Ezequiel 18:32"
       ],
@@ -457,7 +458,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "A palavra 'vida' pode ter horizonte de sobrevivência, restauração e comunhão com Deus no discurso profético; não deve ser convertida em fórmula de prosperidade ou diagnóstico da salvação eterna de indivíduos. As normas de pureza ritual (v. 6) precisam ser situadas no antigo Israel. O capítulo não culpabiliza vítimas de pobreza, doença ou violência.",
+      "body": "**Responsabilidade individual e efeitos coletivos:** o capítulo nega culpa moral automática entre gerações, mas não afirma que decisões familiares ou políticas deixam de afetar outras pessoas.\n\n**Vida e morte:** a linguagem participa do horizonte da aliança e do exílio; não deve ser convertida em fórmula simplista para explicar toda doença ou morte.\n\n**Conversão:** os versículos 21–24 enfatizam mudança real de conduta, sem reduzir a graça a mera contabilidade de obras.\n\n**Novo coração:** o imperativo do versículo 31 dialoga com a promessa de renovação divina em Ezequiel 36:26.",
       "scriptureRefs": [
         "Ezequiel 18:1-32"
       ],
@@ -467,7 +468,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**Jeremias 31:29–30:** o mesmo provérbio das uvas verdes. **Deuteronômio 24:16:** proibição de punir filhos por culpa dos pais no âmbito judicial. **Ezequiel 14:14–20:** limite da justiça transferida. **Ezequiel 33:10–20:** retomada do arrependimento. **Ezequiel 36:25–27:** promessa de coração novo. **Lucas 15:11–32:** acolhimento do arrependido em outro contexto.",
+      "body": "**Deuteronômio 24:16:** princípio jurídico de responsabilidade individual.\n\n**Jeremias 31:29–30:** o mesmo provérbio das uvas verdes.\n\n**Ezequiel 14:12–20:** responsabilidade de pessoas justas.\n\n**Ezequiel 33:10–20:** retomada do chamado à conversão.\n\n**Ezequiel 36:25–27:** promessa de novo coração e espírito.\n\n**Lucas 15:11–24:** retorno e acolhimento na parábola do filho perdido.",
       "scriptureRefs": [
         "Ezequiel 18:1-32"
       ],
@@ -477,7 +478,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem forçar previsão",
-      "body": "O convite de Ezequiel à conversão e à vida pode dialogar com a pregação de Jesus sobre arrependimento e misericórdia (Lucas 15). Ezequiel 18 não é profecia direta de um episódio de Cristo, nem autoriza concluir que toda calamidade decorra do pecado pessoal.",
+      "body": "Na leitura cristã, o chamado à conversão e à vida encontra paralelo na proclamação de Jesus: 'arrependei-vos' (Marcos 1:15) e no acolhimento do filho que retorna (Lucas 15:20–24). Essa relação não substitui o sentido original do capítulo na crise de Israel.",
       "scriptureRefs": [
         "Ezequiel 18:1-32"
       ],
@@ -497,7 +498,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios e respostas comentadas",
-      "body": "**1. O que expressa o provérbio?** A percepção de sofrer culpa moral de gerações anteriores (vv. 2–4).\n\n**2. Como diferem as três gerações?** Justo, filho opressor e neto que rejeita o mal (vv. 5–18).\n\n**3. Cite duas práticas de justiça.** Alimentar famintos e devolver penhores (vv. 7–8).\n\n**4. O passado determina para sempre a pessoa?** Não; a conversão e o abandono da justiça são tratados como mudanças reais (vv. 21–24).\n\n**5. O que Deus declara desejar?** Que as pessoas se convertam e vivam (vv. 23, 32).",
+      "body": "**1. Qual provérbio é contestado?** O dos pais que comem uvas verdes e dos dentes dos filhos que sofrem (18:2).\n\n**2. O que caracteriza o justo?** Não oprimir, agir com equidade e socorrer necessitados (18:5–9).\n\n**3. O filho justo responde pela culpa do pai injusto?** Não (18:17–20).\n\n**4. O perverso pode mudar de destino?** Sim, ao abandonar o mal e praticar justiça (18:21–23).\n\n**5. Qual convite encerra o capítulo?** Converter-se e viver (18:32).",
       "scriptureRefs": [
         "Ezequiel 18:1-32"
       ],
@@ -507,7 +508,7 @@ export const ezekiel18Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — não herdar a culpa, assumir a resposta",
-      "body": "**Tema:** Responsabilidade pessoal e esperança de mudança.\n\n**Proposição:** Deus confronta o fatalismo e chama seu povo à justiça concreta e à conversão.\n\n**Esboço:** (1) o provérbio contestado (1–4); (2) três gerações e responsabilidade (5–20); (3) possibilidade de mudança (21–29); (4) convite à vida (30–32).\n\n**Cuidado pastoral:** não culpar vítimas de trauma familiar nem prometer que arrependimento elimina automaticamente consequências legais ou materiais.",
+      "body": "**Tema:** Responsabilidade, arrependimento e vida.\n\n**Proposição:** Ninguém precisa repetir os pecados de sua família, e ninguém deve confiar apenas na justiça do passado.\n\n**Esboço:** (1) o provérbio e a resposta divina (1–4); (2) três gerações e escolhas distintas (5–20); (3) o caminho da conversão (21–24); (4) novo coração e vida (25–32).\n\n**Cuidados:** não culpar vítimas por sofrimento, não negar consequências estruturais entre gerações e não transformar a mensagem em moralismo sem esperança.",
       "scriptureRefs": [
         "Ezequiel 18:1-32"
       ],
