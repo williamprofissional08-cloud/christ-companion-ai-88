@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
 import {
-  ArrowRight, BookOpen, Bookmark, CalendarDays, ChevronRight, Clock3,
+  ArrowRight, BookOpen, CalendarDays, ChevronRight, Clock3,
   GraduationCap, Heart, MessageCircleHeart, NotebookPen, Route as RouteIcon,
   Sparkles, UsersRound, BookMarked, Compass,
 } from "lucide-react";
