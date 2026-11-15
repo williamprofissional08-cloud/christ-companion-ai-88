@@ -1,6 +1,6 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 38 — comentários autorais; revisão editorial humana pendente. */
+/** Ezequiel 38 — revisão lexical preliminar, não estudo editorialmente concluído. */
 export const ezekiel38Study: StudyContent = {
   "version": 5,
   "depth": "deep",
@@ -36,7 +36,7 @@ export const ezekiel38Study: StudyContent = {
     "Qual é o papel de o confronto como revelação nos versículos 14–17?",
     "Qual é o papel de terremoto e desordem cósmica nos versículos 18–23?"
   ],
-  "conclusion": "Gogue e a ameaça contra Israel restaurado deve ser interpretado no fluxo do livro de Ezequiel e com atenção ao gênero literário.",
+  "conclusion": "O capítulo tem roteiro estrutural, notas de observação textual e aplicações preliminares; a exegese aprofundada e a revisão humana permanecem pendentes.",
   "prayer": "Senhor, ensina-nos a viver com justiça e esperança. Amém.",
   "sections": [
     {
@@ -52,7 +52,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "introducao",
       "title": "Introdução — Gogue e a ameaça contra Israel restaurado",
-      "body": "O capítulo desenvolve gogue e a ameaça contra israel restaurado. O estudo segue as unidades literárias, examina seus detalhes e distingue o contexto do profeta das aplicações cristãs posteriores.",
+      "body": "O capítulo desenvolve gogue e a ameaça contra israel restaurado. O estudo segue as unidades literárias, examina seus detalhes e distingue o contexto do profeta das aplicações cristãs posteriores.\n\n**Estado editorial:** leitura orientada e análise lexical inicial; ainda não equivale a uma exposição aprofundada, versículo por versículo, aprovada.",
       "scriptureRefs": [
         "Ezequiel 38:1-23"
       ],
@@ -122,7 +122,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 38:1 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo apresenta uma coalizão de povos e um líder chamado Gogue; identificações geográficas modernas são incertas.\n\n**Leitura contextual do versículo 1:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **gogue, magogue e aliados**. Leia o verso integral no texto bíblico e compare-o aos versos 1–6 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:1:** Este versículo integra o movimento **gogue, magogue e aliados**. Observe especialmente os termos e imagens presentes no texto bíblico: **palavra, dizendo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 1 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **palavra** neste verso e como ela contribui para o desenvolvimento de **gogue, magogue e aliados**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:1"
       ],
@@ -132,7 +132,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 38:2 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo apresenta uma coalizão de povos e um líder chamado Gogue; identificações geográficas modernas são incertas.\n\n**Leitura contextual do versículo 2:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **gogue, magogue e aliados**. Leia o verso integral no texto bíblico e compare-o aos versos 1–6 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:2:** Este versículo integra o movimento **gogue, magogue e aliados**. Observe especialmente os termos e imagens presentes no texto bíblico: **Filho, homem, dirige, rosto, Gogue**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 2 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Filho** neste verso e como ela contribui para o desenvolvimento de **gogue, magogue e aliados**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:2"
       ],
@@ -142,7 +142,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 38:3 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo apresenta uma coalizão de povos e um líder chamado Gogue; identificações geográficas modernas são incertas.\n\n**Leitura contextual do versículo 3:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **gogue, magogue e aliados**. Leia o verso integral no texto bíblico e compare-o aos versos 1–6 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:3:** Este versículo integra o movimento **gogue, magogue e aliados**. Observe especialmente os termos e imagens presentes no texto bíblico: **Gogue, príncipe, chefe, Meseque, Tubal**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 3 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Gogue** neste verso e como ela contribui para o desenvolvimento de **gogue, magogue e aliados**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:3"
       ],
@@ -152,7 +152,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 38:4 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo apresenta uma coalizão de povos e um líder chamado Gogue; identificações geográficas modernas são incertas.\n\n**Leitura contextual do versículo 4:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **gogue, magogue e aliados**. Leia o verso integral no texto bíblico e compare-o aos versos 1–6 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:4:** Este versículo integra o movimento **gogue, magogue e aliados**. Observe especialmente os termos e imagens presentes no texto bíblico: **farei, virar, porei, anzóis, queixos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 4 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **farei** neste verso e como ela contribui para o desenvolvimento de **gogue, magogue e aliados**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:4"
       ],
@@ -162,7 +162,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 38:5 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo apresenta uma coalizão de povos e um líder chamado Gogue; identificações geográficas modernas são incertas.\n\n**Leitura contextual do versículo 5:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **gogue, magogue e aliados**. Leia o verso integral no texto bíblico e compare-o aos versos 1–6 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:5:** Este versículo integra o movimento **gogue, magogue e aliados**. Observe especialmente os termos e imagens presentes no texto bíblico: **Persas, cuxitas, escudo, capacete**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 5 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Persas** neste verso e como ela contribui para o desenvolvimento de **gogue, magogue e aliados**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:5"
       ],
@@ -172,7 +172,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 38:6 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo apresenta uma coalizão de povos e um líder chamado Gogue; identificações geográficas modernas são incertas.\n\n**Leitura contextual do versículo 6:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **gogue, magogue e aliados**. Leia o verso integral no texto bíblico e compare-o aos versos 1–6 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:6:** Este versículo integra o movimento **gogue, magogue e aliados**. Observe especialmente os termos e imagens presentes no texto bíblico: **Gômer, tropas, Togarma, lados, norte**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 6 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Gômer** neste verso e como ela contribui para o desenvolvimento de **gogue, magogue e aliados**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:6"
       ],
@@ -182,7 +182,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 38:7 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A ameaça se dirige a uma comunidade reunida e segura; a cobiça de despojos motiva a invasão.\n\n**Leitura contextual do versículo 7:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **invasão de uma terra em paz**. Leia o verso integral no texto bíblico e compare-o aos versos 7–13 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:7:** Este versículo integra o movimento **invasão de uma terra em paz**. Observe especialmente os termos e imagens presentes no texto bíblico: **Prepara, apronta, multidões, juntaram, guardião**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 7 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Prepara** neste verso e como ela contribui para o desenvolvimento de **invasão de uma terra em paz**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:7"
       ],
@@ -192,7 +192,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 38:8 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A ameaça se dirige a uma comunidade reunida e segura; a cobiça de despojos motiva a invasão.\n\n**Leitura contextual do versículo 8:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **invasão de uma terra em paz**. Leia o verso integral no texto bíblico e compare-o aos versos 7–13 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:8:** Este versículo integra o movimento **invasão de uma terra em paz**. Observe especialmente os termos e imagens presentes no texto bíblico: **muitos, serás, visitado, virás, terra**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 8 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **muitos** neste verso e como ela contribui para o desenvolvimento de **invasão de uma terra em paz**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:8"
       ],
@@ -202,7 +202,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 38:9 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A ameaça se dirige a uma comunidade reunida e segura; a cobiça de despojos motiva a invasão.\n\n**Leitura contextual do versículo 9:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **invasão de uma terra em paz**. Leia o verso integral no texto bíblico e compare-o aos versos 7–13 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:9:** Este versículo integra o movimento **invasão de uma terra em paz**. Observe especialmente os termos e imagens presentes no texto bíblico: **subirás, virás, tempestade, devastadora, serás**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 9 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **subirás** neste verso e como ela contribui para o desenvolvimento de **invasão de uma terra em paz**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:9"
       ],
@@ -212,7 +212,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 38:10 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A ameaça se dirige a uma comunidade reunida e segura; a cobiça de despojos motiva a invasão.\n\n**Leitura contextual do versículo 10:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **invasão de uma terra em paz**. Leia o verso integral no texto bíblico e compare-o aos versos 7–13 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:10:** Este versículo integra o movimento **invasão de uma terra em paz**. Observe especialmente os termos e imagens presentes no texto bíblico: **naquele, subirão, palavras, coração, pensarás**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 10 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **naquele** neste verso e como ela contribui para o desenvolvimento de **invasão de uma terra em paz**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:10"
       ],
@@ -222,7 +222,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 38:11 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A ameaça se dirige a uma comunidade reunida e segura; a cobiça de despojos motiva a invasão.\n\n**Leitura contextual do versículo 11:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **invasão de uma terra em paz**. Leia o verso integral no texto bíblico e compare-o aos versos 7–13 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:11:** Este versículo integra o movimento **invasão de uma terra em paz**. Observe especialmente os termos e imagens presentes no texto bíblico: **dirás, Subirei, terra, aldeias, muros**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 11 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **dirás** neste verso e como ela contribui para o desenvolvimento de **invasão de uma terra em paz**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:11"
       ],
@@ -232,7 +232,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 38:12 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A ameaça se dirige a uma comunidade reunida e segura; a cobiça de despojos motiva a invasão.\n\n**Leitura contextual do versículo 12:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **invasão de uma terra em paz**. Leia o verso integral no texto bíblico e compare-o aos versos 7–13 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:12:** Este versículo integra o movimento **invasão de uma terra em paz**. Observe especialmente os termos e imagens presentes no texto bíblico: **tomar, despojo, saquear, presa, virar**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 12 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **tomar** neste verso e como ela contribui para o desenvolvimento de **invasão de uma terra em paz**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:12"
       ],
@@ -242,7 +242,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 38:13 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A ameaça se dirige a uma comunidade reunida e segura; a cobiça de despojos motiva a invasão.\n\n**Leitura contextual do versículo 13:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **invasão de uma terra em paz**. Leia o verso integral no texto bíblico e compare-o aos versos 7–13 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:13:** Este versículo integra o movimento **invasão de uma terra em paz**. Observe especialmente os termos e imagens presentes no texto bíblico: **mercadores, Társis, filhotes, leões, dirão**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 13 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **mercadores** neste verso e como ela contribui para o desenvolvimento de **invasão de uma terra em paz**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:13"
       ],
@@ -252,7 +252,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 38:14 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A chegada do inimigo se torna ocasião para manifestar a santidade do Senhor.\n\n**Leitura contextual do versículo 14:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **o confronto como revelação**. Leia o verso integral no texto bíblico e compare-o aos versos 14–17 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:14:** Este versículo integra o movimento **o confronto como revelação**. Observe especialmente os termos e imagens presentes no texto bíblico: **Portanto, profetiza, filho, homem, Gogue**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 14 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Portanto** neste verso e como ela contribui para o desenvolvimento de **o confronto como revelação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:14"
       ],
@@ -262,7 +262,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 38:15 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A chegada do inimigo se torna ocasião para manifestar a santidade do Senhor.\n\n**Leitura contextual do versículo 15:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **o confronto como revelação**. Leia o verso integral no texto bíblico e compare-o aos versos 14–17 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:15:** Este versículo integra o movimento **o confronto como revelação**. Observe especialmente os termos e imagens presentes no texto bíblico: **Virás, lugar, regiões, norte, muitos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 15 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Virás** neste verso e como ela contribui para o desenvolvimento de **o confronto como revelação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:15"
       ],
@@ -272,7 +272,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 38:16 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A chegada do inimigo se torna ocasião para manifestar a santidade do Senhor.\n\n**Leitura contextual do versículo 16:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **o confronto como revelação**. Leia o verso integral no texto bíblico e compare-o aos versos 14–17 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:16:** Este versículo integra o movimento **o confronto como revelação**. Observe especialmente os termos e imagens presentes no texto bíblico: **subirás, Israel, nuvem, cobrir, terra**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 16 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **subirás** neste verso e como ela contribui para o desenvolvimento de **o confronto como revelação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:16"
       ],
@@ -282,7 +282,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 38:17 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A chegada do inimigo se torna ocasião para manifestar a santidade do Senhor.\n\n**Leitura contextual do versículo 17:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **o confronto como revelação**. Leia o verso integral no texto bíblico e compare-o aos versos 14–17 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:17:** Este versículo integra o movimento **o confronto como revelação**. Observe especialmente os termos e imagens presentes no texto bíblico: **tempos, passados, servos, profetas, Israel**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 17 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **tempos** neste verso e como ela contribui para o desenvolvimento de **o confronto como revelação**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:17"
       ],
@@ -292,7 +292,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 38:18 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O poema descreve julgamento com abalo da criação e derrota da violência invasora.\n\n**Leitura contextual do versículo 18:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terremoto e desordem cósmica**. Leia o verso integral no texto bíblico e compare-o aos versos 18–23 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:18:** Este versículo integra o movimento **terremoto e desordem cósmica**. Observe especialmente os termos e imagens presentes no texto bíblico: **naquele, tempo, Gogue, terra, Israel**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 18 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **naquele** neste verso e como ela contribui para o desenvolvimento de **terremoto e desordem cósmica**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:18"
       ],
@@ -302,7 +302,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 38:19 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O poema descreve julgamento com abalo da criação e derrota da violência invasora.\n\n**Leitura contextual do versículo 19:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terremoto e desordem cósmica**. Leia o verso integral no texto bíblico e compare-o aos versos 18–23 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:19:** Este versículo integra o movimento **terremoto e desordem cósmica**. Observe especialmente os termos e imagens presentes no texto bíblico: **falei, minha, naquele, grande, tremor**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 19 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **falei** neste verso e como ela contribui para o desenvolvimento de **terremoto e desordem cósmica**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:19"
       ],
@@ -312,7 +312,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 38:20 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O poema descreve julgamento com abalo da criação e derrota da violência invasora.\n\n**Leitura contextual do versículo 20:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terremoto e desordem cósmica**. Leia o verso integral no texto bíblico e compare-o aos versos 18–23 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:20:** Este versículo integra o movimento **terremoto e desordem cósmica**. Observe especialmente os termos e imagens presentes no texto bíblico: **maneira, tremerão, peixes, animais, campo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 20 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **maneira** neste verso e como ela contribui para o desenvolvimento de **terremoto e desordem cósmica**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:20"
       ],
@@ -322,7 +322,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 38:21 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O poema descreve julgamento com abalo da criação e derrota da violência invasora.\n\n**Leitura contextual do versículo 21:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terremoto e desordem cósmica**. Leia o verso integral no texto bíblico e compare-o aos versos 18–23 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:21:** Este versículo integra o movimento **terremoto e desordem cósmica**. Observe especialmente os termos e imagens presentes no texto bíblico: **chamarei, espada, montes, irmão**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 21 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **chamarei** neste verso e como ela contribui para o desenvolvimento de **terremoto e desordem cósmica**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:21"
       ],
@@ -332,7 +332,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 38:22 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O poema descreve julgamento com abalo da criação e derrota da violência invasora.\n\n**Leitura contextual do versículo 22:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terremoto e desordem cósmica**. Leia o verso integral no texto bíblico e compare-o aos versos 18–23 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:22:** Este versículo integra o movimento **terremoto e desordem cósmica**. Observe especialmente os termos e imagens presentes no texto bíblico: **disputarei, pestilência, sangue, farei, haver**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 22 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **disputarei** neste verso e como ela contribui para o desenvolvimento de **terremoto e desordem cósmica**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:22"
       ],
@@ -342,7 +342,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 38:23 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O poema descreve julgamento com abalo da criação e derrota da violência invasora.\n\n**Leitura contextual do versículo 23:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terremoto e desordem cósmica**. Leia o verso integral no texto bíblico e compare-o aos versos 18–23 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Leitura orientada de Ezequiel 38:23:** Este versículo integra o movimento **terremoto e desordem cósmica**. Observe especialmente os termos e imagens presentes no texto bíblico: **engrandecerei, santificarei, serei, conhecido, olhos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 23 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **engrandecerei** neste verso e como ela contribui para o desenvolvimento de **terremoto e desordem cósmica**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
       "scriptureRefs": [
         "Ezequiel 38:23"
       ],
@@ -352,7 +352,7 @@ export const ezekiel38Study: StudyContent = {
     {
       "id": "termos",
       "title": "Termos e imagens com cautela",
-      "body": "Gogue e Magogue são nomes da tradição profética; associá-los com certeza a nações contemporâneas excede o texto.",
+      "body": "Gogue e Magogue são nomes da tradição profética; associá-los com certeza a nações contemporâneas excede o texto.\n\n**Método de estudo:** as palavras destacadas nas notas individuais servem como pontos de observação textual, não como glossário hebraico/aramaico nem interpretação definitiva.",
       "scriptureRefs": [
         "Ezequiel 38:1-23"
       ],
