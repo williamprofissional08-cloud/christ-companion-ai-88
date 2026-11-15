@@ -1,47 +1,51 @@
 import type { StudyContent } from "../types";
 
-/** Daniel 7 — revisão lexical preliminar, não estudo editorialmente concluído. */
+/** Daniel 7 — paráfrases livres autorais; revisão humana pendente. */
 export const daniel7Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Estudo em revisão de Daniel 7.",
-  "historicalContext": "Contexto das cortes imperiais e literatura apocalíptica.",
+  "intro": "Daniel 7 apresenta quatro bestas imperiais, um chifre perseguidor, o tribunal do Ancião de Dias e a concessão do reino eterno a uma figura humana e aos santos do Altíssimo.",
+  "historicalContext": "A visão é situada no primeiro ano de Belsazar, retomando momento anterior aos capítulos 5 e 6. Daniel 7 conclui a seção aramaica do livro (2:4b–7:28) e emprega símbolos característicos da literatura apocalíptica. Identificações históricas dos quatro reinos e do chifre são disputadas.",
   "keyPoints": [
     {
-      "title": "1–8: Quatro feras",
-      "text": "Unidade literária de Daniel 7."
+      "title": "1–8: Quatro bestas e o chifre",
+      "text": "O poder imperial é representado por animais violentos e arrogância crescente."
     },
     {
-      "title": "9–14: O Ancião de Dias e o filho de homem",
-      "text": "Unidade literária de Daniel 7."
+      "title": "9–14: Tribunal e figura humana",
+      "text": "O Ancião julga, e uma figura como filho de homem recebe domínio eterno."
     },
     {
-      "title": "15–22: Explicação inicial",
-      "text": "Unidade literária de Daniel 7."
+      "title": "15–22: Explicação e esperança",
+      "text": "Daniel ouve que os santos receberão o reino apesar da perseguição temporária."
     },
     {
-      "title": "23–28: A quarta fera e o juízo",
-      "text": "Unidade literária de Daniel 7."
+      "title": "23–28: O fim da tirania",
+      "text": "O quarto reino e o chifre perdem autoridade diante do julgamento divino."
     }
   ],
-  "application": "Buscar fidelidade e justiça.",
+  "application": "Reconhecer e resistir à desumanização e à perseguição sem reduzir símbolos bíblicos a acusações contra grupos atuais. Sustentar esperança na justiça de Deus e humildade diante de questões escatológicas.",
   "crossReferences": [
-    "Daniel 2:1-49",
-    "Daniel 7:1-28"
+    "Daniel 2:31-45",
+    "Daniel 8:1-27",
+    "Salmo 2:1-12",
+    "Salmo 110:1-7",
+    "Marcos 14:61-62",
+    "Apocalipse 13:1-10"
   ],
   "questions": [
-    "Como o tema quatro feras se desenvolve em 1–8?",
-    "Como o tema o ancião de dias e o filho de homem se desenvolve em 9–14?",
-    "Como o tema explicação inicial se desenvolve em 15–22?",
-    "Como o tema a quarta fera e o juízo se desenvolve em 23–28?"
+    "Por que as bestas são símbolos adequados de impérios violentos?",
+    "O que a própria visão explica sobre os animais e os chifres?",
+    "Como a figura semelhante a filho de homem se relaciona com os santos?",
+    "Quais os riscos de identificar datas e governantes atuais como certeza?"
   ],
-  "conclusion": "O capítulo tem roteiro estrutural, notas de observação textual e aplicações preliminares; a exegese aprofundada e a revisão humana permanecem pendentes.",
+  "conclusion": "A visão anuncia que a tirania não tem a última palavra: o julgamento pertence ao Altíssimo, e o reino duradouro é concedido, não arrancado pela violência.",
   "prayer": "Senhor, dá-nos entendimento. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — consulte os versículos",
-      "body": "Leia Daniel 7:1–28 no texto bíblico do aplicativo. Este guia contém comentários autorais preliminares, **não uma tradução ou paráfrase integral**.",
+      "body": "Leia Daniel 7:1–28 no texto bíblico do aplicativo. As notas de cada versículo apresentam **paráfrases livres autorais**, não uma tradução bíblica oficial.",
       "scriptureRefs": [
         "Daniel 7:1-28"
       ],
@@ -121,7 +125,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Daniel 7:1 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:1:** Este versículo integra o movimento **quatro feras**. Observe especialmente os termos e imagens presentes no texto bíblico: **primeiro, Belsazar, Babilônia, Daniel, sonho**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 1 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **primeiro** neste verso e como ela contribui para o desenvolvimento de **quatro feras**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel registra uma visão no primeiro ano de Belsazar.\n\n**Exegese contextual:** A narrativa recua cronologicamente em relação a Daniel 5–6; o capítulo abre a seção de visões apocalípticas.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:1"
       ],
@@ -131,7 +135,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Daniel 7:2 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:2:** Este versículo integra o movimento **quatro feras**. Observe especialmente os termos e imagens presentes no texto bíblico: **Daniel, vendo, minha, visão, noite**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 2 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Daniel** neste verso e como ela contribui para o desenvolvimento de **quatro feras**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Quatro ventos agitam o grande mar.\n\n**Exegese contextual:** Mar e ventos compõem cenário simbólico de instabilidade, sem exigirem identificação geográfica literal.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:2"
       ],
@@ -141,7 +145,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Daniel 7:3 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:3:** Este versículo integra o movimento **quatro feras**. Observe especialmente os termos e imagens presentes no texto bíblico: **quatro, grandes, animais, subiam, diferentes**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 3 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **quatro** neste verso e como ela contribui para o desenvolvimento de **quatro feras**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Quatro animais distintos emergem do mar.\n\n**Exegese contextual:** As criaturas simbolizam poderes políticos, como a explicação dos versículos 17 e 23 confirma.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:3"
       ],
@@ -151,7 +155,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Daniel 7:4 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:4:** Este versículo integra o movimento **quatro feras**. Observe especialmente os termos e imagens presentes no texto bíblico: **primeiro, águia, olhando, arrancadas, levantado**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 4 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **primeiro** neste verso e como ela contribui para o desenvolvimento de **quatro feras**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O primeiro animal lembra um leão alado que se humaniza.\n\n**Exegese contextual:** A imagem reúne majestade, perda de força e transformação; a relação com Nabucodonosor é plausível, mas não explicitada.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:4"
       ],
@@ -161,7 +165,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Daniel 7:5 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:5:** Este versículo integra o movimento **quatro feras**. Observe especialmente os termos e imagens presentes no texto bíblico: **outra, segundo, animal, semelhante, levantou**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 5 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **outra** neste verso e como ela contribui para o desenvolvimento de **quatro feras**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O segundo animal lembra um urso inclinado, com três costelas.\n\n**Exegese contextual:** A postura e a ordem de devorar evocam violência imperial; os detalhes não recebem interpretação individual no texto.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:5"
       ],
@@ -171,7 +175,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Daniel 7:6 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:6:** Este versículo integra o movimento **quatro feras**. Observe especialmente os termos e imagens presentes no texto bíblico: **disto, olhando, outro, semelhante, leopardo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 6 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **disto** neste verso e como ela contribui para o desenvolvimento de **quatro feras**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O terceiro animal é leopardo com quatro asas e quatro cabeças.\n\n**Exegese contextual:** A combinação sugere velocidade e extensão de domínio, mas a identidade histórica é discutida.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:6"
       ],
@@ -181,7 +185,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Daniel 7:7 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:7:** Este versículo integra o movimento **quatro feras**. Observe especialmente os termos e imagens presentes no texto bíblico: **disto, olhando, visões, noite, quarta**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 7 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **disto** neste verso e como ela contribui para o desenvolvimento de **quatro feras**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O quarto animal é terrível, com dentes de ferro e dez chifres.\n\n**Exegese contextual:** A linguagem de esmagamento enfatiza opressão; o ferro estabelece paralelo literário com Daniel 2.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:7"
       ],
@@ -191,7 +195,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Daniel 7:8 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:8:** Este versículo integra o movimento **quatro feras**. Observe especialmente os termos e imagens presentes no texto bíblico: **Enquanto, observando, chifres, outro, chifre**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 8 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Enquanto** neste verso e como ela contribui para o desenvolvimento de **quatro feras**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Um chifre menor surge e profere palavras arrogantes.\n\n**Exegese contextual:** O contraste entre tamanho inicial e arrogância crescente prepara o tema de perseguição aos santos.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:8"
       ],
@@ -201,7 +205,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Daniel 7:9 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:9:** Este versículo integra o movimento **o ancião de dias e o filho de homem**. Observe especialmente os termos e imagens presentes no texto bíblico: **estive, olhando, postos, tronos, Ancião**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 9 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **estive** neste verso e como ela contribui para o desenvolvimento de **o ancião de dias e o filho de homem**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Tronos são colocados e o Ancião de Dias se assenta.\n\n**Exegese contextual:** A cena muda da violência terrestre para o tribunal celestial; a aparência simboliza majestade e pureza.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:9"
       ],
@@ -211,7 +215,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Daniel 7:10 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:10:** Este versículo integra o movimento **o ancião de dias e o filho de homem**. Observe especialmente os termos e imagens presentes no texto bíblico: **manava, milhares, serviam, milhões, estavam**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 10 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **manava** neste verso e como ela contribui para o desenvolvimento de **o ancião de dias e o filho de homem**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Um rio de fogo acompanha a abertura dos livros de julgamento.\n\n**Exegese contextual:** Os livros simbolizam prestação de contas; os números incontáveis acentuam a grandeza da corte.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:10"
       ],
@@ -221,7 +225,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Daniel 7:11 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:11:** Este versículo integra o movimento **o ancião de dias e o filho de homem**. Observe especialmente os termos e imagens presentes no texto bíblico: **estive, olhando, causa, palavras, arrogantes**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 11 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **estive** neste verso e como ela contribui para o desenvolvimento de **o ancião de dias e o filho de homem**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A quarta besta é destruída após as palavras arrogantes do chifre.\n\n**Exegese contextual:** O julgamento responde ao abuso de poder, não à superioridade militar de outro império.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:11"
       ],
@@ -231,7 +235,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Daniel 7:12 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:12:** Este versículo integra o movimento **o ancião de dias e o filho de homem**. Observe especialmente os termos e imagens presentes no texto bíblico: **outros, animais, domínio, tirado, prolongação**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 12 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **outros** neste verso e como ela contribui para o desenvolvimento de **o ancião de dias e o filho de homem**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os demais animais perdem domínio, embora continuem por algum tempo.\n\n**Exegese contextual:** A distinção entre perda de autoridade e fim da existência impede nivelar todos os juízos.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:12"
       ],
@@ -241,7 +245,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Daniel 7:13 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:13:** Este versículo integra o movimento **o ancião de dias e o filho de homem**. Observe especialmente os termos e imagens presentes no texto bíblico: **vendo, minhas, visões, noite, vindo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 13 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **vendo** neste verso e como ela contribui para o desenvolvimento de **o ancião de dias e o filho de homem**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Uma figura como filho de homem chega com as nuvens ao Ancião.\n\n**Exegese contextual:** A expressão aramaica descreve figura de aparência humana, contrastando com bestas; leituras individuais e coletivas são debatidas.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:13"
       ],
@@ -251,7 +255,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Daniel 7:14 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:14:** Este versículo integra o movimento **o ancião de dias e o filho de homem**. Observe especialmente os termos e imagens presentes no texto bíblico: **domínio, honra, reino, povos, nações**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 14 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **domínio** neste verso e como ela contribui para o desenvolvimento de **o ancião de dias e o filho de homem**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A figura recebe domínio eterno sobre povos e nações.\n\n**Exegese contextual:** O reino concedido, e não conquistado por violência bestial, contrasta com a sucessão dos impérios.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:14"
       ],
@@ -261,7 +265,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Daniel 7:15 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:15:** Este versículo integra o movimento **explicação inicial**. Observe especialmente os termos e imagens presentes no texto bíblico: **Daniel, espírito, perturbado, dentro, corpo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 15 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Daniel** neste verso e como ela contribui para o desenvolvimento de **explicação inicial**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel fica profundamente perturbado pela visão.\n\n**Exegese contextual:** O próprio vidente não trata as imagens como óbvias, modelo de humildade interpretativa.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:15"
       ],
@@ -271,7 +275,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Daniel 7:16 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:16:** Este versículo integra o movimento **explicação inicial**. Observe especialmente os termos e imagens presentes no texto bíblico: **Cheguei, estavam, perguntei, verdade, acerca**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 16 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Cheguei** neste verso e como ela contribui para o desenvolvimento de **explicação inicial**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel pede explicação a alguém da corte celestial.\n\n**Exegese contextual:** O pedido reconhece a necessidade de interpretação autorizada dentro da narrativa.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:16"
       ],
@@ -281,7 +285,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Daniel 7:17 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:17:** Este versículo integra o movimento **explicação inicial**. Observe especialmente os termos e imagens presentes no texto bíblico: **grandes, animais, quatro, levantarão, terra**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 17 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **grandes** neste verso e como ela contribui para o desenvolvimento de **explicação inicial**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O intérprete associa as quatro bestas a quatro reis.\n\n**Exegese contextual:** A explicação indica caráter político das figuras; no v. 23 o quarto animal também é chamado reino.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:17"
       ],
@@ -291,7 +295,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Daniel 7:18 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:18:** Este versículo integra o movimento **explicação inicial**. Observe especialmente os termos e imagens presentes no texto bíblico: **santos, Altíssimo, receberão, reino, possuirão**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 18 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **santos** neste verso e como ela contribui para o desenvolvimento de **explicação inicial**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os santos do Altíssimo recebem o reino duradouro.\n\n**Exegese contextual:** A esperança desloca o foco dos opressores para a comunidade fiel e a justiça divina.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:18"
       ],
@@ -301,7 +305,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Daniel 7:19 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:19:** Este versículo integra o movimento **explicação inicial**. Observe especialmente os termos e imagens presentes no texto bíblico: **desejo, saber, verdade, acerca, quarto**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 19 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **desejo** neste verso e como ela contribui para o desenvolvimento de **explicação inicial**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel deseja entender especialmente o quarto animal.\n\n**Exegese contextual:** A atenção ao poder mais destrutivo mostra que a visão não minimiza o sofrimento causado por impérios.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:19"
       ],
@@ -311,7 +315,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Daniel 7:20 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:20:** Este versículo integra o movimento **explicação inicial**. Observe especialmente os termos e imagens presentes no texto bíblico: **chifres, estavam, cabeça, outro, subido**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 20 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **chifres** neste verso e como ela contribui para o desenvolvimento de **explicação inicial**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel investiga os dez chifres e o chifre arrogante.\n\n**Exegese contextual:** A descrição prepara a explicação posterior, mas não nomeia governantes históricos específicos.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:20"
       ],
@@ -321,7 +325,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Daniel 7:21 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:21:** Este versículo integra o movimento **explicação inicial**. Observe especialmente os termos e imagens presentes no texto bíblico: **vendo, chifre, fazia, guerra, santos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 21 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **vendo** neste verso e como ela contribui para o desenvolvimento de **explicação inicial**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O chifre faz guerra aos santos e prevalece temporariamente.\n\n**Exegese contextual:** A visão reconhece perseguição real, evitando triunfalismo que negue o sofrimento.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:21"
       ],
@@ -331,7 +335,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Daniel 7:22 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:22:** Este versículo integra o movimento **explicação inicial**. Observe especialmente os termos e imagens presentes no texto bíblico: **Ancião, juízo, favor, santos, Altíssimo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 22 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Ancião** neste verso e como ela contribui para o desenvolvimento de **explicação inicial**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O Ancião julga em favor dos santos, e chega o tempo do reino.\n\n**Exegese contextual:** A virada depende do julgamento divino, não de vingança autorizada aos perseguidos.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:22"
       ],
@@ -341,7 +345,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Daniel 7:23 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:23:** Este versículo integra o movimento **a quarta fera e o juízo**. Observe especialmente os termos e imagens presentes no texto bíblico: **quarto, animal, reino, terra, diferente**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 23 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **quarto** neste verso e como ela contribui para o desenvolvimento de **a quarta fera e o juízo**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O quarto animal é explicado como quarto reino devastador.\n\n**Exegese contextual:** A amplitude da destruição pertence à linguagem visionária, que deve ser lida com seu gênero literário.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:23"
       ],
@@ -351,7 +355,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Daniel 7:24 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:24:** Este versículo integra o movimento **a quarta fera e o juízo**. Observe especialmente os termos e imagens presentes no texto bíblico: **chifres, significam, daquele, reino, levantarão**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 24 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **chifres** neste verso e como ela contribui para o desenvolvimento de **a quarta fera e o juízo**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os dez chifres são dez reis, seguidos por outro que derruba três.\n\n**Exegese contextual:** A identificação concreta desses reis varia conforme as propostas históricas e escatológicas.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:24"
       ],
@@ -361,7 +365,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Daniel 7:25 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:25:** Este versículo integra o movimento **a quarta fera e o juízo**. Observe especialmente os termos e imagens presentes no texto bíblico: **falará, palavras, Altíssimo, destruirá, santos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 25 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **falará** neste verso e como ela contribui para o desenvolvimento de **a quarta fera e o juízo**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O governante blasfema, oprime os santos e altera tempos e lei.\n\n**Exegese contextual:** A expressão 'tempo, tempos e metade de um tempo' é simbólica ou cronológica conforme a leitura; não autoriza cálculos de datas atuais.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:25"
       ],
@@ -371,7 +375,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Daniel 7:26 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:26:** Este versículo integra o movimento **a quarta fera e o juízo**. Observe especialmente os termos e imagens presentes no texto bíblico: **julgamento, começará, tirarão, domínio, destruído**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 26 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **julgamento** neste verso e como ela contribui para o desenvolvimento de **a quarta fera e o juízo**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O tribunal retira e destrói o domínio opressor.\n\n**Exegese contextual:** A esperança da visão é a limitação final da tirania pela justiça de Deus.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:26"
       ],
@@ -381,7 +385,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Daniel 7:27 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:27:** Este versículo integra o movimento **a quarta fera e o juízo**. Observe especialmente os termos e imagens presentes no texto bíblico: **reino, domínio, majestade, reinos, debaixo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 27 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **reino** neste verso e como ela contribui para o desenvolvimento de **a quarta fera e o juízo**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O reino eterno é entregue ao povo dos santos.\n\n**Exegese contextual:** O vínculo entre a figura humana dos vv. 13–14 e os santos é central no debate entre leituras representativas e individuais.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:27"
       ],
@@ -391,7 +395,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Daniel 7:28 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 7:28:** Este versículo integra o movimento **a quarta fera e o juízo**. Observe especialmente os termos e imagens presentes no texto bíblico: **relato, Daniel, pensamentos, espantavam, muito**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 28 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **relato** neste verso e como ela contribui para o desenvolvimento de **a quarta fera e o juízo**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel encerra assustado e guarda a visão.\n\n**Exegese contextual:** O temor final adverte contra interpretações apressadas e excesso de certeza sobre símbolos.\n\n**Pergunta interpretativa:** Como o versículo contribui para o contraste entre reinos violentos e julgamento divino?",
       "scriptureRefs": [
         "Daniel 7:28"
       ],
@@ -411,7 +415,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas",
-      "body": "Evitar identificar figuras antigas com governos modernos sem evidência, ou transformar visões e narrativas em promessas automáticas.",
+      "body": "**Quatro reinos:** algumas leituras identificam Babilônia, Média, Pérsia e Grécia; outras, Babilônia, Medo-Pérsia, Grécia e Roma. O capítulo não nomeia todos.\n\n**Chifre pequeno:** propostas históricas e escatológicas divergem; não atribuir identificação moderna como certeza.\n\n**Filho de homem:** a figura pode ser entendida como representante dos santos, indivíduo celestial ou ambos em diferentes tradições; o uso por Jesus em Marcos 14:62 é parte da recepção cristã.\n\n**Tempo, tempos e metade:** duração debatida, sem licença para marcação de datas.",
       "scriptureRefs": [
         "Daniel 7:1-28"
       ],
@@ -421,7 +425,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas",
-      "body": "Daniel 1–7; Salmo 2; Marcos 14:62. Compare contexto e gênero.",
+      "body": "**Daniel 2:31–45:** sequência de reinos e reino divino.\n\n**Daniel 8:** outra visão com símbolos animais e poderes históricos.\n\n**Salmo 2:** o Senhor julga a arrogância dos governantes.\n\n**Salmo 110:** linguagem de domínio concedido.\n\n**Marcos 14:61–62:** Jesus usa a imagem do Filho do Homem vindo com as nuvens.\n\n**Apocalipse 13:** recepção posterior da simbologia de bestas.",
       "scriptureRefs": [
         "Daniel 7:1-28"
       ],
@@ -431,7 +435,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão cristológica cautelosa",
-      "body": "A esperança do reino de Deus e a fidelidade são retomadas no Novo Testamento; em Daniel 7 a figura do filho de homem é especialmente relevante.",
+      "body": "Em Marcos 14:61–62, Jesus aplica a si a linguagem de Daniel 7:13 sobre o Filho do Homem e as nuvens. A conexão cristológica é textualmente fundamentada nessa recepção, mas a relação entre a figura humana e o povo dos santos em Daniel 7 merece ser preservada.",
       "scriptureRefs": [
         "Daniel 7:1-28"
       ],
@@ -451,7 +455,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios e respostas",
-      "body": "**1. Qual tema orienta Daniel 7:1–8?** Quatro feras.\n\n**2. Qual tema orienta Daniel 7:9–14?** O Ancião de Dias e o filho de homem.\n\n**3. Qual tema orienta Daniel 7:15–22?** Explicação inicial.\n\n**4. Qual tema orienta Daniel 7:23–28?** A quarta fera e o juízo.",
+      "body": "**1. Quantas bestas surgem do mar?** Quatro (7:3).\n\n**2. O que representam?** Reis/reinos (7:17,23).\n\n**3. Quem preside o julgamento?** O Ancião de Dias (7:9–10).\n\n**4. Quem recebe domínio eterno em 7:14?** A figura como filho de homem.\n\n**5. Quem recebe o reino em 7:18 e 27?** Os santos do Altíssimo.\n\n**6. Daniel encerra a visão sem temor?** Não, permanece perturbado (7:28).",
       "scriptureRefs": [
         "Daniel 7:1-28"
       ],
@@ -461,7 +465,7 @@ export const daniel7Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador",
-      "body": "**Tema:** Quatro feras.\n\n**Esboço:** Quatro feras (1–8); O Ancião de Dias e o filho de homem (9–14); Explicação inicial (15–22); A quarta fera e o juízo (23–28).\n\n**Cuidado:** respeitar o contexto e não afirmar que o guia preliminar é estudo editorialmente concluído.",
+      "body": "**Tema:** O fim da tirania e a esperança dos santos.\n\n**Proposição:** Poderes que desumanizam são temporários; a justiça de Deus permanece.\n\n**Esboço:** (1) bestas e arrogância (1–8); (2) o tribunal celestial (9–14); (3) perseguição e esperança (15–22); (4) o reino entregue aos santos (23–28).\n\n**Cuidados:** não identificar governos atuais como chifres proféticos sem base, não marcar datas e não apagar o sofrimento real dos perseguidos.",
       "scriptureRefs": [
         "Daniel 7:1-28"
       ],
