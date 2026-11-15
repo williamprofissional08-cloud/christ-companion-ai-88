@@ -1,51 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 26 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 26 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel26Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 26 anuncia o juízo contra Tiro, cidade mercantil que celebra a queda de Jerusalém.",
-  "historicalContext": "Tiro fenícia no cenário do império neobabilônico e da crise de Judá no século VI a.C.",
+  "intro": "Ezequiel 26 anuncia juízo contra Tiro por celebrar a destruição de Jerusalém como oportunidade comercial. O poema descreve cerco, saque e um lamento das potências marítimas, usando imagens de ondas, rocha nua e descida ao abismo.",
+  "historicalContext": "Tiro era uma cidade fenícia de grande importância marítima e comercial. O oráculo se insere na crise de Judá e na expansão babilônica no século VI a.C.; Nabucodonosor é nomeado como invasor. A história de Tiro inclui diferentes campanhas e continuidade de ocupação, exigindo cuidado com afirmações literais de destruição definitiva.",
   "keyPoints": [
     {
-      "title": "1–6: Tiro e a alegria com a queda de Jerusalém",
-      "text": "A cidade mercantil é confrontada por transformar a ruína de Judá em expectativa de lucro."
+      "title": "1–6: A alegria com a ruína alheia",
+      "text": "Tiro vê a queda de Jerusalém como ganho econômico, e o oráculo anuncia sua vulnerabilidade."
     },
     {
-      "title": "7–14: O cerco de Nabucodonosor e a devastação",
-      "text": "O poema apresenta técnicas de cerco, saque e silêncio de uma cidade comercial."
+      "title": "7–14: A campanha babilônica",
+      "text": "O cerco e o saque são descritos por imagens militares e marítimas."
     },
     {
-      "title": "15–18: Lamento dos governantes marítimos",
-      "text": "A queda de um centro comercial abala aliados e parceiros das costas."
+      "title": "15–18: O lamento dos governantes do mar",
+      "text": "A queda abala cidades costeiras ligadas a Tiro."
     },
     {
-      "title": "19–21: Águas profundas e descida à cova",
-      "text": "A conclusão usa imagens de caos e morte para falar da perda de poder de Tiro."
+      "title": "19–21: O abismo e a cova",
+      "text": "A linguagem fúnebre representa o colapso de uma potência."
     }
   ],
-  "application": "Não transformar tragédias alheias em ocasião de lucro e reconhecer a fragilidade do poder econômico.",
+  "application": "Recusar lucrar de maneira oportunista com o sofrimento de comunidades vulneráveis. Reconhecer a fragilidade de cidades, mercados e alianças, e responder à calamidade alheia com solidariedade em vez de celebração.",
   "crossReferences": [
     "Isaías 23:1-18",
+    "Jeremias 27:1-11",
+    "Ezequiel 25:3-7",
     "Ezequiel 27:1-36",
-    "Ezequiel 28:1-19",
     "Ezequiel 29:17-20",
-    "Amós 1:9-10",
-    "Lucas 10:25-37"
+    "Obadias 1:10-14"
   ],
   "questions": [
-    "Por que Tiro é acusada?",
-    "Qual é o papel de Nabucodonosor?",
-    "Como entender as imagens de águas profundas?",
-    "Que dificuldades históricas envolvem 'nunca mais'?"
+    "Por que Tiro se alegra com a queda de Jerusalém?",
+    "O que significam as ondas de muitas nações?",
+    "Qual rei é identificado como atacante?",
+    "Por que os governantes do mar lamentam a queda?",
+    "Que cuidados históricos são necessários ao ler 'nunca mais' nos versículos 14 e 21?"
   ],
-  "conclusion": "O poder comercial de Tiro é confrontado por sua arrogância e por comemorar o sofrimento de Jerusalém.",
+  "conclusion": "O oráculo contra Tiro confronta o lucro oportunista e o orgulho de uma cidade poderosa, cuja posição marítima não a torna imune à guerra e à perda.",
   "prayer": "Senhor, ensina-nos a agir com compaixão e justiça. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 26:1–21 (paráfrase livre autoral)",
-      "body": "**Paráfrase livre para estudo, não tradução bíblica oficial.**\n\n**1.** O oráculo recebe data no décimo primeiro ano, primeiro dia do mês.\n\n**2.** Tiro é acusada de comemorar a queda de Jerusalém como oportunidade comercial.\n\n**3.** Muitas nações avançarão como ondas contra Tiro.\n\n**4.** Muros e torres serão derrubados; a cidade é comparada a rocha nua.\n\n**5.** O local será usado para estender redes de pesca.\n\n**6.** Os povoados dependentes no continente também sofrerão.\n\n**7.** Nabucodonosor da Babilônia é nomeado como agressor vindo do norte.\n\n**8.** O cerco é descrito por aterros, escudos e estruturas militares.\n\n**9.** Aríetes e instrumentos de demolição ameaçam as fortificações.\n\n**10.** Cavalos e carros levantam poeira e fazem a cidade estremecer.\n\n**11.** A marcha militar é descrita nas ruas e praças.\n\n**12.** Mercadorias, casas e materiais de construção são saqueados e lançados ao mar.\n\n**13.** Música e instrumentos deixam de ser ouvidos.\n\n**14.** A imagem de rocha nua e redes é repetida com linguagem absoluta.\n\n**15.** Ilhas e regiões costeiras estremecem diante da queda.\n\n**16.** Príncipes do mar abandonam tronos e vestes de prestígio.\n\n**17.** Uma lamentação descreve a cidade antes poderosa.\n\n**18.** Regiões costeiras tremem diante do destino de Tiro.\n\n**19.** Águas profundas são usadas como imagem da destruição.\n\n**20.** A cidade desce à cova com povos antigos.\n\n**21.** O oráculo termina com a fórmula de desaparecimento e juízo.",
+      "body": "Leia Ezequiel 26:1–21 no texto bíblico do aplicativo. As notas apresentam **paráfrases livres autorais** e exegese contextual, não uma tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 26:1-21"
       ],
@@ -126,7 +127,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 26:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo recebe data no décimo primeiro ano, primeiro dia do mês.\n\n**Exegese contextual:** O mês não é especificado no texto, limitando uma datação exata; o contexto é a crise de Jerusalém.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** No décimo primeiro ano, uma palavra profética é anunciada.\n\n**Exegese contextual:** A data situa o oráculo no período da crise de Jerusalém; o mês não está indicado na forma textual apresentada.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:1"
       ],
@@ -136,7 +137,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 26:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Tiro é acusada de comemorar a queda de Jerusalém como oportunidade comercial.\n\n**Exegese contextual:** A 'porta das nações' sugere função econômica de Jerusalém e competição por rotas, embora o sentido preciso seja discutido.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Tiro comemora a queda de Jerusalém como oportunidade de enriquecer.\n\n**Exegese contextual:** A acusação recai sobre o oportunismo econômico diante do sofrimento de outra cidade.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:2"
       ],
@@ -146,7 +147,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 26:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Muitas nações avançarão como ondas contra Tiro.\n\n**Exegese contextual:** A comparação marítima combina o ambiente costeiro com o anúncio de sucessivos ataques.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Deus anuncia muitas nações contra Tiro como ondas sucessivas.\n\n**Exegese contextual:** A metáfora marítima é apropriada a uma cidade portuária e comunica ataques reiterados.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:3"
       ],
@@ -156,7 +157,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 26:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Muros e torres serão derrubados; a cidade é comparada a rocha nua.\n\n**Exegese contextual:** A imagem de remoção do solo sublinha desolação, não fornece por si só uma descrição arqueológica completa.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Muros e torres cairão, deixando a cidade como rocha nua.\n\n**Exegese contextual:** A imagem expressa a perda das defesas e do esplendor urbano.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:4"
       ],
@@ -166,7 +167,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 26:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O local será usado para estender redes de pesca.\n\n**Exegese contextual:** A ironia contrasta a riqueza mercantil da cidade com uma superfície simples junto ao mar.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Tiro será lugar para secar redes e alvo de saque.\n\n**Exegese contextual:** A transformação de centro comercial em espaço simples de pesca dramatiza a inversão de status.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:5"
       ],
@@ -176,7 +177,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 26:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os povoados dependentes no continente também sofrerão.\n\n**Exegese contextual:** As 'filhas' da cidade podem designar suas localidades subordinadas, não necessariamente mulheres.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** As povoações dependentes de Tiro no continente sofrerão com a espada.\n\n**Exegese contextual:** As 'filhas' podem designar assentamentos ligados à cidade, não descendentes literais.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:6"
       ],
@@ -186,7 +187,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 26:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Nabucodonosor da Babilônia é nomeado como agressor vindo do norte.\n\n**Exegese contextual:** O texto especifica um governante histórico; não se deve confundir automaticamente sua campanha com outras conquistas posteriores.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Nabucodonosor, rei da Babilônia, é nomeado como atacante vindo do norte.\n\n**Exegese contextual:** O texto identifica o agente histórico principal no horizonte do século VI a.C.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:7"
       ],
@@ -196,7 +197,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 26:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O cerco é descrito por aterros, escudos e estruturas militares.\n\n**Exegese contextual:** A linguagem detalha técnicas de guerra do antigo Oriente Próximo.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** O exército cercará as povoações e erguerá obras de assédio.\n\n**Exegese contextual:** As imagens de cerco descrevem técnicas militares do mundo antigo.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:8"
       ],
@@ -206,7 +207,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 26:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Aríetes e instrumentos de demolição ameaçam as fortificações.\n\n**Exegese contextual:** O foco é a vulnerabilidade das muralhas diante de um exército organizado.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Aríetes e armas serão usados contra muros e torres.\n\n**Exegese contextual:** A referência a equipamentos de cerco intensifica a ameaça à infraestrutura defensiva.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:9"
       ],
@@ -216,7 +217,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 26:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Cavalos e carros levantam poeira e fazem a cidade estremecer.\n\n**Exegese contextual:** A descrição é linguagem vívida de invasão e pode abranger a cidade continental.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Cavalos, carros e poeira acompanham a aproximação militar.\n\n**Exegese contextual:** O estrondo da cavalaria cria um quadro sensorial de pânico e vulnerabilidade.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:10"
       ],
@@ -226,7 +227,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 26:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A marcha militar é descrita nas ruas e praças.\n\n**Exegese contextual:** O texto anuncia mortes e queda de estruturas; não legitima violência militar atual.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Ruas serão pisadas e estruturas de poder derrubadas.\n\n**Exegese contextual:** A descrição enfatiza a violência da conquista e o colapso da segurança urbana.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:11"
       ],
@@ -236,7 +237,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 26:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Mercadorias, casas e materiais de construção são saqueados e lançados ao mar.\n\n**Exegese contextual:** A devastação econômica é tão importante no oráculo quanto a derrota militar.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Riquezas serão tomadas e materiais de construção lançados à água.\n\n**Exegese contextual:** O saque desfaz a prosperidade que motivara a alegria de Tiro com a ruína de Jerusalém.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:12"
       ],
@@ -246,7 +247,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 26:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Música e instrumentos deixam de ser ouvidos.\n\n**Exegese contextual:** O silêncio substitui a vitalidade cultural e comercial.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Canções e harpas deixarão de ser ouvidas.\n\n**Exegese contextual:** O silêncio representa a interrupção da vida cultural e festiva da cidade.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:13"
       ],
@@ -256,7 +257,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 26:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A imagem de rocha nua e redes é repetida com linguagem absoluta.\n\n**Exegese contextual:** A expressão 'nunca mais' exige leitura cuidadosa do gênero profético e da história posterior de Tiro.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** A cidade será como rocha nua usada para redes, sem reconstrução.\n\n**Exegese contextual:** A linguagem absoluta é própria do juízo profético e deve ser interpretada com atenção à história posterior de Tiro.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:14"
       ],
@@ -266,7 +267,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 26:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ilhas e regiões costeiras estremecem diante da queda.\n\n**Exegese contextual:** O alcance do comércio de Tiro explica a repercussão internacional da crise.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Terras costeiras estremecerão com a notícia da queda.\n\n**Exegese contextual:** A rede marítima de Tiro amplia as repercussões da catástrofe.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:15"
       ],
@@ -276,7 +277,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 26:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Príncipes do mar abandonam tronos e vestes de prestígio.\n\n**Exegese contextual:** O gesto de descer e sentar no chão dramatiza luto e perda de poder.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Governantes do mar abandonam tronos e vestes luxuosas em temor.\n\n**Exegese contextual:** A cena de luto contrasta prestígio comercial com impotência diante da perda.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:16"
       ],
@@ -286,7 +287,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 26:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma lamentação descreve a cidade antes poderosa.\n\n**Exegese contextual:** O poema contrapõe prestígio marítimo e fragilidade histórica.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Os líderes entoam lamento pela cidade outrora poderosa.\n\n**Exegese contextual:** A pergunta fúnebre relembra a reputação marítima e o temor que Tiro inspirava.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:17"
       ],
@@ -296,7 +297,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 26:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Regiões costeiras tremem diante do destino de Tiro.\n\n**Exegese contextual:** A repetição amplia o efeito político e emocional da queda.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Ilhas e costas ficam perturbadas pelo fim de Tiro.\n\n**Exegese contextual:** O efeito regional da queda mostra interdependência entre portos e mercados.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:18"
       ],
@@ -306,7 +307,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 26:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Águas profundas são usadas como imagem da destruição.\n\n**Exegese contextual:** O abismo marítimo funciona como metáfora de desaparecimento e caos.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** A cidade é figurada submersa pelas águas do abismo.\n\n**Exegese contextual:** A metáfora aquática passa do comércio marítimo ao afogamento simbólico da potência.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:19"
       ],
@@ -316,7 +317,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 26:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A cidade desce à cova com povos antigos.\n\n**Exegese contextual:** A descida à cova pertence à linguagem poética da morte e ruína, não a um mapa literal do além.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** Tiro desce à cova com povos antigos, enquanto a vida permanece na terra.\n\n**Exegese contextual:** A descida representa morte e desaparecimento político em linguagem poética, não um mapa literal do além.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:20"
       ],
@@ -326,7 +327,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 26:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo termina com a fórmula de desaparecimento e juízo.\n\n**Exegese contextual:** A linguagem final é absoluta no poema e deve ser discutida sem apagar a continuidade histórica do sítio de Tiro.\n\n**Pergunta de leitura:** Qual imagem do poder marítimo é invertida neste verso?",
+      "body": "**Paráfrase livre autoral:** O oráculo termina com a imagem de Tiro desaparecida e procurada em vão.\n\n**Exegese contextual:** A fórmula final dramatiza a ruína de seu antigo poder; a interpretação histórica deve considerar que a localidade continuou existindo.\n\n**Pergunta interpretativa:** Como a imagem deste versículo denuncia o oportunismo ou revela a fragilidade do poder de Tiro?",
       "scriptureRefs": [
         "Ezequiel 26:21"
       ],
@@ -386,7 +387,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "São discutidos o mês omitido na data inicial, a relação entre cidade continental e insular, o alcance do cerco babilônico e as expressões absolutas de desaparecimento. O texto não permite associar uma cidade atual a um alvo de destruição divina.",
+      "body": "**Nabucodonosor e a queda de Tiro:** o texto nomeia o rei babilônico, mas a relação entre os detalhes poéticos e as diversas fases históricas de cerco e destruição é debatida.\n\n**'Nunca mais' e 'não serás achada':** fórmulas absolutas de lamento e juízo devem ser lidas à luz do gênero profético e da continuidade histórica da localidade.\n\n**'Filhas' de Tiro:** expressão provavelmente referente a povoações subordinadas, não a filhas biológicas.\n\n**Descida à cova:** linguagem poética de morte e perda de poder, não cartografia literal do mundo dos mortos.",
       "scriptureRefs": [
         "Ezequiel 26:1-21"
       ],
@@ -396,7 +397,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**Isaías 23:** outro oráculo contra Tiro. **Ezequiel 27:** lamentação sobre seu comércio. **Ezequiel 28:** crítica à arrogância do governante de Tiro. **Ezequiel 29:17–20:** referência posterior ao esforço militar babilônico. **Amós 1:9–10:** denúncia de Tiro em outra tradição profética.",
+      "body": "**Isaías 23:** lamentação contra Tiro.\n\n**Jeremias 27:1–11:** a expansão do domínio babilônico.\n\n**Ezequiel 25:3–7:** juízo contra quem celebra a desgraça de Judá.\n\n**Ezequiel 27:** Tiro retratada como navio mercantil naufragado.\n\n**Ezequiel 29:17–20:** referência posterior ao esforço de Nabucodonosor contra Tiro.\n\n**Obadias 1:10–14:** condenação da alegria oportunista com a queda de outro povo.",
       "scriptureRefs": [
         "Ezequiel 26:1-21"
       ],
@@ -406,7 +407,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria forçada",
-      "body": "O alerta contra lucrar com a dor alheia pode dialogar com o ensino de Jesus sobre amor ao próximo (Lucas 10:25–37). Ezequiel 26, porém, trata de Tiro e sua história; não identifica seu governante com Satanás nem apresenta profecia nominal direta de Jesus.",
+      "body": "A denúncia contra a alegria com a desgraça alheia dialoga com o ensino de Jesus sobre amar o próximo (Lucas 10:25–37). A conexão é uma aplicação ética cristã e não substitui o contexto de Tiro e Jerusalém.",
       "scriptureRefs": [
         "Ezequiel 26:1-21"
       ],
@@ -426,7 +427,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas",
-      "body": "**1. Que cidade é o alvo?** Tiro (v. 2).\n\n**2. Por que é repreendida?** Por celebrar a ruína de Jerusalém e esperar benefício comercial (v. 2).\n\n**3. Que rei é nomeado?** Nabucodonosor (v. 7).\n\n**4. Quem lamenta a queda?** Governantes e regiões marítimas (vv. 15–18).\n\n**5. Por que 'nunca mais' exige cautela?** Porque o gênero profético usa linguagem absoluta e a história posterior do sítio é complexa.",
+      "body": "**1. Qual atitude de Tiro provoca o oráculo?** Celebrar a queda de Jerusalém como oportunidade de ganho (26:2).\n\n**2. Como os ataques são figurados?** Como ondas sucessivas do mar (26:3).\n\n**3. Quem é nomeado como invasor?** Nabucodonosor da Babilônia (26:7).\n\n**4. Como os governantes marítimos reagem?** Com espanto e lamentação (26:15–18).\n\n**5. Qual imagem encerra o capítulo?** Tiro descendo à cova e desaparecendo de sua antiga posição (26:19–21).",
       "scriptureRefs": [
         "Ezequiel 26:1-21"
       ],
@@ -436,7 +437,7 @@ export const ezekiel26Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — quando o lucro ignora a dor",
-      "body": "**Tema:** A fragilidade de poderes que lucram com a tragédia.\n\n**Proposição:** O prestígio econômico não elimina a responsabilidade moral diante do sofrimento alheio.\n\n**Esboço:** (1) a alegria com a queda (1–6); (2) o cerco e a ruína (7–14); (3) o lamento das costas (15–21).\n\n**Cuidado:** distinguir linguagem poética de cronologia histórica e não promover hostilidade contra cidades modernas.",
+      "body": "**Tema:** O perigo de celebrar a ruína do próximo.\n\n**Proposição:** Prosperidade construída sobre a desgraça alheia não garante segurança nem dignidade.\n\n**Esboço:** (1) oportunismo de Tiro (1–6); (2) cerco e saque (7–14); (3) lamento internacional (15–18); (4) a fragilidade do poder (19–21).\n\n**Cuidados:** não glorificar violência de conquista, não ignorar debates históricos sobre a destruição de Tiro e não aplicar o juízo a povos modernos sem fundamento.",
       "scriptureRefs": [
         "Ezequiel 26:1-21"
       ],
