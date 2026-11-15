@@ -1,6 +1,6 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 39 — comentários autorais; revisão editorial humana pendente. */
+/** Ezequiel 39 — revisão lexical preliminar; estudo editorialmente pendente. */
 export const ezekiel39Study: StudyContent = {
   "version": 5,
   "depth": "deep",
@@ -41,7 +41,7 @@ export const ezekiel39Study: StudyContent = {
     "Qual é o papel de o reconhecimento entre as nações nos versículos 21–24?",
     "Qual é o papel de reunião e derramamento do espírito nos versículos 25–29?"
   ],
-  "conclusion": "A derrota de Gogue e a santidade restaurada deve ser interpretado no fluxo do livro de Ezequiel e com atenção ao gênero literário.",
+  "conclusion": "Revisão lexical inicial concluída; exegese detalhada e revisão editorial humana pendentes.",
   "prayer": "Senhor, ensina-nos a viver com justiça e esperança. Amém.",
   "sections": [
     {
@@ -137,7 +137,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 39:1 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo prossegue a derrota de Gogue, descrevendo o fim de sua capacidade de ataque.\n\n**Leitura contextual do versículo 1:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **queda do agressor**. Leia o verso integral no texto bíblico e compare-o aos versos 1–8 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 1 participa da unidade **Queda do agressor**. Os elementos **filho, homem, profetiza, Gogue, príncipe** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 1–8. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:1"
       ],
@@ -147,7 +147,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 39:2 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo prossegue a derrota de Gogue, descrevendo o fim de sua capacidade de ataque.\n\n**Leitura contextual do versículo 2:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **queda do agressor**. Leia o verso integral no texto bíblico e compare-o aos versos 1–8 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 2 participa da unidade **Queda do agressor**. Os elementos **virarei, arrastarei, farei, subir, regiões** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 1–8. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:2"
       ],
@@ -157,7 +157,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 39:3 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo prossegue a derrota de Gogue, descrevendo o fim de sua capacidade de ataque.\n\n**Leitura contextual do versículo 3:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **queda do agressor**. Leia o verso integral no texto bíblico e compare-o aos versos 1–8 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 3 participa da unidade **Queda do agressor**. Os elementos **Tirarei, esquerda, farei, flechas, direita** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 1–8. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:3"
       ],
@@ -167,7 +167,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 39:4 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo prossegue a derrota de Gogue, descrevendo o fim de sua capacidade de ataque.\n\n**Leitura contextual do versículo 4:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **queda do agressor**. Leia o verso integral no texto bíblico e compare-o aos versos 1–8 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 4 participa da unidade **Queda do agressor**. Os elementos **montes, Israel, cairás, tropas, povos** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 1–8. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:4"
       ],
@@ -177,7 +177,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 39:5 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo prossegue a derrota de Gogue, descrevendo o fim de sua capacidade de ataque.\n\n**Leitura contextual do versículo 5:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **queda do agressor**. Leia o verso integral no texto bíblico e compare-o aos versos 1–8 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 5 participa da unidade **Queda do agressor**. Os elementos **campo, cairás, falei** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 1–8. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:5"
       ],
@@ -187,7 +187,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 39:6 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo prossegue a derrota de Gogue, descrevendo o fim de sua capacidade de ataque.\n\n**Leitura contextual do versículo 6:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **queda do agressor**. Leia o verso integral no texto bíblico e compare-o aos versos 1–8 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 6 participa da unidade **Queda do agressor**. Os elementos **enviarei, Magogue, habitam, segurança, terras** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 1–8. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:6"
       ],
@@ -197,7 +197,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 39:7 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo prossegue a derrota de Gogue, descrevendo o fim de sua capacidade de ataque.\n\n**Leitura contextual do versículo 7:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **queda do agressor**. Leia o verso integral no texto bíblico e compare-o aos versos 1–8 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 7 participa da unidade **Queda do agressor**. Os elementos **farei, notório, santo, Israel, nunca** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 1–8. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:7"
       ],
@@ -207,7 +207,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 39:8 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O oráculo prossegue a derrota de Gogue, descrevendo o fim de sua capacidade de ataque.\n\n**Leitura contextual do versículo 8:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **queda do agressor**. Leia o verso integral no texto bíblico e compare-o aos versos 1–8 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 8 participa da unidade **Queda do agressor**. Os elementos **acontecerá, tenho, falado** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 1–8. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:8"
       ],
@@ -217,7 +217,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 39:9 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Queima de armas e sepultamento prolongado retratam remoção da ameaça e purificação da terra.\n\n**Leitura contextual do versículo 9:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **armas e sepultamento**. Leia o verso integral no texto bíblico e compare-o aos versos 9–16 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 9 participa da unidade **Armas e sepultamento**. Os elementos **moradores, cidades, Israel, sairão, acenderão** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 9–16. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:9"
       ],
@@ -227,7 +227,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 39:10 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Queima de armas e sepultamento prolongado retratam remoção da ameaça e purificação da terra.\n\n**Leitura contextual do versículo 10:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **armas e sepultamento**. Leia o verso integral no texto bíblico e compare-o aos versos 9–16 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 10 participa da unidade **Armas e sepultamento**. Os elementos **trarão, lenha, campo, cortarão, bosques** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 9–16. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:10"
       ],
@@ -237,7 +237,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 39:11 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Queima de armas e sepultamento prolongado retratam remoção da ameaça e purificação da terra.\n\n**Leitura contextual do versículo 11:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **armas e sepultamento**. Leia o verso integral no texto bíblico e compare-o aos versos 9–16 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 11 participa da unidade **Armas e sepultamento**. Os elementos **naquele, tempo, darei, Gogue, lugar** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 9–16. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:11"
       ],
@@ -247,7 +247,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 39:12 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Queima de armas e sepultamento prolongado retratam remoção da ameaça e purificação da terra.\n\n**Leitura contextual do versículo 12:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **armas e sepultamento**. Leia o verso integral no texto bíblico e compare-o aos versos 9–16 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 12 participa da unidade **Armas e sepultamento**. Os elementos **durante, meses, Israel, enterrará, purificar** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 9–16. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:12"
       ],
@@ -257,7 +257,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 39:13 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Queima de armas e sepultamento prolongado retratam remoção da ameaça e purificação da terra.\n\n**Leitura contextual do versículo 13:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **armas e sepultamento**. Leia o verso integral no texto bíblico e compare-o aos versos 9–16 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 13 participa da unidade **Armas e sepultamento**. Os elementos **enterrará, notório, glorificado** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 9–16. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:13"
       ],
@@ -267,7 +267,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 39:14 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Queima de armas e sepultamento prolongado retratam remoção da ameaça e purificação da terra.\n\n**Leitura contextual do versículo 14:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **armas e sepultamento**. Leia o verso integral no texto bíblico e compare-o aos versos 9–16 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 14 participa da unidade **Armas e sepultamento**. Os elementos **separarão, homens, continuamente, percorram, terra** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 9–16. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:14"
       ],
@@ -277,7 +277,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 39:15 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Queima de armas e sepultamento prolongado retratam remoção da ameaça e purificação da terra.\n\n**Leitura contextual do versículo 15:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **armas e sepultamento**. Leia o verso integral no texto bíblico e compare-o aos versos 9–16 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 15 participa da unidade **Armas e sepultamento**. Os elementos **passam, terra, passem, vejam, algum** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 9–16. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:15"
       ],
@@ -287,7 +287,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 39:16 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Queima de armas e sepultamento prolongado retratam remoção da ameaça e purificação da terra.\n\n**Leitura contextual do versículo 16:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **armas e sepultamento**. Leia o verso integral no texto bíblico e compare-o aos versos 9–16 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 16 participa da unidade **Armas e sepultamento**. Os elementos **cidade, Hamoná, purificarão, terra** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 9–16. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:16"
       ],
@@ -297,7 +297,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 39:17 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A imagem profética de aves e animais sobre mortos enfatiza a derrota militar de modo chocante.\n\n**Leitura contextual do versículo 17:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **banquete das aves**. Leia o verso integral no texto bíblico e compare-o aos versos 17–20 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 17 participa da unidade **Banquete das aves**. Os elementos **filho, homem, pássaros, animais, campo** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 17–20. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:17"
       ],
@@ -307,7 +307,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 39:18 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A imagem profética de aves e animais sobre mortos enfatiza a derrota militar de modo chocante.\n\n**Leitura contextual do versículo 18:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **banquete das aves**. Leia o verso integral no texto bíblico e compare-o aos versos 17–20 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 18 participa da unidade **Banquete das aves**. Os elementos **Comereis, carne, guerreiros, bebereis, sangue** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 17–20. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:18"
       ],
@@ -317,7 +317,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 39:19 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A imagem profética de aves e animais sobre mortos enfatiza a derrota militar de modo chocante.\n\n**Leitura contextual do versículo 19:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **banquete das aves**. Leia o verso integral no texto bíblico e compare-o aos versos 17–20 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 19 participa da unidade **Banquete das aves**. Os elementos **comereis, gordura, fartardes, bebereis, sangue** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 17–20. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:19"
       ],
@@ -327,7 +327,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 39:20 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A imagem profética de aves e animais sobre mortos enfatiza a derrota militar de modo chocante.\n\n**Leitura contextual do versículo 20:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **banquete das aves**. Leia o verso integral no texto bíblico e compare-o aos versos 17–20 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 20 participa da unidade **Banquete das aves**. Os elementos **fartareis, minha, cavalos, cavaleiros, guerreiros** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 17–20. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:20"
       ],
@@ -337,7 +337,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 39:21 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A restauração revela o nome santo e reinterpreta o exílio como consequência da infidelidade.\n\n**Leitura contextual do versículo 21:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **o reconhecimento entre as nações**. Leia o verso integral no texto bíblico e compare-o aos versos 21–24 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 21 participa da unidade **O reconhecimento entre as nações**. Os elementos **porei, minha, glória, nações, verão** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 21–24. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:21"
       ],
@@ -347,7 +347,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 39:22 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A restauração revela o nome santo e reinterpreta o exílio como consequência da infidelidade.\n\n**Leitura contextual do versículo 22:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **o reconhecimento entre as nações**. Leia o verso integral no texto bíblico e compare-o aos versos 21–24 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 22 participa da unidade **O reconhecimento entre as nações**. Os elementos **daquele, Israel, saberá** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 21–24. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:22"
       ],
@@ -357,7 +357,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 39:23 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A restauração revela o nome santo e reinterpreta o exílio como consequência da infidelidade.\n\n**Leitura contextual do versículo 23:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **o reconhecimento entre as nações**. Leia o verso integral no texto bíblico e compare-o aos versos 21–24 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 23 participa da unidade **O reconhecimento entre as nações**. Os elementos **nações, saberão, Israel, levados, cativeiro** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 21–24. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:23"
       ],
@@ -367,7 +367,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 39:24 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A restauração revela o nome santo e reinterpreta o exílio como consequência da infidelidade.\n\n**Leitura contextual do versículo 24:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **o reconhecimento entre as nações**. Leia o verso integral no texto bíblico e compare-o aos versos 21–24 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 24 participa da unidade **O reconhecimento entre as nações**. Os elementos **Conforme, imundície, conforme, rebeliões, escondi** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 21–24. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:24"
       ],
@@ -377,7 +377,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 39:25 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O fecho anuncia compaixão, retorno e presença divina, preparando a visão do templo.\n\n**Leitura contextual do versículo 25:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **reunião e derramamento do espírito**. Leia o verso integral no texto bíblico e compare-o aos versos 25–29 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 25 participa da unidade **Reunião e derramamento do Espírito**. Os elementos **Portanto, Agora, restaurarei, infortúnio, terei** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 25–29. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:25"
       ],
@@ -387,7 +387,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 39:26 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O fecho anuncia compaixão, retorno e presença divina, preparando a visão do templo.\n\n**Leitura contextual do versículo 26:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **reunião e derramamento do espírito**. Leia o verso integral no texto bíblico e compare-o aos versos 25–29 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 26 participa da unidade **Reunião e derramamento do Espírito**. Os elementos **Quando, tiverem, levado, vergonha, rebeldia** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 25–29. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:26"
       ],
@@ -397,7 +397,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 39:27 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O fecho anuncia compaixão, retorno e presença divina, preparando a visão do templo.\n\n**Leitura contextual do versículo 27:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **reunião e derramamento do espírito**. Leia o verso integral no texto bíblico e compare-o aos versos 25–29 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 27 participa da unidade **Reunião e derramamento do Espírito**. Os elementos **Quando, trouxé, volta, povos, juntar** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 25–29. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:27"
       ],
@@ -407,7 +407,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 39:28 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O fecho anuncia compaixão, retorno e presença divina, preparando a visão do templo.\n\n**Leitura contextual do versículo 28:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **reunião e derramamento do espírito**. Leia o verso integral no texto bíblico e compare-o aos versos 25–29 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 28 participa da unidade **Reunião e derramamento do Espírito**. Os elementos **saberão, serem, levados, cativeiro, nações** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 25–29. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:28"
       ],
@@ -417,7 +417,7 @@ export const ezekiel39Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Ezequiel 39:29 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O fecho anuncia compaixão, retorno e presença divina, preparando a visão do templo.\n\n**Leitura contextual do versículo 29:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **reunião e derramamento do espírito**. Leia o verso integral no texto bíblico e compare-o aos versos 25–29 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Observação textual autoral:** O versículo 29 participa da unidade **Reunião e derramamento do Espírito**. Os elementos **esconderei, rosto, derramarei, Espírito, Israel** orientam a leitura do texto bíblico.\n\n**Análise literária:** Leia a ação e seus destinatários em relação à unidade 25–29. O oráculo usa linguagem de julgamento e restauração; imagens violentas não autorizam violência contemporânea.\n\n**Pergunta:** Como as expressões destacadas contribuem para o movimento do capítulo?\n\n**Estado editorial:** nota lexical inicial, ainda sem paráfrase autoral completa ou exegese específica validada.",
       "scriptureRefs": [
         "Ezequiel 39:29"
       ],
