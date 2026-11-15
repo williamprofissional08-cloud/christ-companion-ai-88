@@ -4,6 +4,7 @@ import { Camera, Loader2, Plus, Trash2, X } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { COMMUNITY_MEDIA_BUCKET, validateCommunityMedia } from "@/lib/community-media";
+import { isCommunityPhoto, isMissingCommunityStoryBackend, prepareCommunityPhoto } from "@/lib/community-photo";
 
 const db = supabase as unknown as SupabaseClient;
 type Story = {
@@ -19,7 +20,24 @@ export function CommunityStories({ user }: { user: User | null }) {
   const [caption, setCaption] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [backendReady, setBackendReady] = useState<boolean | null>(null);
+  const [backendMessage, setBackendMessage] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (!user) return;
+    let active = true;
+    void db.from("community_stories").select("id", { head: true }).limit(1)
+      .then(({ error: tableError }) => {
+        if (!active) return;
+        const ready = !tableError;
+        setBackendReady(ready);
+        setBackendMessage(ready ? null : isMissingCommunityStoryBackend(tableError)
+          ? "Os stories ainda não estão ativados no servidor. A configuração está preparada, mas falta instalar a tabela e o armazenamento de mídia."
+          : "Não foi possível acessar os stories. Verifique a conexão ou as permissões da sua conta.");
+      });
+    return () => { active = false; };
+  }, [user?.id]);
 
   const loadStories = useCallback(async () => {
     if (!user) return;
@@ -34,7 +52,8 @@ export function CommunityStories({ user }: { user: User | null }) {
       .select("id,display_name").in("id",ids) : { data: [] };
     const names = new Map(((people??[]) as {id:string;display_name:string|null}[]).map(p=>[p.id,p.display_name??"Membro"]));
     const signed = await Promise.all(stories.map(async story=>{
-      const { data: url } = await db.storage.from(COMMUNITY_MEDIA_BUCKET).createSignedUrl(story.media_path,600);
+      const seconds = Math.max(1, Math.min(120, Math.floor((Date.parse(story.expires_at) - Date.now()) / 1000)));
+      const { data: url } = await db.storage.from(COMMUNITY_MEDIA_BUCKET).createSignedUrl(story.media_path,seconds);
       return url?.signedUrl ? { ...story, url:url.signedUrl,
         label:story.user_id===user.id ? "Seu story" : names.get(story.user_id)??"Membro" } : null;
     }));
@@ -49,15 +68,19 @@ export function CommunityStories({ user }: { user: User | null }) {
 
   async function publish(event: FormEvent) {
     event.preventDefault();
-    if (!user||!file||uploading) return;
+    if (!user || !file || uploading || backendReady !== true) return;
     setUploading(true);
     let path: string|null=null;
     try {
-      const info=await validateCommunityMedia(file);
+      const photo = isCommunityPhoto(file);
+      const readyFile = photo ? await prepareCommunityPhoto(file) : file;
+      const info = await validateCommunityMedia(readyFile);
       path=`${user.id}/stories/${crypto.randomUUID()}.${info.extension}`;
       const {error:uploadError}=await db.storage.from(COMMUNITY_MEDIA_BUCKET)
-        .upload(path,file,{contentType:file.type,upsert:false});
-      if(uploadError) throw uploadError;
+        .upload(path,readyFile,{contentType:readyFile.type,upsert:false});
+      if(uploadError) {
+        throw new Error("O armazenamento dos stories está indisponível. A infraestrutura de mídia precisa ser ativada no Supabase.");
+      }
       const {error}=await db.from("community_stories")
         .insert({user_id:user.id,media_path:path,media_kind:info.kind,
           media_seconds:info.seconds,caption:caption.trim().slice(0,240)});
@@ -88,7 +111,13 @@ export function CommunityStories({ user }: { user: User | null }) {
         <h3 className="text-sm font-bold text-[#10345e] dark:text-foreground">Momentos da Comunidade</h3>
         <span className="text-xs text-slate-500">Stories de 24 horas</span>
       </div>
-      <div className="flex gap-2 overflow-x-auto pb-2 sm:gap-3">
+      {backendReady === null && user && <p className="py-2 text-sm text-slate-600">Verificando stories…</p>}
+      {backendReady === false && (
+        <p role="status" className="rounded-xl border border-amber-200 bg-amber-50 px-3 py-3 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
+          {backendMessage}
+        </p>
+      )}
+      {backendReady === true && <div className="flex gap-2 overflow-x-auto pb-2 sm:gap-3">
         <button type="button" onClick={()=>setShowForm(v=>!v)}
           className="flex min-w-20 shrink-0 flex-col items-center gap-2 rounded-2xl border border-blue-200 bg-blue-50 px-3 py-3 text-blue-800 focus-visible:outline-2 focus-visible:outline-blue-600">
           <span className="flex size-14 items-center justify-center rounded-full border-2 border-blue-600"><Plus className="size-8" /></span>
@@ -106,11 +135,11 @@ export function CommunityStories({ user }: { user: User | null }) {
           </button>
         ))}
         {items.length===0 && <span className="self-center text-xs text-slate-600 dark:text-slate-300">Nenhum story publicado agora.</span>}
-      </div>
-      {showForm&&(
+      </div>}
+      {backendReady === true && showForm&&(
         <form onSubmit={publish} className="mt-3 space-y-2 rounded-xl bg-blue-50 p-3 dark:bg-slate-900">
           <label className="block text-xs font-semibold">Foto ou vídeo de até 60 segundos
-            <input ref={inputRef} type="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/webm,video/quicktime"
+            <input ref={inputRef} type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,video/mp4,video/webm,video/quicktime"
               required onChange={e=>setFile(e.target.files?.[0]??null)}
               className="mt-2 block w-full text-sm file:mr-3 file:rounded-full file:border-0 file:bg-blue-700 file:px-3 file:py-2 file:text-white" />
           </label>
