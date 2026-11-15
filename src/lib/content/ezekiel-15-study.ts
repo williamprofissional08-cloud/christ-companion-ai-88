@@ -1,46 +1,48 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 15 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 15 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel15Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 15 usa a madeira da videira como parábola de julgamento sobre a falsa segurança de Jerusalém.",
-  "historicalContext": "Oráculo no exílio babilônico, antes da destruição de Jerusalém no século VI a.C., ligado às denúncias de infidelidade.",
+  "intro": "Ezequiel 15 apresenta uma parábola curta sobre a madeira da videira: imprópria para obras de carpintaria e ainda menos aproveitável depois de queimada. A imagem é aplicada à crise de Jerusalém e à desolação da terra, sem negar o valor da videira como planta frutífera em outras passagens.",
+  "historicalContext": "O oráculo pertence às advertências de Ezequiel durante o exílio babilônico, antes da destruição de Jerusalém. A cidade, ameaçada por campanhas militares e pelo cerco, é comparada à madeira da videira consumida pelo fogo. A metáfora comunica vulnerabilidade e juízo pela infidelidade da comunidade.",
   "keyPoints": [
     {
-      "title": "Perguntas sobre a videira",
-      "text": "A madeira da videira é inadequada para determinados trabalhos (1–3)."
+      "title": "1–3: A madeira da videira",
+      "text": "Perguntas retóricas contrastam a videira com árvores próprias para construção."
     },
     {
-      "title": "Madeira queimada",
-      "text": "O fogo intensifica sua inutilidade estrutural (4–5)."
+      "title": "4–5: A madeira queimada",
+      "text": "O fogo torna ainda mais inútil a madeira já frágil."
     },
     {
-      "title": "Aplicação a Jerusalém",
-      "text": "A cidade é confrontada por sua infidelidade (6–8)."
+      "title": "6–8: Aplicação a Jerusalém",
+      "text": "A parábola anuncia destruição e desolação como consequência da infidelidade."
     }
   ],
-  "application": "Cultivar fidelidade, justiça e frutos comunitários sem confundir identidade religiosa com garantia de segurança.",
+  "application": "Não confundir privilégio religioso com imunidade à responsabilidade moral. Reconhecer que imagens de juízo exigem atenção ao contexto histórico e não autorizam desprezar pessoas ou celebrar sua destruição.",
   "crossReferences": [
+    "Salmos 80:8-16",
     "Isaías 5:1-7",
-    "Salmo 80:8-16",
     "Jeremias 2:21",
-    "Ezequiel 17:1-24",
+    "Ezequiel 17:1-10",
+    "Ezequiel 19:10-14",
     "João 15:1-8"
   ],
   "questions": [
-    "Por que a madeira da videira é escolhida como imagem?",
-    "O que o fogo acrescenta ao argumento?",
-    "A quem a parábola se aplica?",
-    "Como distinguir Ezequiel 15 de João 15?"
+    "Por que a madeira da videira é comparada à de outras árvores?",
+    "Qual o papel das perguntas retóricas nos versículos 2–3?",
+    "O que o fogo acrescenta à imagem?",
+    "A quem a parábola é aplicada explicitamente?",
+    "Como evitar uma aplicação que desvalorize pessoas?"
   ],
-  "conclusion": "A parábola confronta a falsa segurança de Jerusalém e convoca à fidelidade real, não à mera confiança em símbolos.",
+  "conclusion": "A parábola da madeira da videira anuncia a vulnerabilidade de Jerusalém e a gravidade da infidelidade. Seu propósito é confrontar a falsa segurança, não negar a dignidade humana.",
   "prayer": "Senhor, torna nossa fé verdadeira em justiça e misericórdia. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 15:1–8 (paráfrase livre)",
-      "body": "**Paráfrase livre autoral para estudo; não substitui uma tradução bíblica.**\n\n**1.** O Senhor dirige uma nova palavra a Ezequiel.\n\n**2.** A madeira da videira é comparada à das árvores da floresta.\n\n**3.** Pergunta-se se a madeira da videira serve para fabricar utensílios ou até uma estaca.\n\n**4.** A madeira é lançada ao fogo: as extremidades se consomem e o centro fica chamuscado.\n\n**5.** Se a madeira intacta não servia para esse uso, menos ainda depois de queimada.\n\n**6.** Deus aplica a comparação aos habitantes de Jerusalém entregues ao fogo.\n\n**7.** O texto anuncia oposição divina: mesmo quem escapa de um fogo enfrentará outro.\n\n**8.** A terra será desolada por causa da infidelidade.",
+      "body": "Leia Ezequiel 15:1–8 no texto bíblico do aplicativo. Os comentários são **paráfrases livres autorais** com exegese contextual, não tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 15:1-8"
       ],
@@ -82,7 +84,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 15:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O Senhor dirige uma nova palavra a Ezequiel.\n\n**Exegese contextual:** A fórmula abre uma pequena parábola de julgamento, que deve ser lida junto às advertências sobre Jerusalém nos capítulos 14 e 16.\n\n**Observação:** Identifique a pergunta, a comparação ou a aplicação que o versículo acrescenta ao argumento.",
+      "body": "**Paráfrase livre autoral:** A palavra do Senhor vem a Ezequiel.\n\n**Exegese contextual:** A fórmula abre uma comparação breve que será aplicada aos habitantes de Jerusalém.\n\n**Pergunta interpretativa:** Como a comparação da madeira e do fogo contribui para o anúncio sobre Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 15:1"
       ],
@@ -92,7 +94,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 15:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A madeira da videira é comparada à das árvores da floresta.\n\n**Exegese contextual:** A pergunta retórica distingue o valor do fruto da videira da utilidade estrutural de sua madeira: a imagem é funcional, não uma avaliação botânica absoluta.\n\n**Observação:** Identifique a pergunta, a comparação ou a aplicação que o versículo acrescenta ao argumento.",
+      "body": "**Paráfrase livre autoral:** Deus pergunta o que torna especial a madeira da videira.\n\n**Exegese contextual:** O contraste não nega o valor dos frutos: questiona a utilidade da madeira para carpintaria.\n\n**Pergunta interpretativa:** Como a comparação da madeira e do fogo contribui para o anúncio sobre Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 15:2"
       ],
@@ -102,7 +104,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 15:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Pergunta-se se a madeira da videira serve para fabricar utensílios ou até uma estaca.\n\n**Exegese contextual:** O argumento depende de seu uso limitado como madeira de construção; o texto não diz que a videira seja sem valor enquanto produz fruto.\n\n**Observação:** Identifique a pergunta, a comparação ou a aplicação que o versículo acrescenta ao argumento.",
+      "body": "**Paráfrase livre autoral:** A madeira da videira não serve nem como estaca para pendurar objetos.\n\n**Exegese contextual:** A pergunta retórica destaca sua pouca resistência e função estrutural.\n\n**Pergunta interpretativa:** Como a comparação da madeira e do fogo contribui para o anúncio sobre Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 15:3"
       ],
@@ -112,7 +114,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 15:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A madeira é lançada ao fogo: as extremidades se consomem e o centro fica chamuscado.\n\n**Exegese contextual:** A imagem de dano pelo fogo prepara a conclusão de inutilidade para trabalhos de carpintaria.\n\n**Observação:** Identifique a pergunta, a comparação ou a aplicação que o versículo acrescenta ao argumento.",
+      "body": "**Paráfrase livre autoral:** Uma videira queimada nas extremidades fica ainda menos útil.\n\n**Exegese contextual:** A imagem do fogo anuncia destruição e acentua a perda de qualquer uso da madeira.\n\n**Pergunta interpretativa:** Como a comparação da madeira e do fogo contribui para o anúncio sobre Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 15:4"
       ],
@@ -122,7 +124,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 15:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Se a madeira intacta não servia para esse uso, menos ainda depois de queimada.\n\n**Exegese contextual:** O raciocínio do maior para o menor intensifica a metáfora e prepara sua aplicação a Jerusalém.\n\n**Observação:** Identifique a pergunta, a comparação ou a aplicação que o versículo acrescenta ao argumento.",
+      "body": "**Paráfrase livre autoral:** Se a madeira inteira já não servia para obra, menos ainda a chamuscada.\n\n**Exegese contextual:** O argumento do maior para o menor reforça a conclusão inevitável da parábola.\n\n**Pergunta interpretativa:** Como a comparação da madeira e do fogo contribui para o anúncio sobre Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 15:5"
       ],
@@ -132,7 +134,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 15:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus aplica a comparação aos habitantes de Jerusalém entregues ao fogo.\n\n**Exegese contextual:** A interpretação é fornecida pelo próprio oráculo; não é licença para atribuir desastres atuais à ira divina.\n\n**Observação:** Identifique a pergunta, a comparação ou a aplicação que o versículo acrescenta ao argumento.",
+      "body": "**Paráfrase livre autoral:** A madeira destinada ao fogo é comparada aos habitantes de Jerusalém.\n\n**Exegese contextual:** A interpretação explícita impede transformar a metáfora em juízo sobre o valor humano de indivíduos.\n\n**Pergunta interpretativa:** Como a comparação da madeira e do fogo contribui para o anúncio sobre Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 15:6"
       ],
@@ -142,7 +144,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 15:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O texto anuncia oposição divina: mesmo quem escapa de um fogo enfrentará outro.\n\n**Exegese contextual:** A repetição do fogo enfatiza a gravidade da crise e conduz à fórmula de reconhecimento do Senhor.\n\n**Observação:** Identifique a pergunta, a comparação ou a aplicação que o versículo acrescenta ao argumento.",
+      "body": "**Paráfrase livre autoral:** Os que escapam de um fogo ainda enfrentarão outro.\n\n**Exegese contextual:** A imagem sugere que sobreviver a uma calamidade não garante proteção contra a crise seguinte.\n\n**Pergunta interpretativa:** Como a comparação da madeira e do fogo contribui para o anúncio sobre Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 15:7"
       ],
@@ -152,7 +154,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 15:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A terra será desolada por causa da infidelidade.\n\n**Exegese contextual:** O encerramento identifica a transgressão da aliança como razão do juízo anunciado naquele contexto histórico.\n\n**Observação:** Identifique a pergunta, a comparação ou a aplicação que o versículo acrescenta ao argumento.",
+      "body": "**Paráfrase livre autoral:** A terra ficará devastada por causa da infidelidade.\n\n**Exegese contextual:** O oráculo termina relacionando desolação territorial e ruptura da aliança.\n\n**Pergunta interpretativa:** Como a comparação da madeira e do fogo contribui para o anúncio sobre Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 15:8"
       ],
@@ -212,7 +214,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "Há diferentes leituras sobre a extensão exata do fogo como referência ao cerco, à deportação e à destruição. O texto não identifica cada ocorrência com um evento cronológico isolado. A metáfora não afirma que pessoas sem produtividade econômica não tenham valor; aplicá-la assim inverteria sua função profética.",
+      "body": "**Videira frutífera ou madeira inútil?** A comparação focaliza o uso da madeira, não o valor de seus frutos; em Isaías 5 e Salmos 80 a videira recebe outras ênfases.\n\n**Fogo:** no contexto, imagem de destruição e cerco; não permite identificar automaticamente todo sofrimento contemporâneo como castigo divino.\n\n**Saída de um fogo para outro (v. 7):** pode representar sucessivas calamidades e a insuficiência de uma sobrevivência parcial.\n\n**Aplicação cristã:** João 15 usa a videira com outra finalidade literária; conexões precisam respeitar as diferenças.",
       "scriptureRefs": [
         "Ezequiel 15:1-8"
       ],
@@ -222,7 +224,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas comentadas",
-      "body": "**Isaías 5:1–7:** vinha e justiça esperada, com ênfase diferente. **Salmo 80:8–16:** videira como figura do povo e pedido de restauração. **Jeremias 2:21:** imagem da videira e infidelidade. **Ezequiel 17:1–24:** outra parábola vegetal, com detalhes próprios. **João 15:1–8:** Jesus emprega imagem da videira para permanência e fruto, em contexto distinto.",
+      "body": "**Salmos 80:8–16:** Israel como videira cultivada e depois ameaçada.\n\n**Isaías 5:1–7:** a vinha e a expectativa de justiça.\n\n**Jeremias 2:21:** a imagem da videira degenerada.\n\n**Ezequiel 17:1–10:** videira na parábola das águias.\n\n**Ezequiel 19:10–14:** videira e perda do cetro.\n\n**João 15:1–8:** uso cristológico posterior da imagem da videira.",
       "scriptureRefs": [
         "Ezequiel 15:1-8"
       ],
@@ -232,7 +234,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria inventada",
-      "body": "Em João 15, Jesus fala da videira verdadeira e do fruto dos discípulos. A aproximação temática ajuda a pensar fidelidade e fruto, mas Ezequiel 15 não prediz diretamente Jesus, e sua imagem de madeira queimada não deve ser transportada mecanicamente para João.",
+      "body": "João 15:1–8 apresenta Jesus como a videira verdadeira e destaca a permanência nele para frutificar. Essa associação cristã é temática, mas o foco de Ezequiel 15 é a inutilidade da madeira para construção e o anúncio histórico sobre Jerusalém.",
       "scriptureRefs": [
         "Ezequiel 15:1-8"
       ],
@@ -252,7 +254,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Qual objeto é comparado às árvores da floresta?** A madeira da videira (v. 2).\n\n**2. Para que ela não serve no argumento?** Para fabricar peças e estacas resistentes (v. 3).\n\n**3. O que o fogo acrescenta à imagem?** Intensifica a inutilidade da madeira para aquele trabalho (vv. 4–5).\n\n**4. A quem o oráculo aplica a parábola?** Aos habitantes de Jerusalém (v. 6).\n\n**5. Qual motivo é dado no fim?** A infidelidade (v. 8).",
+      "body": "**1. Qual material é o centro da parábola?** Madeira da videira (15:2).\n\n**2. Ela serve para fabricar estacas resistentes?** Não, segundo a pergunta retórica (15:3).\n\n**3. O que acontece depois de queimada?** Fica ainda menos aproveitável (15:4–5).\n\n**4. A quem a imagem é aplicada?** Aos habitantes de Jerusalém (15:6).\n\n**5. Qual consequência encerra o oráculo?** Desolação da terra (15:8).",
       "scriptureRefs": [
         "Ezequiel 15:1-8"
       ],
@@ -262,7 +264,7 @@ export const ezekiel15Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — não confundir identidade com fidelidade",
-      "body": "**Tema:** O chamado à fidelidade quando símbolos religiosos se tornam falsa segurança.\n\n**Proposição:** A parábola da videira denuncia uma comunidade que confia em sua identidade enquanto abandona as responsabilidades da aliança.\n\n**Esboço:** (1) a pergunta sobre a madeira (1–3); (2) a madeira queimada (4–5); (3) a aplicação a Jerusalém (6–8).\n\n**Cuidado pastoral:** não associar dignidade humana a produtividade nem interpretar tragédias atuais como castigo específico.",
+      "body": "**Tema:** A falsa segurança diante da crise.\n\n**Proposição:** A identidade religiosa não dispensa a responsabilidade pela justiça e fidelidade.\n\n**Esboço:** (1) a pergunta sobre a madeira (1–3); (2) a madeira consumida pelo fogo (4–5); (3) o anúncio sobre Jerusalém (6–8).\n\n**Cuidados:** não usar a metáfora para declarar pessoas 'inúteis'; não igualar automaticamente tragédias atuais ao juízo descrito; distinguir Ezequiel 15 de João 15.",
       "scriptureRefs": [
         "Ezequiel 15:1-8"
       ],
