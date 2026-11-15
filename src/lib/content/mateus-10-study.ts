@@ -363,77 +363,68 @@ export const mateus10Study: StudyContent = {
       "scriptureRefs": [
         "Mateus 10:35"
       ],
-      "body": "**Paráfrase explicativa livre e análise:** A imagem de divisão familiar prepara a citação de Miqueias 7:6, originalmente lamento de desordem social."
+      "body": "**Paráfrase explicativa livre e análise:** A imagem de divisão familiar prepara a citação de Miqueias 7:6, originalmente lamento de desordem social. A imagem também menciona filha e mãe, nora e sogra: é descrição de possíveis rupturas, não prescrição para desprezar familiares."
     },
     {
       "id": "versiculo-36",
-      "title": "Mateus 10:36 — Conflito entre gerações",
+      "title": "Mateus 10:36 — Inimigos em casa",
       "kind": "exegesis",
       "scriptureRefs": [
         "Mateus 10:36"
       ],
-      "body": "**Paráfrase explicativa livre e análise:** O texto menciona filha e mãe, nora e sogra para ilustrar ruptura. Não é prescrição para desprezar familiares."
+      "body": "**Paráfrase explicativa livre e análise:** A citação de Miqueias 7:6 enfatiza gravidade da oposição doméstica. O contexto de Miqueias também afirma esperança no Senhor (7:7)."
     },
     {
       "id": "versiculo-37",
-      "title": "Mateus 10:37 — Inimigos em casa",
+      "title": "Mateus 10:37 — Prioridade de Jesus",
       "kind": "exegesis",
       "scriptureRefs": [
         "Mateus 10:37"
       ],
-      "body": "**Paráfrase explicativa livre e análise:** A citação de Miqueias 7:6 enfatiza gravidade da oposição doméstica. O contexto de Miqueias também afirma esperança no Senhor (7:7)."
+      "body": "**Paráfrase explicativa livre e análise:** O amor a Jesus recebe prioridade sobre vínculos familiares, sem abolir deveres de cuidado, respeito e proteção."
     },
     {
       "id": "versiculo-38",
-      "title": "Mateus 10:38 — Prioridade de Jesus",
+      "title": "Mateus 10:38 — Tomar a cruz",
       "kind": "exegesis",
       "scriptureRefs": [
         "Mateus 10:38"
       ],
-      "body": "**Paráfrase explicativa livre e análise:** O amor a Jesus recebe prioridade sobre vínculos familiares, sem abolir deveres de cuidado, respeito e proteção."
+      "body": "**Paráfrase explicativa livre e análise:** A cruz era instrumento romano de execução humilhante. A imagem descreve custo radical do seguimento, não romantiza violência doméstica ou sofrimento imposto por abusadores."
     },
     {
       "id": "versiculo-39",
-      "title": "Mateus 10:39 — Tomar a cruz",
+      "title": "Mateus 10:39 — Perder e encontrar a vida",
       "kind": "exegesis",
       "scriptureRefs": [
         "Mateus 10:39"
       ],
-      "body": "**Paráfrase explicativa livre e análise:** A cruz era instrumento romano de execução humilhante. A imagem descreve custo radical do seguimento, não romantiza violência doméstica ou sofrimento imposto por abusadores."
+      "body": "**Paráfrase explicativa livre e análise:** O paradoxo contrasta autopreservação como valor absoluto com fidelidade a Jesus. Não incentiva autodestruição ou negligência da própria segurança."
     },
     {
       "id": "versiculo-40",
-      "title": "Mateus 10:40 — Perder e encontrar a vida",
+      "title": "Mateus 10:40 — Recepção dos enviados",
       "kind": "exegesis",
       "scriptureRefs": [
         "Mateus 10:40"
       ],
-      "body": "**Paráfrase explicativa livre e análise:** O paradoxo contrasta autopreservação como valor absoluto com fidelidade a Jesus. Não incentiva autodestruição ou negligência da própria segurança."
+      "body": "**Paráfrase explicativa livre e análise:** Acolher os mensageiros de Jesus é apresentado como acolher o próprio Jesus e o Pai. A afirmação confere responsabilidade ética aos enviados."
     },
     {
       "id": "versiculo-41",
-      "title": "Mateus 10:41 — Recepção dos enviados",
+      "title": "Mateus 10:41 — Profeta e justo",
       "kind": "exegesis",
       "scriptureRefs": [
         "Mateus 10:41"
       ],
-      "body": "**Paráfrase explicativa livre e análise:** Acolher os mensageiros de Jesus é apresentado como acolher o próprio Jesus e o Pai. A afirmação confere responsabilidade ética aos enviados."
-    },
-    {
-      "id": "versiculo-42",
-      "title": "Mateus 10:42 — Profeta e justo",
-      "kind": "exegesis",
-      "scriptureRefs": [
-        "Mateus 10:42"
-      ],
       "body": "**Paráfrase explicativa livre e análise:** Receber pessoas por sua identidade e missão é valorizado. A promessa de recompensa não autoriza comércio de títulos espirituais."
     },
     {
-      "id": "versiculo-43",
-      "title": "Mateus 10:43 — Copo de água fria",
+      "id": "versiculo-42",
+      "title": "Mateus 10:42 — Copo de água fria",
       "kind": "exegesis",
       "scriptureRefs": [
-        "Mateus 10:43"
+        "Mateus 10:42"
       ],
       "body": "**Paráfrase explicativa livre e análise:** Um gesto simples de hospitalidade a um pequeno discípulo tem valor diante de Deus. A conclusão honra o cuidado concreto, não apenas feitos extraordinários."
     },
