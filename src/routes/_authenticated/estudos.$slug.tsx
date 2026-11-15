@@ -22,7 +22,7 @@ import { resolveManagedStudy } from "@/lib/content/managed-study-catalog";
 export const Route = createFileRoute("/_authenticated/estudos/$slug")({
   head: ({ params }) => {
     const study = getStudy(params.slug);
-    const title = `${study?.title ?? "Estudo bíblico"} — Caminhando com Cristo`;
+    const title = `${study?.title ?? "Estudo bíblico"} — Caminho Divino`;
     const description = study?.summary ?? "Estudo fundamentado nas Escrituras, com contexto, referências e aplicação.";
     return {
     meta: [

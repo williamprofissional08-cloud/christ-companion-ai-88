@@ -51,3 +51,28 @@ export const saveStudyCheckpoint = createServerFn({ method: "POST" })
     if (error) throw new Error(error.message);
     return { ok: true };
   });
+
+/** Read-only, user-scoped checkpoint for the home screen. No progress is written here. */
+export const getLatestStudyCheckpoint = createServerFn({ method: "GET" })
+  .middleware([requireSupabaseAuth])
+  .handler(async ({ context }) => {
+    const { data: rows, error } = await context.supabase
+      .from("study_progress")
+      .select("study_slug, read_percent, updated_at")
+      .eq("user_id", context.userId)
+      .order("updated_at", { ascending: false })
+      .limit(10);
+
+    if (error) throw new Error(error.message);
+    const latest = rows?.find((row) => Boolean(getStudy(row.study_slug)));
+    if (!latest) return null;
+
+    const study = getStudy(latest.study_slug);
+    if (!study) return null;
+    return {
+      slug: latest.study_slug,
+      title: study.title,
+      reference: study.reference,
+      readPercent: latest.read_percent,
+    };
+  });
