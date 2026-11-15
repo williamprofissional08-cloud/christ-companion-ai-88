@@ -1,47 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 31 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 31 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel31Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 31 compara a Assíria a um cedro majestoso cuja queda adverte o faraó.",
-  "historicalContext": "Memória da queda assíria aplicada à crise do Egito no século VI a.C.",
+  "intro": "Ezequiel 31 compara a grandeza de Faraó ao cedro que simboliza a Assíria: uma árvore magnífica, alimentada por águas abundantes, mas derrubada quando sua altura se tornou motivo de orgulho.",
+  "historicalContext": "O oráculo integra a coleção contra o Egito no contexto do avanço babilônico e do colapso de antigas potências. A Assíria, outrora dominante, serve como advertência a Faraó. A alegoria combina imagens do Líbano, das águas, do Éden e do Xeol para narrar ascensão, soberba e queda imperial.",
   "keyPoints": [
     {
-      "title": "1–9: O cedro imponente",
-      "text": "A Assíria é retratada como árvore que cresce por águas abundantes e abriga muitos povos."
+      "title": "1–9: O cedro magnífico",
+      "text": "A Assíria é figurada como árvore que abriga muitos povos e cresce graças a águas abundantes."
     },
     {
-      "title": "10–14: A soberba e o corte",
-      "text": "A altura torna-se motivo de orgulho, e a queda da árvore adverte outros poderes."
+      "title": "10–14: O orgulho e a queda",
+      "text": "A autoexaltação precede a derrubada do cedro por forças estrangeiras."
     },
     {
-      "title": "15–18: Lamento e descida ao Xeol",
-      "text": "O colapso ecoa entre as nações e antecipa o destino do faraó."
+      "title": "15–17: Luto e descida ao Xeol",
+      "text": "A morte da potência abala as nações e alcança seus aliados."
+    },
+    {
+      "title": "18: O aviso a Faraó",
+      "text": "O exemplo assírio é aplicado diretamente ao Egito."
     }
   ],
-  "application": "Cultivar humildade e responsabilidade pelos dependentes do poder.",
+  "application": "Reconhecer que recursos, influência e prosperidade não autorizam arrogância nem exploração. Avaliar líderes pelo uso responsável do poder e lembrar que estruturas políticas e econômicas são frágeis. Não converter a alegoria em previsão específica sobre países contemporâneos.",
   "crossReferences": [
-    "Ezequiel 17:1-24",
+    "Gênesis 2:8-10",
+    "Isaías 10:5-19",
+    "Isaías 14:4-20",
     "Daniel 4:10-27",
-    "Naum 3:1-19",
-    "Isaías 10:33-34",
-    "Ezequiel 32:17-32",
-    "Marcos 10:42-45"
+    "Ezequiel 17:22-24",
+    "Ezequiel 32:17-32"
   ],
   "questions": [
-    "Por que o cedro é comparado ao faraó?",
-    "O que significam as águas?",
-    "Por que a árvore cai?",
-    "Como interpretar o Xeol no poema?"
+    "Por que a Assíria é escolhida como comparação para Faraó?",
+    "O que representam as águas que alimentam o cedro?",
+    "Em qual versículo a admiração pela grandeza se transforma em crítica?",
+    "Qual é a função da imagem do Xeol?",
+    "Como o versículo final esclarece o destinatário do poema?"
   ],
-  "conclusion": "A altura de um império não elimina sua dependência nem sua mortalidade.",
+  "conclusion": "A beleza e a força do cedro não o livram da queda: a grandeza imperial, quando convertida em orgulho, revela sua própria fragilidade.",
   "prayer": "Senhor, dá-nos humildade e responsabilidade. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 31:1–18 (paráfrase livre autoral)",
-      "body": "**Paráfrase livre autoral para estudo; não é tradução bíblica oficial.**\n\n**1.** A profecia é datada do décimo primeiro ano, terceiro mês, primeiro dia.\n\n**2.** Faraó e sua multidão recebem uma pergunta sobre sua grandeza.\n\n**3.** A Assíria é comparada a um cedro imponente do Líbano.\n\n**4.** Águas profundas alimentam o crescimento da árvore.\n\n**5.** A árvore supera outras em altura e extensão dos ramos.\n\n**6.** Aves, animais e povos encontram abrigo sob sua sombra.\n\n**7.** A beleza dos ramos resulta das raízes bem irrigadas.\n\n**8.** Nem as árvores do jardim de Deus se igualam ao cedro.\n\n**9.** A beleza do cedro desperta inveja entre árvores do Éden.\n\n**10.** A altura do cedro conduz à exaltação de seu coração.\n\n**11.** O cedro é entregue ao poderoso das nações.\n\n**12.** Estrangeiros cortam a árvore e espalham seus ramos pelos montes.\n\n**13.** Aves e animais passam a ocupar os restos da árvore.\n\n**14.** Outras árvores são advertidas a não confiar na própria altura.\n\n**15.** A descida ao mundo dos mortos provoca luto cósmico.\n\n**16.** A queda abala nações e é observada por outras árvores no mundo dos mortos.\n\n**17.** Aliados que viviam à sombra do cedro descem com ele.\n\n**18.** A comparação termina identificando o destino do faraó e sua multidão.",
+      "body": "Leia Ezequiel 31:1–18 no texto bíblico do aplicativo. As notas apresentam **paráfrases livres autorais** e análise contextual, não uma tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 31:1-18"
       ],
@@ -112,7 +117,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 31:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A profecia é datada do décimo primeiro ano, terceiro mês, primeiro dia.\n\n**Exegese contextual:** O momento situa a mensagem na crise de Judá sob pressão babilônica.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** No décimo primeiro ano, uma palavra profética é datada no início do terceiro mês.\n\n**Exegese contextual:** A data integra a sequência de oráculos contra o Egito e situa a advertência em meio à crise política do século VI a.C.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:1"
       ],
@@ -122,7 +127,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 31:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Faraó e sua multidão recebem uma pergunta sobre sua grandeza.\n\n**Exegese contextual:** A comparação questiona a confiança na magnitude do poder egípcio.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** Faraó e sua multidão são questionados sobre a comparação de sua grandeza.\n\n**Exegese contextual:** A pergunta introduz um exemplo histórico para confrontar a autoconfiança do governante egípcio.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:2"
       ],
@@ -132,7 +137,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 31:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A Assíria é comparada a um cedro imponente do Líbano.\n\n**Exegese contextual:** O império assírio serve como exemplo histórico de grandeza que caiu; há debate textual sobre a identificação da árvore.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** A Assíria é retratada como cedro majestoso do Líbano.\n\n**Exegese contextual:** O cedro representa altura, influência e esplendor imperial; a comparação não descreve literalmente uma árvore.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:3"
       ],
@@ -142,7 +147,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 31:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Águas profundas alimentam o crescimento da árvore.\n\n**Exegese contextual:** A abundância de recursos explica a prosperidade sem torná-la autossuficiente.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** Águas profundas e correntes alimentam o crescimento do cedro.\n\n**Exegese contextual:** A abundância de recursos explica a expansão da potência e prepara a crítica ao orgulho.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:4"
       ],
@@ -152,7 +157,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 31:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A árvore supera outras em altura e extensão dos ramos.\n\n**Exegese contextual:** O crescimento extraordinário prepara o contraste com a queda.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** O cedro cresce acima das demais árvores e estende seus ramos.\n\n**Exegese contextual:** A altura e a amplitude figuram poder político e alcance internacional.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:5"
       ],
@@ -162,7 +167,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 31:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Aves, animais e povos encontram abrigo sob sua sombra.\n\n**Exegese contextual:** O império fornece proteção e estrutura a muitos dependentes, que também sofrem com seu colapso.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** Aves, animais e povos encontram abrigo sob seus galhos.\n\n**Exegese contextual:** A sombra representa a influência de um império sobre numerosas comunidades, incluindo relações de dependência.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:6"
       ],
@@ -172,7 +177,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 31:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A beleza dos ramos resulta das raízes bem irrigadas.\n\n**Exegese contextual:** O texto insiste na dependência da árvore de fontes externas de vida.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** A árvore é admirada por sua beleza e raízes bem irrigadas.\n\n**Exegese contextual:** A descrição reconhece o esplendor real antes de denunciar sua transformação em arrogância.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:7"
       ],
@@ -182,7 +187,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 31:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Nem as árvores do jardim de Deus se igualam ao cedro.\n\n**Exegese contextual:** A linguagem de Éden amplia poeticamente o esplendor; não é descrição botânica literal.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** Nem as árvores do jardim de Deus se igualam à beleza do cedro.\n\n**Exegese contextual:** A linguagem do Éden eleva poeticamente o retrato da grandeza; não é uma identificação geográfica da Assíria com o jardim original.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:8"
       ],
@@ -192,7 +197,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 31:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A beleza do cedro desperta inveja entre árvores do Éden.\n\n**Exegese contextual:** A personificação reforça a excepcionalidade e a vulnerabilidade do império.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** Deus declara ter concedido beleza à árvore, admirada pelas árvores do Éden.\n\n**Exegese contextual:** A origem da grandeza é atribuída a Deus, desmontando a pretensão de autonomia absoluta do império.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:9"
       ],
@@ -202,7 +207,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 31:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A altura do cedro conduz à exaltação de seu coração.\n\n**Exegese contextual:** O problema moral é a soberba que transforma grandeza em pretensão.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** O cedro se exalta por sua própria altura.\n\n**Exegese contextual:** A virada do poema identifica o orgulho como problema central: grandeza recebida tornou-se autoexaltação.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:10"
       ],
@@ -212,7 +217,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 31:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O cedro é entregue ao poderoso das nações.\n\n**Exegese contextual:** A derrubada é atribuída à perversidade, não a simples azar político.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** Deus entrega a árvore a um governante poderoso por causa de sua maldade.\n\n**Exegese contextual:** A queda é interpretada como juízo, sem apresentar os conquistadores como moralmente impecáveis.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:11"
       ],
@@ -222,7 +227,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 31:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Estrangeiros cortam a árvore e espalham seus ramos pelos montes.\n\n**Exegese contextual:** A fragmentação simboliza perda de território e desintegração do poder.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** Estrangeiros cortam o cedro, e os povos deixam sua sombra.\n\n**Exegese contextual:** A derrubada representa o colapso do império e a dispersão de quem dependia de sua proteção.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:12"
       ],
@@ -232,7 +237,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 31:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Aves e animais passam a ocupar os restos da árvore.\n\n**Exegese contextual:** A imagem de refúgio se converte em cenário de ruína.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** Aves e animais pousam sobre os restos da árvore caída.\n\n**Exegese contextual:** A antiga imagem de abrigo se converte em cena de ruína e perda de prestígio.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:13"
       ],
@@ -242,7 +247,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 31:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Outras árvores são advertidas a não confiar na própria altura.\n\n**Exegese contextual:** A lição é universal para governantes: recursos e prestígio não eliminam mortalidade.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** A queda adverte outras árvores a não confiarem na própria altura.\n\n**Exegese contextual:** O poema explicita sua lição: nenhuma potência escapa à mortalidade por ser grande.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:14"
       ],
@@ -252,7 +257,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 31:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A descida ao mundo dos mortos provoca luto cósmico.\n\n**Exegese contextual:** O Xeol é a linguagem poética hebraica do domínio dos mortos, não mapa geográfico do além.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** A descida ao Xeol é acompanhada de luto cósmico e interrupção das águas.\n\n**Exegese contextual:** O mundo natural participa poeticamente do funeral do império; Xeol representa o domínio dos mortos.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:15"
       ],
@@ -262,7 +267,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 31:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A queda abala nações e é observada por outras árvores no mundo dos mortos.\n\n**Exegese contextual:** O poema dramatiza a repercussão internacional da queda de um império.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** A queda abala as nações, enquanto outras árvores são figuradas entre os mortos.\n\n**Exegese contextual:** O contraste entre terror na superfície e consolo no mundo inferior reforça a ironia da grandeza perdida.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:16"
       ],
@@ -272,7 +277,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 31:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Aliados que viviam à sombra do cedro descem com ele.\n\n**Exegese contextual:** A interdependência política torna a queda do centro também tragédia de seus apoiadores.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** Os aliados e protegidos da árvore também descem ao Xeol.\n\n**Exegese contextual:** A influência do império não salva seus dependentes da derrota e da morte.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:17"
       ],
@@ -282,7 +287,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 31:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A comparação termina identificando o destino do faraó e sua multidão.\n\n**Exegese contextual:** A história da Assíria é espelho do Egito: esplendor não impede queda.\n\n**Pergunta para estudo:** Como esta imagem da árvore ilumina o poder, a dependência ou a mortalidade dos impérios?",
+      "body": "**Paráfrase livre autoral:** O poema revela que a comparação se aplica a Faraó e sua multidão.\n\n**Exegese contextual:** A conclusão transfere ao Egito o aviso dado pelo exemplo assírio: glória e poder não impedem a queda.\n\n**Pergunta interpretativa:** Como a imagem da árvore revela os limites da grandeza e a crítica à arrogância?",
       "scriptureRefs": [
         "Ezequiel 31:18"
       ],
@@ -352,7 +357,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "Discutem-se o referente preciso da árvore no v. 3, o papel das imagens de Éden e o alcance da descrição do Xeol. É inadequado afirmar que Ezequiel 31 seja profecia direta sobre um governante contemporâneo ou descrição literal do inferno.",
+      "body": "**Assíria ou outro referente?** O texto recebido identifica a Assíria no v. 3; a função principal da comparação é advertir Faraó sobre a queda de uma potência anterior.\n\n**Éden:** a comparação com árvores do jardim é linguagem de esplendor, não localização literal da Assíria no Éden.\n\n**Xeol:** a descida ao mundo dos mortos é uma imagem fúnebre e política, não mapa detalhado da vida após a morte.\n\n**O grande cedro:** a metáfora não fornece códigos para identificar governantes modernos.",
       "scriptureRefs": [
         "Ezequiel 31:1-18"
       ],
@@ -362,7 +367,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**Ezequiel 17:1–24:** outra parábola de árvores e poder. **Daniel 4:10–27:** grande árvore e queda de governante, em tradição distinta. **Naum 3:1–19:** juízo sobre Nínive. **Isaías 10:33–34:** derrubada de árvores como imagem de orgulho. **Ezequiel 32:17–32:** lamento e mundo dos mortos.",
+      "body": "**Gênesis 2:8–10:** jardim e águas que sustentam a vida.\n\n**Isaías 10:5–19:** juízo sobre a arrogância assíria.\n\n**Isaías 14:4–20:** sátira fúnebre de um governante caído.\n\n**Daniel 4:10–27:** árvore grandiosa usada para confrontar o orgulho real.\n\n**Ezequiel 17:22–24:** Deus humilha árvores altas e exalta a pequena.\n\n**Ezequiel 32:17–32:** impérios no mundo dos mortos.",
       "scriptureRefs": [
         "Ezequiel 31:1-18"
       ],
@@ -372,7 +377,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria forçada",
-      "body": "O ensino de Jesus sobre liderança como serviço (Marcos 10:42–45) contrasta com a soberba imperial. Essa aplicação cristã não altera o sentido histórico do oráculo contra o faraó.",
+      "body": "O Novo Testamento contrasta a busca por grandeza dominadora com o serviço ensinado por Jesus (Marcos 10:42–45). Essa aplicação ética é uma leitura cristã posterior e não substitui o referente histórico do cedro: a Assíria como advertência a Faraó.",
       "scriptureRefs": [
         "Ezequiel 31:1-18"
       ],
@@ -392,7 +397,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Quem recebe a pergunta inicial?** O faraó e sua multidão (v. 2).\n\n**2. Que império é comparado ao cedro?** A Assíria, na leitura tradicional (v. 3).\n\n**3. O que alimenta o crescimento?** Águas abundantes (vv. 4–5).\n\n**4. Qual a causa moral destacada para a queda?** Orgulho e perversidade (vv. 10–11).\n\n**5. Que destino é anunciado ao faraó?** Cair como a árvore e descer entre os mortos (v. 18).",
+      "body": "**1. Quem recebe a advertência?** Faraó e sua multidão (31:2,18).\n\n**2. Qual potência é comparada a um cedro?** A Assíria (31:3).\n\n**3. O que sustentava a árvore?** Águas abundantes (31:4–7).\n\n**4. Qual é a razão explícita da queda?** A autoexaltação do coração (31:10–11).\n\n**5. O que ensina o versículo 14?** Nenhuma potência deve confiar na própria altura como garantia contra a morte.",
       "scriptureRefs": [
         "Ezequiel 31:1-18"
       ],
@@ -402,7 +407,7 @@ export const ezekiel31Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — grandeza que esquece suas raízes",
-      "body": "**Tema:** A humildade diante do sucesso.\n\n**Proposição:** O poder mais admirado permanece dependente e mortal.\n\n**Esboço:** (1) a árvore alimentada (1–9); (2) a altura orgulhosa (10–14); (3) a queda que adverte (15–18).\n\n**Cuidado:** distinguir metáfora de fato histórico e evitar usar a morte de povos como ilustração triunfalista.",
+      "body": "**Tema:** A altura que não impede a queda.\n\n**Proposição:** Grandeza sem humildade torna-se arrogância, e nenhum poder humano é permanente.\n\n**Esboço:** (1) esplendor recebido (1–9); (2) orgulho e queda (10–14); (3) luto das nações (15–17); (4) o alerta a Faraó (18).\n\n**Cuidados:** não tratar o Xeol como mapa literal, não atribuir toda tragédia ao orgulho individual e não transformar nomes de impérios antigos em equivalências políticas automáticas.",
       "scriptureRefs": [
         "Ezequiel 31:1-18"
       ],
