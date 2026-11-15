@@ -13,11 +13,11 @@ test("Malaquias 4: cobre todos os versículos do acervo BLIVRE", () => {
     assert.match(study, new RegExp('"id": "versiculo-' + n + '"'));
     assert.match(study, new RegExp('"Malaquias 4:' + n + '"'));
   }
-  assert.equal((study.match(/"id": "versiculo-\\d+"/g) ?? []).length, verses.length);
+  assert.equal((study.match(/"id": "versiculo-[0-9]+"/g) ?? []).length, verses.length);
 });
 
 test("Malaquias 4: integrado uma única vez ao catálogo", () => {
-  assert.match(catalog, /import \\{ malaquias4Study \\} from "\\.\\/malaquias-4-study";/);
+  assert.ok(catalog.includes('import { malaquias4Study } from "./malaquias-4-study";'));
   assert.equal((catalog.match(/"biblia-malaquias-cap-4": malaquias4Study/g) ?? []).length, 1);
 });
 
