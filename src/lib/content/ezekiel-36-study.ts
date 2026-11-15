@@ -1,54 +1,53 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 36 — comentários autorais; revisão editorial humana pendente. */
+/** Ezequiel 36 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel36Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Estudo de Ezequiel 36: Os montes restaurados e o coração novo.",
-  "historicalContext": "Profecia de Ezequiel no exílio babilônico, com linguagem de restauração e visão.",
+  "intro": "Ezequiel 36 anuncia restauração da terra devastada e explica que o retorno do povo depende da fidelidade de Deus ao seu nome, acompanhada de purificação, coração novo e Espírito para uma vida transformada.",
+  "historicalContext": "O profeta fala à comunidade marcada pelo exílio babilônico e pela destruição de Jerusalém. A primeira parte se dirige aos montes de Israel, atingidos pela devastação e pela exploração dos vizinhos. A segunda interpreta o exílio em termos da aliança e apresenta a iniciativa divina de renovar o povo; essa explicação não deve ser transferida indiscriminadamente a sofrimentos contemporâneos.",
   "keyPoints": [
     {
-      "title": "1–7: Montes de Israel e a vergonha das nações",
-      "text": "O profeta se dirige à terra devastada e denuncia a exploração de seus montes pelos vizinhos."
+      "title": "1–15: A terra deixa de ser desolada",
+      "text": "Deus confronta o saque e promete fecundidade, povoamento e fim da humilhação."
     },
     {
-      "title": "8–15: Terra habitável e povo reunido",
-      "text": "Os montes voltarão a produzir e a sustentar a população; o tema é restauração comunitária."
+      "title": "16–23: Responsabilidade e nome santo",
+      "text": "Violência e idolatria são denunciadas; a restauração manifesta a santidade de Deus."
     },
     {
-      "title": "16–21: A profanação do nome santo",
-      "text": "A infidelidade de Israel e seu exílio fizeram o nome do Senhor ser desprezado entre as nações."
+      "title": "24–32: Água, coração e Espírito",
+      "text": "Reunião dos dispersos e transformação interior levam à obediência e à vida."
     },
     {
-      "title": "22–32: Água pura, coração novo e espírito novo",
-      "text": "A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional."
-    },
-    {
-      "title": "33–38: Cidades reconstruídas e terra cultivada",
-      "text": "A renovação interna acompanha recuperação de lugares arruinados e crescimento da comunidade."
+      "title": "33–38: Ruínas reconstruídas",
+      "text": "Cidades e campos florescem, e a comunidade cresce novamente."
     }
   ],
-  "application": "Praticar justiça, fidelidade e esperança sem especulação sobre eventos atuais.",
+  "application": "Rejeitar violência e exploração dos vulneráveis; cuidar da terra e de comunidades feridas; buscar mudança de atitudes e práticas, não apenas aparência religiosa. Não usar o texto para culpar vítimas de desastres nem para prometer prosperidade material automática.",
   "crossReferences": [
-    "Ezequiel 11:19-20",
+    "Levítico 26:40-45",
+    "Salmo 51:10-12",
     "Jeremias 31:31-34",
+    "Ezequiel 11:19-20",
+    "Ezequiel 37:1-14",
     "João 3:5-8",
-    "Tito 3:5"
+    "Tito 3:5-6"
   ],
   "questions": [
-    "Qual é o papel de montes de israel e a vergonha das nações nos versículos 1–7?",
-    "Qual é o papel de terra habitável e povo reunido nos versículos 8–15?",
-    "Qual é o papel de a profanação do nome santo nos versículos 16–21?",
-    "Qual é o papel de água pura, coração novo e espírito novo nos versículos 22–32?",
-    "Qual é o papel de cidades reconstruídas e terra cultivada nos versículos 33–38?"
+    "Por que o oráculo começa falando aos montes?",
+    "Qual a relação entre violência, idolatria e exílio nos vv. 17–19?",
+    "Por que Deus enfatiza seu próprio nome nos vv. 21–23?",
+    "O que significam coração de pedra e coração de carne?",
+    "Como o Espírito se relaciona à obediência no v. 27?"
   ],
-  "conclusion": "Os montes restaurados e o coração novo deve ser interpretado no fluxo do livro de Ezequiel e com atenção ao gênero literário.",
+  "conclusion": "A restauração prometida em Ezequiel 36 alcança terra, comunidade e coração: Deus reúne, purifica e dá seu Espírito para formar um povo renovado.",
   "prayer": "Senhor, ensina-nos a viver com justiça e esperança. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — orientação para leitura versículo a versículo",
-      "body": "Leia Ezequiel 36:1–38 no texto bíblico disponível no aplicativo. **Os comentários abaixo são paráfrases explicativas autorais, não substituem o texto bíblico nem constituem tradução literal.**",
+      "body": "Leia Ezequiel 36:1–38 no texto bíblico do aplicativo. Os comentários por versículo apresentam **paráfrases livres autorais** e análise contextual, não transcrição de tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 36:1-38"
       ],
@@ -138,7 +137,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 36:1 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O profeta se dirige à terra devastada e denuncia a exploração de seus montes pelos vizinhos.\n\n**Leitura contextual do versículo 1:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **montes de israel e a vergonha das nações**. Leia o verso integral no texto bíblico e compare-o aos versos 1–7 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** O profeta é enviado a anunciar a palavra aos montes de Israel.\n\n**Exegese contextual:** A terra personificada como ouvinte mostra que a restauração envolve o espaço devastado e seus habitantes, não só experiências interiores.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:1"
       ],
@@ -148,7 +147,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 36:2 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O profeta se dirige à terra devastada e denuncia a exploração de seus montes pelos vizinhos.\n\n**Leitura contextual do versículo 2:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **montes de israel e a vergonha das nações**. Leia o verso integral no texto bíblico e compare-o aos versos 1–7 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Os inimigos comemoram ter tomado os antigos lugares altos.\n\n**Exegese contextual:** A provocação expressa apropriação oportunista após a catástrofe de Israel; os 'lugares altos' também evocam a história religiosa da terra.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:2"
       ],
@@ -158,7 +157,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 36:3 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O profeta se dirige à terra devastada e denuncia a exploração de seus montes pelos vizinhos.\n\n**Leitura contextual do versículo 3:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **montes de israel e a vergonha das nações**. Leia o verso integral no texto bíblico e compare-o aos versos 1–7 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** A devastação tornou a terra objeto de saque e difamação.\n\n**Exegese contextual:** O oráculo reconhece a violência material e a humilhação pública sofridas pela comunidade exilada.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:3"
       ],
@@ -168,7 +167,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 36:4 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O profeta se dirige à terra devastada e denuncia a exploração de seus montes pelos vizinhos.\n\n**Leitura contextual do versículo 4:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **montes de israel e a vergonha das nações**. Leia o verso integral no texto bíblico e compare-o aos versos 1–7 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Montes, vales, ruínas e cidades abandonadas recebem o anúncio.\n\n**Exegese contextual:** A enumeração amplia a promessa a toda a paisagem ferida e relembra a ocupação predatória dos vizinhos.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:4"
       ],
@@ -178,7 +177,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 36:5 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O profeta se dirige à terra devastada e denuncia a exploração de seus montes pelos vizinhos.\n\n**Leitura contextual do versículo 5:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **montes de israel e a vergonha das nações**. Leia o verso integral no texto bíblico e compare-o aos versos 1–7 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** O Senhor denuncia as nações e Edom por se alegrarem com a pilhagem.\n\n**Exegese contextual:** O juízo se dirige à exploração da vulnerabilidade alheia, em continuidade com Ezequiel 35.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:5"
       ],
@@ -188,7 +187,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 36:6 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O profeta se dirige à terra devastada e denuncia a exploração de seus montes pelos vizinhos.\n\n**Leitura contextual do versículo 6:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **montes de israel e a vergonha das nações**. Leia o verso integral no texto bíblico e compare-o aos versos 1–7 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Deus declara que viu a vergonha imposta à terra.\n\n**Exegese contextual:** A indignação divina responde à humilhação e à perda sofridas, sem justificar hostilidade a povos atuais.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:6"
       ],
@@ -198,7 +197,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 36:7 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** O profeta se dirige à terra devastada e denuncia a exploração de seus montes pelos vizinhos.\n\n**Leitura contextual do versículo 7:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **montes de israel e a vergonha das nações**. Leia o verso integral no texto bíblico e compare-o aos versos 1–7 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Os vizinhos que humilharam Israel enfrentarão sua própria vergonha.\n\n**Exegese contextual:** A reversão do escárnio expressa justiça no oráculo, não licença para vingança pessoal.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:7"
       ],
@@ -208,7 +207,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 36:8 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Os montes voltarão a produzir e a sustentar a população; o tema é restauração comunitária.\n\n**Leitura contextual do versículo 8:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terra habitável e povo reunido**. Leia o verso integral no texto bíblico e compare-o aos versos 8–15 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Os montes voltarão a produzir frutos para o povo que regressa.\n\n**Exegese contextual:** A fertilidade agrícola é sinal concreto de esperança e retorno após o exílio.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:8"
       ],
@@ -218,7 +217,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 36:9 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Os montes voltarão a produzir e a sustentar a população; o tema é restauração comunitária.\n\n**Leitura contextual do versículo 9:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terra habitável e povo reunido**. Leia o verso integral no texto bíblico e compare-o aos versos 8–15 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Deus se volta para a terra, que será cultivada e semeada.\n\n**Exegese contextual:** A restauração exige também trabalho e produção, não apenas um anúncio abstrato de bênção.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:9"
       ],
@@ -228,7 +227,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 36:10 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Os montes voltarão a produzir e a sustentar a população; o tema é restauração comunitária.\n\n**Leitura contextual do versículo 10:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terra habitável e povo reunido**. Leia o verso integral no texto bíblico e compare-o aos versos 8–15 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** A população aumentará, as cidades serão habitadas e as ruínas reconstruídas.\n\n**Exegese contextual:** O texto descreve reconstrução social e urbana como dimensão da promessa.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:10"
       ],
@@ -238,7 +237,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 36:11 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Os montes voltarão a produzir e a sustentar a população; o tema é restauração comunitária.\n\n**Leitura contextual do versículo 11:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terra habitável e povo reunido**. Leia o verso integral no texto bíblico e compare-o aos versos 8–15 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Pessoas e animais se multiplicarão, e a vida será renovada.\n\n**Exegese contextual:** A recuperação inclui rebanhos e prosperidade da terra, contrapondo-se à desolação.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:11"
       ],
@@ -248,7 +247,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 36:12 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Os montes voltarão a produzir e a sustentar a população; o tema é restauração comunitária.\n\n**Leitura contextual do versículo 12:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terra habitável e povo reunido**. Leia o verso integral no texto bíblico e compare-o aos versos 8–15 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Israel voltará a habitar a terra como sua herança.\n\n**Exegese contextual:** A linguagem de herança liga a restauração às promessas da aliança, no horizonte histórico do profeta.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:12"
       ],
@@ -258,7 +257,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 36:13 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Os montes voltarão a produzir e a sustentar a população; o tema é restauração comunitária.\n\n**Leitura contextual do versículo 13:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terra habitável e povo reunido**. Leia o verso integral no texto bíblico e compare-o aos versos 8–15 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** A terra é acusada de devorar seus próprios habitantes.\n\n**Exegese contextual:** A personificação retrata a reputação de uma região marcada por mortes, perdas e deslocamentos.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:13"
       ],
@@ -268,7 +267,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 36:14 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Os montes voltarão a produzir e a sustentar a população; o tema é restauração comunitária.\n\n**Leitura contextual do versículo 14:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terra habitável e povo reunido**. Leia o verso integral no texto bíblico e compare-o aos versos 8–15 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Deus promete que a terra não será mais associada à perda de filhos.\n\n**Exegese contextual:** A reversão responde à acusação anterior e anuncia segurança comunitária.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:14"
       ],
@@ -278,7 +277,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 36:15 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** Os montes voltarão a produzir e a sustentar a população; o tema é restauração comunitária.\n\n**Leitura contextual do versículo 15:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **terra habitável e povo reunido**. Leia o verso integral no texto bíblico e compare-o aos versos 8–15 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** O Senhor promete remover a humilhação imposta pelas nações.\n\n**Exegese contextual:** O fim do escárnio complementa a promessa de fecundidade e segurança.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:15"
       ],
@@ -288,7 +287,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 36:16 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A infidelidade de Israel e seu exílio fizeram o nome do Senhor ser desprezado entre as nações.\n\n**Leitura contextual do versículo 16:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **a profanação do nome santo**. Leia o verso integral no texto bíblico e compare-o aos versos 16–21 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Uma nova palavra do Senhor introduz a explicação do exílio.\n\n**Exegese contextual:** A mudança de oráculo passa da devastação da terra à responsabilidade moral do povo.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:16"
       ],
@@ -298,7 +297,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 36:17 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A infidelidade de Israel e seu exílio fizeram o nome do Senhor ser desprezado entre as nações.\n\n**Leitura contextual do versículo 17:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **a profanação do nome santo**. Leia o verso integral no texto bíblico e compare-o aos versos 16–21 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Israel contaminou a terra com suas práticas.\n\n**Exegese contextual:** A metáfora ritual de impureza expressa ruptura da aliança; a comparação antiga não deve ser usada para estigmatizar menstruação ou mulheres.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:17"
       ],
@@ -308,7 +307,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 36:18 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A infidelidade de Israel e seu exílio fizeram o nome do Senhor ser desprezado entre as nações.\n\n**Leitura contextual do versículo 18:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **a profanação do nome santo**. Leia o verso integral no texto bíblico e compare-o aos versos 16–21 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Sangue derramado e idolatria são citados como causas do juízo.\n\n**Exegese contextual:** A denúncia combina violência contra pessoas e infidelidade religiosa, mostrando que o problema não era apenas cerimonial.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:18"
       ],
@@ -318,7 +317,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 36:19 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A infidelidade de Israel e seu exílio fizeram o nome do Senhor ser desprezado entre as nações.\n\n**Leitura contextual do versículo 19:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **a profanação do nome santo**. Leia o verso integral no texto bíblico e compare-o aos versos 16–21 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** O povo foi disperso entre as nações segundo seus atos.\n\n**Exegese contextual:** A dispersão é interpretada teologicamente dentro da aliança; não se deve aplicar essa lógica automaticamente às vítimas de tragédias modernas.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:19"
       ],
@@ -328,7 +327,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 36:20 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A infidelidade de Israel e seu exílio fizeram o nome do Senhor ser desprezado entre as nações.\n\n**Leitura contextual do versículo 20:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **a profanação do nome santo**. Leia o verso integral no texto bíblico e compare-o aos versos 16–21 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** O exílio levou as nações a questionar o nome do Senhor.\n\n**Exegese contextual:** A reputação divina aparece vinculada à situação do povo, tema central do restante do capítulo.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:20"
       ],
@@ -338,7 +337,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 36:21 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A infidelidade de Israel e seu exílio fizeram o nome do Senhor ser desprezado entre as nações.\n\n**Leitura contextual do versículo 21:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **a profanação do nome santo**. Leia o verso integral no texto bíblico e compare-o aos versos 16–21 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Deus age por consideração ao seu nome santo.\n\n**Exegese contextual:** O foco se desloca do mérito humano para a fidelidade de Deus à sua própria santidade.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:21"
       ],
@@ -348,7 +347,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 36:22 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 22:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** A restauração não é apresentada como recompensa pela virtude de Israel.\n\n**Exegese contextual:** A afirmação impede uma leitura triunfalista e enfatiza a iniciativa divina.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:22"
       ],
@@ -358,7 +357,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 36:23 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 23:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** O Senhor promete santificar seu nome diante das nações.\n\n**Exegese contextual:** A transformação pública do povo deverá demonstrar quem Deus é, em contraste com a profanação anterior.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:23"
       ],
@@ -368,7 +367,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 36:24 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 24:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Deus reunirá os dispersos e os trará à sua terra.\n\n**Exegese contextual:** A promessa responde diretamente à experiência histórica do exílio e à perda de pertencimento.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:24"
       ],
@@ -378,7 +377,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 36:25 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 25:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Água pura simboliza purificação de impurezas e idolatria.\n\n**Exegese contextual:** A imagem de aspersão dialoga com ritos de purificação, mas aqui descreve renovação concedida por Deus.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:25"
       ],
@@ -388,7 +387,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 36:26 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 26:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Deus trocará o coração de pedra por um coração de carne.\n\n**Exegese contextual:** O contraste retrata passagem da insensibilidade à receptividade; não se trata de transformação anatômica.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:26"
       ],
@@ -398,7 +397,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 36:27 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 27:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** O Espírito divino capacitará o povo a praticar a vontade de Deus.\n\n**Exegese contextual:** A renovação interior tem consequência ética concreta: obedecer e agir com justiça.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:27"
       ],
@@ -408,7 +407,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 36:28 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 28:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** A promessa reúne terra, povo e aliança com Deus.\n\n**Exegese contextual:** A fórmula 'meu povo' e 'vosso Deus' retoma a relação de pertencimento da aliança.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:28"
       ],
@@ -418,7 +417,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Ezequiel 36:29 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 29:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Deus promete libertar da impureza e afastar a fome.\n\n**Exegese contextual:** Purificação e provisão material aparecem juntas, evitando separar vida espiritual e necessidades básicas.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:29"
       ],
@@ -428,7 +427,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Ezequiel 36:30 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 30:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Árvores e campos produzirão para que cesse a vergonha da fome.\n\n**Exegese contextual:** A restauração agrícola é descrita como resposta à escassez e à humilhação coletiva.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:30"
       ],
@@ -438,7 +437,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Ezequiel 36:31 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 31:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** O povo reconhecerá com pesar seus caminhos anteriores.\n\n**Exegese contextual:** A memória do erro acompanha a graça recebida; arrependimento não é apagamento da história.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:31"
       ],
@@ -448,7 +447,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-32",
       "title": "Ezequiel 36:32 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**Leitura contextual do versículo 32:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **água pura, coração novo e espírito novo**. Leia o verso integral no texto bíblico e compare-o aos versos 22–32 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** O Senhor repete que a restauração não decorre de mérito humano.\n\n**Exegese contextual:** A repetição combate a autossuficiência e convida a reconhecer a gravidade dos atos passados.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:32"
       ],
@@ -458,7 +457,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-33",
       "title": "Ezequiel 36:33 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A renovação interna acompanha recuperação de lugares arruinados e crescimento da comunidade.\n\n**Leitura contextual do versículo 33:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **cidades reconstruídas e terra cultivada**. Leia o verso integral no texto bíblico e compare-o aos versos 33–38 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** A purificação será acompanhada da reconstrução das cidades.\n\n**Exegese contextual:** O texto vincula transformação moral e restauração concreta da vida comunitária.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:33"
       ],
@@ -468,7 +467,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-34",
       "title": "Ezequiel 36:34 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A renovação interna acompanha recuperação de lugares arruinados e crescimento da comunidade.\n\n**Leitura contextual do versículo 34:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **cidades reconstruídas e terra cultivada**. Leia o verso integral no texto bíblico e compare-o aos versos 33–38 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** A terra devastada voltará a ser cultivada.\n\n**Exegese contextual:** O contraste entre abandono e lavoura reforça a dimensão pública e visível da esperança.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:34"
       ],
@@ -478,7 +477,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-35",
       "title": "Ezequiel 36:35 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A renovação interna acompanha recuperação de lugares arruinados e crescimento da comunidade.\n\n**Leitura contextual do versículo 35:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **cidades reconstruídas e terra cultivada**. Leia o verso integral no texto bíblico e compare-o aos versos 33–38 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** A terra restaurada será comparada ao jardim do Éden.\n\n**Exegese contextual:** A referência ao Éden é linguagem de renovação abundante, não declaração de retorno literal à geografia de Gênesis 2.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:35"
       ],
@@ -488,7 +487,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-36",
       "title": "Ezequiel 36:36 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A renovação interna acompanha recuperação de lugares arruinados e crescimento da comunidade.\n\n**Leitura contextual do versículo 36:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **cidades reconstruídas e terra cultivada**. Leia o verso integral no texto bíblico e compare-o aos versos 33–38 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** As nações reconhecerão o Senhor ao verem a reconstrução.\n\n**Exegese contextual:** A ação divina é descrita como criadora de vida onde havia ruínas e desolação.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:36"
       ],
@@ -498,7 +497,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-37",
       "title": "Ezequiel 36:37 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A renovação interna acompanha recuperação de lugares arruinados e crescimento da comunidade.\n\n**Leitura contextual do versículo 37:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **cidades reconstruídas e terra cultivada**. Leia o verso integral no texto bíblico e compare-o aos versos 33–38 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** Deus permitirá que o povo o busque enquanto promete multiplicá-lo.\n\n**Exegese contextual:** A oração comunitária participa da relação renovada com Deus; não é apresentada como mecanismo para obrigá-lo a agir.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:37"
       ],
@@ -508,7 +507,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "versiculo-38",
       "title": "Ezequiel 36:38 — guia de leitura versículo a versículo",
-      "body": "**Núcleo da unidade:** A renovação interna acompanha recuperação de lugares arruinados e crescimento da comunidade.\n\n**Leitura contextual do versículo 38:** Observe as imagens, personagens, ações ou medidas apresentados neste verso e como desenvolvem o movimento **cidades reconstruídas e terra cultivada**. Leia o verso integral no texto bíblico e compare-o aos versos 33–38 antes de tirar conclusões.\n\n**Pergunta de interpretação:** Que detalhe específico deste versículo reforça, qualifica ou contrasta o argumento da unidade?",
+      "body": "**Paráfrase livre autoral:** As cidades antes vazias ficarão cheias como rebanhos nas festas.\n\n**Exegese contextual:** A comparação com os rebanhos festivos de Jerusalém destaca abundância populacional e encerra o capítulo com reconhecimento do Senhor.\n\n**Pergunta interpretativa:** Como este versículo contribui para o movimento entre devastação, purificação e restauração?",
       "scriptureRefs": [
         "Ezequiel 36:38"
       ],
@@ -538,7 +537,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas comentadas",
-      "body": "**Ezequiel 11:19-20:** compare o tema e o gênero do texto antes de estabelecer correspondência.\n\n**Jeremias 31:31-34:** compare o tema e o gênero do texto antes de estabelecer correspondência.\n\n**João 3:5-8:** compare o tema e o gênero do texto antes de estabelecer correspondência.\n\n**Tito 3:5:** compare o tema e o gênero do texto antes de estabelecer correspondência.",
+      "body": "**Levítico 26:40–45:** memória da aliança após o juízo.\n\n**Salmo 51:10–12:** coração puro e Espírito.\n\n**Jeremias 31:31–34:** aliança e transformação interior.\n\n**Ezequiel 11:19–20:** promessa anterior de coração novo.\n\n**Ezequiel 37:1–14:** Espírito e restauração de Israel.\n\n**João 3:5–8:** nascimento da água e do Espírito.\n\n**Tito 3:5–6:** renovação pelo Espírito.",
       "scriptureRefs": [
         "Ezequiel 36:1-38"
       ],
@@ -548,7 +547,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo quando sustentada",
-      "body": "João 3:5–8 e Tito 3:5 podem ser lidos em diálogo cristão com a promessa de purificação e Espírito, preservando o primeiro horizonte de restauração de Israel.",
+      "body": "A leitura cristã encontra diálogo entre a promessa de água purificadora e Espírito em Ezequiel 36:25–27 e João 3:5–8 e Tito 3:5–6. Essa conexão não elimina a denúncia original de violência, idolatria e devastação nem autoriza promessas de riqueza automática.",
       "scriptureRefs": [
         "Ezequiel 36:1-38"
       ],
@@ -568,7 +567,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Qual é a ideia principal de Ezequiel 36:1–7?** O profeta se dirige à terra devastada e denuncia a exploração de seus montes pelos vizinhos.\n\n**2. Qual é a ideia principal de Ezequiel 36:8–15?** Os montes voltarão a produzir e a sustentar a população; o tema é restauração comunitária.\n\n**3. Qual é a ideia principal de Ezequiel 36:16–21?** A infidelidade de Israel e seu exílio fizeram o nome do Senhor ser desprezado entre as nações.\n\n**4. Qual é a ideia principal de Ezequiel 36:22–32?** A iniciativa divina purifica, transforma a disposição interior e concede o Espírito; a restauração não é mérito nacional.\n\n**5. Qual é a ideia principal de Ezequiel 36:33–38?** A renovação interna acompanha recuperação de lugares arruinados e crescimento da comunidade.",
+      "body": "**1. A quem é dirigida a primeira profecia?** Aos montes de Israel (36:1).\n\n**2. Que pecados são denunciados?** Derramamento de sangue e idolatria (36:18).\n\n**3. Por que Deus promete agir?** Por seu nome santo (36:22–23).\n\n**4. O que substitui o coração de pedra?** Um coração de carne (36:26).\n\n**5. Qual o efeito do Espírito?** Capacitar a viver segundo os mandamentos (36:27).",
       "scriptureRefs": [
         "Ezequiel 36:1-38"
       ],
@@ -578,7 +577,7 @@ export const ezekiel36Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador",
-      "body": "**Tema:** Os montes restaurados e o coração novo.\n\n**Proposição:** A visão de Ezequiel deve ser ensinada respeitando seu contexto e suas imagens.\n\n**Esboço:** (1) Montes de Israel e a vergonha das nações (1–7); (2) Terra habitável e povo reunido (8–15); (3) A profanação do nome santo (16–21); (4) Água pura, coração novo e espírito novo (22–32); (5) Cidades reconstruídas e terra cultivada (33–38).\n\n**Cuidado:** não substituir a leitura dos versículos por especulações, nem usar imagens de juízo para justificar hostilidade.",
+      "body": "**Tema:** Da terra arruinada ao coração renovado.\n\n**Proposição:** Deus restaura seu povo por graça e o capacita a viver de modo diferente.\n\n**Esboço:** (1) ruínas e vergonha (1–15); (2) responsabilidade e santidade divina (16–23); (3) coração novo e Espírito (24–32); (4) vida reconstruída (33–38).\n\n**Cuidados:** não culpabilizar vítimas de sofrimento, não usar a metáfora do v. 17 para estigma e não reduzir a promessa do Espírito a emoção sem transformação ética.",
       "scriptureRefs": [
         "Ezequiel 36:1-38"
       ],
