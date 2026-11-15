@@ -1,52 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 23 — paráfrase livre autoral; conteúdo sensível; revisão humana pendente. */
+/** Ezequiel 23 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel23Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 23 compara Samaria e Jerusalém a duas irmãs, em alegoria explícita de idolatria e alianças imperiais.",
-  "historicalContext": "Oráculo sobre os reinos de Israel e Judá, com referência às potências Assíria, Egito e Babilônia e à crise do exílio.",
+  "intro": "Ezequiel 23 usa a alegoria explícita de duas irmãs, Oolá (Samaria) e Oolibá (Jerusalém), para denunciar alianças imperiais, idolatria e violência. A linguagem sexualizada e as cenas de punição são perturbadoras e exigem contextualização histórica, cuidado pastoral e rejeição de qualquer legitimação de abuso.",
+  "historicalContext": "Oolá representa Samaria, capital do reino do norte conquistado pela Assíria no século VIII a.C.; Oolibá representa Jerusalém, cuja crise culminou na conquista babilônica no século VI a.C. O texto combina memória do Egito, relações com Assíria e Babilônia e crítica a práticas cultuais violentas. Trata-se de alegoria profética, não descrição de mulheres individuais.",
   "keyPoints": [
     {
       "title": "1–10: Oolá e a Assíria",
-      "text": "Samaria é representada como irmã que busca a Assíria e sofre sua dominação."
+      "text": "Samaria é figurada em alianças que culminam na conquista assíria."
     },
     {
-      "title": "11–21: Oolibá e o fascínio imperial",
-      "text": "Jerusalém repete o padrão com Assíria, Babilônia e memória do Egito."
+      "title": "11–21: Oolibá repete o caminho",
+      "text": "Jerusalém busca Assíria, Babilônia e Egito, apesar do destino da irmã."
     },
     {
-      "title": "22–35: A reversão das alianças",
-      "text": "Antigos aliados se tornam atacantes; o poema utiliza imagens explícitas de humilhação."
+      "title": "22–35: O cálice do juízo",
+      "text": "Os antigos parceiros se tornam invasores, numa descrição severa de derrota."
     },
     {
-      "title": "36–49: Violência, culto e sentença",
-      "text": "A denúncia torna explícitos idolatria, derramamento de sangue e sacrifício de crianças."
+      "title": "36–49: Idolatria e sangue",
+      "text": "A acusação final explicita sacrifício de crianças, profanação do santuário e violência."
     }
   ],
-  "application": "Proteger vulneráveis, rejeitar violência religiosa e examinar alianças políticas e práticas de culto com integridade.",
+  "application": "Reconhecer a crítica a alianças políticas e cultos que encobrem violência. Não usar a alegoria para culpar vítimas de abuso, humilhar mulheres ou justificar coerção sexual. Distinguir os alvos históricos — Samaria e Jerusalém — de pessoas e comunidades atuais.",
   "crossReferences": [
-    "2 Reis 17:1-18",
-    "2 Reis 24:10-20",
-    "2 Reis 25:1-12",
+    "2 Reis 17:1-23",
+    "2 Reis 24:10-17",
     "Jeremias 3:6-11",
-    "Jeremias 7:31",
     "Ezequiel 16:1-63",
-    "Marcos 10:13-16"
+    "Ezequiel 22:1-12",
+    "Oséias 2:2-13"
   ],
   "questions": [
-    "Quem são as irmãs?",
-    "Como a alegoria relaciona alianças e idolatria?",
-    "Que violência concreta é denunciada?",
-    "Quais limites éticos devem orientar a leitura?"
+    "Quem são Oolá e Oolibá?",
+    "Qual a relação entre alianças imperiais e idolatria no capítulo?",
+    "Por que Jerusalém é responsabilizada por não aprender com Samaria?",
+    "Quais violências concretas são denunciadas nos versículos 37–39?",
+    "Que limites éticos devem orientar a pregação dessa alegoria?"
   ],
-  "conclusion": "A alegoria denuncia idolatria, violência e falsa segurança imperial, exigindo interpretação histórica e cuidado pastoral.",
+  "conclusion": "O capítulo confronta a dependência de impérios, a idolatria e a violência contra inocentes por meio de imagens difíceis. Sua interpretação responsável preserva o contexto histórico e recusa qualquer uso do texto para legitimar abuso.",
   "prayer": "Senhor, faz-nos viver com justiça e proteger os que sofrem. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 23:1–49 (paráfrase livre autoral)",
-      "body": "**Paráfrase livre autoral para estudo; não é tradução bíblica oficial. Aviso de conteúdo: linguagem sexual explícita, abuso, mutilação e violência contra crianças.**\n\n**1.** A palavra divina abre um novo oráculo.\n\n**2.** Duas irmãs de uma mesma mãe entram na narrativa.\n\n**3.** O poema situa no Egito a origem figurada da infidelidade.\n\n**4.** As irmãs recebem nomes: Oolá, Samaria, e Oolibá, Jerusalém.\n\n**5.** Oolá busca alianças com a Assíria.\n\n**6.** A pompa dos oficiais assírios é destacada.\n\n**7.** Oolá se associa aos assírios e aos seus ídolos.\n\n**8.** O passado egípcio reaparece na descrição de Oolá.\n\n**9.** A Assíria torna-se instrumento da queda de Samaria.\n\n**10.** Oolá sofre invasão, perda de filhos e morte.\n\n**11.** Oolibá observa o destino da irmã e repete a conduta.\n\n**12.** Jerusalém também admira o poder assírio.\n\n**13.** As duas irmãs seguem um caminho semelhante.\n\n**14.** Oolibá se fascina por imagens de oficiais caldeus.\n\n**15.** Os oficiais retratados usam roupas e adornos de poder.\n\n**16.** Mensageiros são enviados à Caldeia.\n\n**17.** A aproximação babilônica termina em repulsa.\n\n**18.** A exposição pública da infidelidade intensifica a ruptura.\n\n**19.** Oolibá retoma a memória do Egito.\n\n**20.** O desejo é descrito por comparação sexual animalizada.\n\n**21.** A lembrança do Egito encerra essa seção.\n\n**22.** Aqueles antigos aliados são anunciados como adversários.\n\n**23.** Babilônios e outros grupos são nomeados entre os atacantes.\n\n**24.** Carros, armas e tropas cercam a cidade.\n\n**25.** O poema descreve mutilação e morte.\n\n**26.** Roupas e joias são retiradas à força.\n\n**27.** O fim da dependência do Egito é anunciado.\n\n**28.** A cidade será entregue a aliados de quem passou a desconfiar.\n\n**29.** Saque e nudez retratam a devastação de Jerusalém.\n\n**30.** O texto atribui a crise à idolatria e à busca de potências.\n\n**31.** Jerusalém recebe o mesmo cálice de Samaria.\n\n**32.** O cálice é apresentado como amplo e profundo.\n\n**33.** Embriaguez e dor expressam a experiência do juízo.\n\n**34.** O cálice é esvaziado em imagem de desespero corporal.\n\n**35.** O esquecimento do Senhor é indicado como raiz da infidelidade.\n\n**36.** O profeta recebe ordem de denunciar ambas as cidades.\n\n**37.** Idolatria e derramamento de sangue são associados ao sacrifício de crianças.\n\n**38.** O santuário e os sábados também são profanados.\n\n**39.** O sacrifício infantil é colocado lado a lado com a ida ao santuário.\n\n**40.** Mensageiros e adornos retomam a cena de aproximação a estrangeiros.\n\n**41.** Leito e mesa luxuosos representam preparação para a aliança.\n\n**42.** Uma multidão aparece na cena de festa.\n\n**43.** A fala profética questiona a persistência da infidelidade.\n\n**44.** Os visitantes são descritos na metáfora sexual.\n\n**45.** A sentença menciona adultério e derramamento de sangue.\n\n**46.** Uma multidão é anunciada como instrumento de saque.\n\n**47.** Apedrejamento, espada e incêndio aparecem no anúncio.\n\n**48.** O fim da infidelidade é formulado como advertência às demais.\n\n**49.** A conclusão associa a consequência à idolatria e ao reconhecimento do Senhor.",
+      "body": "Leia Ezequiel 23:1–49 no texto bíblico do aplicativo. **Aviso de conteúdo:** o capítulo emprega linguagem sexual explícita e imagens de violência, inclusive contra crianças. As notas apresentam **paráfrases livres autorais**, não tradução oficial.",
       "scriptureRefs": [
         "Ezequiel 23:1-49"
       ],
@@ -128,7 +128,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 23:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A palavra divina abre um novo oráculo.\n\n**Exegese contextual:** A fórmula introduz uma alegoria extensa, não um relato biográfico.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** O Senhor dirige outra palavra a Ezequiel.\n\n**Exegese contextual:** A fórmula abre uma extensa alegoria política e religiosa sobre dois reinos israelitas.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:1"
       ],
@@ -138,7 +138,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 23:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Duas irmãs de uma mesma mãe entram na narrativa.\n\n**Exegese contextual:** As personagens simbolizam comunidades políticas relacionadas.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Duas irmãs de uma mesma mãe são apresentadas.\n\n**Exegese contextual:** A origem compartilhada prepara a comparação entre Samaria e Jerusalém.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:2"
       ],
@@ -148,7 +148,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 23:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O poema situa no Egito a origem figurada da infidelidade.\n\n**Exegese contextual:** A linguagem sexual explícita funciona como metáfora acusatória e exige cuidado com leitores.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** As irmãs são descritas com linguagem sexual explícita ligada ao Egito.\n\n**Exegese contextual:** A imagem remete à origem histórica de Israel no Egito; seu caráter degradante requer leitura crítica e sensível.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:3"
       ],
@@ -158,7 +158,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 23:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As irmãs recebem nomes: Oolá, Samaria, e Oolibá, Jerusalém.\n\n**Exegese contextual:** O próprio verso identifica os referentes e impede alegorizações arbitrárias.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Oolá representa Samaria e Oolibá representa Jerusalém.\n\n**Exegese contextual:** A identificação explícita impede interpretar as personagens como mulheres individuais.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:4"
       ],
@@ -168,7 +168,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 23:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Oolá busca alianças com a Assíria.\n\n**Exegese contextual:** A metáfora de infidelidade mistura dependência política e idolatria.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Oolá busca os assírios como amantes.\n\n**Exegese contextual:** A relação figura alianças políticas e infidelidade cultual do reino do norte.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:5"
       ],
@@ -178,7 +178,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 23:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A pompa dos oficiais assírios é destacada.\n\n**Exegese contextual:** A descrição do poder militar ajuda a explicar o fascínio da aliança.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A elite militar assíria aparece em vestes e cavalos luxuosos.\n\n**Exegese contextual:** O retrato enfatiza o fascínio pelo poder imperial e sua aparência prestigiosa.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:6"
       ],
@@ -188,7 +188,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 23:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Oolá se associa aos assírios e aos seus ídolos.\n\n**Exegese contextual:** A crítica não é a relações internacionais em abstrato, mas a compromissos que comprometem a fidelidade religiosa.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Oolá se envolve com assírios e seus ídolos.\n\n**Exegese contextual:** O texto associa dependência política à assimilação religiosa.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:7"
       ],
@@ -198,7 +198,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 23:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O passado egípcio reaparece na descrição de Oolá.\n\n**Exegese contextual:** O poema repete a acusação para mostrar continuidade do padrão.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A alegoria retoma as relações com o Egito desde a juventude.\n\n**Exegese contextual:** O Egito funciona como memória de dependências anteriores, não como retrato de pessoas atuais.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:8"
       ],
@@ -208,7 +208,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 23:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A Assíria torna-se instrumento da queda de Samaria.\n\n**Exegese contextual:** A aliança procurada não oferece segurança duradoura.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Oolá é entregue à potência assíria que admirava.\n\n**Exegese contextual:** O agente de sua dependência torna-se instrumento de sua derrota.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:9"
       ],
@@ -218,7 +218,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 23:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Oolá sofre invasão, perda de filhos e morte.\n\n**Exegese contextual:** A violência narrada não constitui autorização para humilhação sexual ou agressão contemporânea.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A Assíria destrói a cidade e leva seus filhos.\n\n**Exegese contextual:** A descrição corresponde à queda do reino do norte e ao trauma de conquista e deportação.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:10"
       ],
@@ -228,7 +228,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 23:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Oolibá observa o destino da irmã e repete a conduta.\n\n**Exegese contextual:** O paralelo intensifica a responsabilidade de Jerusalém diante do exemplo histórico.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Oolibá observa o destino da irmã, mas repete seus erros.\n\n**Exegese contextual:** Jerusalém é acusada de não aprender com a história de Samaria.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:11"
       ],
@@ -238,7 +238,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 23:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Jerusalém também admira o poder assírio.\n\n**Exegese contextual:** A linguagem de desejo retrata dependência e sedução imperial.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Oolibá também admira oficiais e cavaleiros assírios.\n\n**Exegese contextual:** A repetição mostra que Judá buscou segurança nos mesmos centros imperiais.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:12"
       ],
@@ -248,7 +248,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 23:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As duas irmãs seguem um caminho semelhante.\n\n**Exegese contextual:** A comparação aproxima os destinos de Samaria e Jerusalém.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** O profeta declara que ambas seguem o mesmo caminho.\n\n**Exegese contextual:** A comparação aproxima os dois reinos em sua infidelidade.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:13"
       ],
@@ -258,7 +258,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 23:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Oolibá se fascina por imagens de oficiais caldeus.\n\n**Exegese contextual:** A iconografia evoca o prestígio militar e político da Babilônia.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Jerusalém passa a desejar figuras caldeias pintadas.\n\n**Exegese contextual:** A imagem visualiza o fascínio por Babilônia antes mesmo do contato direto.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:14"
       ],
@@ -268,7 +268,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 23:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os oficiais retratados usam roupas e adornos de poder.\n\n**Exegese contextual:** A descrição serve à crítica da idealização do império.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** As roupas e turbantes distinguem os oficiais babilônicos.\n\n**Exegese contextual:** Os detalhes enfatizam o prestígio militar que atrai Jerusalém.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:15"
       ],
@@ -278,7 +278,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 23:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Mensageiros são enviados à Caldeia.\n\n**Exegese contextual:** A imagem sexual representa aproximação diplomática concreta.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Oolibá envia mensageiros à Caldeia.\n\n**Exegese contextual:** A ação representa iniciativa diplomática de aproximação com Babilônia.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:16"
       ],
@@ -288,7 +288,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 23:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A aproximação babilônica termina em repulsa.\n\n**Exegese contextual:** A instabilidade da aliança é parte do argumento profético.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Os babilônios chegam, mas a relação termina em repulsa.\n\n**Exegese contextual:** A oscilação entre aproximação e rejeição sugere instabilidade nas alianças.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:17"
       ],
@@ -298,7 +298,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 23:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A exposição pública da infidelidade intensifica a ruptura.\n\n**Exegese contextual:** O poema usa linguagem de vergonha, cuja violência retórica deve ser reconhecida.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A exposição da infidelidade leva à rejeição da personagem.\n\n**Exegese contextual:** A linguagem emocional intensifica o juízo dentro da alegoria.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:18"
       ],
@@ -308,7 +308,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 23:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Oolibá retoma a memória do Egito.\n\n**Exegese contextual:** O motivo de uma origem antiga de infidelidade é repetido.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Oolibá volta à memória de suas antigas relações com o Egito.\n\n**Exegese contextual:** O texto conecta escolhas recentes à persistência de dependências anteriores.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:19"
       ],
@@ -318,7 +318,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 23:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O desejo é descrito por comparação sexual animalizada.\n\n**Exegese contextual:** Trata-se de imagem deliberadamente chocante; não se deve reproduzi-la como modelo de fala pastoral.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Uma comparação sexual animalizada descreve seus parceiros.\n\n**Exegese contextual:** A hipérbole explícita é retórica de vergonha; não deve ser reproduzida como linguagem aceitável contra mulheres.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:20"
       ],
@@ -328,7 +328,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 23:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A lembrança do Egito encerra essa seção.\n\n**Exegese contextual:** O texto associa alianças atuais a uma memória teológica da história.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A lembrança da juventude egípcia reaparece.\n\n**Exegese contextual:** A repetição acusa um padrão duradouro de dependência e infidelidade.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:21"
       ],
@@ -338,7 +338,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 23:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Aqueles antigos aliados são anunciados como adversários.\n\n**Exegese contextual:** A reversão da aliança é elemento central do julgamento.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Antigos parceiros rejeitados são anunciados como inimigos.\n\n**Exegese contextual:** O oráculo inverte a aliança política em ameaça militar.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:22"
       ],
@@ -348,7 +348,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 23:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Babilônios e outros grupos são nomeados entre os atacantes.\n\n**Exegese contextual:** A lista apresenta o alcance político-militar do cerco.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Babilônios, caldeus e aliados são enumerados.\n\n**Exegese contextual:** Os nomes designam forças do horizonte imperial; algumas identificações antigas são debatidas.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:23"
       ],
@@ -358,7 +358,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 23:24 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Carros, armas e tropas cercam a cidade.\n\n**Exegese contextual:** O quadro traduz a ameaça de guerra em linguagem concreta.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Carros, tropas e escudos cercarão Jerusalém.\n\n**Exegese contextual:** A descrição evoca o aparato de guerra e julgamento dos conquistadores.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:24"
       ],
@@ -368,7 +368,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 23:25 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O poema descreve mutilação e morte.\n\n**Exegese contextual:** A imagem de violência extrema deve ser lida criticamente, sem normalizar violência contra mulheres.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** O texto descreve mutilação, morte e perda dos filhos.\n\n**Exegese contextual:** É uma imagem de violência extrema no juízo profético, nunca justificativa para abuso ou violência sexual.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:25"
       ],
@@ -378,7 +378,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 23:26 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Roupas e joias são retiradas à força.\n\n**Exegese contextual:** A exposição da vítima funciona como imagem de derrota e humilhação pública.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Vestes e joias serão tomadas.\n\n**Exegese contextual:** A retirada dos adornos simboliza humilhação e saque da cidade.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:26"
       ],
@@ -388,7 +388,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 23:27 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O fim da dependência do Egito é anunciado.\n\n**Exegese contextual:** O objetivo declarado da metáfora é romper o padrão de infidelidade.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A dependência antiga do Egito será interrompida.\n\n**Exegese contextual:** O juízo é apresentado como ruptura forçada com um padrão de alianças.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:27"
       ],
@@ -398,7 +398,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 23:28 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A cidade será entregue a aliados de quem passou a desconfiar.\n\n**Exegese contextual:** A reversão revela a fragilidade de acordos imperiais.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Jerusalém é entregue aos parceiros que passou a odiar.\n\n**Exegese contextual:** A ironia trágica denuncia a fragilidade das estratégias políticas.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:28"
       ],
@@ -408,7 +408,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Ezequiel 23:29 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Saque e nudez retratam a devastação de Jerusalém.\n\n**Exegese contextual:** A linguagem humilhante é parte da retórica profética, não prescrição de tratamento de pessoas.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** O saque deixa a cidade despojada.\n\n**Exegese contextual:** A nudez na alegoria representa exposição pública e perda de recursos, em linguagem problemática.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:29"
       ],
@@ -418,7 +418,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Ezequiel 23:30 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O texto atribui a crise à idolatria e à busca de potências.\n\n**Exegese contextual:** A acusação pertence à interpretação profética da história de Judá.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A denúncia explicita alianças com nações e seus ídolos.\n\n**Exegese contextual:** O texto liga as metáforas sexuais à infidelidade religiosa e política.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:30"
       ],
@@ -428,7 +428,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Ezequiel 23:31 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Jerusalém recebe o mesmo cálice de Samaria.\n\n**Exegese contextual:** O cálice simboliza compartilhar o destino de derrota da irmã.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Jerusalém recebe o cálice de Samaria.\n\n**Exegese contextual:** O destino da irmã funciona como advertência histórica ignorada.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:31"
       ],
@@ -438,7 +438,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-32",
       "title": "Ezequiel 23:32 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O cálice é apresentado como amplo e profundo.\n\n**Exegese contextual:** A imagem enfatiza a dimensão do desastre.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** O cálice é descrito como grande e motivo de escárnio.\n\n**Exegese contextual:** A imagem de beber o cálice exprime a extensão do desastre.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:32"
       ],
@@ -448,7 +448,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-33",
       "title": "Ezequiel 23:33 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Embriaguez e dor expressam a experiência do juízo.\n\n**Exegese contextual:** O cálice não descreve consumo ritual, mas sofrimento figurado.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** O cálice de Samaria contém pavor e desolação.\n\n**Exegese contextual:** A comparação reforça a gravidade do juízo anunciado a Jerusalém.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:33"
       ],
@@ -458,7 +458,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-34",
       "title": "Ezequiel 23:34 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O cálice é esvaziado em imagem de desespero corporal.\n\n**Exegese contextual:** A retórica gráfica exige cuidado com pessoas que sofreram abuso.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A personagem esvazia o cálice em imagens de autodestruição.\n\n**Exegese contextual:** A hipérbole violenta comunica desespero e não deve ser usada para normalizar automutilação.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:34"
       ],
@@ -468,7 +468,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-35",
       "title": "Ezequiel 23:35 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O esquecimento do Senhor é indicado como raiz da infidelidade.\n\n**Exegese contextual:** A conclusão teológica não autoriza culpar vítimas reais de violência.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Esquecer o Senhor é apresentado como raiz da infidelidade.\n\n**Exegese contextual:** A acusação final dessa unidade conecta os atos descritos ao abandono da aliança.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:35"
       ],
@@ -478,7 +478,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-36",
       "title": "Ezequiel 23:36 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta recebe ordem de denunciar ambas as cidades.\n\n**Exegese contextual:** A alegoria é retomada em forma de acusação explícita.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Ezequiel recebe ordem de denunciar as duas cidades.\n\n**Exegese contextual:** A nova seção torna explícita a finalidade acusatória da alegoria.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:36"
       ],
@@ -488,7 +488,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-37",
       "title": "Ezequiel 23:37 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Idolatria e derramamento de sangue são associados ao sacrifício de crianças.\n\n**Exegese contextual:** O texto condena a violência contra crianças de modo direto.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A idolatria é associada a sangue e sacrifício de filhos.\n\n**Exegese contextual:** A denúncia de violência contra crianças desloca o foco da metáfora para injustiças concretas.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:37"
       ],
@@ -498,7 +498,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-38",
       "title": "Ezequiel 23:38 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O santuário e os sábados também são profanados.\n\n**Exegese contextual:** A crítica inclui culto e ética, não apenas política externa.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Santuário e sábados foram profanados.\n\n**Exegese contextual:** A crítica aponta a contradição entre práticas religiosas e conduta violenta.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:38"
       ],
@@ -508,7 +508,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-39",
       "title": "Ezequiel 23:39 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O sacrifício infantil é colocado lado a lado com a ida ao santuário.\n\n**Exegese contextual:** A justaposição denuncia a contradição entre devoção e crueldade.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Sacrifícios de crianças e culto no santuário aparecem no mesmo dia.\n\n**Exegese contextual:** O contraste denuncia a incompatibilidade entre culto e exploração extrema.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:39"
       ],
@@ -518,7 +518,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-40",
       "title": "Ezequiel 23:40 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Mensageiros e adornos retomam a cena de aproximação a estrangeiros.\n\n**Exegese contextual:** A imagem de sedução é aplicada à diplomacia e idolatria.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Mensageiros chamam parceiros distantes; a personagem se adorna.\n\n**Exegese contextual:** A cena retoma a busca deliberada por alianças estrangeiras.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:40"
       ],
@@ -528,7 +528,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-41",
       "title": "Ezequiel 23:41 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Leito e mesa luxuosos representam preparação para a aliança.\n\n**Exegese contextual:** O uso de objetos de culto acentua a mistura religiosa denunciada.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Leito, mesa, perfume e óleo compõem uma cena de luxo.\n\n**Exegese contextual:** O uso de bens ligados ao culto na alegoria reforça a acusação de profanação.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:41"
       ],
@@ -538,7 +538,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-42",
       "title": "Ezequiel 23:42 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma multidão aparece na cena de festa.\n\n**Exegese contextual:** O poema amplia a imagem de alianças e participantes.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Uma multidão chega e recebe ornamentos.\n\n**Exegese contextual:** A imagem mostra a ampliação pública da relação com aliados estrangeiros.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:42"
       ],
@@ -548,7 +548,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-43",
       "title": "Ezequiel 23:43 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A fala profética questiona a persistência da infidelidade.\n\n**Exegese contextual:** A imagem de idade reforça a longa duração do padrão.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A personagem é descrita como envelhecida em infidelidade.\n\n**Exegese contextual:** A expressão intensifica o desprezo retórico; o alvo histórico continua sendo a cidade.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:43"
       ],
@@ -558,7 +558,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-44",
       "title": "Ezequiel 23:44 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os visitantes são descritos na metáfora sexual.\n\n**Exegese contextual:** O texto mantém sua linguagem alegórica até a acusação final.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A comparação com prostituição é repetida para as duas irmãs.\n\n**Exegese contextual:** O uso de sexualidade como insulto pertence à retórica antiga e exige contextualização ética.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:44"
       ],
@@ -568,7 +568,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-45",
       "title": "Ezequiel 23:45 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A sentença menciona adultério e derramamento de sangue.\n\n**Exegese contextual:** A dimensão de violência concreta impede reduzir tudo a metáfora sexual.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** O julgamento é formulado com linguagem legal sobre adultério e sangue.\n\n**Exegese contextual:** A acusação une idolatria e derramamento de sangue, sem legitimar punições violentas hoje.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:45"
       ],
@@ -578,7 +578,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-46",
       "title": "Ezequiel 23:46 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma multidão é anunciada como instrumento de saque.\n\n**Exegese contextual:** O texto descreve catástrofe coletiva em linguagem judicial.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Uma multidão é convocada para aterrorizar e saquear.\n\n**Exegese contextual:** A cena representa a invasão e o colapso político das cidades.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:46"
       ],
@@ -588,7 +588,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-47",
       "title": "Ezequiel 23:47 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Apedrejamento, espada e incêndio aparecem no anúncio.\n\n**Exegese contextual:** Essas imagens não autorizam castigos corporais ou ataques a mulheres.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** Apedrejamento, espada e incêndio são anunciados.\n\n**Exegese contextual:** A violência descrita pertence ao quadro profético de juízo e não é instrução de execução.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:47"
       ],
@@ -598,7 +598,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-48",
       "title": "Ezequiel 23:48 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O fim da infidelidade é formulado como advertência às demais.\n\n**Exegese contextual:** A generalização sobre mulheres pertence à retórica da alegoria, não a uma regra sobre gênero.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** O texto afirma que a punição servirá de advertência.\n\n**Exegese contextual:** A formulação dirigida a 'todas as mulheres' requer cuidado para não reforçar culpabilização de mulheres reais.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:48"
       ],
@@ -608,7 +608,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "versiculo-49",
       "title": "Ezequiel 23:49 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A conclusão associa a consequência à idolatria e ao reconhecimento do Senhor.\n\n**Exegese contextual:** O capítulo termina reafirmando a mensagem profética de responsabilidade histórica.\n\n**Cuidado hermenêutico:** A linguagem de vergonha sexual do poema não deve ser aplicada a vítimas de abuso nem servir de justificativa para violência.",
+      "body": "**Paráfrase livre autoral:** A culpa pelos ídolos conclui o oráculo.\n\n**Exegese contextual:** O fechamento retoma o reconhecimento do Senhor e a responsabilidade das cidades personificadas.\n\n**Pergunta interpretativa:** Que crítica histórica ou religiosa esta imagem comunica, e quais cuidados éticos exige sua leitura?",
       "scriptureRefs": [
         "Ezequiel 23:49"
       ],
@@ -658,7 +658,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas",
-      "body": "Há debate sobre a relação entre metáfora conjugal e política imperial, sobre a origem de algumas imagens sexuais e sobre o alcance da sentença final. O texto pode ser estudado criticamente sem tratar a violência figurada como ideal moral. Não há base para equiparar mulheres reais às cidades personificadas.",
+      "body": "**Quem são as irmãs?** O texto identifica Oolá com Samaria e Oolibá com Jerusalém (v. 4).\n\n**Sexualidade como metáfora:** a alegoria associa relações com impérios à infidelidade cultual. Sua linguagem degradante deve ser explicada, não replicada como modelo de tratamento de mulheres.\n\n**Violência no juízo:** mutilação, saque e apedrejamento aparecem na retórica profética, mas não autorizam abuso, violência doméstica ou punição contemporânea.\n\n**Sacrifício de crianças:** vv. 37–39 denunciam uma prática concreta e grave, não apenas uma metáfora sexual.",
       "scriptureRefs": [
         "Ezequiel 23:1-49"
       ],
@@ -668,7 +668,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**2 Reis 17:1–18:** queda de Samaria. **2 Reis 24:10–20:** crise de Jerusalém e Babilônia. **Jeremias 3:6–11:** comparação entre Israel e Judá por linguagem conjugal. **Ezequiel 16:** alegoria semelhante, com imagens igualmente difíceis. **Jeremias 7:31:** condenação do sacrifício infantil.",
+      "body": "**2 Reis 17:1–23:** queda de Samaria e conquista assíria.\n\n**2 Reis 24:10–17:** deportação de Jerusalém sob Babilônia.\n\n**Jeremias 3:6–11:** comparação entre Israel e Judá.\n\n**Ezequiel 16:** outra alegoria matrimonial de Jerusalém.\n\n**Ezequiel 22:1–12:** acusações de sangue e injustiça.\n\n**Oséias 2:2–13:** metáfora conjugal em crítica profética.",
       "scriptureRefs": [
         "Ezequiel 23:1-49"
       ],
@@ -678,7 +678,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria forçada",
-      "body": "O ensino de Jesus sobre misericórdia e cuidado com os vulneráveis (Mateus 9:13; Marcos 10:13–16) pode orientar uma leitura cristã que recuse a violência. Ezequiel 23, porém, não oferece identificação direta de suas personagens com Cristo ou com pessoas contemporâneas.",
+      "body": "A leitura cristã pode contrastar a violência e a infidelidade denunciadas com o ensino de Jesus sobre misericórdia, fidelidade e proteção dos vulneráveis (Mateus 9:13; 18:6). A aplicação não deve converter a alegoria em culpabilização de mulheres ou vítimas.",
       "scriptureRefs": [
         "Ezequiel 23:1-49"
       ],
@@ -698,7 +698,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Quem são Oolá e Oolibá?** Samaria e Jerusalém (v. 4).\n\n**2. Qual potência aparece na primeira história?** Assíria (vv. 5–10).\n\n**3. Qual é a acusação explícita dos vv. 37–39?** Idolatria, sangue e sacrifício de crianças, junto à profanação do santuário.\n\n**4. O texto autoriza violência sexual?** Não; descreve uma alegoria profética que não deve ser convertida em norma de conduta.\n\n**5. Qual cuidado é necessário no ensino?** Avisar sobre conteúdo gráfico e proteger sobreviventes de abuso.",
+      "body": "**1. Quem são Oolá e Oolibá?** Samaria e Jerusalém (23:4).\n\n**2. Qual potência se liga à queda de Oolá?** Assíria (23:5–10).\n\n**3. Que potências aparecem nas escolhas de Oolibá?** Assíria, Babilônia e Egito (23:12–21).\n\n**4. Que violências concretas são denunciadas?** Derramamento de sangue e sacrifício de filhos (23:37–39).\n\n**5. Que cuidado é essencial?** Não usar metáforas sexualizadas de juízo para justificar violência contra mulheres ou vítimas.",
       "scriptureRefs": [
         "Ezequiel 23:1-49"
       ],
@@ -708,7 +708,7 @@ export const ezekiel23Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — culto e proteção da vida",
-      "body": "**Tema:** A fidelidade não pode coexistir com a violência contra vulneráveis.\n\n**Proposição:** A alegoria confronta a idolatria e as alianças destrutivas, mas deve ser ensinada sem legitimar suas imagens de humilhação como prática moral.\n\n**Esboço:** (1) Samaria (1–10); (2) Jerusalém (11–35); (3) sangue, idolatria e culto (36–49).\n\n**Cuidado pastoral:** anunciar previamente o teor sexual e violento, não reproduzir detalhes desnecessários e não culpar vítimas.",
+      "body": "**Tema:** A infidelidade política e religiosa que produz violência.\n\n**Proposição:** Alianças sem discernimento e cultos que toleram sangue inocente conduzem à ruína.\n\n**Esboço:** (1) Samaria e Assíria (1–10); (2) Jerusalém e as alianças (11–21); (3) o cálice da derrota (22–35); (4) idolatria, sangue e responsabilidade (36–49).\n\n**Cuidados:** anunciar previamente o teor explícito; não explorar imagens sexuais de modo sensacionalista; não sugerir que vítimas merecem violência; não apresentar as punições como mandamentos para leitores atuais.",
       "scriptureRefs": [
         "Ezequiel 23:1-49"
       ],
