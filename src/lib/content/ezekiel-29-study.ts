@@ -1,51 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 29 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 29 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel29Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 29 confronta o orgulho do faraó, a fragilidade do Egito como aliado e o destino de Tiro na política babilônica.",
-  "historicalContext": "Oráculos do século VI a.C., incluindo um anúncio posterior sobre a campanha de Nabucodonosor contra Tiro.",
+  "intro": "Ezequiel 29 denuncia a arrogância de Faraó, figurado como criatura do Nilo, e a falsa segurança oferecida pelo Egito a Israel. O capítulo também anuncia restauração limitada do Egito e contém um oráculo posterior sobre Nabucodonosor.",
+  "historicalContext": "A coleção de oráculos contra o Egito se relaciona à crise de Judá diante da Babilônia no século VI a.C. O Egito era potência regional e possível aliado de Jerusalém. O capítulo reúne uma palavra datada no décimo ano e outra no vigésimo sétimo, exigindo atenção à diferença temporal entre as duas unidades.",
   "keyPoints": [
     {
-      "title": "1–7: Faraó, o monstro do Nilo e a cana quebrada",
-      "text": "O orgulho imperial e a fragilidade da aliança egípcia são denunciados por duas imagens fortes."
+      "title": "1–7: O monstro e a cana quebrada",
+      "text": "Faraó se atribui o Nilo, enquanto o Egito falha como apoio de Israel."
     },
     {
-      "title": "8–16: Juízo, quarenta anos e retorno",
-      "text": "O anúncio de devastação inclui promessa de reunião e diminuição do poder imperial."
+      "title": "8–16: Juízo e retorno limitado",
+      "text": "A desolação anunciada é seguida de promessa de restauração sem antiga hegemonia."
     },
     {
-      "title": "17–20: O pagamento a Nabucodonosor",
-      "text": "Um oráculo posterior revisita a campanha contra Tiro e apresenta o Egito como recompensa."
+      "title": "17–20: O esforço de Nabucodonosor",
+      "text": "Um oráculo posterior interpreta a campanha contra Tiro e o Egito."
     },
     {
-      "title": "21–21: Esperança para Israel",
-      "text": "O capítulo encerra com a promessa de renovação e reconhecimento do Senhor."
+      "title": "21: Esperança para Israel",
+      "text": "O capítulo encerra com renovação de força e da voz profética."
     }
   ],
-  "application": "Avaliar alianças e poder político com humildade e responsabilidade.",
+  "application": "Examinar criticamente promessas de segurança oferecidas por líderes e instituições, especialmente quando exigem dependência cega. Evitar atribuir a pessoas ou povos atuais a culpa de governantes antigos. Reconhecer que a restauração pode ocorrer sem retorno à antiga posição de poder.",
   "crossReferences": [
+    "2 Reis 18:20-21",
     "Isaías 30:1-5",
-    "Isaías 36:6",
     "Jeremias 37:5-10",
     "Ezequiel 26:7-14",
-    "Salmo 20:7",
-    "Marcos 10:42-45"
+    "Ezequiel 30:1-26",
+    "Ezequiel 32:1-16"
   ],
   "questions": [
-    "O que simboliza o monstro do Nilo?",
-    "Por que o Egito é cana quebrada?",
-    "Como interpretar os quarenta anos?",
-    "Que tensão histórica existe na campanha contra Tiro?"
+    "Qual é o sentido da imagem de Faraó como criatura do Nilo?",
+    "Por que o Egito é chamado de bordão de cana?",
+    "Como o anúncio de quarenta anos deve ser interpretado com cautela?",
+    "Por que o oráculo dos versículos 17–21 possui data diferente?",
+    "Que esperança aparece no versículo final?"
   ],
-  "conclusion": "O capítulo denuncia arrogância imperial e dependência política, mas também inclui promessa de retorno e esperança para Israel.",
+  "conclusion": "O capítulo desmonta duas ilusões: a do governante que se julga dono da fonte de sua força e a do povo que deposita segurança absoluta em alianças políticas frágeis.",
   "prayer": "Senhor, ensina-nos a confiar com discernimento e agir com humildade. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 29:1–21 (paráfrase livre autoral)",
-      "body": "**Paráfrase autoral para estudo, não tradução bíblica oficial.**\n\n**1.** O oráculo recebe data no décimo ano, décimo mês, dia doze.\n\n**2.** O profeta é enviado a falar contra o faraó e o Egito.\n\n**3.** Faraó é retratado como grande monstro do Nilo que reivindica o rio.\n\n**4.** Deus anuncia anzóis que retiram o monstro do rio junto aos peixes.\n\n**5.** O monstro e os peixes são abandonados no deserto.\n\n**6.** O Egito é acusado de ter sido apoio frágil para Israel.\n\n**7.** Quem se apoiou nessa cana sofreu ferimentos.\n\n**8.** Espada e perdas são anunciadas contra o Egito.\n\n**9.** A desolação responde à pretensão de possuir e criar o Nilo.\n\n**10.** Migdol, Sevene e Cuxe delimitam a extensão da ameaça.\n\n**11.** O oráculo anuncia quarenta anos de despovoamento.\n\n**12.** Cidades desertas e dispersão são repetidas por quarenta anos.\n\n**13.** Após quarenta anos, o texto promete reunião dos egípcios.\n\n**14.** Os egípcios retornam a Patros em condição política reduzida.\n\n**15.** O Egito deixará de exercer supremacia sobre outras nações.\n\n**16.** Israel não deverá voltar a depositar confiança no Egito.\n\n**17.** Uma nova data aparece: vigésimo sétimo ano, primeiro mês, dia primeiro.\n\n**18.** A campanha de Nabucodonosor contra Tiro é descrita como árdua e sem recompensa suficiente.\n\n**19.** O Egito é anunciado como recompensa militar para Nabucodonosor.\n\n**20.** O trabalho militar contra Tiro é chamado de serviço dentro do oráculo.\n\n**21.** O final promete renovação de força para Israel e abertura da boca do profeta.",
+      "body": "Leia Ezequiel 29:1–21 no texto bíblico do aplicativo. As notas incluem **paráfrases livres autorais** e análise contextual, não uma tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 29:1-21"
       ],
@@ -128,7 +129,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 29:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo recebe data no décimo ano, décimo mês, dia doze.\n\n**Exegese contextual:** A cronologia pertence ao período do exílio; a data difere do oráculo final do capítulo.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** No décimo ano, uma palavra do Senhor é datada no décimo mês.\n\n**Exegese contextual:** A data insere o oráculo na crise de Jerusalém e no debate sobre a confiança em alianças egípcias.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:1"
       ],
@@ -138,7 +139,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 29:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta é enviado a falar contra o faraó e o Egito.\n\n**Exegese contextual:** A crítica se dirige ao poder imperial egípcio, não a pessoas egípcias atuais.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** Ezequiel recebe ordem de profetizar contra Faraó e todo o Egito.\n\n**Exegese contextual:** A crítica alcança o rei e o sistema de poder representado por ele, não pessoas egípcias contemporâneas.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:2"
       ],
@@ -148,7 +149,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 29:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Faraó é retratado como grande monstro do Nilo que reivindica o rio.\n\n**Exegese contextual:** O animal pode evocar crocodilo ou monstro aquático; o ponto central é a pretensão de domínio absoluto.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** Faraó é retratado como grande criatura dos rios que reivindica ter feito o Nilo.\n\n**Exegese contextual:** A imagem confronta a autossuficiência do poder faraônico e sua apropriação simbólica da fonte de vida do país.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:3"
       ],
@@ -158,7 +159,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 29:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus anuncia anzóis que retiram o monstro do rio junto aos peixes.\n\n**Exegese contextual:** A figura representa exposição e derrota de um governante ligado ao sistema do Nilo.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** Deus anuncia que retirará a criatura dos rios com anzóis, junto com os peixes.\n\n**Exegese contextual:** A captura inverte a imagem do governante invulnerável; os peixes podem representar os que dependem de seu domínio.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:4"
       ],
@@ -168,7 +169,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 29:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O monstro e os peixes são abandonados no deserto.\n\n**Exegese contextual:** O deslocamento do rio ao deserto inverte a segurança que sustentava o poder faraônico.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** A criatura capturada será abandonada em terra como alimento de animais.\n\n**Exegese contextual:** A exposição fora da água dramatiza derrota e perda de prestígio imperial, em linguagem profética figurada.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:5"
       ],
@@ -178,7 +179,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 29:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O Egito é acusado de ter sido apoio frágil para Israel.\n\n**Exegese contextual:** A cana quebradiça é imagem de aliança política incapaz de sustentar Judá.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** O Egito é chamado de apoio de cana para Israel.\n\n**Exegese contextual:** A metáfora denuncia uma aliança que parece sustentar, mas não oferece segurança confiável.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:6"
       ],
@@ -188,7 +189,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 29:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Quem se apoiou nessa cana sofreu ferimentos.\n\n**Exegese contextual:** A metáfora denuncia confiança diplomática que aumenta a vulnerabilidade.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** A cana se quebra quando alguém se apoia nela e provoca ferimentos.\n\n**Exegese contextual:** A figura descreve o dano causado a Judá por confiar numa potência incapaz de sustentá-la na crise.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:7"
       ],
@@ -198,7 +199,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 29:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Espada e perdas são anunciadas contra o Egito.\n\n**Exegese contextual:** A linguagem de guerra é juízo profético, não autorização de violência contemporânea.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** Deus anuncia a espada contra o Egito e seus habitantes.\n\n**Exegese contextual:** A ameaça militar é apresentada como juízo histórico, não como autorização de violência atual.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:8"
       ],
@@ -208,7 +209,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 29:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A desolação responde à pretensão de possuir e criar o Nilo.\n\n**Exegese contextual:** O verso retoma a arrogância do faraó como causa central do discurso.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** A terra se tornará desolada porque o rei reivindicou o rio como obra sua.\n\n**Exegese contextual:** A repetição da fala de Faraó reforça a acusação de arrogância e falsa autonomia.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:9"
       ],
@@ -218,7 +219,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 29:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Migdol, Sevene e Cuxe delimitam a extensão da ameaça.\n\n**Exegese contextual:** A geografia aponta o Egito de norte a sul; as identificações exatas merecem cautela.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** O juízo é descrito desde Migdol e Sevene até a fronteira de Cuxe.\n\n**Exegese contextual:** A enumeração territorial expressa abrangência sobre o Egito, com grafias e identificações que variam entre traduções.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:10"
       ],
@@ -228,7 +229,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 29:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo anuncia quarenta anos de despovoamento.\n\n**Exegese contextual:** O número pode ter função simbólica de período completo; sua correspondência histórica literal é debatida.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** A terra ficará sem circulação humana ou animal durante quarenta anos.\n\n**Exegese contextual:** O número quarenta tem forte valor literário bíblico; sua relação com cronologia histórica exige cautela.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:11"
       ],
@@ -238,7 +239,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 29:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Cidades desertas e dispersão são repetidas por quarenta anos.\n\n**Exegese contextual:** A repetição intensifica o juízo e exige comparação crítica com evidências históricas.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** Cidades desertas e dispersão entre nações compõem o anúncio de quarenta anos.\n\n**Exegese contextual:** A linguagem de exílio aproxima a experiência egípcia da vulnerabilidade de outros povos derrotados.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:12"
       ],
@@ -248,7 +249,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 29:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Após quarenta anos, o texto promete reunião dos egípcios.\n\n**Exegese contextual:** O juízo não é a palavra final sobre o povo: há anúncio de retorno.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** Após quarenta anos, Deus promete reunir os egípcios dispersos.\n\n**Exegese contextual:** O juízo não é a última palavra: o oráculo também contém promessa de retorno.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:13"
       ],
@@ -258,7 +259,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 29:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os egípcios retornam a Patros em condição política reduzida.\n\n**Exegese contextual:** Patros costuma designar o Alto Egito; o texto prevê restauração sem antigo domínio.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** O Egito será restaurado à região de Patros, mas com poder reduzido.\n\n**Exegese contextual:** Patros designa região do Alto Egito; a restauração é descrita sem retorno à hegemonia anterior.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:14"
       ],
@@ -268,7 +269,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 29:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O Egito deixará de exercer supremacia sobre outras nações.\n\n**Exegese contextual:** O foco é o fim da pretensão imperial, não inferioridade essencial de um povo.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** O Egito não voltará a dominar as nações como antes.\n\n**Exegese contextual:** A redução do poder político confronta a pretensão imperial de superioridade permanente.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:15"
       ],
@@ -278,7 +279,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 29:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Israel não deverá voltar a depositar confiança no Egito.\n\n**Exegese contextual:** A aliança política é vista como fonte de tropeço e recordação da infidelidade.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** Israel deixará de tomar o Egito como base de segurança.\n\n**Exegese contextual:** O objetivo é corrigir a dependência de alianças políticas que substituíram confiança e discernimento.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:16"
       ],
@@ -288,7 +289,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 29:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma nova data aparece: vigésimo sétimo ano, primeiro mês, dia primeiro.\n\n**Exegese contextual:** Este oráculo é bem posterior ao anterior; a composição não segue apenas ordem cronológica.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** Uma segunda palavra é datada no vigésimo sétimo ano.\n\n**Exegese contextual:** A distância cronológica mostra que o capítulo reúne oráculos de momentos diferentes.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:17"
       ],
@@ -298,7 +299,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 29:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A campanha de Nabucodonosor contra Tiro é descrita como árdua e sem recompensa suficiente.\n\n**Exegese contextual:** O verso é importante para discutir o alcance da campanha babilônica contra Tiro.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** Nabucodonosor trabalhou militarmente contra Tiro, mas sem obter despojo suficiente.\n\n**Exegese contextual:** O texto menciona o desgaste do cerco e a ausência de recompensa esperada, sem oferecer relato militar exaustivo.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:18"
       ],
@@ -308,7 +309,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 29:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O Egito é anunciado como recompensa militar para Nabucodonosor.\n\n**Exegese contextual:** A linguagem de despojo reflete o contexto imperial antigo e não prescreve saque como conduta moral.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** Deus anuncia que o Egito será entregue a Nabucodonosor como despojo.\n\n**Exegese contextual:** A linguagem de pagamento integra a interpretação profética do conflito entre impérios, sem elogiar moralmente o saque.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:19"
       ],
@@ -318,7 +319,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 29:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O trabalho militar contra Tiro é chamado de serviço dentro do oráculo.\n\n**Exegese contextual:** A afirmação profética não equivale a aprovação geral de toda ação do império babilônico.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** O Egito é descrito como recompensa pelo esforço babilônico.\n\n**Exegese contextual:** A formulação é teológica e historicamente debatida; não deve ser usada para justificar guerras de conquista.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:20"
       ],
@@ -328,7 +329,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 29:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O final promete renovação de força para Israel e abertura da boca do profeta.\n\n**Exegese contextual:** A imagem do chifre ou poder que brota sugere esperança após os anúncios de juízo.\n\n**Pergunta de leitura:** Que imagem ou dado histórico sustenta a acusação e qual interpretação precisa de cautela?",
+      "body": "**Paráfrase livre autoral:** O Senhor promete renovar a força de Israel e abrir a boca do profeta.\n\n**Exegese contextual:** A imagem do 'chifre' ou poder que brota sugere esperança para Israel, e a fala profética é reafirmada.\n\n**Pergunta interpretativa:** Como este versículo confronta a arrogância imperial ou a confiança em alianças frágeis?",
       "scriptureRefs": [
         "Ezequiel 29:21"
       ],
@@ -398,7 +399,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "Debatem-se a identidade do faraó, a imagem do monstro do Nilo, os quarenta anos, o alcance da invasão babilônica do Egito e a cronologia do oráculo final. O estudo distingue linguagem profética de documentação histórica e rejeita aplicações nacionalistas.",
+      "body": "**Criatura do Nilo:** a imagem pode evocar um crocodilo ou monstro fluvial, mas sua função principal é satirizar a pretensão de Faraó de possuir e produzir o rio.\n\n**Quarenta anos:** o número e o anúncio de desolação requerem leitura literária e comparação histórica cuidadosa; não afirmar correspondência cronológica exata sem evidência.\n\n**Nabucodonosor e o Egito:** a extensão histórica das campanhas babilônicas no Egito é discutida; o texto não equivale a um relatório militar completo.\n\n**Datas distintas:** os vv. 17–21 pertencem a um oráculo posterior aos vv. 1–16.",
       "scriptureRefs": [
         "Ezequiel 29:1-21"
       ],
@@ -408,7 +409,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas comentadas",
-      "body": "**Isaías 30:1–5:** crítica à confiança política no Egito. **Isaías 36:6:** Egito como cana quebrada. **Jeremias 37:5–10:** auxílio egípcio no cerco. **Ezequiel 26:7–14:** anúncio contra Tiro. **Ezequiel 29:17–20:** comentário posterior sobre a campanha. **Salmo 20:7:** contraste entre confiança militar e confiança em Deus.",
+      "body": "**2 Reis 18:20–21:** o Egito como cana quebrada na retórica assíria.\n\n**Isaías 30:1–5:** advertência contra dependência política do Egito.\n\n**Jeremias 37:5–10:** atuação do exército egípcio durante o cerco de Jerusalém.\n\n**Ezequiel 26:7–14:** anúncio contra Tiro e campanha de Nabucodonosor.\n\n**Ezequiel 30:1–26:** continuação dos oráculos contra o Egito.\n\n**Ezequiel 32:1–16:** lamento sobre Faraó como monstro das águas.",
       "scriptureRefs": [
         "Ezequiel 29:1-21"
       ],
@@ -418,7 +419,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria forçada",
-      "body": "A crítica à autossuficiência pode ser colocada em diálogo com o ensino de Jesus sobre servir em vez de dominar (Marcos 10:42–45). Ezequiel 29, porém, fala diretamente do Egito, de Judá e da Babilônia; não identifica faraó com personagem espiritual moderno.",
+      "body": "A leitura cristã pode relacionar a crítica à confiança em poderes humanos com o chamado de Jesus a buscar primeiro o reino de Deus (Mateus 6:33). Essa aplicação não elimina o contexto político concreto das relações entre Judá, Egito e Babilônia.",
       "scriptureRefs": [
         "Ezequiel 29:1-21"
       ],
@@ -438,7 +439,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Como o faraó é retratado?** Como monstro do Nilo que reivindica o rio (v. 3).\n\n**2. Que imagem descreve o Egito como aliado?** Cana quebrada (vv. 6–7).\n\n**3. O que ocorre após quarenta anos?** Anúncio de reunião dos egípcios (vv. 13–14).\n\n**4. Qual campanha é mencionada no oráculo posterior?** A de Nabucodonosor contra Tiro (v. 18).\n\n**5. Que esperança encerra o capítulo?** Renovação de força para Israel (v. 21).",
+      "body": "**1. Quem é representado pela criatura do Nilo?** Faraó, rei do Egito (29:3).\n\n**2. Por que o Egito é chamado de cana?** Porque falhou como apoio confiável a Israel (29:6–7).\n\n**3. O que se promete depois dos quarenta anos?** Reunião dos egípcios e restauração limitada (29:13–15).\n\n**4. Que campanha militar é citada?** A de Nabucodonosor contra Tiro (29:18).\n\n**5. Como termina o capítulo?** Com esperança para Israel e renovação da voz profética (29:21).",
       "scriptureRefs": [
         "Ezequiel 29:1-21"
       ],
@@ -448,7 +449,7 @@ export const ezekiel29Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — a fragilidade do poder que promete tudo",
-      "body": "**Tema:** A confiança que não suporta o peso.\n\n**Proposição:** Nenhuma potência humana pode assumir o lugar de Deus ou oferecer segurança absoluta.\n\n**Esboço:** (1) o monstro arrogante (1–5); (2) a cana que quebra (6–16); (3) o custo das guerras e a esperança (17–21).\n\n**Cuidado:** não afirmar despovoamento histórico total sem evidência e não usar o texto para desumanizar povos.",
+      "body": "**Tema:** A falsa segurança dos poderes humanos.\n\n**Proposição:** A arrogância de quem domina e a dependência de alianças frágeis conduzem à decepção.\n\n**Esboço:** (1) Faraó e o Nilo (1–5); (2) a cana quebrada (6–7); (3) juízo e restauração limitada (8–16); (4) a queda das potências e a esperança (17–21).\n\n**Cuidados:** não tratar o número quarenta como cronologia incontroversa, não glorificar saques militares e não identificar automaticamente o Egito bíblico com pessoas egípcias atuais.",
       "scriptureRefs": [
         "Ezequiel 29:1-21"
       ],
