@@ -1,47 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 30 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 30 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel30Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 30 anuncia o dia de crise do Egito e contrasta os braços quebrados do faraó com a força militar da Babilônia.",
-  "historicalContext": "Oráculos do século VI a.C. sobre o Egito e seus aliados no cenário da expansão neobabilônica.",
+  "intro": "Ezequiel 30 anuncia o dia de calamidade do Egito e de seus aliados, identifica a ameaça babilônica e descreve a perda de força militar de Faraó pela imagem de braços quebrados.",
+  "historicalContext": "Os oráculos contra o Egito se situam na crise do antigo Oriente Próximo durante a expansão de Nabucodonosor II no século VI a.C. A enumeração de cidades egípcias, aliados e regiões comunica a extensão da ameaça. A segunda unidade, datada no décimo primeiro ano, usa linguagem corporal figurada para descrever a fragilidade do poder faraônico.",
   "keyPoints": [
     {
-      "title": "1–9: O dia de nuvens e a queda dos aliados",
-      "text": "O anúncio de crise atinge Egito, Cuxe e povos ligados ao poder faraônico."
+      "title": "1–9: O dia de calamidade",
+      "text": "O Egito e seus aliados enfrentam juízo e perda de segurança."
     },
     {
-      "title": "10–19: Nabucodonosor e as cidades do Egito",
-      "text": "A intervenção babilônica e a perda de centros urbanos e religiosos dominam o oráculo."
+      "title": "10–19: Babilônia e cidades egípcias",
+      "text": "A invasão anunciada atinge forças militares, centros urbanos e símbolos religiosos."
     },
     {
-      "title": "20–26: Os braços quebrados do faraó",
-      "text": "O segundo oráculo compara a força declinante do Egito à ascensão militar da Babilônia."
+      "title": "20–22: O braço de Faraó",
+      "text": "A metáfora do braço quebrado retrata incapacidade militar."
+    },
+    {
+      "title": "23–26: Dispersão e inversão de poder",
+      "text": "A Babilônia se fortalece enquanto o Egito perde capacidade de resistência."
     }
   ],
-  "application": "Reconhecer os limites do poder militar e cultivar responsabilidade e compaixão em tempos de crise.",
+  "application": "Evitar depositar segurança absoluta em alianças militares, poder econômico ou prestígio político. Reconhecer os custos humanos da guerra e não usar anúncios antigos de juízo para justificar agressões contra povos atuais.",
   "crossReferences": [
-    "Ezequiel 29:1-16",
+    "Isaías 19:1-16",
     "Jeremias 46:1-26",
-    "Isaías 19:1-25",
+    "Ezequiel 29:1-16",
     "Ezequiel 31:1-18",
-    "Salmo 20:7",
-    "Marcos 10:42-45"
+    "Ezequiel 32:1-16",
+    "Daniel 2:20-21"
   ],
   "questions": [
-    "O que significa o dia de nuvens?",
-    "Por que aliados do Egito aparecem no oráculo?",
-    "Como as cidades egípcias são descritas?",
-    "O que simbolizam os braços do faraó?"
+    "O que significa o 'dia do Senhor' neste oráculo?",
+    "Por que Cuxe e outros aliados aparecem na profecia?",
+    "Qual rei estrangeiro é citado nominalmente?",
+    "O que representa o braço quebrado de Faraó?",
+    "Como o texto relaciona poder militar e fragilidade humana?"
   ],
-  "conclusion": "O texto confronta a confiança na força imperial e mostra a fragilidade das alianças militares.",
+  "conclusion": "Ezequiel 30 confronta a confiança na força egípcia: aliados, fortalezas e exércitos não tornam uma potência invulnerável à queda.",
   "prayer": "Senhor, dá-nos humildade e discernimento diante do poder. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 30:1–26 (paráfrase livre autoral)",
-      "body": "**Paráfrase autoral para estudo; não é tradução bíblica oficial.**\n\n**1.** Uma nova palavra divina introduz a denúncia do Egito.\n\n**2.** O profeta é chamado a anunciar um dia de aflição.\n\n**3.** O dia do Senhor se aproxima como dia de nuvens.\n\n**4.** A espada atinge o Egito e provoca angústia em Cuxe.\n\n**5.** Cuxe, Pute, Lude e aliados são mencionados.\n\n**6.** Os sustentadores do Egito cairão, de Migdol a Sevene.\n\n**7.** Cidades serão desoladas entre outras terras devastadas.\n\n**8.** O fogo e a perda de aliados conduzem ao reconhecimento do Senhor.\n\n**9.** Mensageiros por navios levam temor a Cuxe.\n\n**10.** Nabucodonosor é nomeado como agente da derrota egípcia.\n\n**11.** O exército estrangeiro é descrito em termos de destruição e morte.\n\n**12.** Os rios e a terra são entregues à devastação.\n\n**13.** Ídolos de Mênfis e autoridade política são confrontados.\n\n**14.** Patros, Zoã e Nô são citadas entre cidades atingidas.\n\n**15.** Pelúsio e Nô aparecem sob juízo.\n\n**16.** O fogo, o medo e a dor atingem cidades egípcias.\n\n**17.** Áven e Pibesete sofrem perdas e exílio.\n\n**18.** Tafnes perde seu poder e é coberta por nuvem.\n\n**19.** A primeira unidade termina com a fórmula de reconhecimento.\n\n**20.** Um segundo oráculo recebe data no décimo primeiro ano.\n\n**21.** O braço do faraó é descrito como quebrado e sem cura.\n\n**22.** Os dois braços do faraó serão quebrados.\n\n**23.** A dispersão dos egípcios é anunciada.\n\n**24.** Os braços da Babilônia são fortalecidos enquanto os do faraó falham.\n\n**25.** A força da Babilônia e a queda do Egito são reiteradas.\n\n**26.** O capítulo termina repetindo dispersão e reconhecimento.",
+      "body": "Leia Ezequiel 30:1–26 no texto bíblico do aplicativo. Os comentários contêm **paráfrases livres autorais** e explicações contextuais, não uma tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 30:1-26"
       ],
@@ -113,7 +118,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 30:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma nova palavra divina introduz a denúncia do Egito.\n\n**Exegese contextual:** O capítulo prossegue a série de oráculos contra a potência do Nilo.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Uma nova palavra do Senhor chega ao profeta.\n\n**Exegese contextual:** A fórmula introduz outro oráculo contra o Egito na coleção de Ezequiel 29–32.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:1"
       ],
@@ -123,7 +128,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 30:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta é chamado a anunciar um dia de aflição.\n\n**Exegese contextual:** O grito 'ai' pertence ao vocabulário de lamento e juízo.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** O profeta recebe ordem de anunciar lamento pelo dia que se aproxima.\n\n**Exegese contextual:** O grito de dor estabelece o tom de calamidade e não de celebração da guerra.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:2"
       ],
@@ -133,7 +138,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 30:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O dia do Senhor se aproxima como dia de nuvens.\n\n**Exegese contextual:** A imagem de escuridão anuncia crise histórica e alcance além do Egito.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** O dia do Senhor é descrito como dia de nuvens sobre as nações.\n\n**Exegese contextual:** A expressão designa juízo histórico na linguagem profética; não precisa ser reduzida a uma data do fim do mundo.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:3"
       ],
@@ -143,7 +148,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 30:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A espada atinge o Egito e provoca angústia em Cuxe.\n\n**Exegese contextual:** O impacto da guerra se estende aos parceiros e vizinhos do império.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** A espada alcançará o Egito e causará angústia em Cuxe.\n\n**Exegese contextual:** O oráculo apresenta a repercussão regional da derrota egípcia, inclusive sobre aliados ao sul.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:4"
       ],
@@ -153,7 +158,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 30:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Cuxe, Pute, Lude e aliados são mencionados.\n\n**Exegese contextual:** A lista expressa uma coalizão heterogênea; identificações de alguns grupos são debatidas.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Cuxe, Pute, Lude e outros grupos aliados são incluídos na derrota.\n\n**Exegese contextual:** A lista expressa a rede militar e política do Egito; algumas identificações geográficas antigas são debatidas.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:5"
       ],
@@ -163,7 +168,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 30:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os sustentadores do Egito cairão, de Migdol a Sevene.\n\n**Exegese contextual:** A fórmula geográfica representa a extensão territorial do desastre.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Os sustentadores do Egito cairão, e seu orgulho será abatido.\n\n**Exegese contextual:** Migdol e Sevene funcionam como referências territoriais que abrangem o país, não como códigos de países modernos.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:6"
       ],
@@ -173,7 +178,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 30:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Cidades serão desoladas entre outras terras devastadas.\n\n**Exegese contextual:** A repetição amplia a escala da crise.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** As cidades egípcias se tornarão desertas entre terras devastadas.\n\n**Exegese contextual:** A repetição da desolação enfatiza o custo coletivo da queda imperial.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:7"
       ],
@@ -183,7 +188,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 30:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O fogo e a perda de aliados conduzem ao reconhecimento do Senhor.\n\n**Exegese contextual:** A fórmula de reconhecimento é característica da teologia de Ezequiel.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** O fim dos aliados e o fogo no Egito revelarão o Senhor.\n\n**Exegese contextual:** A fórmula de reconhecimento dá sentido teológico ao anúncio sem autorizar violência contemporânea.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:8"
       ],
@@ -193,7 +198,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 30:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Mensageiros por navios levam temor a Cuxe.\n\n**Exegese contextual:** O alcance marítimo das notícias demonstra a interdependência regional.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Mensageiros por navios levarão medo a Cuxe.\n\n**Exegese contextual:** A notícia da crise se propaga por rotas de comunicação e comércio, atingindo quem se julgava seguro.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:9"
       ],
@@ -203,7 +208,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 30:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Nabucodonosor é nomeado como agente da derrota egípcia.\n\n**Exegese contextual:** O oráculo liga a crise ao poder babilônico, não a um conflito moderno.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Nabucodonosor, rei da Babilônia, é nomeado como agente da derrota.\n\n**Exegese contextual:** O anúncio ganha referência histórica concreta na expansão babilônica do século VI a.C.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:10"
       ],
@@ -213,7 +218,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 30:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O exército estrangeiro é descrito em termos de destruição e morte.\n\n**Exegese contextual:** A retórica militar é severa e não autoriza reproduzir violência.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Exércitos estrangeiros avançarão com espada contra o Egito.\n\n**Exegese contextual:** A descrição severa retrata a violência da conquista, não um elogio ético aos invasores.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:11"
       ],
@@ -223,7 +228,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 30:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os rios e a terra são entregues à devastação.\n\n**Exegese contextual:** A secagem dos cursos d'água pode ser imagem de colapso econômico e ambiental, não relatório hidrológico.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Rios secarão e a terra será entregue a estrangeiros.\n\n**Exegese contextual:** A imagem de águas reduzidas comunica colapso de segurança e sustento em um país dependente do Nilo.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:12"
       ],
@@ -233,7 +238,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 30:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ídolos de Mênfis e autoridade política são confrontados.\n\n**Exegese contextual:** O juízo abrange símbolos religiosos e estruturas de poder.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Ídolos e governantes de Mênfis perderão seu poder.\n\n**Exegese contextual:** O juízo atinge símbolos religiosos e políticos que sustentavam a confiança imperial.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:13"
       ],
@@ -243,7 +248,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 30:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Patros, Zoã e Nô são citadas entre cidades atingidas.\n\n**Exegese contextual:** A lista liga a ameaça a diferentes centros do Egito.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Patros, Zoã e Nô são mencionadas como alvos da devastação.\n\n**Exegese contextual:** A enumeração de centros regionais apresenta o alcance do juízo sobre diferentes áreas do Egito.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:14"
       ],
@@ -253,7 +258,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 30:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Pelúsio e Nô aparecem sob juízo.\n\n**Exegese contextual:** Pelúsio era ponto estratégico de entrada no delta; Nô é associada a Tebas.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** A fortaleza de Pelúsio e a população de Nô são ameaçadas.\n\n**Exegese contextual:** Mesmo posições militares fortes não garantem proteção contra a invasão anunciada.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:15"
       ],
@@ -263,7 +268,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 30:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O fogo, o medo e a dor atingem cidades egípcias.\n\n**Exegese contextual:** O texto usa imagens reiteradas para enfatizar a extensão da crise.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** O fogo e a angústia alcançam Pelúsio, Nô e Mênfis.\n\n**Exegese contextual:** A repetição dos topônimos intensifica a imagem de derrota generalizada.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:16"
       ],
@@ -273,7 +278,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 30:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Áven e Pibesete sofrem perdas e exílio.\n\n**Exegese contextual:** Os topônimos são associados a centros religiosos e urbanos, com variantes de identificação.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Jovens de Áven e Pibesete cairão, e haverá deportação.\n\n**Exegese contextual:** O texto inclui perdas humanas e exílio, lembrando que a guerra afeta gerações e famílias.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:17"
       ],
@@ -283,7 +288,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 30:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Tafnes perde seu poder e é coberta por nuvem.\n\n**Exegese contextual:** A quebra do jugo representa colapso da autoridade imperial.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Tafnes escurecerá quando o poder egípcio for quebrado.\n\n**Exegese contextual:** A nuvem e a quebra do jugo simbolizam o fim da supremacia política e militar.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:18"
       ],
@@ -293,7 +298,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 30:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A primeira unidade termina com a fórmula de reconhecimento.\n\n**Exegese contextual:** O oráculo liga o juízo ao conhecimento da soberania divina.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** O oráculo conclui com a fórmula de reconhecimento do Senhor.\n\n**Exegese contextual:** A repetição amarra as cidades e os acontecimentos ao propósito teológico do livro.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:19"
       ],
@@ -303,7 +308,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 30:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Um segundo oráculo recebe data no décimo primeiro ano.\n\n**Exegese contextual:** A data distingue esta unidade da abertura sem data explícita.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Outra palavra é datada no décimo primeiro ano, no primeiro mês.\n\n**Exegese contextual:** A data abre um segundo oráculo, distinto do lamento anterior, centrado na metáfora dos braços de Faraó.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:20"
       ],
@@ -313,7 +318,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 30:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O braço do faraó é descrito como quebrado e sem cura.\n\n**Exegese contextual:** O braço simboliza força militar; a incapacidade de segurar espada indica fraqueza política.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** O braço de Faraó está quebrado e não receberá cura para segurar a espada.\n\n**Exegese contextual:** O braço representa capacidade militar; a ausência de tratamento simboliza impossibilidade de recuperação imediata.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:21"
       ],
@@ -323,7 +328,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 30:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os dois braços do faraó serão quebrados.\n\n**Exegese contextual:** A repetição reforça o fim de sua capacidade de resistência.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Deus anuncia que quebrará ambos os braços de Faraó.\n\n**Exegese contextual:** A imagem amplia a incapacidade do rei de exercer força armada ou resistir à ameaça.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:22"
       ],
@@ -333,7 +338,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 30:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A dispersão dos egípcios é anunciada.\n\n**Exegese contextual:** O texto descreve consequências coletivas da guerra, não inferioridade de um povo.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Os egípcios serão dispersos entre outras nações.\n\n**Exegese contextual:** A dispersão descreve consequência coletiva da derrota e ecoa a experiência de exílio conhecida pelos ouvintes.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:23"
       ],
@@ -343,7 +348,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 30:24 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os braços da Babilônia são fortalecidos enquanto os do faraó falham.\n\n**Exegese contextual:** O contraste figurado identifica a transferência de poder militar.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** Os braços do rei da Babilônia serão fortalecidos, enquanto os de Faraó falharão.\n\n**Exegese contextual:** O contraste representa a transferência de vantagem militar; não torna o poder babilônico moralmente perfeito.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:24"
       ],
@@ -353,7 +358,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 30:25 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A força da Babilônia e a queda do Egito são reiteradas.\n\n**Exegese contextual:** O reconhecimento do Senhor encerra a comparação de potências.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** O fortalecimento da Babilônia e a queda de Faraó revelam o Senhor.\n\n**Exegese contextual:** A repetição reforça a soberania divina sobre disputas entre potências humanas.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:25"
       ],
@@ -363,7 +368,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 30:26 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O capítulo termina repetindo dispersão e reconhecimento.\n\n**Exegese contextual:** A conclusão retoma o tema da soberania divina sobre reinos.\n\n**Pergunta interpretativa:** Que imagem do poder ou da crise este versículo utiliza?",
+      "body": "**Paráfrase livre autoral:** O capítulo termina reiterando a dispersão do Egito e o reconhecimento de Deus.\n\n**Exegese contextual:** O encerramento retoma o tema de que poder imperial e alianças não garantem segurança permanente.\n\n**Pergunta interpretativa:** Que aspecto da confiança no poder egípcio este versículo confronta?",
       "scriptureRefs": [
         "Ezequiel 30:26"
       ],
@@ -433,7 +438,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "A extensão do 'dia do Senhor', as identificações de povos e cidades e a relação entre oráculos e campanhas históricas exigem cautela. Nenhuma passagem deve ser usada para desumanizar egípcios, cuxitas ou outros povos modernos.",
+      "body": "**Dia do Senhor:** neste contexto, a expressão anuncia juízo contra o Egito e aliados; não deve ser automaticamente tratada como calendário do fim dos tempos.\n\n**Topônimos:** nomes como Migdol, Sevene, Nô, Pelúsio e Tafnes indicam localidades do Egito antigo; algumas equivalências e grafias variam entre traduções.\n\n**Braços quebrados:** a metáfora se refere à força militar de Faraó, não a uma descrição médica literal.\n\n**Babilônia:** ser instrumento narrativo de juízo não equivale a receber aprovação moral irrestrita.",
       "scriptureRefs": [
         "Ezequiel 30:1-26"
       ],
@@ -443,7 +448,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas comentadas",
-      "body": "**Ezequiel 29:1–16:** faraó como monstro do Nilo e cana quebrada. **Jeremias 46:1–26:** outro oráculo contra o Egito. **Isaías 19:1–25:** juízo e esperança envolvendo Egito. **Ezequiel 31:1–18:** metáfora da árvore para a grandeza egípcia. **Salmo 20:7:** limites da confiança militar.",
+      "body": "**Isaías 19:1–16:** outro anúncio de crise no Egito.\n\n**Jeremias 46:1–26:** a ameaça babilônica contra o Egito.\n\n**Ezequiel 29:1–16:** oráculo contra Faraó e a autoconfiança egípcia.\n\n**Ezequiel 31:1–18:** o cedro assírio como advertência a Faraó.\n\n**Ezequiel 32:1–16:** lamento pela queda do Egito.\n\n**Daniel 2:20–21:** Deus remove e estabelece reis.",
       "scriptureRefs": [
         "Ezequiel 30:1-26"
       ],
@@ -453,7 +458,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria forçada",
-      "body": "A fragilidade do poder militar pode ser contrastada com a forma de liderança ensinada por Jesus (Marcos 10:42–45). Ezequiel 30 não oferece identificação direta de Cristo com Nabucodonosor nem autoriza transpor as sentenças para conflitos atuais.",
+      "body": "A leitura cristã pode relacionar a crítica ao poder arrogante com o ensino de Jesus de que grandeza se expressa em serviço, não dominação (Marcos 10:42–45). Essa conexão é aplicação posterior e não substitui o contexto histórico dos oráculos contra o Egito.",
       "scriptureRefs": [
         "Ezequiel 30:1-26"
       ],
@@ -473,7 +478,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Qual imagem abre o oráculo?** O dia de nuvens (v. 3).\n\n**2. Que povos são afetados além do Egito?** Cuxe e outros aliados (vv. 4–5).\n\n**3. Que rei é nomeado?** Nabucodonosor (v. 10).\n\n**4. O que significa o braço quebrado do faraó?** Perda de força militar (vv. 20–22).\n\n**5. Que contraste encerra o capítulo?** Braços fortalecidos da Babilônia e enfraquecidos do Egito (vv. 24–25).",
+      "body": "**1. Contra quem se dirige o anúncio?** Contra o Egito e seus aliados (30:3–5).\n\n**2. Quem é nomeado como invasor?** Nabucodonosor, rei da Babilônia (30:10).\n\n**3. Que cidades aparecem no juízo?** Entre outras, Mênfis, Nô, Pelúsio e Tafnes (30:13–18).\n\n**4. O que significa o braço quebrado?** Perda de capacidade militar de Faraó (30:21–22).\n\n**5. Qual é o contraste final?** Braços babilônicos fortalecidos e egípcios enfraquecidos (30:24–25).",
       "scriptureRefs": [
         "Ezequiel 30:1-26"
       ],
@@ -483,7 +488,7 @@ export const ezekiel30Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — o poder que não se sustenta",
-      "body": "**Tema:** O limite dos impérios.\n\n**Proposição:** A segurança humana não pode repousar em poder militar considerado invencível.\n\n**Esboço:** (1) o dia de nuvens (1–9); (2) cidades e alianças abaladas (10–19); (3) braços quebrados e fortalecidos (20–26).\n\n**Cuidado pastoral:** não celebrar mortes, não usar juízo antigo como licença para violência e distinguir metáfora de reconstrução histórica.",
+      "body": "**Tema:** Quando a força de um império falha.\n\n**Proposição:** Poder político e militar não garantem segurança duradoura nem dispensam responsabilidade ética.\n\n**Esboço:** (1) o dia de crise (1–9); (2) a queda dos centros de poder (10–19); (3) os braços quebrados de Faraó (20–26).\n\n**Cuidados:** não apresentar invasões como modelo de violência justa hoje, não equiparar povos antigos a nações atuais sem evidência e não prometer imunidade a sofrimentos.",
       "scriptureRefs": [
         "Ezequiel 30:1-26"
       ],
