@@ -72,3 +72,46 @@ export function getDailyDevotional(day: string): DevotionalContent {
 
   return CURATED_DEVOTIONALS[indices[position]!]!;
 }
+
+
+/** Uma segunda leitura completa, específica para a noite, sem repetir a manhã. */
+import { EVENING_DEVOTIONALS } from "./evening-devotionals.ts";
+
+export type DevotionalPeriod = "manha" | "noite";
+export const DEVOTIONAL_RECOMMENDED_HOURS = { manha: 6, noite: 20 } as const;
+
+/** Sorteio estável por dia de Brasília para o acervo noturno. */
+export function getEveningDevotional(day: string): DevotionalContent {
+  const count = EVENING_DEVOTIONALS.length;
+  if (!count) throw new Error("Acervo de devocionais noturnos vazio.");
+  const valid = /^\d{4}-\d{2}-\d{2}$/.test(day);
+  const parsed = valid ? Date.parse(day + "T00:00:00Z") : NaN;
+  if (!Number.isFinite(parsed) || new Date(parsed).toISOString().slice(0, 10) !== day) {
+    throw new Error("Data inválida para seleção do devocional.");
+  }
+  const epoch = Math.floor(parsed / 86_400_000);
+  const cycle = Math.floor(epoch / count);
+  const position = ((epoch % count) + count) % count;
+  const arrange = (value: number) => {
+    const ids = Array.from({ length: count }, (_, index) => index);
+    let seed = hashSeed("caminho-divino:devocionais:noite:v1:" + value);
+    for (let index = count - 1; index > 0; index -= 1) {
+      seed ^= seed << 13;
+      seed ^= seed >>> 17;
+      seed ^= seed << 5;
+      const swapIndex = (seed >>> 0) % (index + 1);
+      [ids[index], ids[swapIndex]] = [ids[swapIndex]!, ids[index]!];
+    }
+    return ids;
+  };
+  const shuffled = arrange(cycle);
+  // Impede que o último de um ciclo se repita no início do seguinte.
+  if (count > 1 && shuffled[0] === arrange(cycle - 1)[count - 1]) {
+    [shuffled[0], shuffled[1]] = [shuffled[1]!, shuffled[0]!];
+  }
+  return EVENING_DEVOTIONALS[shuffled[position]!]!;
+}
+
+export function getDevotionalForPeriod(day: string, period: DevotionalPeriod): DevotionalContent {
+  return period === "noite" ? getEveningDevotional(day) : getDailyDevotional(day);
+}
