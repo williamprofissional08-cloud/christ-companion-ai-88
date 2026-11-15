@@ -1,3 +1,13 @@
+import { jeremiah18Study } from "./jeremiah-18-study";
+import { jeremiah17Study } from "./jeremiah-17-study";
+import { jeremiah16Study } from "./jeremiah-16-study";
+import { jeremiah15Study } from "./jeremiah-15-study";
+import { jeremiah14Study } from "./jeremiah-14-study";
+import { jeremiah13Study } from "./jeremiah-13-study";
+import { jeremiah12Study } from "./jeremiah-12-study";
+import { jeremiah11Study } from "./jeremiah-11-study";
+import { jeremiah10Study } from "./jeremiah-10-study";
+import { jeremiah9Study } from "./jeremiah-9-study";
 import { jeremiah8Study } from "./jeremiah-8-study";
 import { jeremiah7Study } from "./jeremiah-7-study";
 import { jeremiah6Study } from "./jeremiah-6-study";
@@ -861,6 +871,16 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-jeremias-cap-6": jeremiah6Study,
   "biblia-jeremias-cap-7": jeremiah7Study,
   "biblia-jeremias-cap-8": jeremiah8Study,
+  "biblia-jeremias-cap-9": jeremiah9Study,
+  "biblia-jeremias-cap-10": jeremiah10Study,
+  "biblia-jeremias-cap-11": jeremiah11Study,
+  "biblia-jeremias-cap-12": jeremiah12Study,
+  "biblia-jeremias-cap-13": jeremiah13Study,
+  "biblia-jeremias-cap-14": jeremiah14Study,
+  "biblia-jeremias-cap-15": jeremiah15Study,
+  "biblia-jeremias-cap-16": jeremiah16Study,
+  "biblia-jeremias-cap-17": jeremiah17Study,
+  "biblia-jeremias-cap-18": jeremiah18Study,
   "biblia-marcos-cap-4": mark4Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
