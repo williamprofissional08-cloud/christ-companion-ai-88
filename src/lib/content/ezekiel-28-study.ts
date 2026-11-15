@@ -1,51 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 28 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 28 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel28Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 28 denuncia o orgulho do governante de Tiro, anuncia juízo contra Sidom e conclui com esperança para Israel.",
-  "historicalContext": "Oráculos sobre cidades fenícias no ambiente da expansão neobabilônica, século VI a.C.",
+  "intro": "Ezequiel 28 denuncia a arrogância do governante de Tiro, desenvolve uma lamentação com imagens do Éden e de um querubim, anuncia juízo contra Sidom e conclui com esperança de restauração para Israel.",
+  "historicalContext": "Tiro e Sidom eram cidades fenícias importantes no comércio mediterrâneo. O capítulo pertence à coleção de oráculos contra as nações no contexto da crise de Judá no século VI a.C. A linguagem sobre o Éden, o monte santo e o querubim no lamento pelo rei de Tiro é poeticamente densa e apresenta dificuldades textuais e interpretativas; não se deve apagar o destinatário histórico da profecia.",
   "keyPoints": [
     {
-      "title": "1–10: O príncipe que se julga deus",
-      "text": "A riqueza comercial alimenta pretensão divina, desmentida pela mortalidade do governante."
+      "title": "1–10: A pretensão divina do príncipe",
+      "text": "O governante confunde riqueza e sabedoria com invulnerabilidade."
     },
     {
       "title": "11–19: O lamento pelo rei de Tiro",
-      "text": "Imagens de Éden, querubim e monte divino expressam esplendor e queda por orgulho e violência."
+      "text": "Éden, pedras preciosas e querubim retratam esplendor e queda em linguagem simbólica."
     },
     {
       "title": "20–24: O oráculo contra Sidom",
-      "text": "O juízo de outra cidade fenícia é ligado à segurança de Israel."
+      "text": "A cidade vizinha também é confrontada na coleção de juízos."
     },
     {
-      "title": "25–26: A promessa de restauração",
-      "text": "O povo disperso é reunido para habitar, construir e plantar em segurança."
+      "title": "25–26: Restauração de Israel",
+      "text": "A reunião dos dispersos conduz à imagem de casas, vinhas e segurança."
     }
   ],
-  "application": "Usar sabedoria e riqueza com humildade, rejeitar exploração e cultivar esperança de reconstrução.",
+  "application": "Reconhecer que prosperidade e competência não tornam ninguém moralmente infalível. Avaliar o impacto ético do comércio e do poder, resistir à arrogância e cultivar esperança de segurança e dignidade para comunidades deslocadas. Evitar usar o texto para demonizar povos atuais.",
   "crossReferences": [
-    "Gênesis 2:1-25",
-    "Gênesis 3:1-24",
-    "Ezequiel 27:1-36",
+    "Gênesis 2:8-17",
     "Isaías 14:4-23",
-    "Ezequiel 36:24-28",
-    "Filipenses 2:5-11"
+    "Ezequiel 26:1-21",
+    "Ezequiel 27:1-36",
+    "Ezequiel 36:22-28",
+    "Lucas 12:16-21"
   ],
   "questions": [
-    "Qual é a pretensão do príncipe de Tiro?",
-    "Como a riqueza contribui para a queda?",
-    "Por que a interpretação sobre Satanás exige cautela?",
-    "Qual esperança conclui o capítulo?"
+    "Por que a frase 'és homem, e não Deus' é decisiva?",
+    "Como o comércio aparece tanto como fonte de riqueza quanto de corrupção?",
+    "Que cuidados interpretativos exigem as imagens do Éden e do querubim?",
+    "Como Sidom se relaciona à sequência dos oráculos?",
+    "Que sinais concretos de restauração aparecem no final?"
   ],
-  "conclusion": "O capítulo contrapõe arrogância e mortalidade, violência e responsabilidade, juízo e promessa de vida restaurada.",
+  "conclusion": "A grandeza comercial de Tiro não elimina a mortalidade nem justifica arrogância; o capítulo também anuncia que a restauração de Israel envolve segurança e vida cotidiana reconstruída.",
   "prayer": "Senhor, ensina-nos a viver com humildade e justiça. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 28:1–26 (paráfrase livre autoral)",
-      "body": "**Paráfrase autoral para estudo, não tradução bíblica oficial.**\n\n**1.** Uma nova palavra profética é anunciada.\n\n**2.** O governante de Tiro se exalta como divindade, mas é humano.\n\n**3.** A sabedoria do governante é comparada à de Daniel.\n\n**4.** Inteligência e habilidade econômica acumularam ouro e prata.\n\n**5.** A riqueza crescente alimentou o orgulho.\n\n**6.** A acusação de pretender ser deus é repetida.\n\n**7.** Estrangeiros são anunciados como agentes de ataque.\n\n**8.** O governante é levado à cova e morre no mar.\n\n**9.** Diante de seus executores, ele não poderá sustentar que é deus.\n\n**10.** A sentença conclui com morte pelas mãos de estrangeiros.\n\n**11.** Outra palavra divina introduz um lamento.\n\n**12.** O rei é descrito como ápice de beleza e sabedoria.\n\n**13.** Éden e pedras preciosas compõem o cenário de esplendor.\n\n**14.** O rei é figurado como querubim no monte divino.\n\n**15.** A integridade inicial cede lugar à injustiça.\n\n**16.** O comércio violento provoca expulsão do monte de Deus.\n\n**17.** Beleza e brilho alimentam orgulho e corrompem sabedoria.\n\n**18.** Comércio injusto e profanação conduzem ao fogo destrutivo.\n\n**19.** Os povos ficam espantados com o fim do rei.\n\n**20.** Uma nova palavra divina introduz outro alvo.\n\n**21.** O profeta é enviado a falar contra Sidom.\n\n**22.** O juízo contra Sidom é apresentado como revelação da santidade divina.\n\n**23.** Peste e espada representam a calamidade anunciada.\n\n**24.** A segurança de Israel é contrastada com hostilidade dos vizinhos.\n\n**25.** O retorno dos dispersos à terra é prometido.\n\n**26.** Casas, vinhas e segurança representam vida comunitária restabelecida.",
+      "body": "Leia Ezequiel 28:1–26 no texto bíblico do aplicativo. As notas oferecem **paráfrases livres autorais** e exegese contextual, não tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 28:1-26"
       ],
@@ -127,7 +128,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 28:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma nova palavra profética é anunciada.\n\n**Exegese contextual:** O capítulo continua a série de discursos sobre Tiro iniciada em Ezequiel 26.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O Senhor dirige outra palavra ao profeta.\n\n**Exegese contextual:** A abertura introduz o oráculo contra o governante de Tiro, após os capítulos que criticam a cidade mercantil.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:1"
       ],
@@ -137,7 +138,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 28:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O governante de Tiro se exalta como divindade, mas é humano.\n\n**Exegese contextual:** A oposição entre pretensão divina e mortalidade é a tese explícita do oráculo.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O príncipe de Tiro se exalta e afirma ocupar um trono divino no mar.\n\n**Exegese contextual:** O contraste 'és homem, e não Deus' denuncia a pretensão de invulnerabilidade de um governante humano.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:2"
       ],
@@ -147,7 +148,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 28:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A sabedoria do governante é comparada à de Daniel.\n\n**Exegese contextual:** O nome pode aludir a uma figura de sabedoria antiga; sua identificação com Daniel bíblico é debatida.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O governante é ironicamente descrito como mais sábio que Daniel.\n\n**Exegese contextual:** A comparação satírica põe em questão a autopercepção de sabedoria; há debate sobre a identidade do Daniel/Danel mencionado.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:3"
       ],
@@ -157,7 +158,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 28:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Inteligência e habilidade econômica acumularam ouro e prata.\n\n**Exegese contextual:** O texto reconhece competência comercial sem equipará-la à autoridade divina.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Sabedoria e habilidade teriam produzido ouro e prata.\n\n**Exegese contextual:** O texto reconhece a competência comercial, mas questiona o uso moral da prosperidade.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:4"
       ],
@@ -167,7 +168,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 28:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A riqueza crescente alimentou o orgulho.\n\n**Exegese contextual:** A crítica recai sobre a transformação do sucesso em arrogância.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O sucesso no comércio alimenta o orgulho do governante.\n\n**Exegese contextual:** A riqueza torna-se ocasião de autoexaltação, não prova de natureza divina.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:5"
       ],
@@ -177,7 +178,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 28:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A acusação de pretender ser deus é repetida.\n\n**Exegese contextual:** A repetição marca a causa do julgamento anunciado.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Deus retoma a acusação de que o governante se considera divino.\n\n**Exegese contextual:** A repetição prepara o juízo e deixa claro o motivo central da denúncia.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:6"
       ],
@@ -187,7 +188,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 28:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Estrangeiros são anunciados como agentes de ataque.\n\n**Exegese contextual:** O poder militar externo contrasta com a confiança do governante em sua própria sabedoria.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Estrangeiros armados destruirão a beleza de sua suposta sabedoria.\n\n**Exegese contextual:** A força militar expõe os limites da inteligência e do prestígio econômico.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:7"
       ],
@@ -197,7 +198,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 28:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O governante é levado à cova e morre no mar.\n\n**Exegese contextual:** A linguagem de morte desfaz sua pretensão de imortalidade.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O príncipe descerá à cova e morrerá em meio aos mares.\n\n**Exegese contextual:** A morte desfaz a fantasia de domínio divino sobre o mundo marítimo.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:8"
       ],
@@ -207,7 +208,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 28:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Diante de seus executores, ele não poderá sustentar que é deus.\n\n**Exegese contextual:** A pergunta retórica retorna ao contraste entre ser humano e ser divino.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Diante dos executores, o príncipe não poderá sustentar sua pretensão divina.\n\n**Exegese contextual:** A pergunta retórica enfatiza a mortalidade de quem se dizia deus.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:9"
       ],
@@ -217,7 +218,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 28:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A sentença conclui com morte pelas mãos de estrangeiros.\n\n**Exegese contextual:** A expressão cultural sobre incircuncisos indica humilhação na linguagem do oráculo, não medida de dignidade humana.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O governante morrerá pelas mãos de estrangeiros.\n\n**Exegese contextual:** A expressão fúnebre ressalta derrota e desonra no horizonte cultural do oráculo, não inferioridade humana de grupos religiosos.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:10"
       ],
@@ -227,7 +228,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 28:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Outra palavra divina introduz um lamento.\n\n**Exegese contextual:** O discurso passa do príncipe ao rei de Tiro, usando imagens mais elevadas.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Uma nova palavra do Senhor introduz outra composição.\n\n**Exegese contextual:** O texto passa da denúncia direta a uma lamentação poética sobre o rei de Tiro.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:11"
       ],
@@ -237,7 +238,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 28:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O rei é descrito como ápice de beleza e sabedoria.\n\n**Exegese contextual:** A exaltação inicial prepara a queda, característica de lamentação irônica.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O rei é descrito como modelo de beleza e sabedoria.\n\n**Exegese contextual:** A linguagem exaltada constrói uma imagem de grandeza para tornar mais dramática sua queda.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:12"
       ],
@@ -247,7 +248,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 28:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Éden e pedras preciosas compõem o cenário de esplendor.\n\n**Exegese contextual:** A linguagem evoca jardim e santuário; não prova, por si só, que o personagem seja Satanás.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O rei é figurado no Éden, adornado de pedras preciosas.\n\n**Exegese contextual:** O Éden e as joias são imagens de esplendor e privilégio; há debate sobre detalhes textuais da lista de pedras.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:13"
       ],
@@ -257,7 +258,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 28:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O rei é figurado como querubim no monte divino.\n\n**Exegese contextual:** A imagem combina iconografia real e sacerdotal; traduções e interpretações do hebraico variam.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O rei é retratado com linguagem de querubim e monte santo.\n\n**Exegese contextual:** As imagens cultuais e celestes são difíceis e debatidas; a referência imediata continua sendo o rei de Tiro.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:14"
       ],
@@ -267,7 +268,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 28:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A integridade inicial cede lugar à injustiça.\n\n**Exegese contextual:** O contraste entre começo ideal e corrupção é o movimento do poema.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** A integridade inicial contrasta com a maldade posteriormente encontrada.\n\n**Exegese contextual:** A lamentação narra uma passagem da honra à corrupção, sem exigir biografia literal de um ser sobrenatural.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:15"
       ],
@@ -277,7 +278,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 28:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O comércio violento provoca expulsão do monte de Deus.\n\n**Exegese contextual:** A causa nomeada no texto é violência vinculada à atividade comercial.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** A abundância do comércio se associa à violência e à expulsão.\n\n**Exegese contextual:** O vínculo entre riqueza mercantil e injustiça é explícito; a expulsão inverte a posição privilegiada da figura poética.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:16"
       ],
@@ -287,7 +288,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 28:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Beleza e brilho alimentam orgulho e corrompem sabedoria.\n\n**Exegese contextual:** O governante é lançado à terra para que sua queda seja vista.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Beleza e esplendor levam o coração à arrogância e à queda.\n\n**Exegese contextual:** O problema não é a beleza em si, mas a soberba que corrompe a sabedoria.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:17"
       ],
@@ -297,7 +298,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 28:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Comércio injusto e profanação conduzem ao fogo destrutivo.\n\n**Exegese contextual:** A imagem de fogo saindo do próprio centro sugere colapso interno, não instrução literal.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Comércio injusto e profanação culminam em destruição pelo fogo.\n\n**Exegese contextual:** A imagem do fogo que consome desde dentro sugere colapso provocado pela própria corrupção.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:18"
       ],
@@ -307,7 +308,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 28:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os povos ficam espantados com o fim do rei.\n\n**Exegese contextual:** A linguagem absoluta de desaparecimento pertence à poesia de juízo.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Os povos ficam espantados diante da ruína de Tiro.\n\n**Exegese contextual:** O encerramento da lamentação confronta a pretensão de permanência da potência comercial.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:19"
       ],
@@ -317,7 +318,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 28:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma nova palavra divina introduz outro alvo.\n\n**Exegese contextual:** A sequência desloca o foco de Tiro para Sidom.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O Senhor dirige outra palavra a Ezequiel.\n\n**Exegese contextual:** A fórmula marca a transição do oráculo sobre Tiro para o anúncio contra Sidom.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:20"
       ],
@@ -327,7 +328,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 28:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta é enviado a falar contra Sidom.\n\n**Exegese contextual:** Sidom é outra cidade fenícia importante na costa levantina.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O profeta deve voltar o rosto contra Sidom.\n\n**Exegese contextual:** Sidom é outra cidade fenícia da costa, relacionada historicamente à região de Tiro.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:21"
       ],
@@ -337,7 +338,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 28:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O juízo contra Sidom é apresentado como revelação da santidade divina.\n\n**Exegese contextual:** A fórmula de reconhecimento do Senhor aparece repetidamente em Ezequiel.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** O Senhor anuncia juízo sobre Sidom e reconhecimento de sua santidade.\n\n**Exegese contextual:** A fórmula teológica orienta o sentido do oráculo, sem transformar o texto em autorização de agressão moderna.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:22"
       ],
@@ -347,7 +348,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 28:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Peste e espada representam a calamidade anunciada.\n\n**Exegese contextual:** O texto descreve violência histórica; não autoriza ataques contra cidades ou povos atuais.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Peste e espada são anunciadas contra Sidom.\n\n**Exegese contextual:** A linguagem severa descreve calamidade e mortalidade no gênero de oráculo contra nações.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:23"
       ],
@@ -357,7 +358,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 28:24 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A segurança de Israel é contrastada com hostilidade dos vizinhos.\n\n**Exegese contextual:** Espinhos e abrolhos são metáforas de ameaça persistente.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Israel deixará de sofrer como de espinhos ao redor.\n\n**Exegese contextual:** A metáfora da ferida representa hostilidade de vizinhos e prepara a promessa de restauração.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:24"
       ],
@@ -367,7 +368,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 28:25 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O retorno dos dispersos à terra é prometido.\n\n**Exegese contextual:** A reunião de Israel reorienta o capítulo da queda estrangeira à esperança de restauração.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Deus promete reunir Israel dos povos e fazê-lo habitar em sua terra.\n\n**Exegese contextual:** A reunião dos dispersos responde à experiência do exílio e afirma esperança comunitária.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:25"
       ],
@@ -377,7 +378,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 28:26 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Casas, vinhas e segurança representam vida comunitária restabelecida.\n\n**Exegese contextual:** O final contrasta estabilidade e trabalho pacífico com violência e arrogância.\n\n**Pergunta interpretativa:** Que aspecto da arrogância, do julgamento ou da esperança este verso destaca?",
+      "body": "**Paráfrase livre autoral:** Casas, vinhas e segurança representam a vida restaurada de Israel.\n\n**Exegese contextual:** O desfecho troca a imagem de destruição pela estabilidade cotidiana e pelo reconhecimento do Senhor.\n\n**Pergunta interpretativa:** Como a imagem deste versículo se relaciona ao orgulho, ao juízo ou à restauração no contexto do capítulo?",
       "scriptureRefs": [
         "Ezequiel 28:26"
       ],
@@ -457,7 +458,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "São debatidos a identidade de Daniel no v. 3, as imagens de Éden e querubim nos vv. 13–14, a relação entre príncipe e rei e a linguagem absoluta de destruição. Evitar leituras que apaguem o contexto de Tiro ou convertam o oráculo em mapa detalhado da origem do mal.",
+      "body": "**O rei de Tiro e Satanás:** algumas tradições cristãs veem na linguagem do Éden e do querubim uma referência tipológica ou secundária à queda de Satanás; outras a interpretam como sátira poética do rei humano. O destinatário explícito é o governante de Tiro (vv. 2,12), e o texto não apresenta uma narrativa inequívoca da origem de Satanás.\n\n**Querubim e Éden:** há variantes textuais e debates sobre as imagens cultuais e celestes; não transformar cada detalhe em biografia literal.\n\n**Daniel/Danel no v. 3:** a identificação do sábio mencionado é discutida.\n\n**Comércio:** a crítica recai sobre violência, corrupção e soberba, não sobre toda atividade econômica.",
       "scriptureRefs": [
         "Ezequiel 28:1-26"
       ],
@@ -467,7 +468,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**Gênesis 2–3:** jardim e expulsão, imagens evocadas pelo poema. **Ezequiel 27:** riqueza e comércio de Tiro. **Isaías 14:4–23:** lamento sobre rei da Babilônia, por vezes associado posteriormente a Satanás. **Ezequiel 36:24–28:** reunião e restauração de Israel. **Tiago 4:6:** advertência cristã contra orgulho.",
+      "body": "**Gênesis 2:8–17:** imagens do jardim do Éden.\n\n**Isaías 14:4–23:** sátira da queda de um governante arrogante.\n\n**Ezequiel 26:** oráculo contra Tiro.\n\n**Ezequiel 27:** lamento sobre o comércio e a queda de Tiro.\n\n**Ezequiel 36:22–28:** reunião e restauração do povo.\n\n**Lucas 12:16–21:** advertência de Jesus contra autossuficiência baseada na riqueza.",
       "scriptureRefs": [
         "Ezequiel 28:1-26"
       ],
@@ -477,7 +478,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria forçada",
-      "body": "A humildade de Cristo, descrita em Filipenses 2:5–11, oferece contraste teológico à pretensão do príncipe de Tiro de se fazer deus. Essa comparação cristã não transforma o rei de Tiro em profecia direta sobre Jesus ou Satanás.",
+      "body": "A crítica ao governante que confunde riqueza com segurança dialoga com a parábola de Jesus sobre o rico insensato (Lucas 12:16–21). A interpretação cristã das imagens de Éden e querubim é debatida e não deve ocultar a denúncia histórica contra o rei de Tiro.",
       "scriptureRefs": [
         "Ezequiel 28:1-26"
       ],
@@ -497,7 +498,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Qual é a pretensão do príncipe?** Dizer que é deus (v. 2).\n\n**2. O que alimenta sua arrogância?** Sabedoria e riqueza comercial (vv. 3–5).\n\n**3. Quem é o destinatário explícito da lamentação?** O rei de Tiro (v. 12).\n\n**4. O texto identifica Satanás diretamente?** Não; essa é leitura teológica posterior e debatida.\n\n**5. Como termina o capítulo?** Com reunião de Israel e vida segura (vv. 25–26).",
+      "body": "**1. Qual é o erro do príncipe de Tiro?** Considerar-se divino apesar de ser humano (28:2,9).\n\n**2. O que alimenta sua arrogância?** A prosperidade comercial e a riqueza (28:4–5).\n\n**3. Que imagens aparecem no lamento?** Éden, pedras preciosas, querubim e monte santo (28:12–14).\n\n**4. Contra qual cidade se dirige o segundo oráculo?** Sidom (28:21).\n\n**5. Que sinais marcam a restauração de Israel?** Reunião dos dispersos, casas, vinhas e segurança (28:25–26).",
       "scriptureRefs": [
         "Ezequiel 28:1-26"
       ],
@@ -507,7 +508,7 @@ export const ezekiel28Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — quando a riqueza vira divindade",
-      "body": "**Tema:** O limite da grandeza humana.\n\n**Proposição:** Conhecimento e prosperidade não concedem autoridade divina nem justificam violência.\n\n**Esboço:** (1) a pretensão do príncipe (1–10); (2) o esplendor e a queda do rei (11–19); (3) juízo e esperança (20–26).\n\n**Cuidado pastoral:** distinguir sentido histórico do texto e aplicações cristãs posteriores, especialmente na discussão sobre Satanás.",
+      "body": "**Tema:** Quando o sucesso se transforma em soberba.\n\n**Proposição:** Sabedoria e riqueza não autorizam autodeificação, violência ou desprezo pelos outros.\n\n**Esboço:** (1) a arrogância do príncipe (1–10); (2) esplendor e queda do rei (11–19); (3) o juízo contra Sidom (20–24); (4) esperança para Israel (25–26).\n\n**Cuidados:** apresentar com equilíbrio as leituras divergentes sobre Satanás; não ensinar como fato incontroverso que o capítulo descreve sua origem, nem usar a passagem para atacar povos contemporâneos.",
       "scriptureRefs": [
         "Ezequiel 28:1-26"
       ],
