@@ -1,11 +1,11 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 25 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 25 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel25Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 25 anuncia oráculos contra Amom, Moabe, Edom e Filístia, denunciando escárnio e vingança.",
-  "historicalContext": "Povos vizinhos de Judá no cenário da expansão babilônica e da queda de Jerusalém no século VI a.C.",
+  "intro": "Ezequiel 25 reúne quatro oráculos contra Amom, Moabe, Edom e Filístia, denunciando a alegria com o sofrimento de Judá, o desprezo e a vingança alimentada por antigas hostilidades.",
+  "historicalContext": "Os povos mencionados eram vizinhos de Judá no antigo Oriente Próximo. O capítulo integra os oráculos contra as nações, no contexto da crise de Jerusalém e da expansão babilônica do século VI a.C. Os nomes geográficos antigos não devem ser equiparados automaticamente a populações modernas.",
   "keyPoints": [
     {
       "title": "1–7: Amom — escárnio diante da queda",
@@ -24,7 +24,7 @@ export const ezekiel25Study: StudyContent = {
       "text": "O último oráculo confronta a violência persistente dos filisteus."
     }
   ],
-  "application": "Rejeitar o desprezo diante do sofrimento e a vingança, buscando justiça com compaixão.",
+  "application": "Recusar o escárnio diante da dor alheia, o oportunismo em tempos de tragédia e a perpetuação de ciclos de vingança. Distinguir os juízos proféticos antigos de qualquer autorização de violência atual.",
   "crossReferences": [
     "Gênesis 19:30-38",
     "Obadias 10-14",
@@ -34,12 +34,13 @@ export const ezekiel25Study: StudyContent = {
     "Romanos 12:17-21"
   ],
   "questions": [
-    "Quais povos são mencionados?",
-    "Por que Amom é repreendido?",
-    "Como Edom e Filístia se relacionam com a vingança?",
-    "Como evitar aplicação nacionalista indevida?"
+    "Que atitude de Amom é condenada nos versículos 3 e 6?",
+    "Como o oráculo contra Moabe descreve a vulnerabilidade de suas cidades?",
+    "Por que Edom é acusado de culpa?",
+    "Que papel têm as hostilidades antigas na denúncia contra os filisteus?",
+    "Como distinguir juízo divino e vingança humana?"
   ],
-  "conclusion": "A justiça profética ultrapassa fronteiras e confronta a crueldade de celebrar ou perpetuar o sofrimento alheio.",
+  "conclusion": "A coleção denuncia a desumanização de povos vizinhos que transformaram o sofrimento de Judá em motivo de desprezo, oportunidade ou vingança.",
   "prayer": "Senhor, dá-nos justiça sem vingança e compaixão pelos que sofrem. Amém.",
   "sections": [
     {
@@ -127,7 +128,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 25:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A palavra divina introduz oráculos dirigidos a outros povos.\n\n**Exegese contextual:** A mudança de destinatário após o cerco de Jerusalém amplia o horizonte da justiça profética.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** A palavra do Senhor introduz os oráculos contra os povos vizinhos.\n\n**Exegese contextual:** A abertura muda o foco das denúncias contra Jerusalém para a responsabilidade moral das nações ao redor.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:1"
       ],
@@ -137,7 +138,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 25:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta recebe ordem de falar contra os amonitas.\n\n**Exegese contextual:** Amom era vizinho de Judá a leste do Jordão, com Rabá como centro importante.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** O profeta é enviado a falar contra os amonitas.\n\n**Exegese contextual:** Amom situava-se a leste do Jordão; a crítica profética recai sobre atitudes concretas, não sobre etnias atuais.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:2"
       ],
@@ -147,7 +148,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 25:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Amom é acusado de celebrar a profanação do santuário e o exílio de Judá.\n\n**Exegese contextual:** A crítica é ao escárnio diante do sofrimento alheio, não à existência de um povo estrangeiro.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** Amom celebra a profanação do templo, a ruína da terra e o exílio de Judá.\n\n**Exegese contextual:** O texto condena o prazer diante da catástrofe religiosa, territorial e humana de outro povo.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:3"
       ],
@@ -157,7 +158,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 25:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A terra amonita é anunciada como ocupada por povos do Oriente.\n\n**Exegese contextual:** O quadro de acampamentos e consumo de recursos simboliza perda de autonomia e segurança.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** Povos do oriente ocuparão Amom e utilizarão seus recursos.\n\n**Exegese contextual:** A imagem dos acampamentos e rebanhos comunica perda de soberania e de controle econômico.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:4"
       ],
@@ -167,7 +168,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 25:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Rabá é descrita como pastagem para animais.\n\n**Exegese contextual:** A inversão de cidade para curral representa desolação política, não previsão ecológica precisa.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** Rabá se tornará lugar de camelos e o território de Amom, de ovelhas.\n\n**Exegese contextual:** A capital urbana convertida em pastagem representa a inversão do antigo prestígio.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:5"
       ],
@@ -177,7 +178,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 25:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Palmas e pés batidos retratam alegria diante da ruína de Israel.\n\n**Exegese contextual:** A repetição torna explícito o desprezo como objeto do oráculo.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** Palmas e pés batidos revelam alegria maliciosa com a desgraça de Israel.\n\n**Exegese contextual:** Os gestos corporais evidenciam desprezo deliberado, retomando a acusação do versículo 3.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:6"
       ],
@@ -187,7 +188,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 25:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A sentença contra Amom culmina na fórmula de reconhecimento do Senhor.\n\n**Exegese contextual:** O juízo é apresentado como resposta ao escárnio e à hostilidade.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** O anúncio contra Amom culmina em saque, dispersão e destruição.\n\n**Exegese contextual:** A linguagem severa de juízo não constitui autorização de violência contemporânea.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:7"
       ],
@@ -197,7 +198,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 25:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Moabe e Seir são acusados de diminuir a singularidade de Judá.\n\n**Exegese contextual:** A frase 'como todas as nações' expressa desprezo pela relação de Judá com seu Deus, no contexto do oráculo.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** Moabe e Seir dizem que Judá é como todas as outras nações.\n\n**Exegese contextual:** A fala despreza a identidade de Judá; Seir é frequentemente associado à região edomita.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:8"
       ],
@@ -207,7 +208,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 25:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Cidades fronteiriças de Moabe são mencionadas pelo nome.\n\n**Exegese contextual:** Bete-Jesimote, Baal-Meom e Quiriataim localizam a ameaça no território a leste do mar Morto.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** As cidades fronteiriças de Moabe ficarão vulneráveis.\n\n**Exegese contextual:** Bete-Jesimote, Baal-Meom e Quiriataim dão concretude geográfica à ameaça.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:9"
       ],
@@ -217,7 +218,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 25:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A terra de Moabe é anunciada como exposta a invasores orientais.\n\n**Exegese contextual:** O destino de Moabe é associado ao de Amom na composição literária.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** Territórios de Moabe e Amom serão entregues a povos orientais.\n\n**Exegese contextual:** A perda territorial liga os dois primeiros oráculos e ressalta a fragilidade de seus poderes.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:10"
       ],
@@ -227,7 +228,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 25:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo de Moabe termina com reconhecimento do Senhor.\n\n**Exegese contextual:** A fórmula repetida unifica as sentenças contra povos vizinhos.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** O juízo sobre Moabe termina com o reconhecimento do Senhor.\n\n**Exegese contextual:** A fórmula de reconhecimento, recorrente em Ezequiel, apresenta a dimensão teológica do oráculo.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:11"
       ],
@@ -237,7 +238,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 25:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Edom é acusado de agir com vingança contra Judá.\n\n**Exegese contextual:** A hostilidade entre vizinhos é criticada por perpetuar dano e ressentimento.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** Edom é denunciado por vingar-se de Judá.\n\n**Exegese contextual:** A retaliação contra um povo em crise é o motivo expresso do juízo.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:12"
       ],
@@ -247,7 +248,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 25:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O juízo alcança Edom de Temã a Dedã.\n\n**Exegese contextual:** Os nomes representam a extensão geográfica do território envolvido.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** A terra de Edom sofrerá devastação de Temã a Dedã.\n\n**Exegese contextual:** Os nomes indicam a abrangência do anúncio e pertencem à geografia do antigo Oriente Próximo.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:13"
       ],
@@ -257,7 +258,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 25:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Israel é descrito como instrumento de retribuição contra Edom.\n\n**Exegese contextual:** O texto é oráculo histórico de juízo, não licença para vingança privada ou violência moderna.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** A retribuição contra Edom é anunciada por intermédio de Israel.\n\n**Exegese contextual:** A linguagem profética de vingança divina não pode ser convertida em licença para retaliação pessoal.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:14"
       ],
@@ -267,7 +268,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 25:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os filisteus são acusados de vingança motivada por inimizade antiga.\n\n**Exegese contextual:** A memória de conflitos não justifica novas agressões, segundo o argumento profético.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** Os filisteus são acusados de vingança por inimizade antiga.\n\n**Exegese contextual:** O texto denuncia a persistência do rancor como motor de destruição.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:15"
       ],
@@ -277,7 +278,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 25:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A costa filisteia e os queretitas são ameaçados.\n\n**Exegese contextual:** A identificação exata dos queretitas é debatida; o texto os relaciona à região costeira.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** A costa filisteia e os queretitas são ameaçados.\n\n**Exegese contextual:** Os queretitas aparecem associados à região costeira, embora detalhes de sua identificação sejam debatidos.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:16"
       ],
@@ -287,7 +288,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 25:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A fórmula final anuncia juízo e reconhecimento do Senhor.\n\n**Exegese contextual:** A conclusão encerra a sequência de Amom, Moabe, Edom e Filístia.\n\n**Pergunta de leitura:** Qual conduta é criticada e como o anúncio de juízo se relaciona a ela?",
+      "body": "**Paráfrase livre autoral:** O oráculo encerra com retribuição e reconhecimento do Senhor.\n\n**Exegese contextual:** A conclusão fecha a sequência de quatro povos e insiste na gravidade das hostilidades.\n\n**Pergunta interpretativa:** Que atitude humana é confrontada neste versículo e por quê?",
       "scriptureRefs": [
         "Ezequiel 25:17"
       ],
@@ -347,7 +348,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "Os oráculos não são licença para identificar povos modernos como alvos do juízo. A relação histórica entre Moabe e Seir (v. 8), a identificação dos queretitas (v. 16) e a extensão exata dos eventos previstos exigem cautela. A denúncia de violência não deve ser usada para alimentar hostilidade nacionalista.",
+      "body": "**Amom e Moabe:** povos vizinhos a leste do Jordão; os oráculos criticam comportamentos históricos específicos.\n\n**Seir e Edom:** Seir é associado ao território edomita, mas a relação exata no versículo 8 requer atenção.\n\n**Queretitas:** grupo associado à costa filisteia, cuja origem exata é discutida.\n\n**Vingança divina:** a linguagem profética de retribuição não autoriza ataques contra povos atuais nem vingança pessoal.",
       "scriptureRefs": [
         "Ezequiel 25:1-17"
       ],
@@ -357,7 +358,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**Gênesis 19:30–38:** tradições de origem de Moabe e Amom. **Obadias 10–14:** crítica à violência de Edom contra Judá. **Jeremias 48–49:** outros oráculos contra Moabe, Amom e Edom. **Amós 1:6–15:** acusações contra povos vizinhos. **Romanos 12:17–21:** exortação cristã contra vingança privada.",
+      "body": "**Gênesis 19:36–38:** tradições sobre Moabe e Amom.\n\n**Números 20:14–21:** relações de Israel com Edom.\n\n**Salmos 137:7:** memória da atitude de Edom na queda de Jerusalém.\n\n**Jeremias 49:1–6:** oráculo contra Amom.\n\n**Obadias 1:10–14:** denúncia da violência de Edom contra Judá.\n\n**Romanos 12:17–21:** rejeição cristã à vingança pessoal.",
       "scriptureRefs": [
         "Ezequiel 25:1-17"
       ],
@@ -367,7 +368,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegorias inventadas",
-      "body": "A rejeição do escárnio e da vingança pode ser posta em diálogo com Jesus, que chama seus discípulos a amar inimigos (Mateus 5:43–48). Ezequiel 25, contudo, trata diretamente de povos e conflitos do antigo Oriente Próximo, não de uma previsão nominal sobre Cristo.",
+      "body": "Jesus ensina a amar os inimigos e a orar pelos perseguidores (Mateus 5:43–48). Essa aplicação cristã não apaga o contexto histórico específico dos oráculos contra os vizinhos de Judá.",
       "scriptureRefs": [
         "Ezequiel 25:1-17"
       ],
@@ -387,7 +388,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas",
-      "body": "**1. Quais povos recebem oráculos?** Amom, Moabe, Edom e Filístia.\n\n**2. Por que Amom é repreendido?** Por zombar da ruína de Judá (vv. 3, 6).\n\n**3. Qual acusação é dirigida a Edom?** Vingança contra Judá (v. 12).\n\n**4. Qual expressão se repete?** Reconhecimento de que o Senhor é Deus (vv. 5, 7, 11, 17).\n\n**5. O capítulo autoriza vingança atual?** Não; descreve oráculos históricos e deve ser lido sem incitação à violência.",
+      "body": "**1. Quais povos são denunciados?** Amom, Moabe, Edom e filisteus.\n\n**2. Por que Amom é repreendido?** Por celebrar a profanação do santuário e a desolação de Judá (25:3,6).\n\n**3. Quais cidades moabitas são citadas?** Bete-Jesimote, Baal-Meom e Quiriataim (25:9).\n\n**4. Qual é a acusação contra Edom?** Vingança contra Judá (25:12).\n\n**5. O que alimentava a hostilidade filisteia?** Antigas inimizades (25:15).",
       "scriptureRefs": [
         "Ezequiel 25:1-17"
       ],
@@ -397,7 +398,7 @@ export const ezekiel25Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — o pecado de comemorar a queda",
-      "body": "**Tema:** Justiça sem escárnio e sem vingança.\n\n**Proposição:** O sofrimento do outro não deve ser ocasião de desprezo ou retaliação.\n\n**Esboço:** (1) o escárnio de Amom (1–7); (2) o desprezo de Moabe (8–11); (3) a vingança de Edom e Filístia (12–17).\n\n**Cuidado pastoral:** não equiparar nações atuais a esses povos nem usar juízo bíblico para incentivar hostilidade.",
+      "body": "**Tema:** Não celebrar a ruína do próximo.\n\n**Proposição:** Desprezo e vingança agravam a tragédia de comunidades vulneráveis.\n\n**Esboço:** (1) Amom e o escárnio (1–7); (2) Moabe e o desprezo (8–11); (3) Edom e a vingança (12–14); (4) Filístia e o rancor (15–17).\n\n**Cuidados:** não aplicar juízos antigos indiscriminadamente a povos atuais nem confundir justiça divina com violência pessoal.",
       "scriptureRefs": [
         "Ezequiel 25:1-17"
       ],
