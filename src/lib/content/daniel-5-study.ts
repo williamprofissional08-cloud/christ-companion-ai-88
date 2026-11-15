@@ -1,47 +1,55 @@
 import type { StudyContent } from "../types";
 
-/** Daniel 5 — revisão lexical preliminar, não estudo editorialmente concluído. */
+/** Daniel 5 — paráfrases livres autorais; revisão humana pendente. */
 export const daniel5Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Estudo em revisão de Daniel 5.",
-  "historicalContext": "Contexto das cortes imperiais e literatura apocalíptica.",
+  "intro": "Daniel 5 narra o banquete de Belsazar, a profanação dos vasos do templo, a escrita na parede e a interpretação de Daniel sobre a queda iminente do reino.",
+  "historicalContext": "O relato é situado no fim do poder neobabilônico. Fontes históricas apresentam Nabonido como rei e Belsazar como seu filho e corregente; isso ajuda a compreender a promessa de terceiro lugar no reino. A identidade de Dario, o medo, e o emprego de 'pai' para Nabucodonosor são questões debatidas.",
   "keyPoints": [
     {
-      "title": "1–9: Banquete e escrita misteriosa",
-      "text": "Unidade literária de Daniel 5."
+      "title": "1–9: O banquete interrompido",
+      "text": "A profanação dos vasos sagrados antecede o sinal da escrita na parede."
     },
     {
-      "title": "10–16: Daniel é chamado",
-      "text": "Unidade literária de Daniel 5."
+      "title": "10–17: Daniel é chamado",
+      "text": "A memória da sabedoria do exilado contrasta com a incapacidade dos sábios."
     },
     {
-      "title": "17–24: Confronto do orgulho",
-      "text": "Unidade literária de Daniel 5."
+      "title": "18–24: A acusação",
+      "text": "Daniel relembra o orgulho de Nabucodonosor e denuncia Belsazar por não aprender com ele."
     },
     {
-      "title": "25–31: Interpretação e queda",
-      "text": "Unidade literária de Daniel 5."
+      "title": "25–28: A sentença escrita",
+      "text": "Contagem, pesagem e divisão anunciam o fim do domínio real."
+    },
+    {
+      "title": "29–31: A queda",
+      "text": "A recompensa de Daniel não impede a morte de Belsazar e a transferência do reino."
     }
   ],
-  "application": "Buscar fidelidade e justiça.",
+  "application": "Tratar recursos e símbolos religiosos com respeito, não usar posições de autoridade para humilhar pessoas e aprender com erros anteriores. Não usar a inscrição como fórmula para prever acontecimentos atuais.",
   "crossReferences": [
-    "Daniel 2:1-49",
-    "Daniel 7:1-28"
+    "Daniel 1:2",
+    "Daniel 2:21",
+    "Daniel 4:28-37",
+    "Provérbios 16:18",
+    "Lucas 12:16-21",
+    "Atos 17:24-25"
   ],
   "questions": [
-    "Como o tema banquete e escrita misteriosa se desenvolve em 1–9?",
-    "Como o tema daniel é chamado se desenvolve em 10–16?",
-    "Como o tema confronto do orgulho se desenvolve em 17–24?",
-    "Como o tema interpretação e queda se desenvolve em 25–31?"
+    "Por que os vasos do templo são centrais na denúncia?",
+    "Como a posição de Belsazar ajuda a explicar a recompensa de terceiro governante?",
+    "O que significam Mene, Tequel e Peres no contexto?",
+    "Por que a identidade de Dario, o medo, exige cautela?"
   ],
-  "conclusion": "O capítulo tem roteiro estrutural, notas de observação textual e aplicações preliminares; a exegese aprofundada e a revisão humana permanecem pendentes.",
+  "conclusion": "O capítulo apresenta uma avaliação moral do poder: a glória de um governante não impede sua queda quando despreza a responsabilidade diante de Deus.",
   "prayer": "Senhor, dá-nos entendimento. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — consulte os versículos",
-      "body": "Leia Daniel 5:1–31 no texto bíblico do aplicativo. Este guia contém comentários autorais preliminares, **não uma tradução ou paráfrase integral**.",
+      "body": "Leia Daniel 5:1–31 no texto bíblico do aplicativo. Os comentários individuais apresentam **paráfrases livres autorais** e análise contextual, não transcrição de tradução bíblica oficial.",
       "scriptureRefs": [
         "Daniel 5:1-31"
       ],
@@ -121,7 +129,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Daniel 5:1 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:1:** Este versículo integra o movimento **banquete e escrita misteriosa**. Observe especialmente os termos e imagens presentes no texto bíblico: **Belsazar, grande, banquete, maiorais, bebeu**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 1 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Belsazar** neste verso e como ela contribui para o desenvolvimento de **banquete e escrita misteriosa**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Belsazar promove banquete para muitos oficiais.\n\n**Exegese contextual:** O banquete público introduz o ambiente de ostentação na noite da crise do poder babilônico.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:1"
       ],
@@ -131,7 +139,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Daniel 5:2 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:2:** Este versículo integra o movimento **banquete e escrita misteriosa**. Observe especialmente os termos e imagens presentes no texto bíblico: **Belsazar, experimentado, vinho, mandou, trazer**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 2 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Belsazar** neste verso e como ela contribui para o desenvolvimento de **banquete e escrita misteriosa**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei ordena trazer utensílios sagrados tomados de Jerusalém.\n\n**Exegese contextual:** O uso dos vasos do templo é uma afronta cultual; 'pai' de Belsazar pode indicar antecessor ou ancestral, não necessariamente pai biológico.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:2"
       ],
@@ -141,7 +149,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Daniel 5:3 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:3:** Este versículo integra o movimento **banquete e escrita misteriosa**. Observe especialmente os termos e imagens presentes no texto bíblico: **trouxeram, vasos, tirados, templo, Jerusalém**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 3 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **trouxeram** neste verso e como ela contribui para o desenvolvimento de **banquete e escrita misteriosa**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os convidados bebem nos recipientes retirados do templo.\n\n**Exegese contextual:** A repetição do ato destaca profanação coletiva e cumplicidade da elite.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:3"
       ],
@@ -151,7 +159,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Daniel 5:4 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:4:** Este versículo integra o movimento **banquete e escrita misteriosa**. Observe especialmente os termos e imagens presentes no texto bíblico: **Beberam, vinho, louvaram, deuses, prata**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 4 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Beberam** neste verso e como ela contribui para o desenvolvimento de **banquete e escrita misteriosa**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os participantes louvam deuses representados por materiais.\n\n**Exegese contextual:** O contraste entre objetos cultuados e o Deus vivo prepara a denúncia de Daniel em 5:23.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:4"
       ],
@@ -161,7 +169,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Daniel 5:5 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:5:** Este versículo integra o movimento **banquete e escrita misteriosa**. Observe especialmente os termos e imagens presentes no texto bíblico: **Naquela, mesma, saíram, dedos, homem**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 5 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Naquela** neste verso e como ela contribui para o desenvolvimento de **banquete e escrita misteriosa**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Dedos de uma mão escrevem na parede do palácio.\n\n**Exegese contextual:** O sinal interrompe a festa; a escrita visível cria mistério que o rei não controla.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:5"
       ],
@@ -171,7 +179,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Daniel 5:6 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:6:** Este versículo integra o movimento **banquete e escrita misteriosa**. Observe especialmente os termos e imagens presentes no texto bíblico: **semblante, mudou, pensamentos, perturbaram, juntas**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 6 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **semblante** neste verso e como ela contribui para o desenvolvimento de **banquete e escrita misteriosa**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Belsazar fica fisicamente aterrorizado.\n\n**Exegese contextual:** A descrição corporal enfatiza o colapso de sua confiança diante do sinal.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:6"
       ],
@@ -181,7 +189,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Daniel 5:7 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:7:** Este versículo integra o movimento **banquete e escrita misteriosa**. Observe especialmente os termos e imagens presentes no texto bíblico: **clamou, trouxessem, astrólogos, caldeus, adivinhos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 7 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **clamou** neste verso e como ela contribui para o desenvolvimento de **banquete e escrita misteriosa**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei convoca sábios e promete a terceira posição no reino.\n\n**Exegese contextual:** A oferta de terceiro posto é coerente com o papel histórico de Belsazar como corregente sob Nabonido, embora detalhes do relato sejam debatidos.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:7"
       ],
@@ -191,7 +199,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Daniel 5:8 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:8:** Este versículo integra o movimento **banquete e escrita misteriosa**. Observe especialmente os termos e imagens presentes no texto bíblico: **vieram, sábios, puderam, escritura, fazer**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 8 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **vieram** neste verso e como ela contribui para o desenvolvimento de **banquete e escrita misteriosa**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Os sábios não conseguem ler nem explicar a inscrição.\n\n**Exegese contextual:** O impasse repete o limite do conhecimento cortesão observado em Daniel 2.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:8"
       ],
@@ -201,7 +209,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Daniel 5:9 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:9:** Este versículo integra o movimento **banquete e escrita misteriosa**. Observe especialmente os termos e imagens presentes no texto bíblico: **Belsazar, ficou, muito, perturbado, mudou**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 9 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Belsazar** neste verso e como ela contribui para o desenvolvimento de **banquete e escrita misteriosa**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O medo do rei e dos oficiais se intensifica.\n\n**Exegese contextual:** O pânico coletivo contrasta com a segurança ostentada no início do banquete.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:9"
       ],
@@ -211,7 +219,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Daniel 5:10 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:10:** Este versículo integra o movimento **daniel é chamado**. Observe especialmente os termos e imagens presentes no texto bíblico: **rainha, causa, palavras, maiorais, entrou**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 10 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **rainha** neste verso e como ela contribui para o desenvolvimento de **daniel é chamado**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** A rainha entra e tenta acalmar Belsazar.\n\n**Exegese contextual:** A personagem pode ser rainha-mãe, mas o texto não esclarece sua identidade.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:10"
       ],
@@ -221,7 +229,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Daniel 5:11 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:11:** Este versículo integra o movimento **daniel é chamado**. Observe especialmente os termos e imagens presentes no texto bíblico: **reino, homem, espírito, deuses, santos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 11 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **reino** neste verso e como ela contribui para o desenvolvimento de **daniel é chamado**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Ela recorda a sabedoria de Daniel sob Nabucodonosor.\n\n**Exegese contextual:** A memória institucional contrasta com o esquecimento do rei atual.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:11"
       ],
@@ -231,7 +239,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Daniel 5:12 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:12:** Este versículo integra o movimento **daniel é chamado**. Observe especialmente os termos e imagens presentes no texto bíblico: **achado, espírito, extraordinário, conhecimento, entendimento**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 12 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **achado** neste verso e como ela contribui para o desenvolvimento de **daniel é chamado**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Ela recomenda chamar Daniel, intérprete de enigmas.\n\n**Exegese contextual:** A descrição de sua competência retoma episódios anteriores do livro.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:12"
       ],
@@ -241,7 +249,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Daniel 5:13 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:13:** Este versículo integra o movimento **daniel é chamado**. Observe especialmente os termos e imagens presentes no texto bíblico: **Daniel, trazido, cativos, trouxe**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 13 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Daniel** neste verso e como ela contribui para o desenvolvimento de **daniel é chamado**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel comparece e é identificado como exilado de Judá.\n\n**Exegese contextual:** A referência à origem judaica destaca que o intérprete permanece estrangeiro na corte.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:13"
       ],
@@ -251,7 +259,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Daniel 5:14 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:14:** Este versículo integra o movimento **daniel é chamado**. Observe especialmente os termos e imagens presentes no texto bíblico: **tenho, ouvido, espírito, deuses, entendimento**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 14 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **tenho** neste verso e como ela contribui para o desenvolvimento de **daniel é chamado**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei repete o relato sobre a sabedoria de Daniel.\n\n**Exegese contextual:** Belsazar reconhece reputação, mas ainda não reconhece a soberania divina.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:14"
       ],
@@ -261,7 +269,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Daniel 5:15 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:15:** Este versículo integra o movimento **daniel é chamado**. Observe especialmente os termos e imagens presentes no texto bíblico: **agora, trazidos, sábios, astrólogos, lessem**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 15 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **agora** neste verso e como ela contribui para o desenvolvimento de **daniel é chamado**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O rei admite que seus especialistas falharam.\n\n**Exegese contextual:** O fracasso prepara a diferença entre adivinhação cortesã e revelação atribuída a Deus.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:15"
       ],
@@ -271,7 +279,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Daniel 5:16 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:16:** Este versículo integra o movimento **daniel é chamado**. Observe especialmente os termos e imagens presentes no texto bíblico: **tenho, ouvido, podes, interpretações, solucionar**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 16 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **tenho** neste verso e como ela contribui para o desenvolvimento de **daniel é chamado**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Belsazar promete honras e poder se Daniel interpretar.\n\n**Exegese contextual:** A recompensa tenta enquadrar a revelação como serviço comprado pelo rei.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:16"
       ],
@@ -281,7 +289,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Daniel 5:17 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:17:** Este versículo integra o movimento **confronto do orgulho**. Observe especialmente os termos e imagens presentes no texto bíblico: **Daniel, respondeu, Fiquem, contigo, dádivas**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 17 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Daniel** neste verso e como ela contribui para o desenvolvimento de **confronto do orgulho**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel rejeita os presentes, mas aceita interpretar.\n\n**Exegese contextual:** A recusa mostra independência moral: a mensagem de juízo não está à venda.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:17"
       ],
@@ -291,7 +299,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Daniel 5:18 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:18:** Este versículo integra o movimento **confronto do orgulho**. Observe especialmente os termos e imagens presentes no texto bíblico: **Altíssimo, Nabucodonosor, reino, grandeza, glória**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 18 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Altíssimo** neste verso e como ela contribui para o desenvolvimento de **confronto do orgulho**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel afirma que Deus concedeu grandeza a Nabucodonosor.\n\n**Exegese contextual:** A autoridade do antecessor é apresentada como dádiva divina, não propriedade absoluta.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:18"
       ],
@@ -301,7 +309,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Daniel 5:19 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:19:** Este versículo integra o movimento **confronto do orgulho**. Observe especialmente os termos e imagens presentes no texto bíblico: **grandeza, povos, nações, línguas, tremiam**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 19 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **grandeza** neste verso e como ela contribui para o desenvolvimento de **confronto do orgulho**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel descreve o alcance e a arbitrariedade do poder imperial.\n\n**Exegese contextual:** O texto não aprova matar ou humilhar por capricho; descreve o poder que exige prestação de contas.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:19"
       ],
@@ -311,7 +319,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Daniel 5:20 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:20:** Este versículo integra o movimento **confronto do orgulho**. Observe especialmente os termos e imagens presentes no texto bíblico: **coração, exaltou, espírito, endureceu, soberba**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 20 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **coração** neste verso e como ela contribui para o desenvolvimento de **confronto do orgulho**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** O orgulho de Nabucodonosor resultou em sua humilhação.\n\n**Exegese contextual:** O episódio de Daniel 4 serve como advertência histórica para Belsazar.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:20"
       ],
@@ -321,7 +329,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Daniel 5:21 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:21:** Este versículo integra o movimento **confronto do orgulho**. Observe especialmente os termos e imagens presentes no texto bíblico: **expulso, dentre, filhos, homens, mente**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 21 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **expulso** neste verso e como ela contribui para o desenvolvimento de **confronto do orgulho**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel recorda a experiência animalizada e o reconhecimento de Deus.\n\n**Exegese contextual:** A finalidade da humilhação, no relato, foi reconhecer a soberania divina.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:21"
       ],
@@ -331,7 +339,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Daniel 5:22 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:22:** Este versículo integra o movimento **confronto do orgulho**. Observe especialmente os termos e imagens presentes no texto bíblico: **Belsazar, filho, humilhaste, coração, mesmo**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 22 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Belsazar** neste verso e como ela contribui para o desenvolvimento de **confronto do orgulho**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel acusa Belsazar de não se humilhar apesar do precedente.\n\n**Exegese contextual:** A responsabilidade é agravada pelo conhecimento da história anterior.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:22"
       ],
@@ -341,7 +349,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Daniel 5:23 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:23:** Este versículo integra o movimento **confronto do orgulho**. Observe especialmente os termos e imagens presentes no texto bíblico: **disso, exaltaste, mesmo, trouxeram, vasos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 23 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **disso** neste verso e como ela contribui para o desenvolvimento de **confronto do orgulho**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel denuncia a profanação dos vasos e a adoração de ídolos.\n\n**Exegese contextual:** A crítica contrapõe deuses que não veem nem ouvem ao Deus de quem depende a vida do rei.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:23"
       ],
@@ -351,7 +359,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Daniel 5:24 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:24:** Este versículo integra o movimento **confronto do orgulho**. Observe especialmente os termos e imagens presentes no texto bíblico: **enviada, parte, esculpiu, escritura**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 24 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **enviada** neste verso e como ela contribui para o desenvolvimento de **confronto do orgulho**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel explica que a mão foi enviada como resposta divina.\n\n**Exegese contextual:** O sinal não é espetáculo arbitrário, mas juízo relacionado à conduta denunciada.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:24"
       ],
@@ -361,7 +369,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Daniel 5:25 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:25:** Este versículo integra o movimento **interpretação e queda**. Observe especialmente os termos e imagens presentes no texto bíblico: **escritura, escrita, TEQUEL, PARSIM**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 25 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **escritura** neste verso e como ela contribui para o desenvolvimento de **interpretação e queda**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Daniel lê a inscrição: Mene, Mene, Tequel e Parsim.\n\n**Exegese contextual:** Os termos aramaicos evocam contagem, pesagem e divisão; há jogo de palavras com unidades de peso.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:25"
       ],
@@ -371,7 +379,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Daniel 5:26 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:26:** Este versículo integra o movimento **interpretação e queda**. Observe especialmente os termos e imagens presentes no texto bíblico: **interpretação, daquilo, Contou, reino, acabou**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 26 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **interpretação** neste verso e como ela contribui para o desenvolvimento de **interpretação e queda**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Mene anuncia que os dias do reino foram contados.\n\n**Exegese contextual:** A duplicação do termo intensifica o anúncio de que o tempo político se encerrou.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:26"
       ],
@@ -381,7 +389,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Daniel 5:27 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:27:** Este versículo integra o movimento **interpretação e queda**. Observe especialmente os termos e imagens presentes no texto bíblico: **TEQUEL, Pesado, foste, balança, achado**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 27 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **TEQUEL** neste verso e como ela contribui para o desenvolvimento de **interpretação e queda**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Tequel declara o rei insuficiente na balança.\n\n**Exegese contextual:** A imagem da pesagem é julgamento moral, não medida literal do corpo ou riqueza.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:27"
       ],
@@ -391,7 +399,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Daniel 5:28 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:28:** Este versículo integra o movimento **interpretação e queda**. Observe especialmente os termos e imagens presentes no texto bíblico: **PERES, Dividido, reino, entregue, medos**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 28 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **PERES** neste verso e como ela contribui para o desenvolvimento de **interpretação e queda**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Peres anuncia divisão do reino entre medos e persas.\n\n**Exegese contextual:** A forma singular 'Peres' relaciona-se ao plural 'Parsim' e ao jogo sonoro com persas.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:28"
       ],
@@ -401,7 +409,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Daniel 5:29 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:29:** Este versículo integra o movimento **interpretação e queda**. Observe especialmente os termos e imagens presentes no texto bíblico: **Belsazar, ordens, vestiram, Daniel, púrpura**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 29 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Belsazar** neste verso e como ela contribui para o desenvolvimento de **interpretação e queda**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Belsazar concede a Daniel as honras prometidas.\n\n**Exegese contextual:** A promoção ocorre apesar da recusa inicial de Daniel; ela não altera a sentença.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:29"
       ],
@@ -411,7 +419,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Daniel 5:30 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:30:** Este versículo integra o movimento **interpretação e queda**. Observe especialmente os termos e imagens presentes no texto bíblico: **Naquela, mesma, noite, Belsazar, caldeus**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 30 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Naquela** neste verso e como ela contribui para o desenvolvimento de **interpretação e queda**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Belsazar morre naquela mesma noite.\n\n**Exegese contextual:** O desfecho brusco confirma a transitoriedade do poder que parecia seguro durante o banquete.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:30"
       ],
@@ -421,7 +429,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Daniel 5:31 — roteiro de leitura",
-      "body": "**Leitura orientada de Daniel 5:31:** Este versículo integra o movimento **interpretação e queda**. Observe especialmente os termos e imagens presentes no texto bíblico: **Dario, tomou, reino, idade, sessenta**.\n\n**Análise contextual:** A sequência literária deve ser acompanhada com atenção ao agente da ação, ao destinatário e ao efeito descrito. O versículo 31 precisa ser interpretado junto aos versos vizinhos, sem isolar uma expressão para construir uma doutrina ou previsão.\n\n**Pergunta de exegese:** Qual a função de **Dario** neste verso e como ela contribui para o desenvolvimento de **interpretação e queda**?\n\n**Nota editorial:** esta é uma anotação lexical preliminar baseada no texto de referência; a exposição semântica específica e a paráfrase livre integral ainda exigem revisão autoral.",
+      "body": "**Paráfrase livre autoral:** Dario, o medo, assume o reino aos sessenta e dois anos.\n\n**Exegese contextual:** A identidade histórica de 'Dario, o medo' é controversa; não deve ser afirmada como consensual.\n\n**Pergunta:** Como este versículo relaciona memória, responsabilidade moral e limites do poder?",
       "scriptureRefs": [
         "Daniel 5:31"
       ],
@@ -441,7 +449,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas",
-      "body": "Evitar identificar figuras antigas com governos modernos sem evidência, ou transformar visões e narrativas em promessas automáticas.",
+      "body": "**Belsazar e Nabonido:** registros históricos indicam Belsazar como filho e corregente de Nabonido; 'pai' de Nabucodonosor pode ser uso dinástico.\n\n**Terceiro governante:** a recompensa faz sentido em uma estrutura com rei e corregente.\n\n**Mene, Tequel, Parsim:** jogo aramaico com termos de peso e verbos de contar, pesar e dividir.\n\n**Dario, o medo:** identidade historicamente controversa; hipóteses não devem ser apresentadas como fato.",
       "scriptureRefs": [
         "Daniel 5:1-31"
       ],
@@ -451,7 +459,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas",
-      "body": "Daniel 1–7; Salmo 2; Marcos 14:62. Compare contexto e gênero.",
+      "body": "**Daniel 1:2:** vasos do templo levados à Babilônia.\n\n**Daniel 2:21:** Deus remove e estabelece reis.\n\n**Daniel 4:28–37:** orgulho e humilhação de Nabucodonosor.\n\n**Provérbios 16:18:** perigo da soberba.\n\n**Lucas 12:16–21:** riqueza não garante o futuro.\n\n**Atos 17:24–25:** a vida humana depende de Deus.",
       "scriptureRefs": [
         "Daniel 5:1-31"
       ],
@@ -461,7 +469,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão cristológica cautelosa",
-      "body": "A esperança do reino de Deus e a fidelidade são retomadas no Novo Testamento; em Daniel 7 a figura do filho de homem é especialmente relevante.",
+      "body": "Em Lucas 12:16–21, Jesus adverte contra a confiança na riqueza e na segurança material; esse ensino dialoga com a queda de Belsazar. Daniel 5, porém, não é uma profecia direta sobre Jesus.",
       "scriptureRefs": [
         "Daniel 5:1-31"
       ],
@@ -481,7 +489,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios e respostas",
-      "body": "**1. Qual tema orienta Daniel 5:1–9?** Banquete e escrita misteriosa.\n\n**2. Qual tema orienta Daniel 5:10–16?** Daniel é chamado.\n\n**3. Qual tema orienta Daniel 5:17–24?** Confronto do orgulho.\n\n**4. Qual tema orienta Daniel 5:25–31?** Interpretação e queda.",
+      "body": "**1. Qual é a profanação central?** Usar vasos do templo para beber e louvar ídolos (vv. 2–4).\n\n**2. Por que Daniel rejeita presentes?** Para afirmar independência diante da recompensa real (v. 17).\n\n**3. O que significa Mene?** O reino foi contado e chegou ao fim (v. 26).\n\n**4. O que significa Tequel?** O rei foi pesado e considerado insuficiente (v. 27).\n\n**5. O que significa Peres?** O reino será dividido e entregue a outros (v. 28).\n\n**6. O que ocorre naquela noite?** Belsazar morre (v. 30).",
       "scriptureRefs": [
         "Daniel 5:1-31"
       ],
@@ -491,7 +499,7 @@ export const daniel5Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador",
-      "body": "**Tema:** Banquete e escrita misteriosa.\n\n**Esboço:** Banquete e escrita misteriosa (1–9); Daniel é chamado (10–16); Confronto do orgulho (17–24); Interpretação e queda (25–31).\n\n**Cuidado:** respeitar o contexto e não afirmar que o guia preliminar é estudo editorialmente concluído.",
+      "body": "**Tema:** Quando o poder esquece a lição da história.\n\n**Proposição:** Quem recebe autoridade deve responder por seu uso e aprender com o passado.\n\n**Esboço:** (1) festa e profanação (1–9); (2) a voz que não se compra (10–17); (3) a memória ignorada (18–24); (4) a sentença e a queda (25–31).\n\n**Cuidados:** não especular sobre identidades históricas controversas como se fossem consensuais nem usar a inscrição para prever governos atuais.",
       "scriptureRefs": [
         "Daniel 5:1-31"
       ],
