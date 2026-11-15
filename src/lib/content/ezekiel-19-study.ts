@@ -1,47 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 19 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 19 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel19Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 19 é um lamento pela dinastia de Judá, expresso por imagens de leões capturados e videira arrancada.",
-  "historicalContext": "Crise da monarquia de Judá, deportações ao Egito e à Babilônia no fim do século VII e início do VI a.C.; identidades dos príncipes são debatidas.",
+  "intro": "Ezequiel 19 é um cântico de lamento pelos príncipes de Israel. Duas imagens — uma leoa que perde seus filhotes e uma videira arrancada — retratam a violência da liderança, a captura de reis e o colapso da monarquia de Judá.",
+  "historicalContext": "O poema reflete a crise da dinastia davídica diante de Egito e Babilônia no fim do século VII e início do VI a.C. O primeiro leão costuma ser relacionado a Jeoacaz, levado ao Egito. A identificação do segundo é debatida entre reis da fase final de Judá. A videira simboliza a casa real e sua perda de soberania.",
   "keyPoints": [
     {
-      "title": "Leoa e filhotes",
-      "text": "Governantes violentos são capturados e levados ao Egito e à Babilônia (1–9)."
+      "title": "1–4: O primeiro leão",
+      "text": "Um governante predatório é capturado e levado ao Egito."
     },
     {
-      "title": "Videira e cetros",
-      "text": "A força dinástica se transforma em desolação (10–14)."
+      "title": "5–9: O segundo leão",
+      "text": "Outro governante violento é capturado e levado à Babilônia."
     },
     {
-      "title": "Gênero de lamentação",
-      "text": "O poema convida a reconhecer perdas e responsabilidades."
+      "title": "10–11: A videira fértil",
+      "text": "A dinastia é descrita como árvore vigorosa com ramos capazes de sustentar cetros."
+    },
+    {
+      "title": "12–14: A videira arrancada",
+      "text": "O exílio e a perda dos ramos encerram a esperança imediata de governo."
     }
   ],
-  "application": "Avaliar lideranças pela proteção da comunidade, lamentar perdas e agir com justiça.",
+  "application": "Lamentar os danos causados por lideranças predatórias, sem romantizar o poder. Reconhecer que a queda de instituições atinge pessoas reais e exige responsabilidade, memória e cuidado com os vulneráveis.",
   "crossReferences": [
     "2 Reis 23:31-34",
     "2 Reis 24:8-17",
     "2 Reis 25:1-7",
+    "Jeremias 22:10-30",
     "Ezequiel 17:1-24",
-    "Lamentações 4:20",
-    "Lucas 1:32-33"
+    "Gênesis 49:9-10"
   ],
   "questions": [
-    "Qual o gênero do capítulo?",
-    "Que destino têm os dois filhotes?",
-    "Qual o significado dos cetros da videira?",
-    "Por que a identificação dos reis é debatida?"
+    "Por que o capítulo é chamado de lamentação?",
+    "Que atitude dos leões é condenada?",
+    "Qual o destino do primeiro e do segundo leão?",
+    "O que representam os ramos que servem de cetros?",
+    "Por que o fogo que sai da própria videira é uma imagem importante?"
   ],
-  "conclusion": "O lamento denuncia o fracasso de governantes e suas consequências coletivas, sem eliminar a responsabilidade de aprender com a história.",
+  "conclusion": "O lamento retrata a ruína da monarquia por meio de governantes capturados e de uma videira sem cetro. A perda do poder é descrita com dor, mas sem ocultar a violência de seus líderes.",
   "prayer": "Senhor, ensina-nos a cultivar liderança justa e compaixão pelos que sofrem. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 19:1–14 (paráfrase livre)",
-      "body": "**Paráfrase livre autoral, material de estudo, não tradução bíblica oficial.**\n\n**1.** O profeta recebe ordem de entoar uma lamentação pelos príncipes de Israel.\n\n**2.** A mãe é retratada como leoa entre outros leões, criando seus filhotes.\n\n**3.** Um filhote cresce, torna-se leão e aprende a devorar pessoas.\n\n**4.** As nações capturam o leão e o levam ao Egito.\n\n**5.** A leoa, frustrada na esperança anterior, escolhe outro filhote.\n\n**6.** O segundo filhote também cresce como leão predador.\n\n**7.** O bramido do leão acompanha devastação de cidades e sofrimento de viúvas.\n\n**8.** Povos vizinhos estendem redes e capturam o segundo leão.\n\n**9.** O leão é levado preso à Babilônia, e sua voz deixa de soar nos montes de Israel.\n\n**10.** A mãe passa a ser retratada como videira fértil junto a águas.\n\n**11.** Ramos fortes se elevam como cetros de governantes.\n\n**12.** A videira é arrancada; vento oriental e fogo destroem seus ramos.\n\n**13.** A videira passa a estar plantada em região seca e sedenta.\n\n**14.** Fogo de um dos ramos consome o fruto, e não resta cetro forte.",
+      "body": "Leia Ezequiel 19:1–14 no texto bíblico do aplicativo. As notas usam **paráfrases livres autorais**, não uma tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 19:1-14"
       ],
@@ -83,7 +88,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 19:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta recebe ordem de entoar uma lamentação pelos príncipes de Israel.\n\n**Exegese contextual:** O gênero é canto fúnebre político; não se deve ler a lamentação como celebração da derrota.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** Ezequiel deve entoar uma lamentação pelos governantes de Israel.\n\n**Exegese contextual:** O gênero é fúnebre: a passagem não celebra a queda da dinastia, mas a apresenta como tragédia.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:1"
       ],
@@ -93,7 +98,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 19:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A mãe é retratada como leoa entre outros leões, criando seus filhotes.\n\n**Exegese contextual:** A figura materna representa a comunidade ou dinastia real; as identidades exatas são debatidas.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** A mãe dos príncipes é figurada como leoa entre leões.\n\n**Exegese contextual:** A leoa representa a comunidade ou casa real que cria seus governantes; a identificação exata é debatida.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:2"
       ],
@@ -103,7 +108,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 19:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Um filhote cresce, torna-se leão e aprende a devorar pessoas.\n\n**Exegese contextual:** A imagem denuncia violência régia e não descreve comportamento zoológico para imitação.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** Um filhote cresce e aprende a devorar pessoas.\n\n**Exegese contextual:** A figura denuncia poder real violento, transformado em ameaça aos súditos.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:3"
       ],
@@ -113,7 +118,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 19:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** As nações capturam o leão e o levam ao Egito.\n\n**Exegese contextual:** Frequentemente associado a Jeoacaz, levado ao Egito por Faraó Neco (2 Reis 23:31–34); a associação é provável, não explicitada no poema.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** As nações capturam o leão e o levam ao Egito.\n\n**Exegese contextual:** O episódio é frequentemente associado ao rei Jeoacaz, levado pelo faraó Neco (2 Reis 23:31–34).\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:4"
       ],
@@ -123,7 +128,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 19:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A leoa, frustrada na esperança anterior, escolhe outro filhote.\n\n**Exegese contextual:** A narrativa passa a um segundo governante, mantendo o foco na instabilidade dinástica.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** A leoa, frustrada em sua esperança, cria outro filhote.\n\n**Exegese contextual:** A sucessão mostra tentativa de preservar a dinastia após a perda do primeiro governante.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:5"
       ],
@@ -133,7 +138,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 19:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O segundo filhote também cresce como leão predador.\n\n**Exegese contextual:** A repetição liga a atuação do novo príncipe à violência do primeiro.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** O segundo filhote também se torna predador.\n\n**Exegese contextual:** A repetição associa a nova liderança ao mesmo padrão de violência.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:6"
       ],
@@ -143,7 +148,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 19:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O bramido do leão acompanha devastação de cidades e sofrimento de viúvas.\n\n**Exegese contextual:** A linguagem enfatiza danos da liderança violenta; a formulação do hebraico neste verso tem variantes de tradução.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** Seu rugido acompanha a devastação de cidades e famílias.\n\n**Exegese contextual:** A imagem poética ressalta danos sociais do exercício predatório do poder.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:7"
       ],
@@ -153,7 +158,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 19:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Povos vizinhos estendem redes e capturam o segundo leão.\n\n**Exegese contextual:** A coalizão é descrita em linguagem poética de caça; a identidade do príncipe é discutida.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** Nações vizinhas cercam e capturam o segundo leão.\n\n**Exegese contextual:** A armadilha representa a derrota militar e a perda de autonomia do governante.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:8"
       ],
@@ -163,7 +168,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 19:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O leão é levado preso à Babilônia, e sua voz deixa de soar nos montes de Israel.\n\n**Exegese contextual:** Pode aludir a Joaquim, deportado em 597 a.C., ou a Zedequias em leitura alternativa; não há identificação nominal no capítulo.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** O leão é levado cativo à Babilônia e sua voz silencia.\n\n**Exegese contextual:** A identificação do segundo rei é discutida, frequentemente relacionada a Joaquim ou Zedequias; a deportação simboliza o fim da voz real.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:9"
       ],
@@ -173,7 +178,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 19:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A mãe passa a ser retratada como videira fértil junto a águas.\n\n**Exegese contextual:** A segunda metáfora muda de animais para vegetação, descrevendo condições de vigor da casa real.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** A mãe é agora comparada a videira fértil junto às águas.\n\n**Exegese contextual:** A segunda metáfora muda de ferocidade animal para potencial de vida e estabilidade da casa real.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:10"
       ],
@@ -183,7 +188,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 19:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Ramos fortes se elevam como cetros de governantes.\n\n**Exegese contextual:** A imagem associa a videira à capacidade dinástica de produzir líderes.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** Os ramos fortes da videira servem como cetros.\n\n**Exegese contextual:** A imagem liga prosperidade da dinastia à capacidade de produzir governantes.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:11"
       ],
@@ -193,7 +198,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 19:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A videira é arrancada; vento oriental e fogo destroem seus ramos.\n\n**Exegese contextual:** O colapso político é apresentado como perda de força e futuro; a metáfora do vento oriental pode evocar ameaça babilônica.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** A videira é arrancada e seus ramos secam e queimam.\n\n**Exegese contextual:** A sequência representa destruição política, exílio e colapso da monarquia.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:12"
       ],
@@ -203,7 +208,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 19:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A videira passa a estar plantada em região seca e sedenta.\n\n**Exegese contextual:** O deserto contrasta com as águas abundantes do v. 10 e simboliza exílio e vulnerabilidade.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** A videira é transplantada para um deserto seco.\n\n**Exegese contextual:** O cenário de aridez expressa a condição de desterro e perda de recursos.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:13"
       ],
@@ -213,7 +218,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 19:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Fogo de um dos ramos consome o fruto, e não resta cetro forte.\n\n**Exegese contextual:** O poema encerra afirmando ser uma lamentação; a destruição também é ligada a decisões internas da liderança.\n\n**Distinção entre texto e hipótese:** O poema oferece imagens; identificar reis específicos requer cotejar outras fontes históricas.",
+      "body": "**Paráfrase livre autoral:** O fogo que sai de um ramo destrói a própria videira, sem cetro restante.\n\n**Exegese contextual:** A imagem pode sugerir responsabilidade interna da liderança na ruína; o poema termina insistindo no lamento.\n\n**Pergunta interpretativa:** Como a imagem do leão ou da videira descreve o exercício e a perda do poder real?",
       "scriptureRefs": [
         "Ezequiel 19:14"
       ],
@@ -253,7 +258,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "debates",
       "title": "Interpretações debatidas — quem são os dois filhotes?",
-      "body": "O primeiro filhote é frequentemente identificado como Jeoacaz, deportado ao Egito. O segundo é interpretado como Joaquim, deportado à Babilônia, ou Zedequias, cujo fim também se liga à Babilônia. O texto não nomeia os filhotes; por isso, nenhuma identificação deve ser apresentada como certeza textual.",
+      "body": "**A leoa:** pode representar a dinastia ou a comunidade de Judá; o poema não fornece uma identificação literal única.\n\n**O primeiro leão:** frequentemente associado a Jeoacaz, levado ao Egito (2 Reis 23:31–34).\n\n**O segundo leão:** sua identificação é debatida, especialmente entre Joaquim e Zedequias, diante de diferentes detalhes da conquista babilônica.\n\n**A videira e o fogo:** a imagem pode sugerir que decisões da própria liderança contribuíram para o colapso, sem excluir a pressão imperial.",
       "scriptureRefs": [
         "Ezequiel 19:1-14"
       ],
@@ -273,7 +278,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**2 Reis 23:31–34:** Jeoacaz e Egito. **2 Reis 24:8–17:** Joaquim e Babilônia. **2 Reis 25:1–7:** queda de Zedequias. **Ezequiel 17:1–24:** outra alegoria vegetal sobre a monarquia, mas com promessa final. **Lamentações 4:20:** linguagem de perda do governante.",
+      "body": "**2 Reis 23:31–34:** Jeoacaz levado ao Egito.\n\n**2 Reis 24:8–17:** Joaquim deportado para Babilônia.\n\n**2 Reis 25:1–7:** queda de Jerusalém sob Zedequias.\n\n**Jeremias 22:10–30:** lamentos e juízos contra reis de Judá.\n\n**Ezequiel 17:** parábola política com imagens vegetais.\n\n**Gênesis 49:9–10:** imagens de leão e cetro na tradição de Judá.",
       "scriptureRefs": [
         "Ezequiel 19:1-14"
       ],
@@ -283,7 +288,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegoria forçada",
-      "body": "O fracasso dos príncipes de Judá cria, para leitores cristãos, contraste com a expectativa de um reinado justo associada a Jesus (Lucas 1:32–33). Ezequiel 19, porém, é um lamento histórico e não identifica seus filhotes ou ramos como figuras diretas de Cristo.",
+      "body": "Na leitura cristã, a perda do cetro de Judá pode ser relacionada à esperança de um reinado justo cumprida em Cristo (Lucas 1:32–33). Essa conexão teológica posterior não deve apagar o lamento histórico pelos reis capturados e pela população atingida.",
       "scriptureRefs": [
         "Ezequiel 19:1-14"
       ],
@@ -303,7 +308,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Qual é o gênero declarado no início?** Lamentação (v. 1).\n\n**2. Para onde vai o primeiro filhote capturado?** Egito (v. 4).\n\n**3. Para onde é levado o segundo?** Babilônia (v. 9).\n\n**4. O que representam os ramos fortes da videira?** Cetros e liderança régia (v. 11).\n\n**5. O texto identifica os filhotes nominalmente?** Não; as identificações históricas são inferências.",
+      "body": "**1. Qual é o gênero do capítulo?** Lamentação (19:1,14).\n\n**2. Para onde é levado o primeiro leão?** Egito (19:4).\n\n**3. Para onde é levado o segundo leão?** Babilônia (19:9).\n\n**4. O que representam os ramos fortes da videira?** Cetros ou governantes (19:11).\n\n**5. O que resta ao fim?** Nenhum ramo forte que sirva de cetro (19:14).",
       "scriptureRefs": [
         "Ezequiel 19:1-14"
       ],
@@ -313,7 +318,7 @@ export const ezekiel19Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — quando o poder se torna predador",
-      "body": "**Tema:** O lamento por uma liderança que falhou.\n\n**Proposição:** A queda dos príncipes mostra como violência e infidelidade política ferem a comunidade.\n\n**Esboço:** (1) os filhotes e a captura (1–9); (2) a videira arrancada (10–14); (3) o dever de lamentar e aprender.\n\n**Cuidado pastoral:** não converter a lamentação em propaganda partidária nem afirmar como certo o que é debatido na identificação dos reis.",
+      "body": "**Tema:** Quando o poder perde sua vocação de cuidar.\n\n**Proposição:** Lideranças predatórias podem destruir a própria comunidade que deveriam proteger.\n\n**Esboço:** (1) a leoa e o primeiro rei (1–4); (2) a repetição da violência (5–9); (3) a videira promissora (10–11); (4) a dinastia arrancada (12–14).\n\n**Cuidados:** não afirmar como certa a identidade do segundo leão; respeitar o caráter de lamento e evitar usar a tragédia como celebração partidária.",
       "scriptureRefs": [
         "Ezequiel 19:1-14"
       ],
