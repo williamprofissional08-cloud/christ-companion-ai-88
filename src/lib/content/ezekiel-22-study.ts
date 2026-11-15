@@ -1,47 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 22 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 22 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel22Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 22 denuncia violência, idolatria, exploração e falhas de liderança em Jerusalém.",
-  "historicalContext": "Oráculo do exílio babilônico no contexto da crise de Jerusalém, início do século VI a.C.",
+  "intro": "Ezequiel 22 denuncia Jerusalém como cidade de sangue, descreve sua crise por meio da metáfora da fundição e responsabiliza governantes, sacerdotes, profetas e a população pela exploração dos vulneráveis.",
+  "historicalContext": "O capítulo pertence às denúncias de Ezequiel contra Jerusalém antes da consumação da conquista babilônica no século VI a.C. Suas acusações abrangem derramamento de sangue, idolatria, corrupção econômica, abuso de poder, falsas mensagens religiosas e opressão de estrangeiros, órfãos e viúvas.",
   "keyPoints": [
     {
-      "title": "1–16: Acusações contra a cidade",
-      "text": "Violência, idolatria, injustiça contra vulneráveis, transgressões familiares e corrupção econômica aparecem no mesmo quadro ético."
+      "title": "1–16: A cidade de sangue",
+      "text": "Violência, idolatria, corrupção e abuso contra vulneráveis fundamentam a acusação."
     },
     {
-      "title": "17–22: Metais e forno",
-      "text": "A imagem metalúrgica retrata o cerco como juízo, não uma purificação automática que dispensaria arrependimento."
+      "title": "17–22: A escória no forno",
+      "text": "A metáfora da fundição descreve a crise e o juízo sobre Jerusalém."
     },
     {
-      "title": "23–31: Lideranças e a brecha",
-      "text": "Profetas, sacerdotes, príncipes e povo são examinados, e ninguém é encontrado para reparar a brecha."
+      "title": "23–29: Lideranças e povo",
+      "text": "Profetas, sacerdotes, governantes e cidadãos são responsabilizados pela injustiça."
+    },
+    {
+      "title": "30–31: A brecha sem defensor",
+      "text": "A ausência de quem intervenha simboliza a falência da responsabilidade coletiva."
     }
   ],
-  "application": "Praticar justiça social, proteger vulneráveis e exigir integridade de lideranças.",
+  "application": "Examinar como abuso de autoridade, fraude religiosa e exploração econômica afetam pessoas vulneráveis. Defender justiça, transparência e cuidado com estrangeiros, órfãos e viúvas. A imagem de 'estar na brecha' pede responsabilidade e proteção, não autoriza violência.",
   "crossReferences": [
     "Êxodo 22:21-24",
-    "Levítico 19:33-36",
+    "Levítico 19:33-34",
     "Isaías 1:21-23",
-    "Jeremias 6:13-14",
-    "Ezequiel 13:10-15",
-    "Mateus 23:23"
+    "Jeremias 6:13-15",
+    "Ezequiel 13:10-16",
+    "Tiago 5:1-6"
   ],
   "questions": [
-    "Quais grupos sofrem opressão?",
-    "Como o capítulo relaciona culto e justiça?",
-    "O que simboliza a escória?",
-    "Quem deveria reparar a brecha?"
+    "Quais injustiças aparecem nos versículos 6–12?",
+    "Que grupos vulneráveis são nomeados no versículo 7?",
+    "O que a metáfora da escória acrescenta à denúncia?",
+    "Como sacerdotes, profetas e governantes falham?",
+    "O que significa a ausência de alguém na brecha?"
   ],
-  "conclusion": "O capítulo denuncia a combinação de culto corrompido e injustiça, responsabilizando governantes, religiosos e comunidade.",
+  "conclusion": "O capítulo mostra que uma comunidade não se sustenta por aparência religiosa quando suas instituições e seus membros toleram sangue, corrupção e exploração.",
   "prayer": "Senhor, faz-nos agir com justiça e defender a dignidade de cada pessoa. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 22:1–31 (paráfrase livre autoral)",
-      "body": "**Paráfrase livre para estudo, não tradução bíblica oficial.**\n\n**1.** Uma nova palavra profética é anunciada.\n\n**2.** O profeta é chamado a confrontar a cidade marcada por sangue.\n\n**3.** A cidade acumula derramamento de sangue e fabricação de ídolos.\n\n**4.** Sangue e idolatria tornam próxima a prestação de contas.\n\n**5.** Povos próximos e distantes zombarão da cidade em crise.\n\n**6.** Autoridades usam seu poder para derramar sangue.\n\n**7.** Pais são desonrados; estrangeiros, órfãos e viúvas sofrem opressão.\n\n**8.** O sagrado é desprezado e o sábado é profanado.\n\n**9.** Calúnia mortal e práticas cultuais corruptas se espalham.\n\n**10.** Há violações graves de limites sexuais e familiares.\n\n**11.** São denunciados adultério, abuso intrafamiliar e outras transgressões sexuais.\n\n**12.** Subornos, juros abusivos e extorsão enriquecem exploradores.\n\n**13.** Deus denuncia ganhos ilícitos e derramamento de sangue.\n\n**14.** O oráculo pergunta se a cidade resistirá ao juízo.\n\n**15.** A dispersão entre as nações é anunciada.\n\n**16.** A humilhação revelará a gravidade do afastamento.\n\n**17.** Outra palavra divina introduz uma nova imagem.\n\n**18.** Israel é comparado a metais impuros e escória no forno.\n\n**19.** A cidade se tornará lugar de reunião dos metais rejeitados.\n\n**20.** O forno recebe diversos metais sob calor intenso.\n\n**21.** O fogo continua a metáfora do juízo.\n\n**22.** O resultado do forno conduz ao reconhecimento do Senhor.\n\n**23.** Uma terceira palavra profética inicia o diagnóstico final.\n\n**24.** A terra é descrita como não purificada nem regada.\n\n**25.** Profetas predatórios exploram pessoas e bens.\n\n**26.** Sacerdotes deixam de distinguir santo e profano.\n\n**27.** Príncipes agem como lobos em busca de lucro violento.\n\n**28.** Profetas encobrem a injustiça com mensagens falsas.\n\n**29.** A população também pratica extorsão e oprime pobres e estrangeiros.\n\n**30.** Deus procura alguém que repare a brecha e interceda, mas não encontra.\n\n**31.** O oráculo termina com a declaração de juízo sobre as práticas denunciadas.",
+      "body": "Leia Ezequiel 22:1–31 no texto bíblico do aplicativo. Os comentários apresentam **paráfrases livres autorais**, não uma tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 22:1-31"
       ],
@@ -113,7 +118,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 22:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma nova palavra profética é anunciada.\n\n**Exegese contextual:** A fórmula abre a denúncia sem ainda enumerar crimes.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Uma palavra do Senhor introduz a denúncia.\n\n**Exegese contextual:** A fórmula abre uma acusação pública contra a violência e a corrupção em Jerusalém.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:1"
       ],
@@ -123,7 +128,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 22:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O profeta é chamado a confrontar a cidade marcada por sangue.\n\n**Exegese contextual:** A repetição da pergunta enfatiza o dever de expor injustiças, não de ocultá-las.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** O profeta deve confrontar a cidade marcada por sangue.\n\n**Exegese contextual:** A repetição da pergunta reforça a obrigação de expor injustiças concretas.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:2"
       ],
@@ -133,7 +138,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 22:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A cidade acumula derramamento de sangue e fabricação de ídolos.\n\n**Exegese contextual:** Violência e idolatria aparecem juntas como marcas do colapso moral.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Jerusalém derrama sangue e fabrica ídolos.\n\n**Exegese contextual:** A denúncia reúne violência contra pessoas e infidelidade religiosa.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:3"
       ],
@@ -143,7 +148,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 22:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Sangue e idolatria tornam próxima a prestação de contas.\n\n**Exegese contextual:** O oráculo relaciona atos públicos a consequências históricas.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** O sangue e os ídolos tornam a cidade culpada e exposta ao desprezo.\n\n**Exegese contextual:** O texto liga a crise nacional às práticas da própria comunidade.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:4"
       ],
@@ -153,7 +158,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 22:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Povos próximos e distantes zombarão da cidade em crise.\n\n**Exegese contextual:** A vergonha internacional contrasta com a pretensão de segurança de Jerusalém.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Povos próximos e distantes zombarão da cidade.\n\n**Exegese contextual:** A reputação de Jerusalém se deteriora diante da violência interna.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:5"
       ],
@@ -163,7 +168,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 22:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Autoridades usam seu poder para derramar sangue.\n\n**Exegese contextual:** A acusação começa pelos governantes: força institucional se tornou instrumento de abuso.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Os governantes usam seu poder para derramar sangue.\n\n**Exegese contextual:** A liderança é acusada de converter autoridade em instrumento de opressão.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:6"
       ],
@@ -173,7 +178,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 22:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Pais são desonrados; estrangeiros, órfãos e viúvas sofrem opressão.\n\n**Exegese contextual:** O critério ético inclui pessoas com pouca proteção social e jurídica.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Pais são desprezados; estrangeiros, órfãos e viúvas são oprimidos.\n\n**Exegese contextual:** O versículo nomeia grupos vulneráveis e apresenta sua proteção como critério de justiça.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:7"
       ],
@@ -183,7 +188,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 22:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O sagrado é desprezado e o sábado é profanado.\n\n**Exegese contextual:** A crítica cultual não substitui a crítica social: ambas são inseparáveis no discurso.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Coisas santas e sábados são desprezados.\n\n**Exegese contextual:** A infidelidade cultual acompanha o abandono da responsabilidade social.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:8"
       ],
@@ -193,7 +198,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 22:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Calúnia mortal e práticas cultuais corruptas se espalham.\n\n**Exegese contextual:** A referência a montes pode evocar lugares de culto; não é acusação genérica contra todo monte.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Calúnia mortal, culto indevido e conduta sexual abusiva se espalham.\n\n**Exegese contextual:** A combinação de acusações descreve desordem comunitária, sem equiparar automaticamente todas as práticas.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:9"
       ],
@@ -203,7 +208,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 22:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Há violações graves de limites sexuais e familiares.\n\n**Exegese contextual:** A linguagem de nudez pertence ao vocabulário jurídico da Torá; exige cuidado pastoral.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** O texto denuncia violações de limites familiares e abuso sexual.\n\n**Exegese contextual:** A linguagem de pureza antiga exige contexto; nenhuma vítima de violência deve ser culpabilizada.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:10"
       ],
@@ -213,7 +218,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 22:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** São denunciados adultério, abuso intrafamiliar e outras transgressões sexuais.\n\n**Exegese contextual:** A enumeração evidencia exploração e violação de vínculos; não se deve culpabilizar vítimas.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** São denunciadas relações sexuais ilícitas e abuso dentro da família.\n\n**Exegese contextual:** A acusação enfatiza a quebra de proteção e confiança nas relações familiares.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:11"
       ],
@@ -223,7 +228,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 22:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Subornos, juros abusivos e extorsão enriquecem exploradores.\n\n**Exegese contextual:** A lembrança de Deus está ligada à justiça econômica e à vida do próximo.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Suborno, juros exploratórios e extorsão acompanham o esquecimento de Deus.\n\n**Exegese contextual:** A crítica conecta corrupção judicial e exploração econômica à ruptura ética da aliança.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:12"
       ],
@@ -233,7 +238,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 22:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus denuncia ganhos ilícitos e derramamento de sangue.\n\n**Exegese contextual:** O gesto de bater as mãos intensifica a reprovação.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Deus reage ao ganho injusto e ao sangue derramado.\n\n**Exegese contextual:** O gesto de bater as mãos expressa indignação diante da violência e da ganância.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:13"
       ],
@@ -243,7 +248,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 22:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo pergunta se a cidade resistirá ao juízo.\n\n**Exegese contextual:** As perguntas retóricas desmontam a confiança arrogante no poder.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** A cidade é questionada sobre sua resistência diante do juízo.\n\n**Exegese contextual:** A pergunta retórica desmonta a confiança na força dos poderosos.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:14"
       ],
@@ -253,7 +258,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 22:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A dispersão entre as nações é anunciada.\n\n**Exegese contextual:** O exílio aparece como consequência coletiva da crise.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** O povo será espalhado entre as nações.\n\n**Exegese contextual:** A dispersão antecipa a experiência do exílio como consequência histórica do desastre.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:15"
       ],
@@ -263,7 +268,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 22:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A humilhação revelará a gravidade do afastamento.\n\n**Exegese contextual:** A fórmula de reconhecimento do Senhor encerra a primeira unidade.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** A humilhação diante das nações conduzirá ao reconhecimento do Senhor.\n\n**Exegese contextual:** A fórmula teológica fecha a primeira denúncia.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:16"
       ],
@@ -273,7 +278,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 22:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Outra palavra divina introduz uma nova imagem.\n\n**Exegese contextual:** O discurso passa da lista de crimes à metáfora da fundição.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Outra palavra divina introduz a imagem da fundição.\n\n**Exegese contextual:** O oráculo muda de acusação judicial para metáfora metalúrgica.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:17"
       ],
@@ -283,7 +288,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 22:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Israel é comparado a metais impuros e escória no forno.\n\n**Exegese contextual:** A imagem não desumaniza pessoas atuais; expressa julgamento profético da comunidade histórica.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Israel é comparado à escória de metais no forno.\n\n**Exegese contextual:** A imagem retrata perda de valor moral, não desvalorização intrínseca de pessoas.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:18"
       ],
@@ -293,7 +298,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 22:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A cidade se tornará lugar de reunião dos metais rejeitados.\n\n**Exegese contextual:** O ajuntamento não significa restauração nesta unidade, mas exposição ao fogo.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** A escória será reunida no centro de Jerusalém.\n\n**Exegese contextual:** A cidade é figurada como forno em que se concentra a crise.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:19"
       ],
@@ -303,7 +308,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 22:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O forno recebe diversos metais sob calor intenso.\n\n**Exegese contextual:** O cerco é retratado como processo de fundição, não como técnica metalúrgica literal.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Diversos metais são ajuntados para o fogo da fundição.\n\n**Exegese contextual:** A enumeração reforça a intensidade e abrangência do juízo.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:20"
       ],
@@ -313,7 +318,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 22:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O fogo continua a metáfora do juízo.\n\n**Exegese contextual:** A repetição intensifica a certeza do anúncio.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** O fogo é soprado sobre os reunidos.\n\n**Exegese contextual:** A repetição intensifica a metáfora da cidade como forno.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:21"
       ],
@@ -323,7 +328,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 22:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O resultado do forno conduz ao reconhecimento do Senhor.\n\n**Exegese contextual:** O encerramento retoma o motivo de conhecer quem fala.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** A fundição culmina no reconhecimento do Senhor.\n\n**Exegese contextual:** A imagem expressa julgamento, não uma receita literal de purificação pela violência.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:22"
       ],
@@ -333,7 +338,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 22:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma terceira palavra profética inicia o diagnóstico final.\n\n**Exegese contextual:** A nova seção detalha responsabilidades de diferentes grupos.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Uma terceira palavra do Senhor introduz nova acusação.\n\n**Exegese contextual:** A seção seguinte examina a responsabilidade de instituições e grupos sociais.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:23"
       ],
@@ -343,7 +348,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-24",
       "title": "Ezequiel 22:24 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A terra é descrita como não purificada nem regada.\n\n**Exegese contextual:** A imagem de secura sugere ausência de renovação e cuidado.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** A terra é descrita como não purificada nem regada.\n\n**Exegese contextual:** A imagem de esterilidade comunica ausência de renovação e cuidado.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:24"
       ],
@@ -353,7 +358,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-25",
       "title": "Ezequiel 22:25 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Profetas predatórios exploram pessoas e bens.\n\n**Exegese contextual:** A comparação com leões denuncia líderes religiosos que lucram com a destruição.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Profetas são acusados de devorar pessoas e acumular riquezas.\n\n**Exegese contextual:** A liderança religiosa é retratada como predadora, explorando vidas e propriedades.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:25"
       ],
@@ -363,7 +368,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-26",
       "title": "Ezequiel 22:26 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Sacerdotes deixam de distinguir santo e profano.\n\n**Exegese contextual:** A crítica acusa falha no ensino e na prática da lei, não mera imperfeição ritual.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Sacerdotes confundem santo e profano e desprezam a lei.\n\n**Exegese contextual:** A acusação destaca falha no ensino, no discernimento e na guarda das práticas sagradas.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:26"
       ],
@@ -373,7 +378,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-27",
       "title": "Ezequiel 22:27 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Príncipes agem como lobos em busca de lucro violento.\n\n**Exegese contextual:** A imagem denuncia o abuso político e econômico.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Governantes são comparados a lobos em busca de lucro.\n\n**Exegese contextual:** A metáfora denuncia violência política e exploração econômica.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:27"
       ],
@@ -383,7 +388,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-28",
       "title": "Ezequiel 22:28 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Profetas encobrem a injustiça com mensagens falsas.\n\n**Exegese contextual:** O reboco frágil é figura de legitimação religiosa da corrupção.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Profetas encobrem a corrupção com falsas mensagens divinas.\n\n**Exegese contextual:** A imagem de rebocar uma parede com material frágil representa legitimação religiosa da injustiça.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:28"
       ],
@@ -393,7 +398,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-29",
       "title": "Ezequiel 22:29 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A população também pratica extorsão e oprime pobres e estrangeiros.\n\n**Exegese contextual:** A responsabilidade social não se limita às elites, embora o poder dos líderes seja destacado.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** A população também oprime pobres e estrangeiros.\n\n**Exegese contextual:** A responsabilidade ética não se limita à elite; a violência se espalha pela sociedade.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:29"
       ],
@@ -403,7 +408,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-30",
       "title": "Ezequiel 22:30 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus procura alguém que repare a brecha e interceda, mas não encontra.\n\n**Exegese contextual:** A brecha é imagem de defesa moral e comunitária; o texto denuncia ausência de resposta responsável.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** Deus procura alguém que se coloque na brecha, mas ninguém é encontrado.\n\n**Exegese contextual:** A metáfora do muro descreve a ausência de intercessão e responsabilidade pública capaz de enfrentar a ruína.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:30"
       ],
@@ -413,7 +418,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "versiculo-31",
       "title": "Ezequiel 22:31 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O oráculo termina com a declaração de juízo sobre as práticas denunciadas.\n\n**Exegese contextual:** A conclusão não autoriza violência religiosa: descreve o julgamento profético de Jerusalém.\n\n**Pergunta de leitura:** Quem é afetado pela conduta denunciada e que responsabilidade o verso atribui?",
+      "body": "**Paráfrase livre autoral:** O oráculo conclui com retribuição pelas próprias práticas.\n\n**Exegese contextual:** O juízo é associado às ações denunciadas, especialmente sangue e exploração.\n\n**Pergunta interpretativa:** Que forma de injustiça, liderança falha ou responsabilidade coletiva aparece neste versículo?",
       "scriptureRefs": [
         "Ezequiel 22:31"
       ],
@@ -483,7 +488,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "A fundição é imagem de juízo, embora leitores possam discutir se também antecipa transformação futura. A identidade do intercessor procurado no v. 30 não é revelada. Não é legítimo equiparar automaticamente Jerusalém antiga a uma cidade moderna ou declarar calamidades atuais como castigo divino.",
+      "body": "**A cidade sanguinária:** a acusação aponta violência real, corrupção e opressão, não apenas falhas rituais.\n\n**Escória e forno:** a metáfora da fundição comunica juízo; não significa que pessoas tenham menor dignidade.\n\n**Profetas e sacerdotes:** a crítica é a lideranças que encobrem injustiça e falham no discernimento.\n\n**A brecha:** o versículo 30 pode ser lido como busca de intercessão e de responsabilidade pública; não oferece uma técnica automática para evitar todo sofrimento.",
       "scriptureRefs": [
         "Ezequiel 22:1-31"
       ],
@@ -493,7 +498,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas comentadas",
-      "body": "**Êxodo 22:21–24:** proteção de estrangeiros, viúvas e órfãos. **Levítico 19:33–36:** justiça com estrangeiros e pesos honestos. **Isaías 1:21–23:** cidade antes justa, agora marcada por corrupção. **Jeremias 6:13–14:** falsa paz anunciada por líderes. **Ezequiel 13:10–15:** parede rebocada de modo enganoso.",
+      "body": "**Êxodo 22:21–24:** proteção do estrangeiro, da viúva e do órfão.\n\n**Levítico 19:33–34:** acolhimento do estrangeiro.\n\n**Isaías 1:21–23:** corrupção da cidade e dos governantes.\n\n**Jeremias 6:13–15:** crítica à falsidade religiosa.\n\n**Ezequiel 13:10–16:** imagem do reboco enganoso.\n\n**Tiago 5:1–6:** denúncia cristã da exploração econômica.",
       "scriptureRefs": [
         "Ezequiel 22:1-31"
       ],
@@ -503,7 +508,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegorias inventadas",
-      "body": "A crítica à liderança exploradora pode ser colocada em diálogo com o ensino de Jesus sobre justiça, misericórdia e fidelidade (Mateus 23:23). O texto de Ezequiel 22, porém, não nomeia Jesus nem identifica diretamente a brecha do v. 30 com sua obra; essa associação seria reflexão teológica posterior.",
+      "body": "Jesus denuncia líderes que negligenciam justiça, misericórdia e fidelidade (Mateus 23:23), e identifica o cuidado com vulneráveis como expressão de responsabilidade diante de Deus (Mateus 25:35–40). Essa aplicação preserva a acusação histórica de Ezequiel contra Jerusalém.",
       "scriptureRefs": [
         "Ezequiel 22:1-31"
       ],
@@ -523,7 +528,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios com respostas comentadas",
-      "body": "**1. Que grupos vulneráveis aparecem?** Estrangeiros, órfãos, viúvas e necessitados (vv. 7, 29).\n\n**2. Quais crimes econômicos são denunciados?** Suborno, extorsão e lucro injusto (v. 12).\n\n**3. O que representa o forno?** O julgamento da cidade (vv. 17–22).\n\n**4. Quem é responsabilizado no final?** Profetas, sacerdotes, príncipes e povo (vv. 25–29).\n\n**5. O que falta no v. 30?** Alguém que repare a brecha e se coloque diante de Deus pela terra.",
+      "body": "**1. Qual expressão descreve Jerusalém?** Cidade que derrama sangue (22:2–4).\n\n**2. Quem sofre opressão no versículo 7?** Estrangeiro, órfão e viúva.\n\n**3. Que práticas econômicas são denunciadas?** Suborno, lucro exploratório e extorsão (22:12).\n\n**4. O que simboliza a escória?** A corrupção da comunidade submetida ao juízo (22:18–22).\n\n**5. O que falta no versículo 30?** Alguém que se coloque na brecha diante da ruína.",
       "scriptureRefs": [
         "Ezequiel 22:1-31"
       ],
@@ -533,7 +538,7 @@ export const ezekiel22Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — quando a religião encobre injustiça",
-      "body": "**Tema:** Deus confronta a cidade que oprime.\n\n**Proposição:** Culto sem justiça não protege uma comunidade das consequências de sua violência.\n\n**Esboço:** (1) o diagnóstico da cidade (1–16); (2) o forno da crise (17–22); (3) a responsabilidade de todos e a brecha (23–31).\n\n**Cuidado pastoral:** não espiritualizar a opressão, expor vítimas de abuso ou transformar o texto em condenação de populações atuais.",
+      "body": "**Tema:** Quando a religião encobre a injustiça.\n\n**Proposição:** Deus confronta comunidades que preservam aparências sagradas enquanto toleram sangue e exploração.\n\n**Esboço:** (1) a cidade de sangue (1–16); (2) o forno da crise (17–22); (3) a falência institucional (23–29); (4) a brecha desprotegida (30–31).\n\n**Cuidados:** evitar generalizar culpas sobre vítimas; distinguir imagens de juízo de ordens para punir; dar atenção concreta a proteção de crianças, estrangeiros e pessoas economicamente vulneráveis.",
       "scriptureRefs": [
         "Ezequiel 22:1-31"
       ],
