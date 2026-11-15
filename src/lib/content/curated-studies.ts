@@ -1,3 +1,4 @@
+import { zacarias5Study } from "./zacarias-5-study";
 import { zacarias4Study } from "./zacarias-4-study";
 import { zacarias3Study } from "./zacarias-3-study";
 import { zacarias2Study } from "./zacarias-2-study";
@@ -1202,6 +1203,7 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-zacarias-cap-2": zacarias2Study,
   "biblia-zacarias-cap-3": zacarias3Study,
   "biblia-zacarias-cap-4": zacarias4Study,
+  "biblia-zacarias-cap-5": zacarias5Study,
   "biblia-jonas-cap-3": jonas3Study,
   "biblia-jonas-cap-2": jonas2Study,
   "biblia-marcos-cap-4": mark4Study,
