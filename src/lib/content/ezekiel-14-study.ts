@@ -1,51 +1,52 @@
 import type { StudyContent } from "../types";
 
-/** Ezequiel 14 — paráfrase livre autoral; revisão humana pendente. */
+/** Ezequiel 14 — paráfrases livres autorais; revisão humana pendente. */
 export const ezekiel14Study: StudyContent = {
   "version": 5,
   "depth": "deep",
-  "intro": "Ezequiel 14 confronta ídolos no coração de consultantes religiosos e afirma a responsabilidade diante de juízos coletivos.",
-  "historicalContext": "Oráculos do exílio babilônico, século VI a.C., no contexto de advertências anteriores à queda de Jerusalém.",
+  "intro": "Ezequiel 14 reúne duas advertências: a consulta religiosa de anciãos que guardam ídolos no coração e a impossibilidade de depender da justiça de outros para escapar automaticamente do juízo. Noé, Daniel e Jó ilustram o segundo argumento; o capítulo termina com a chegada de sobreviventes de Jerusalém.",
+  "historicalContext": "O oráculo pertence ao ministério de Ezequiel entre exilados na Babilônia, quando a sorte de Jerusalém ainda era discutida. A consulta de anciãos evidencia a tensão entre buscar orientação profética e manter lealdades rivais. As quatro calamidades — fome, feras, guerra e peste — são imagens tradicionais de devastação. O nome 'Daniel' pode aludir a uma figura de sabedoria antiga, identificação debatida na pesquisa bíblica.",
   "keyPoints": [
     {
-      "title": "Consulta e ídolos",
-      "text": "Anciãos procuram orientação sem abandonar lealdades contrárias à aliança (1–7)."
+      "title": "1–5: Ídolos no coração",
+      "text": "Os anciãos procuram o profeta, mas sua lealdade está dividida."
     },
     {
-      "title": "Responsabilidade",
-      "text": "Profeta e consultante respondem por seu engano (8–11)."
+      "title": "6–11: Convite à conversão",
+      "text": "Deus confronta consulentes e profetas e chama Israel de volta à aliança."
     },
     {
-      "title": "Três justos",
-      "text": "Noé, Daniel e Jó não podem transferir sua justiça a todos (12–20)."
+      "title": "12–20: Três homens justos",
+      "text": "Noé, Daniel e Jó não garantem a salvação de outros por sua justiça."
     },
     {
-      "title": "Sobreviventes",
-      "text": "O testemunho dos exilados permite compreender o oráculo sobre Jerusalém (21–23)."
+      "title": "21–23: Jerusalém e sobreviventes",
+      "text": "Quatro calamidades são anunciadas, mas alguns escaparão e chegarão aos exilados."
     }
   ],
-  "application": "Buscar orientação com integridade, assumir responsabilidade pessoal e responder às calamidades com solidariedade.",
+  "application": "Examinar se a busca por orientação espiritual corresponde a práticas e lealdades reais. Não usar a reputação de líderes ou familiares como substituto de responsabilidade pessoal. Tratar pessoas atingidas por tragédias com compaixão, sem atribuir automaticamente a elas culpa específica.",
   "crossReferences": [
-    "Ezequiel 13:1-23",
-    "Jeremias 7:1-15",
     "Gênesis 6:9-22",
     "Jó 1:1-5",
+    "Jeremias 15:1-4",
     "Ezequiel 18:1-32",
-    "Lucas 13:1-5"
+    "Ezequiel 20:1-4",
+    "Ezequiel 33:10-20"
   ],
   "questions": [
-    "O que são ídolos do coração?",
-    "Como interpretar com cautela Ezequiel 14:9?",
-    "Qual é o papel dos três justos?",
-    "Quais são os quatro cenários de juízo?"
+    "Por que a consulta dos anciãos é confrontada?",
+    "O que significa guardar ídolos no coração?",
+    "Por que consulente e profeta aparecem juntos na advertência?",
+    "Qual é o papel de Noé, Daniel e Jó no argumento?",
+    "O que a chegada de sobreviventes permite aos exilados observar?"
   ],
-  "conclusion": "O capítulo desafia a religiosidade sem conversão e a confiança de que a justiça de outros elimina nossa responsabilidade.",
+  "conclusion": "O capítulo confronta a religiosidade sem fidelidade e a falsa segurança baseada na justiça de terceiros. A chamada à conversão permanece, mesmo em meio ao anúncio de devastação.",
   "prayer": "Senhor, renova nossa sinceridade, responsabilidade e compaixão. Amém.",
   "sections": [
     {
       "id": "leitura",
       "title": "Leitura bíblica — Ezequiel 14:1–23 (paráfrase livre)",
-      "body": "**Paráfrase livre autoral para estudo, não substitui tradução bíblica.**\n\n**1.** Anciãos se sentam diante do profeta para consulta.\n\n**2.** A palavra do Senhor interrompe a consulta.\n\n**3.** Os anciãos carregam ídolos no coração e colocam tropeços diante de si.\n\n**4.** Deus anuncia resposta proporcional aos ídolos daquele que consulta.\n\n**5.** A finalidade é alcançar o coração de Israel, alienado por seus ídolos.\n\n**6.** O chamado é abandonar ídolos e voltar-se para Deus.\n\n**7.** O mesmo princípio alcança israelitas e estrangeiros residentes que se afastam e procuram o profeta.\n\n**8.** O juízo contra o consultante é descrito como exclusão e sinal público.\n\n**9.** O texto atribui a Deus a entrega do profeta enganado ao engano e anuncia sua responsabilização.\n\n**10.** Consultante e profeta enganador são responsabilizados.\n\n**11.** O propósito é que Israel deixe a infidelidade e viva a fórmula de aliança: meu povo e seu Deus.\n\n**12.** Nova palavra introduz um oráculo sobre a responsabilidade em meio ao juízo coletivo.\n\n**13.** Uma terra persistentemente infiel é retratada enfrentando fome e perda de sustento.\n\n**14.** Noé, Daniel e Jó são apresentados como exemplos de justiça que só preservaria a própria vida.\n\n**15.** Animais perigosos tornam a terra intransitável.\n\n**16.** Mesmo esses três justos não livrariam seus filhos e filhas nesse cenário.\n\n**17.** A espada aparece como terceiro cenário de julgamento.\n\n**18.** A presença dos três justos não impediria o efeito da espada sobre outros.\n\n**19.** A peste aparece como quarto cenário de calamidade.\n\n**20.** Noé, Daniel e Jó são nomeados novamente: sua justiça não substituiria a dos demais.\n\n**21.** Os quatro juízos são reunidos na aplicação específica a Jerusalém.\n\n**22.** Sobreviventes serão levados aos exilados, e sua conduta será observada.\n\n**23.** O testemunho dos sobreviventes permitirá reconhecer que o juízo anunciado não foi arbitrário.",
+      "body": "Leia Ezequiel 14:1–23 no texto bíblico do aplicativo. As notas são **paráfrases livres autorais** com comentários contextuais, não tradução bíblica oficial.",
       "scriptureRefs": [
         "Ezequiel 14:1-23"
       ],
@@ -87,7 +88,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-1",
       "title": "Ezequiel 14:1 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Anciãos se sentam diante do profeta para consulta.\n\n**Exegese contextual:** A postura externa de busca religiosa contrasta com a denúncia seguinte sobre sua lealdade interior.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Anciãos de Israel se assentam diante do profeta.\n\n**Exegese contextual:** A consulta formal prepara o contraste entre aparência religiosa e lealdade interior.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:1"
       ],
@@ -97,7 +98,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-2",
       "title": "Ezequiel 14:2 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A palavra do Senhor interrompe a consulta.\n\n**Exegese contextual:** O oráculo desloca a atenção da pergunta dos visitantes para a condição espiritual de quem pergunta.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** A palavra do Senhor chega a Ezequiel.\n\n**Exegese contextual:** A fórmula introduz o diagnóstico divino da consulta.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:2"
       ],
@@ -107,7 +108,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-3",
       "title": "Ezequiel 14:3 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os anciãos carregam ídolos no coração e colocam tropeços diante de si.\n\n**Exegese contextual:** A idolatria é descrita como orientação interior e prática, não apenas presença de objetos.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Os anciãos abrigam ídolos no coração e procuram orientação.\n\n**Exegese contextual:** A imagem do coração desloca a crítica da idolatria pública para lealdades internas.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:3"
       ],
@@ -117,7 +118,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-4",
       "title": "Ezequiel 14:4 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Deus anuncia resposta proporcional aos ídolos daquele que consulta.\n\n**Exegese contextual:** A linguagem é de confronto judicial: não significa que toda impressão religiosa subjetiva seja resposta divina.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Deus responderá ao consulente conforme seus muitos ídolos.\n\n**Exegese contextual:** A resposta é confrontação judicial, não aprovação da consulta contaminada pela idolatria.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:4"
       ],
@@ -127,7 +128,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-5",
       "title": "Ezequiel 14:5 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A finalidade é alcançar o coração de Israel, alienado por seus ídolos.\n\n**Exegese contextual:** O objetivo declarado inclui desmascarar o afastamento e recuperar a fidelidade do povo.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** A finalidade é alcançar o coração de Israel alienado por ídolos.\n\n**Exegese contextual:** O objetivo declarado do confronto é expor a ruptura da aliança.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:5"
       ],
@@ -137,7 +138,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-6",
       "title": "Ezequiel 14:6 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O chamado é abandonar ídolos e voltar-se para Deus.\n\n**Exegese contextual:** A ordem de conversão oferece uma resposta prática à denúncia anterior.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Israel é convocado a voltar-se dos ídolos.\n\n**Exegese contextual:** O imperativo de conversão oferece uma alternativa concreta à infidelidade.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:6"
       ],
@@ -147,7 +148,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-7",
       "title": "Ezequiel 14:7 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O mesmo princípio alcança israelitas e estrangeiros residentes que se afastam e procuram o profeta.\n\n**Exegese contextual:** A inclusão dos residentes amplia a responsabilidade da comunidade; não elimina distinções históricas de pertença.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** A advertência inclui israelitas e estrangeiros residentes.\n\n**Exegese contextual:** A responsabilidade pela consulta idólatra alcança quem participa da comunidade.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:7"
       ],
@@ -157,7 +158,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-8",
       "title": "Ezequiel 14:8 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O juízo contra o consultante é descrito como exclusão e sinal público.\n\n**Exegese contextual:** A severidade pertence à retórica da aliança; não autoriza violência religiosa por leitores atuais.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** O idólatra persistente se tornará exemplo de juízo.\n\n**Exegese contextual:** A linguagem de exclusão da comunidade ressalta a gravidade da ruptura, sem autorizar perseguição contemporânea.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:8"
       ],
@@ -167,7 +168,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-9",
       "title": "Ezequiel 14:9 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O texto atribui a Deus a entrega do profeta enganado ao engano e anuncia sua responsabilização.\n\n**Exegese contextual:** Versículo teologicamente difícil: a soberania divina e a culpa humana devem ser discutidas sem concluir que Deus aprova mentira.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** O profeta enganado também é responsabilizado.\n\n**Exegese contextual:** O versículo levanta questão difícil sobre soberania divina e engano; o contexto condena tanto consulente quanto profeta infiel.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:9"
       ],
@@ -177,7 +178,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-10",
       "title": "Ezequiel 14:10 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Consultante e profeta enganador são responsabilizados.\n\n**Exegese contextual:** A responsabilidade recíproca impede que qualquer dos lados use o outro como desculpa.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Profeta e consulente carregam responsabilidade por sua culpa.\n\n**Exegese contextual:** A sentença não permite transferir toda a culpa a apenas uma das partes.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:10"
       ],
@@ -187,7 +188,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-11",
       "title": "Ezequiel 14:11 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O propósito é que Israel deixe a infidelidade e viva a fórmula de aliança: meu povo e seu Deus.\n\n**Exegese contextual:** O fim declarado é restauração da relação, não mera punição.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** A finalidade é que Israel deixe de se desviar e volte a ser povo de Deus.\n\n**Exegese contextual:** A fórmula da aliança aponta para restauração além da denúncia.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:11"
       ],
@@ -197,7 +198,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-12",
       "title": "Ezequiel 14:12 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Nova palavra introduz um oráculo sobre a responsabilidade em meio ao juízo coletivo.\n\n**Exegese contextual:** A mudança de unidade literária passa da consulta idolátrica a exemplos de calamidade.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Uma nova palavra introduz outra unidade do capítulo.\n\n**Exegese contextual:** A partir daqui o tema é a limitação da justiça de terceiros diante do juízo coletivo.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:12"
       ],
@@ -207,7 +208,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-13",
       "title": "Ezequiel 14:13 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Uma terra persistentemente infiel é retratada enfrentando fome e perda de sustento.\n\n**Exegese contextual:** A linguagem profética não permite culpar vítimas reais de fome ou desastre.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Uma terra infiel sofre fome e perda de sustento.\n\n**Exegese contextual:** A calamidade é apresentada como hipótese profética para discutir responsabilidade.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:13"
       ],
@@ -217,7 +218,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-14",
       "title": "Ezequiel 14:14 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Noé, Daniel e Jó são apresentados como exemplos de justiça que só preservaria a própria vida.\n\n**Exegese contextual:** A identidade de 'Daniel' é debatida: pode aludir ao personagem bíblico ou a figura antiga conhecida como Danel.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Nem Noé, Daniel e Jó livrariam outros por sua justiça.\n\n**Exegese contextual:** Os três são exemplos de integridade; a identidade do 'Daniel' mencionado é debatida.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:14"
       ],
@@ -227,7 +228,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-15",
       "title": "Ezequiel 14:15 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Animais perigosos tornam a terra intransitável.\n\n**Exegese contextual:** O segundo exemplo intensifica a ideia de calamidade e vulnerabilidade.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Animais perigosos tornam a terra desolada.\n\n**Exegese contextual:** A segunda hipótese amplia a imagem de devastação e insegurança.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:15"
       ],
@@ -237,7 +238,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-16",
       "title": "Ezequiel 14:16 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Mesmo esses três justos não livrariam seus filhos e filhas nesse cenário.\n\n**Exegese contextual:** A justiça pessoal não é transferível como garantia automática de imunidade coletiva.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Mesmo os três justos não salvariam filhos ou filhas nessa hipótese.\n\n**Exegese contextual:** O argumento limita a transferência dos méritos individuais, sem negar cuidado familiar.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:16"
       ],
@@ -247,7 +248,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-17",
       "title": "Ezequiel 14:17 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A espada aparece como terceiro cenário de julgamento.\n\n**Exegese contextual:** A imagem aponta à guerra, realidade concreta da crise de Jerusalém.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Uma espada atravessa a terra em outra hipótese.\n\n**Exegese contextual:** A guerra aparece como terceiro tipo de calamidade.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:17"
       ],
@@ -257,7 +258,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-18",
       "title": "Ezequiel 14:18 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A presença dos três justos não impediria o efeito da espada sobre outros.\n\n**Exegese contextual:** A repetição enfatiza o limite da intercessão e da reputação de terceiros.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** A presença dos três justos não livraria os familiares da espada.\n\n**Exegese contextual:** A repetição insiste que justiça pessoal não funciona como garantia automática para toda a comunidade.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:18"
       ],
@@ -267,7 +268,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-19",
       "title": "Ezequiel 14:19 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** A peste aparece como quarto cenário de calamidade.\n\n**Exegese contextual:** A série usa imagens de destruição que exigem leitura histórica, não previsões de epidemias modernas.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** A pestilência é apresentada como quarta calamidade.\n\n**Exegese contextual:** A sequência cobre diferentes formas de colapso social e humano.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:19"
       ],
@@ -277,7 +278,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-20",
       "title": "Ezequiel 14:20 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Noé, Daniel e Jó são nomeados novamente: sua justiça não substituiria a dos demais.\n\n**Exegese contextual:** A ênfase é responsabilidade moral, não mérito que compra proteção física.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Noé, Daniel e Jó preservariam apenas a própria vida.\n\n**Exegese contextual:** A conclusão repetida reforça o princípio de responsabilidade individual.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:20"
       ],
@@ -287,7 +288,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-21",
       "title": "Ezequiel 14:21 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Os quatro juízos são reunidos na aplicação específica a Jerusalém.\n\n**Exegese contextual:** A pergunta 'quanto mais' liga os exemplos gerais à crise da cidade.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Espada, fome, animais e peste são reunidos contra Jerusalém.\n\n**Exegese contextual:** As quatro imagens sintetizam o anúncio de juízo sobre a cidade.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:21"
       ],
@@ -297,7 +298,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-22",
       "title": "Ezequiel 14:22 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** Sobreviventes serão levados aos exilados, e sua conduta será observada.\n\n**Exegese contextual:** O texto apresenta sobrevivência e testemunho como ocasião de compreensão, não licença para julgar vítimas por aparência.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** Alguns filhos e filhas sobreviverão e chegarão aos exilados.\n\n**Exegese contextual:** A sobrevivência permite que os ouvintes observem a conduta dos que escaparam.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:22"
       ],
@@ -307,7 +308,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "versiculo-23",
       "title": "Ezequiel 14:23 — exposição versículo a versículo",
-      "body": "**Paráfrase livre:** O testemunho dos sobreviventes permitirá reconhecer que o juízo anunciado não foi arbitrário.\n\n**Exegese contextual:** A consolação é interpretativa no próprio oráculo; não significa alegria diante do sofrimento.\n\n**Pergunta interpretativa:** Que responsabilidade o versículo atribui a indivíduos e comunidade?",
+      "body": "**Paráfrase livre autoral:** O comportamento dos sobreviventes ajudará a compreender a calamidade.\n\n**Exegese contextual:** O consolo descrito é reconhecimento do fundamento do juízo, não satisfação diante do sofrimento.\n\n**Pergunta interpretativa:** Como este versículo relaciona lealdade interior, responsabilidade e o futuro de Jerusalém?",
       "scriptureRefs": [
         "Ezequiel 14:23"
       ],
@@ -357,7 +358,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "debates",
       "title": "Questões interpretativas e limites",
-      "body": "O papel do engano divino em 14:9 e a identidade de Daniel/Danel em 14:14, 20 são pontos debatidos. A preservação de sobreviventes nos vv. 22–23 não elimina a dor do exílio. A responsabilidade pessoal aqui não contradiz o valor bíblico da intercessão; delimita a ideia de justiça herdada como garantia automática.",
+      "body": "**Ídolos no coração (vv. 3–7):** a metáfora não se limita a imagens materiais; trata de lealdades que comprometem a consulta.\n\n**Deus engana o profeta? (v. 9):** texto difícil sobre juízo e soberania; deve ser lido com a responsabilidade conjunta de profeta e consulente (v. 10), sem justificar mentira religiosa.\n\n**Quem é 'Daniel' (vv. 14,20)?** Alguns identificam o personagem bíblico; outros sugerem a figura antiga de Danel conhecida de tradições do Oriente Próximo. A identificação permanece debatida.\n\n**Justiça e calamidade:** a passagem não autoriza concluir que vítimas de desastres atuais mereceram seu sofrimento.",
       "scriptureRefs": [
         "Ezequiel 14:1-23"
       ],
@@ -367,7 +368,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "referencias",
       "title": "Referências cruzadas contextualizadas",
-      "body": "**Ezequiel 13:1–23:** profetas enganadores. **Jeremias 7:1–15:** confiança equivocada no templo. **Gênesis 6:9–22:** Noé e justiça. **Jó 1:1–5:** integridade de Jó. **Ezequiel 18:1–32:** desenvolvimento da responsabilidade individual. **Lucas 13:1–5:** Jesus rejeita a inferência de culpa maior a partir de tragédias.",
+      "body": "**Gênesis 6:9–22:** Noé como exemplo de justiça.\n\n**Jó 1:1–5:** a integridade de Jó.\n\n**Jeremias 15:1–4:** limites da intercessão em anúncio de juízo.\n\n**Ezequiel 18:** responsabilidade pessoal e conversão.\n\n**Ezequiel 20:1–4:** outra consulta dos anciãos.\n\n**Ezequiel 33:10–20:** justiça, culpa e mudança de caminho.",
       "scriptureRefs": [
         "Ezequiel 14:1-23"
       ],
@@ -377,7 +378,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "cristo",
       "title": "Conexão com Cristo sem alegorias forçadas",
-      "body": "O chamado a abandonar a hipocrisia religiosa encontra paralelo temático nas críticas de Jesus à aparência de piedade sem justiça (Mateus 23:23–28). Ezequiel 14 não identifica Noé, Daniel e Jó como previsões diretas de Jesus nem fornece fórmula para medir culpa de vítimas.",
+      "body": "Na leitura cristã, a responsabilidade pessoal diante de Deus dialoga com o chamado de Jesus ao arrependimento (Marcos 1:15). A tradição cristã também anuncia Cristo como mediador (1 Timóteo 2:5), o que deve ser distinguido da função dos três justos no argumento histórico de Ezequiel.",
       "scriptureRefs": [
         "Ezequiel 14:1-23"
       ],
@@ -397,7 +398,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "exercicios",
       "title": "Exercícios e respostas comentadas",
-      "body": "**1. O que impede a consulta sincera?** Os ídolos do coração (vv. 3–7).\n\n**2. Quem é responsabilizado no v. 10?** Consultante e profeta.\n\n**3. Quais três justos aparecem?** Noé, Daniel e Jó (vv. 14, 20).\n\n**4. Quais quatro calamidades?** Fome, animais perigosos, espada e peste (vv. 13–21).\n\n**5. A justiça de um garante a salvação de toda a comunidade?** Não; o argumento ressalta o limite dessa expectativa.",
+      "body": "**1. Quem procura Ezequiel?** Anciãos de Israel (14:1).\n\n**2. Onde estão os ídolos denunciados?** Nos corações dos consulentes (14:3).\n\n**3. Qual convite aparece no v. 6?** Converter-se e abandonar ídolos.\n\n**4. Quais três justos são mencionados?** Noé, Daniel e Jó (14:14,20).\n\n**5. Quais são as quatro calamidades?** Espada, fome, animais perigosos e peste (14:21).",
       "scriptureRefs": [
         "Ezequiel 14:1-23"
       ],
@@ -407,7 +408,7 @@ export const ezekiel14Study: StudyContent = {
     {
       "id": "pregador",
       "title": "Oficina do pregador — uma fé que não terceiriza responsabilidade",
-      "body": "**Tema:** Integridade do coração e responsabilidade diante de Deus.\n\n**Proposição:** Buscar uma resposta divina exige honestidade, e a justiça de terceiros não substitui a nossa resposta ética.\n\n**Esboço:** (1) consulta e idolatria interior (1–11); (2) os três justos e quatro calamidades (12–20); (3) sobreviventes e compreensão da crise (21–23).\n\n**Cuidado pastoral:** não culpar vítimas de calamidades nem tratar divergências sobre Daniel/Danel como teste de fé.",
+      "body": "**Tema:** A fé que consulta e a vida que responde.\n\n**Proposição:** Buscar orientação de Deus exige examinar lealdades interiores e assumir responsabilidade pessoal.\n\n**Esboço:** (1) a consulta contraditória (1–5); (2) o chamado à conversão (6–11); (3) o limite da justiça alheia (12–20); (4) sobreviventes e discernimento (21–23).\n\n**Cuidados:** não alegar conhecer a culpa individual de vítimas de tragédias; não usar 14:9 para legitimar engano; reconhecer o debate sobre a identidade de Daniel.",
       "scriptureRefs": [
         "Ezequiel 14:1-23"
       ],
