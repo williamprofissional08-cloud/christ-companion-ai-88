@@ -15,8 +15,8 @@ test("Hebreus 12 contempla todos os versículos",()=>{
 test("Hebreus 12 possui IDs únicos e entrada única no catálogo",()=>{
  const ids=[...study.matchAll(/"id": "([^"]+)"/g)].map(x=>x[1]);
  assert.equal(new Set(ids).size,ids.length);
- assert.equal((catalog.match(/"biblia-hebreus-cap-12"\\s*:/g)||[]).length,1);
- assert.equal((catalog.match(/import \\{ hebrews12Study \\}/g)||[]).length,1);
+ assert.equal((catalog.match(/"biblia-hebreus-cap-12"\s*:/g)||[]).length,1);
+ assert.equal((catalog.match(/import \{ hebrews12Study \}/g)||[]).length,1);
 });
 test("Hebreus 12 apresenta componentes editoriais",()=>{
  for(const key of ["intro","historicalContext","keyPoints","crossReferences","questions","conclusion","prayer","sections"]) assert.match(study,new RegExp('"'+key+'"'));
