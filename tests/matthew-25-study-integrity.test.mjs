@@ -9,9 +9,9 @@ const bible = JSON.parse(read("src/lib/bible-livre/mateus.json"));
 test("Mateus 25: contagem exata de versículos do acervo", () => {
   const verses = bible.chapters["25"];
   assert.equal(verses.length, 46);
-  const refs = [...study.matchAll(/"id": "versiculo-(\\d+)"/g)].map(x => Number(x[1]));
+  const refs = [...study.matchAll(/"id": "versiculo-(\d+)"/g)].map(x => Number(x[1]));
   assert.deepEqual(refs, Array.from({length: verses.length}, (_, i) => i+1));
-  for(let i=1;i<=verses.length;i++) assert.match(study, new RegExp('Mateus 25:'+i+'\\\\b'));
+  for(let i=1;i<=verses.length;i++) assert.match(study, new RegExp('Mateus 25:'+i+'\\b'));
 });
 test("Mateus 25: catálogo sem slug ou import duplicados", () => {
   assert.equal(catalog.split('"biblia-mateus-cap-25": matthew25Study').length - 1, 1);
