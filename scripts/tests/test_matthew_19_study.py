@@ -18,9 +18,9 @@ class Matthew19StudyTest(unittest.TestCase):
 
     def test_all_verse_sections_unique_and_in_order(self):
         source = STUDY.read_text(encoding="utf-8")
-        ids = [int(n) for n in re.findall(r'"id": "versiculo-(\\d+)"', source)]
+        ids = [int(n) for n in re.findall(r'"id": "versiculo-(\d+)"', source)]
         self.assertEqual(ids, list(range(1, 31)))
-        refs = [int(n) for n in re.findall(r'"Mateus 19:(\\d+)"', source)]
+        refs = [int(n) for n in re.findall(r'"Mateus 19:(\d+)"', source)]
         self.assertEqual(refs, list(range(1, 31)))
         self.assertIn("Paráfrase explicativa livre", source)
         for section in ("leitura", "contexto", "estrutura", "termos", "debates", "referencias", "cristo", "distincoes", "exercicios", "pregador", "oracao"):
