@@ -16,7 +16,7 @@ class MarkOneIntegrity(unittest.TestCase):
         bible = json.loads(BIBLE.read_text(encoding="utf-8"))
         expected = len(bible["chapters"]["1"])
         self.assertEqual(expected, 45)
-        ids = re.findall(r'"id": "(versiculo-\\d+)"', source)
+        ids = re.findall(r'"id": "(versiculo-\d+)"', source)
         self.assertEqual(ids, [f"versiculo-{n}" for n in range(1, expected + 1)])
         all_ids = re.findall(r'"id": "([^"]+)"', source)
         self.assertEqual(len(all_ids), len(set(all_ids)))
