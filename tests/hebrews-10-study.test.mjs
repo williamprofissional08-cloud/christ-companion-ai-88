@@ -7,7 +7,9 @@ const catalog = readFileSync(new URL("src/lib/content/curated-studies.ts", root)
 const bible = JSON.parse(readFileSync(new URL("src/lib/bible-livre/hebreus.json", root), "utf8"));
 test("Hebreus 10 tem 39 versículos no acervo e na paráfrase", () => {
   assert.equal(bible.chapters["10"].length, 39);
-  const reading = study.match(/\\\"id\\\": \\\"leitura\\\"[\\s\\S]*?\\\"id\\\": \\\"introducao\\\"/);
+  const start = study.indexOf('"id": "leitura"');
+  const end = study.indexOf('"id": "introducao"', start);
+  const reading = start >= 0 && end > start ? [study.slice(start, end)] : null;
   assert.ok(reading, "seção de leitura integral");
   for (let i = 1; i <= 39; i++) assert.ok(reading[0].includes(`**${i}.`), `versículo ${i}`);
 });
@@ -19,5 +21,5 @@ test("Hebreus 10 possui seções expositivas sem IDs repetidos", () => {
 });
 test("Hebreus 10 registrado uma única vez no catálogo", () => {
   assert.equal((catalog.match(/"biblia-hebreus-cap-10": hebrews10Study/g) ?? []).length, 1);
-  assert.equal((catalog.match(/import \\{ hebrews10Study \\} from "\\.\\/hebrews-10-study";/g) ?? []).length, 1);
+  assert.equal(catalog.split('import { hebrews10Study } from "./hebrews-10-study";').length - 1, 1);
 });
