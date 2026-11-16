@@ -13,6 +13,26 @@ BOOKS = CONTENT / "bible-books.ts"
 CATALOG = CONTENT / "curated-studies.ts"
 GENERATOR = ROOT / "scripts/generate-bible-study-batch.py"
 
+# Existing curated chapters were authored using both Portuguese names and
+# spelled-out English ordinals. Do not treat them as missing or rename files.
+LEGACY_PREFIXES = {
+    "obadias": ("obadias",),
+    "jonas": ("jonas",),
+    "miqueias": ("miqueias",),
+    "naum": ("naum",),
+    "habacuque": ("habacuque",),
+    "sofonias": ("sofonias",),
+    "ageu": ("ageu",),
+    "zacarias": ("zacarias",),
+    "malaquias": ("malaquias",),
+    "mateus": ("mateus",),
+    "1-pedro": ("first-peter",),
+    "2-pedro": ("second-peter",),
+    "1-joao": ("first-john",),
+    "2-joao": ("second-john",),
+    "3-joao": ("third-john",),
+}
+
 def parse_books():
     source = BOOKS.read_text(encoding="utf-8")
     books = []
@@ -116,8 +136,14 @@ def audit():
         for chapter in range(1, book["chapters"] + 1):
             chapter_slug = slug_for(slug, chapter)
             known_slugs.add(chapter_slug)
-            path = CONTENT / (prefix + "-" + str(chapter) + "-study.ts")
-            file_exists = path.is_file()
+            candidates = [CONTENT / (prefix + "-" + str(chapter) + "-study.ts")]
+            candidates.extend(
+                CONTENT / (alias + "-" + str(chapter) + "-study.ts")
+                for alias in LEGACY_PREFIXES.get(slug, ())
+            )
+            existing_path = next((candidate for candidate in candidates if candidate.is_file()), None)
+            path = existing_path or candidates[0]
+            file_exists = existing_path is not None
             in_catalog = chapter_slug in known
             if not file_exists or not in_catalog:
                 missing.append(chapter)
