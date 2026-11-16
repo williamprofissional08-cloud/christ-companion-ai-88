@@ -3,7 +3,7 @@ import { mark5Study } from "./mark-5-study";
 
 describe("Marcos 5 — integridade editorial", () => {
   it("cobre os 43 versículos uma única vez e preserva IDs", () => {
-    const verseSections = mark5Study.sections.filter(s => /^versiculo-\\d+$/.test(s.id));
+    const verseSections = mark5Study.sections.filter(s => /^versiculo-\d+$/.test(s.id));
     expect(verseSections).toHaveLength(43);
     expect(new Set(mark5Study.sections.map(s => s.id)).size).toBe(mark5Study.sections.length);
     for (let verse = 1; verse <= 43; verse++) {
