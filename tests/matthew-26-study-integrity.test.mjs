@@ -6,7 +6,7 @@ const catalog = fs.readFileSync("src/lib/content/curated-studies.ts", "utf8");
 const bible = JSON.parse(fs.readFileSync("src/lib/bible-livre/mateus.json", "utf8"));
 test("Mateus 26 confere acervo e cada versículo", () => {
   assert.equal(bible.chapters["26"].length, 75);
-  const verses = [...study.matchAll(/"id": "versiculo-(\\d+)"/g)].map(m => Number(m[1]));
+  const verses = [...study.matchAll(/"id": "versiculo-(\d+)"/g)].map(m => Number(m[1]));
   assert.deepEqual(verses, Array.from({length: 75}, (_, i) => i + 1));
   for (let i = 1; i <= 75; i++) assert.ok(study.includes('"Mateus 26:' + i + '"'));
 });
