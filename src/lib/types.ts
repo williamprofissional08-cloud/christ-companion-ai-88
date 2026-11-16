@@ -39,7 +39,7 @@ export type StudyContent = {
     body: string;
     kind?: string;
     scriptureRefs?: string[];
-    confidence?: "high" | "probable" | "debated" | "uncertain";
+    confidence?: "high" | "probable" | "medium" | "debated" | "uncertain";
     collapsible?: boolean;
   }[];
 };
