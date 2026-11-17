@@ -12,6 +12,6 @@ test("1 Timóteo 1: leitura completa e exposição de 20 versículos", () => {
   for (const id of ["contexto","estrutura","interpretacao-inferencia","referencias","cuidados","perguntas-respostas","oficina","oracao"]) assert.ok(study.includes('"id": "' + id + '"'), id);
 });
 test("1 Timóteo 1: registro único no catálogo", () => {
-  assert.equal((catalog.match(/import \\{ firstTimothy1Study \\} from "\\.\\/1-timothy-1-study";/g) ?? []).length, 1);
+  assert.equal(catalog.split('import { firstTimothy1Study } from "./1-timothy-1-study";').length - 1, 1);
   assert.equal((catalog.match(/"biblia-1-timoteo-cap-1": firstTimothy1Study/g) ?? []).length, 1);
 });
