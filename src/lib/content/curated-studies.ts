@@ -1,3 +1,4 @@
+import { philemon1Study } from "./philemon-1-study";
 import { hebrews1Study } from "./hebrews-1-study";
 import { hebrews2Study } from "./hebrews-2-study";
 import { mark14Study } from "./mark-14-study";
@@ -2063,4 +2064,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-hebreus-cap-1": hebrews1Study,
   "biblia-hebreus-cap-2": hebrews2Study,
   "biblia-hebreus-cap-3": hebrews3Study,
+  "biblia-filemom-cap-1": philemon1Study,
 };
