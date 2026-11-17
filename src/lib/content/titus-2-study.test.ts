@@ -7,7 +7,7 @@ describe("Tito 2 — integridade editorial", () => {
     const ids = sections.map((section) => section.id);
     expect(new Set(ids).size).toBe(ids.length);
     expect(sections.length).toBeGreaterThanOrEqual(18);
-    const exposition = sections.filter((section) => /^exposicao-versiculo-\\d+$/.test(section.id));
+    const exposition = sections.filter((section) => /^exposicao-versiculo-\d+$/.test(section.id));
     expect(exposition.map((section) => section.id)).toEqual(
       Array.from({ length: 15 }, (_, index) => `exposicao-versiculo-${index + 1}`),
     );
