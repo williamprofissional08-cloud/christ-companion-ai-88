@@ -9,9 +9,9 @@ const bible = JSON.parse(fs.readFileSync("src/lib/bible-livre/lucas.json", "utf8
 test("Lucas 1: oitenta versículos com paráfrase original e exposição individual", () => {
   const count = bible.chapters["1"].length;
   assert.equal(count, 80);
-  const refs = [...source.matchAll(/"title": "Lucas 1:(\\d+) — leitura e exposição"/g)].map(x => Number(x[1]));
+  const refs = [...source.matchAll(/"title": "Lucas 1:(\d+) — leitura e exposição"/g)].map(x => Number(x[1]));
   assert.deepEqual(refs, Array.from({length: count}, (_, i) => i + 1));
-  assert.equal((source.match(/Paráfrase explicativa livre original \\(não é citação bíblica\\)/g) || []).length, count);
+  assert.equal((source.match(/Paráfrase explicativa livre original \(não é citação bíblica\)/g) || []).length, count);
 });
 
 test("Lucas 1: seções com IDs únicos, perícopes e salvaguardas", () => {
@@ -24,6 +24,6 @@ test("Lucas 1: seções com IDs únicos, perícopes e salvaguardas", () => {
 });
 
 test("Lucas 1: catálogo registra importação e slug uma única vez", () => {
-  assert.equal((catalog.match(/import \\{ luke1Study \\} from "\\.\\/luke-1-study";/g) || []).length, 1);
+  assert.equal((catalog.match(/import \{ luke1Study \} from "\.\/luke-1-study";/g) || []).length, 1);
   assert.equal((catalog.match(/"biblia-lucas-cap-1": luke1Study/g) || []).length, 1);
 });
