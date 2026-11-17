@@ -1,3 +1,4 @@
+import { mark10Study } from "./mark-10-study";
 import { hebrews3Study } from "./hebrews-3-study";
 import { hebrews4Study } from "./hebrews-4-study";
 import { hebrews5Study } from "./hebrews-5-study";
@@ -1029,6 +1030,7 @@ import { joshua24Study } from "./joshua-24-study";
  * Rótulos: [TEXTO BÍBLICO] [CONTEXTO] [INFERÊNCIA] [INTERPRETAÇÃO] [ESPECULAÇÃO].
  */
 export const CURATED_STUDIES: Record<string, StudyContent> = {
+  "biblia-marcos-cap-10": mark10Study,
   "biblia-proverbios-cap-28": proverbs28Study,
   "biblia-proverbios-cap-29": proverbs29Study,
   "biblia-proverbios-cap-30": proverbs30Study,
