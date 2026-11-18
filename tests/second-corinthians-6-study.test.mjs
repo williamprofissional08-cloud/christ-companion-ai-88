@@ -9,10 +9,10 @@ const bible = JSON.parse(read("src/lib/bible-livre/2-corintios.json"));
 const verseCount = bible.chapters["6"].length;
 test("2 Coríntios 6: acervo e leitura integral", () => {
   assert.equal(verseCount, 18);
-  const reading = study.match(/"id": "leitura-integral"[\\s\\S]*?"body": "([^"]+)"/);
+  const reading = study.match(/"id": "leitura-integral"[\s\S]*?"body": "([^"]+)"/);
   assert.ok(reading);
   for (let n = 1; n <= verseCount; n++) {
-    assert.match(reading[1], new RegExp("\\\\n\\\\n\\\\*\\\\*"+n+"\\\\.\\\\*\\\\*"));
+    assert.ok(reading[1].includes("**"+n+".**"), "versículo "+n+" ausente");
     assert.match(study, new RegExp('"id": "exposicao-versiculo-'+n+'"'));
     assert.match(study, new RegExp('2 Coríntios 6:'+n+'(?:[^0-9]|$)'));
   }
