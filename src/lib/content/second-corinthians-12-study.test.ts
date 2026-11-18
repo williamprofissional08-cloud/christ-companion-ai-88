@@ -19,7 +19,7 @@ describe("2 Coríntios 12 — integridade editorial", () => {
     }
   });
   it("contém interpretação, aplicação, perguntas, oficina e oração", () => {
-    const kinds = secondCorinthians12Study.sections.map((s) => s.kind);
+    const kinds = (secondCorinthians12Study.sections ?? []).map((s) => s.kind);
     for (const kind of ["scripture", "exposition", "application", "question", "exercise", "prayer"]) expect(kinds).toContain(kind);
   });
 });
