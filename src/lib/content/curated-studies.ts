@@ -1,3 +1,4 @@
+import { secondCorinthians13Study } from "./second-corinthians-13-study";
 import { ephesians1Study } from "./ephesians-1-study";
 import { ephesians3Study } from "./ephesians-3-study";
 import { ephesians2Study } from "./ephesians-2-study";
@@ -1079,6 +1080,7 @@ import { joshua24Study } from "./joshua-24-study";
  * Rótulos: [TEXTO BÍBLICO] [CONTEXTO] [INFERÊNCIA] [INTERPRETAÇÃO] [ESPECULAÇÃO].
  */
 export const CURATED_STUDIES: Record<string, StudyContent> = {
+  "biblia-2-corintios-cap-13": secondCorinthians13Study,
   "biblia-marcos-cap-10": mark10Study,
   "biblia-marcos-cap-11": mark11Study,
   "biblia-marcos-cap-12": mark12Study,
