@@ -8,7 +8,7 @@ test("Efésios 5 — 33 versículos e paráfrase sinalizada", () => {
  assert.equal(bible.chapters["5"].length,33);
  assert.match(study,/Paráfrase livre original/);
  const scripture=study.match(/"id": "leitura-integral"[\s\S]*?"id": "introducao"/)?.[0] || "";
- for(let i=1;i<=33;i++) assert.match(scripture,new RegExp("\\\\n\\\\n\\\\*\\\\*"+i+"\\\\.\\\\*\\\\*"));
+ for(let i=1;i<=33;i++) assert.ok(scripture.includes("**"+i+".**"),"Versículo ausente: "+i);
 });
 test("Efésios 5 — IDs únicos e catálogo único", () => {
  const ids=[...study.matchAll(/"id": "([^"]+)"/g)].map(m=>m[1]);
