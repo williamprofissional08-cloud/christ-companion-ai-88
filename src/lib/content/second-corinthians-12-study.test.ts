@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { secondCorinthians12Study } from "./second-corinthians-12-study";
-import { curatedStudies } from "./curated-studies";
+import { CURATED_STUDIES } from "./curated-studies";
 
 describe("2 Coríntios 12 — integridade editorial", () => {
   it("registra o capítulo no catálogo", () => {
-    expect(curatedStudies["biblia-2-corintios-cap-12"]).toBe(secondCorinthians12Study);
+    expect(CURATED_STUDIES["biblia-2-corintios-cap-12"]).toBe(secondCorinthians12Study);
   });
   it("cobre os 21 versículos e possui IDs estáveis", () => {
     const sections = secondCorinthians12Study.sections ?? [];
