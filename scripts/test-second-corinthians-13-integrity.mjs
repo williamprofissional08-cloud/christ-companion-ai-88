@@ -5,7 +5,7 @@ const catalog = readFileSync("src/lib/content/curated-studies.ts", "utf8");
 const bible = JSON.parse(readFileSync("src/lib/bible-livre/2-corintios.json", "utf8"));
 const count = bible.chapters["13"].length;
 assert.equal(count, 14, "unexpected verse count");
-const scripture = study.match(/"id": "leitura-integral"[\\s\\S]*?"id": "contexto-historico"/)?.[0];
+const scripture = study.split('"id": "leitura-integral"')[1]?.split('"id": "contexto-historico"')[0];
 assert.ok(scripture, "missing full reading");
 for (let n = 1; n <= count; n++) {
   assert.ok(study.includes('"id": "versiculo-' + n + '"'), "missing exposition " + n);
@@ -14,6 +14,6 @@ for (let n = 1; n <= count; n++) {
 const ids = [...study.matchAll(/"id": "([^"]+)"/g)].map(m => m[1]);
 assert.equal(ids.length, new Set(ids).size, "duplicate section IDs");
 assert.equal((catalog.match(/"biblia-2-corintios-cap-13":/g) || []).length, 1, "duplicate slug");
-assert.equal((catalog.match(/import \\{ secondCorinthians13Study \\} from "\\.\\/second-corinthians-13-study";/g) || []).length, 1, "missing or duplicate import");
+assert.equal(catalog.split('import { secondCorinthians13Study } from "./second-corinthians-13-study";').length - 1, 1, "missing or duplicate import");
 assert.ok(study.includes("Paráfrase livre original"));
 console.log("2 Coríntios 13: integrity checks passed");
