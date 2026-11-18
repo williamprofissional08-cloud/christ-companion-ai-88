@@ -14,6 +14,6 @@ for(let n=1;n<=23;n++) {
 const ids=[...study.matchAll(/"id": "([^"]+)"/g)].map(m=>m[1]);
 assert.equal(new Set(ids).size,ids.length,"IDs duplicados");
 assert.ok(ids.length>=30,"Estudo insuficientemente estruturado");
-assert.equal((catalog.match(/"biblia-efesios-cap-1"\\s*:/g)||[]).length,1,"Slug deve ocorrer uma vez");
-assert.equal((catalog.match(/import \\{ ephesians1Study \\} from "\\.\\/ephesians-1-study";/g)||[]).length,1,"Importação deve ocorrer uma vez");
+assert.equal((catalog.match(/"biblia-efesios-cap-1"\s*:/g)||[]).length,1,"Slug deve ocorrer uma vez");
+assert.equal((catalog.match(/import \{ ephesians1Study \} from "\.\/ephesians-1-study";/g)||[]).length,1,"Importação deve ocorrer uma vez");
 console.log("Efésios 1: 23 versículos, exposições, IDs e catálogo verificados");
