@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { colossians4Study } from "./colossians-4-study";
-import { curatedStudies } from "./curated-studies";
+import { CURATED_STUDIES } from "./curated-studies";
 
 describe("Colossenses 4 — integridade", () => {
   it("cobre os 18 versículos na paráfrase original", () => {
@@ -20,6 +20,6 @@ describe("Colossenses 4 — integridade", () => {
     }
   });
   it("possui uma entrada no catálogo", () => {
-    expect(curatedStudies["biblia-colossenses-cap-4"]).toBe(colossians4Study);
+    expect(CURATED_STUDIES["biblia-colossenses-cap-4"]).toBe(colossians4Study);
   });
 });
