@@ -23,6 +23,7 @@ import { luke4Study } from "./luke-4-study";
 import { luke5Study } from "./luke-5-study";
 import { luke6Study } from "./luke-6-study";
 import { luke7Study } from "./luke-7-study";
+import { luke8Study } from "./luke-8-study";
 import { firstTimothy2Study } from "./1-timothy-2-study";
 import { firstTimothy3Study } from "./1-timothy-3-study";
 import { firstTimothy4Study } from "./1-timothy-4-study";
@@ -2125,6 +2126,7 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-lucas-cap-5": luke5Study,
   "biblia-lucas-cap-6": luke6Study,
   "biblia-lucas-cap-7": luke7Study,
+  "biblia-lucas-cap-8": luke8Study,
   "biblia-1-timoteo-cap-1": firstTimothy1Study,
   "biblia-2-tessalonicenses-cap-3": secondThessalonians3Study,
   "biblia-2-tessalonicenses-cap-2": secondThessalonians2Study,
