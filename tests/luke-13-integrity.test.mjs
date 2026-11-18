@@ -10,9 +10,9 @@ const verses = bible.chapters["13"];
 
 test("Lucas 13 cobre exatamente os 35 versículos BLIVRE", () => {
   assert.equal(verses.length, 35);
-  const titles = [...source.matchAll(/"title": "Lucas 13:(\\d+) —/g)].map(m => Number(m[1]));
+  const titles = [...source.matchAll(/"title": "Lucas 13:(\d+) —/g)].map(m => Number(m[1]));
   assert.deepEqual(titles, Array.from({length: verses.length}, (_, i) => i + 1));
-  const refs = [...source.matchAll(/"id": "versiculo-(\\d+)"/g)].map(m => Number(m[1]));
+  const refs = [...source.matchAll(/"id": "versiculo-(\d+)"/g)].map(m => Number(m[1]));
   assert.deepEqual(refs, titles);
 });
 
@@ -26,5 +26,5 @@ test("Lucas 13 tem IDs únicos, paráfrases sinalizadas e exposição contextual
 
 test("Lucas 13 registrado uma única vez no catálogo", () => {
   assert.equal((catalog.match(/"biblia-lucas-cap-13":/g) || []).length, 1);
-  assert.equal((catalog.match(/import \\{ luke13Study \\} from "\\.\\/luke-13-study";/g) || []).length, 1);
+  assert.equal((catalog.match(/import \{ luke13Study \} from "\.\/luke-13-study";/g) || []).length, 1);
 });
