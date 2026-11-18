@@ -1,4 +1,5 @@
 import { ephesians3Study } from "./ephesians-3-study";
+import { ephesians2Study } from "./ephesians-2-study";
 import { ephesians4Study } from "./ephesians-4-study";
 import { ephesians5Study } from "./ephesians-5-study";
 import { ephesians6Study } from "./ephesians-6-study";
@@ -2139,6 +2140,7 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-colossenses-cap-1": colossians1Study,
   "biblia-efesios-cap-6": ephesians6Study,
   "biblia-efesios-cap-3": ephesians3Study,
+  "biblia-efesios-cap-2": ephesians2Study,
   "biblia-efesios-cap-4": ephesians4Study,
   "biblia-efesios-cap-5": ephesians5Study,
 };
