@@ -8,7 +8,7 @@ test("2 Coríntios 8: leitura completa e exposição por versículo", () => {
   const count = livre.chapters["8"].length;
   assert.equal(count, 24);
   for (let n=1;n<=count;n++) {
-    assert.match(study, new RegExp("\\\\*\\\\*"+n+"\\\\.\\\\*\\\\*"));
+    assert.ok(study.includes('**'+n+'.**'), 'versículo '+n);
     assert.ok(study.includes('"id": "exposicao-versiculo-'+n+'"'));
     assert.ok(study.includes('"2 Coríntios 8:'+n+'"'));
   }
@@ -21,5 +21,5 @@ test("2 Coríntios 8: integridade estrutural e cautelas editoriais", () => {
 });
 test("2 Coríntios 8: slug e importação únicos", () => {
   assert.equal((catalog.match(/from "\\.\\/second-corinthians-8-study"/g)||[]).length,1);
-  assert.equal((catalog.match(/slug: "biblia-2-corintios-cap-8"/g)||[]).length,1);
+  assert.equal((catalog.match(/"biblia-2-corintios-cap-8":/g)||[]).length,1);
 });
