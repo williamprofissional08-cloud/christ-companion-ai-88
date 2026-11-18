@@ -80,7 +80,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:1"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E aconteceu que, entrando ele num sábado para comer pão na casa de um dos chefes dos fariseus, eles estavam o observando. Exposição contextual e limites: Jesus aceita uma refeição sabática na casa de um líder fariseu; o narrador destaca a vigilância sobre ele. A hospitalidade é cenário de tensão, não prova de que todos os fariseus agissem do mesmo modo."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Jesus aceita uma refeição sabática na casa de um líder fariseu; o narrador destaca a vigilância sobre ele. A hospitalidade é cenário de tensão, não prova de que todos os fariseus agissem do mesmo modo. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-2",
@@ -89,7 +89,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:2"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E eis que um certo homem com o corpo inchado estava ali diante dele. Exposição contextual e limites: O homem descrito como inchado está diante de Jesus. O texto não fornece diagnóstico moderno nem informa como chegou ali; não se deve reduzir sua identidade à condição física."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O homem descrito como inchado está diante de Jesus. O texto não fornece diagnóstico moderno nem informa como chegou ali; não se deve reduzir sua identidade à condição física. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-3",
@@ -98,7 +98,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:3"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E respondendo Jesus, falou aos estudiosos da Lei, e aos fariseus, dizendo: É lícito curar no sábado? Exposição contextual e limites: Jesus pergunta aos intérpretes da Lei se curar no sábado é lícito. A pergunta põe em discussão o sentido do descanso e o cuidado humano, sem rejeitar a tradição judaica como um todo."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Jesus pergunta aos intérpretes da Lei se curar no sábado é lícito. A pergunta põe em discussão o sentido do descanso e o cuidado humano, sem rejeitar a tradição judaica como um todo. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-4",
@@ -107,7 +107,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:4"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Porém eles ficaram calados; e ele, tomando -o ,o curou, e o despediu. Exposição contextual e limites: Diante do silêncio, Jesus acolhe, cura e despede o homem. O gesto precede a argumentação seguinte; o texto não autoriza prometer cura idêntica a toda pessoa enferma."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Diante do silêncio, Jesus acolhe, cura e despede o homem. O gesto precede a argumentação seguinte; o texto não autoriza prometer cura idêntica a toda pessoa enferma. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-5",
@@ -116,7 +116,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:5"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E ele, respondendo-lhes, disse: De qual que vós cairá o jumento, ou o boi em algum poço que, mesmo no sábado, não o tire logo? Exposição contextual e limites: Jesus compara a ajuda prestada a um animal caído em poço no sábado. A analogia questiona a incoerência de negar socorro humano quando se admite ação urgente."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Jesus compara a ajuda prestada a um animal caído em poço no sábado. A analogia questiona a incoerência de negar socorro humano quando se admite ação urgente. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-6",
@@ -125,7 +125,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:6"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E nada podiam lhe responder a estas coisas. Exposição contextual e limites: Os presentes não conseguem responder à analogia. Lucas registra o impasse dos interlocutores específicos, não a derrota de todo o judaísmo."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Os presentes não conseguem responder à analogia. Lucas registra o impasse dos interlocutores específicos, não a derrota de todo o judaísmo. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-7",
@@ -134,7 +134,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:7"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E vendo como os convidados escolhiam os primeiros assentos, disse-lhes uma parábola: Exposição contextual e limites: Jesus observa a busca por posições de destaque e conta uma parábola. A crítica alcança a autopromoção social visível à mesa."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Jesus observa a busca por posições de destaque e conta uma parábola. A crítica alcança a autopromoção social visível à mesa. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-8",
@@ -143,7 +143,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:8"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Quando fores convidados para o casamento de alguém, não te sentes no primeiro assento, para que não aconteça de se outro convidado mais digno que tu estiver, Exposição contextual e limites: A instrução de não escolher o lugar mais honroso pressupõe uma ordem de assentos conhecida pelos ouvintes; a cena funciona como ensino moral, não manual de etiqueta apenas."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): A instrução de não escolher o lugar mais honroso pressupõe uma ordem de assentos conhecida pelos ouvintes; a cena funciona como ensino moral, não manual de etiqueta apenas. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-9",
@@ -152,7 +152,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:9"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E venha o que convidou a ti e a ele, e te diga: Dá lugar a este; E então, com vergonha, tenhas que tomar o último lugar. Exposição contextual e limites: Um anfitrião pode pedir ao convidado presunçoso que ceda lugar. A humilhação expõe a fragilidade do prestígio obtido por iniciativa própria."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Um anfitrião pode pedir ao convidado presunçoso que ceda lugar. A humilhação expõe a fragilidade do prestígio obtido por iniciativa própria. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-10",
@@ -161,7 +161,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:10"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Mas quando fores convidado, vai, e senta-te no último lugar; para que quando vier o que te convidou, te diga: Amigo, sobe para este assento melhor. Então terás honra diante dos que estiverem sentados contigo à mesa . Exposição contextual e limites: O convite a ocupar posição humilde inverte a lógica da competição. Não se trata de estratégia manipulativa para conseguir promoção, mas de renunciar à exigência de honra."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O convite a ocupar posição humilde inverte a lógica da competição. Não se trata de estratégia manipulativa para conseguir promoção, mas de renunciar à exigência de honra. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-11",
@@ -170,7 +170,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:11"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Porque qualquer que exaltar a si mesmo, e aquele que humilhar a si mesmo, será exaltado. Exposição contextual e limites: A máxima sobre exaltação e humilhação sintetiza a parábola e antecipa a inversão de status no Reino. A ação divina não legitima desprezo ou abuso contra pessoas humildes."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): A máxima sobre exaltação e humilhação sintetiza a parábola e antecipa a inversão de status no Reino. A ação divina não legitima desprezo ou abuso contra pessoas humildes. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-12",
@@ -179,7 +179,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:12"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E dizia também ao que tinha lhe convidado: Quando fizeres um jantar, ou uma ceia, não chames a teus amigos, nem a teus irmãos, nem a teus parentes, nem a teus vizinhos ricos, para que eles também em algum tempo não te convidem de volta, e tu sejas recompensado. Exposição contextual e limites: Jesus dirige-se ao anfitrião e questiona convites restritos aos que podem retribuir. Não proíbe amizades familiares; confronta a hospitalidade baseada apenas em vantagem."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Jesus dirige-se ao anfitrião e questiona convites restritos aos que podem retribuir. Não proíbe amizades familiares; confronta a hospitalidade baseada apenas em vantagem. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-13",
@@ -188,7 +188,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:13"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Mas quando fizeres convite, chama aos pobres, aleijados, mancos e cegos. Exposição contextual e limites: Pobres e pessoas com limitações físicas são nomeados como convidados dignos. A lista denuncia barreiras sociais, não apresenta deficiência como inferioridade espiritual."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Pobres e pessoas com limitações físicas são nomeados como convidados dignos. A lista denuncia barreiras sociais, não apresenta deficiência como inferioridade espiritual. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-14",
@@ -197,7 +197,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:14"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E serás bem-aventurado, porque não eles não têm como te recompensar; pois tu serás recompensado na ressurreição dos justos. Exposição contextual e limites: A incapacidade de retribuição imediata desloca a motivação para a esperança da ressurreição. A generosidade não deve transformar pessoas vulneráveis em instrumentos para ganhar mérito."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): A incapacidade de retribuição imediata desloca a motivação para a esperança da ressurreição. A generosidade não deve transformar pessoas vulneráveis em instrumentos para ganhar mérito. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-15",
@@ -206,7 +206,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:15"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E um dos que juntamente estavam sentados à mesa , ouvindo isto, disse-lhe: Bem-aventurado aquele que comer pão no Reino de Deus. Exposição contextual e limites: Um participante declara feliz quem comer no Reino de Deus. Jesus responde com outra história, desafiando a presunção de participação automática."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Um participante declara feliz quem comer no Reino de Deus. Jesus responde com outra história, desafiando a presunção de participação automática. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-16",
@@ -215,7 +215,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:16"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Porém ele lhe disse: Um certo homem fez um grande jantar, e convidou a muitos. Exposição contextual e limites: O anfitrião prepara uma refeição abundante e convida muitos. A imagem de banquete evoca alegria e comunhão do Reino, sem exigir equivalência rígida para cada detalhe."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O anfitrião prepara uma refeição abundante e convida muitos. A imagem de banquete evoca alegria e comunhão do Reino, sem exigir equivalência rígida para cada detalhe. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-17",
@@ -224,7 +224,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:17"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E na hora do jantar, mandou seu servo para dizer aos convidados: Vinde, que tudo já está preparado. Exposição contextual e limites: Com a refeição pronta, o servo avisa os convidados. O segundo chamado mostra a urgência de responder ao convite já oferecido."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Com a refeição pronta, o servo avisa os convidados. O segundo chamado mostra a urgência de responder ao convite já oferecido. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-18",
@@ -233,7 +233,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:18"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E cada um deles todos começou a dar desculpas. O primeiro lhe disse: Comprei um campo, e tenho que ir vê-lo; peço-te desculpas. Exposição contextual e limites: O primeiro convidado usa a compra de terra como justificativa. A narrativa destaca prioridade concorrente, não condena a posse de terras em si."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O primeiro convidado usa a compra de terra como justificativa. A narrativa destaca prioridade concorrente, não condena a posse de terras em si. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-19",
@@ -242,7 +242,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:19"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E outro disse: Comprei cinco pares de bois, e vou testá-los; peço-te desculpas. Exposição contextual e limites: O segundo apresenta a necessidade de testar animais de trabalho. A atividade econômica serve de desculpa narrativa, não é declarada pecaminosa por natureza."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O segundo apresenta a necessidade de testar animais de trabalho. A atividade econômica serve de desculpa narrativa, não é declarada pecaminosa por natureza. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-20",
@@ -251,7 +251,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:20"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E outro disse: Casei-me com uma mulher, e portanto não posso vir. Exposição contextual e limites: O terceiro menciona casamento como motivo para não ir. A parábola critica a recusa ao convite, não a família ou o matrimônio."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O terceiro menciona casamento como motivo para não ir. A parábola critica a recusa ao convite, não a família ou o matrimônio. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-21",
@@ -260,7 +260,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:21"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E aquele servo, ao voltar, anunciou estas coisas a seu senhor. Então o chefe da casa, irritado, disse a seu servo: Sai depressa pelas ruas e praças da cidade, e traze aqui aos pobres, e aleijados, e mancos e cegos. Exposição contextual e limites: Ao saber das recusas, o anfitrião envia o servo às ruas para trazer pessoas pobres e com deficiência. A abertura desafia hierarquias de prestígio; sua irritação não justifica hostilidade a grupos religiosos."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Ao saber das recusas, o anfitrião envia o servo às ruas para trazer pessoas pobres e com deficiência. A abertura desafia hierarquias de prestígio; sua irritação não justifica hostilidade a grupos religiosos. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-22",
@@ -269,7 +269,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:22"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E o servo disse: Senhor, está feito como mandaste, e ainda há lugar. Exposição contextual e limites: O servo informa que a ordem foi cumprida e ainda há espaço. A abundância do banquete amplia o alcance da hospitalidade."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O servo informa que a ordem foi cumprida e ainda há espaço. A abundância do banquete amplia o alcance da hospitalidade. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-23",
@@ -278,7 +278,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:23"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E o senhor disse ao servo: Sai pelos caminhos, e trilhas, e força-os a entrar, para que minha casa se encha. Exposição contextual e limites: O convite alcança pessoas fora dos centros habituais. A expressão traduzida como compelir deve ser lida no contexto de acolhimento insistente, nunca como licença para coerção religiosa, violência ou conversão forçada."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O convite alcança pessoas fora dos centros habituais. A expressão traduzida como compelir deve ser lida no contexto de acolhimento insistente, nunca como licença para coerção religiosa, violência ou conversão forçada. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-24",
@@ -287,7 +287,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:24"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Porque eu vos digo, que nenhum daqueles homens que foram convidados experimentará da minha ceia. Exposição contextual e limites: Os convidados que rejeitaram a refeição não a provarão. A advertência enfatiza resposta responsável; não identifica etnias inteiras como excluídas por natureza."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Os convidados que rejeitaram a refeição não a provarão. A advertência enfatiza resposta responsável; não identifica etnias inteiras como excluídas por natureza. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-25",
@@ -296,7 +296,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:25"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E muitas multidões iam com ele; e virando-se, disse-lhes: Exposição contextual e limites: Jesus volta-se à multidão que o acompanha. A passagem muda da mesa para o caminho e confronta entusiasmo superficial com exigências reais do discipulado."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Jesus volta-se à multidão que o acompanha. A passagem muda da mesa para o caminho e confronta entusiasmo superficial com exigências reais do discipulado. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-26",
@@ -305,7 +305,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:26"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Se alguém vier a mim, e não odiar a seu pai, e mãe, e mulher, e filhos, e irmãos, e irmãs, e ainda também sua própria vida, não pode ser meu discípulo. Exposição contextual e limites: A linguagem forte de odiar parentes e a própria vida é hipérbole semítica de prioridade comparativa; Mateus 10:37 ajuda a interpretar. Não manda maltratar familiares, abandonar dependentes ou praticar autodestruição."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): A linguagem forte de odiar parentes e a própria vida é hipérbole semítica de prioridade comparativa; Mateus 10:37 ajuda a interpretar. Não manda maltratar familiares, abandonar dependentes ou praticar autodestruição. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-27",
@@ -314,7 +314,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:27"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): E qualquer que não levar sua cruz, e vier após mim, não pode ser meu discípulo. Exposição contextual e limites: Seguir Jesus inclui disposição para perdas e oposição, à luz da cruz romana como instrumento de execução. Não significa tolerar abuso doméstico ou deixar de procurar proteção."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Seguir Jesus inclui disposição para perdas e oposição, à luz da cruz romana como instrumento de execução. Não significa tolerar abuso doméstico ou deixar de procurar proteção. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-28",
@@ -323,7 +323,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:28"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Porque qual de vós, querendo edificar uma torre, não se senta primeiro para fazer as contas dos gastos, para ver se tem o suficiente para a completar? Exposição contextual e limites: A imagem do construtor que calcula recursos introduz a necessidade de ponderar o custo de seguir Jesus. O exemplo não promete autossuficiência espiritual."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): A imagem do construtor que calcula recursos introduz a necessidade de ponderar o custo de seguir Jesus. O exemplo não promete autossuficiência espiritual. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-29",
@@ -332,7 +332,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:29"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Para que não aconteça que, depois de ter posto seu fundamento, e não podendo a completar, comecem a escarnecer dele todos os que o virem, Exposição contextual e limites: A obra iniciada e não concluída provoca escárnio. A parábola adverte contra compromisso irrefletido, sem ridicularizar pessoas em pobreza que não conseguem construir."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): A obra iniciada e não concluída provoca escárnio. A parábola adverte contra compromisso irrefletido, sem ridicularizar pessoas em pobreza que não conseguem construir. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-30",
@@ -341,7 +341,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:30"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Dizendo: Este homem começou a construir, e não pôde terminar. Exposição contextual e limites: Os espectadores comentam o fracasso do construtor. A repetição reforça a necessidade de avaliar compromissos, não ensina a viver refém da aprovação social."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Os espectadores comentam o fracasso do construtor. A repetição reforça a necessidade de avaliar compromissos, não ensina a viver refém da aprovação social. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-31",
@@ -350,7 +350,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:31"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Ou qual rei, indo a guerra para lutar contra outro rei, não se senta primeiro para consultar, se pode ir ao encontro com dez mil soldados , vindo contra ele vinte mil? Exposição contextual e limites: O segundo exemplo envolve um governante que compara forças antes do conflito. É analogia de prudência; não prescreve agressão militar como dever cristão."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O segundo exemplo envolve um governante que compara forças antes do conflito. É analogia de prudência; não prescreve agressão militar como dever cristão. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-32",
@@ -359,7 +359,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:32"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Se não puder , estando o outro ainda longe, manda -lhe representantes diplomáticos, e roga pela paz. Exposição contextual e limites: Diante da desvantagem, o rei envia emissários. A disposição de buscar paz reforça discernimento e contrasta com bravata irresponsável."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Diante da desvantagem, o rei envia emissários. A disposição de buscar paz reforça discernimento e contrasta com bravata irresponsável. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-33",
@@ -368,7 +368,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:33"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Assim, portanto, qualquer de vós que não renuncia a tudo, não pode ser meu discípulo. Exposição contextual e limites: Jesus resume que o discipulado exige renunciar à pretensão de possuir tudo para si. O texto não autoriza líderes religiosos a exigir transferência de bens ou controle financeiro coercitivo."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): Jesus resume que o discipulado exige renunciar à pretensão de possuir tudo para si. O texto não autoriza líderes religiosos a exigir transferência de bens ou controle financeiro coercitivo. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-34",
@@ -377,7 +377,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:34"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Bom é o sal; porém se o sal perder o sabor, com o que ele será temperado? Exposição contextual e limites: O sal útil ilustra a identidade distintiva do discípulo. A imagem é metafórica; debates químicos sobre o sal não devem substituir o ponto ético do ensino."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O sal útil ilustra a identidade distintiva do discípulo. A imagem é metafórica; debates químicos sobre o sal não devem substituir o ponto ético do ensino. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "versiculo-35",
@@ -386,7 +386,7 @@ export const luke14Study: StudyContent = {
       "scriptureRefs": [
         "Lucas 14:35"
       ],
-      "body": "Paráfrase explicativa livre original (não é citação bíblica): Nem para a terra, nem para adubo serve; lançam-no fora. Quem tem ouvidos para ouvir, ouça. Exposição contextual e limites: O sal insípido é descartado, e o chamado a ouvir encerra o capítulo. A linguagem alerta contra discipulado nominal, não autoriza excluir pessoas sem cuidado pastoral."
+      "body": "Paráfrase explicativa livre original (não é citação bíblica): O sal insípido é descartado, e o chamado a ouvir encerra o capítulo. A linguagem alerta contra discipulado nominal, não autoriza excluir pessoas sem cuidado pastoral. Leitura e interpretação: confira a redação integral deste versículo no acervo BLIVRE antes de aplicar a observação; esta nota não substitui o texto bíblico."
     },
     {
       "id": "questoes-interpretativas",
