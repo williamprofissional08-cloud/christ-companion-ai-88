@@ -12,8 +12,8 @@ const ids = [...study.matchAll(/"id": "([^"]+)"/g)].map(m => m[1]);
 assert.equal(ids.length, new Set(ids).size, "IDs duplicados");
 for (let n=1;n<=count;n++) {
   assert.ok(ids.includes("versiculo-"+n), "Falta exposição do versículo "+n);
-  assert.match(study, new RegExp("\\\\*\\\\*"+n+"\\\\.\\\\*\\\\*"), "Falta paráfrase do versículo "+n);
+  assert.ok(study.includes("**"+n+".**"), "Falta paráfrase do versículo "+n);
 }
-assert.equal((catalog.match(/import \\{ ephesians6Study \\} from "\\.\\/ephesians-6-study";/g)||[]).length, 1);
+assert.equal(catalog.split('import { ephesians6Study } from "./ephesians-6-study";').length-1, 1);
 assert.equal((catalog.match(/"biblia-efesios-cap-6": ephesians6Study/g)||[]).length, 1);
 console.log("Efésios 6: integridade estrutural e registro únicos OK");
