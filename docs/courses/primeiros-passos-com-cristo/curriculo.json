@@ -2687,5 +2687,631 @@
       "order_index": 9
     }
   ],
-  "export_note": "Editorial copy only; changes to this file are NOT automatically synced to Supabase. Do not delete or recreate course, lessons or progress. No secrets."
+  "export_note": "Editorial copy only; changes to this file are NOT automatically synced to Supabase. Do not delete or recreate course, lessons or progress. No secrets.",
+  "exercises": [
+    {
+      "id": "e26636e0-6d02-443d-a174-44589a0765fd",
+      "lesson_id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — O evangelho começa com Jesus",
+      "instructions": "Leia Marcos 1:1–15 em voz alta duas vezes. Registre o que o trecho afirma sobre Jesus, o que ele pede como resposta e uma área da sua vida que precisa mudar. Nas próximas 24 horas, pratique um passo pequeno e verificável: diga a verdade onde você esconderia algo, procure ajuda para um hábito destrutivo ou reconcilie uma conversa possível e segura. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "1a50a863-ab75-4104-adc7-3fbba7eeae30",
+      "lesson_id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Jesus se aproxima de quem está ferido",
+      "instructions": "Escolha uma pessoa que você costuma ignorar. Ofereça presença, escuta ou ajuda prática sem expor a intimidade dela. Se você está sofrendo, escreva um pedido honesto de ajuda a alguém confiável e, quando necessário, busque cuidado médico ou psicológico sem culpa. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "b826ed0a-f94c-4c21-8f61-3814b311a506",
+      "lesson_id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Jesus chama pessoas imperfeitas",
+      "instructions": "Escreva uma antiga etiqueta negativa que você coloca sobre si ou sobre alguém. Em oração, confronte-a com a postura de Jesus. Depois identifique um comportamento que precisa mudar e faça um primeiro passo seguro de reparação ou de busca de apoio. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "2c7e6114-8b0a-4c4d-99fc-05034803be1d",
+      "lesson_id": "41557468-333c-4d80-bd69-df4219763908",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Como ler a Bíblia à luz de Cristo",
+      "instructions": "Faça o exercício das três perguntas com Lucas 24: o que aconteceu? O que o autor quis comunicar aos primeiros leitores? Como essa verdade pode orientar minha vida sem distorcer o texto? Escreva três linhas em cada etapa. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "737ab028-5986-4a18-9557-67628a0d91b3",
+      "lesson_id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Não acredite em tudo: examine as Escrituras",
+      "instructions": "Escolha uma frase bíblica compartilhada em uma rede social. Procure o capítulo completo, leia os cinco versículos antes e depois e registre se a frase foi usada corretamente. Se tiver dúvida, procure orientação numa comunidade cristã confiável. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "1774403c-9fba-4901-956e-b1f33c1d4d0c",
+      "lesson_id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — A Escritura forma a vida, não só a memória",
+      "instructions": "Crie seu primeiro método simples: 10 minutos para ler um trecho, 5 para observar o contexto, 5 para escrever o significado e 5 para escolher uma prática. Registre uma pergunta que ainda não consegue responder. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "1b67b1ac-e782-4537-8910-5d63ddc0720d",
+      "lesson_id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — O que significa nascer de novo?",
+      "instructions": "Leia João 3 lentamente e escreva a diferença entre religião externa e transformação interior. Escolha uma conversa em que você tenha usado aparência para esconder um erro e planeje uma atitude honesta, sem se colocar em risco. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "28171904-2f0f-44c7-b319-b9f5ec690213",
+      "lesson_id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — A graça que salva e ensina a fazer o bem",
+      "instructions": "Escreva duas colunas: «o que não posso comprar com boas obras» e «que boas obras posso praticar por gratidão». Faça hoje uma ação concreta sem contar a ninguém para receber elogio. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "23afc0a2-5069-4c47-9d22-61d2335848fb",
+      "lesson_id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Identidade em Cristo e luta diária",
+      "instructions": "Anote uma mentira que você repete sobre si («sou apenas meu pior erro»). Compare-a com Romanos 8:1–17. Escolha um gesto coerente com a vida no Espírito e planeje quando o realizará. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "017fce99-2933-45fa-b416-3763e268a06b",
+      "lesson_id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Jesus ensina a orar sem máscaras",
+      "instructions": "Ore o Pai Nosso pausadamente. Após cada pedido, escreva uma correspondência na vida: pão — uma necessidade; perdão — uma conversa segura; vontade de Deus — uma decisão em que você precisa de sabedoria. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "3459bbe8-582a-4869-b847-173cbfa8cd99",
+      "lesson_id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — O Pastor permanece no vale",
+      "instructions": "Desenhe duas colunas: «meus pastos» (cuidado recebido) e «meus vales» (medos reais). Em seguida registre uma ação concreta de cuidado — descanso, conversa, ajuda especializada ou apoio a alguém vulnerável. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "da5865a8-0e55-47a6-9f8e-8d98d196ce82",
+      "lesson_id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Quando erramos: confissão e recomeço",
+      "instructions": "Sem compartilhar publicamente, escreva: «o que fiz», «quem foi afetado», «o que preciso mudar» e «qual reparação responsável é possível». Faça uma oração sincera e procure ajuda adequada se o dano for grave. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "ac0f2f43-0790-4337-b15b-f1f1c60cb597",
+      "lesson_id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Permanecer em Cristo quando ninguém vê",
+      "instructions": "Faça um exame do dia: onde minhas palavras feriram? Onde tive paciência? Há uma relação em que posso demonstrar cuidado sem buscar reconhecimento? Escolha uma prática de permanência por sete dias: leitura bíblica breve e um gesto concreto de amor. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "1565df4b-a23a-40d5-bd26-8dc043d0f1c7",
+      "lesson_id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — O fruto do Espírito no caráter",
+      "instructions": "Escolha um aspecto do fruto do Espírito para a semana. Defina uma ação observável: antes de responder com irritação, ouvir por 30 segundos; antes de reclamar, agradecer; antes de comprar por impulso, esperar e refletir. Registre o resultado sem transformar a prática em competição. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "c786e5e7-d77d-437a-a50c-a826ac046dde",
+      "lesson_id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — A transformação da mente e das escolhas",
+      "instructions": "Durante três dias, anote uma decisão influenciada por comparação ou impulso. Antes da próxima decisão, pergunte: «isso expressa amor a Deus, dignidade do próximo e responsabilidade?». Ajuste uma prática concreta. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "295a54f6-6a37-4d8c-880a-783eec3afd84",
+      "lesson_id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — A fé não foi feita para ser vivida sozinha",
+      "instructions": "Participe de um encontro comunitário seguro ou procure uma comunidade cristã responsável. Faça três perguntas: ensinam a Bíblia em contexto? cuidam das pessoas vulneráveis? permitem prestação de contas e perguntas? Se já frequenta uma igreja, ofereça ajuda discreta. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "468b882e-14b5-4a75-8e68-a96a8d78f7d7",
+      "lesson_id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Você tem lugar no Corpo de Cristo",
+      "instructions": "Faça uma lista de três necessidades da comunidade, não apenas de seus talentos. Escolha uma delas e procure como ajudar de forma segura, sustentável e respeitosa durante esta semana. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "265b718d-da18-40c9-b09c-c244f5f1bebd",
+      "lesson_id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Maturidade cristã e discernimento espiritual",
+      "instructions": "Escolha um ensino ouvido recentemente e investigue o capítulo bíblico usado. Escreva uma pergunta sincera e converse com alguém maduro que aceite examinar o texto junto com você. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "700ea52f-6929-4a9b-ab54-3063ee6d8e86",
+      "lesson_id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Quando a raiva domina: reconciliação e limites",
+      "instructions": "Escreva uma situação recente de raiva. Separe fatos de suposições e escolha um gesto seguro: pedir desculpas por uma palavra injusta, encerrar uma conversa agressiva ou buscar mediação. Se houver violência, priorize proteção. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "5ad24042-e5cf-4527-92d7-9f9d93ad355d",
+      "lesson_id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Dinheiro, ansiedade e prioridades",
+      "instructions": "Registre gastos essenciais e uma fonte atual de preocupação. Escolha uma medida prudente: revisar orçamento, pedir orientação, procurar oportunidade de trabalho ou ajudar alguém com aquilo que realmente pode oferecer. Ore sem prometer a si mesmo um resultado mágico. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "6879ffb8-b9e4-4f52-9359-4960fa2af4c1",
+      "lesson_id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Uma fé que se vê nas atitudes",
+      "instructions": "Hoje pratique a regra de Tiago: escute alguém sem interromper, cumpra uma promessa esquecida ou ofereça ajuda concreta e proporcional às suas condições. Anote como sua ação se relacionou com o texto. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "1c44cfa2-6cd2-4f39-bd77-6cf7d91dd3c5",
+      "lesson_id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — A humildade de Cristo transforma nossa maneira de servir",
+      "instructions": "Escolha uma situação em que você costuma buscar o primeiro lugar. Faça uma ação concreta de serviço e ofereça reconhecimento justo a outra pessoa, sem publicar o gesto em busca de aprovação. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "59a704a1-227f-4821-a8e8-bb0b3d1cd180",
+      "lesson_id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Compartilhar o evangelho com respeito",
+      "instructions": "Escreva, em até cinco frases, o que você compreendeu sobre Jesus e por que deseja segui-lo. Converse com uma pessoa que tenha abertura para ouvir, respeitando inteiramente a liberdade dela de discordar. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    },
+    {
+      "id": "4bf2de92-d1f3-4b93-ba5c-81803a60692f",
+      "lesson_id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "kind": "reflection",
+      "title": "Minha prática da Palavra — Seguir Jesus nos dias difíceis",
+      "instructions": "Revise as últimas aulas: escreva três verdades aprendidas, duas atitudes que começaram a mudar e uma área que necessita de ajuda. Defina um plano de leitura de 15 a 25 minutos, quatro dias por semana, com espaço para descanso e participação comunitária. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "fields": [
+        {
+          "key": "verdade",
+          "label": "Qual verdade bíblica você aprendeu?",
+          "placeholder": "Escreva com suas palavras e cite a passagem."
+        },
+        {
+          "key": "passo",
+          "label": "Que atitude prática você decidiu tomar?",
+          "placeholder": "Descreva algo pequeno, concreto e responsável."
+        },
+        {
+          "key": "resultado",
+          "label": "Como você praticou esta Palavra nas últimas 24 horas?",
+          "placeholder": "Conte o que aconteceu, sem obrigação de parecer perfeito."
+        }
+      ],
+      "status": "published",
+      "order_index": 1
+    }
+  ]
 }
