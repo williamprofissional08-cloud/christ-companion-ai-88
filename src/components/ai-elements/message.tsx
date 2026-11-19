@@ -321,7 +321,14 @@ export const MessageBranchPage = ({
 
 export type MessageResponseProps = ComponentProps<typeof Streamdown>;
 
-const streamdownPlugins = { cjk, code, math, mermaid };
+// Compatibilidade com versões de @streamdown/math cujo getStyles é opcional:
+// Streamdown exige a função presente; preserva o CSS fornecido pelo plugin.
+const streamdownPlugins = {
+  cjk,
+  code,
+  math: { ...math, getStyles: math.getStyles ?? (() => "") },
+  mermaid,
+} satisfies NonNullable<MessageResponseProps["plugins"]>;
 
 export const MessageResponse = memo(
   ({ className, ...props }: MessageResponseProps) => (
