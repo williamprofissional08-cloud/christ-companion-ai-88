@@ -1,0 +1,2691 @@
+{
+  "course": {
+    "id": "8aadaf32-47ec-4a8b-bcc5-6ea9a2bb9431",
+    "slug": "primeiros-passos-com-cristo-da-conversao-a-vida-transformada",
+    "title": "Primeiros Passos com Cristo — Da Conversão à Vida Transformada",
+    "subtitle": "Trilha de discipulado: conheça Jesus, compreenda a Bíblia e pratique a fé",
+    "description": "Trilha de discipulado para novos convertidos: comece conhecendo Jesus nos Evangelhos, aprenda a interpretar as Escrituras, descubra graça e salvação, desenvolva oração, caráter, vida comunitária e serviço. São 8 módulos, 24 aulas completas, cada uma com contexto, interpretação, aplicação prática, perguntas e oração. Plano sugerido de 8 semanas, sem cobrança e sem pressão de desempenho. Não substitui cuidado pastoral ou profissional quando necessário. O aluno é convidado a consultar os estudos bíblicos aprofundados de cada capítulo no catálogo da aba Estudos.",
+    "level": "iniciante",
+    "tier": "free",
+    "order_index": 1
+  },
+  "modules": [
+    {
+      "id": "9f1c11f6-077c-4668-a82e-c637014ff20b",
+      "course_id": "8aadaf32-47ec-4a8b-bcc5-6ea9a2bb9431",
+      "title": "Módulo 1 — Conhecendo Jesus",
+      "summary": "Descobrir quem Jesus é antes de tentar dominar todos os livros bíblicos.",
+      "order_index": 1
+    },
+    {
+      "id": "5006fddf-3b17-472c-b799-3f10d6098d4e",
+      "course_id": "8aadaf32-47ec-4a8b-bcc5-6ea9a2bb9431",
+      "title": "Módulo 2 — Aprendendo a estudar a Bíblia",
+      "summary": "Ler com atenção ao autor, contexto, gênero e propósito do texto.",
+      "order_index": 2
+    },
+    {
+      "id": "12fcd4f4-28c3-49a3-b16d-c5544a0037ed",
+      "course_id": "8aadaf32-47ec-4a8b-bcc5-6ea9a2bb9431",
+      "title": "Módulo 3 — Salvação, graça e nova identidade",
+      "summary": "Entender o novo nascimento, a graça e a liberdade da condenação.",
+      "order_index": 3
+    },
+    {
+      "id": "6421d41f-35bd-419c-8168-a2b86dd19627",
+      "course_id": "8aadaf32-47ec-4a8b-bcc5-6ea9a2bb9431",
+      "title": "Módulo 4 — Oração e intimidade com Deus",
+      "summary": "Aprender a orar com reverência, sinceridade e perseverança.",
+      "order_index": 4
+    },
+    {
+      "id": "35ce5759-57ff-4ade-9e6d-efe8c766bf92",
+      "course_id": "8aadaf32-47ec-4a8b-bcc5-6ea9a2bb9431",
+      "title": "Módulo 5 — Espírito Santo e transformação",
+      "summary": "Deixar o evangelho formar caráter e gerar fruto na vida diária.",
+      "order_index": 5
+    },
+    {
+      "id": "dc2d03b0-1d31-4046-9f7d-4eb58a0c26ca",
+      "course_id": "8aadaf32-47ec-4a8b-bcc5-6ea9a2bb9431",
+      "title": "Módulo 6 — Igreja, comunhão e discipulado",
+      "summary": "Viver a fé em comunidade, com serviço e discernimento.",
+      "order_index": 6
+    },
+    {
+      "id": "a606f834-e270-4d96-8339-b2e238132d29",
+      "course_id": "8aadaf32-47ec-4a8b-bcc5-6ea9a2bb9431",
+      "title": "Módulo 7 — Vivendo a fé no mundo real",
+      "summary": "Praticar reconciliação, responsabilidade e justiça no cotidiano.",
+      "order_index": 7
+    },
+    {
+      "id": "113c7cb3-774e-4c41-8946-f03bc53cc47c",
+      "course_id": "8aadaf32-47ec-4a8b-bcc5-6ea9a2bb9431",
+      "title": "Módulo 8 — Propósito, perseverança e missão",
+      "summary": "Continuar em Cristo, servir pessoas e compartilhar o evangelho sem coerção.",
+      "order_index": 8
+    }
+  ],
+  "lessons": [
+    {
+      "id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "module_id": "9f1c11f6-077c-4668-a82e-c637014ff20b",
+      "slug": "marcos-o-inicio-do-evangelho",
+      "title": "O evangelho começa com Jesus",
+      "summary": "A boa notícia do Reino e o primeiro passo de uma fé verdadeira.",
+      "passage": "Marcos 1:1–15",
+      "duration_minutes": 25,
+      "order_index": 1
+    },
+    {
+      "id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "module_id": "9f1c11f6-077c-4668-a82e-c637014ff20b",
+      "slug": "jesus-e-o-excluido",
+      "title": "Jesus se aproxima de quem está ferido",
+      "summary": "A compaixão de Cristo diante da exclusão e do sofrimento.",
+      "passage": "Marcos 1:40–45",
+      "duration_minutes": 25,
+      "order_index": 2
+    },
+    {
+      "id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "module_id": "9f1c11f6-077c-4668-a82e-c637014ff20b",
+      "slug": "chamados-por-graca",
+      "title": "Jesus chama pessoas imperfeitas",
+      "summary": "O chamado de Levi e a mesa onde a graça confronta o orgulho.",
+      "passage": "Marcos 2:13–17",
+      "duration_minutes": 25,
+      "order_index": 3
+    },
+    {
+      "id": "41557468-333c-4d80-bd69-df4219763908",
+      "module_id": "5006fddf-3b17-472c-b799-3f10d6098d4e",
+      "slug": "ler-a-biblia-com-jesus",
+      "title": "Como ler a Bíblia à luz de Cristo",
+      "summary": "Jesus abre as Escrituras sem retirar os textos de seu contexto.",
+      "passage": "Lucas 24:13–35",
+      "duration_minutes": 25,
+      "order_index": 1
+    },
+    {
+      "id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "module_id": "5006fddf-3b17-472c-b799-3f10d6098d4e",
+      "slug": "examinar-as-escrituras",
+      "title": "Não acredite em tudo: examine as Escrituras",
+      "summary": "A prática dos bereanos: ouvir com abertura e conferir com atenção.",
+      "passage": "Atos 17:10–12",
+      "duration_minutes": 25,
+      "order_index": 2
+    },
+    {
+      "id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "module_id": "5006fddf-3b17-472c-b799-3f10d6098d4e",
+      "slug": "ler-para-ser-transformado",
+      "title": "A Escritura forma a vida, não só a memória",
+      "summary": "O propósito das Escrituras e o ciclo de leitura, compreensão e prática.",
+      "passage": "2 Timóteo 3:14–17",
+      "duration_minutes": 25,
+      "order_index": 3
+    },
+    {
+      "id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "module_id": "12fcd4f4-28c3-49a3-b16d-c5544a0037ed",
+      "slug": "novo-nascimento",
+      "title": "O que significa nascer de novo?",
+      "summary": "A conversa de Jesus com Nicodemos sobre fé e vida nova.",
+      "passage": "João 3:1–21",
+      "duration_minutes": 25,
+      "order_index": 1
+    },
+    {
+      "id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "module_id": "12fcd4f4-28c3-49a3-b16d-c5544a0037ed",
+      "slug": "salvos-pela-graca",
+      "title": "A graça que salva e ensina a fazer o bem",
+      "summary": "Não compramos o amor de Deus; recebemos graça e respondemos com obras.",
+      "passage": "Efésios 2:1–10",
+      "duration_minutes": 25,
+      "order_index": 2
+    },
+    {
+      "id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "module_id": "12fcd4f4-28c3-49a3-b16d-c5544a0037ed",
+      "slug": "sem-condenacao-em-cristo",
+      "title": "Identidade em Cristo e luta diária",
+      "summary": "Liberdade da condenação não significa ausência de crescimento e responsabilidade.",
+      "passage": "Romanos 8:1–17",
+      "duration_minutes": 25,
+      "order_index": 3
+    },
+    {
+      "id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "module_id": "6421d41f-35bd-419c-8168-a2b86dd19627",
+      "slug": "aprender-a-orar",
+      "title": "Jesus ensina a orar sem máscaras",
+      "summary": "O Pai Nosso: presença, dependência, perdão e confiança.",
+      "passage": "Mateus 6:5–13",
+      "duration_minutes": 25,
+      "order_index": 1
+    },
+    {
+      "id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "module_id": "6421d41f-35bd-419c-8168-a2b86dd19627",
+      "slug": "confiar-no-vale",
+      "title": "O Pastor permanece no vale",
+      "summary": "Confiança em Deus sem romantizar o sofrimento.",
+      "passage": "Salmo 23",
+      "duration_minutes": 25,
+      "order_index": 2
+    },
+    {
+      "id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "module_id": "6421d41f-35bd-419c-8168-a2b86dd19627",
+      "slug": "arrependimento-sincero",
+      "title": "Quando erramos: confissão e recomeço",
+      "summary": "A sinceridade diante de Deus e a responsabilidade por reparar o mal.",
+      "passage": "Salmo 51",
+      "duration_minutes": 25,
+      "order_index": 3
+    },
+    {
+      "id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "module_id": "35ce5759-57ff-4ade-9e6d-efe8c766bf92",
+      "slug": "permanecer-na-videira",
+      "title": "Permanecer em Cristo quando ninguém vê",
+      "summary": "Dependência de Jesus e fruto que nasce de permanência.",
+      "passage": "João 15:1–11",
+      "duration_minutes": 25,
+      "order_index": 1
+    },
+    {
+      "id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "module_id": "35ce5759-57ff-4ade-9e6d-efe8c766bf92",
+      "slug": "fruto-do-espirito",
+      "title": "O fruto do Espírito no caráter",
+      "summary": "Liberdade cristã que se expressa em amor, domínio próprio e serviço.",
+      "passage": "Gálatas 5:13–26",
+      "duration_minutes": 25,
+      "order_index": 2
+    },
+    {
+      "id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "module_id": "35ce5759-57ff-4ade-9e6d-efe8c766bf92",
+      "slug": "mente-renovada",
+      "title": "A transformação da mente e das escolhas",
+      "summary": "Discernir valores e resistir à pressão de conformidade.",
+      "passage": "Romanos 12:1–2",
+      "duration_minutes": 25,
+      "order_index": 3
+    },
+    {
+      "id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "module_id": "dc2d03b0-1d31-4046-9f7d-4eb58a0c26ca",
+      "slug": "vida-em-comunidade",
+      "title": "A fé não foi feita para ser vivida sozinha",
+      "summary": "Ensino, comunhão, oração e generosidade na igreja nascente.",
+      "passage": "Atos 2:37–47",
+      "duration_minutes": 25,
+      "order_index": 1
+    },
+    {
+      "id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "module_id": "dc2d03b0-1d31-4046-9f7d-4eb58a0c26ca",
+      "slug": "um-corpo-muitos-membros",
+      "title": "Você tem lugar no Corpo de Cristo",
+      "summary": "Unidade sem uniformidade e dignidade para cada membro.",
+      "passage": "1 Coríntios 12:12–27",
+      "duration_minutes": 25,
+      "order_index": 2
+    },
+    {
+      "id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "module_id": "dc2d03b0-1d31-4046-9f7d-4eb58a0c26ca",
+      "slug": "crescer-com-discernimento",
+      "title": "Maturidade cristã e discernimento espiritual",
+      "summary": "Crescimento não é dependência de um líder: é formação em Cristo.",
+      "passage": "Efésios 4:11–16",
+      "duration_minutes": 25,
+      "order_index": 3
+    },
+    {
+      "id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "module_id": "a606f834-e270-4d96-8339-b2e238132d29",
+      "slug": "raiva-e-reconciliacao",
+      "title": "Quando a raiva domina: reconciliação e limites",
+      "summary": "O ensino de Jesus alcança palavras, intenções e relacionamentos.",
+      "passage": "Mateus 5:21–26",
+      "duration_minutes": 25,
+      "order_index": 1
+    },
+    {
+      "id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "module_id": "a606f834-e270-4d96-8339-b2e238132d29",
+      "slug": "dinheiro-ansiedade-e-confianca",
+      "title": "Dinheiro, ansiedade e prioridades",
+      "summary": "Buscar primeiro o Reino com trabalho responsável e confiança.",
+      "passage": "Mateus 6:19–34",
+      "duration_minutes": 25,
+      "order_index": 2
+    },
+    {
+      "id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "module_id": "a606f834-e270-4d96-8339-b2e238132d29",
+      "slug": "ouvir-e-praticar",
+      "title": "Uma fé que se vê nas atitudes",
+      "summary": "A Palavra se torna visível no modo de ouvir, falar e cuidar.",
+      "passage": "Tiago 1:19–27; 2:14–17",
+      "duration_minutes": 25,
+      "order_index": 3
+    },
+    {
+      "id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "module_id": "113c7cb3-774e-4c41-8946-f03bc53cc47c",
+      "slug": "humildade-e-servico",
+      "title": "A humildade de Cristo transforma nossa maneira de servir",
+      "summary": "Grandeza cristã não é dominar; é considerar o outro com amor.",
+      "passage": "Filipenses 2:1–11",
+      "duration_minutes": 25,
+      "order_index": 1
+    },
+    {
+      "id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "module_id": "113c7cb3-774e-4c41-8946-f03bc53cc47c",
+      "slug": "compartilhar-sem-impor",
+      "title": "Compartilhar o evangelho com respeito",
+      "summary": "A missão de fazer discípulos, ensinar e acompanhar.",
+      "passage": "Mateus 28:16–20",
+      "duration_minutes": 25,
+      "order_index": 2
+    },
+    {
+      "id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "module_id": "113c7cb3-774e-4c41-8946-f03bc53cc47c",
+      "slug": "perseverar-com-esperanca",
+      "title": "Seguir Jesus nos dias difíceis",
+      "summary": "Contentamento, oração e perseverança em toda circunstância.",
+      "passage": "Filipenses 4:4–13",
+      "duration_minutes": 25,
+      "order_index": 3
+    }
+  ],
+  "content_blocks": [
+    {
+      "id": "fde7906f-506f-4c44-a548-08160755dda9",
+      "lesson_id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Marcos 1:1–15. Pergunta de abertura: A boa notícia do Reino e o primeiro passo de uma fé verdadeira. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Marcos 1:1–15"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "2d0dc6f6-762f-4d90-beb9-1b3172bc5457",
+      "lesson_id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Marcos 1:1–15. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Marcos 1:1–15"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "7c154428-6fcc-4349-bcb7-b7d2556e72b1",
+      "lesson_id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Marcos apresenta Jesus em movimento. João Batista prepara o caminho; Jesus é batizado, enfrenta a tentação e anuncia que o Reino de Deus se aproximou. O evangelista não começa com uma lista de exigências para pessoas religiosas, mas com a iniciativa de Deus na história. O anúncio ocorre em contexto de expectativa messiânica e sob domínio romano: falar de Reino tem implicações maiores que uma sensação particular de paz.",
+      "scripture_refs": [
+        "Marcos 1:1–15"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "e197bfc8-22ce-4e02-8e7e-cacef6aff8e8",
+      "lesson_id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Observe os verbos centrais de Marcos 1:14–15: anunciar, arrepender-se e crer. Arrependimento não é apenas remorso ou medo da punição; é mudança de direção diante de Deus. Crer nas boas notícias não é negar os problemas: é reconhecer em Jesus a referência para reorganizar a vida. Antes de perguntar «o que devo fazer para impressionar Deus?», o texto nos pergunta «quem veio ao nosso encontro?». Compare com Marcos 1:9–13: Jesus não promete ausência de deserto aos seus seguidores.",
+      "scripture_refs": [
+        "Marcos 1:1–15"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "56343ec1-a902-422d-8e2d-85d19db1113f",
+      "lesson_id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "O centro da mensagem cristã é Cristo, não a capacidade humana de melhorar sozinho. Sua chegada inaugura a boa notícia e chama uma resposta de fé. Sua morte e ressurreição serão compreendidas progressivamente no próprio Evangelho de Marcos; não antecipe detalhes que este trecho ainda não explica.",
+      "scripture_refs": [
+        "Marcos 1:1–15"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "e326b7a9-127f-42c9-80b3-c0600d341dd5",
+      "lesson_id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Talvez você tenha chegado à fé carregando culpa, vergonha, vícios, medo do futuro ou a sensação de não ser digno. O texto não diz que tudo ficará fácil amanhã. Diz que a história não precisa continuar girando apenas em torno de suas quedas. Você pode começar respondendo a Jesus hoje, com verdade, sem fingir ser alguém que ainda não é.",
+      "scripture_refs": [
+        "Marcos 1:1–15"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "853117f3-2a4f-4780-9b0f-73de5a35e1f1",
+      "lesson_id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Leia Marcos 1:1–15 em voz alta duas vezes. Registre o que o trecho afirma sobre Jesus, o que ele pede como resposta e uma área da sua vida que precisa mudar. Nas próximas 24 horas, pratique um passo pequeno e verificável: diga a verdade onde você esconderia algo, procure ajuda para um hábito destrutivo ou reconcilie uma conversa possível e segura. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Marcos 1:1–15"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "eec82939-e391-40fd-a812-176cf0a10bfc",
+      "lesson_id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Em quem o texto concentra a atenção: em Jesus ou no desempenho do leitor?\n\n2. Qual é a diferença entre remorso e arrependimento?\n\n3. Que atitude concreta expressaria confiança em Jesus hoje?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Marcos 1:1–15"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "d6e17f10-6414-4414-bb30-b93369bb584d",
+      "lesson_id": "62050b6f-f605-4a59-9228-5c4ebc96e4b1",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Senhor Jesus, quero conhecer quem tu és de verdade. Não quero apenas trocar hábitos por aparência religiosa. Ensina-me a ouvir tua palavra, reconhecer meus caminhos errados e dar um primeiro passo em fé. Amém.",
+      "scripture_refs": [
+        "Marcos 1:1–15"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "cbcba7ee-b24e-4383-8e28-cb9876cc5663",
+      "lesson_id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Marcos 1:40–45. Pergunta de abertura: A compaixão de Cristo diante da exclusão e do sofrimento. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Marcos 1:40–45"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "d59ff16d-6f2f-4493-be78-4470f9c525f5",
+      "lesson_id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Marcos 1:40–45. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Marcos 1:40–45"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "d9c407a0-ea23-4bfa-a707-7fc3d2a84f7d",
+      "lesson_id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "A enfermidade mencionada em Marcos 1:40–45 tinha implicações sociais e de pureza ritual no mundo judaico antigo. A pessoa pede a Jesus que a torne limpa. Não reduza a experiência desse homem a uma metáfora moral: o texto descreve um sofrimento real e o encontro com alguém considerado impuro em seu contexto.",
+      "scripture_refs": [
+        "Marcos 1:40–45"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "6dbaf0ca-ee98-4239-9bde-5c699e06d092",
+      "lesson_id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "O pedido é «se queres, podes». Ele reconhece a capacidade de Jesus sem presumir controlar sua vontade. A resposta de Jesus manifesta compaixão e ação; a ordem posterior mostra que o encontro não elimina as responsabilidades sociais e comunitárias da época. O relato apresenta um gesto particular de Jesus, não uma garantia de que toda enfermidade será curada nesta vida. Repare que a fama crescente também altera a mobilidade de Jesus no relato.",
+      "scripture_refs": [
+        "Marcos 1:40–45"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "de17a4a7-3ddf-48f2-a610-e3fcd1f3a7b2",
+      "lesson_id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "Em Jesus, a proximidade de Deus não é reservada aos socialmente respeitados. O Evangelho mostra um Salvador que não se afasta automaticamente dos vulneráveis. A cruz aprofundará essa solidariedade, mas a interpretação deve nascer primeiro do que a cena afirma.",
+      "scripture_refs": [
+        "Marcos 1:40–45"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "185dcac3-96e6-4e1b-80a2-0ab9fe19cb05",
+      "lesson_id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Hoje podemos imitar a compaixão sem usar pessoas vulneráveis como histórias de sucesso espiritual. Alguém isolado, desempregado, adoecido ou envergonhado não precisa primeiro se tornar conveniente para merecer ser ouvido. Há diferenças entre acolher, respeitar limites, oferecer tratamento e fazer promessas de cura que não podemos sustentar.",
+      "scripture_refs": [
+        "Marcos 1:40–45"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "75f1e9b0-95df-4805-b444-2dd6607ce999",
+      "lesson_id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Escolha uma pessoa que você costuma ignorar. Ofereça presença, escuta ou ajuda prática sem expor a intimidade dela. Se você está sofrendo, escreva um pedido honesto de ajuda a alguém confiável e, quando necessário, busque cuidado médico ou psicológico sem culpa. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Marcos 1:40–45"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "15c67f74-141a-4849-9d4c-2e17fbc1deeb",
+      "lesson_id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. O que o homem efetivamente pede a Jesus?\n\n2. Como compaixão difere de curiosidade ou julgamento?\n\n3. Quais limites impedem transformar um milagre narrado em promessa universal?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Marcos 1:40–45"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "be842aea-596a-4d7a-a332-f0daa4ad04a8",
+      "lesson_id": "d243974f-5098-4754-91ec-ecc74e178a89",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Jesus, dá-me olhos para enxergar a dignidade de quem sofre, e coragem para pedir ajuda quando eu também precisar. Ensina-me uma compaixão verdadeira, sem exibicionismo. Amém.",
+      "scripture_refs": [
+        "Marcos 1:40–45"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "943fb9da-03f9-446e-a25f-6fa600f3b840",
+      "lesson_id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Marcos 2:13–17. Pergunta de abertura: O chamado de Levi e a mesa onde a graça confronta o orgulho. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Marcos 2:13–17"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "1ac138f3-fd05-404c-97b2-2c510584a464",
+      "lesson_id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Marcos 2:13–17. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Marcos 2:13–17"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "8ee3db4e-01f8-484a-9939-e7270fc1b20a",
+      "lesson_id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Marcos apresenta Levi junto à coletoria de impostos, ocupação vista com desconfiança em seu ambiente social. Jesus o chama e, depois, compartilha uma refeição com publicanos e pecadores. A mesa era sinal significativo de convivência e reconhecimento; por isso a crítica dos escribas não se limita a etiqueta.",
+      "scripture_refs": [
+        "Marcos 2:13–17"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "765f37b7-1655-4918-ab80-1578c05fcaa9",
+      "lesson_id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Jesus responde com a imagem do médico e dos doentes. A comparação não declara que determinados grupos são moralmente inferiores aos religiosos; denuncia o perigo de quem imagina não necessitar de arrependimento. O chamado «segue-me» pede resposta concreta. Graça não é licença para explorar outros, mas acolhimento que inicia transformação.",
+      "scripture_refs": [
+        "Marcos 2:13–17"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "61af3a50-653c-4d2d-be3d-f02662e09eb7",
+      "lesson_id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "O Cristo do Evangelho atravessa barreiras de status e se aproxima de pecadores para chamá-los. A salvação tem origem na iniciativa misericordiosa de Deus, e não na fabricação de um histórico impecável.",
+      "scripture_refs": [
+        "Marcos 2:13–17"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "4f175558-bf14-4e5f-b1cf-1c380bfe6e8c",
+      "lesson_id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Uma pessoa recém-convertida não precisa esconder o passado para pertencer a uma comunidade cristã saudável. Ao mesmo tempo, seguidores de Jesus devem assumir responsabilidade por danos reais, reparar o que puderem e deixar práticas injustas. Acolhimento e responsabilidade caminham juntos.",
+      "scripture_refs": [
+        "Marcos 2:13–17"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "67c8284a-ec2b-4871-94a2-544b2555f113",
+      "lesson_id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Escreva uma antiga etiqueta negativa que você coloca sobre si ou sobre alguém. Em oração, confronte-a com a postura de Jesus. Depois identifique um comportamento que precisa mudar e faça um primeiro passo seguro de reparação ou de busca de apoio. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Marcos 2:13–17"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "2111e842-78a5-41d7-9805-be8e37fc9dcc",
+      "lesson_id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Por que a refeição gera conflito?\n\n2. Quem Jesus chama nesta passagem?\n\n3. Como distinguir acolhimento de aprovação de uma injustiça?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Marcos 2:13–17"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "c4325086-2bd2-4fe2-a3a8-c3719b25b99f",
+      "lesson_id": "14082ca8-cd20-4569-ae39-a72dcfd54ce2",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Senhor, obrigado porque tua voz alcança gente imperfeita. Livra-me tanto da vergonha que paralisa quanto do orgulho que despreza os outros. Ensina-me a seguir-te com honestidade. Amém.",
+      "scripture_refs": [
+        "Marcos 2:13–17"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "732ac13e-0068-459a-a25b-10b7e68bcd0c",
+      "lesson_id": "41557468-333c-4d80-bd69-df4219763908",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Lucas 24:13–35. Pergunta de abertura: Jesus abre as Escrituras sem retirar os textos de seu contexto. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Lucas 24:13–35"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "f8d5fda8-3ba3-45f2-86d7-ce85bbcf4642",
+      "lesson_id": "41557468-333c-4d80-bd69-df4219763908",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Lucas 24:13–35. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Lucas 24:13–35"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "7da5ca82-8b5d-4858-8078-56eb54eef292",
+      "lesson_id": "41557468-333c-4d80-bd69-df4219763908",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "O caminho de Emaús acontece após a morte de Jesus, quando dois discípulos estão confusos diante de notícias sobre a ressurreição. Lucas organiza o relato em conversa, explicação das Escrituras, hospitalidade e reconhecimento. Jesus os conduz por Moisés e os Profetas, mostrando como a história bíblica ilumina sua missão.",
+      "scripture_refs": [
+        "Lucas 24:13–35"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "2bb95f7b-0b10-41a1-8dac-219b39534982",
+      "lesson_id": "41557468-333c-4d80-bd69-df4219763908",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "A leitura cristã considera o conjunto da revelação e o cumprimento em Cristo, mas isso não autoriza procurar códigos secretos ou alegorias em cada objeto da Bíblia. O sentido de um salmo, profecia ou narrativa precisa ser estudado primeiro em seu contexto. Observe a progressão: os discípulos expõem suas expectativas, Jesus os corrige e a compreensão amadurece. Emoção e entendimento caminham juntos, mas emoção sozinha não prova uma interpretação.",
+      "scripture_refs": [
+        "Lucas 24:13–35"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "50c33e98-a9c6-49bd-8024-dd6c58874b96",
+      "lesson_id": "41557468-333c-4d80-bd69-df4219763908",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "Jesus ocupa o centro da história cristã, especialmente em seu sofrimento e glória. O estudo do Antigo Testamento se aprofunda quando aprendemos a honrar seu sentido original e sua relação responsável com o evangelho.",
+      "scripture_refs": [
+        "Lucas 24:13–35"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "94c553ff-b4eb-4039-aa1a-5e060534ef34",
+      "lesson_id": "41557468-333c-4d80-bd69-df4219763908",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Há mensagens nas redes sociais que prometem revelar segredos bíblicos em poucos segundos. Em vez de confiar em uma frase isolada, comece por ler o capítulo inteiro, perguntar quem fala com quem e comparar passagens. A fé pode fazer perguntas sinceras sem medo.",
+      "scripture_refs": [
+        "Lucas 24:13–35"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "684986c2-ca90-4664-924f-4f8db3f47c95",
+      "lesson_id": "41557468-333c-4d80-bd69-df4219763908",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Faça o exercício das três perguntas com Lucas 24: o que aconteceu? O que o autor quis comunicar aos primeiros leitores? Como essa verdade pode orientar minha vida sem distorcer o texto? Escreva três linhas em cada etapa. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Lucas 24:13–35"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "31e6b7d3-80cc-4605-a160-0457d45337a8",
+      "lesson_id": "41557468-333c-4d80-bd69-df4219763908",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. O que os discípulos esperavam e o que ocorreu?\n\n2. Como Jesus usa as Escrituras no relato?\n\n3. O que torna uma aplicação fiel ao texto?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Lucas 24:13–35"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "28ebfda8-462e-4fc0-8f7f-badbb55098cc",
+      "lesson_id": "41557468-333c-4d80-bd69-df4219763908",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Senhor Jesus, abre meu entendimento e corrige minhas expectativas quando não combinarem com tua Palavra. Que eu ame tanto a verdade quanto a tua presença. Amém.",
+      "scripture_refs": [
+        "Lucas 24:13–35"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "b8e93233-e9f8-48f3-983f-92192adb4a21",
+      "lesson_id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Atos 17:10–12. Pergunta de abertura: A prática dos bereanos: ouvir com abertura e conferir com atenção. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Atos 17:10–12"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "98896059-0ef5-4016-965e-13c5d7d52c65",
+      "lesson_id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Atos 17:10–12. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Atos 17:10–12"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "eb95ee45-3ce6-4116-8f49-3f1ce435321d",
+      "lesson_id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Paulo e Silas chegam a Bereia, e Lucas elogia os ouvintes por receberem a mensagem com interesse e examinarem diariamente as Escrituras. A atitude é descrita em contraste com a reação anterior em Tessalônica, mas o ponto principal não é a superioridade de uma cidade; é a responsabilidade de verificar o ensino.",
+      "scripture_refs": [
+        "Atos 17:10–12"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "a6ae75b1-7a1b-46cf-a53f-272357a4713a",
+      "lesson_id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Examiná-las exige paciência. Um versículo deve ser lido dentro de seu parágrafo, livro, gênero literário e contexto histórico. A pergunta «onde está escrito?» é necessária, mas insuficiente sem «o que isso significava ali?». Uma interpretação também precisa aceitar passagens que desafiam nossas preferências. O texto encoraja investigação, não arrogância diante de outras pessoas.",
+      "scripture_refs": [
+        "Atos 17:10–12"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "9a76c2e0-05b9-4afa-b25c-477894421527",
+      "lesson_id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "O próprio anúncio apostólico sobre Jesus foi apresentado de modo passível de exame das Escrituras. Seguir Cristo não exige desligar o pensamento crítico; verdade e reverência não são inimigas.",
+      "scripture_refs": [
+        "Atos 17:10–12"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "0ea376fc-9dba-4d0c-8519-666a09926204",
+      "lesson_id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Quando um pregador, professor ou inteligência artificial disser «Deus falou» ou «a Bíblia garante», você pode pedir a referência e conferir o contexto. Nenhum líder humano deve substituir a consciência instruída pela Escritura ou usar medo para impedir perguntas.",
+      "scripture_refs": [
+        "Atos 17:10–12"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "5ccaf97e-c9b9-4971-adcc-0cab2d173a4d",
+      "lesson_id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Escolha uma frase bíblica compartilhada em uma rede social. Procure o capítulo completo, leia os cinco versículos antes e depois e registre se a frase foi usada corretamente. Se tiver dúvida, procure orientação numa comunidade cristã confiável. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Atos 17:10–12"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "d7ddcfb6-89b4-478a-a421-6c043bd09177",
+      "lesson_id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. O que os bereanos faziam diariamente?\n\n2. Qual a diferença entre examinar e rejeitar automaticamente?\n\n3. Como reagir de modo respeitoso quando alguém usa a Bíblia fora de contexto?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Atos 17:10–12"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "f144c770-23f8-4e6d-a9e2-91e3e7db6e57",
+      "lesson_id": "5dcff65f-90f4-42a7-a8f6-7e096f369db4",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Deus da verdade, dá-me humildade para aprender e discernimento para conferir. Guarda-me da credulidade e do orgulho. Amém.",
+      "scripture_refs": [
+        "Atos 17:10–12"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "851aa947-875d-4060-98cd-5746ea66a0ed",
+      "lesson_id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar 2 Timóteo 3:14–17. Pergunta de abertura: O propósito das Escrituras e o ciclo de leitura, compreensão e prática. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "2 Timóteo 3:14–17"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "274ad0ca-bb95-4fb9-8ca1-00f760aeee60",
+      "lesson_id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em 2 Timóteo 3:14–17. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "2 Timóteo 3:14–17"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "5d08935e-a53a-44f8-9f82-a7579d59002f",
+      "lesson_id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "A segunda carta a Timóteo situa o ensino bíblico num contexto de perseverança, instrução recebida e advertência contra enganos. Paulo fala das Escrituras que Timóteo conhecia desde a infância e da capacidade delas de instruir para a salvação mediante a fé em Cristo.",
+      "scripture_refs": [
+        "2 Timóteo 3:14–17"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "45e52024-c1cc-48b1-80aa-ac7ef49b4e54",
+      "lesson_id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "A passagem descreve Escritura inspirada por Deus e útil para ensino, repreensão, correção e educação na justiça. Note a finalidade: preparar a pessoa para toda boa obra. Não se trata de acumular frases como troféus; trata-se de permitir que a verdade instrua e corrija. A aplicação legítima respeita o gênero do texto: narrativas não são automaticamente ordens, provérbios não são garantias mecânicas e promessas precisam ser lidas com seus destinatários.",
+      "scripture_refs": [
+        "2 Timóteo 3:14–17"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "003dbb3a-c6fe-44e5-bba5-91db4136869b",
+      "lesson_id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "A Bíblia dirige os olhos para Cristo e equipa seu povo para viver de modo coerente com a fé. Estudo bíblico e vida santa não competem entre si.",
+      "scripture_refs": [
+        "2 Timóteo 3:14–17"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "19b5eab4-580c-4c96-845d-b84ca8882dca",
+      "lesson_id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Uma leitura breve feita com atenção pode transformar mais que muitas páginas lidas por obrigação. Quando o texto revelar uma atitude errada, não use a Palavra para desprezar a si mesmo; acolha a correção com responsabilidade, esperança e disposição de mudar.",
+      "scripture_refs": [
+        "2 Timóteo 3:14–17"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "e271b070-3bf9-435b-9f9e-c58f188109fe",
+      "lesson_id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Crie seu primeiro método simples: 10 minutos para ler um trecho, 5 para observar o contexto, 5 para escrever o significado e 5 para escolher uma prática. Registre uma pergunta que ainda não consegue responder. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "2 Timóteo 3:14–17"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "98e38be0-d681-4f8b-aa73-ad8a588a4667",
+      "lesson_id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Quais quatro utilidades da Escritura aparecem no texto?\n\n2. Qual é o resultado desejado da formação bíblica?\n\n3. Que diferença existe entre observar, interpretar e aplicar?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "2 Timóteo 3:14–17"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "279f19fc-947f-40e7-b1e8-9da9f2e66b4e",
+      "lesson_id": "59254f1a-9e71-4d0c-acb3-91d91ef57344",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Pai, ensina-me a receber tua Palavra com coração humilde e mente atenta. Que o que eu compreendo se torne amor e boas obras. Amém.",
+      "scripture_refs": [
+        "2 Timóteo 3:14–17"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "6f04161d-df1f-4ee2-bc2f-f58becfd817f",
+      "lesson_id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar João 3:1–21. Pergunta de abertura: A conversa de Jesus com Nicodemos sobre fé e vida nova. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "João 3:1–21"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "e083835a-4397-46ac-ba64-d8b2fb5303ba",
+      "lesson_id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em João 3:1–21. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "João 3:1–21"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "ee0ab2bb-05bf-49b9-ad5e-31789af41d78",
+      "lesson_id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Nicodemos é apresentado como fariseu e autoridade judaica; procura Jesus à noite e tenta compreender suas palavras. João constrói a conversa com mal-entendidos característicos: Nicodemos pensa em um nascimento físico, enquanto Jesus fala de uma obra espiritual. O trecho combina linguagem de água, Espírito, luz e trevas.",
+      "scripture_refs": [
+        "João 3:1–21"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "01b51f2f-0eeb-4db5-9467-d826aea58ad6",
+      "lesson_id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Jesus não oferece a Nicodemos uma técnica de autoaperfeiçoamento, mas a necessidade de nascer do alto. João 3:16 associa o amor de Deus à entrega do Filho e ao convite a crer. Interpretar «água e Espírito» exige cuidado: tradições cristãs explicam sua relação com purificação e batismo de maneiras distintas; não imponha uma única leitura como se o versículo encerrasse todo o debate. O chamado à luz põe a verdade acima da aparência.",
+      "scripture_refs": [
+        "João 3:1–21"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "22614aa3-e4a4-435d-8400-61e5f2db0ac0",
+      "lesson_id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "A vida nova é apresentada como ação de Deus que chama uma resposta de fé no Filho. A iniciativa divina antecede os esforços humanos; fé viva se manifesta progressivamente em uma caminhada honesta.",
+      "scripture_refs": [
+        "João 3:1–21"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "bc886939-167f-49fa-9886-478340097c58",
+      "lesson_id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Você pode frequentar igreja há anos e ainda ter perguntas profundas; Nicodemos também tinha conhecimento religioso e precisou ouvir Jesus. Não confunda dúvidas sinceras com fracasso espiritual. Viver na luz inclui poder admitir pecados e pedir ajuda.",
+      "scripture_refs": [
+        "João 3:1–21"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "83cbbb1a-739c-4f83-bffe-9419a780cb6e",
+      "lesson_id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Leia João 3 lentamente e escreva a diferença entre religião externa e transformação interior. Escolha uma conversa em que você tenha usado aparência para esconder um erro e planeje uma atitude honesta, sem se colocar em risco. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "João 3:1–21"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "2b268084-84cb-4c98-81be-fa1f083929a5",
+      "lesson_id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. O que Nicodemos entende mal?\n\n2. Como o texto apresenta o amor de Deus?\n\n3. O que significa praticar a verdade hoje?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "João 3:1–21"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "14694601-40bf-4dae-b893-fa8e397f91d7",
+      "lesson_id": "c4e9868d-99fa-4087-ac9e-b2f06b066cc7",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Deus, renova o que não consigo transformar apenas pela força da vontade. Ensina-me a caminhar na luz, sem máscaras. Amém.",
+      "scripture_refs": [
+        "João 3:1–21"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "6a6ec2b5-7f75-4c06-a09b-1054a74e98a2",
+      "lesson_id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Efésios 2:1–10. Pergunta de abertura: Não compramos o amor de Deus; recebemos graça e respondemos com obras. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Efésios 2:1–10"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "eb3e080b-422a-4c68-93c6-57f7aa5f98ea",
+      "lesson_id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Efésios 2:1–10. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Efésios 2:1–10"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "7fb6246e-1b72-4ffa-a6a3-dc0f3e9caeaf",
+      "lesson_id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Efésios 2 contrasta o antigo modo de viver com a ação misericordiosa de Deus. O capítulo usa linguagem intensa sobre morte espiritual e vida com Cristo. O «mas Deus» de 2:4 muda o rumo do texto: a esperança nasce da misericórdia, não de um desempenho humano perfeito.",
+      "scripture_refs": [
+        "Efésios 2:1–10"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "a4df6760-e247-4555-aa3b-466db41836b3",
+      "lesson_id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Os versículos 8–9 afirmam salvação pela graça, mediante a fé, e não como resultado de obras das quais alguém possa se orgulhar. O versículo 10 impede outro erro: a graça cria pessoas para boas obras. Portanto, obras não são a compra da salvação, mas fruto de uma vida alcançada por Deus. O contexto seguinte de Efésios 2 também trata de reconciliação entre grupos antes divididos.",
+      "scripture_refs": [
+        "Efésios 2:1–10"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "4216df5d-0dfd-45fe-a01d-cf196bdb28f1",
+      "lesson_id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "A fé cristã anuncia uma reconciliação recebida em Cristo. Não há espaço nem para orgulho religioso nem para desprezo da responsabilidade moral.",
+      "scripture_refs": [
+        "Efésios 2:1–10"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "e26e19dc-4e75-4dd4-a05f-1d37da20518a",
+      "lesson_id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Quando você cair, não tente negociar com Deus prometendo uma quantidade de orações que compense seus pecados. Confesse, busque reparação, receba ajuda e retorne à obediência. E quando você acertar, não se considere superior aos outros. O mesmo evangelho confronta a vergonha e a soberba.",
+      "scripture_refs": [
+        "Efésios 2:1–10"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "a0218ffa-a2d3-4cf0-a415-7307521a93da",
+      "lesson_id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Escreva duas colunas: «o que não posso comprar com boas obras» e «que boas obras posso praticar por gratidão». Faça hoje uma ação concreta sem contar a ninguém para receber elogio. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Efésios 2:1–10"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "08a399c3-bba8-42f5-bd87-e4a22059fac3",
+      "lesson_id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Qual é a origem da salvação segundo o texto?\n\n2. Por que o versículo 10 é indispensável?\n\n3. Como a graça transforma nossa relação com o próximo?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Efésios 2:1–10"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "5df935da-5054-40b0-b9ca-1b208c53c28a",
+      "lesson_id": "303bd37d-9b74-4427-85cb-b67abda95123",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Senhor, livra-me de tentar conquistar teu amor por medo. Que a gratidão se traduza em boas obras discretas e perseverantes. Amém.",
+      "scripture_refs": [
+        "Efésios 2:1–10"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "9c98ca7a-769d-4cfa-af97-d8c852656b1e",
+      "lesson_id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Romanos 8:1–17. Pergunta de abertura: Liberdade da condenação não significa ausência de crescimento e responsabilidade. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Romanos 8:1–17"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "3bf41682-d12a-439b-9410-686525ca3cd3",
+      "lesson_id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Romanos 8:1–17. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Romanos 8:1–17"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "6d4992fd-54fd-4dcc-bfce-4274aac2d2b6",
+      "lesson_id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Romanos 8 vem após o desenvolvimento de Paulo sobre pecado, lei, graça e conflito humano. Ele anuncia ausência de condenação para os que estão em Cristo Jesus e desenvolve a vida orientada pelo Espírito. A palavra «condenação» possui um sentido jurídico-teológico; não é sinônimo de ausência de tristeza, consequências ou disciplina.",
+      "scripture_refs": [
+        "Romanos 8:1–17"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "5735b35a-7629-4def-92b8-0f0e6d9d3369",
+      "lesson_id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Paulo contrasta carne e Espírito como orientações de vida, não simplesmente corpo físico versus alma boa. A adoção como filhos de Deus comunica pertencimento e nova relação com o Pai. O texto também é realista quanto à luta contra práticas destrutivas. Diferentes tradições cristãs debatem aspectos da vida no Espírito, mas o eixo do capítulo é a iniciativa divina e a resposta transformada.",
+      "scripture_refs": [
+        "Romanos 8:1–17"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "e6fd596d-d079-41e4-bdd6-a1fb283a4d3b",
+      "lesson_id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "O que Cristo faz torna possível uma nova identidade. A esperança não está na ausência de lutas, mas no pertencimento a Ele e na atuação do Espírito.",
+      "scripture_refs": [
+        "Romanos 8:1–17"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "ce7c7df5-02b5-43d1-b505-aa6949427451",
+      "lesson_id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Se alguém disser que um cristão verdadeiro nunca enfrenta ansiedade, tentações ou recaídas, essa afirmação vai além deste trecho. Crescimento espiritual pode incluir pedir perdão, tratamento, acompanhamento pastoral e mudanças concretas. Sua identidade não deve servir como desculpa para ferir outros.",
+      "scripture_refs": [
+        "Romanos 8:1–17"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "efae4747-4e12-4e11-a0c6-331cec50dd1e",
+      "lesson_id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Anote uma mentira que você repete sobre si («sou apenas meu pior erro»). Compare-a com Romanos 8:1–17. Escolha um gesto coerente com a vida no Espírito e planeje quando o realizará. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Romanos 8:1–17"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "86739ad3-95b2-45d8-9aca-9315b13c6d93",
+      "lesson_id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. O que significa não haver condenação em Cristo?\n\n2. Como Paulo descreve a adoção?\n\n3. Qual atitude precisa ser abandonada sem confundir luta com derrota definitiva?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Romanos 8:1–17"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "bf3ffe87-0689-4040-8ae8-8d6373576edc",
+      "lesson_id": "bba11adc-dfa4-461d-b9a0-ad1285461fbf",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Pai, ensina-me a viver como alguém recebido por ti. Dá-me coragem para abandonar o mal, reparar danos e caminhar em esperança. Amém.",
+      "scripture_refs": [
+        "Romanos 8:1–17"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "e97668c4-a0f5-40e1-ad17-4ea1a28feeff",
+      "lesson_id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Mateus 6:5–13. Pergunta de abertura: O Pai Nosso: presença, dependência, perdão e confiança. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Mateus 6:5–13"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "8dd963f7-46e2-42cf-9607-b88554daf8f3",
+      "lesson_id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Mateus 6:5–13. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Mateus 6:5–13"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "4bd922a8-4cc1-4e67-8ff8-f36a03c05103",
+      "lesson_id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "O Sermão do Monte critica práticas religiosas usadas para conquistar reconhecimento público. Jesus contrapõe ostentação e repetição vazia à oração dirigida ao Pai. A chamada oração do Senhor tem estrutura comunitária: «nosso», «nos», «perdoa-nos». Não é um exercício individualista.",
+      "scripture_refs": [
+        "Mateus 6:5–13"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "035116f8-8ee2-4fcb-9fcd-a3f1d495c5e8",
+      "lesson_id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Observe a ordem: nome de Deus, Reino e vontade; depois pão, perdão e livramento. Pedir pão expressa dependência concreta e não proíbe trabalho responsável. Pedir perdão nos obriga a examinar como tratamos os outros. O texto não promete que palavras específicas obrigarão Deus a atender todos os desejos; oração não é fórmula de controle.",
+      "scripture_refs": [
+        "Mateus 6:5–13"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "f844ee27-476d-4455-945a-ef5b65e3eb44",
+      "lesson_id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "Em Jesus aprendemos a chamar Deus de Pai e buscar seu Reino. Sua vida mostra que oração e obediência caminham juntas, inclusive em sofrimento.",
+      "scripture_refs": [
+        "Mateus 6:5–13"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "bd93b861-179a-42c6-b9e6-311fdce3977c",
+      "lesson_id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Há dias em que você orará com alegria e dias de silêncio e cansaço. A sinceridade importa mais que um vocabulário impressionante. Se você vive uma situação abusiva, perdoar não exige se expor novamente a violência nem abrir mão de proteção e justiça.",
+      "scripture_refs": [
+        "Mateus 6:5–13"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "3e4ca6b9-541f-4bb4-973c-eef3ac51fac8",
+      "lesson_id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Ore o Pai Nosso pausadamente. Após cada pedido, escreva uma correspondência na vida: pão — uma necessidade; perdão — uma conversa segura; vontade de Deus — uma decisão em que você precisa de sabedoria. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Mateus 6:5–13"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "b80e3c36-2d09-49cf-ab8c-0647746cada7",
+      "lesson_id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Por que Jesus critica a oração exibida?\n\n2. O que a ordem dos pedidos ensina?\n\n3. O perdão é igual a reconciliação sem limites?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Mateus 6:5–13"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "96d53ee1-a252-4496-9e8e-fc1cc0cda295",
+      "lesson_id": "1a52c58a-7410-442b-bb84-c38ff8879a15",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Pai nosso, santificado seja teu nome. Forma em mim uma vida alinhada com tua vontade e ajuda-me a tratar os outros com a misericórdia que peço para mim. Amém.",
+      "scripture_refs": [
+        "Mateus 6:5–13"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "02231706-dc02-4714-920e-53ec483b0047",
+      "lesson_id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Salmo 23. Pergunta de abertura: Confiança em Deus sem romantizar o sofrimento. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Salmo 23"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "3b878d36-7e8d-444e-bcd4-ae9c5415c5c1",
+      "lesson_id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Salmo 23. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Salmo 23"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "371ac6eb-b72a-4e5c-bd74-fe4c6fd5280f",
+      "lesson_id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "O Salmo 23 usa duas imagens: o Senhor como pastor que cuida de sua ovelha e como anfitrião que recebe à mesa. É poesia hebraica, marcada por imagens de provisão, direção, perigo e hospitalidade. O vale de sombra da morte aparece na mesma canção que os pastos e águas tranquilas.",
+      "scripture_refs": [
+        "Salmo 23"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "f7ce2ebe-a2af-40fe-ad5b-172e904f5a68",
+      "lesson_id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "O salmo não garante riqueza, saúde ininterrupta ou ausência de inimigos. Afirma confiança na presença e no cuidado de Deus em circunstâncias distintas. A imagem de bastão e cajado comunica direção e proteção dentro da metáfora pastoral. Evite transformar «nada me faltará» em cheque em branco para qualquer desejo; o poema fala de confiança no Pastor.",
+      "scripture_refs": [
+        "Salmo 23"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "2cdb4bca-8360-46d1-84c7-21e682abcffd",
+      "lesson_id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "Os cristãos relacionam legitimamente a figura do pastor a Jesus, especialmente em João 10. Essa conexão enriquece o salmo sem apagar seu sentido original de confiança no Senhor.",
+      "scripture_refs": [
+        "Salmo 23"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "e35b28a5-7d58-46e3-be74-8d67359d85f6",
+      "lesson_id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Se você atravessa luto, desemprego ou um diagnóstico difícil, não precisa fingir que o vale é agradável. A oração bíblica permite nomear o medo. Confiar também pode significar procurar rede de apoio e tomar decisões prudentes.",
+      "scripture_refs": [
+        "Salmo 23"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "a90b84cf-c65f-4a02-80ed-fb5198b7fe80",
+      "lesson_id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Desenhe duas colunas: «meus pastos» (cuidado recebido) e «meus vales» (medos reais). Em seguida registre uma ação concreta de cuidado — descanso, conversa, ajuda especializada ou apoio a alguém vulnerável. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Salmo 23"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "985a60d1-ff0c-4b9e-a64c-f645f78e257c",
+      "lesson_id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Quais metáforas estruturam o salmo?\n\n2. O que o salmo diz sobre atravessar o vale?\n\n3. Qual promessa o texto não faz?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Salmo 23"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "1ed34fc0-9de6-4683-aff9-06412234ab7f",
+      "lesson_id": "d654a8fa-efab-4b59-b6f5-ff82dce47697",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Pastor da minha vida, acompanha-me quando não vejo saída e impede que eu abandone os outros em seus vales. Ensina-me a confiar sem negar a realidade. Amém.",
+      "scripture_refs": [
+        "Salmo 23"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "b586f24e-1e3b-4730-a27d-7b5fbd4238b3",
+      "lesson_id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Salmo 51. Pergunta de abertura: A sinceridade diante de Deus e a responsabilidade por reparar o mal. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Salmo 51"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "fb0e1245-e996-4bee-a702-852e0f8ec102",
+      "lesson_id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Salmo 51. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Salmo 51"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "7914bf1b-6df4-4441-b9f2-dfb62f6d646a",
+      "lesson_id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "O título tradicional associa o Salmo 51 a Davi depois do confronto profético relacionado a Bate-Seba. O poema pertence à linguagem penitencial: confissão, pedido de misericórdia, limpeza, renovação e desejo de ensinar os caminhos de Deus. O pano de fundo narrativo em 2 Samuel 11–12 inclui abuso de poder e graves danos a outras pessoas; não deve ser romantizado.",
+      "scripture_refs": [
+        "Salmo 51"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "917f81ae-bf41-4a30-b04f-c86a43f879e0",
+      "lesson_id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "O salmista reconhece o pecado e pede um coração renovado. A expressão «contra ti pequei» destaca o caráter teológico da transgressão; não apaga vítimas humanas nem elimina suas reivindicações. O texto não apresenta arrependimento como frases bonitas pronunciadas para escapar de consequências. O pedido por um espírito firme aponta para transformação duradoura.",
+      "scripture_refs": [
+        "Salmo 51"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "be7ba87d-a8ed-4831-afcf-8118df9fa4d3",
+      "lesson_id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "A misericórdia de Deus abre possibilidade de retorno, mas a justiça e o cuidado com quem foi ferido continuam importantes. Cristo chama ao arrependimento verdadeiro, não à impunidade.",
+      "scripture_refs": [
+        "Salmo 51"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "d3095ea7-4b65-4384-8fd0-07f4cfbaabeb",
+      "lesson_id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Pode haver culpa legítima, vergonha exagerada ou ambas. Confesse o que é realmente seu, não assuma culpa pelos crimes de outros. Quando possível, repare danos, respeite limites das pessoas feridas e aceite responsabilidades; se houver violência, priorize segurança.",
+      "scripture_refs": [
+        "Salmo 51"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "c4501eb6-4251-4ece-92fe-f3a85d7efc48",
+      "lesson_id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Sem compartilhar publicamente, escreva: «o que fiz», «quem foi afetado», «o que preciso mudar» e «qual reparação responsável é possível». Faça uma oração sincera e procure ajuda adequada se o dano for grave. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Salmo 51"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "afc33a5c-ebfb-4e07-801e-37414725c791",
+      "lesson_id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Por que o salmista pede renovação interior?\n\n2. Qual a diferença entre confissão e autopunição?\n\n3. Como reparar o mal sem obrigar uma vítima a reconciliar-se?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Salmo 51"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "5bc3b306-c0b0-4629-8a87-1f37aae12db9",
+      "lesson_id": "d8666b53-539f-4f72-89f7-c5e2a33c5bcf",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Deus de misericórdia, mostra-me a verdade sobre minhas escolhas. Dá-me um coração disposto a mudar e coragem para agir com justiça diante de quem feri. Amém.",
+      "scripture_refs": [
+        "Salmo 51"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "dee5d247-544a-4583-a8b9-a3e409596710",
+      "lesson_id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar João 15:1–11. Pergunta de abertura: Dependência de Jesus e fruto que nasce de permanência. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "João 15:1–11"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "0ff5d621-d191-467c-97a0-2ba88568e6cd",
+      "lesson_id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em João 15:1–11. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "João 15:1–11"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "e3763d72-12fc-415e-b66e-af509e86f009",
+      "lesson_id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "João 15 integra os discursos de despedida de Jesus aos discípulos. A videira é uma imagem conhecida no Antigo Testamento para o povo de Deus; Jesus a retoma e se apresenta como videira verdadeira, enquanto os discípulos são ramos.",
+      "scripture_refs": [
+        "João 15:1–11"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "036326c0-720f-49aa-8ee6-a9138a887e62",
+      "lesson_id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "O argumento central é relação e dependência: o ramo não produz fruto separado da videira. «Permanecer» é ligado às palavras de Jesus, ao amor e à obediência. A poda e as imagens de fruto não autorizam concluir que todo sofrimento seja castigo ou que sucesso financeiro indique bênção espiritual. A passagem fala do relacionamento com Cristo e da formação de discípulos.",
+      "scripture_refs": [
+        "João 15:1–11"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "a2729c9a-271c-4a0e-b330-b7d24264861b",
+      "lesson_id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "Jesus não é apenas exemplo distante: Ele é a fonte da vida espiritual. A caminhada cristã se alimenta da comunhão com Ele, e não apenas de esforço moral.",
+      "scripture_refs": [
+        "João 15:1–11"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "434c06ae-7395-4c6c-a2d5-170a92fc5a97",
+      "lesson_id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Você pode construir uma imagem pública religiosa enquanto permanece indiferente às pessoas em casa. O teste da permanência não é quantidade de postagens espirituais, mas fidelidade, amor e responsabilidade no cotidiano.",
+      "scripture_refs": [
+        "João 15:1–11"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "7fc869ef-f84a-44a6-bf4d-16ffbbb26571",
+      "lesson_id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Faça um exame do dia: onde minhas palavras feriram? Onde tive paciência? Há uma relação em que posso demonstrar cuidado sem buscar reconhecimento? Escolha uma prática de permanência por sete dias: leitura bíblica breve e um gesto concreto de amor. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "João 15:1–11"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "e9686a7b-cfaa-49cc-b2a9-c939e5665952",
+      "lesson_id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. O que acontece com o ramo desconectado?\n\n2. Como o texto relaciona amor e obediência?\n\n3. Que frutos são diferentes de sucesso exterior?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "João 15:1–11"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "508db327-9ba1-474d-8639-9c5f99bc34b3",
+      "lesson_id": "512be118-e145-4bac-9972-92fa0bcf4c43",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Jesus, quero permanecer em ti quando ninguém está olhando. Forma em mim um amor real que chegue às pessoas próximas. Amém.",
+      "scripture_refs": [
+        "João 15:1–11"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "b5a1ee96-4e22-473c-8f5a-9e8ce2d8aec6",
+      "lesson_id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Gálatas 5:13–26. Pergunta de abertura: Liberdade cristã que se expressa em amor, domínio próprio e serviço. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Gálatas 5:13–26"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "6c2fe5bf-55d6-4e02-bddb-eab260e3ea0f",
+      "lesson_id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Gálatas 5:13–26. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Gálatas 5:13–26"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "303324f1-3f72-4800-a653-f491f095ed96",
+      "lesson_id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Paulo escreve aos gálatas num contexto de disputa sobre a relação entre fé, lei e pertencimento ao povo de Deus. No capítulo 5, ele afirma que a liberdade não deve servir de pretexto para egoísmo, mas de oportunidade para servir em amor.",
+      "scripture_refs": [
+        "Gálatas 5:13–26"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "5de09dc9-685d-42a5-af4b-26995033468a",
+      "lesson_id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "O contraste entre obras da carne e fruto do Espírito descreve duas orientações de vida. A lista do fruto — amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, mansidão e domínio próprio — não é uma tabela para classificar pessoas por uma noite ruim. O singular «fruto» convida a perceber uma formação integrada do caráter. Paulo também alerta contra vaidade e provocação recíproca.",
+      "scripture_refs": [
+        "Gálatas 5:13–26"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "ec923a94-1977-47c4-b606-23b6b2fbeda3",
+      "lesson_id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "O Espírito forma uma vida coerente com a liberdade dada em Cristo. Essa formação não é espetáculo, mas processo de obediência e amor.",
+      "scripture_refs": [
+        "Gálatas 5:13–26"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "2eb21f8a-09c0-4403-ba90-5f8cfdf4688e",
+      "lesson_id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Um cristão pode falar com entusiasmo sobre dons espirituais e ainda humilhar colegas ou familiares. O texto nos convida a olhar também para tom de voz, paciência no trânsito, honestidade e reação quando somos contrariados.",
+      "scripture_refs": [
+        "Gálatas 5:13–26"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "960c58d7-1b39-4bf2-9cd1-f509b2b7b5eb",
+      "lesson_id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Escolha um aspecto do fruto do Espírito para a semana. Defina uma ação observável: antes de responder com irritação, ouvir por 30 segundos; antes de reclamar, agradecer; antes de comprar por impulso, esperar e refletir. Registre o resultado sem transformar a prática em competição. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Gálatas 5:13–26"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "da037158-9e1d-4b87-a029-11cc14cfd22a",
+      "lesson_id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Como Paulo define o uso correto da liberdade?\n\n2. Qual a diferença entre fruto e aparência religiosa?\n\n3. Em que relação o domínio próprio mais precisa aparecer?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Gálatas 5:13–26"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "f5de7602-8891-4372-b091-34d3ab43e46e",
+      "lesson_id": "fcf46534-37f9-4b22-a590-bf2f4358f5e7",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Espírito Santo, corrige a vaidade e o egoísmo em mim. Faz crescer uma vida de amor, paciência e domínio próprio, mesmo nos dias comuns. Amém.",
+      "scripture_refs": [
+        "Gálatas 5:13–26"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "d16ef20b-3e81-45d6-8e35-6375bac04c23",
+      "lesson_id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Romanos 12:1–2. Pergunta de abertura: Discernir valores e resistir à pressão de conformidade. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Romanos 12:1–2"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "a69beffb-987b-42ce-a7e8-27797488788f",
+      "lesson_id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Romanos 12:1–2. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Romanos 12:1–2"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "8255b6ac-b64d-4576-82df-b2466f84c176",
+      "lesson_id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Romanos 12 inicia a parte prática da carta depois de longa exposição do evangelho. Paulo convida os irmãos, pelas misericórdias de Deus, a oferecerem a vida como culto racional e a não se conformarem ao padrão deste mundo.",
+      "scripture_refs": [
+        "Romanos 12:1–2"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "7264daba-2558-4cd1-9e36-69b791c846fd",
+      "lesson_id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "A expressão «transformação pela renovação da mente» não significa parar de pensar, negar ciência ou rejeitar tudo que é moderno. Significa avaliar desejos, valores e escolhas à luz da misericórdia de Deus. O «culto» alcança o corpo e a rotina, não apenas o momento do templo. Leia também Romanos 12:3–21 para ver a consequência comunitária dessa renovação.",
+      "scripture_refs": [
+        "Romanos 12:1–2"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "cf9db73d-8746-4502-a3df-bc3b4180b772",
+      "lesson_id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "A vida de culto responde às misericórdias recebidas em Cristo. A renovação se prova em humildade, discernimento e serviço, não em isolamento orgulhoso.",
+      "scripture_refs": [
+        "Romanos 12:1–2"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "c41ac695-d69c-40a7-911a-dca6a2ae4307",
+      "lesson_id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Observe o que molda seus pensamentos durante o dia: redes sociais, ressentimentos, ambição, consumo e comparação. Pergunte se esses hábitos tornam você mais verdadeiro, generoso e responsável. Renovação não é técnica instantânea de pensamento positivo.",
+      "scripture_refs": [
+        "Romanos 12:1–2"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "9eff94ae-2e8b-48b1-b7cd-4f209e4d2a33",
+      "lesson_id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Durante três dias, anote uma decisão influenciada por comparação ou impulso. Antes da próxima decisão, pergunte: «isso expressa amor a Deus, dignidade do próximo e responsabilidade?». Ajuste uma prática concreta. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Romanos 12:1–2"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "c0a4bfb4-59f6-4ee1-a709-2d280c8d6cbe",
+      "lesson_id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Qual é a base do apelo de Paulo em Romanos 12:1?\n\n2. Como o restante do capítulo esclarece «mente renovada»?\n\n3. Que influência cotidiana exige discernimento?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Romanos 12:1–2"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "7a974439-2528-4ca6-b67a-5ca5137a3ece",
+      "lesson_id": "99748363-7fe9-491d-b69f-0a681e693d34",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Pai, renova meu modo de pensar e de escolher. Que minha fé também apareça no trabalho, no dinheiro, nos relacionamentos e no uso do tempo. Amém.",
+      "scripture_refs": [
+        "Romanos 12:1–2"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "ecb80a86-9cc9-45ba-9efb-b48b4b9970b2",
+      "lesson_id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Atos 2:37–47. Pergunta de abertura: Ensino, comunhão, oração e generosidade na igreja nascente. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Atos 2:37–47"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "4882ea12-d547-4478-8aba-900a1a30a3b0",
+      "lesson_id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Atos 2:37–47. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Atos 2:37–47"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "2d6cc74b-b0b8-4510-84dc-aafd475c1853",
+      "lesson_id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Atos 2 apresenta o Pentecostes, a pregação de Pedro e a resposta de muitos ouvintes. Nos versículos finais, Lucas descreve práticas constantes dos primeiros crentes: ensino apostólico, comunhão, partir do pão, oração e partilha de recursos conforme a necessidade.",
+      "scripture_refs": [
+        "Atos 2:37–47"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "4ac8eeb6-e38d-4028-9c41-16728c18a961",
+      "lesson_id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "A descrição de Atos 2 é uma janela para a igreja nascente, não uma receita automática para copiar cada detalhe econômico ou social em qualquer época. O texto destaca perseverança, alegria, cuidado com necessitados e vida comunitária. O batismo aparece como resposta pública de fé; diferentes tradições cristãs possuem práticas distintas, e a igreja local pode orientar o novo convertido.",
+      "scripture_refs": [
+        "Atos 2:37–47"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "9b1985b5-551d-45f0-837e-d10ce353ea51",
+      "lesson_id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "O evangelho reúne pessoas em Cristo e as chama a uma comunidade de aprendizado e serviço. Pertencimento cristão não deve ser confundido com submissão cega a líderes.",
+      "scripture_refs": [
+        "Atos 2:37–47"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "ee89fd69-f007-426c-abba-6c53ee0fcce1",
+      "lesson_id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Uma comunidade sadia permite perguntas, presta contas, protege crianças e vulneráveis, acolhe dúvidas e não usa pressão financeira como teste de espiritualidade. Se houver abuso ou manipulação, procure proteção e apoio confiável; não é falta de fé estabelecer limites.",
+      "scripture_refs": [
+        "Atos 2:37–47"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "9bbb1f6f-c060-46a2-bf1b-0501b962ea0f",
+      "lesson_id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Participe de um encontro comunitário seguro ou procure uma comunidade cristã responsável. Faça três perguntas: ensinam a Bíblia em contexto? cuidam das pessoas vulneráveis? permitem prestação de contas e perguntas? Se já frequenta uma igreja, ofereça ajuda discreta. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Atos 2:37–47"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "79a5b502-dc43-49ed-ba57-1fd0ad96379e",
+      "lesson_id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Quais quatro práticas são mencionadas em Atos 2:42?\n\n2. O que é descritivo e o que ensina um princípio duradouro?\n\n3. Quais sinais distinguem serviço cristão de manipulação religiosa?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Atos 2:37–47"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "cf67bfb9-c19a-48ff-995e-b52783f53410",
+      "lesson_id": "b2e535bb-80b6-4ecf-8ed6-653b5d3ab206",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Senhor, mostra-me pessoas com quem eu possa aprender e servir. Que eu contribua para uma comunidade de verdade, segurança e amor. Amém.",
+      "scripture_refs": [
+        "Atos 2:37–47"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "b834d832-b214-4be7-a557-a850edc76bf8",
+      "lesson_id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar 1 Coríntios 12:12–27. Pergunta de abertura: Unidade sem uniformidade e dignidade para cada membro. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "1 Coríntios 12:12–27"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "f456d5a7-55b1-4c2b-aa7a-2245aa574746",
+      "lesson_id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em 1 Coríntios 12:12–27. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "1 Coríntios 12:12–27"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "2595e746-9ae2-4a48-a2ee-c0ae543bf331",
+      "lesson_id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Os coríntios experimentavam conflitos, comparações e disputas sobre dons e posição. Paulo usa a metáfora do corpo: muitos membros, uma unidade. O argumento combate tanto o sentimento de inutilidade quanto a arrogância dos que desprezam outros.",
+      "scripture_refs": [
+        "1 Coríntios 12:12–27"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "a3b9ee78-60ec-4806-be87-6d5f063da742",
+      "lesson_id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Ser membro do corpo não significa perder identidade ou aceitar injustiça. Os membros considerados frágeis recebem honra e cuidado; a diversidade de funções existe para o bem comum. A metáfora também envolve solidariedade: sofrer e alegrar-se com os outros. Leia o capítulo 13 como continuação do ensino sobre os dons.",
+      "scripture_refs": [
+        "1 Coríntios 12:12–27"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "8355a77d-0859-40e4-92c0-146fc5117efa",
+      "lesson_id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "Em Cristo, unidade e diversidade não se excluem. Cada pessoa é convidada a servir, e nenhum dom justifica superioridade moral.",
+      "scripture_refs": [
+        "1 Coríntios 12:12–27"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "b57ab84e-a190-4a0f-8b14-76801401a29d",
+      "lesson_id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Você pode imaginar que não tem utilidade por não pregar, cantar ou liderar. Entretanto, visitar alguém sozinho, oferecer alimento, ensinar uma criança, organizar um espaço ou acompanhar uma pessoa com respeito também são formas de serviço. Não compare sua caminhada inicial com o palco de outros.",
+      "scripture_refs": [
+        "1 Coríntios 12:12–27"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "2f44d7e7-2dcc-4429-bca5-274c3136f4e8",
+      "lesson_id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Faça uma lista de três necessidades da comunidade, não apenas de seus talentos. Escolha uma delas e procure como ajudar de forma segura, sustentável e respeitosa durante esta semana. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "1 Coríntios 12:12–27"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "6bfc02ec-a750-4974-bf25-8f66597f6ba3",
+      "lesson_id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Qual comparação Paulo deseja corrigir?\n\n2. O que significa honrar membros considerados frágeis?\n\n3. Como o capítulo 13 orienta o uso dos dons?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "1 Coríntios 12:12–27"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "30d2f684-53ca-4b87-8569-0502d6a68eb0",
+      "lesson_id": "6c01a6f1-3f56-4f7e-94a0-62a96eedf8c6",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Jesus, tira de mim a inveja e o desprezo. Ensina-me a reconhecer a dignidade de cada membro e a servir com alegria. Amém.",
+      "scripture_refs": [
+        "1 Coríntios 12:12–27"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "4eb800c0-93c4-4590-8dbf-1dc373dd1e1c",
+      "lesson_id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Efésios 4:11–16. Pergunta de abertura: Crescimento não é dependência de um líder: é formação em Cristo. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Efésios 4:11–16"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "947a1847-36a4-43ba-9a34-9be8ad0d6120",
+      "lesson_id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Efésios 4:11–16. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Efésios 4:11–16"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "38160563-8e34-46ff-8bad-71412c5618b6",
+      "lesson_id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Efésios 4 discute unidade, diversidade de dons e o propósito do serviço ministerial. Os líderes são apresentados como pessoas que equipam os santos para a obra, não como substitutos da responsabilidade de toda a igreja.",
+      "scripture_refs": [
+        "Efésios 4:11–16"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "abbe7599-d4f8-4db3-8c1d-8c5621fe7573",
+      "lesson_id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "O objetivo é maturidade, estabilidade diante de doutrinas confusas e crescimento na verdade em amor. A imagem de não ser levado por qualquer vento de doutrina exige estudo sério e comunidade humilde. «Falar a verdade em amor» não é licença para humilhação, manipulação ou exposição pública de intimidades.",
+      "scripture_refs": [
+        "Efésios 4:11–16"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "882788ab-08cf-443b-99bd-f92dac9c62b3",
+      "lesson_id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "Cristo é a cabeça da igreja. Sua centralidade relativiza personalismos e exige que a comunidade cresça em cuidado mútuo.",
+      "scripture_refs": [
+        "Efésios 4:11–16"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "37bc0ca4-263a-4ddd-8fa2-644472c1838a",
+      "lesson_id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Se alguém exige obediência absoluta, impede o exame bíblico ou isola membros de familiares e amigos, isso merece atenção. Um mentor cristão responsável orienta a pessoa a compreender a Bíblia e amadurecer, não a depender indefinidamente de sua autorização.",
+      "scripture_refs": [
+        "Efésios 4:11–16"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "f7c3736a-0685-4d62-990f-7455e2e47b34",
+      "lesson_id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Escolha um ensino ouvido recentemente e investigue o capítulo bíblico usado. Escreva uma pergunta sincera e converse com alguém maduro que aceite examinar o texto junto com você. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Efésios 4:11–16"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "7014cf17-ed07-472b-b06b-0573da7070e3",
+      "lesson_id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Para que servem os ministérios na passagem?\n\n2. Qual é a diferença entre firmeza bíblica e autoritarismo?\n\n3. Como verdade e amor se unem no crescimento?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Efésios 4:11–16"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "f03fad24-c63d-4814-9fb1-6bc1ce04971a",
+      "lesson_id": "dceccf1a-10fe-48ad-aa58-b7a9f8cacc40",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Senhor, concede-me humildade para aprender e coragem para fazer perguntas. Que eu cresça na verdade sem perder o amor pelas pessoas. Amém.",
+      "scripture_refs": [
+        "Efésios 4:11–16"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "789d0d1e-7705-45bd-8be4-0d55d5ce40af",
+      "lesson_id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Mateus 5:21–26. Pergunta de abertura: O ensino de Jesus alcança palavras, intenções e relacionamentos. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Mateus 5:21–26"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "3af50270-4ff7-450d-897e-14d1dfdec7d0",
+      "lesson_id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Mateus 5:21–26. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Mateus 5:21–26"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "c708a1e7-8e14-4676-9953-c61e7305d9b3",
+      "lesson_id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "No Sermão do Monte, Jesus aprofunda a compreensão da justiça, indo além da proibição do homicídio para tratar ira, insulto e ruptura entre pessoas. O texto situa a reconciliação na mesma esfera de seriedade da adoração.",
+      "scripture_refs": [
+        "Mateus 5:21–26"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "80d2b36e-666a-46ae-ad76-14f99c749f36",
+      "lesson_id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Jesus critica desprezo e hostilidade que desumanizam o outro. A prioridade de buscar reconciliação não manda uma pessoa vulnerável voltar ao convívio de quem a agride. A Bíblia também considera justiça e proteção. A prática do perdão exige reconhecer a gravidade do mal e estabelecer limites quando necessários.",
+      "scripture_refs": [
+        "Mateus 5:21–26"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "be2fad0f-1d5e-44aa-a32f-62f0aeb473b7",
+      "lesson_id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "Jesus não veio apenas corrigir comportamentos públicos; seu ensino confronta motivações e palavras. A vida do Reino atinge relações concretas.",
+      "scripture_refs": [
+        "Mateus 5:21–26"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "94030c66-6f01-47e7-beaf-1310f0a6496d",
+      "lesson_id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "No trânsito, numa discussão familiar ou numa conversa online, você pode vencer a discussão e perder a capacidade de respeitar alguém. Antes de postar ou responder, pergunte se suas palavras comunicam verdade sem desumanização. Admitir a própria parte num conflito não é assumir culpa por toda a violência.",
+      "scripture_refs": [
+        "Mateus 5:21–26"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "605962a4-58da-43ba-9564-7d9b2d5dcb4a",
+      "lesson_id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Escreva uma situação recente de raiva. Separe fatos de suposições e escolha um gesto seguro: pedir desculpas por uma palavra injusta, encerrar uma conversa agressiva ou buscar mediação. Se houver violência, priorize proteção. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Mateus 5:21–26"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "80271c96-11ae-4cc5-bfef-8ccab724d64b",
+      "lesson_id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Que ligação Jesus estabelece entre ira e palavras?\n\n2. Por que reconciliação não é a mesma coisa que aceitar abuso?\n\n3. Como pode ser uma desculpa responsável?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Mateus 5:21–26"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "154975da-c490-4e70-bbb3-aaeeef795cdc",
+      "lesson_id": "9949467d-6021-45af-8f91-7b504db2c83a",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Senhor, guarda minha língua do desprezo. Dá-me coragem para reconhecer erros e sabedoria para buscar paz sem abandonar a justiça. Amém.",
+      "scripture_refs": [
+        "Mateus 5:21–26"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "9c9afd6f-5aa8-4b51-bcd9-7a36c234f9d9",
+      "lesson_id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Mateus 6:19–34. Pergunta de abertura: Buscar primeiro o Reino com trabalho responsável e confiança. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Mateus 6:19–34"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "79abee4b-607c-44fe-8bdf-c43c27864ce4",
+      "lesson_id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Mateus 6:19–34. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Mateus 6:19–34"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "b9b931a6-cf4f-4b7e-b3fe-6956854460e1",
+      "lesson_id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Jesus confronta tesouros que aprisionam o coração e a ansiedade ligada às necessidades básicas. As imagens de aves e flores ensinam confiança na providência do Pai, dentro de um discurso que também valoriza justiça e generosidade.",
+      "scripture_refs": [
+        "Mateus 6:19–34"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "1afa2995-2cbe-4b6f-ad72-1860277b5472",
+      "lesson_id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "«Não andeis ansiosos» não é diagnóstico médico nem proibição de procurar tratamento. A passagem adverte contra uma vida dominada pelo medo e pelo acúmulo. «Buscar primeiro o Reino» envolve reorientar valores e praticar a justiça, não abandonar orçamento, emprego ou cuidado com dependentes. O ensino não promete riqueza aos fiéis.",
+      "scripture_refs": [
+        "Mateus 6:19–34"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "33de8344-d0b8-477b-96f3-781e404d7b9d",
+      "lesson_id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "Jesus chama seus discípulos a confiar no Pai e viver com prioridades transformadas. A segurança final não pode ser depositada apenas na posse de bens.",
+      "scripture_refs": [
+        "Mateus 6:19–34"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "6f9478f8-67e6-483a-b974-035c8df01782",
+      "lesson_id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "É possível estar endividado, procurar emprego ou enfrentar insegurança alimentar e ainda viver a fé. Nesses casos, oração e ajuda concreta se complementam. A igreja tem responsabilidade de cuidar, não de acusar pessoas pobres por falta de fé.",
+      "scripture_refs": [
+        "Mateus 6:19–34"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "5de7bd5e-88e2-4f0c-8817-93c866e79b7b",
+      "lesson_id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Registre gastos essenciais e uma fonte atual de preocupação. Escolha uma medida prudente: revisar orçamento, pedir orientação, procurar oportunidade de trabalho ou ajudar alguém com aquilo que realmente pode oferecer. Ore sem prometer a si mesmo um resultado mágico. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Mateus 6:19–34"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "274c6a26-4c3e-4658-859e-012c437d0c20",
+      "lesson_id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Que tesouros Jesus contrasta?\n\n2. Qual é o sentido de buscar primeiro o Reino?\n\n3. Por que o texto não condena planejamento nem tratamento da ansiedade?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Mateus 6:19–34"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "9aecfbd2-eeec-47a6-9c67-84b05b66f684",
+      "lesson_id": "adaebcc1-8a34-4a8a-a4fa-6f2dc045a5a9",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Pai, ensina-me a distinguir necessidade de vaidade. Ajuda-me a cuidar dos meus compromissos e a confiar em ti sem abandonar minha responsabilidade. Amém.",
+      "scripture_refs": [
+        "Mateus 6:19–34"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "646cded9-832f-47df-b8b0-f46fd4a6d253",
+      "lesson_id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Tiago 1:19–27; 2:14–17. Pergunta de abertura: A Palavra se torna visível no modo de ouvir, falar e cuidar. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Tiago 1:19–27; 2:14–17"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "985f49a8-0cfd-4874-91f7-2eae2a43c064",
+      "lesson_id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Tiago 1:19–27; 2:14–17. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Tiago 1:19–27; 2:14–17"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "4c76b9ac-ffb1-4786-ac74-d0d14b6f3d5c",
+      "lesson_id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Tiago escreve numa linguagem prática às comunidades cristãs. Ele convoca os leitores a serem prontos para ouvir, tardios para falar e tardios para irar-se; depois contrapõe o ouvinte esquecido à pessoa que pratica a Palavra. O capítulo 2 aborda a incoerência de desejar o bem a necessitados sem atender necessidades reais.",
+      "scripture_refs": [
+        "Tiago 1:19–27; 2:14–17"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "415529d8-dff6-4955-88e2-d8c3d3611abc",
+      "lesson_id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Tiago não ensina que boas obras compram a graça de Deus, mas que uma fé sem consequências concretas está vazia. A preocupação com órfãos e viúvas reflete vulnerabilidades sociais do mundo antigo. Aplicar hoje exige olhar para pessoas reais, não usar assistência como palco para propaganda pessoal.",
+      "scripture_refs": [
+        "Tiago 1:19–27; 2:14–17"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "228c2ee1-c70e-4ac8-aff2-d68f25a31c68",
+      "lesson_id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "O seguimento de Cristo liga confissão de fé e misericórdia prática. A graça que acolhe também transforma a maneira de tratar os outros.",
+      "scripture_refs": [
+        "Tiago 1:19–27; 2:14–17"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "5552368f-9971-4fe3-82fc-ac0f837695e1",
+      "lesson_id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "É possível saber versículos de memória e maltratar alguém em casa. Antes de medir a maturidade pela quantidade de conteúdos consumidos, examine sua paciência, honestidade e disponibilidade para socorrer uma necessidade real.",
+      "scripture_refs": [
+        "Tiago 1:19–27; 2:14–17"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "db0a9002-9d85-485d-b740-531a5fd40ca7",
+      "lesson_id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Hoje pratique a regra de Tiago: escute alguém sem interromper, cumpra uma promessa esquecida ou ofereça ajuda concreta e proporcional às suas condições. Anote como sua ação se relacionou com o texto. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Tiago 1:19–27; 2:14–17"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "5317b3ff-2b07-4c77-b68e-8604da1491f4",
+      "lesson_id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Quais atitudes Tiago liga à prática da Palavra?\n\n2. Que exemplo de necessidade concreta aparece em Tiago 2?\n\n3. Como evitar transformar boas obras em autopromoção?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Tiago 1:19–27; 2:14–17"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "1e4df0d0-e1fb-416c-a997-4b09dd91166c",
+      "lesson_id": "06c065c9-49a9-43cf-b688-3abcc1fc37e5",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Senhor, que minha fé não seja apenas discurso. Ensina-me a ouvir com paciência, falar com cuidado e ajudar com sinceridade. Amém.",
+      "scripture_refs": [
+        "Tiago 1:19–27; 2:14–17"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "d7436dd1-4b91-4ff0-95a4-c4c79b1bfea9",
+      "lesson_id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Filipenses 2:1–11. Pergunta de abertura: Grandeza cristã não é dominar; é considerar o outro com amor. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Filipenses 2:1–11"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "62bdff70-5151-456c-978c-aeea20354296",
+      "lesson_id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Filipenses 2:1–11. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Filipenses 2:1–11"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "e0a56cf6-42b2-431f-9955-58e9aaac1659",
+      "lesson_id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Paulo exorta os filipenses à unidade, humildade e consideração mútua, e apresenta Cristo como exemplo supremo. O trecho poético fala de sua condição, esvaziamento, obediência e exaltação, sendo central para a cristologia do Novo Testamento.",
+      "scripture_refs": [
+        "Filipenses 2:1–11"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "052ed01e-0c0a-40db-8c5e-5bd2a0ac8a13",
+      "lesson_id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "O chamado a considerar os outros não exige aceitar exploração ou apagar a própria dignidade. A humildade de Jesus confronta ambição egoísta, vaidade e abuso de poder. A exaltação vem de Deus; não é justificativa para buscar sofrimento artificial ou controlar pessoas com a promessa de futura recompensa.",
+      "scripture_refs": [
+        "Filipenses 2:1–11"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "74814756-3dba-4bee-8f54-a5ffc04aafc2",
+      "lesson_id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "O próprio Cristo revela o caráter do serviço cristão. Sua entrega orienta a comunidade para o amor sacrificial e a esperança, sem glorificar práticas abusivas.",
+      "scripture_refs": [
+        "Filipenses 2:1–11"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "50a40d54-f773-4f79-bdf2-f3e459a19620",
+      "lesson_id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "No trabalho, numa igreja ou em casa, servir pode significar dividir tarefas, admitir erro, reconhecer contribuição alheia e abrir espaço para quem raramente é ouvido. Um líder que só exige sacrifícios dos outros não reproduz o modelo de Filipenses 2.",
+      "scripture_refs": [
+        "Filipenses 2:1–11"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "5ead9d0f-ed0a-409a-8a37-2dd2090eb4ee",
+      "lesson_id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Escolha uma situação em que você costuma buscar o primeiro lugar. Faça uma ação concreta de serviço e ofereça reconhecimento justo a outra pessoa, sem publicar o gesto em busca de aprovação. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Filipenses 2:1–11"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "54d0c75c-48f9-4184-9016-060aa135828c",
+      "lesson_id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Quais atitudes Paulo combate no início do capítulo?\n\n2. O que a postura de Cristo ensina sobre autoridade?\n\n3. Como servir sem aceitar exploração?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Filipenses 2:1–11"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "1e294b19-da19-4fc2-a0ca-ff493c08ae3f",
+      "lesson_id": "40571fc1-7bea-42e2-8ea9-6c8c3f08b087",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Jesus, livra-me da vaidade e do desejo de dominar. Forma em mim a humildade que reconhece, escuta e serve com amor. Amém.",
+      "scripture_refs": [
+        "Filipenses 2:1–11"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "aeba9e07-5d53-4536-8cde-a93b4e72ab21",
+      "lesson_id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Mateus 28:16–20. Pergunta de abertura: A missão de fazer discípulos, ensinar e acompanhar. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Mateus 28:16–20"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "cca41500-45db-4c8e-86a3-764d375b6e81",
+      "lesson_id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Mateus 28:16–20. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Mateus 28:16–20"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "e0332196-3564-4b27-bc53-2dfac5053e6e",
+      "lesson_id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Mateus conclui seu Evangelho com o encontro do Ressuscitado com os discípulos na Galileia. O texto inclui adoração, dúvidas, autoridade de Jesus, missão às nações, batismo e ensino para obedecer tudo que ele ordenou.",
+      "scripture_refs": [
+        "Mateus 28:16–20"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "71b1595e-5a12-4567-8cd5-0712869269ee",
+      "lesson_id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "Fazer discípulos é mais que conseguir decisões rápidas ou aumentar números. A passagem inclui acompanhamento e aprendizagem contínua. O anúncio cristão não autoriza coagir, humilhar crenças alheias ou manipular pessoas vulneráveis. A presença prometida por Jesus sustenta a missão, mas não dispensa prudência e respeito.",
+      "scripture_refs": [
+        "Mateus 28:16–20"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "2b862700-39f0-4f10-b127-bed13bdaeffe",
+      "lesson_id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "A autoridade pertence a Cristo. Os discípulos são enviados a testemunhar dele, não a construir culto à própria personalidade.",
+      "scripture_refs": [
+        "Mateus 28:16–20"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "a03685e1-1976-4624-bad2-26263153c1ac",
+      "lesson_id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Você não precisa se tornar pregador profissional para falar de sua fé. Pode explicar o que está aprendendo, ouvir perguntas e reconhecer o que ainda não sabe. O testemunho perde credibilidade quando nossas atitudes contradizem o amor que anunciamos.",
+      "scripture_refs": [
+        "Mateus 28:16–20"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "a65e7a67-18e7-45f0-805d-88058adbbf1f",
+      "lesson_id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Escreva, em até cinco frases, o que você compreendeu sobre Jesus e por que deseja segui-lo. Converse com uma pessoa que tenha abertura para ouvir, respeitando inteiramente a liberdade dela de discordar. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Mateus 28:16–20"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "7a1907fb-e55d-4efc-88dc-c44677bb5dba",
+      "lesson_id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. O que Jesus manda os discípulos fazer e ensinar?\n\n2. Por que o ensino contínuo importa?\n\n3. Como testemunhar sem pressionar?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Mateus 28:16–20"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "664912f2-06e4-4c00-9365-14ef4b89bb34",
+      "lesson_id": "c7a21455-0f38-450e-b62d-1d634efa694f",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Senhor Jesus, ajuda-me a anunciar tua mensagem com clareza e respeito. Que minha vida não contradiga minhas palavras. Amém.",
+      "scripture_refs": [
+        "Mateus 28:16–20"
+      ],
+      "order_index": 9
+    },
+    {
+      "id": "2eef73cf-e830-48b3-8007-878fe65fc36c",
+      "lesson_id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "kind": "boas_vindas",
+      "title": "Pergunta inicial e caminho da aula",
+      "body": "Você não precisa ter respostas prontas nem provar que já é um cristão maduro. Hoje vamos estudar Filipenses 4:4–13. Pergunta de abertura: Contentamento, oração e perseverança em toda circunstância. Antes de continuar, peça a Deus humildade e atenção. Separe de 20 a 30 minutos para ler, pensar, escrever e praticar. O objetivo não é correr para obter uma medalha de conclusão, mas encontrar uma verdade bíblica e começar a vivê-la.",
+      "scripture_refs": [
+        "Filipenses 4:4–13"
+      ],
+      "order_index": 1
+    },
+    {
+      "id": "e52cf1cc-2693-4496-ac11-973756ff0b57",
+      "lesson_id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "kind": "leitura",
+      "title": "Leitura atenta da passagem",
+      "body": "Abra a Bíblia em Filipenses 4:4–13. Leia o texto integral no aplicativo, preferencialmente duas vezes. Na primeira leitura, marque os personagens, verbos e contrastes. Na segunda, pergunte: Quem fala? A quem? Em qual situação? Que problema ou esperança o autor apresenta? Não substitua a leitura do capítulo por este comentário. A passagem é a fonte; esta aula é um acompanhamento. Para ampliar, abra o estudo aprofundado correspondente na aba Estudos de Gênesis a Apocalipse, conforme a disponibilidade e revisão editorial de cada capítulo.",
+      "scripture_refs": [
+        "Filipenses 4:4–13"
+      ],
+      "order_index": 2
+    },
+    {
+      "id": "0bae6a1d-609a-4efe-ba1c-010f28714942",
+      "lesson_id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "kind": "contexto",
+      "title": "Contexto histórico e literário",
+      "body": "Paulo escreve Filipenses no contexto de dificuldades e prisão, agradecendo pela parceria dos cristãos. No capítulo 4, incentiva oração, gratidão, discernimento dos pensamentos e contentamento. A conhecida declaração de poder enfrentar todas as circunstâncias aparece ligada à experiência de viver tanto com abundância quanto com escassez.",
+      "scripture_refs": [
+        "Filipenses 4:4–13"
+      ],
+      "order_index": 3
+    },
+    {
+      "id": "65b84ea0-b499-4da0-8095-105ae0ed06c8",
+      "lesson_id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "kind": "entendimento",
+      "title": "Exposição e interpretação bíblica",
+      "body": "«Tudo posso naquele que me fortalece» não significa vencer todo concurso, enriquecer ou obter qualquer resultado desejado. No contexto, Paulo fala de resistência e contentamento em situações diversas. A oração não elimina automaticamente o sofrimento; a paz de Deus guarda a vida interior enquanto a pessoa continua agindo com responsabilidade.",
+      "scripture_refs": [
+        "Filipenses 4:4–13"
+      ],
+      "order_index": 4
+    },
+    {
+      "id": "b2ad0210-b72f-4b1f-8a21-8b0eaeb45af2",
+      "lesson_id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "kind": "cristo",
+      "title": "Conexão responsável com Cristo e o Evangelho",
+      "body": "Cristo sustenta seus seguidores na perseverança. Nossa esperança não depende de cada circunstância coincidir com nossos planos.",
+      "scripture_refs": [
+        "Filipenses 4:4–13"
+      ],
+      "order_index": 5
+    },
+    {
+      "id": "5df1124c-0b3a-49e1-b0ae-e16192b3b5c4",
+      "lesson_id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "kind": "coracao",
+      "title": "Examine o coração, sem máscaras",
+      "body": "Pode ser difícil estudar todos os dias. Uma pausa não destrói sua caminhada. Se houver depressão, sofrimento intenso ou risco, procure apoio de pessoas confiáveis e profissionais; espiritualidade e cuidado responsável não são rivais. Perseverança também envolve descanso e comunidade.",
+      "scripture_refs": [
+        "Filipenses 4:4–13"
+      ],
+      "order_index": 6
+    },
+    {
+      "id": "694fcef2-9a6f-428a-bb36-800be5c853b2",
+      "lesson_id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "kind": "pratica",
+      "title": "Viva a Palavra: desafio de 24 horas",
+      "body": "Revise as últimas aulas: escreva três verdades aprendidas, duas atitudes que começaram a mudar e uma área que necessita de ajuda. Defina um plano de leitura de 15 a 25 minutos, quatro dias por semana, com espaço para descanso e participação comunitária. Ao final do dia, registre: o que fiz, o que foi difícil, o que aprendi e qual será meu próximo passo. Se não conseguir, retome sem fingimento. A aplicação é uma resposta pessoal ao texto, não um novo mandamento bíblico universal.",
+      "scripture_refs": [
+        "Filipenses 4:4–13"
+      ],
+      "order_index": 7
+    },
+    {
+      "id": "259c505e-ff8b-4feb-a99b-c4ccac4c4e02",
+      "lesson_id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "kind": "perguntas",
+      "title": "Perguntas para reflexão e conversa",
+      "body": "1. Em que circunstâncias Paulo fala de contentamento?\n\n2. Qual é o contexto de Filipenses 4:13?\n\n3. Qual hábito sustentável você adotará após o curso?\n\nConverse sobre uma destas perguntas com um cristão maduro que saiba ouvir e que permita dúvidas. Se ninguém estiver disponível, escreva sua resposta em seu caderno.",
+      "scripture_refs": [
+        "Filipenses 4:4–13"
+      ],
+      "order_index": 8
+    },
+    {
+      "id": "49d2ff40-a1c4-4e53-b8b2-d6b2eb493be9",
+      "lesson_id": "72d7b2b5-5510-45d4-b5ba-35b7f48cae7b",
+      "kind": "oracao",
+      "title": "Oração final (sugestão, não fórmula)",
+      "body": "Jesus, sustenta-me na abundância e na falta. Guarda meu coração da arrogância e do desespero. Dá-me constância, sabedoria e companheiros de caminhada. Amém.",
+      "scripture_refs": [
+        "Filipenses 4:4–13"
+      ],
+      "order_index": 9
+    }
+  ],
+  "export_note": "Editorial copy only; changes to this file are NOT automatically synced to Supabase. Do not delete or recreate course, lessons or progress. No secrets."
+}
