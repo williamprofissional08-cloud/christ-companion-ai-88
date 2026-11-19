@@ -179,7 +179,7 @@ function StudentLessonPage() {
                   </Card>
                 ) : null}
 
-                <LessonWorkspace lessonId={view.lesson.id} courseId={view.course.id} lessonTitle={view.lesson.title} passage={view.lesson.passage} />
+                <LessonWorkspace lessonId={view.lesson.id} courseId={view.course.id} lessonTitle={view.lesson.title} passage={view.lesson.passage} discipleship={slug === "primeiros-passos-com-cristo-da-conversao-a-vida-transformada"} />
 
                 <Button className="w-full sm:w-auto" onClick={() => completeMutation.mutate()} disabled={completeMutation.isPending || view.status === "concluida"}>
                   <CheckCircle2 className="mr-2 size-4" />
