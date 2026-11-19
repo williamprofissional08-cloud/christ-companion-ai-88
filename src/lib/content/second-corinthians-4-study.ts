@@ -86,7 +86,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "exposicao-versiculo-4",
       "title": "Exposição de 2 Coríntios 4:4",
       "kind": "exposition",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:4"
       ],
@@ -236,7 +236,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "pericope-1",
       "title": "Perícope 1 — Transparência e iluminação (vv. 1–6)",
       "kind": "exposition",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1–6"
       ],
@@ -246,7 +246,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "pericope-2",
       "title": "Perícope 2 — Tesouro em vasos frágeis (vv. 7–12)",
       "kind": "exposition",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:7–12"
       ],
@@ -256,7 +256,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "pericope-3",
       "title": "Perícope 3 — Fé, ressurreição e gratidão (vv. 13–15)",
       "kind": "exposition",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:13–15"
       ],
@@ -266,7 +266,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "pericope-4",
       "title": "Perícope 4 — Renovação e perspectiva eterna (vv. 16–18)",
       "kind": "exposition",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:16–18"
       ],
@@ -276,7 +276,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "contexto-historico",
       "title": "Contexto histórico e literário",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -286,7 +286,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "estrutura-argumentativa",
       "title": "Estrutura e movimentos do argumento",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -296,7 +296,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "termos-e-imagens",
       "title": "Termos e imagens no contexto",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -306,7 +306,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "referencias-cruzadas",
       "title": "Referências cruzadas explicadas",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -316,7 +316,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "interpretacao-e-inferencia",
       "title": "O texto afirma, inferências e debates",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -326,7 +326,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "cristo-e-redencao",
       "title": "Cristo e a história da redenção",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -336,7 +336,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "cuidados-pastorais",
       "title": "Passagens sensíveis e usos indevidos",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -346,7 +346,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "aplicacoes-concretas",
       "title": "Aplicações concretas",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -356,7 +356,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "perguntas-respostas",
       "title": "Exercícios com respostas orientadoras",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -366,7 +366,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "oficina-pregador",
       "title": "Oficina do pregador — mensagem expositiva",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -376,7 +376,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "glossario-resumo",
       "title": "Resumo e glossário",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
@@ -386,7 +386,7 @@ export const secondCorinthians4Study: StudyContent = {
       "id": "oracao-final",
       "title": "Oração final",
       "kind": "application",
-      "confidence": "interpretation",
+      "confidence": "probable",
       "scriptureRefs": [
         "2 Coríntios 4:1-18"
       ],
