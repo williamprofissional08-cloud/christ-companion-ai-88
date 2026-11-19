@@ -143,10 +143,26 @@ function RootComponent() {
   const router = useRouter();
 
   useEffect(() => {
-    const { data: sub } = supabase.auth.onAuthStateChange((event) => {
-      if (event !== "SIGNED_IN" && event !== "SIGNED_OUT" && event !== "USER_UPDATED") return;
-      router.invalidate();
-      if (event !== "SIGNED_OUT") queryClient.invalidateQueries();
+    let lastUserId: string | null = null;
+    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
+      const userId = session?.user.id ?? null;
+      if (event === "INITIAL_SESSION") {
+        lastUserId = userId;
+        return;
+      }
+      if (event === "SIGNED_IN") {
+        // Supabase também emite SIGNED_IN ao restaurar ou confirmar a mesma
+        // sessão (ex.: foco da aba). Isso NÃO é uma troca de usuário e não
+        // deve reiniciar as rotas durante uma navegação em andamento.
+        if (userId === lastUserId) return;
+        lastUserId = userId;
+      } else if (event === "SIGNED_OUT") {
+        lastUserId = null;
+      } else if (event !== "USER_UPDATED") {
+        return;
+      }
+      void router.invalidate();
+      if (event !== "SIGNED_OUT") void queryClient.invalidateQueries();
     });
     return () => sub.subscription.unsubscribe();
   }, [router, queryClient]);
