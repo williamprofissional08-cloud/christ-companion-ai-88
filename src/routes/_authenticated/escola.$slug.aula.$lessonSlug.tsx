@@ -114,6 +114,12 @@ function StudentLessonPage() {
 
             {!view.locked ? (
               <>
+                {slug === "primeiros-passos-com-cristo-da-conversao-a-vida-transformada" ? (
+                  <div className="flex flex-wrap gap-2">
+                    <Button asChild variant="outline" size="sm"><Link to="/biblia"><BookOpen className="mr-2 size-4" /> Ler na Bíblia</Link></Button>
+                    <Button asChild variant="outline" size="sm"><Link to="/estudos">Aprofundar nos estudos por capítulo</Link></Button>
+                  </div>
+                ) : null}
                 {view.audio ? (
                   <LessonAudioPlayer
                     src={view.audio.url}
@@ -179,7 +185,7 @@ function StudentLessonPage() {
                   </Card>
                 ) : null}
 
-                <LessonWorkspace lessonId={view.lesson.id} courseId={view.course.id} lessonTitle={view.lesson.title} passage={view.lesson.passage} />
+                <LessonWorkspace lessonId={view.lesson.id} courseId={view.course.id} lessonTitle={view.lesson.title} passage={view.lesson.passage} discipleship={slug === "primeiros-passos-com-cristo-da-conversao-a-vida-transformada"} />
 
                 <Button className="w-full sm:w-auto" onClick={() => completeMutation.mutate()} disabled={completeMutation.isPending || view.status === "concluida"}>
                   <CheckCircle2 className="mr-2 size-4" />

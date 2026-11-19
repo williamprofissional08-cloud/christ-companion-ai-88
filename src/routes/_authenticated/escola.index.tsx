@@ -97,6 +97,9 @@ function EscolaPage() {
               <div>
                 <h2 id="courses-heading" className="font-display text-xl font-semibold sm:text-2xl">Cursos disponíveis</h2>
                 <p className="mt-1 text-sm text-muted-foreground">{courses.length} curso(s) publicado(s)</p>
+                {courses.some((course) => course.slug === "primeiros-passos-com-cristo-da-conversao-a-vida-transformada") ? (
+                  <p className="mt-2 text-sm font-medium text-primary">Novo na fé? Comece com Primeiros Passos com Cristo e avance aula por aula.</p>
+                ) : null}
               </div>
               {admin.data ? (
                 <Button asChild size="sm" variant="outline"><Link to="/admin/cursos">Administrar</Link></Button>
@@ -109,6 +112,7 @@ function EscolaPage() {
                     <div className="flex flex-wrap items-center gap-2">
                       <Badge variant="secondary">{levelLabel(course.level)}</Badge>
                       <Badge variant="outline">{course.tier === "premium" ? "Premium" : "Gratuito"}</Badge>
+                      {course.slug === "primeiros-passos-com-cristo-da-conversao-a-vida-transformada" ? <Badge>Comece por aqui</Badge> : null}
                     </div>
                     <div>
                       <h3 className="font-display text-lg font-semibold leading-snug text-foreground">{course.title}</h3>

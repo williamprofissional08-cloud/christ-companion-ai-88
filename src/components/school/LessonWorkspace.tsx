@@ -29,11 +29,13 @@ export function LessonWorkspace({
   courseId,
   lessonTitle,
   passage,
+  discipleship = false,
 }: {
   lessonId: string;
   courseId: string;
   lessonTitle: string;
   passage: string | null;
+  discipleship?: boolean;
 }) {
   const queryClient = useQueryClient();
   const fetchWorkspace = useServerFn(getLessonWorkspace);
@@ -128,8 +130,8 @@ export function LessonWorkspace({
     <Card className="space-y-4 p-5">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
-          <h2 className="font-display text-lg font-semibold">Caderno do pregador</h2>
-          <p className="text-sm text-muted-foreground">Medite, responda e transforme o estudo em uma mensagem.</p>
+          <h2 className="font-display text-lg font-semibold">{discipleship ? "Meu caderno de discipulado" : "Caderno do pregador"}</h2>
+          <p className="text-sm text-muted-foreground">{discipleship ? "Registre o que aprendeu, o que precisa mudar e sua prática da Palavra." : "Medite, responda e transforme o estudo em uma mensagem."}</p>
         </div>
         <Button variant="outline" size="sm" onClick={() => favoriteMutation.mutate()} disabled={favoriteMutation.isPending}>
           <Heart className={workspace.data?.favoriteId ? "mr-1 size-4 fill-current" : "mr-1 size-4"} />
@@ -137,9 +139,9 @@ export function LessonWorkspace({
         </Button>
       </div>
       <Tabs defaultValue="reflexao">
-        <TabsList className="grid w-full grid-cols-3">
+        <TabsList className={discipleship ? "grid w-full grid-cols-2" : "grid w-full grid-cols-3"}>
           <TabsTrigger value="reflexao" className="gap-1"><BookMarked className="size-4" /> Meditação</TabsTrigger>
-          <TabsTrigger value="mensagem" className="gap-1"><FilePenLine className="size-4" /> Minha mensagem</TabsTrigger>
+          {!discipleship ? <TabsTrigger value="mensagem" className="gap-1"><FilePenLine className="size-4" /> Minha mensagem</TabsTrigger> : null}
           <TabsTrigger value="exercicios" className="gap-1"><ClipboardCheck className="size-4" /> Exercícios</TabsTrigger>
         </TabsList>
         <TabsContent value="reflexao" className="mt-4 space-y-4">
