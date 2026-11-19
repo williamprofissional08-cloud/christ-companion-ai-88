@@ -1,3 +1,4 @@
+import { firstCorinthians16Study } from "./first-corinthians-16-study";
 import { philippians1Study } from "./philippians-1-study";
 import { philippians2Study } from "./philippians-2-study";
 import { philippians3Study } from "./philippians-3-study";
@@ -2215,4 +2216,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-filipenses-cap-2": philippians2Study,
   "biblia-filipenses-cap-3": philippians3Study,
   "biblia-filipenses-cap-4": philippians4Study,
+  "biblia-1-corintios-cap-16": firstCorinthians16Study,
 };
