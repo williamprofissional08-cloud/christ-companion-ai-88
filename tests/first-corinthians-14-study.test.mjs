@@ -18,5 +18,5 @@ test("editorial integrity", () => {
 });
 test("catalog exactly once", () => {
   assert.equal((catalog.match(/"biblia-1-corintios-cap-14":/g)||[]).length,1);
-  assert.equal((catalog.match(/import \\{ firstCorinthians14Study \\} from/g)||[]).length,1);
+  assert.equal(catalog.split('import { firstCorinthians14Study } from').length-1,1);
 });
