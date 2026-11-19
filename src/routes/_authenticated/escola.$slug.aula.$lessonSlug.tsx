@@ -114,6 +114,12 @@ function StudentLessonPage() {
 
             {!view.locked ? (
               <>
+                {slug === "primeiros-passos-com-cristo-da-conversao-a-vida-transformada" ? (
+                  <div className="flex flex-wrap gap-2">
+                    <Button asChild variant="outline" size="sm"><Link to="/biblia"><BookOpen className="mr-2 size-4" /> Ler na Bíblia</Link></Button>
+                    <Button asChild variant="outline" size="sm"><Link to="/estudos">Aprofundar nos estudos por capítulo</Link></Button>
+                  </div>
+                ) : null}
                 {view.audio ? (
                   <LessonAudioPlayer
                     src={view.audio.url}
