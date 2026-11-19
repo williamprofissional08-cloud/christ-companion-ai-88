@@ -2,7 +2,7 @@
 
 **Curso já cadastrado e publicado em Supabase**: `uluumebztnrgpyzohqrv`  
 **Slug:** `primeiros-passos-com-cristo-da-conversao-a-vida-transformada`  
-**Estrutura verificada:** 8 módulos · 24 aulas · 216 blocos (9 por aula)  
+**Estrutura verificada:** 8 módulos · 24 aulas · 216 blocos (9 por aula) · 24 exercícios interativos  
 **Acesso no app:** `/escola/primeiros-passos-com-cristo-da-conversao-a-vida-transformada`  
 **Plano sugerido:** 8 semanas; 3 aulas por semana, aproximadamente 25 min cada  
 **Preço:** gratuito · **Nível:** iniciante
