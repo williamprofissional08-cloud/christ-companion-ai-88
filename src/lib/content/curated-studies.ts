@@ -14,6 +14,7 @@ import { luke20Study } from "./luke-20-study";
 import { luke21Study } from "./luke-21-study";
 import { luke22Study } from "./luke-22-study";
 import { luke23Study } from "./luke-23-study";
+import { luke24Study } from "./luke-24-study";
 import { luke14Study } from "./luke-14-study";
 import { secondCorinthians8Study } from "./second-corinthians-8-study";
 import { secondCorinthians9Study } from "./second-corinthians-9-study";
@@ -2196,6 +2197,7 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-lucas-cap-21": luke21Study,
   "biblia-lucas-cap-22": luke22Study,
   "biblia-lucas-cap-23": luke23Study,
+  "biblia-lucas-cap-24": luke24Study,
   "biblia-2-corintios-cap-7": secondCorinthians7Study,
   "biblia-2-corintios-cap-6": secondCorinthians6Study,
   "biblia-2-corintios-cap-4": secondCorinthians4Study,
