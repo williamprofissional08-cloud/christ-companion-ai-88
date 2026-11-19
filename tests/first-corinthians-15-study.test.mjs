@@ -13,7 +13,7 @@ test("1 Corinthians 15: all 58 BLIVRE verses accounted for", () => {
 });
 test("original paraphrase, pericope exegesis, prayer, preaching and applications", () => {
   assert.match(study, /paráfrase livre original/i);
-  assert.equal((study.match(/\\n\\n\\*\\*Exposição contextual:/g) || []).length, 58);
+  assert.equal(study.split("**Exposição contextual:**").length - 1, 58);
   for (const id of ["pericope-1-11","pericope-12-19","pericope-20-28","pericope-29-34","pericope-35-49","pericope-50-57","pericope-58-58","oficina-do-pregador","oracao-final","perguntas-com-respostas"]) assert.ok(study.includes('"id": "' + id + '"'));
 });
 test("catalog registers study exactly once", () => {
