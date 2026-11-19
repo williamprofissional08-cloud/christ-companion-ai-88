@@ -10,7 +10,7 @@ catalog = (ROOT / "src/lib/content/curated-studies.ts").read_text(encoding="utf-
 source = json.loads((ROOT / "src/lib/bible-livre/1-corintios.json").read_text(encoding="utf-8"))
 assert len(source["chapters"]["16"]) == 24
 assert study.count('"id": "versiculo-') == 24
-assert [int(x) for x in re.findall(r'"id": "versiculo-(\\d+)"', study)] == list(range(1, 25))
+assert [int(x) for x in re.findall(r'"id": "versiculo-(\d+)"', study)] == list(range(1, 25))
 ids = re.findall(r'"id": "([^"]+)"', study)
 assert len(ids) == len(set(ids))
 assert study.count("**Paráfrase livre original:**") == 24
