@@ -19,36 +19,28 @@ import logo from "@/assets/logo.png";
 import { MusicControlButton } from "@/components/GlobalBackgroundMusic";
 
 const PRIMARY_NAV = [
-  { to: "/inicio", label: "Início", icon: Home },
-  { to: "/estudos", label: "Estudo", icon: BookOpen },
-  { to: "/trilhas", label: "Trilhas", icon: RouteIcon },
-  { to: "/escola", label: "Escola Bíblica", icon: GraduationCap },
+  { to: "/inicio", label: "Hoje", icon: Home },
+  { to: "/biblia", label: "Bíblia", icon: BookOpen },
+  { to: "/estudos", label: "Estudos", icon: GraduationCap },
+  { to: "/favoritos", label: "Salvos", icon: Star },
+  { to: "/configuracoes", label: "Perfil", icon: UserRound },
 ] as const;
 
 // Uma única navegação móvel para todas as páginas autenticadas.
 // Itens secundários permanecem no menu e nos atalhos do Início.
-const MOBILE_NAV = [
-  { to: "/inicio", label: "Início", icon: Home },
-  { to: "/biblia", label: "Bíblia", icon: BookOpen },
-  { to: "/estudos", label: "Estudos", icon: BookOpen },
-  { to: "/trilhas", label: "Trilhas", icon: RouteIcon },
-  { to: "/comunidade", label: "Comunidade", icon: UsersRound },
-  { to: "/configuracoes", label: "Perfil", icon: UserRound },
-] as const;
+const MOBILE_NAV = PRIMARY_NAV;
 
 const MORE_NAV = [
-  { to: "/assistente", label: "Assistente", icon: MessageCircleHeart },
   { to: "/devocional", label: "Devocional", icon: Flame },
   { to: "/planos", label: "Planos de oração", icon: HeartHandshake },
-  { to: "/estudos", label: "Estudos", icon: Compass },
+  { to: "/trilhas", label: "Trilhas guiadas", icon: RouteIcon },
+  { to: "/escola", label: "Escola Bíblica", icon: GraduationCap },
   { to: "/comunidade", label: "Comunidade", icon: UsersRound },
-  { to: "/biblia", label: "Bíblia", icon: BookOpen },
+  { to: "/assistente", label: "Assistente", icon: MessageCircleHeart },
   { to: "/pesquisa", label: "Pesquisa", icon: Search },
-  { to: "/diario", label: "Diário", icon: NotebookPen },
+  { to: "/diario", label: "Diário e anotações", icon: NotebookPen },
   { to: "/minhas-mensagens", label: "Mensagens", icon: FilePenLine },
   { to: "/metas", label: "Metas", icon: Target },
-  { to: "/favoritos", label: "Favoritos", icon: Star },
-  { to: "/configuracoes", label: "Configurações", icon: Settings },
 ] as const;
 
 const ALL_NAV = [...PRIMARY_NAV, ...MORE_NAV, { to: "/admin" as const, label: "Painel administrativo", icon: ShieldCheck }];
@@ -138,7 +130,7 @@ export function AppShell({
         <header
           data-home-header={homeHeader ? "true" : undefined}
           className={homeHeader
-            ? "fixed inset-x-0 top-0 z-40 border-b border-border/60 bg-white/90 pt-[env(safe-area-inset-top)] backdrop-blur lg:left-52 dark:bg-background/90"
+            ? "fixed inset-x-0 top-0 z-40 border-b border-border/60 bg-white/95 pt-[env(safe-area-inset-top)] backdrop-blur lg:left-52 dark:bg-background/90"
             : profileHeader
               ? "sticky top-0 z-30 border-b border-blue-900/15 bg-gradient-to-r from-[#07366d] to-[#005b96] text-white"
               : "sticky top-0 z-30 border-b border-border/60 bg-white/90 backdrop-blur dark:bg-background/90"}
@@ -203,8 +195,8 @@ export function AppShell({
               <div className="flex min-w-0 flex-1 items-center justify-center gap-2 lg:justify-start">
                 <img src={logo} alt="" width={34} height={34} className="size-9 shrink-0 object-contain" />
                 <div className="min-w-0 text-center lg:text-left">
-                  <p className="truncate font-display text-base font-bold tracking-tight text-white">Caminho Divino</p>
-                  <p className="truncate text-[10px] text-blue-100">Estudo • Ensino • Comunhão</p>
+                  <p className="truncate font-display text-base font-bold tracking-tight text-slate-900 dark:text-white">Caminho Divino</p>
+                  <p className="truncate text-[10px] text-slate-500 dark:text-blue-100">Estudo • Ensino • Comunhão</p>
                 </div>
               </div>
             ) : (
@@ -216,8 +208,8 @@ export function AppShell({
             {homeHeader && (
               <div className="flex shrink-0 items-center gap-1">
                 <MusicControlButton className="hidden size-10 lg:inline-flex" />
-                <Link to="/pesquisa" aria-label="Pesquisar" className="flex size-8 sm:size-10 items-center justify-center rounded-full text-white hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-blue-600"><Search className="size-5" /></Link>
-                <Link to="/configuracoes" aria-label="Notificações e preferências" className="flex size-10 items-center justify-center rounded-full text-white hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-blue-600"><Bell className="size-5" /></Link>
+                <Link to="/pesquisa" aria-label="Pesquisar" className="flex size-8 sm:size-10 items-center justify-center rounded-full text-slate-700 hover:bg-blue-50 dark:text-white dark:hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-blue-600"><Search className="size-5" /></Link>
+                <Link to="/configuracoes" aria-label="Notificações e preferências" className="flex size-10 items-center justify-center rounded-full text-slate-700 hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-600 dark:text-white"><Bell className="size-5" /></Link>
               </div>
             )}
             {homeHeader ? (
@@ -236,7 +228,7 @@ export function AppShell({
         <main className={`mx-auto w-full max-w-screen-2xl min-w-0 flex-1 ${homeHeader ? "px-2 pt-[calc(3.5rem+env(safe-area-inset-top)+0.5rem)] pb-[calc(4.5rem+env(safe-area-inset-bottom))] sm:px-3 lg:px-5 lg:pb-3" : "px-3 pt-4 pb-[calc(4.5rem+env(safe-area-inset-bottom))] sm:px-5 sm:pt-5 lg:px-8 lg:pb-10"}`}>{children}</main>
 
         <nav aria-label="Navegação rápida" className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur dark:bg-background/95 lg:hidden">
-          <div className="mx-auto grid max-w-2xl grid-cols-6">
+          <div className="mx-auto grid max-w-2xl grid-cols-5">
             {MOBILE_NAV.map((item) => (
               <Link
                 key={item.to}
