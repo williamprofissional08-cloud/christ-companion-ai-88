@@ -14,7 +14,7 @@ export const Route = createFileRoute("/_authenticated/favoritos")({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { title: "Favoritos — Caminhando com Cristo" },
+      { title: "Salvos — Caminho Divino" },
       {
         name: "description",
         content: "Seus versículos, estudos e orações favoritos salvos e sincronizados na nuvem.",
@@ -60,7 +60,7 @@ function FavoritosPage() {
   );
 
   return (
-    <AppShell title="Favoritos" subtitle="Tudo o que você guardou, sincronizado na nuvem.">
+    <AppShell title="Salvos" subtitle="Tudo o que você guardou, sincronizado na nuvem.">
       <section className="mx-auto w-full max-w-6xl space-y-6 pb-8">
         <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-primary/[0.09] via-card to-amber-500/[0.07] px-5 py-6 shadow-soft sm:px-8 sm:py-8">
           <div className="pointer-events-none absolute -right-8 -top-12 size-48 rounded-full bg-primary/10 blur-3xl" />
