@@ -8,9 +8,9 @@ const verses = bible.chapters["7"];
 test("1 Coríntios 7: acervo BLIVRE e paráfrase integral", () => {
  assert.equal(verses.length,40);
  for (let n=1;n<=verses.length;n++) {
-  assert.match(study, new RegExp("\\\\*\\\\*"+n+"\\\\.\\\\*\\\\*"));
-  assert.match(study,new RegExp('id": "versiculo-'+n+'"'));
-  assert.match(study,new RegExp("1 Coríntios 7:"+n+"\\\\b"));
+  assert.ok(study.includes(`**${n}.**`), `Paráfrase do versículo ${n}`);
+  assert.ok(study.includes(`"id": "versiculo-${n}"`), `Exposição do versículo ${n}`);
+  assert.ok(study.includes(`1 Coríntios 7:${n}`), `Referência do versículo ${n}`);
  }
  assert.match(study,/paráfrase livre original/);
  assert.match(study,/não tradução oficial/);
