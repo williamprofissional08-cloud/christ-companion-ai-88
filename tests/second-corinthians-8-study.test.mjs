@@ -20,6 +20,6 @@ test("2 Coríntios 8: integridade estrutural e cautelas editoriais", () => {
   for (const phrase of ["Paráfrase livre original", "proporcional", "transparência", "pregador", "Oração final", "Êxodo 16:16-18"]) assert.ok(study.toLowerCase().includes(phrase.toLowerCase()),phrase);
 });
 test("2 Coríntios 8: slug e importação únicos", () => {
-  assert.equal((catalog.match(/from "\\.\\/second-corinthians-8-study"/g)||[]).length,1);
+  assert.equal(catalog.split('from "./second-corinthians-8-study"').length - 1, 1);
   assert.equal((catalog.match(/"biblia-2-corintios-cap-8":/g)||[]).length,1);
 });
