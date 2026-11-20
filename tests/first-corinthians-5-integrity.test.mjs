@@ -8,7 +8,7 @@ const catalog = readFileSync(new URL("src/lib/content/curated-studies.ts", root)
 test("1 Coríntios 5: 13 versículos na fonte e paráfrase integral", () => {
   assert.equal(bible.chapters["5"].length, 13);
   const reading = source.match(/"id": "leitura-integral"[\s\S]*?"id": "contexto-estrutura"/)?.[0] ?? "";
-  for(let n=1;n<=13;n++) assert.match(reading, new RegExp("\\\\n\\\\n\\\\*\\\\*"+n+"\\\\\\.\\\\*\\\\*|\\\\*\\\\*"+n+"\\\\\\.\\\\*\\\\*"));
+  for(let n=1;n<=13;n++) assert.ok(reading.includes("**"+n+".**"), "missing verse "+n);
   assert.match(source,/paráfrase livre original/i);
 });
 test("1 Coríntios 5: exposição individual, perícopes e proteção pastoral", () => {
