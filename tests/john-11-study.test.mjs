@@ -1,0 +1,14 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const src=fs.readFileSync(path.join(root,"src/lib/content/john-11-study.ts"),"utf8");
+const match=src.match(/export const john11Study: StudyContent = ([\s\S]*);\s*$/);
+assert.ok(match);
+const study=JSON.parse(match[1]);
+const verses=JSON.parse(fs.readFileSync(path.join(root,"src/lib/bible-livre/joao.json"),"utf8")).chapters["11"];
+test("João 11: BLIVRE 57 verses read in order and explained",()=>{assert.equal(verses.length,57);const read=study.sections.find(s=>s.id==="leitura-integral");assert.ok(read);for(let n=1;n<=57;n++){const t=verses[n-1].replace(/\s*João\s*<\s*11\s*>\s*$/i,"").trim();assert.ok(read.body.includes("**"+n+"** "+t),"verse "+n);const s=study.sections.find(s=>s.id==="versiculo-"+n);assert.ok(s&&s.body.includes(t));assert.ok(s.scriptureRefs.includes("João 11:"+n));}});
+test("João 11: no duplicated IDs and pastoral safeguards",()=>{assert.ok(study.sections.length>=70);assert.equal(new Set(study.sections.map(s=>s.id)).size,study.sections.length);assert.ok(study.questions.length>=15);assert.ok(study.crossReferences.length>=12);assert.match(JSON.stringify(study),/luto/);assert.ok(study.sections.some(s=>s.title.includes("pregador")));});
+test("João 11: one catalog entry",()=>{const c=fs.readFileSync(path.join(root,"src/lib/content/curated-studies.ts"),"utf8");assert.equal((c.match(/"biblia-joao-cap-11"\s*:/g)||[]).length,1);assert.match(c,/import \{ john11Study \} from "\.\/john-11-study";/);});
