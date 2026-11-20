@@ -1,0 +1,15 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const chap=15, symbol="john15Study", expected=27;
+const src=fs.readFileSync(path.join(root,"src/lib/content/john-"+chap+"-study.ts"),"utf8");
+const match=src.match(new RegExp("export const "+symbol+": StudyContent = ([\\s\\S]*);\\s*$"));
+assert.ok(match);
+const study=JSON.parse(match[1]);
+const verses=JSON.parse(fs.readFileSync(path.join(root,"src/lib/bible-livre/joao.json"),"utf8")).chapters[String(chap)];
+test("João "+chap+": BLIVRE complete verse coverage",()=>{assert.equal(verses.length,expected);const s=study.sections.find(s=>s.id==="leitura-integral");assert.ok(s);for(let n=1;n<=expected;n++){const line=verses[n-1].replace(new RegExp("\\s*João\\s*<\\s*"+chap+"\\s*>\\s*$","i"),"").trim();assert.ok(s.body.includes("**"+n+"** "+line),"missing verse "+n);const p=study.sections.find(s=>s.id==="versiculo-"+n);assert.ok(p&&p.body.includes(line));assert.ok(p.scriptureRefs.includes("João "+chap+":"+n));}});
+test("João "+chap+": unique sections and biblical formation",()=>{assert.equal(new Set(study.sections.map(s=>s.id)).size,study.sections.length);assert.ok(study.questions.length>=15);assert.ok(study.crossReferences.length>=12);assert.ok(study.sections.some(s=>s.title.includes("pregador")));});
+test("João "+chap+": mapped exactly once",()=>{const c=fs.readFileSync(path.join(root,"src/lib/content/curated-studies.ts"),"utf8");assert.equal(c.split('"biblia-joao-cap-'+chap+'":').length-1,1);assert.ok(c.includes('import { '+symbol+' } from "./john-'+chap+'-study";'));});
