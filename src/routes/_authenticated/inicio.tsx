@@ -20,12 +20,21 @@ function Inicio() {
   const { user } = useAuth();
   const day = useBrazilDay();
   const period = useBrazilDevotionalPeriod();
-  const devotional = useQuery({
-    queryKey: ["devotional", day, period],
-    queryFn: () => loadDevotionalSafely(day, period),
+  // Mantém os dois devocionais diários carregados, inclusive após a virada das 20h.
+  // Apenas o destaque muda; nenhum conteúdo é descartado pela simplificação visual.
+  const morningDevotional = useQuery({
+    queryKey: ["devotional", day, "manha"],
+    queryFn: () => loadDevotionalSafely(day, "manha"),
     retry: false,
     staleTime: Infinity,
   });
+  const eveningDevotional = useQuery({
+    queryKey: ["devotional", day, "noite"],
+    queryFn: () => loadDevotionalSafely(day, "noite"),
+    retry: false,
+    staleTime: Infinity,
+  });
+  const devotional = period === "manha" ? morningDevotional : eveningDevotional;
   const metadata = user?.user_metadata ?? {};
   const rawName = String(metadata["full_name"] ?? metadata["name"] ?? user?.email?.split("@")[0] ?? "Amigo");
   const firstName = rawName.trim().split(/\s+/)[0] || "Amigo";
