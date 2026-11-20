@@ -17,7 +17,8 @@ test("Colossenses 4 — leitura, versículos e IDs", () => {
   const reading = study.sections.find(s => s.id === "leitura-integral");
   assert.ok(reading);
   assert.match(reading.body, /Paráfrase livre original/);
-  assert.deepEqual([...reading.body.matchAll(/\\*\\*(\\d+)\\.\\*\\*/g)].map(m => +m[1]), Array.from({length:count},(_,i)=>i+1));
+  const verseMarkers = reading.body.match(/\*\*\d+\.\*\*/g) ?? [];
+  assert.deepEqual(verseMarkers.map(m => Number(m.slice(2, -3))), Array.from({length:count},(_,i)=>i+1));
   assert.equal(new Set(study.sections.map(s => s.id)).size,study.sections.length);
   assert.equal(new Set(study.sections.map(s => s.title)).size,study.sections.length);
   for (let verse=1;verse<=count;verse++) {
