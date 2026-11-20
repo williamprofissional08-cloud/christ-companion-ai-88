@@ -1,0 +1,14 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const src=fs.readFileSync(path.join(root,"src/lib/content/john-10-study.ts"),"utf8");
+const match=src.match(/export const john10Study: StudyContent = ([\s\S]*);\s*$/);
+assert.ok(match);
+const study=JSON.parse(match[1]);
+const bible=JSON.parse(fs.readFileSync(path.join(root,"src/lib/bible-livre/joao.json"),"utf8")).chapters["10"];
+test("João 10: all 42 BLIVRE verses and exposition",()=>{assert.equal(bible.length,42);const read=study.sections.find(s=>s.id==="leitura-integral");assert.ok(read);for(let n=1;n<=42;n++){const line=bible[n-1].replace(/\s*João\s*<\s*10\s*>\s*$/i,"").trim();assert.ok(read.body.includes("**"+n+"** "+line),"verse missing "+n);const s=study.sections.find(s=>s.id==="versiculo-"+n);assert.ok(s);assert.ok(s.body.includes(line));assert.ok(s.scriptureRefs.includes("João 10:"+n));}});
+test("João 10: unique IDs, teaching and theological cautions",()=>{assert.ok(study.sections.length>=55);assert.equal(new Set(study.sections.map(s=>s.id)).size,study.sections.length);assert.ok(study.questions.length>=15);assert.ok(study.crossReferences.length>=12);assert.match(JSON.stringify(study),/prosperidade/i);assert.ok(study.sections.some(s=>s.title.includes("pregador")));});
+test("João 10: exactly one stable catalog key",()=>{const c=fs.readFileSync(path.join(root,"src/lib/content/curated-studies.ts"),"utf8");assert.equal((c.match(/"biblia-joao-cap-10"\s*:/g)||[]).length,1);assert.match(c,/import \{ john10Study \} from "\.\/john-10-study";/);});
