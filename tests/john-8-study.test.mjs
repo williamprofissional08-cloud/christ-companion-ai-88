@@ -1,0 +1,14 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+const root = path.resolve(import.meta.dirname, "..");
+const src = fs.readFileSync(path.join(root,"src/lib/content/john-8-study.ts"),"utf8");
+const match = src.match(/export const john8Study: StudyContent = ([\\s\\S]*);\\s*$/);
+assert.ok(match,"João 8 must export typed study");
+const study=JSON.parse(match[1]);
+const bible=JSON.parse(fs.readFileSync(path.join(root,"src/lib/bible-livre/joao.json"),"utf8"));
+const verses=bible.chapters["8"];
+test("João 8: covers 59 verses BLIVRE in correct order",()=>{assert.equal(verses.length,59);const s=study.sections.find(s=>s.id==="leitura-integral");assert.ok(s);for(let n=1;n<=59;n++){assert.ok(s.body.includes("**"+n+"** "),"missing numbered verse "+n);const one=study.sections.find(s=>s.id==="versiculo-"+n);assert.ok(one);assert.ok(one.scriptureRefs.includes("João 8:"+n));assert.ok(one.body.length>180);assert.ok(one.body.includes(verses[n-1].replace(/\\s*João\\s*<\\s*8\\s*>\\s*$/i,"").trim()));}});
+test("João 8: unique IDs, textual caveat, pastoral safety",()=>{const ids=study.sections.map(s=>s.id);assert.equal(ids.length,new Set(ids).size);assert.ok(study.sections.length>=70);assert.match(JSON.stringify(study),/manuscrit/i);assert.match(JSON.stringify(study),/antissemit/i);assert.ok(study.questions.length>=15);assert.ok(study.crossReferences.length>=12);assert.ok(study.sections.some(s=>s.title.includes("pregador")));});
+test("João 8: unique integration in curated catalog",()=>{const c=fs.readFileSync(path.join(root,"src/lib/content/curated-studies.ts"),"utf8");assert.equal((c.match(/["']biblia-joao-cap-8["']\\s*:/g)||[]).length,1);assert.match(c,/import\\s+\\{\\s*john8Study\\s*\\}\\s+from\\s+["']\\.\\/john-8-study["']/);});
