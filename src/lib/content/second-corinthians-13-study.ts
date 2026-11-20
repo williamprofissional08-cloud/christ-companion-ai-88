@@ -255,11 +255,11 @@ export const secondCorinthians13Study: StudyContent = {
       "id": "interpretacao-inferencia",
       "title": "Texto, interpretação e inferência",
       "kind": "interpretation",
-      "confidence": [
+      "confidence": "high",
+      "scriptureRefs": [
         "2 Coríntios 10:1-18",
         "2 Coríntios 13:1-14"
       ],
-      "scriptureRefs": "context",
       "body": "**Afirmação textual:** Paulo pretende visitar, pede autoexame, subordina a autoridade à edificação e deseja graça, amor e comunhão. **Interpretação plausível:** a prova exigida por alguns coríntios envolve contestação de sua legitimidade apostólica (13:3 em relação a 10–12). **Inferência não demonstrada:** identificar nominalmente todos os adversários ou afirmar que cada disciplina descrita se aplica sem mediação a qualquer igreja atual. A bênção de 13:14 é trinitária na forma, mas não resolve sozinha os debates históricos sobre formulações doutrinárias posteriores."
     },
     {
