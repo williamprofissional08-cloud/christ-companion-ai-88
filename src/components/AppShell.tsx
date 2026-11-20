@@ -225,7 +225,7 @@ export function AppShell({
           )}
         </header>
 
-        <main className={`mx-auto w-full max-w-5xl min-w-0 flex-1 ${homeHeader ? "px-2 pt-[calc(3.5rem+env(safe-area-inset-top)+0.5rem)] pb-[calc(4.5rem+env(safe-area-inset-bottom))] sm:px-3 lg:px-5 lg:pb-3" : "px-3 pt-4 pb-[calc(4.5rem+env(safe-area-inset-bottom))] sm:px-5 sm:pt-5 lg:px-8 lg:pb-10"}`}>{children}</main>
+        <main className={`mx-auto w-full max-w-screen-2xl min-w-0 flex-1 ${homeHeader ? "px-2 pt-[calc(3.5rem+env(safe-area-inset-top)+0.5rem)] pb-[calc(4.5rem+env(safe-area-inset-bottom))] sm:px-3 lg:px-5 lg:pb-3" : "px-3 pt-4 pb-[calc(4.5rem+env(safe-area-inset-bottom))] sm:px-5 sm:pt-5 lg:px-8 lg:pb-10"}`}>{children}</main>
 
         <nav aria-label="Navegação rápida" className="fixed inset-x-0 bottom-0 z-30 border-t border-border/70 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur dark:bg-background/95 lg:hidden">
           <div className="mx-auto grid max-w-2xl grid-cols-5">
