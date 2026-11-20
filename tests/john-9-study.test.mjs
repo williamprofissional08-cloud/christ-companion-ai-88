@@ -1,0 +1,14 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const src=fs.readFileSync(path.join(root,"src/lib/content/john-9-study.ts"),"utf8");
+const match=src.match(/export const john9Study: StudyContent = ([\s\S]*);\s*$/);
+assert.ok(match,"typed study export missing");
+const study=JSON.parse(match[1]);
+const bible=JSON.parse(fs.readFileSync(path.join(root,"src/lib/bible-livre/joao.json"),"utf8")).chapters["9"];
+test("João 9: BLIVRE 41 verses in sequence",()=>{assert.equal(bible.length,41);const reading=study.sections.find(s=>s.id==="leitura-biblica");assert.ok(reading);for(let n=1;n<=41;n++){const line=bible[n-1].replace(/\s*João\s*<\s*9\s*>\s*$/i,"").trim();assert.ok(reading.body.includes("**"+n+"** "+line),"reading missing verse "+n);const s=study.sections.find(s=>s.id==="versiculo-"+n);assert.ok(s);assert.ok(s.scriptureRefs.includes("João 9:"+n));assert.ok(s.body.includes(line));}});
+test("João 9: structured exposition and ethical safeguards",()=>{const ids=study.sections.map(s=>s.id);assert.equal(new Set(ids).size,ids.length);assert.ok(study.sections.length>=55);assert.ok(study.questions.length>=15);assert.ok(study.crossReferences.length>=12);assert.match(JSON.stringify(study),/deficiênc/);assert.ok(study.sections.some(s=>s.title.includes("pregador")));});
+test("João 9: catalog mapped once",()=>{const c=fs.readFileSync(path.join(root,"src/lib/content/curated-studies.ts"),"utf8");assert.equal((c.match(/"biblia-joao-cap-9"\s*:/g)||[]).length,1);assert.match(c,/import \{ john9Study \} from "\.\/john-9-study";/);});
