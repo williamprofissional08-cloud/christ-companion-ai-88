@@ -12,7 +12,7 @@ test("Tiago 4: leitura integral e exposições cobrem todos os versículos", () 
   const reading = study.match(/"id": "leitura"[\s\S]*?"id": "contexto"/)?.[0];
   assert.ok(reading, "leitura integral ausente");
   for (let verse = 1; verse <= verses.length; verse++) {
-    assert.match(reading, new RegExp(`\\\\n\\\\n${verse}\\\\. `), `paráfrase do versículo ${verse}`);
+    assert.ok(reading.includes(String.raw`\n\n${verse}. `), `paráfrase do versículo ${verse}`);
     assert.match(study, new RegExp(`"id": "versiculo-${verse}"`), `exposição do versículo ${verse}`);
   }
 });
