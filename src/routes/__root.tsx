@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Devocional diário, planos de oração, estudos bíblicos e um assistente com IA fundamentado na Bíblia.",
       },
       { name: "author", content: "Caminho Divino" },
-      { property: "og:title", content: "Caminho Divino" },
+      { property: "og:title", content: "Caminhando com Cristo" },
       {
         property: "og:description",
         content: "Cresça espiritualmente todos os dias com a Palavra de Deus.",
