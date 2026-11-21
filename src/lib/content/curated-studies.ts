@@ -1,3 +1,4 @@
+import { acts16Study } from "./acts-16-study";
 import { acts15Study } from "./acts-15-study";
 import { acts14Study } from "./acts-14-study";
 import { acts13Study } from "./acts-13-study";
@@ -2317,4 +2318,5 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-atos-cap-13": acts13Study,
   "biblia-atos-cap-14": acts14Study,
   "biblia-atos-cap-15": acts15Study,
+  "biblia-atos-cap-16": acts16Study,
 };
