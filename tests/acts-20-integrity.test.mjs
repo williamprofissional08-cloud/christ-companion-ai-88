@@ -23,5 +23,5 @@ test("Atos 20: perícopes, questões sensíveis e oficina",()=>{
 });
 test("Atos 20: registro único no catálogo",()=>{
  assert.equal((catalog.match(/"biblia-atos-cap-20"\s*:/g)||[]).length,1);
- assert.equal((catalog.match(/import \{ acts20Study \} from "\.\\/acts-20-study";/g)||[]).length,1);
+ assert.equal(catalog.split('import { acts20Study } from "./acts-20-study";').length-1,1);
 });
