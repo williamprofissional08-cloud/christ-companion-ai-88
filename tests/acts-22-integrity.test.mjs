@@ -17,6 +17,6 @@ test("Atos 22: IDs, perícopes e temas",()=>{
  for(const s of ["pericope-1-5","pericope-6-11","pericope-12-16","pericope-17-21","pericope-22-24","pericope-25-30","termos-interpretacoes","perguntas-respostas","oficina-pregador","oracao-final","antijudaísmo"])assert.ok(source.includes(s),s);
 });
 test("Atos 22: catálogo único",()=>{
- assert.equal((catalog.match(/"biblia-atos-cap-22"\\s*:/g)||[]).length,1);
+ assert.equal((catalog.match(/"biblia-atos-cap-22"\s*:/g)||[]).length,1);
  assert.equal(catalog.split('import { acts22Study } from "./acts-22-study";').length-1,1);
 });
