@@ -1,3 +1,535 @@
+import { acts22Study } from "./acts-22-study";
+import { acts21Study } from "./acts-21-study";
+import { acts19Study } from "./acts-19-study";
+import { acts20Study } from "./acts-20-study";
+import { acts18Study } from "./acts-18-study";
+import { acts17Study } from "./acts-17-study";
+import { acts16Study } from "./acts-16-study";
+import { acts15Study } from "./acts-15-study";
+import { acts14Study } from "./acts-14-study";
+import { acts13Study } from "./acts-13-study";
+import { acts12Study } from "./acts-12-study";
+import { acts11Study } from "./acts-11-study";
+import { acts10Study } from "./acts-10-study";
+import { acts9Study } from "./acts-9-study";
+import { acts8Study } from "./acts-8-study";
+import { acts7Study } from "./acts-7-study";
+import { acts6Study } from "./acts-6-study";
+import { acts5Study } from "./acts-5-study";
+import { acts4Study } from "./acts-4-study";
+import { acts3Study } from "./acts-3-study";
+import { acts2Study } from "./acts-2-study";
+import { acts1Study } from "./acts-1-study";
+import { john21Study } from "./john-21-study";
+import { john20Study } from "./john-20-study";
+import { john19Study } from "./john-19-study";
+import { john18Study } from "./john-18-study";
+import { john17Study } from "./john-17-study";
+import { john16Study } from "./john-16-study";
+import { john15Study } from "./john-15-study";
+import { john14Study } from "./john-14-study";
+import { john13Study } from "./john-13-study";
+import { john12Study } from "./john-12-study";
+import { john11Study } from "./john-11-study";
+import { john10Study } from "./john-10-study";
+import { john9Study } from "./john-9-study";
+import { john8Study } from "./john-8-study";
+import { firstCorinthians1Study } from "./first-corinthians-1-study";
+import { firstCorinthians2Study } from "./first-corinthians-2-study";
+import { firstCorinthians3Study } from "./first-corinthians-3-study";
+import { john7Study } from "./john-7-study";
+import { firstCorinthians4Study } from "./first-corinthians-4-study";
+import { firstCorinthians5Study } from "./first-corinthians-5-study";
+import { firstCorinthians6Study } from "./first-corinthians-6-study";
+import { firstCorinthians7Study } from "./first-corinthians-7-study";
+import { firstCorinthians8Study } from "./first-corinthians-8-study";
+import { firstCorinthians9Study } from "./first-corinthians-9-study";
+import { firstCorinthians10Study } from "./first-corinthians-10-study";
+import { firstCorinthians11Study } from "./first-corinthians-11-study";
+import { firstCorinthians12Study } from "./first-corinthians-12-study";
+import { firstCorinthians13Study } from "./first-corinthians-13-study";
+import { firstCorinthians14Study } from "./first-corinthians-14-study";
+import { firstCorinthians15Study } from "./first-corinthians-15-study";
+import { john2Study } from "./john-2-study";
+import { john3Study } from "./john-3-study";
+import { john4Study } from "./john-4-study";
+import { john5Study } from "./john-5-study";
+import { john6Study } from "./john-6-study";
+import { firstCorinthians16Study } from "./first-corinthians-16-study";
+import { philippians1Study } from "./philippians-1-study";
+import { philippians2Study } from "./philippians-2-study";
+import { philippians3Study } from "./philippians-3-study";
+import { philippians4Study } from "./philippians-4-study";
+import { secondCorinthians1Study } from "./second-corinthians-1-study";
+import { secondCorinthians2Study } from "./second-corinthians-2-study";
+import { secondCorinthians3Study } from "./second-corinthians-3-study";
+import { secondCorinthians4Study } from "./second-corinthians-4-study";
+import { secondCorinthians5Study } from "./second-corinthians-5-study";
+import { secondCorinthians6Study } from "./second-corinthians-6-study";
+import { secondCorinthians7Study } from "./second-corinthians-7-study";
+import { luke15Study } from "./luke-15-study";
+import { luke16Study } from "./luke-16-study";
+import { luke17Study } from "./luke-17-study";
+import { luke18Study } from "./luke-18-study";
+import { luke19Study } from "./luke-19-study";
+import { luke20Study } from "./luke-20-study";
+import { luke21Study } from "./luke-21-study";
+import { luke22Study } from "./luke-22-study";
+import { luke23Study } from "./luke-23-study";
+import { luke24Study } from "./luke-24-study";
+import { john1Study } from "./john-1-study";
+import { luke14Study } from "./luke-14-study";
+import { secondCorinthians8Study } from "./second-corinthians-8-study";
+import { secondCorinthians9Study } from "./second-corinthians-9-study";
+import { secondCorinthians10Study } from "./second-corinthians-10-study";
+import { secondCorinthians11Study } from "./second-corinthians-11-study";
+import { secondCorinthians12Study } from "./second-corinthians-12-study";
+import { secondCorinthians13Study } from "./second-corinthians-13-study";
+import { ephesians1Study } from "./ephesians-1-study";
+import { ephesians3Study } from "./ephesians-3-study";
+import { ephesians2Study } from "./ephesians-2-study";
+import { ephesians4Study } from "./ephesians-4-study";
+import { ephesians5Study } from "./ephesians-5-study";
+import { ephesians6Study } from "./ephesians-6-study";
+import { colossians1Study } from "./colossians-1-study";
+import { colossians2Study } from "./colossians-2-study";
+import { colossians4Study } from "./colossians-4-study";
+import { colossians3Study } from "./colossians-3-study";
+import { firstThessalonians1Study } from "./first-thessalonians-1-study";
+import { firstThessalonians2Study } from "./first-thessalonians-2-study";
+import { firstThessalonians3Study } from "./1-thessalonians-3-study";
+import { firstThessalonians4Study } from "./first-thessalonians-4-study";
+import { firstThessalonians5Study } from "./first-thessalonians-5-study";
+import { secondThessalonians1Study } from "./second-thessalonians-1-study";
+import { secondThessalonians2Study } from "./second-thessalonians-2-study";
+import { secondThessalonians3Study } from "./second-thessalonians-3-study";
+import { firstTimothy1Study } from "./1-timothy-1-study";
+import { luke1Study } from "./luke-1-study";
+import { luke2Study } from "./luke-2-study";
+import { luke3Study } from "./luke-3-study";
+import { luke4Study } from "./luke-4-study";
+import { luke5Study } from "./luke-5-study";
+import { luke6Study } from "./luke-6-study";
+import { luke7Study } from "./luke-7-study";
+import { luke8Study } from "./luke-8-study";
+import { luke9Study } from "./luke-9-study";
+import { luke10Study } from "./luke-10-study";
+import { luke11Study } from "./luke-11-study";
+import { luke12Study } from "./luke-12-study";
+import { luke13Study } from "./luke-13-study";
+import { firstTimothy2Study } from "./1-timothy-2-study";
+import { firstTimothy3Study } from "./1-timothy-3-study";
+import { firstTimothy4Study } from "./1-timothy-4-study";
+import { firstTimothy5Study } from "./1-timothy-5-study";
+import { firstTimothy6Study } from "./1-timothy-6-study";
+import { secondTimothy1Study } from "./2-timothy-1-study";
+import { secondTimothy2Study } from "./2-timothy-2-study";
+import { secondTimothy3Study } from "./2-timothy-3-study";
+import { secondTimothy4Study } from "./2-timothy-4-study";
+import { titus1Study } from "./titus-1-study";
+import { mark16Study } from "./mark-16-study";
+import { titus2Study } from "./titus-2-study";
+import { titus3Study } from "./titus-3-study";
+import { philemon1Study } from "./philemon-1-study";
+import { hebrews1Study } from "./hebrews-1-study";
+import { hebrews2Study } from "./hebrews-2-study";
+import { mark15Study } from "./mark-15-study";
+import { mark14Study } from "./mark-14-study";
+import { mark13Study } from "./mark-13-study";
+import { mark12Study } from "./mark-12-study";
+import { mark11Study } from "./mark-11-study";
+import { mark10Study } from "./mark-10-study";
+import { hebrews3Study } from "./hebrews-3-study";
+import { hebrews4Study } from "./hebrews-4-study";
+import { hebrews5Study } from "./hebrews-5-study";
+import { mark8Study } from "./mark-8-study";
+import { mark9Study } from "./mark-9-study";
+import { hebrews6Study } from "./hebrews-6-study";
+import { hebrews7Study } from "./hebrews-7-study";
+import { hebrews8Study } from "./hebrews-8-study";
+import { mark1Study } from "./mark-1-study";
+import { mark2Study } from "./mark-2-study";
+import { mark3Study } from "./mark-3-study";
+import { mark5Study } from "./mark-5-study";
+import { mark7Study } from "./mark-7-study";
+import { mark6Study } from "./mark-6-study";
+import { hebrews9Study } from "./hebrews-9-study";
+import { hebrews10Study } from "./hebrews-10-study";
+import { hebrews11Study } from "./hebrews-11-study";
+import { matthew26Study } from "./matthew-26-study";
+import { matthew27Study } from "./matthew-27-study";
+import { matthew28Study } from "./matthew-28-study";
+import { hebrews12Study } from "./hebrews-12-study";
+import { hebrews13Study } from "./hebrews-13-study";
+import { matthew25Study } from "./matthew-25-study";
+import { matthew24Study } from "./matthew-24-study";
+import { matthew23Study } from "./matthew-23-study";
+import { matthew22Study } from "./matthew-22-study";
+import { matthew21Study } from "./matthew-21-study";
+import { james1Study } from "./james-1-study";
+import { james2Study } from "./james-2-study";
+import { james3Study } from "./james-3-study";
+import { james4Study } from "./james-4-study";
+import { matthew19Study } from "./matthew-19-study";
+import { matthew20Study } from "./matthew-20-study";
+import { james5Study } from "./james-5-study";
+import { mateus16Study } from "./mateus-16-study";
+import { matthew18Study } from "./matthew-18-study";
+import { matthew17Study } from "./matthew-17-study";
+import { mateus15Study } from "./mateus-15-study";
+import { mateus14Study } from "./mateus-14-study";
+import { mateus13Study } from "./mateus-13-study";
+import { mateus12Study } from "./mateus-12-study";
+import { mateus11Study } from "./mateus-11-study";
+import { mateus10Study } from "./mateus-10-study";
+import { mateus9Study } from "./mateus-9-study";
+import { mateus8Study } from "./mateus-8-study";
+import { mateus7Study } from "./mateus-7-study";
+import { mateus6Study } from "./mateus-6-study";
+import { mateus5Study } from "./mateus-5-study";
+import { mateus4Study } from "./mateus-4-study";
+import { mateus3Study } from "./mateus-3-study";
+import { mateus2Study } from "./mateus-2-study";
+import { mateus1Study } from "./mateus-1-study";
+import { malaquias4Study } from "./malaquias-4-study";
+import { malaquias3Study } from "./malaquias-3-study";
+import { malaquias2Study } from "./malaquias-2-study";
+import { malaquias1Study } from "./malaquias-1-study";
+import { zacarias14Study } from "./zacarias-14-study";
+import { zacarias13Study } from "./zacarias-13-study";
+import { zacarias12Study } from "./zacarias-12-study";
+import { firstPeter2Study } from "./first-peter-2-study";
+import { firstPeter1Study } from "./first-peter-1-study";
+import { firstPeter3Study } from "./first-peter-3-study";
+import { firstPeter4Study } from "./first-peter-4-study";
+import { firstPeter5Study } from "./first-peter-5-study";
+import { secondPeter1Study } from "./second-peter-1-study";
+import { secondPeter2Study } from "./second-peter-2-study";
+import { secondPeter3Study } from "./second-peter-3-study";
+import { firstJohn1Study } from "./first-john-1-study";
+import { firstJohn2Study } from "./first-john-2-study";
+import { firstJohn3Study } from "./first-john-3-study";
+import { firstJohn4Study } from "./first-john-4-study";
+import { firstJohn5Study } from "./first-john-5-study";
+import { zacarias11Study } from "./zacarias-11-study";
+import { secondJohn1Study } from "./second-john-1-study";
+import { thirdJohn1Study } from "./third-john-1-study";
+import { zacarias10Study } from "./zacarias-10-study";
+import { zacarias9Study } from "./zacarias-9-study";
+import { jude1Study } from "./jude-1-study";
+import { revelation1Study } from "./revelation-1-study";
+import { zacarias8Study } from "./zacarias-8-study";
+import { zacarias7Study } from "./zacarias-7-study";
+import { zacarias6Study } from "./zacarias-6-study";
+import { revelation2Study } from "./revelation-2-study";
+import { revelation3Study } from "./revelation-3-study";
+import { zacarias5Study } from "./zacarias-5-study";
+import { zacarias4Study } from "./zacarias-4-study";
+import { zacarias3Study } from "./zacarias-3-study";
+import { zacarias2Study } from "./zacarias-2-study";
+import { revelation4Study } from "./revelation-4-study";
+import { revelation5Study } from "./revelation-5-study";
+import { revelation6Study } from "./revelation-6-study";
+import { zacarias1Study } from "./zacarias-1-study";
+import { ageu2Study } from "./ageu-2-study";
+import { revelation7Study } from "./revelation-7-study";
+import { ageu1Study } from "./ageu-1-study";
+import { revelation8Study } from "./revelation-8-study";
+import { sofonias3Study } from "./sofonias-3-study";
+import { revelation9Study } from "./revelation-9-study";
+import { sofonias2Study } from "./sofonias-2-study";
+import { sofonias1Study } from "./sofonias-1-study";
+import { revelation10Study } from "./revelation-10-study";
+import { habacuque3Study } from "./habacuque-3-study";
+import { revelation11Study } from "./revelation-11-study";
+import { revelation12Study } from "./revelation-12-study";
+import { habacuque2Study } from "./habacuque-2-study";
+import { revelation13Study } from "./revelation-13-study";
+import { habacuque1Study } from "./habacuque-1-study";
+import { naum3Study } from "./naum-3-study";
+import { naum2Study } from "./naum-2-study";
+import { revelation14Study } from "./revelation-14-study";
+import { revelation15Study } from "./revelation-15-study";
+import { revelation16Study } from "./revelation-16-study";
+import { naum1Study } from "./naum-1-study";
+import { revelation17Study } from "./revelation-17-study";
+import { miqueias7Study } from "./miqueias-7-study";
+import { revelation18Study } from "./revelation-18-study";
+import { miqueias6Study } from "./miqueias-6-study";
+import { revelation19Study } from "./revelation-19-study";
+import { miqueias5Study } from "./miqueias-5-study";
+import { revelation20Study } from "./revelation-20-study";
+import { revelation21Study } from "./revelation-21-study";
+import { miqueias4Study } from "./miqueias-4-study";
+import { miqueias3Study } from "./miqueias-3-study";
+import { revelation22Study } from "./revelation-22-study";
+import { miqueias2Study } from "./miqueias-2-study";
+import { miqueias1Study } from "./miqueias-1-study";
+import { jonas4Study } from "./jonas-4-study";
+import { jonas3Study } from "./jonas-3-study";
+import { jonas2Study } from "./jonas-2-study";
+import { jonas1Study } from "./jonas-1-study";
+import { obadias1Study } from "./obadias-1-study";
+import { amos9Study } from "./amos-9-study";
+import { amos8Study } from "./amos-8-study";
+import { amos7Study } from "./amos-7-study";
+import { amos6Study } from "./amos-6-study";
+import { amos5Study } from "./amos-5-study";
+import { amos4Study } from "./amos-4-study";
+import { amos3Study } from "./amos-3-study";
+import { amos2Study } from "./amos-2-study";
+import { amos1Study } from "./amos-1-study";
+import { joel3Study } from "./joel-3-study";
+import { joel2Study } from "./joel-2-study";
+import { joel1Study } from "./joel-1-study";
+import { hosea14Study } from "./hosea-14-study";
+import { hosea13Study } from "./hosea-13-study";
+import { hosea12Study } from "./hosea-12-study";
+import { hosea11Study } from "./hosea-11-study";
+import { hosea10Study } from "./hosea-10-study";
+import { hosea9Study } from "./hosea-9-study";
+import { hosea8Study } from "./hosea-8-study";
+import { hosea7Study } from "./hosea-7-study";
+import { hosea6Study } from "./hosea-6-study";
+import { hosea5Study } from "./hosea-5-study";
+import { hosea4Study } from "./hosea-4-study";
+import { hosea3Study } from "./hosea-3-study";
+import { hosea2Study } from "./hosea-2-study";
+import { hosea1Study } from "./hosea-1-study";
+import { daniel12Study } from "./daniel-12-study";
+import { daniel11Study } from "./daniel-11-study";
+import { daniel10Study } from "./daniel-10-study";
+import { daniel9Study } from "./daniel-9-study";
+import { daniel8Study } from "./daniel-8-study";
+import { daniel7Study } from "./daniel-7-study";
+import { daniel6Study } from "./daniel-6-study";
+import { daniel5Study } from "./daniel-5-study";
+import { daniel4Study } from "./daniel-4-study";
+import { daniel3Study } from "./daniel-3-study";
+import { daniel2Study } from "./daniel-2-study";
+import { daniel1Study } from "./daniel-1-study";
+import { ezekiel48Study } from "./ezekiel-48-study";
+import { ezekiel47Study } from "./ezekiel-47-study";
+import { ezekiel46Study } from "./ezekiel-46-study";
+import { ezekiel45Study } from "./ezekiel-45-study";
+import { ezekiel44Study } from "./ezekiel-44-study";
+import { ezekiel43Study } from "./ezekiel-43-study";
+import { ezekiel42Study } from "./ezekiel-42-study";
+import { ezekiel41Study } from "./ezekiel-41-study";
+import { ezekiel40Study } from "./ezekiel-40-study";
+import { ezekiel39Study } from "./ezekiel-39-study";
+import { ezekiel38Study } from "./ezekiel-38-study";
+import { ezekiel37Study } from "./ezekiel-37-study";
+import { ezekiel36Study } from "./ezekiel-36-study";
+import { ezekiel35Study } from "./ezekiel-35-study";
+import { ezekiel34Study } from "./ezekiel-34-study";
+import { ezekiel33Study } from "./ezekiel-33-study";
+import { ezekiel32Study } from "./ezekiel-32-study";
+import { ezekiel31Study } from "./ezekiel-31-study";
+import { ezekiel30Study } from "./ezekiel-30-study";
+import { ezekiel29Study } from "./ezekiel-29-study";
+import { ezekiel28Study } from "./ezekiel-28-study";
+import { ezekiel27Study } from "./ezekiel-27-study";
+import { ezekiel26Study } from "./ezekiel-26-study";
+import { ezekiel25Study } from "./ezekiel-25-study";
+import { ezekiel24Study } from "./ezekiel-24-study";
+import { ezekiel23Study } from "./ezekiel-23-study";
+import { ezekiel22Study } from "./ezekiel-22-study";
+import { ezekiel21Study } from "./ezekiel-21-study";
+import { ezekiel20Study } from "./ezekiel-20-study";
+import { ezekiel19Study } from "./ezekiel-19-study";
+import { ezekiel18Study } from "./ezekiel-18-study";
+import { ezekiel17Study } from "./ezekiel-17-study";
+import { ezekiel16Study } from "./ezekiel-16-study";
+import { ezekiel15Study } from "./ezekiel-15-study";
+import { ezekiel14Study } from "./ezekiel-14-study";
+import { ezekiel13Study } from "./ezekiel-13-study";
+import { ezekiel12Study } from "./ezekiel-12-study";
+import { ezekiel11Study } from "./ezekiel-11-study";
+import { ezekiel10Study } from "./ezekiel-10-study";
+import { ezekiel9Study } from "./ezekiel-9-study";
+import { ezekiel8Study } from "./ezekiel-8-study";
+import { ezekiel7Study } from "./ezekiel-7-study";
+import { ezekiel6Study } from "./ezekiel-6-study";
+import { ezekiel5Study } from "./ezekiel-5-study";
+import { ezekiel4Study } from "./ezekiel-4-study";
+import { ezekiel3Study } from "./ezekiel-3-study";
+import { ezekiel2Study } from "./ezekiel-2-study";
+import { ezekiel1Study } from "./ezekiel-1-study";
+import { lamentations5Study } from "./lamentations-5-study";
+import { lamentations4Study } from "./lamentations-4-study";
+import { lamentations3Study } from "./lamentations-3-study";
+import { lamentations2Study } from "./lamentations-2-study";
+import { lamentations1Study } from "./lamentations-1-study";
+import { jeremiah52Study } from "./jeremiah-52-study";
+import { jeremiah51Study } from "./jeremiah-51-study";
+import { jeremiah50Study } from "./jeremiah-50-study";
+import { jeremiah49Study } from "./jeremiah-49-study";
+import { jeremiah48Study } from "./jeremiah-48-study";
+import { jeremiah47Study } from "./jeremiah-47-study";
+import { jeremiah46Study } from "./jeremiah-46-study";
+import { jeremiah45Study } from "./jeremiah-45-study";
+import { jeremiah44Study } from "./jeremiah-44-study";
+import { jeremiah43Study } from "./jeremiah-43-study";
+import { jeremiah42Study } from "./jeremiah-42-study";
+import { jeremiah41Study } from "./jeremiah-41-study";
+import { jeremiah40Study } from "./jeremiah-40-study";
+import { jeremiah39Study } from "./jeremiah-39-study";
+import { jeremiah38Study } from "./jeremiah-38-study";
+import { jeremiah37Study } from "./jeremiah-37-study";
+import { jeremiah36Study } from "./jeremiah-36-study";
+import { jeremiah35Study } from "./jeremiah-35-study";
+import { jeremiah34Study } from "./jeremiah-34-study";
+import { jeremiah33Study } from "./jeremiah-33-study";
+import { jeremiah32Study } from "./jeremiah-32-study";
+import { jeremiah31Study } from "./jeremiah-31-study";
+import { jeremiah30Study } from "./jeremiah-30-study";
+import { jeremiah29Study } from "./jeremiah-29-study";
+import { jeremiah28Study } from "./jeremiah-28-study";
+import { jeremiah27Study } from "./jeremiah-27-study";
+import { jeremiah26Study } from "./jeremiah-26-study";
+import { jeremiah25Study } from "./jeremiah-25-study";
+import { jeremiah24Study } from "./jeremiah-24-study";
+import { jeremiah23Study } from "./jeremiah-23-study";
+import { jeremiah22Study } from "./jeremiah-22-study";
+import { jeremiah21Study } from "./jeremiah-21-study";
+import { jeremiah20Study } from "./jeremiah-20-study";
+import { jeremiah19Study } from "./jeremiah-19-study";
+import { jeremiah18Study } from "./jeremiah-18-study";
+import { jeremiah17Study } from "./jeremiah-17-study";
+import { jeremiah16Study } from "./jeremiah-16-study";
+import { jeremiah15Study } from "./jeremiah-15-study";
+import { jeremiah14Study } from "./jeremiah-14-study";
+import { jeremiah13Study } from "./jeremiah-13-study";
+import { jeremiah12Study } from "./jeremiah-12-study";
+import { jeremiah11Study } from "./jeremiah-11-study";
+import { jeremiah10Study } from "./jeremiah-10-study";
+import { jeremiah9Study } from "./jeremiah-9-study";
+import { jeremiah8Study } from "./jeremiah-8-study";
+import { jeremiah7Study } from "./jeremiah-7-study";
+import { jeremiah6Study } from "./jeremiah-6-study";
+import { jeremiah5Study } from "./jeremiah-5-study";
+import { jeremiah4Study } from "./jeremiah-4-study";
+import { jeremiah3Study } from "./jeremiah-3-study";
+import { jeremiah2Study } from "./jeremiah-2-study";
+import { jeremiah1Study } from "./jeremiah-1-study";
+import { isaiah66Study } from "./isaiah-66-study";
+import { isaiah65Study } from "./isaiah-65-study";
+import { isaiah64Study } from "./isaiah-64-study";
+import { isaiah63Study } from "./isaiah-63-study";
+import { isaiah62Study } from "./isaiah-62-study";
+import { isaiah61Study } from "./isaiah-61-study";
+import { isaiah60Study } from "./isaiah-60-study";
+import { isaiah59Study } from "./isaiah-59-study";
+import { isaiah58Study } from "./isaiah-58-study";
+import { isaiah57Study } from "./isaiah-57-study";
+import { isaiah56Study } from "./isaiah-56-study";
+import { isaiah55Study } from "./isaiah-55-study";
+import { isaiah54Study } from "./isaiah-54-study";
+import { isaiah53Study } from "./isaiah-53-study";
+import { isaiah52Study } from "./isaiah-52-study";
+import { isaiah51Study } from "./isaiah-51-study";
+import { isaiah50Study } from "./isaiah-50-study";
+import { isaiah49Study } from "./isaiah-49-study";
+import { isaiah48Study } from "./isaiah-48-study";
+import { isaiah47Study } from "./isaiah-47-study";
+import { isaiah46Study } from "./isaiah-46-study";
+import { isaiah45Study } from "./isaiah-45-study";
+import { isaiah44Study } from "./isaiah-44-study";
+import { isaiah43Study } from "./isaiah-43-study";
+import { isaiah42Study } from "./isaiah-42-study";
+import { isaiah41Study } from "./isaiah-41-study";
+import { isaiah40Study } from "./isaiah-40-study";
+import { isaiah39Study } from "./isaiah-39-study";
+import { isaiah38Study } from "./isaiah-38-study";
+import { isaiah37Study } from "./isaiah-37-study";
+import { isaiah36Study } from "./isaiah-36-study";
+import { isaiah35Study } from "./isaiah-35-study";
+import { isaiah34Study } from "./isaiah-34-study";
+import { isaiah33Study } from "./isaiah-33-study";
+import { isaiah32Study } from "./isaiah-32-study";
+import { isaiah31Study } from "./isaiah-31-study";
+import { isaiah30Study } from "./isaiah-30-study";
+import { isaiah29Study } from "./isaiah-29-study";
+import { isaiah28Study } from "./isaiah-28-study";
+import { isaiah18Study } from "./isaiah-18-study";
+import { isaiah19Study } from "./isaiah-19-study";
+import { isaiah20Study } from "./isaiah-20-study";
+import { isaiah21Study } from "./isaiah-21-study";
+import { isaiah22Study } from "./isaiah-22-study";
+import { isaiah23Study } from "./isaiah-23-study";
+import { isaiah24Study } from "./isaiah-24-study";
+import { isaiah25Study } from "./isaiah-25-study";
+import { isaiah26Study } from "./isaiah-26-study";
+import { isaiah27Study } from "./isaiah-27-study";
+import { isaiah8Study } from "./isaiah-8-study";
+import { isaiah9Study } from "./isaiah-9-study";
+import { isaiah10Study } from "./isaiah-10-study";
+import { isaiah11Study } from "./isaiah-11-study";
+import { isaiah12Study } from "./isaiah-12-study";
+import { isaiah13Study } from "./isaiah-13-study";
+import { isaiah14Study } from "./isaiah-14-study";
+import { isaiah15Study } from "./isaiah-15-study";
+import { isaiah16Study } from "./isaiah-16-study";
+import { isaiah17Study } from "./isaiah-17-study";
+import { isaiah7Study } from "./isaiah-7-study";
+import { isaiah6Study } from "./isaiah-6-study";
+import { isaiah5Study } from "./isaiah-5-study";
+import { isaiah4Study } from "./isaiah-4-study";
+import { isaiah3Study } from "./isaiah-3-study";
+import { isaiah2Study } from "./isaiah-2-study";
+import { isaiah1Study } from "./isaiah-1-study";
+import { songOfSolomon8Study } from "./song-of-solomon-8-study";
+import { songOfSolomon7Study } from "./song-of-solomon-7-study";
+import { songOfSolomon6Study } from "./song-of-solomon-6-study";
+import { songOfSolomon5Study } from "./song-of-solomon-5-study";
+import { songOfSolomon4Study } from "./song-of-solomon-4-study";
+import { songOfSolomon3Study } from "./song-of-solomon-3-study";
+import { songOfSolomon2Study } from "./song-of-solomon-2-study";
+import { songOfSolomon1Study } from "./song-of-solomon-1-study";
+import { ecclesiastes12Study } from "./ecclesiastes-12-study";
+import { ecclesiastes11Study } from "./ecclesiastes-11-study";
+import { ecclesiastes10Study } from "./ecclesiastes-10-study";
+import { ecclesiastes9Study } from "./ecclesiastes-9-study";
+import { ecclesiastes8Study } from "./ecclesiastes-8-study";
+import { ecclesiastes7Study } from "./ecclesiastes-7-study";
+import { proverbs28Study } from "./proverbs-28-study";
+import { proverbs29Study } from "./proverbs-29-study";
+import { proverbs30Study } from "./proverbs-30-study";
+import { proverbs31Study } from "./proverbs-31-study";
+import { ecclesiastes1Study } from "./ecclesiastes-1-study";
+import { ecclesiastes2Study } from "./ecclesiastes-2-study";
+import { ecclesiastes3Study } from "./ecclesiastes-3-study";
+import { ecclesiastes4Study } from "./ecclesiastes-4-study";
+import { ecclesiastes5Study } from "./ecclesiastes-5-study";
+import { ecclesiastes6Study } from "./ecclesiastes-6-study";
+import { proverbs27Study } from "./proverbs-27-study";
+import { proverbs26Study } from "./proverbs-26-study";
+import { proverbs25Study } from "./proverbs-25-study";
+import { proverbs24Study } from "./proverbs-24-study";
+import { proverbs23Study } from "./proverbs-23-study";
+import { proverbs22Study } from "./proverbs-22-study";
+import { proverbs21Study } from "./proverbs-21-study";
+import { proverbs20Study } from "./proverbs-20-study";
+import { proverbs19Study } from "./proverbs-19-study";
+import { proverbs18Study } from "./proverbs-18-study";
+import { proverbs10Study } from "./proverbs-10-study";
+import { proverbs9Study } from "./proverbs-9-study";
+import { proverbs11Study } from "./proverbs-11-study";
+import { proverbs12Study } from "./proverbs-12-study";
+import { proverbs13Study } from "./proverbs-13-study";
+import { proverbs14Study } from "./proverbs-14-study";
+import { proverbs15Study } from "./proverbs-15-study";
+import { proverbs16Study } from "./proverbs-16-study";
+import { proverbs17Study } from "./proverbs-17-study";
+import { proverbs8Study } from "./proverbs-8-study";
+import { proverbs7Study } from "./proverbs-7-study";
+import { proverbs6Study } from "./proverbs-6-study";
+import { proverbs5Study } from "./proverbs-5-study";
+import { proverbs4Study } from "./proverbs-4-study";
+import { proverbs3Study } from "./proverbs-3-study";
+import { proverbs1Study } from "./proverbs-1-study";
+import { proverbs2Study } from "./proverbs-2-study";
 import { mark4Study } from "./mark-4-study";
 import type { StudyContent } from "../types";
 import { psalm1Study } from "./psalm-1-study";
@@ -120,6 +652,36 @@ import { psalm117Study } from "./psalm-117-study";
 import { psalm118Study } from "./psalm-118-study";
 import { psalm119Study } from "./psalm-119-study";
 import { psalm120Study } from "./psalm-120-study";
+import { psalm121Study } from "./psalm-121-study";
+import { psalm122Study } from "./psalm-122-study";
+import { psalm123Study } from "./psalm-123-study";
+import { psalm124Study } from "./psalm-124-study";
+import { psalm125Study } from "./psalm-125-study";
+import { psalm126Study } from "./psalm-126-study";
+import { psalm127Study } from "./psalm-127-study";
+import { psalm128Study } from "./psalm-128-study";
+import { psalm129Study } from "./psalm-129-study";
+import { psalm130Study } from "./psalm-130-study";
+import { psalm131Study } from "./psalm-131-study";
+import { psalm132Study } from "./psalm-132-study";
+import { psalm133Study } from "./psalm-133-study";
+import { psalm134Study } from "./psalm-134-study";
+import { psalm135Study } from "./psalm-135-study";
+import { psalm136Study } from "./psalm-136-study";
+import { psalm137Study } from "./psalm-137-study";
+import { psalm138Study } from "./psalm-138-study";
+import { psalm139Study } from "./psalm-139-study";
+import { psalm140Study } from "./psalm-140-study";
+import { psalm141Study } from "./psalm-141-study";
+import { psalm142Study } from "./psalm-142-study";
+import { psalm143Study } from "./psalm-143-study";
+import { psalm144Study } from "./psalm-144-study";
+import { psalm145Study } from "./psalm-145-study";
+import { psalm146Study } from "./psalm-146-study";
+import { psalm147Study } from "./psalm-147-study";
+import { psalm148Study } from "./psalm-148-study";
+import { psalm149Study } from "./psalm-149-study";
+import { psalm150Study } from "./psalm-150-study";
 import { job31Study } from "./job-31-study";
 import { job32Study } from "./job-32-study";
 import { job33Study } from "./job-33-study";
@@ -608,7 +1170,329 @@ import { joshua24Study } from "./joshua-24-study";
  * Rótulos: [TEXTO BÍBLICO] [CONTEXTO] [INFERÊNCIA] [INTERPRETAÇÃO] [ESPECULAÇÃO].
  */
 export const CURATED_STUDIES: Record<string, StudyContent> = {
+  "biblia-2-corintios-cap-10": secondCorinthians10Study,
+  "biblia-2-corintios-cap-8": secondCorinthians8Study,
+  "biblia-2-corintios-cap-9": secondCorinthians9Study,
+  "biblia-2-corintios-cap-12": secondCorinthians12Study,
+  "biblia-2-corintios-cap-13": secondCorinthians13Study,
+  "biblia-marcos-cap-10": mark10Study,
+  "biblia-marcos-cap-11": mark11Study,
+  "biblia-marcos-cap-12": mark12Study,
+  "biblia-marcos-cap-16": mark16Study,
+  "biblia-marcos-cap-15": mark15Study,
+  "biblia-marcos-cap-14": mark14Study,
+  "biblia-marcos-cap-13": mark13Study,
+  "biblia-proverbios-cap-28": proverbs28Study,
+  "biblia-proverbios-cap-29": proverbs29Study,
+  "biblia-proverbios-cap-30": proverbs30Study,
+  "biblia-proverbios-cap-31": proverbs31Study,
+  "biblia-eclesiastes-cap-1": ecclesiastes1Study,
+  "biblia-eclesiastes-cap-2": ecclesiastes2Study,
+  "biblia-eclesiastes-cap-3": ecclesiastes3Study,
+  "biblia-eclesiastes-cap-4": ecclesiastes4Study,
+  "biblia-eclesiastes-cap-5": ecclesiastes5Study,
+  "biblia-eclesiastes-cap-6": ecclesiastes6Study,
+  "biblia-eclesiastes-cap-7": ecclesiastes7Study,
+  "biblia-eclesiastes-cap-8": ecclesiastes8Study,
+  "biblia-eclesiastes-cap-9": ecclesiastes9Study,
+  "biblia-eclesiastes-cap-10": ecclesiastes10Study,
+  "biblia-eclesiastes-cap-11": ecclesiastes11Study,
+  "biblia-eclesiastes-cap-12": ecclesiastes12Study,
+  "biblia-cantico-dos-canticos-cap-1": songOfSolomon1Study,
+  "biblia-cantico-dos-canticos-cap-2": songOfSolomon2Study,
+  "biblia-cantico-dos-canticos-cap-3": songOfSolomon3Study,
+  "biblia-cantico-dos-canticos-cap-4": songOfSolomon4Study,
+  "biblia-cantico-dos-canticos-cap-5": songOfSolomon5Study,
+  "biblia-cantico-dos-canticos-cap-6": songOfSolomon6Study,
+  "biblia-cantico-dos-canticos-cap-7": songOfSolomon7Study,
+  "biblia-cantico-dos-canticos-cap-8": songOfSolomon8Study,
+  "biblia-isaias-cap-1": isaiah1Study,
+  "biblia-isaias-cap-2": isaiah2Study,
+  "biblia-isaias-cap-3": isaiah3Study,
+  "biblia-isaias-cap-4": isaiah4Study,
+  "biblia-isaias-cap-5": isaiah5Study,
+  "biblia-isaias-cap-6": isaiah6Study,
+  "biblia-isaias-cap-7": isaiah7Study,
+  "biblia-isaias-cap-8": isaiah8Study,
+  "biblia-isaias-cap-9": isaiah9Study,
+  "biblia-isaias-cap-10": isaiah10Study,
+  "biblia-isaias-cap-11": isaiah11Study,
+  "biblia-isaias-cap-12": isaiah12Study,
+  "biblia-isaias-cap-13": isaiah13Study,
+  "biblia-isaias-cap-14": isaiah14Study,
+  "biblia-isaias-cap-15": isaiah15Study,
+  "biblia-isaias-cap-16": isaiah16Study,
+  "biblia-isaias-cap-17": isaiah17Study,
+  "biblia-isaias-cap-18": isaiah18Study,
+  "biblia-isaias-cap-19": isaiah19Study,
+  "biblia-isaias-cap-20": isaiah20Study,
+  "biblia-isaias-cap-21": isaiah21Study,
+  "biblia-isaias-cap-22": isaiah22Study,
+  "biblia-isaias-cap-23": isaiah23Study,
+  "biblia-isaias-cap-24": isaiah24Study,
+  "biblia-isaias-cap-25": isaiah25Study,
+  "biblia-isaias-cap-26": isaiah26Study,
+  "biblia-isaias-cap-27": isaiah27Study,
+  "biblia-isaias-cap-28": isaiah28Study,
+  "biblia-isaias-cap-29": isaiah29Study,
+  "biblia-isaias-cap-30": isaiah30Study,
+  "biblia-isaias-cap-31": isaiah31Study,
+  "biblia-isaias-cap-32": isaiah32Study,
+  "biblia-isaias-cap-33": isaiah33Study,
+  "biblia-isaias-cap-34": isaiah34Study,
+  "biblia-isaias-cap-35": isaiah35Study,
+  "biblia-isaias-cap-36": isaiah36Study,
+  "biblia-isaias-cap-37": isaiah37Study,
+  "biblia-isaias-cap-38": isaiah38Study,
+  "biblia-isaias-cap-39": isaiah39Study,
+  "biblia-isaias-cap-40": isaiah40Study,
+  "biblia-isaias-cap-41": isaiah41Study,
+  "biblia-isaias-cap-42": isaiah42Study,
+  "biblia-isaias-cap-43": isaiah43Study,
+  "biblia-isaias-cap-44": isaiah44Study,
+  "biblia-isaias-cap-45": isaiah45Study,
+  "biblia-isaias-cap-46": isaiah46Study,
+  "biblia-isaias-cap-47": isaiah47Study,
+  "biblia-isaias-cap-48": isaiah48Study,
+  "biblia-isaias-cap-49": isaiah49Study,
+  "biblia-isaias-cap-50": isaiah50Study,
+  "biblia-isaias-cap-51": isaiah51Study,
+  "biblia-isaias-cap-52": isaiah52Study,
+  "biblia-isaias-cap-53": isaiah53Study,
+  "biblia-isaias-cap-54": isaiah54Study,
+  "biblia-isaias-cap-55": isaiah55Study,
+  "biblia-isaias-cap-56": isaiah56Study,
+  "biblia-isaias-cap-57": isaiah57Study,
+  "biblia-isaias-cap-58": isaiah58Study,
+  "biblia-isaias-cap-59": isaiah59Study,
+  "biblia-isaias-cap-60": isaiah60Study,
+  "biblia-isaias-cap-61": isaiah61Study,
+  "biblia-isaias-cap-62": isaiah62Study,
+  "biblia-isaias-cap-63": isaiah63Study,
+  "biblia-isaias-cap-64": isaiah64Study,
+  "biblia-isaias-cap-65": isaiah65Study,
+  "biblia-isaias-cap-66": isaiah66Study,
+  "biblia-jeremias-cap-1": jeremiah1Study,
+  "biblia-jeremias-cap-2": jeremiah2Study,
+  "biblia-jeremias-cap-3": jeremiah3Study,
+  "biblia-jeremias-cap-4": jeremiah4Study,
+  "biblia-jeremias-cap-5": jeremiah5Study,
+  "biblia-jeremias-cap-6": jeremiah6Study,
+  "biblia-jeremias-cap-7": jeremiah7Study,
+  "biblia-jeremias-cap-8": jeremiah8Study,
+  "biblia-jeremias-cap-9": jeremiah9Study,
+  "biblia-jeremias-cap-10": jeremiah10Study,
+  "biblia-jeremias-cap-11": jeremiah11Study,
+  "biblia-jeremias-cap-12": jeremiah12Study,
+  "biblia-jeremias-cap-13": jeremiah13Study,
+  "biblia-jeremias-cap-14": jeremiah14Study,
+  "biblia-jeremias-cap-15": jeremiah15Study,
+  "biblia-jeremias-cap-16": jeremiah16Study,
+  "biblia-jeremias-cap-17": jeremiah17Study,
+  "biblia-jeremias-cap-18": jeremiah18Study,
+  "biblia-jeremias-cap-19": jeremiah19Study,
+  "biblia-jeremias-cap-20": jeremiah20Study,
+  "biblia-jeremias-cap-21": jeremiah21Study,
+  "biblia-jeremias-cap-22": jeremiah22Study,
+  "biblia-jeremias-cap-23": jeremiah23Study,
+  "biblia-jeremias-cap-24": jeremiah24Study,
+  "biblia-jeremias-cap-25": jeremiah25Study,
+  "biblia-jeremias-cap-26": jeremiah26Study,
+  "biblia-jeremias-cap-27": jeremiah27Study,
+  "biblia-jeremias-cap-28": jeremiah28Study,
+  "biblia-jeremias-cap-29": jeremiah29Study,
+  "biblia-jeremias-cap-30": jeremiah30Study,
+  "biblia-jeremias-cap-31": jeremiah31Study,
+  "biblia-jeremias-cap-32": jeremiah32Study,
+  "biblia-jeremias-cap-33": jeremiah33Study,
+  "biblia-jeremias-cap-34": jeremiah34Study,
+  "biblia-jeremias-cap-35": jeremiah35Study,
+  "biblia-jeremias-cap-36": jeremiah36Study,
+  "biblia-jeremias-cap-37": jeremiah37Study,
+  "biblia-jeremias-cap-38": jeremiah38Study,
+  "biblia-jeremias-cap-39": jeremiah39Study,
+  "biblia-jeremias-cap-40": jeremiah40Study,
+  "biblia-jeremias-cap-41": jeremiah41Study,
+  "biblia-jeremias-cap-42": jeremiah42Study,
+  "biblia-jeremias-cap-43": jeremiah43Study,
+  "biblia-jeremias-cap-44": jeremiah44Study,
+  "biblia-jeremias-cap-45": jeremiah45Study,
+  "biblia-jeremias-cap-46": jeremiah46Study,
+  "biblia-jeremias-cap-47": jeremiah47Study,
+  "biblia-jeremias-cap-48": jeremiah48Study,
+  "biblia-jeremias-cap-49": jeremiah49Study,
+  "biblia-jeremias-cap-50": jeremiah50Study,
+  "biblia-jeremias-cap-51": jeremiah51Study,
+  "biblia-jeremias-cap-52": jeremiah52Study,
+  "biblia-lamentacoes-cap-1": lamentations1Study,
+  "biblia-lamentacoes-cap-2": lamentations2Study,
+  "biblia-lamentacoes-cap-3": lamentations3Study,
+  "biblia-lamentacoes-cap-4": lamentations4Study,
+  "biblia-lamentacoes-cap-5": lamentations5Study,
+  "biblia-ezequiel-cap-1": ezekiel1Study,
+  "biblia-ezequiel-cap-2": ezekiel2Study,
+  "biblia-ezequiel-cap-3": ezekiel3Study,
+  "biblia-ezequiel-cap-4": ezekiel4Study,
+  "biblia-ezequiel-cap-5": ezekiel5Study,
+  "biblia-ezequiel-cap-6": ezekiel6Study,
+  "biblia-ezequiel-cap-7": ezekiel7Study,
+  "biblia-ezequiel-cap-8": ezekiel8Study,
+  "biblia-ezequiel-cap-9": ezekiel9Study,
+  "biblia-ezequiel-cap-10": ezekiel10Study,
+  "biblia-ezequiel-cap-11": ezekiel11Study,
+  "biblia-ezequiel-cap-12": ezekiel12Study,
+  "biblia-ezequiel-cap-13": ezekiel13Study,
+  "biblia-ezequiel-cap-14": ezekiel14Study,
+  "biblia-ezequiel-cap-15": ezekiel15Study,
+  "biblia-ezequiel-cap-16": ezekiel16Study,
+  "biblia-ezequiel-cap-17": ezekiel17Study,
+  "biblia-ezequiel-cap-18": ezekiel18Study,
+  "biblia-ezequiel-cap-19": ezekiel19Study,
+  "biblia-ezequiel-cap-20": ezekiel20Study,
+  "biblia-ezequiel-cap-21": ezekiel21Study,
+  "biblia-ezequiel-cap-22": ezekiel22Study,
+  "biblia-ezequiel-cap-23": ezekiel23Study,
+  "biblia-ezequiel-cap-24": ezekiel24Study,
+  "biblia-ezequiel-cap-25": ezekiel25Study,
+  "biblia-ezequiel-cap-26": ezekiel26Study,
+  "biblia-ezequiel-cap-27": ezekiel27Study,
+  "biblia-ezequiel-cap-28": ezekiel28Study,
+  "biblia-ezequiel-cap-29": ezekiel29Study,
+  "biblia-ezequiel-cap-30": ezekiel30Study,
+  "biblia-ezequiel-cap-31": ezekiel31Study,
+  "biblia-ezequiel-cap-32": ezekiel32Study,
+  "biblia-ezequiel-cap-33": ezekiel33Study,
+  "biblia-ezequiel-cap-34": ezekiel34Study,
+  "biblia-ezequiel-cap-35": ezekiel35Study,
+  "biblia-ezequiel-cap-36": ezekiel36Study,
+  "biblia-ezequiel-cap-37": ezekiel37Study,
+  "biblia-ezequiel-cap-38": ezekiel38Study,
+  "biblia-ezequiel-cap-39": ezekiel39Study,
+  "biblia-ezequiel-cap-40": ezekiel40Study,
+  "biblia-ezequiel-cap-41": ezekiel41Study,
+  "biblia-ezequiel-cap-42": ezekiel42Study,
+  "biblia-ezequiel-cap-43": ezekiel43Study,
+  "biblia-ezequiel-cap-44": ezekiel44Study,
+  "biblia-ezequiel-cap-45": ezekiel45Study,
+  "biblia-ezequiel-cap-46": ezekiel46Study,
+  "biblia-ezequiel-cap-47": ezekiel47Study,
+  "biblia-ezequiel-cap-48": ezekiel48Study,
+  "biblia-daniel-cap-1": daniel1Study,
+  "biblia-daniel-cap-2": daniel2Study,
+  "biblia-daniel-cap-3": daniel3Study,
+  "biblia-daniel-cap-4": daniel4Study,
+  "biblia-daniel-cap-5": daniel5Study,
+  "biblia-daniel-cap-6": daniel6Study,
+  "biblia-daniel-cap-7": daniel7Study,
+  "biblia-daniel-cap-8": daniel8Study,
+  "biblia-daniel-cap-9": daniel9Study,
+  "biblia-daniel-cap-10": daniel10Study,
+  "biblia-daniel-cap-11": daniel11Study,
+  "biblia-daniel-cap-12": daniel12Study,
+  "biblia-oseias-cap-1": hosea1Study,
+  "biblia-oseias-cap-2": hosea2Study,
+  "biblia-oseias-cap-3": hosea3Study,
+  "biblia-oseias-cap-4": hosea4Study,
+  "biblia-oseias-cap-5": hosea5Study,
+  "biblia-oseias-cap-6": hosea6Study,
+  "biblia-oseias-cap-7": hosea7Study,
+  "biblia-oseias-cap-8": hosea8Study,
+  "biblia-oseias-cap-9": hosea9Study,
+  "biblia-oseias-cap-10": hosea10Study,
+  "biblia-oseias-cap-11": hosea11Study,
+  "biblia-oseias-cap-12": hosea12Study,
+  "biblia-oseias-cap-13": hosea13Study,
+  "biblia-oseias-cap-14": hosea14Study,
+  "biblia-joel-cap-1": joel1Study,
+  "biblia-joel-cap-2": joel2Study,
+  "biblia-joel-cap-3": joel3Study,
+  "biblia-amos-cap-1": amos1Study,
+  "biblia-amos-cap-2": amos2Study,
+  "biblia-amos-cap-3": amos3Study,
+  "biblia-amos-cap-4": amos4Study,
+  "biblia-amos-cap-5": amos5Study,
+  "biblia-amos-cap-6": amos6Study,
+  "biblia-amos-cap-7": amos7Study,
+  "biblia-amos-cap-8": amos8Study,
+  "biblia-amos-cap-9": amos9Study,
+  "biblia-obadias-cap-1": obadias1Study,
+  "biblia-jonas-cap-1": jonas1Study,
+  "biblia-jonas-cap-4": jonas4Study,
+  "biblia-miqueias-cap-1": miqueias1Study,
+  "biblia-miqueias-cap-2": miqueias2Study,
+  "biblia-miqueias-cap-3": miqueias3Study,
+  "biblia-miqueias-cap-4": miqueias4Study,
+  "biblia-miqueias-cap-5": miqueias5Study,
+  "biblia-miqueias-cap-6": miqueias6Study,
+  "biblia-miqueias-cap-7": miqueias7Study,
+  "biblia-naum-cap-1": naum1Study,
+  "biblia-naum-cap-2": naum2Study,
+  "biblia-naum-cap-3": naum3Study,
+  "biblia-habacuque-cap-1": habacuque1Study,
+  "biblia-habacuque-cap-2": habacuque2Study,
+  "biblia-habacuque-cap-3": habacuque3Study,
+  "biblia-sofonias-cap-1": sofonias1Study,
+  "biblia-sofonias-cap-2": sofonias2Study,
+  "biblia-sofonias-cap-3": sofonias3Study,
+  "biblia-ageu-cap-1": ageu1Study,
+  "biblia-ageu-cap-2": ageu2Study,
+  "biblia-zacarias-cap-1": zacarias1Study,
+  "biblia-zacarias-cap-2": zacarias2Study,
+  "biblia-zacarias-cap-3": zacarias3Study,
+  "biblia-zacarias-cap-4": zacarias4Study,
+  "biblia-zacarias-cap-5": zacarias5Study,
+  "biblia-zacarias-cap-6": zacarias6Study,
+  "biblia-zacarias-cap-7": zacarias7Study,
+  "biblia-zacarias-cap-8": zacarias8Study,
+  "biblia-zacarias-cap-9": zacarias9Study,
+  "biblia-zacarias-cap-10": zacarias10Study,
+  "biblia-zacarias-cap-11": zacarias11Study,
+  "biblia-zacarias-cap-12": zacarias12Study,
+  "biblia-zacarias-cap-13": zacarias13Study,
+  "biblia-zacarias-cap-14": zacarias14Study,
+  "biblia-malaquias-cap-1": malaquias1Study,
+  "biblia-malaquias-cap-2": malaquias2Study,
+  "biblia-malaquias-cap-3": malaquias3Study,
+  "biblia-malaquias-cap-4": malaquias4Study,
+  "biblia-mateus-cap-1": mateus1Study,
+  "biblia-mateus-cap-2": mateus2Study,
+  "biblia-mateus-cap-3": mateus3Study,
+  "biblia-mateus-cap-4": mateus4Study,
+  "biblia-mateus-cap-5": mateus5Study,
+  "biblia-mateus-cap-6": mateus6Study,
+  "biblia-mateus-cap-7": mateus7Study,
+  "biblia-mateus-cap-8": mateus8Study,
+  "biblia-mateus-cap-9": mateus9Study,
+  "biblia-mateus-cap-10": mateus10Study,
+  "biblia-mateus-cap-11": mateus11Study,
+  "biblia-mateus-cap-12": mateus12Study,
+  "biblia-mateus-cap-13": mateus13Study,
+  "biblia-mateus-cap-14": mateus14Study,
+  "biblia-mateus-cap-15": mateus15Study,
+  "biblia-mateus-cap-16": mateus16Study,
+  "biblia-mateus-cap-17": matthew17Study,
+  "biblia-mateus-cap-18": matthew18Study,
+  "biblia-mateus-cap-19": matthew19Study,
+  "biblia-mateus-cap-20": matthew20Study,
+  "biblia-mateus-cap-21": matthew21Study,
+  "biblia-mateus-cap-22": matthew22Study,
+  "biblia-mateus-cap-23": matthew23Study,
+  "biblia-mateus-cap-24": matthew24Study,
+  "biblia-mateus-cap-25": matthew25Study,
+  "biblia-mateus-cap-26": matthew26Study,
+  "biblia-mateus-cap-27": matthew27Study,
+  "biblia-mateus-cap-28": matthew28Study,
+  "biblia-jonas-cap-3": jonas3Study,
+  "biblia-jonas-cap-2": jonas2Study,
+  "biblia-marcos-cap-1": mark1Study,
+  "biblia-marcos-cap-2": mark2Study,
+  "biblia-marcos-cap-3": mark3Study,
   "biblia-marcos-cap-4": mark4Study,
+  "biblia-marcos-cap-5": mark5Study,
+  "biblia-marcos-cap-6": mark6Study,
+  "biblia-marcos-cap-7": mark7Study,
+  "biblia-marcos-cap-8": mark8Study,
+  "biblia-marcos-cap-9": mark9Study,
   "biblia-rute-cap-1": ruth1Study,
   "biblia-rute-cap-2": ruth2Study,
   "biblia-rute-cap-3": ruth3Study,
@@ -1207,4 +2091,244 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-salmos-cap-118": psalm118Study,
   "biblia-salmos-cap-119": psalm119Study,
   "biblia-salmos-cap-120": psalm120Study,
+  "biblia-salmos-cap-121": psalm121Study,
+  "biblia-salmos-cap-122": psalm122Study,
+  "biblia-salmos-cap-123": psalm123Study,
+  "biblia-salmos-cap-124": psalm124Study,
+  "biblia-salmos-cap-125": psalm125Study,
+  "biblia-salmos-cap-126": psalm126Study,
+  "biblia-salmos-cap-127": psalm127Study,
+  "biblia-salmos-cap-128": psalm128Study,
+  "biblia-salmos-cap-129": psalm129Study,
+  "biblia-salmos-cap-130": psalm130Study,
+  "biblia-salmos-cap-131": psalm131Study,
+  "biblia-salmos-cap-132": psalm132Study,
+  "biblia-salmos-cap-133": psalm133Study,
+  "biblia-salmos-cap-134": psalm134Study,
+  "biblia-salmos-cap-135": psalm135Study,
+  "biblia-salmos-cap-136": psalm136Study,
+  "biblia-salmos-cap-137": psalm137Study,
+  "biblia-salmos-cap-138": psalm138Study,
+  "biblia-salmos-cap-139": psalm139Study,
+  "biblia-salmos-cap-140": psalm140Study,
+  "biblia-salmos-cap-141": psalm141Study,
+  "biblia-salmos-cap-142": psalm142Study,
+  "biblia-salmos-cap-143": psalm143Study,
+  "biblia-salmos-cap-144": psalm144Study,
+  "biblia-salmos-cap-145": psalm145Study,
+  "biblia-salmos-cap-146": psalm146Study,
+  "biblia-salmos-cap-147": psalm147Study,
+  "biblia-salmos-cap-148": psalm148Study,
+  "biblia-salmos-cap-149": psalm149Study,
+  "biblia-salmos-cap-150": psalm150Study,
+  "biblia-proverbios-cap-1": proverbs1Study,
+  "biblia-proverbios-cap-2": proverbs2Study,
+  "biblia-proverbios-cap-3": proverbs3Study,
+  "biblia-proverbios-cap-4": proverbs4Study,
+  "biblia-proverbios-cap-5": proverbs5Study,
+  "biblia-proverbios-cap-6": proverbs6Study,
+  "biblia-proverbios-cap-7": proverbs7Study,
+  "biblia-proverbios-cap-8": proverbs8Study,
+  "biblia-proverbios-cap-9": proverbs9Study,
+  "biblia-proverbios-cap-11": proverbs11Study,
+  "biblia-proverbios-cap-12": proverbs12Study,
+  "biblia-proverbios-cap-13": proverbs13Study,
+  "biblia-proverbios-cap-14": proverbs14Study,
+  "biblia-proverbios-cap-15": proverbs15Study,
+  "biblia-proverbios-cap-16": proverbs16Study,
+  "biblia-proverbios-cap-17": proverbs17Study,
+  "biblia-proverbios-cap-18": proverbs18Study,
+  "biblia-proverbios-cap-19": proverbs19Study,
+  "biblia-proverbios-cap-20": proverbs20Study,
+  "biblia-proverbios-cap-21": proverbs21Study,
+  "biblia-proverbios-cap-22": proverbs22Study,
+  "biblia-proverbios-cap-23": proverbs23Study,
+  "biblia-proverbios-cap-24": proverbs24Study,
+  "biblia-proverbios-cap-25": proverbs25Study,
+  "biblia-proverbios-cap-26": proverbs26Study,
+  "biblia-proverbios-cap-27": proverbs27Study,
+  "biblia-proverbios-cap-10": proverbs10Study,
+  "biblia-apocalipse-cap-22": revelation22Study,
+  "biblia-apocalipse-cap-21": revelation21Study,
+  "biblia-apocalipse-cap-20": revelation20Study,
+  "biblia-apocalipse-cap-19": revelation19Study,
+  "biblia-apocalipse-cap-18": revelation18Study,
+  "biblia-apocalipse-cap-17": revelation17Study,
+  "biblia-apocalipse-cap-16": revelation16Study,
+  "biblia-apocalipse-cap-15": revelation15Study,
+  "biblia-apocalipse-cap-14": revelation14Study,
+  "biblia-apocalipse-cap-13": revelation13Study,
+  "biblia-apocalipse-cap-12": revelation12Study,
+  "biblia-apocalipse-cap-11": revelation11Study,
+  "biblia-apocalipse-cap-10": revelation10Study,
+  "biblia-apocalipse-cap-9": revelation9Study,
+  "biblia-apocalipse-cap-8": revelation8Study,
+  "biblia-apocalipse-cap-7": revelation7Study,
+  "biblia-apocalipse-cap-6": revelation6Study,
+  "biblia-apocalipse-cap-5": revelation5Study,
+  "biblia-apocalipse-cap-4": revelation4Study,
+  "biblia-apocalipse-cap-3": revelation3Study,
+  "biblia-apocalipse-cap-2": revelation2Study,
+  "biblia-apocalipse-cap-1": revelation1Study,
+  "biblia-judas-cap-1": jude1Study,
+  "biblia-3-joao-cap-1": thirdJohn1Study,
+  "biblia-2-joao-cap-1": secondJohn1Study,
+  "biblia-1-joao-cap-5": firstJohn5Study,
+  "biblia-1-joao-cap-4": firstJohn4Study,
+  "biblia-1-joao-cap-3": firstJohn3Study,
+  "biblia-1-joao-cap-2": firstJohn2Study,
+  "biblia-1-joao-cap-1": firstJohn1Study,
+  "biblia-2-pedro-cap-3": secondPeter3Study,
+  "biblia-2-pedro-cap-2": secondPeter2Study,
+  "biblia-2-pedro-cap-1": secondPeter1Study,
+  "biblia-1-pedro-cap-5": firstPeter5Study,
+  "biblia-1-pedro-cap-4": firstPeter4Study,
+  "biblia-1-pedro-cap-3": firstPeter3Study,
+  "biblia-1-pedro-cap-1": firstPeter1Study,
+  "biblia-1-pedro-cap-2": firstPeter2Study,
+  "biblia-tiago-cap-5": james5Study,
+  "biblia-tiago-cap-1": james1Study,
+  "biblia-tiago-cap-2": james2Study,
+  "biblia-tiago-cap-3": james3Study,
+  "biblia-tiago-cap-4": james4Study,
+  "biblia-hebreus-cap-13": hebrews13Study,
+  "biblia-hebreus-cap-12": hebrews12Study,
+  "biblia-hebreus-cap-11": hebrews11Study,
+  "biblia-hebreus-cap-10": hebrews10Study,
+  "biblia-hebreus-cap-9": hebrews9Study,
+  "biblia-hebreus-cap-8": hebrews8Study,
+  "biblia-hebreus-cap-7": hebrews7Study,
+  "biblia-hebreus-cap-6": hebrews6Study,
+  "biblia-hebreus-cap-5": hebrews5Study,
+  "biblia-hebreus-cap-4": hebrews4Study,
+  "biblia-hebreus-cap-1": hebrews1Study,
+  "biblia-hebreus-cap-2": hebrews2Study,
+  "biblia-hebreus-cap-3": hebrews3Study,
+  "biblia-filemom-cap-1": philemon1Study,
+  "biblia-tito-cap-3": titus3Study,
+  "biblia-tito-cap-2": titus2Study,
+  "biblia-tito-cap-1": titus1Study,
+  "biblia-1-timoteo-cap-4": firstTimothy4Study,
+  "biblia-1-timoteo-cap-5": firstTimothy5Study,
+  "biblia-1-timoteo-cap-6": firstTimothy6Study,
+  "biblia-2-timoteo-cap-4": secondTimothy4Study,
+  "biblia-2-timoteo-cap-1": secondTimothy1Study,
+  "biblia-2-timoteo-cap-2": secondTimothy2Study,
+  "biblia-2-timoteo-cap-3": secondTimothy3Study,
+  "biblia-1-timoteo-cap-3": firstTimothy3Study,
+  "biblia-1-timoteo-cap-2": firstTimothy2Study,
+  "biblia-lucas-cap-1": luke1Study,
+  "biblia-lucas-cap-2": luke2Study,
+  "biblia-lucas-cap-3": luke3Study,
+  "biblia-lucas-cap-4": luke4Study,
+  "biblia-lucas-cap-5": luke5Study,
+  "biblia-lucas-cap-6": luke6Study,
+  "biblia-lucas-cap-7": luke7Study,
+  "biblia-lucas-cap-8": luke8Study,
+  "biblia-lucas-cap-9": luke9Study,
+  "biblia-lucas-cap-10": luke10Study,
+  "biblia-lucas-cap-11": luke11Study,
+  "biblia-lucas-cap-12": luke12Study,
+  "biblia-lucas-cap-13": luke13Study,
+  "biblia-1-timoteo-cap-1": firstTimothy1Study,
+  "biblia-2-tessalonicenses-cap-3": secondThessalonians3Study,
+  "biblia-2-tessalonicenses-cap-2": secondThessalonians2Study,
+  "biblia-2-tessalonicenses-cap-1": secondThessalonians1Study,
+  "biblia-1-tessalonicenses-cap-3": firstThessalonians3Study,
+  "biblia-1-tessalonicenses-cap-4": firstThessalonians4Study,
+  "biblia-1-tessalonicenses-cap-5": firstThessalonians5Study,
+  "biblia-1-tessalonicenses-cap-2": firstThessalonians2Study,
+  "biblia-1-tessalonicenses-cap-1": firstThessalonians1Study,
+  "biblia-colossenses-cap-4": colossians4Study,
+  "biblia-colossenses-cap-3": colossians3Study,
+  "biblia-colossenses-cap-2": colossians2Study,
+  "biblia-colossenses-cap-1": colossians1Study,
+  "biblia-efesios-cap-6": ephesians6Study,
+  "biblia-efesios-cap-3": ephesians3Study,
+  "biblia-efesios-cap-2": ephesians2Study,
+  "biblia-efesios-cap-1": ephesians1Study,
+  "biblia-efesios-cap-4": ephesians4Study,
+  "biblia-efesios-cap-5": ephesians5Study,
+  "biblia-2-corintios-cap-11": secondCorinthians11Study,
+  "biblia-lucas-cap-14": luke14Study,
+  "biblia-lucas-cap-15": luke15Study,
+  "biblia-lucas-cap-16": luke16Study,
+  "biblia-lucas-cap-17": luke17Study,
+  "biblia-lucas-cap-18": luke18Study,
+  "biblia-lucas-cap-19": luke19Study,
+  "biblia-lucas-cap-20": luke20Study,
+  "biblia-lucas-cap-21": luke21Study,
+  "biblia-lucas-cap-22": luke22Study,
+  "biblia-lucas-cap-23": luke23Study,
+  "biblia-lucas-cap-24": luke24Study,
+  "biblia-joao-cap-1": john1Study,
+  "biblia-joao-cap-2": john2Study,
+  "biblia-joao-cap-3": john3Study,
+  "biblia-joao-cap-4": john4Study,
+  "biblia-joao-cap-5": john5Study,
+  "biblia-joao-cap-6": john6Study,
+  "biblia-joao-cap-7": john7Study,
+  "biblia-2-corintios-cap-7": secondCorinthians7Study,
+  "biblia-2-corintios-cap-6": secondCorinthians6Study,
+  "biblia-2-corintios-cap-4": secondCorinthians4Study,
+  "biblia-2-corintios-cap-5": secondCorinthians5Study,
+  "biblia-2-corintios-cap-3": secondCorinthians3Study,
+  "biblia-2-corintios-cap-2": secondCorinthians2Study,
+  "biblia-2-corintios-cap-1": secondCorinthians1Study,
+  "biblia-filipenses-cap-1": philippians1Study,
+  "biblia-filipenses-cap-2": philippians2Study,
+  "biblia-filipenses-cap-3": philippians3Study,
+  "biblia-filipenses-cap-4": philippians4Study,
+  "biblia-1-corintios-cap-16": firstCorinthians16Study,
+  "biblia-1-corintios-cap-13": firstCorinthians13Study,
+  "biblia-1-corintios-cap-14": firstCorinthians14Study,
+  "biblia-1-corintios-cap-15": firstCorinthians15Study,
+  "biblia-1-corintios-cap-12": firstCorinthians12Study,
+  "biblia-1-corintios-cap-10": firstCorinthians10Study,
+  "biblia-1-corintios-cap-11": firstCorinthians11Study,
+  "biblia-1-corintios-cap-9": firstCorinthians9Study,
+  "biblia-1-corintios-cap-3": firstCorinthians3Study,
+  "biblia-1-corintios-cap-4": firstCorinthians4Study,
+  "biblia-1-corintios-cap-5": firstCorinthians5Study,
+  "biblia-1-corintios-cap-6": firstCorinthians6Study,
+  "biblia-1-corintios-cap-7": firstCorinthians7Study,
+  "biblia-1-corintios-cap-8": firstCorinthians8Study,
+  "biblia-1-corintios-cap-1": firstCorinthians1Study,
+  "biblia-1-corintios-cap-2": firstCorinthians2Study,
+  "biblia-joao-cap-8": john8Study,
+  "biblia-joao-cap-9": john9Study,
+  "biblia-joao-cap-10": john10Study,
+  "biblia-joao-cap-11": john11Study,
+  "biblia-joao-cap-12": john12Study,
+  "biblia-joao-cap-13": john13Study,
+  "biblia-joao-cap-14": john14Study,
+  "biblia-joao-cap-15": john15Study,
+  "biblia-joao-cap-16": john16Study,
+  "biblia-joao-cap-17": john17Study,
+  "biblia-joao-cap-18": john18Study,
+  "biblia-joao-cap-19": john19Study,
+  "biblia-joao-cap-20": john20Study,
+  "biblia-joao-cap-21": john21Study,
+  "biblia-atos-cap-1": acts1Study,
+  "biblia-atos-cap-2": acts2Study,
+  "biblia-atos-cap-3": acts3Study,
+  "biblia-atos-cap-4": acts4Study,
+  "biblia-atos-cap-5": acts5Study,
+  "biblia-atos-cap-6": acts6Study,
+  "biblia-atos-cap-7": acts7Study,
+  "biblia-atos-cap-8": acts8Study,
+  "biblia-atos-cap-9": acts9Study,
+  "biblia-atos-cap-10": acts10Study,
+  "biblia-atos-cap-11": acts11Study,
+  "biblia-atos-cap-12": acts12Study,
+  "biblia-atos-cap-13": acts13Study,
+  "biblia-atos-cap-14": acts14Study,
+  "biblia-atos-cap-15": acts15Study,
+  "biblia-atos-cap-16": acts16Study,
+  "biblia-atos-cap-17": acts17Study,
+  "biblia-atos-cap-18": acts18Study,
+  "biblia-atos-cap-19": acts19Study,
+  "biblia-atos-cap-20": acts20Study,
+  "biblia-atos-cap-21": acts21Study,
+  "biblia-atos-cap-22": acts22Study,
 };

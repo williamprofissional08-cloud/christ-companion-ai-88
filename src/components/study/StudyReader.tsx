@@ -47,6 +47,7 @@ type Props = {
 const CONFIDENCE_CLASSES = {
   high: "border-emerald-600/30 bg-emerald-600/10 text-emerald-700 dark:text-emerald-300",
   probable: "border-amber-600/30 bg-amber-600/10 text-amber-700 dark:text-amber-300",
+  medium: "border-amber-600/30 bg-amber-600/10 text-amber-700 dark:text-amber-300",
   debated: "border-orange-600/30 bg-orange-600/10 text-orange-700 dark:text-orange-300",
   uncertain: "border-destructive/30 bg-destructive/10 text-destructive",
 } as const;
