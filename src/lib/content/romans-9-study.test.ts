@@ -6,7 +6,7 @@ describe("Romanos 9 — integridade editorial", () => {
     const sections = romans9Study.sections;
     expect(sections.length).toBeGreaterThanOrEqual(45);
     const reading = sections.find((s) => s.id === "leitura-livre-romanos-9");
-    expect(reading?.body).toContain("não é tradução oficial");
+    expect(reading?.body).toContain("Material autoral de estudo");
     for (let verse = 1; verse <= 33; verse += 1) {
       expect(reading?.body).toContain(`**${verse}**`);
       expect(sections.some((s) => s.id === `exegese-verso-${verse}`)).toBe(true);
