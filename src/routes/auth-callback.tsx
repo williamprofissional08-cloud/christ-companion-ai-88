@@ -25,6 +25,7 @@ function AuthCallback() {
   const navigate = useNavigate();
   const [error, setError] = useState<string | null>(null);
   const [confirmed, setConfirmed] = useState(false);
+  const [needsSignIn, setNeedsSignIn] = useState(false);
 
   useEffect(() => {
     let disposed = false;
@@ -53,6 +54,12 @@ function AuthCallback() {
           }
           return;
         }
+        if (outcome === "email_verified") {
+          window.history.replaceState(window.history.state, "", "/auth-callback");
+          setNeedsSignIn(true);
+          setConfirmed(true);
+          return;
+        }
         setError("Não há uma sessão ativa neste navegador. Se o e-mail já foi confirmado, entre com seu e-mail e senha. Não é necessário criar outra conta.");
       })
       .catch((issue: unknown) => {
@@ -75,7 +82,7 @@ function AuthCallback() {
             <div aria-hidden="true" className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-blue-100 text-3xl text-blue-800">✓</div>
             <h1 className="font-display text-2xl font-semibold text-[#143b62]">Conta criada com sucesso!</h1>
             <p role="status" className="mt-3 text-sm text-muted-foreground">Seu e-mail foi confirmado. Bem-vindo ao Caminho Divino! Sua conta está pronta para começar sua jornada.</p>
-            <Button className="mt-6 w-full" onClick={() => navigate({ to: "/inicio", replace: true })}>Entrar no Caminho Divino</Button>
+            <Button className="mt-6 w-full" onClick={() => navigate({ to: needsSignIn ? "/auth" : "/inicio", replace: true })}>{needsSignIn ? "Entrar com meu e-mail" : "Entrar no Caminho Divino"}</Button>
           </>
         ) : error ? (
           <>
