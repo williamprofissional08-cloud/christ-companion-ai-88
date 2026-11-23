@@ -12,9 +12,9 @@ export const Route = createFileRoute("/auth-callback")({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { title: "Concluindo login — Caminhando com Cristo" },
+      { title: "Confirmação de conta — Caminho Divino" },
       { name: "description", content: "Finalizando o seu acesso com segurança." },
-      { property: "og:title", content: "Concluindo login — Caminhando com Cristo" },
+      { property: "og:title", content: "Confirmação de conta — Caminho Divino" },
       { property: "og:description", content: "Finalizando o seu acesso com segurança." },
     ],
   }),
@@ -24,6 +24,7 @@ export const Route = createFileRoute("/auth-callback")({
 function AuthCallback() {
   const navigate = useNavigate();
   const [error, setError] = useState<string | null>(null);
+  const [confirmed, setConfirmed] = useState(false);
 
   useEffect(() => {
     let disposed = false;
@@ -38,8 +39,18 @@ function AuthCallback() {
         if (disposed) return;
         window.clearTimeout(timeout);
         if (outcome === "authenticated") {
-          // Remove one-time credentials from browser history via replace.
-          navigate({ to: "/inicio", replace: true });
+          const params = new URLSearchParams(window.location.search);
+          const fragment = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+          const isSignup = params.get("flow") === "signup"
+            || (params.get("type") ?? fragment.get("type")) === "signup";
+          if (isSignup) {
+            // Never show success until Supabase verified the authenticated user.
+            // Remove one-time tokens without discarding the confirmation screen.
+            window.history.replaceState(window.history.state, "", "/auth-callback");
+            setConfirmed(true);
+          } else {
+            navigate({ to: "/inicio", replace: true });
+          }
           return;
         }
         setError("Não há uma sessão ativa neste navegador. Se o e-mail já foi confirmado, entre com seu e-mail e senha. Não é necessário criar outra conta.");
@@ -59,7 +70,14 @@ function AuthCallback() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-heaven px-4">
       <Card className="w-full max-w-sm p-7 text-center shadow-soft">
-        {error ? (
+        {confirmed ? (
+          <>
+            <div aria-hidden="true" className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-blue-100 text-3xl text-blue-800">✓</div>
+            <h1 className="font-display text-2xl font-semibold text-[#143b62]">Conta criada com sucesso!</h1>
+            <p role="status" className="mt-3 text-sm text-muted-foreground">Seu e-mail foi confirmado. Bem-vindo ao Caminho Divino! Sua conta está pronta para começar sua jornada.</p>
+            <Button className="mt-6 w-full" onClick={() => navigate({ to: "/inicio", replace: true })}>Entrar no Caminho Divino</Button>
+          </>
+        ) : error ? (
           <>
             <h1 className="font-display text-xl font-semibold">Confirmação de acesso</h1>
             <p className="mt-2 text-sm text-muted-foreground">{error}</p>
