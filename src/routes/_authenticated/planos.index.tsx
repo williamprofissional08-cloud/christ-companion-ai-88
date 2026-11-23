@@ -58,7 +58,7 @@ function PlanosPage() {
       !q || plan.title.toLowerCase().includes(q) || plan.summary.toLowerCase().includes(q);
     return matchesCategory && matchesQuery;
   });
-  const categories = [...new Set([...PLAN_CATEGORIES, ...catalog.values().map((plan) => plan.category)])];
+  const categories = [...new Set([...PLAN_CATEGORIES, ...Array.from(catalog.values(), (plan) => plan.category)])];
   const featured = plans[0];
   const otherPlans = plans.slice(1);
 
