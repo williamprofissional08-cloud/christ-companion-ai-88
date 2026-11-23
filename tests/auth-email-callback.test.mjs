@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { finishAuthCallback } from "../src/lib/auth-callback-flow.ts";
 import { getAuthEmailRedirectUrl } from "../src/lib/auth-redirect.ts";
@@ -80,4 +81,27 @@ test("locally stored sessions require a valid user response from the server", as
 test("email links use the published URL, not a temporary preview host", () => {
   assert.equal(getAuthEmailRedirectUrl("/auth-callback"), "https://christ-companion-ai-88.lovable.app/auth-callback");
   assert.equal(getAuthEmailRedirectUrl("/reset-password"), "https://christ-companion-ai-88.lovable.app/reset-password");
+});
+
+test("confirmed email on a different browser is recognized even without an active session", async () => {
+  const auth = client();
+  assert.equal(
+    await finishAuthCallback(auth, "?token_hash=valid-token&type=signup", ""),
+    "email_verified",
+  );
+  assert.deepEqual(auth.calls, [
+    ["verifyOtp", { token_hash: "valid-token", type: "signup" }],
+    "getSession",
+  ]);
+});
+
+test("Google and email signup use project-bound OAuth and the published confirmation page", () => {
+  const source = readFileSync(new URL("../src/routes/auth.tsx", import.meta.url), "utf8");
+  const callback = readFileSync(new URL("../src/routes/auth-callback.tsx", import.meta.url), "utf8");
+  assert.match(source, /supabase\.auth\.signInWithOAuth\(/);
+  assert.match(source, /provider: "google"/);
+  assert.doesNotMatch(source, /lovable\.auth\.signInWithOAuth/);
+  assert.match(source, /flow=signup/);
+  assert.match(callback, /Conta criada com sucesso!/);
+  assert.match(callback, /outcome === "email_verified"/);
 });

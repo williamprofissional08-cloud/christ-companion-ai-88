@@ -19,7 +19,7 @@ export type CallbackAuthClient = {
   setSession: (tokens: { access_token: string; refresh_token: string }) => Promise<ActionResult>;
 };
 
-export type CallbackOutcome = "authenticated" | "sign_in_required";
+export type CallbackOutcome = "authenticated" | "sign_in_required" | "email_verified";
 
 function throwIfError(error: unknown): void {
   if (error) throw error;
@@ -44,6 +44,7 @@ export async function finishAuthCallback(
   if (linkError) throw new Error(linkError);
 
   const tokenHash = params.get("token_hash") ?? hash.get("token_hash");
+  let emailVerified = false;
   if (tokenHash) {
     const requestedType = params.get("type") ?? hash.get("type");
     const validTypes: EmailVerificationType[] = ["signup", "email", "magiclink", "recovery", "invite"];
@@ -55,6 +56,7 @@ export async function finishAuthCallback(
       type: requestedType as EmailVerificationType,
     });
     throwIfError(error);
+    emailVerified = requestedType === "signup" || requestedType === "email";
   }
 
   const { data: existing, error: sessionError } = await auth.getSession();
@@ -82,7 +84,7 @@ export async function finishAuthCallback(
   if (!hasSession) {
     // A missing session does not mean the user's account is absent.
     if (sessionError && !code && !tokenHash && !accessToken) throw sessionError;
-    return "sign_in_required";
+    return emailVerified ? "email_verified" : "sign_in_required";
   }
 
   // Do not trust a locally stored token until the correct Supabase project

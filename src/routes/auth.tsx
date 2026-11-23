@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Eye, EyeOff, Mail, LockKeyhole, LogIn, UserRoundPlus, BookOpen, Mountain, UsersRound } from "lucide-react";
 import { toast } from "sonner";
 import { getSupabaseDiagnostics, supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable/index";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -30,12 +29,12 @@ export const Route = createFileRoute("/auth")({
     meta: [
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { title: "Entrar — Caminhando com Cristo" },
+      { title: "Entrar — Caminho Divino" },
       {
         name: "description",
         content: "Acesse sua conta para continuar sua jornada diária com Deus.",
       },
-      { property: "og:title", content: "Entrar — Caminhando com Cristo" },
+      { property: "og:title", content: "Entrar — Caminho Divino" },
       {
         property: "og:description",
         content: "Acesse sua conta para continuar sua jornada diária com Deus.",
@@ -112,7 +111,7 @@ function AuthPage() {
           email: normalizedEmail,
           password,
           options: {
-            emailRedirectTo: getAuthEmailRedirectUrl("/auth-callback"),
+            emailRedirectTo: `${getAuthEmailRedirectUrl("/auth-callback")}?flow=signup`,
             data: { full_name: name.trim(), display_name: name.trim() },
           },
         });
@@ -157,7 +156,7 @@ function AuthPage() {
       const { error } = await supabase.auth.resend({
         type: "signup",
         email: normalizedEmail,
-        options: { emailRedirectTo: getAuthEmailRedirectUrl("/auth-callback") },
+        options: { emailRedirectTo: `${getAuthEmailRedirectUrl("/auth-callback")}?flow=signup` },
       });
       if (error) throw error;
       toast.success("Se houver um cadastro aguardando confirmação, enviaremos um novo link. Confira também o spam.");
@@ -173,20 +172,21 @@ function AuthPage() {
     if (googleLoading || loading) return;
     setGoogleLoading(true);
     try {
-      const result = await lovable.auth.signInWithOAuth("google", {
-        // Precisa ser uma URL pública same-origin; a rota de callback conclui a sessão.
-        redirect_uri: `${window.location.origin}/auth-callback`,
+      // Use the same Supabase project as email/password accounts.
+      // The previous Lovable session broker could return credentials from a
+      // different backend and leave users unable to access protected routes.
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: getAuthEmailRedirectUrl("/auth-callback"),
+        },
       });
-      if (result.error) {
-        toast.error(friendlyAuthError(result.error));
-        return;
-      }
-      if (result.redirected) return;
-      navigate({ to: "/inicio", replace: true });
+      if (error) throw error;
+      if (!data.url) throw new Error("Não foi possível iniciar o acesso com Google. Tente novamente.");
+      window.location.assign(data.url);
     } catch (error) {
       logAuthApiKeyError(error);
       toast.error(friendlyAuthError(error));
-    } finally {
       setGoogleLoading(false);
     }
   }
