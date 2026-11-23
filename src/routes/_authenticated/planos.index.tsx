@@ -30,7 +30,7 @@ export const Route = createFileRoute("/_authenticated/planos/")({
 
 function PlanosPage() {
   const catalogFn = useServerFn(getPublishedManagedCatalog);
-  const { data: managedPlans = [] } = useQuery({
+  const { data: managedPlans = [], isError: catalogError, refetch: refetchCatalog } = useQuery({
     queryKey: ["published-managed-catalog", "prayer_plan"],
     queryFn: () => catalogFn({ data: { kind: "prayer_plan" } }),
   });
@@ -58,12 +58,19 @@ function PlanosPage() {
       !q || plan.title.toLowerCase().includes(q) || plan.summary.toLowerCase().includes(q);
     return matchesCategory && matchesQuery;
   });
+  const categories = [...new Set([...PLAN_CATEGORIES, ...Array.from(catalog.values(), (plan) => plan.category)])];
   const featured = plans[0];
   const otherPlans = plans.slice(1);
 
   return (
     <AppShell title="Planos de oração" subtitle="Escolha um plano e comece hoje.">
       <div className="mx-auto w-full max-w-6xl space-y-7 pb-8">
+        {catalogError ? (
+          <div role="alert" className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950">
+            <span>Os planos locais continuam disponíveis, mas não foi possível verificar os planos adicionais publicados.</span>
+            <Button variant="outline" size="sm" onClick={() => void refetchCatalog()}>Tentar novamente</Button>
+          </div>
+        ) : null}
         <section className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-primary/[0.09] via-card to-amber-500/[0.07] px-5 py-6 shadow-soft sm:px-8 sm:py-8">
           <div className="pointer-events-none absolute -right-12 -top-16 h-52 w-52 rounded-full bg-amber-400/10 blur-3xl" />
           <div className="relative max-w-2xl">
@@ -98,7 +105,7 @@ function PlanosPage() {
             <Button variant={category ? "outline" : "gold"} size="sm" className="shrink-0 rounded-full px-4" onClick={() => setCategory(null)}>
               Todos
             </Button>
-            {PLAN_CATEGORIES.map((c) => (
+            {categories.map((c) => (
               <Button
                 key={c}
                 variant={category === c ? "gold" : "outline"}
@@ -191,6 +198,7 @@ function PlanosPage() {
               <Search aria-hidden="true" className="mx-auto h-7 w-7 text-muted-foreground/70" />
               <p className="mt-3 font-medium text-foreground">Nenhum plano encontrado</p>
               <p className="mt-1 text-sm text-muted-foreground">Tente outra busca ou escolha uma categoria diferente.</p>
+              <Button type="button" variant="outline" className="mt-4" onClick={() => { setQuery(""); setCategory(null); }}>Mostrar todos os planos</Button>
             </Card>
           ) : null}
         </section>

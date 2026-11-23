@@ -129,21 +129,30 @@ export const getPlanDayContent = createServerFn({ method: "POST" })
     if (!plan) throw new Error("Plano não encontrado");
     if (data.day > plan.days) throw new Error("Dia fora da duração deste plano");
     const cacheKey = published ? `${data.slug}:${data.day}:v${new Date(managedData?.updated_at ?? 0).getTime()}` : `${data.slug}:${data.day}`;
-    const cached = await supabaseAdmin
-      .from("generated_content")
-      .select("content")
-      .eq("kind", "plan-day")
-      .eq("slug", cacheKey)
-      .maybeSingle();
-    if (cached.data?.content) return cached.data.content as unknown as PlanDayContent;
+    const { getPlanDayFallback } = await import("./content/plan-day-fallback");
+    try {
+      const cached = await supabaseAdmin
+        .from("generated_content")
+        .select("content")
+        .eq("kind", "plan-day")
+        .eq("slug", cacheKey)
+        .maybeSingle();
+      if (cached.error) throw cached.error;
+      if (cached.data?.content) return cached.data.content as unknown as PlanDayContent;
 
-    const { generatePlanDay } = await import("./ai-content.server");
-    const content = await generatePlanDay(plan.title, plan.summary, plan.keyVerse, plan.days, data.day);
-    const { error } = await supabaseAdmin
-      .from("generated_content")
-      .upsert({ kind: "plan-day", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });
-    if (error) console.error("plan cache failed", error.message);
-    return content;
+      const { generatePlanDay } = await import("./ai-content.server");
+      const content = await generatePlanDay(plan.title, plan.summary, plan.keyVerse, plan.days, data.day);
+      const { error } = await supabaseAdmin
+        .from("generated_content")
+        .upsert({ kind: "plan-day", slug: cacheKey, content: content as never }, { onConflict: "kind,slug" });
+      if (error) console.error("plan cache failed", error.message);
+      return content;
+    } catch (error) {
+      // Never overwrite saved/generated material with a temporary fallback.
+      // The next request may recover the full original day content.
+      console.error("plan day unavailable; displaying guided Bible reading fallback", error);
+      return getPlanDayFallback(plan, data.day);
+    }
   });
 
 export const getStudyContent = createServerFn({ method: "POST" })
