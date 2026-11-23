@@ -1,0 +1,14 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const src=fs.readFileSync(path.join(root,"src/lib/content/john-12-study.ts"),"utf8");
+const match=src.match(/export const john12Study: StudyContent = ([\s\S]*);\s*$/);
+assert.ok(match);
+const study=JSON.parse(match[1]);
+const bible=JSON.parse(fs.readFileSync(path.join(root,"src/lib/bible-livre/joao.json"),"utf8")).chapters["12"];
+test("João 12: all 50 BLIVRE verses in reading and commentary",()=>{assert.equal(bible.length,50);const reading=study.sections.find(s=>s.id==="leitura-integral");assert.ok(reading);for(let n=1;n<=50;n++){const t=bible[n-1].replace(/\s*João\s*<\s*12\s*>\s*$/i,"").trim();assert.ok(reading.body.includes("**"+n+"** "+t),"missing reading "+n);const verse=study.sections.find(s=>s.id==="versiculo-"+n);assert.ok(verse&&verse.body.includes(t));assert.ok(verse.scriptureRefs.includes("João 12:"+n));}});
+test("João 12: unique IDs and theological safeguards",()=>{assert.ok(study.sections.length>=65);assert.equal(new Set(study.sections.map(x=>x.id)).size,study.sections.length);assert.ok(study.questions.length>=15);assert.ok(study.crossReferences.length>=12);assert.match(JSON.stringify(study),/pobres/);assert.ok(study.sections.some(s=>s.title.includes("pregador")));});
+test("João 12: catalog only once",()=>{const catalog=fs.readFileSync(path.join(root,"src/lib/content/curated-studies.ts"),"utf8");assert.equal((catalog.match(/"biblia-joao-cap-12"\s*:/g)||[]).length,1);assert.match(catalog,/import \{ john12Study \} from "\.\/john-12-study";/);});

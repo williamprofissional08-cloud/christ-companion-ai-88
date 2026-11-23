@@ -1,6 +1,6 @@
 export type StudyDepth = "simple" | "deep";
 
-export type StudyConfidence = "high" | "probable" | "debated" | "uncertain";
+export type StudyConfidence = "high" | "probable" | "medium" | "debated" | "uncertain";
 
 export type StudySectionKind =
   | "introduction"
@@ -98,6 +98,7 @@ export function buildSpeechUnits(sections: StudySection[], maxChars = 220): Spee
 export function confidenceLabel(confidence: StudyConfidence): string {
   if (confidence === "high") return "Alta confiança";
   if (confidence === "probable") return "Interpretação provável";
+  if (confidence === "medium") return "Confiança moderada";
   if (confidence === "debated") return "Questão debatida";
   return "Não é possível afirmar com segurança";
 }
