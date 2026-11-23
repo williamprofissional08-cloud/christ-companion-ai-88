@@ -1,3 +1,5 @@
+import { galatians6Study } from "./galatians-6-study";
+import { galatians5Study } from "./galatians-5-study";
 import { galatians4Study } from "./galatians-4-study";
 import { galatians3Study } from "./galatians-3-study";
 import { galatians2Study } from "./galatians-2-study";
@@ -2383,4 +2385,6 @@ export const CURATED_STUDIES: Record<string, StudyContent> = {
   "biblia-galatas-cap-2": galatians2Study,
   "biblia-galatas-cap-3": galatians3Study,
   "biblia-galatas-cap-4": galatians4Study,
+  "biblia-galatas-cap-5": galatians5Study,
+  "biblia-galatas-cap-6": galatians6Study,
 };
